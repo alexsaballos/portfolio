@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { SEO } from "../../config/meta";
+
+const lang = "en"
+---
+
+<BaseLayout title={SEO.title()} description={SEO.description()} locale={lang} canonical_link={SEO.canonical("/")}>
+    <h1>Hello!</h1>
+</BaseLayout>

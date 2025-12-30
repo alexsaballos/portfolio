@@ -1,0 +1,18 @@
+---
+import LanguageToggler from "./LanguageToggler.astro";
+import Scroller from "./Scroller.astro";
+import ThemeToggler from "./ThemeToggler.astro";
+
+const {lang} = Astro.props;
+---
+
+<div class="fixed z-998">
+    <div class="fixed bottom-5 right-5 flex flex-col gap-2 shrink-0 items-center">
+        <Scroller />
+        <ThemeToggler />
+    </div>
+
+    <div class="fixed right-0 top-1/2 -translate-y-1/2 shrink-0 -m-11.5">
+        <LanguageToggler locale={lang} />
+    </div>
+</div>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="61"
+   height="61"
+   viewBox="0 0 61 61"
+   xml:space="preserve"
+   id="svg3"
+   sodipodi:docname="de-de.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs3" /><sodipodi:namedview
+   id="namedview3"
+   pagecolor="#ffffff"
+   bordercolor="#999999"
+   borderopacity="1"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0"
+   inkscape:pagecheckerboard="true"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:zoom="6.5078125"
+   inkscape:cx="34.957983"
+   inkscape:cy="46.17527"
+   inkscape:window-width="1920"
+   inkscape:window-height="1051"
+   inkscape:window-x="-9"
+   inkscape:window-y="1071"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg3" />
+<g
+   style="opacity:1;fill:none;fill-rule:nonzero;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none"
+   transform="scale(0.67777778)"
+   id="g3">
+	<path
+   d="M 2.57,30 H 87.429 C 81.254,12.534 64.611,0.015 45.033,0 H 44.965 C 25.388,0.015 8.745,12.534 2.57,30 Z"
+   style="opacity:1;fill:#000000;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none"
+   stroke-linecap="round"
+   id="path1" />
+	<path
+   d="M 87.429,60 H 2.57 C 8.749,77.476 25.408,90 45,90 64.592,90 81.25,77.476 87.429,60 Z"
+   style="opacity:1;fill:#ffce00;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none"
+   stroke-linecap="round"
+   id="path2" />
+	<path
+   d="M 87.429,60 C 89.088,55.307 90,50.261 90,45 90,39.739 89.089,34.693 87.429,30 H 2.57 C 0.911,34.693 0,39.739 0,45 0,50.261 0.912,55.307 2.571,60 Z"
+   style="opacity:1;fill:#dd0000;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none"
+   stroke-linecap="round"
+   id="path3" />
+</g>
+</svg>

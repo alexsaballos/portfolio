@@ -5,8 +5,6 @@ import { SITE } from '../config/meta';
 // import { FAVICONS } from '../config/assets';
 import { PERSONAL } from '../config/personal';
 
-import Navbar from '../components/widgets/Navbar/Navbar.astro';
-import Footer from '../components/sections/footer/Footer.astro';
 import Floating from '../components/widgets/Floating.astro';
 import IconLibrary from '../components/ui/IconLibrary.astro';
 
@@ -49,10 +47,10 @@ const { title, description, locale, canonical_link } = Astro.props;
 	</head>
 	<body>
 		<IconLibrary />						<!-- Inject all Icons early on in the DOM -->
-		<Navbar />							<!-- Navigation Bar included with every page -->
+		<!-- <Navbar />							<!-- Navigation Bar included with every page -->
 		<div class="mt-16"><slot/></div>	<!-- Dynamic page insertion for sticky NavBar -->
 		<Floating lang={locale} />			<!-- Fixed floating buttons on all screen sizes -->
-		<Footer lang={locale} />			<!-- Footer included with every page -->
+		<!-- <Footer lang={locale} />			<!-- Footer included with every page -->
 		<script is:inline type="module" src={`${PERSONAL.base}scripts/global.js`}></script>
 	</body>
 </html>
