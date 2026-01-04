@@ -4,11 +4,18 @@ import '../styles/global.css';
 import { SITE } from '../config/meta';
 // import { FAVICONS } from '../config/assets';
 import { PERSONAL } from '../config/personal';
+import { getLocaleMessages } from '../i18n/utils';
 
 import Floating from '../components/widgets/Floating.astro';
 import IconLibrary from '../components/ui/IconLibrary.astro';
+import Footer from '../components/sections/footer/Footer.astro';
+import Navbar from '../components/widgets/Navbar.astro';
 
-const { title, description, locale, canonical_link } = Astro.props;
+const { title, description, canonical_link } = Astro.props;
+const locale = Astro.currentLocale ?? "en";
+
+Astro.locals.locale = locale;
+Astro.locals.t = await getLocaleMessages(locale);
 ---
 
 <html lang={locale}>
@@ -47,10 +54,9 @@ const { title, description, locale, canonical_link } = Astro.props;
 	</head>
 	<body>
 		<IconLibrary />						<!-- Inject all Icons early on in the DOM -->
-		<!-- <Navbar />							<!-- Navigation Bar included with every page -->
-		<div class="mt-16"><slot/></div>	<!-- Dynamic page insertion for sticky NavBar -->
+		<div><slot/></div>					<!-- Dynamic page insertion for sticky NavBar -->
 		<Floating lang={locale} />			<!-- Fixed floating buttons on all screen sizes -->
-		<!-- <Footer lang={locale} />			<!-- Footer included with every page -->
+		<Footer />							<!-- Footer included with every page -->
 		<script is:inline type="module" src={`${PERSONAL.base}scripts/global.js`}></script>
 	</body>
 </html>

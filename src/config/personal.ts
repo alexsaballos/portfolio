@@ -16,6 +16,7 @@ export const SOCIAL = {
     linkedin_URL: "https://www.linkedin.com/in/alex-saballos/",
     github_URL: "https://github.com/alexsaballos",
     handshake_URL: "https://app.joinhandshake.com/profiles/alexsaballos",
-    merit_URL: "https://meritpages.com/alexsaballos"
+    merit_URL: "https://meritpages.com/alexsaballos",
+    wisp_URL: "https://www.wispweb.org/"
 
 } as const;

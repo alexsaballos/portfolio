@@ -1,0 +1,15 @@
+---
+import { ASSETS } from "../../config/assets";
+import Image from "astro/components/Image.astro";
+
+const { size, classname } = Astro.props as {
+    size: string;
+    classname: string;
+};
+---
+
+<div class="avatar">
+    <div class=`ring-primary rounded-full ring-2 ${classname}`>
+        <Image src={ASSETS.pictures.PFP} alt="Alexander Saballos Picture" />
+    </div>
+</div>

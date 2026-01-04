@@ -1,10 +1,13 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
 import { SEO } from "../../config/meta";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Intro from "../../components/sections/Intro/Intro.astro";
 
-const lang = "es"
+const { locale } = Astro.locals as {
+    locale: string
+};
 ---
 
-<BaseLayout title={SEO.title()} description={SEO.description()} locale={lang} canonical_link={SEO.canonical("/")}>
-    <h1>Hola!</h1>
+<BaseLayout title={SEO.title()} description={SEO.description()} locale={locale} canonical_link={SEO.canonical("/")}>
+    <Intro />
 </BaseLayout>

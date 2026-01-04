@@ -1,5 +1,8 @@
 import { PERSONAL } from "./personal";
 
+// Pictures used on Intro.astro
+import profilePicture from "../images/pfp.jpg"
+
 // Pictures used on Projects.astro
 // Pictures used on Experience.astro
 // Pictures used on Certifications.astro
@@ -15,6 +18,9 @@ const flagsPath = `${PERSONAL.base}assets/flags/`;
 export type IconKey = keyof typeof ASSETS.icons;
 export type IconData = (typeof ASSETS.icons)[IconKey];
 export const ASSETS = {
+    pictures: {
+        PFP: profilePicture
+    },
     icons: {
         // Main contact information
         email: {
@@ -55,6 +61,12 @@ export const ASSETS = {
             desc: "Square with Rounded Corners - Merit Pages Logo.",
             size: "md"
         },
+        wisp: {
+            href: "#wisp",
+            title: "WISP Icon",
+            desc: "Square with Rounded Corners - WISP Logo.",
+            size: "md"
+        },
 
         // Hamburger Menu available only on medium screens and downward to replace navbar
         hamburger_menu: {
@@ -75,13 +87,13 @@ export const ASSETS = {
             href: "#sun",
             title: "Sun Icon",
             desc: "Representing Light Mode on Theme Toggles (NavBar & Hamburger Menu).",
-            size: "xl"
+            size: "sm"
         },
         moon: {
             href: "#moon",
             title: "Moon Icon",
             desc: "Representing Dark Mode on Theme Toggles (NavBar & Hamburger Menu).",
-            size: "xl"
+            size: "sm"
         },
 
         // Change language icon for border tab widget

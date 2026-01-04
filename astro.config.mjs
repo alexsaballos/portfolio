@@ -8,7 +8,7 @@ export default defineConfig({
     outDir: 'dist',
     vite: { plugins: [tailwindcss()] },
     i18n: {
-        locales: ["en", "es"],
+        locales: ["de", "en", "es"],
         defaultLocale: "en",
         routing: { prefixDefaultLocale: true }
     }

@@ -1,0 +1,10 @@
+---
+import { PERSONAL } from "./../../../config/personal"
+
+const source = `${PERSONAL.base}assets/misc/intro.mp4`
+---
+
+<video class="absolute inset-0 h-full w-full object-cover opacity-20 pointer-events-none rounded-b-4xl"
+    preload="auto" aria-hidden="true" autoplay loop muted playsinline >
+        <source src={source} type="video/mp4" />
+</video>
