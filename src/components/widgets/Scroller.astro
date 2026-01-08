@@ -3,11 +3,13 @@ import { ASSETS } from "../../config/assets";
 import Icon from "../ui/Icon.astro";
 ---
 
-<div class="flex flex-col gap-2 shrink-0 shadow-none">
-    <button id="scrollTop" class="p-0 m-0 w-12 h-12 border-secondary border-solid border-6 shadow-none btn btn-circle bg-secondary" aria-label="Scroll to Top">
-        <Icon icon={ASSETS.icons.chevron_up} class="text-primary" size="lg" />
+<div class="flex flex-col gap-3 bottom-5 right-5 fixed z-998">
+    <button id="scrollTop" aria-label="Scroll to Top"
+        class="shadow-none border-none btn btn-square bg-secondary rounded-lg transition-transform duration-500 ease-out hover:scale-110">
+        <Icon icon={ASSETS.icons.chevron_up} classname="text-white" size="sm" />
     </button>
-    <button id="scrollBottom" class="p-0 m-0 w-12 h-12 border-secondary border-solid border-6 shadow-none btn btn-circle bg-secondary" aria-label="Scroll to Bottom">
-        <Icon icon={ASSETS.icons.chevron_down} class="text-primary" size="lg" />
+    <button id="scrollBottom" aria-label="Scroll to Bottom"
+        class="shadow-none border-none btn btn-square bg-secondary rounded-lg transition-transform duration-500 ease-out hover:scale-110">
+        <Icon icon={ASSETS.icons.chevron_down} classname="text-white" size="sm" />
     </button>
 </div>

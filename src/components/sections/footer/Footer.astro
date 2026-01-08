@@ -1,13 +1,36 @@
 ---
+import type { Translations } from "../../../types/locales";
+
 import SocialButtons from "../../ui/SocialButtons.astro";
-import Avatar from "../../ui/Avatar.astro";
 import Copyright from "./Copyright.astro";
+import LanguageToggler from "../../ui/LanguageToggler.astro";
+import ThemeToggler from "../../ui/ThemeToggler.astro";
+
+const { t } = Astro.locals as { t: Translations };
+
+const links = {
+    projects: t.navbar.projects,
+    experience: t.navbar.experience,
+    certifications: t.navbar.certifications,
+    honors: t.navbar.honors,
+    contact: t.navbar.contact
+}
 ---
 
 <footer class="text-white bg-primary rounded-t-4xl">
-    <div class="justify-center">
-        <Avatar classname="justify-center w-40 h-40" />
-        <SocialButtons />
-        <Copyright />
+    <div class="p-2">
+        <h1 class="text-3xl text-center font-bold mt-2 mb-4">{t.intro.name}</h1>
+        <div class="flex flex-col gap-4 text-center sm:flex-row sm:justify-center sm:gap-6 my-2">
+            {Object.values(links).map(link => (<nav><a class="hover:font-bold">{link}</a></nav>))}
+        </div>
+        <div class="flex flex-col sm:flex-row justify-center mt-4 mb-2">
+            <SocialButtons />
+            <div class="divider divider-horizontal divider-secondary"></div>
+            <div class="flex flex-row justify-center gap-1">
+                <LanguageToggler classname="dropdown-top" />
+                <ThemeToggler />
+            </div>
+        </div>
     </div>
+    <Copyright />
 </footer>

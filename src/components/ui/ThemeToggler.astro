@@ -3,15 +3,8 @@ import { ASSETS } from "../../config/assets";
 import Icon from "../ui/Icon.astro";
 ---
 
-<div class="shrink-0 rounded-full relative flex items-center justify-center p-3 mt-2 duration-300">
-    <label class="swap swap-rotate w-full h-full flex items-center justify-center" aria-label="Toggle Dark Mode">
-        <input id="theme-toggler" type="checkbox" class="theme-controller sr-only" value="dark" aria-label="Dark Mode Toggler" />
-
-        <div class="swap-off absolute flex items-center justify-center">
-            <Icon icon={ASSETS.icons.sun} />
-        </div>
-        <div class="swap-on absolute flex items-center justify-center">
-            <Icon icon={ASSETS.icons.moon} />
-        </div>
-    </label>
-</div>
+<label class="btn btn-ghost shadow-none btn-square swap swap-rotate">
+    <input type="checkbox" class="theme-controller" value="dark" />
+    <Icon icon={ASSETS.icons.sun} classname="swap-off" />
+    <Icon icon={ASSETS.icons.moon} classname="swap-on" />
+</label>

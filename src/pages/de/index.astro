@@ -2,6 +2,8 @@
 import { SEO } from "../../config/meta";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Intro from "../../components/sections/Intro/Intro.astro";
+import About from "../../components/sections/About.astro";
+import Categories from "../../components/sections/Categories.astro";
 
 const { locale } = Astro.locals as {
     locale: string
@@ -10,4 +12,6 @@ const { locale } = Astro.locals as {
 
 <BaseLayout title={SEO.title()} description={SEO.description()} locale={locale} canonical_link={SEO.canonical("/")}>
     <Intro />
+    <About />
+    <Categories />
 </BaseLayout>

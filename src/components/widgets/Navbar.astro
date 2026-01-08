@@ -1,29 +1,58 @@
 ---
+import { ASSETS } from "../../config/assets";
 import { PERSONAL } from "../../config/personal";
 import type { Translations } from "../../types/locales";
+
+import Icon from "../ui/Icon.astro";
 import LanguageToggler from "../ui/LanguageToggler.astro";
 import ThemeToggler from "../ui/ThemeToggler.astro";
 
-const { t } = Astro.locals as {
-    t: Translations
-};
+const { t } = Astro.locals as { t: Translations };
+
+const links = {
+    projects: t.navbar.projects,
+    experience: t.navbar.experience,
+    certifications: t.navbar.certifications,
+    honors: t.navbar.honors,
+    contact: t.navbar.contact
+}
 ---
 
-<div class="navbar bg-transparent">
-    <div class="flex-1">
-        <a class="btn btn-ghost text-xl" href={PERSONAL.url} aria-label={PERSONAL.description}>
-            {PERSONAL.short_name}
-        </a>
+<div class="drawer z-999">
+    <input id="intro-drawer" type="checkbox" class="drawer-toggle" />
+    <div class="drawer-content flex flex-col">
+        <div class="navbar bg-transparent w-full">
+            <div class="flex-none md:hidden">
+                <label for="intro-drawer" aria-label="Open Sidebar" class="btn btn-square btn-ghost">
+                    <Icon icon={ASSETS.icons.hamburger_menu} />
+                </label>
+            </div>
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl" href={PERSONAL.url} aria-label={PERSONAL.description}>
+                    {PERSONAL.short_name}
+                </a>
+            </div>
+            <div class="flex-none hidden md:block">
+                <ul class="menu menu-horizontal px-1">
+                    {Object.values(links).map(link => (<li><a class="hover:font-bold">{link}</a></li>))}
+                    <div class="flex flex-row gap-1">
+                        <div class="divider divider-horizontal"></div>
+                        <LanguageToggler />
+                        <ThemeToggler />
+                    </div>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="flex-none align-middle">
-        <ul class="menu menu-horizontal px-1">
-            <li><a>{t.navbar.projects}</a></li>
-            <li><a>{t.navbar.experience}</a></li>
-            <li><a>{t.navbar.certifications}</a></li>
-            <li><a>{t.navbar.honors}</a></li>
-            <li><a>{t.navbar.contact}</a></li>
-            <li><LanguageToggler /></li>
-            <li><ThemeToggler /></li>
+    <div class="drawer-side text-white">
+        <label for="intro-drawer" aria-label="Close Sidebar" class="drawer-overlay"></label>
+        <ul class="menu bg-primary min-h-full text-lg w-60 p-6 gap-6 flex flex-col">
+            {Object.values(links).map(link => (<li><a>{link}</a></li>))}
+            <div class="flex flex-row justify-center mt-auto px-2 py-1">
+                <LanguageToggler classname="dropdown-top" />
+                <div class="divider divider-horizontal"></div>
+                <ThemeToggler />
+            </div>
         </ul>
     </div>
 </div>

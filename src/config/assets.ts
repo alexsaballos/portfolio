@@ -1,7 +1,11 @@
 import { PERSONAL } from "./personal";
 
-// Pictures used on Intro.astro
+// Pictures used on Intro.astro & Categories.astro
 import profilePicture from "../images/pfp.jpg"
+import projects from "../images/projects.jpg"
+import experience from "../images/experience.jpg"
+import certifications from "../images/certifications.jpg"
+import honors from "../images/honors.jpg"
 
 // Pictures used on Projects.astro
 // Pictures used on Experience.astro
@@ -19,7 +23,13 @@ export type IconKey = keyof typeof ASSETS.icons;
 export type IconData = (typeof ASSETS.icons)[IconKey];
 export const ASSETS = {
     pictures: {
-        PFP: profilePicture
+        PFP: profilePicture,
+        categories: {
+            projects: projects,
+            experience: experience,
+            certifications: certifications,
+            honors: honors
+        }
     },
     icons: {
         // Main contact information
@@ -65,6 +75,38 @@ export const ASSETS = {
             href: "#wisp",
             title: "WISP Icon",
             desc: "Square with Rounded Corners - WISP Logo.",
+            size: "md"
+        },
+        hu: {
+            href: "#hu",
+            title: "Harding University Icon",
+            desc: "Square with Rounded Corners - Harding University Logo.",
+            size: "md"
+        },
+
+        // Porfolio categories icons
+        projects: {
+            href: "#projects",
+            title: "Microprocessor Projects Icon",
+            desc: "Microprocessor Symbolizing Electrical Engineering & Software Projects",
+            size: "md"
+        },
+        experience: {
+            href: "#experience",
+            title: "Briefcase Icon",
+            desc: "Representing Work Experience Across Different Industries",
+            size: "md"
+        },
+        certifications: {
+            href: "#certifications",
+            title: "Certifications Icon",
+            desc: "Licences & Certifications Obtained Throughout my Career",
+            size: "md"
+        },
+        honors: {
+            href: "#honors",
+            title: "Award Icon",
+            desc: "Awards to Reinforce my Current Portfolio",
             size: "md"
         },
 
@@ -123,6 +165,146 @@ export const ASSETS = {
             href: "#devices",
             title: "Supported Devices Icon",
             desc: "All of our supported devices for this website",
+            size: "md"
+        }
+    },
+    technologies: {
+        antdesign: {
+            href: "#antdesign",
+            title: "Ant Design Logo",
+            desc: "UI Library used in Web Development",
+            size: "md"
+        },
+        arduino: {
+            href: "#arduino",
+            title: "Arduino Logo",
+            desc: "Hardware Platform used in Robotics",
+            size: "md"
+        },
+        astro: {
+            href: "#astro",
+            title: "Astro Logo",
+            desc: "Framework used in Web Development",
+            size: "md"
+        },
+        axios: {
+            href: "#axios",
+            title: "Axios Logo",
+            desc: "API Library used in Web Development",
+            size: "md"
+        },
+        c: {
+            href: "#c",
+            title: "C Logo",
+            desc: "Programming Language used in Embedded Systems",
+            size: "md"
+        },
+        cpp: {
+            href: "#cpp",
+            title: "C++ Logo",
+            desc: "Programming Language used in Desktop Apps",
+            size: "md"
+        },
+        csharp: {
+            href: "#csharp",
+            title: "C# Logo",
+            desc: "Programming Language used in Desktop Apps",
+            size: "md"
+        },
+        css: {
+            href: "#css",
+            title: "CSS3 Logo",
+            desc: "Styling Language used in Web Development",
+            size: "md"
+        },
+        daisyui: {
+            href: "#daisyui",
+            title: "daisyUI Logo",
+            desc: "UI Library used in Web Development",
+            size: "md"
+        },
+        flask: {
+            href: "#flask",
+            title: "Flask Logo",
+            desc: "Framework used in Backend",
+            size: "md"
+        },
+        html: {
+            href: "#html",
+            title: "HTML5 Logo",
+            desc: "Markup Language used in Web Development",
+            size: "md"
+        },
+        java: {
+            href: "#java",
+            title: "Java Logo",
+            desc: "Programming Language used in Desktop Apps",
+            size: "md"
+        },
+        javascript: {
+            href: "#javascript",
+            title: "JavaScript Logo",
+            desc: "Programming Language used in Web Development",
+            size: "md"
+        },
+        mysql: {
+            href: "#mysql",
+            title: "MySQL Logo",
+            desc: "Relational Database used in Backend",
+            size: "md"
+        },
+        opencv: {
+            href: "#opencv",
+            title: "OpenCV Logo",
+            desc: "Library used in Robotics",
+            size: "md"
+        },
+        php: {
+            href: "#php",
+            title: "PHP Logo",
+            desc: "Programming Language used in Web Development",
+            size: "md"
+        },
+        python: {
+            href: "#python",
+            title: "Python Logo",
+            desc: "Programming Language used in Backend & Robotics",
+            size: "md"
+        },
+        raspberrypi: {
+            href: "#raspberrypi",
+            title: "Raspberry Pi Logo",
+            desc: "Hardware Platform used in Robotics",
+            size: "md"
+        },
+        react: {
+            href: "#react",
+            title: "React Logo",
+            desc: "UI Library used in Web Development",
+            size: "md"
+        },
+        sqlite: {
+            href: "#sqlite",
+            title: "SQLite Logo",
+            desc: "Relational Database used in Backend",
+            size: "md"
+        },
+        tailwindcss: {
+            href: "#tailwindcss",
+            title: "TailwindCSS Logo",
+            desc: "CSS Library used in Web Development",
+            size: "md"
+        },
+        typescript: {
+            href: "#typescript",
+            title: "TypeScript Logo",
+            desc: "Programming Language used in Web Development",
+            size: "md"
+        },
+        winui: {
+            href: "#winui",
+            title: "WinUI Logo",
+            desc: "Framework used in Desktop Apps",
             size: "md"
         }
     },

@@ -6,10 +6,10 @@ import { SITE } from '../config/meta';
 import { PERSONAL } from '../config/personal';
 import { getLocaleMessages } from '../i18n/utils';
 
-import Floating from '../components/widgets/Floating.astro';
 import IconLibrary from '../components/ui/IconLibrary.astro';
 import Footer from '../components/sections/footer/Footer.astro';
 import Navbar from '../components/widgets/Navbar.astro';
+import Scroller from '../components/widgets/Scroller.astro';
 
 const { title, description, canonical_link } = Astro.props;
 const locale = Astro.currentLocale ?? "en";
@@ -55,7 +55,7 @@ Astro.locals.t = await getLocaleMessages(locale);
 	<body>
 		<IconLibrary />						<!-- Inject all Icons early on in the DOM -->
 		<div><slot/></div>					<!-- Dynamic page insertion for sticky NavBar -->
-		<Floating lang={locale} />			<!-- Fixed floating buttons on all screen sizes -->
+		<Scroller />						<!-- Fixed scroller floating buttons on all screen sizes -->
 		<Footer />							<!-- Footer included with every page -->
 		<script is:inline type="module" src={`${PERSONAL.base}scripts/global.js`}></script>
 	</body>

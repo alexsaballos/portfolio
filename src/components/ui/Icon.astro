@@ -1,13 +1,11 @@
 ---
 import { type IconData } from "../../config/assets.ts";
 
-interface IconType {
+const { icon, size, classname: classname = "" } = Astro.props as {
     icon: IconData;
     size?: string;
-    class?: string;
+    classname?: string;
 };
-
-const { icon, size, class: className = "" } = Astro.props as IconType;
 
 const uuid = crypto.randomUUID();       // Accessibility
 const sizeMap = { xs: 15, sm: 20, md: 35, lg: 45, xl: 60 } as const;
@@ -17,7 +15,7 @@ const pixelSize = sizeMap[(size ?? icon.size) as keyof typeof sizeMap];
 <svg
     width={pixelSize}
     height={pixelSize}
-    class={`shrink-0 ${className}`}
+    class={`shrink-0 ${classname}`}
     aria-labelledby={`icon-title-${uuid} icon-desc-${uuid}`}
     viewBox="0 0 640 640"
     fill="currentColor"

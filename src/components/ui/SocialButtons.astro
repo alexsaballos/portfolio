@@ -3,39 +3,52 @@ import { ASSETS } from "../../config/assets";
 import { SOCIAL } from "../../config/personal";
 import Icon from "./Icon.astro";
 
+const { classname } = Astro.props;
+
 const SOCIAL_BUTTONS = {
     linkedin: {
         icon: ASSETS.icons.linkedin,
+        color: "#3A66B0",
         link: SOCIAL.linkedin_URL,
         label: "My LinkedIn Profile"
     },
     github: {
         icon: ASSETS.icons.github,
+        color: "#516870",
         link: SOCIAL.github_URL,
         label: "My GitHub Profile"
     },
     handshake: {
         icon: ASSETS.icons.handshake,
+        color: "#D3FB52",
         link: SOCIAL.handshake_URL,
         label: "My Handshake Profile"
     },
     merit: {
         icon: ASSETS.icons.merit,
+        color: "#126579",
         link: SOCIAL.merit_URL,
         label: "My Merit Page"
     },
     wisp: {
         icon: ASSETS.icons.wisp,
+        color: "#F2B100",
         link: SOCIAL.wisp_URL,
         label: "WISP Official Website"
+    },
+    hu: {
+        icon: ASSETS.icons.hu,
+        color: "#F2B100",
+        link: SOCIAL.hu_URL,
+        label: "Harding University Official Website"
     }
 }
 ---
 
-<div class="flex flex-row justify-center">
+<div class=`flex flex-row justify-center ${classname}`>
     {Object.values(SOCIAL_BUTTONS).map(button => (
-        <a class="p-0 m-0" href={button.link} aria-label={button.label}>
-            <Icon icon={button.icon} size="lg" />
+        <a class="p-0 m-0" href={button.link} aria-label={button.label} target="_blank" rel="noopener noreferrer">
+            <Icon icon={button.icon} classname="shadow-none transition-transform duration-500 ease-out hover:text-accent hover:scale-120" size="lg" />
         </a>
     ))}
 </div>

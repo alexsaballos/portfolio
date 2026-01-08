@@ -2,17 +2,22 @@
 import { ASSETS } from "../../config/assets";
 import Icon from "./Icon.astro";
 
+const { classname } = Astro.props as {
+    classname: string;
+}
+
 const languages = {
     de: {link: "/testing/de/", flag: ASSETS.flags.de, alt: "de-de", name: "Deutsche"},
     en: {link: "/testing/en/", flag: ASSETS.flags.en, alt: "en-us", name: "English"},
     es: {link: "/testing/es/", flag: ASSETS.flags.es, alt: "es-mx", name: "Español"}
 };
 ---
-<div class="dropdown dropdown-down dropdown-center">
-    <div tabindex="0" role="button" class="btn btn-ghost -m-2">
+
+<div class=`dropdown dropdown-center ${classname}`>
+    <div tabindex="0" role="button" class="btn btn-ghost btn-square shadow-none">
         <Icon icon={ASSETS.icons.translate} />
     </div>
-    <ul tabindex="-1" class="dropdown-content menu bg-base-200 rounded-box gap-1 w-30 p-1">
+    <ul tabindex="-1" class="dropdown-content menu bg-base-200 text-base-content rounded-box gap-1 w-30 p-1">
         {Object.values(languages).map((entry) => (
             <li>
                 <a href={entry.link}><img src={entry.flag} alt={entry.alt} loading="eager" class="h-5 w-5" />

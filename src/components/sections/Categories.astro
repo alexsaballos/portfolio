@@ -1,0 +1,65 @@
+---
+import { ASSETS } from "../../config/assets"
+import type { Translations } from "../../types/locales"
+import Image from "astro/components/Image.astro"
+import Icon from "../ui/Icon.astro"
+
+const { t } = Astro.locals as {
+    t: Translations
+}
+
+const CATEGORIES = {
+    projects: {
+        link: "link",
+        picture: ASSETS.pictures.categories.projects,
+        icon: ASSETS.icons.projects,
+        description: t.categories.projects
+    },
+    experience: {
+        link: "link",
+        picture: ASSETS.pictures.categories.experience,
+        icon: ASSETS.icons.experience,
+        description: t.categories.experience
+    },
+    certifications: {
+        link: "link",
+        picture: ASSETS.pictures.categories.certifications,
+        icon: ASSETS.icons.certifications,
+        description: t.categories.certifications
+    },
+    honors: {
+        link: "link",
+        picture: ASSETS.pictures.categories.honors,
+        icon: ASSETS.icons.honors,
+        description: t.categories.honors
+    },
+}
+---
+
+<section class="bg-base-300 pt-15 pb-10 px-5 rounded-4xl">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-15 sm:gap-13 xl:gap-5">
+        {Object.values(CATEGORIES).map(category => (
+            <div class="relative w-full">
+                <div class="absolute -top-7.5 left-1/2 -translate-x-1/2 z-1">
+                    <div class="rounded-full bg-primary p-3 shadow-none">
+                        <Icon icon={category.icon} size="md" classname="text-white" />
+                    </div>
+                </div>
+                <a href="https://alexsaballos.dev/">
+                    <div class="card image-full rounded-2xl h-64 md:h-72 lg:h-80 group overflow-hidden">
+                        <figure>
+                            <Image src={category.picture} alt={category.description}
+                                    class="transition-transform duration-500 ease-out group-hover:scale-110" />
+                        </figure>
+                        <div class="absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                        <div class="card-body flex items-center justify-center relative">
+                            <div class="card-title text-2xl place-content-center text-white group-hover:font-bold">
+                                {category.description}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        ))}
+    </div>
+</section>
