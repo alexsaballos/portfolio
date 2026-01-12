@@ -3,6 +3,7 @@ export type Translations = {
         name_is: string;
         name: string;
         headline: string;
+        scroll: string;
     },
     about: {
         greeting: string;
@@ -11,12 +12,14 @@ export type Translations = {
     categories: {
         projects: string;
         experience: string;
+        leadership: string;
         certifications: string;
         honors: string;
     },
     navbar: {
         projects: string;
         experience: string;
+        leadership: string;
         certifications: string;
         honors: string;
         contact: string;

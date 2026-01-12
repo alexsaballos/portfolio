@@ -1,0 +1,110 @@
+---
+import Technology, { TECHNOLOGIES } from "../ui/Technology.astro";
+---
+
+<section class="bg-base-300 rounded-4xl py-10 px-5 lg:px-30">
+    <div class="grid gap-10 xl:px-10">
+        <!-- ================= Tier 1 ================= -->
+        <section class="grid gap-6">
+            <h2 class="text-2xl font-bold tracking-tight">Core Engineering</h2>
+            <div class="flex flex-col flex-wrap gap-6">
+
+                <div class="flex flex-col lg:flex-row gap-6">
+                    <!-- Embedded -->
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-lg font-semibold">Embedded & Robotics Systems</h3>
+                        <div class="flex flex-wrap gap-2 pl-2">
+                            <Technology selection={TECHNOLOGIES.baremetal} />
+                            <Technology selection={TECHNOLOGIES.kicad} />
+                            <Technology selection={TECHNOLOGIES.ultiboard} />
+                            <Technology selection={TECHNOLOGIES.multisim} />
+                            <Technology selection={TECHNOLOGIES.opencv} />
+                            <Technology selection={TECHNOLOGIES.raspberrypi} />
+                            <Technology selection={TECHNOLOGIES.arduino} />
+                        </div>
+                    </div>
+
+                    <!-- Software -->
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-lg font-semibold">Software Engineering</h3>
+                        <div class="flex flex-wrap gap-2 pl-2">
+                            <Technology selection={TECHNOLOGIES.c} />
+                            <Technology selection={TECHNOLOGIES.cpp} />
+                            <Technology selection={TECHNOLOGIES.csharp} />
+                            <Technology selection={TECHNOLOGIES.java} />
+                            <Technology selection={TECHNOLOGIES.python} />
+                            <Technology selection={TECHNOLOGIES.javascript} />
+                            <Technology selection={TECHNOLOGIES.typescript} />
+                            <Technology selection={TECHNOLOGIES.php} />
+                        </div>
+                    </div>                        
+                </div>
+
+                <!-- CAD -->
+                <div class="flex flex-col gap-2">
+                    <h3 class="text-lg font-semibold">Engineering CAD</h3>
+                    <div class="flex flex-wrap gap-2 pl-2">
+                        <Technology selection={TECHNOLOGIES.autocad} />
+                        <Technology selection={TECHNOLOGIES.sketchup} />
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= Tier 2 ================= -->
+        <section class="grid gap-6 mt-4">
+            <h2 class="text-xl font-semibold -mb-4">Supporting Expertise</h2>
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+                <!-- Web -->
+                <fieldset class="fieldset bg-base-100 border border-base-100 rounded-xl p-4">
+                    <legend class="fieldset-legend text-[15px] font-medium">Web & UI</legend>
+                    <div class="flex flex-wrap gap-2 -mt-2">
+                        <Technology selection={TECHNOLOGIES.html} />
+                        <Technology selection={TECHNOLOGIES.css} />
+                        <Technology selection={TECHNOLOGIES.astro} />
+                        <Technology selection={TECHNOLOGIES.react} />
+                        <Technology selection={TECHNOLOGIES.tailwindcss} />
+                        <Technology selection={TECHNOLOGIES.daisyui} />
+                        <Technology selection={TECHNOLOGIES.antdesign} />
+                        <Technology selection={TECHNOLOGIES.axios} />
+                    </div>
+                </fieldset>
+
+                <!-- Frameworks & Databases -->
+                <div class="flex lg:flex-col gap-6 lg:gap-y-14 xl:gap-y-5">
+                    <!-- Frameworks -->
+                    <fieldset class="fieldset bg-base-100 border border-base-100 rounded-xl p-4">
+                        <legend class="fieldset-legend text-[15px] font-medium">Frameworks</legend>
+                        <div class="flex flex-wrap gap-2 -mt-2">
+                            <Technology selection={TECHNOLOGIES.flask} />
+                            <Technology selection={TECHNOLOGIES.winui} />
+                        </div>
+                    </fieldset>
+
+                    <!-- Databases -->
+                    <fieldset class="fieldset bg-base-100 border border-base-100 rounded-xl p-4">
+                        <legend class="fieldset-legend text-[15px] font-medium">Databases</legend>
+                        <div class="flex flex-wrap gap-2 -mt-2">
+                            <Technology selection={TECHNOLOGIES.mysql} />
+                            <Technology selection={TECHNOLOGIES.sqlite} />
+                        </div>
+                    </fieldset>
+                </div>
+
+                <!-- Admin -->
+                <fieldset class="fieldset bg-base-100 border border-base-100 rounded-xl p-4">
+                    <legend class="fieldset-legend text-[15px] font-medium">Administration</legend>
+                    <div class="flex lg:flex-col flex-wrap gap-2 -mt-2">
+                        <Technology selection={TECHNOLOGIES.directus} />
+                        <Technology selection={TECHNOLOGIES.cpanel} />
+                        <Technology selection={TECHNOLOGIES.phpmyadmin} />
+                    </div>
+                </fieldset>
+
+            </div>
+        </section>
+
+    </div>
+</section>

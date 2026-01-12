@@ -1,6 +1,5 @@
 ---
 import { ASSETS } from "../../config/assets";
-import { PERSONAL } from "../../config/personal";
 import type { Translations } from "../../types/locales";
 
 import Icon from "../ui/Icon.astro";
@@ -12,13 +11,14 @@ const { t } = Astro.locals as { t: Translations };
 const links = {
     projects: t.navbar.projects,
     experience: t.navbar.experience,
+    leadership: t.navbar.leadership,
     certifications: t.navbar.certifications,
     honors: t.navbar.honors,
     contact: t.navbar.contact
 }
 ---
 
-<div class="drawer z-999">
+<div class="drawer ml-4 z-999">
     <input id="intro-drawer" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content flex flex-col">
         <div class="navbar bg-transparent w-full">
@@ -27,14 +27,9 @@ const links = {
                     <Icon icon={ASSETS.icons.hamburger_menu} />
                 </label>
             </div>
-            <div class="flex-1">
-                <a class="btn btn-ghost text-xl" href={PERSONAL.url} aria-label={PERSONAL.description}>
-                    {PERSONAL.short_name}
-                </a>
-            </div>
-            <div class="flex-none hidden md:block">
+            <div class="hidden md:block">
                 <ul class="menu menu-horizontal px-1">
-                    {Object.values(links).map(link => (<li><a class="hover:font-bold">{link}</a></li>))}
+                    {Object.values(links).map(link => (<li><a href="#" class="hover:font-bold">{link}</a></li>))}
                     <div class="flex flex-row gap-1">
                         <div class="divider divider-horizontal"></div>
                         <LanguageToggler />
@@ -46,8 +41,8 @@ const links = {
     </div>
     <div class="drawer-side text-white">
         <label for="intro-drawer" aria-label="Close Sidebar" class="drawer-overlay"></label>
-        <ul class="menu bg-primary min-h-full text-lg w-60 p-6 gap-6 flex flex-col">
-            {Object.values(links).map(link => (<li><a>{link}</a></li>))}
+        <ul class="menu bg-primary min-h-full w-60 text-lg p-6 pt-10 gap-10 flex flex-col">
+            {Object.values(links).map(link => (<li><a href="#" class="hover:font-bold">{link}</a></li>))}
             <div class="flex flex-row justify-center mt-auto px-2 py-1">
                 <LanguageToggler classname="dropdown-top" />
                 <div class="divider divider-horizontal"></div>

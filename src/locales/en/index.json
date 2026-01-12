@@ -2,21 +2,24 @@
     "intro": {
         "name_is": "My name is",
         "name": "Alexander Saballos",
-        "headline": "Electrical Engineer (US EI/EiT) | Software Engineer | HU Walton Alumni"
+        "headline": "Electrical Engineer (US EI/EiT) | Software Engineer | HU Walton Alumni",
+        "scroll": "Scroll!"
     },
     "about": {
-        "greeting": "Welcome to my Portofolio!",
+        "greeting": "Welcome to my Portfolio!",
         "introduction": "This space highlights the systems and projects I've built at the intersection of hardware, software, and infrastructure. I graduated Cum Laude from Harding University with an ABET-accredited B.S. in Electrical Engineering, a minor in Mathematics, and passed the NCEES FE Exam prior to graduation, which enabled me to receive a U.S. EI/EiT license. My work spans embedded systems, power and PCB design, automation, and software development, with an emphasis on clear documentation, long-term maintainability, and practical solutions that hold up outside the lab."
     },
     "categories": {
         "projects": "Projects",
         "experience": "Experience",
+        "leadership": "Leadership",
         "certifications": "Licenses & Certifications",
         "honors": "Honors"
     },
     "navbar": {
         "projects": "Projects",
         "experience": "Experience",
+        "leadership": "Leadership",
         "certifications": "Certifications",
         "honors": "Honors",
         "contact": "Contact"

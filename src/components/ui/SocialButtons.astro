@@ -48,7 +48,7 @@ const SOCIAL_BUTTONS = {
 <div class=`flex flex-row justify-center ${classname}`>
     {Object.values(SOCIAL_BUTTONS).map(button => (
         <a class="p-0 m-0" href={button.link} aria-label={button.label} target="_blank" rel="noopener noreferrer">
-            <Icon icon={button.icon} classname="shadow-none transition-transform duration-500 ease-out hover:text-accent hover:scale-120" size="lg" />
+            <Icon icon={button.icon} classname="shadow-none transition-transform duration-500 ease-out hover:text-secondary hover:scale-120" size="lg" />
         </a>
     ))}
 </div>

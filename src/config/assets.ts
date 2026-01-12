@@ -4,6 +4,7 @@ import { PERSONAL } from "./personal";
 import profilePicture from "../images/pfp.jpg"
 import projects from "../images/projects.jpg"
 import experience from "../images/experience.jpg"
+import leadership from "../images/leadership.jpg"
 import certifications from "../images/certifications.jpg"
 import honors from "../images/honors.jpg"
 
@@ -27,6 +28,7 @@ export const ASSETS = {
         categories: {
             projects: projects,
             experience: experience,
+            leadership: leadership,
             certifications: certifications,
             honors: honors
         }
@@ -97,6 +99,12 @@ export const ASSETS = {
             desc: "Representing Work Experience Across Different Industries",
             size: "md"
         },
+        leadership: {
+            href: "#leadership",
+            title: "Users with Gear Icon",
+            desc: "Representing Leadership Experience Across Different Areas",
+            size: "md"
+        },
         certifications: {
             href: "#certifications",
             title: "Certifications Icon",
@@ -146,7 +154,7 @@ export const ASSETS = {
             size: "sm"
         },
 
-        // Up & Down Elevator-styled icon scrollers
+        // Up & Down icon scrollers
         chevron_up: {
             href: "#chevron_up",
             title: "Scroll Up Icon",
@@ -157,6 +165,12 @@ export const ASSETS = {
             href: "#chevron_down",
             title: "Scroll Down Icon",
             desc: "Scroll to Bottom Icon represented by a Chevron Down Icon inside a button.",
+            size: "lg"
+        },
+        angles_down: {
+            href: "#angles_down",
+            title: "Scroll Down into the Website",
+            desc: "Scroll Down Invitation denoted by a Double Down Angle Icon.",
             size: "lg"
         },
 
@@ -187,6 +201,12 @@ export const ASSETS = {
             desc: "Framework used in Web Development",
             size: "md"
         },
+        autocad: {
+            href: "#autocad",
+            title: "AutoCAD Logo",
+            desc: "Engineering CAD Tool used in Diagram Creation",
+            size: "md"
+        },
         axios: {
             href: "#axios",
             title: "Axios Logo",
@@ -197,6 +217,12 @@ export const ASSETS = {
             href: "#c",
             title: "C Logo",
             desc: "Programming Language used in Embedded Systems",
+            size: "md"
+        },
+        cpanel: {
+            href: "#cpanel",
+            title: "cpanel Logo",
+            desc: "Administration Panel used in Backend Management",
             size: "md"
         },
         cpp: {
@@ -223,6 +249,12 @@ export const ASSETS = {
             desc: "UI Library used in Web Development",
             size: "md"
         },
+        directus: {
+            href: "#directus",
+            title: "directus Logo",
+            desc: "Administration Panel used in Content Management",
+            size: "md"
+        },
         flask: {
             href: "#flask",
             title: "Flask Logo",
@@ -247,6 +279,24 @@ export const ASSETS = {
             desc: "Programming Language used in Web Development",
             size: "md"
         },
+        kicad: {
+            href: "#kicad",
+            title: "KiCAD Logo",
+            desc: "Engineering CAD Tool used in PCB Creation",
+            size: "md"
+        },
+        microprocessor: {
+            href: "#microprocessor",
+            title: "Microprocessor Icon",
+            desc: "Microprocessor/Microcontroller used in Embedded Systems",
+            size: "md"
+        },
+        multisim: {
+            href: "#multisim",
+            title: "MultiSim Logo",
+            desc: "Simulation Tool used in Electronics & Schematics Creation",
+            size: "md"
+        },
         mysql: {
             href: "#mysql",
             title: "MySQL Logo",
@@ -263,6 +313,12 @@ export const ASSETS = {
             href: "#php",
             title: "PHP Logo",
             desc: "Programming Language used in Web Development",
+            size: "md"
+        },
+        phpmyadmin: {
+            href: "#phpmyadmin",
+            title: "phpMyAdmin Logo",
+            desc: "Administration Panel used in Backend Management",
             size: "md"
         },
         python: {
@@ -283,6 +339,12 @@ export const ASSETS = {
             desc: "UI Library used in Web Development",
             size: "md"
         },
+        sketchup: {
+            href: "#sketchup",
+            title: "SketchUp Logo",
+            desc: "Engineering CAD Tool used in 3D Modeling",
+            size: "md"
+        },
         sqlite: {
             href: "#sqlite",
             title: "SQLite Logo",
@@ -299,6 +361,12 @@ export const ASSETS = {
             href: "#typescript",
             title: "TypeScript Logo",
             desc: "Programming Language used in Web Development",
+            size: "md"
+        },
+        ultiboard: {
+            href: "#ultiboard",
+            title: "UltiBoard Logo",
+            desc: "Engineering CAD Tool used in PCB Creation",
             size: "md"
         },
         winui: {

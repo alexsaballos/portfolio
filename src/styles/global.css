@@ -1,6 +1,34 @@
 @import "tailwindcss";
 @plugin "daisyui" { themes: light, dark; }
 
+@plugin "daisyui/theme" {
+	name: "light";
+	default: true;
+	--color-primary: #004DB8;
+	--color-secondary: #B86B00;
+	--color-accent: #68B531;
+}
+
+@plugin "daisyui/theme" {
+	name: "dark";
+	--color-primary: #3168B5;
+	--color-secondary: #B57E31;
+	--color-accent: #68B531;
+}
+
+.root {
+	--tech-embedded: "#D48D17";
+	--tech-systems: "#3168B5";
+	--tech-web: "#524391";
+	--tech-databases: "#509636";
+	--tech-administration: "#BA5656";
+	--tech-tools: "#5E5E5E";
+}
+
+.tech .badge, .tech .tooltip-content {
+	background-color: var(--tech-color);
+}
+
 html, body {
 	margin: 0;
 	padding: 0;

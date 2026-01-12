@@ -8,7 +8,7 @@ const { icon, size, classname: classname = "" } = Astro.props as {
 };
 
 const uuid = crypto.randomUUID();       // Accessibility
-const sizeMap = { xs: 15, sm: 20, md: 35, lg: 45, xl: 60 } as const;
+const sizeMap = { xs: 15, sm: 20, md: 35, lg: 45, xl: 60, dxl:70 } as const;
 const pixelSize = sizeMap[(size ?? icon.size) as keyof typeof sizeMap];
 ---
 

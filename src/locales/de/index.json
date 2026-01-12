@@ -2,7 +2,8 @@
     "intro": {
         "name_is": "Ich heiße",
         "name": "Alexander Saballos",
-        "headline": "Elektroingenieur (US EI/EiT) | Softwareingenieur | HU Walton-Alumnus"
+        "headline": "Elektroingenieur (US EI/EiT) | Softwareingenieur | HU Walton-Alumnus",
+        "scroll": "Scrollen!"
     },
     "about": {
         "greeting": "Willkommen in meinem Portfolio!",
@@ -11,12 +12,14 @@
     "categories": {
         "projects": "Projekte",
         "experience": "Erfahrung",
+        "leadership": "Führung",
         "certifications": "Lizenzen & Zertifizierungen",
         "honors": "Auszeichnungen"
     },
     "navbar": {
         "projects": "Projekte",
         "experience": "Erfahrung",
+        "leadership": "Führung",
         "certifications": "Zertifizierungen",
         "honors": "Auszeichnungen",
         "contact": "Kontakt"
