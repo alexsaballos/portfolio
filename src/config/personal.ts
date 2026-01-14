@@ -1,5 +1,7 @@
+import type { PersonalType, SocialType } from "../types/PersonalTypes";
+
 // Personal Information to be publicly disclosed via website
-export const PERSONAL = {
+export const PERSONAL: PersonalType = {
     short_name: "Alexander Saballos",
     long_name: "Alexander Saballos - Engineering Portfolio",
     description: "Welcome to Alexander Saballos' Engineering Portfolio",
@@ -10,7 +12,7 @@ export const PERSONAL = {
     usa_phone: "(+1) 501-236-2416"
 } as const;
 
-export const SOCIAL = {
+export const SOCIAL: SocialType = {
     whatsapp_URL: "https://wa.me/50582712533",
     portfolio_URL: "https://alexsaballos.dev",
     linkedin_URL: "https://www.linkedin.com/in/alex-saballos/",

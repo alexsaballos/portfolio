@@ -1,0 +1,13 @@
+---
+import { ASSETS } from "../../../config/assets";
+import { getHomeLink } from "../../../config/pages";
+import Icon from "../../ui/libraries/Icon.astro";
+
+const locale: string = Astro.currentLocale ?? "en";
+const home: string = getHomeLink(locale);
+---
+<div class="btn btn-ghost btn-square shadow-none">
+    <a href={home}>
+        <Icon icon={ASSETS.icons.home} />
+    </a>
+</div>

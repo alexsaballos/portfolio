@@ -1,10 +1,10 @@
 /// <reference types="astro/client" />
 
-import type { Translations } from "./types/locales";
+import type { LocalesType } from "./types/LocalesType";
 
 declare namespace App {
     interface Locals {
-        readonly t: Translations;
+        readonly t: LocalesType;
         readonly locale: string;
     }
 }

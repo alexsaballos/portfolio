@@ -1,8 +1,8 @@
-import type { Translations } from "../types/locales";
+import type { LocalesType } from "../types/LocalesType";
 
-const localeLoaders = import.meta.glob<{default: Translations}>("../locales/*/index.json");
+const localeLoaders = import.meta.glob<{default: LocalesType}>("../locales/*/index.json");
 
-export async function getLocaleMessages(locale: string): Promise<Translations> {
+export async function getLocaleMessages(locale: string): Promise<LocalesType> {
     const key = `../locales/${locale}/index.json`;
     const loader = localeLoaders[key];
 

@@ -1,6 +1,7 @@
 ---
-import type { Translations } from "../../types/locales";
-const { t } = Astro.locals as { t: Translations };
+import type { LocalesType } from "../../types/LocalesType";
+
+const { t } = Astro.locals as { t: LocalesType };
 ---
 
 <section class="bg-base-100 py-10 px-5">

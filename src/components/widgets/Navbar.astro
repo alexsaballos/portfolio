@@ -1,49 +1,77 @@
 ---
 import { ASSETS } from "../../config/assets";
-import type { Translations } from "../../types/locales";
+import { PAGES, getPageLink } from "../../config/pages";
+import type { LocalesType } from "../../types/LocalesType";
 
-import Icon from "../ui/Icon.astro";
-import LanguageToggler from "../ui/LanguageToggler.astro";
-import ThemeToggler from "../ui/ThemeToggler.astro";
+import Icon from "../ui/libraries/Icon.astro";
+import IconHome from "../ui/buttons/IconHome.astro";
+import LanguageToggler from "../ui/togglers/LanguageToggler.astro";
+import ThemeToggler from "../ui/togglers/ThemeToggler.astro";
 
-const { t } = Astro.locals as { t: Translations };
+const { t } = Astro.locals as { t: LocalesType };
+const locale: string = Astro.currentLocale ?? "en";
+
+const { background } = Astro.props as { background: string; }
 
 const links = {
-    projects: t.navbar.projects,
-    experience: t.navbar.experience,
-    leadership: t.navbar.leadership,
-    certifications: t.navbar.certifications,
-    honors: t.navbar.honors,
-    contact: t.navbar.contact
+    projects: {
+        name: t.navbar.projects,
+        link: getPageLink(locale, PAGES.projects.slug)
+    },
+    experience: {
+        name: t.navbar.experience,
+        link: getPageLink(locale, PAGES.experience.slug)
+    },
+    leadership: {
+        name: t.navbar.leadership,
+        link: getPageLink(locale, PAGES.leadership.slug)
+    },
+    certifications: {
+        name: t.navbar.certifications,
+        link: getPageLink(locale, PAGES.certifications.slug)
+    },
+    honors: {        
+        name: t.navbar.honors,
+        link: getPageLink(locale, PAGES.honors.slug)
+    },
+    contact: {
+        name: t.navbar.contact,
+        link: getPageLink(locale, PAGES.contact.slug)
+    }
 }
 ---
 
-<div class="drawer ml-4 z-999">
+<div class="drawer z-999 pt-5">
     <input id="intro-drawer" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content flex flex-col">
-        <div class="navbar bg-transparent w-full">
+        <div class={`navbar bg-${background} w-full`}>
             <div class="flex-none md:hidden">
-                <label for="intro-drawer" aria-label="Open Sidebar" class="btn btn-square btn-ghost">
+                <label for="intro-drawer" aria-label="Open Sidebar" class="btn btn-square btn-ghost ml-5">
                     <Icon icon={ASSETS.icons.hamburger_menu} />
                 </label>
             </div>
-            <div class="hidden md:block">
-                <ul class="menu menu-horizontal px-1">
-                    {Object.values(links).map(link => (<li><a href="#" class="hover:font-bold">{link}</a></li>))}
-                    <div class="flex flex-row gap-1">
-                        <div class="divider divider-horizontal"></div>
-                        <LanguageToggler />
-                        <ThemeToggler />
-                    </div>
+            <div class="navbar-start ml-5 hidden md:flex">
+                <IconHome />
+            </div>
+            <div class="navbar-center hidden md:flex">
+                <ul class="menu menu-horizontal">
+                    {Object.values(links).map(entry => (<li><a href={entry.link} class="hover:font-bold">{entry.name}</a></li>))}
                 </ul>
+            </div>
+            <div class="navbar-end hidden mr-5 md:flex">
+                <LanguageToggler />
+                <div class="divider divider-horizontal"></div>
+                <ThemeToggler />
             </div>
         </div>
     </div>
     <div class="drawer-side text-white">
         <label for="intro-drawer" aria-label="Close Sidebar" class="drawer-overlay"></label>
-        <ul class="menu bg-primary min-h-full w-60 text-lg p-6 pt-10 gap-10 flex flex-col">
-            {Object.values(links).map(link => (<li><a href="#" class="hover:font-bold">{link}</a></li>))}
-            <div class="flex flex-row justify-center mt-auto px-2 py-1">
+        <ul class="menu bg-primary min-h-full w-65 text-lg p-6 pt-10 gap-10 flex flex-col">
+            {Object.values(links).map(entry => (<li><a href={entry.link} class="hover:font-bold">{entry.name}</a></li>))}
+            <div class="flex flex-row justify-center mt-auto py-1">
+                <IconHome />
+                <div class="divider divider-horizontal"></div>
                 <LanguageToggler classname="dropdown-top" />
                 <div class="divider divider-horizontal"></div>
                 <ThemeToggler />

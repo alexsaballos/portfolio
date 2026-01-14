@@ -1,5 +1,6 @@
 ---
-import Technology, { TECHNOLOGIES } from "../ui/Technology.astro";
+import { ASSETS } from "../../config/assets";
+import Technology from "../ui/Technology.astro";
 ---
 
 <section class="bg-base-300 rounded-4xl py-10 px-5 lg:px-30">
@@ -14,13 +15,13 @@ import Technology, { TECHNOLOGIES } from "../ui/Technology.astro";
                     <div class="flex flex-col gap-2">
                         <h3 class="text-lg font-semibold">Embedded & Robotics Systems</h3>
                         <div class="flex flex-wrap gap-2 pl-2">
-                            <Technology selection={TECHNOLOGIES.baremetal} />
-                            <Technology selection={TECHNOLOGIES.kicad} />
-                            <Technology selection={TECHNOLOGIES.ultiboard} />
-                            <Technology selection={TECHNOLOGIES.multisim} />
-                            <Technology selection={TECHNOLOGIES.opencv} />
-                            <Technology selection={TECHNOLOGIES.raspberrypi} />
-                            <Technology selection={TECHNOLOGIES.arduino} />
+                            <Technology selection={ASSETS.technologies.baremetal} />
+                            <Technology selection={ASSETS.technologies.kicad} />
+                            <Technology selection={ASSETS.technologies.ultiboard} />
+                            <Technology selection={ASSETS.technologies.multisim} />
+                            <Technology selection={ASSETS.technologies.opencv} />
+                            <Technology selection={ASSETS.technologies.raspberrypi} />
+                            <Technology selection={ASSETS.technologies.arduino} />
                         </div>
                     </div>
 
@@ -28,14 +29,14 @@ import Technology, { TECHNOLOGIES } from "../ui/Technology.astro";
                     <div class="flex flex-col gap-2">
                         <h3 class="text-lg font-semibold">Software Engineering</h3>
                         <div class="flex flex-wrap gap-2 pl-2">
-                            <Technology selection={TECHNOLOGIES.c} />
-                            <Technology selection={TECHNOLOGIES.cpp} />
-                            <Technology selection={TECHNOLOGIES.csharp} />
-                            <Technology selection={TECHNOLOGIES.java} />
-                            <Technology selection={TECHNOLOGIES.python} />
-                            <Technology selection={TECHNOLOGIES.javascript} />
-                            <Technology selection={TECHNOLOGIES.typescript} />
-                            <Technology selection={TECHNOLOGIES.php} />
+                            <Technology selection={ASSETS.technologies.c} />
+                            <Technology selection={ASSETS.technologies.cpp} />
+                            <Technology selection={ASSETS.technologies.csharp} />
+                            <Technology selection={ASSETS.technologies.java} />
+                            <Technology selection={ASSETS.technologies.python} />
+                            <Technology selection={ASSETS.technologies.javascript} />
+                            <Technology selection={ASSETS.technologies.typescript} />
+                            <Technology selection={ASSETS.technologies.php} />
                         </div>
                     </div>                        
                 </div>
@@ -44,8 +45,8 @@ import Technology, { TECHNOLOGIES } from "../ui/Technology.astro";
                 <div class="flex flex-col gap-2">
                     <h3 class="text-lg font-semibold">Engineering CAD</h3>
                     <div class="flex flex-wrap gap-2 pl-2">
-                        <Technology selection={TECHNOLOGIES.autocad} />
-                        <Technology selection={TECHNOLOGIES.sketchup} />
+                        <Technology selection={ASSETS.technologies.autocad} />
+                        <Technology selection={ASSETS.technologies.sketchup} />
                     </div>
                 </div>
 
@@ -61,14 +62,14 @@ import Technology, { TECHNOLOGIES } from "../ui/Technology.astro";
                 <fieldset class="fieldset bg-base-100 border border-base-100 rounded-xl p-4">
                     <legend class="fieldset-legend text-[15px] font-medium">Web & UI</legend>
                     <div class="flex flex-wrap gap-2 -mt-2">
-                        <Technology selection={TECHNOLOGIES.html} />
-                        <Technology selection={TECHNOLOGIES.css} />
-                        <Technology selection={TECHNOLOGIES.astro} />
-                        <Technology selection={TECHNOLOGIES.react} />
-                        <Technology selection={TECHNOLOGIES.tailwindcss} />
-                        <Technology selection={TECHNOLOGIES.daisyui} />
-                        <Technology selection={TECHNOLOGIES.antdesign} />
-                        <Technology selection={TECHNOLOGIES.axios} />
+                        <Technology selection={ASSETS.technologies.html} />
+                        <Technology selection={ASSETS.technologies.css} />
+                        <Technology selection={ASSETS.technologies.astro} />
+                        <Technology selection={ASSETS.technologies.react} />
+                        <Technology selection={ASSETS.technologies.tailwindcss} />
+                        <Technology selection={ASSETS.technologies.daisyui} />
+                        <Technology selection={ASSETS.technologies.antdesign} />
+                        <Technology selection={ASSETS.technologies.axios} />
                     </div>
                 </fieldset>
 
@@ -78,8 +79,8 @@ import Technology, { TECHNOLOGIES } from "../ui/Technology.astro";
                     <fieldset class="fieldset bg-base-100 border border-base-100 rounded-xl p-4">
                         <legend class="fieldset-legend text-[15px] font-medium">Frameworks</legend>
                         <div class="flex flex-wrap gap-2 -mt-2">
-                            <Technology selection={TECHNOLOGIES.flask} />
-                            <Technology selection={TECHNOLOGIES.winui} />
+                            <Technology selection={ASSETS.technologies.flask} />
+                            <Technology selection={ASSETS.technologies.winui} />
                         </div>
                     </fieldset>
 
@@ -87,8 +88,8 @@ import Technology, { TECHNOLOGIES } from "../ui/Technology.astro";
                     <fieldset class="fieldset bg-base-100 border border-base-100 rounded-xl p-4">
                         <legend class="fieldset-legend text-[15px] font-medium">Databases</legend>
                         <div class="flex flex-wrap gap-2 -mt-2">
-                            <Technology selection={TECHNOLOGIES.mysql} />
-                            <Technology selection={TECHNOLOGIES.sqlite} />
+                            <Technology selection={ASSETS.technologies.mysql} />
+                            <Technology selection={ASSETS.technologies.sqlite} />
                         </div>
                     </fieldset>
                 </div>
@@ -97,9 +98,9 @@ import Technology, { TECHNOLOGIES } from "../ui/Technology.astro";
                 <fieldset class="fieldset bg-base-100 border border-base-100 rounded-xl p-4">
                     <legend class="fieldset-legend text-[15px] font-medium">Administration</legend>
                     <div class="flex lg:flex-col flex-wrap gap-2 -mt-2">
-                        <Technology selection={TECHNOLOGIES.directus} />
-                        <Technology selection={TECHNOLOGIES.cpanel} />
-                        <Technology selection={TECHNOLOGIES.phpmyadmin} />
+                        <Technology selection={ASSETS.technologies.directus} />
+                        <Technology selection={ASSETS.technologies.cpanel} />
+                        <Technology selection={ASSETS.technologies.phpmyadmin} />
                     </div>
                 </fieldset>
 

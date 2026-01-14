@@ -1,11 +1,11 @@
 ---
 import { ASSETS } from "../../../config/assets";
 import { PERSONAL } from "../../../config/personal";
-import type { Translations } from "../../../types/locales";
+import type { LocalesType } from "../../../types/LocalesType";
 
-import Icon from "../../ui/Icon.astro";
+import Icon from "../../ui/libraries/Icon.astro";
 
-const { t } = Astro.locals as { t: Translations };
+const { t } = Astro.locals as { t: LocalesType };
 ---
 
 <div class="px-1 bg-base-100 items-center justify-around gap-1">

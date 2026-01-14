@@ -6,13 +6,19 @@ import { SITE } from '../config/meta';
 import { PERSONAL } from '../config/personal';
 import { getLocaleMessages } from '../i18n/utils';
 
-import IconLibrary from '../components/ui/IconLibrary.astro';
+import IconLibrary from '../components/ui/libraries/IconLibrary.astro';
+import FlagLibrary from '../components/ui/libraries/FlagLibrary.astro';
 import Footer from '../components/sections/footer/Footer.astro';
 import Navbar from '../components/widgets/Navbar.astro';
 import Scroller from '../components/widgets/Scroller.astro';
 
-const { title, description, canonical_link } = Astro.props;
-const locale = Astro.currentLocale ?? "en";
+const { title, description, canonical_link, navbarBG } = Astro.props as {
+	title: string;
+	description: string;
+	canonical_link: string;
+	navbarBG: string;
+};
+const locale: string = Astro.currentLocale ?? "en";
 
 Astro.locals.locale = locale;
 Astro.locals.t = await getLocaleMessages(locale);
@@ -53,8 +59,9 @@ Astro.locals.t = await getLocaleMessages(locale);
 		<meta name="twitter:image" content={SITE.ogImage} />
 	</head>
 	<body>
-		<IconLibrary />						<!-- Inject all Icons early on in the DOM -->
-		<div><slot/></div>					<!-- Dynamic page insertion for sticky NavBar -->
+		<IconLibrary /><FlagLibrary />		<!-- Inject all Icons early on in the DOM -->
+		<Navbar background={navbarBG} />	<!-- Fixed Navigation Bar -->
+		<div class="-mt-26"><slot/></div>	<!-- Dynamic page insertion (Accounts for Navbar top offset) -->
 		<Scroller />						<!-- Fixed scroller floating buttons on all screen sizes -->
 		<Footer />							<!-- Footer included with every page -->
 		<script is:inline type="module" src={`${PERSONAL.base}scripts/global.js`}></script>

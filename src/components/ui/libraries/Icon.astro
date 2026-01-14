@@ -1,15 +1,15 @@
 ---
-import { type IconData } from "../../config/assets.ts";
+import type { IconsType } from "../../../types/AssetsType";
 
 const { icon, size, classname: classname = "" } = Astro.props as {
-    icon: IconData;
+    icon: IconsType;
     size?: string;
     classname?: string;
 };
 
 const uuid = crypto.randomUUID();       // Accessibility
-const sizeMap = { xs: 15, sm: 20, md: 35, lg: 45, xl: 60, dxl:70 } as const;
-const pixelSize = sizeMap[(size ?? icon.size) as keyof typeof sizeMap];
+const sizeMap = { dxs: 6, xs: 15, sm: 20, md: 35, lg: 45, xl: 60, dxl:70 } as const;
+const pixelSize: 6 | 15 | 20 | 35 | 45 | 60 | 70 = sizeMap[(size ?? icon.size) as keyof typeof sizeMap];
 ---
 
 <svg

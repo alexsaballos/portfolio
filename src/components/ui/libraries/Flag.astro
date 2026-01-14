@@ -1,0 +1,27 @@
+---
+import type { IconsType } from "../../../types/AssetsType";
+
+const { icon, size } = Astro.props as {
+    icon: IconsType;
+    size?: string;
+};
+
+const uuid = crypto.randomUUID();       // Accessibility
+const sizeMap = { sm: 20, md: 25 } as const;
+const pixelSize: 20 | 25 = sizeMap[(size ?? icon.size) as keyof typeof sizeMap];
+---
+
+<svg
+    width={pixelSize}
+    height={pixelSize}
+    class={"shrink-0"}
+    aria-labelledby={`icon-title-${uuid} icon-desc-${uuid}`}
+    viewBox="0 0 61 61"
+    overflow="visible"
+    focusable="false"
+    role="img"
+>
+    <title id={`icon-title-${uuid}`}>{icon.title}</title>
+    <desc id={`icon-desc-${uuid}`}>{icon.desc}</desc>
+    <use href={icon.href} />
+</svg>

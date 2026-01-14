@@ -9,7 +9,9 @@ const { classname } = Astro.props as {
 ---
 
 <div class="avatar">
-    <div class=`ring-secondary rounded-full ring-4 ${classname}`>
-        <Image src={ASSETS.pictures.PFP} alt="Alexander Saballos Picture" />
+    <div class=`ring-secondary ring-4 rounded-full hover:ring-primary hover:ring-6 ${classname}`>
+        <figure>
+            <Image src={ASSETS.pictures.PFP} alt="Alexander Saballos - Profile Picture" />
+        </figure>
     </div>
 </div>

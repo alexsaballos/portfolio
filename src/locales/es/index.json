@@ -5,9 +5,12 @@
         "headline": "Ingeniero Eléctrico/Electrónico (EI/EiT USA) | Ingeniero de Software | Exalumno HU Walton",
         "scroll": "¡Deslice!"
     },
+    "breadcrumbs": {
+        "home": "Inicio"
+    },
     "about": {
         "greeting": "¡Bienvenido a mi Portafolio!",
-        "introduction": "This space highlights the systems and projects I've built at the intersection of hardware, software, and infrastructure. I graduated Cum Laude from Harding University with an ABET-accredited B.S. in Electrical Engineering, a minor in Mathematics, and passed the NCEES FE Exam prior to graduation, which enabled me to receive a U.S. EI/EiT license. My work spans embedded systems, power and PCB design, automation, and software development, with an emphasis on clear documentation, long-term maintainability, and practical solutions that hold up outside the lab."
+        "introduction": "Este espacio muestra los sistemas y proyectos que he desarrollado en la intersección de hardware, software e infraestructura. Me gradué con honores como becario Walton de Harding University (AR, USA) con una licenciatura en Ingeniería Eléctrica/Electrónica acreditada por ABET, una especialización en Matemáticas y aprobé el examen de formación profesional de NCEES antes de graduarme, lo que me permitió obtener una licencia EI/EiT Estadounidense. Mi trabajo abarca sistemas embebidos, diseño de potencia y PCB, automatización y desarrollo de software, con un fuerte énfasis en la documentación, la mantenibilidad a largo plazo y soluciones prácticas diseñadas para un rendimiento fiable más allá del laboratorio."
     },
     "categories": {
         "projects": "Proyectos",

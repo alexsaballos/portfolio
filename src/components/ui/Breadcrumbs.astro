@@ -1,0 +1,30 @@
+---
+import { ASSETS } from "../../config/assets";
+import { getHomeLink, getPageLink } from "../../config/pages";
+
+import type { IconsType } from "../../types/AssetsType";
+import type { LocalesType } from "../../types/LocalesType";
+import type { PrimaryPageType } from "../../types/PagesType";
+
+import Icon from "../ui/libraries/Icon.astro";
+
+const { locale, t } = Astro.locals as {
+	locale: string;
+	t: LocalesType;
+};
+
+const { miniIcon, page } = Astro.props as {
+	miniIcon: IconsType;
+	page: PrimaryPageType;
+};
+
+const homeLink: string = getHomeLink(locale);
+const pageLink: string = getPageLink(locale, page.slug);
+---
+
+<div class="breadcrumbs text-lg">
+	<ul>
+		<li><a href={homeLink}><Icon icon={ASSETS.icons.home} size="sm" />{t.breadcrumbs.home}</a></li>
+		<li><a href={pageLink}><Icon icon={miniIcon} size="sm" />{page.short_title}</a></li>
+	</ul>
+</div>

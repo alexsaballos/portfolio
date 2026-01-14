@@ -1,4 +1,5 @@
 import { PERSONAL } from "./personal";
+import type { AssetsType } from "../types/AssetsType";
 
 // Pictures used on Intro.astro & Categories.astro
 import profilePicture from "../images/pfp.jpg"
@@ -14,15 +15,20 @@ import honors from "../images/honors.jpg"
 // Pictures used on Honors.astro
 // Pictures used on Contact.astro
 
-// Base URL for all needed SVGs
-const faviconsPath = `${PERSONAL.base}favicons/`;
-const brandsPath = `${PERSONAL.base}assets/logos/brands/`;
-const flagsPath = `${PERSONAL.base}assets/flags/`;
+// Base URL for all needed Favicons
+const faviconsPath: string = `${PERSONAL.base}favicons/`;
+
+const TECHNOLOGIES_COLORS = {
+    embedded: "#D48D17",
+    systems: "#3168B5",
+    web: "#524391",
+    databases: "#509636",
+    administration: "#BA5656",
+    tools: "#5E5E5E",
+}
 
 // Complete SVG Asset Reference - Icon sprites, main logos, and brands
-export type IconKey = keyof typeof ASSETS.icons;
-export type IconData = (typeof ASSETS.icons)[IconKey];
-export const ASSETS = {
+export const ASSETS: AssetsType = {
     pictures: {
         PFP: profilePicture,
         categories: {
@@ -117,6 +123,12 @@ export const ASSETS = {
             desc: "Awards to Reinforce my Current Portfolio",
             size: "md"
         },
+        contact: {
+            href: "#contact",
+            title: "Envelope Icon",
+            desc: "Contact Information for my Portfolio's Viewers",
+            size: "md"
+        },
 
         // Hamburger Menu available only on medium screens and downward to replace navbar
         hamburger_menu: {
@@ -128,8 +140,14 @@ export const ASSETS = {
         hamburger_close: {
             href: "#hamburger_close",
             title: "Hamburger Close Icon",
-            desc: "Hamburger Meny Closing on Mobile Devices.",
+            desc: "Hamburger Menu Closing on Mobile Devices.",
             size: "md"
+        },
+        home: {
+            href: "#home",
+            title: "Home Icon",
+            desc: "Home Icon that Redirects to the Main Page",
+            size: "sm"
         },
 
         // Theme-controller icons for both hamburger menu and navbar
@@ -184,222 +202,409 @@ export const ASSETS = {
     },
     technologies: {
         antdesign: {
-            href: "#antdesign",
-            title: "Ant Design Logo",
-            desc: "UI Library used in Web Development",
-            size: "md"
+            name: "AntDesign",
+            color: TECHNOLOGIES_COLORS.web,
+            icon: {
+                href: "#antdesign",
+                title: "Ant Design Logo",
+                desc: "UI Library used in Web Development",
+                size: "md"
+            },
+            kind: "UI Library",
+            domains: ["Web Development"]
         },
         arduino: {
-            href: "#arduino",
-            title: "Arduino Logo",
-            desc: "Hardware Platform used in Robotics",
-            size: "md"
+            name: "Arduino",
+            color: TECHNOLOGIES_COLORS.embedded,
+            icon: {
+                href: "#arduino",
+                title: "Arduino Logo",
+                desc: "Hardware Platform used in Robotics",
+                size: "md"
+            },
+            kind: "Embedded Platfrom",
+            domains: ["Robotics"]
         },
         astro: {
-            href: "#astro",
-            title: "Astro Logo",
-            desc: "Framework used in Web Development",
-            size: "md"
+            name: "Astro",
+            color: TECHNOLOGIES_COLORS.web,
+            icon: {
+                href: "#astro",
+                title: "Astro Logo",
+                desc: "Framework used in Web Development",
+                size: "md"
+            },
+            kind: "Framework",
+            domains: ["Web Development"]
         },
         autocad: {
-            href: "#autocad",
-            title: "AutoCAD Logo",
-            desc: "Engineering CAD Tool used in Diagram Creation",
-            size: "md"
+            name: "AutoCAD",
+            color: TECHNOLOGIES_COLORS.tools,
+            icon: {
+                href: "#autocad",
+                title: "AutoCAD Logo",
+                desc: "Engineering CAD Tool used in Diagram Creation",
+                size: "md"
+            },
+            kind: "CAD Tool",
+            domains: ["Diagram Creation"]
         },
         axios: {
-            href: "#axios",
-            title: "Axios Logo",
-            desc: "API Library used in Web Development",
-            size: "md"
+            name: "Axios",
+            color: TECHNOLOGIES_COLORS.web,
+            icon: {
+                href: "#axios",
+                title: "Axios Logo",
+                desc: "API Library used in Web Development",
+                size: "md"
+            },
+            kind: "Library",
+            domains: ["Web Development"]
+        },
+        baremetal: {
+            name: "Bare-Metal Embedded",
+            color: TECHNOLOGIES_COLORS.embedded,
+            icon: {
+                href: "#microprocessor",
+                title: "Microprocessor Icon",
+                desc: "Microprocessor/Microcontroller used in Embedded Systems",
+                size: "md"
+            },
+            kind: "Embedded Systems",
+            domains: ["Microcontrollers", "Firmware", "Robotics"]
         },
         c: {
-            href: "#c",
-            title: "C Logo",
-            desc: "Programming Language used in Embedded Systems",
-            size: "md"
+            name: "C",
+            color: TECHNOLOGIES_COLORS.systems,
+            icon: {
+                href: "#c",
+                title: "C Logo",
+                desc: "Programming Language used in Embedded Systems",
+                size: "md"
+            },
+            kind: "Programming Language",
+            domains: ["Embedded Systems"]
         },
         cpanel: {
-            href: "#cpanel",
-            title: "cpanel Logo",
-            desc: "Administration Panel used in Backend Management",
-            size: "md"
+            name: "cPanel",
+            color: TECHNOLOGIES_COLORS.administration,
+            icon: {
+                href: "#cpanel",
+                title: "cpanel Logo",
+                desc: "Administration Panel used in Backend Management",
+                size: "md"
+            },
+            kind: "Administration Panel",
+            domains: ["Backend"]
         },
         cpp: {
-            href: "#cpp",
-            title: "C++ Logo",
-            desc: "Programming Language used in Desktop Apps",
-            size: "md"
+            name: "C++",
+            color: TECHNOLOGIES_COLORS.systems,
+            icon: {
+                href: "#cpp",
+                title: "C++ Logo",
+                desc: "Programming Language used in Desktop Apps",
+                size: "md"
+            },
+            kind: "Programming Language",
+            domains: ["Desktop Apps"]
         },
         csharp: {
-            href: "#csharp",
-            title: "C# Logo",
-            desc: "Programming Language used in Desktop Apps",
-            size: "md"
+            name: "C#",
+            color: TECHNOLOGIES_COLORS.systems,
+            icon: {
+                href: "#csharp",
+                title: "C# Logo",
+                desc: "Programming Language used in Desktop Apps",
+                size: "md"
+            },
+            kind: "Programming Language",
+            domains: ["Desktop Apps"]
         },
         css: {
-            href: "#css",
-            title: "CSS3 Logo",
-            desc: "Styling Language used in Web Development",
-            size: "md"
+            name: "CSS",
+            color: TECHNOLOGIES_COLORS.web,
+            icon: {
+                href: "#css",
+                title: "CSS3 Logo",
+                desc: "Styling Language used in Web Development",
+                size: "md"
+            },
+            kind: "Styling Language",
+            domains: ["Web Development"]
         },
         daisyui: {
-            href: "#daisyui",
-            title: "daisyUI Logo",
-            desc: "UI Library used in Web Development",
-            size: "md"
+            name: "daisyUI",
+            color: TECHNOLOGIES_COLORS.web,
+            icon: {
+                href: "#daisyui",
+                title: "daisyUI Logo",
+                desc: "UI Library used in Web Development",
+                size: "md"
+            },
+            kind: "UI Library",
+            domains: ["Web Development"]
         },
         directus: {
-            href: "#directus",
-            title: "directus Logo",
-            desc: "Administration Panel used in Content Management",
-            size: "md"
+            name: "Directus",
+            color: TECHNOLOGIES_COLORS.administration,
+            icon: {
+                href: "#directus",
+                title: "directus Logo",
+                desc: "Administration Panel used in Content Management",
+                size: "md"
+            },
+            kind: "Administration Panel",
+            domains: ["Backend"]
         },
         flask: {
-            href: "#flask",
-            title: "Flask Logo",
-            desc: "Framework used in Backend",
-            size: "md"
+            name: "Flask",
+            color: TECHNOLOGIES_COLORS.web,
+            icon: {
+                href: "#flask",
+                title: "Flask Logo",
+                desc: "Framework used in Backend",
+                size: "md"
+            },
+            kind: "Framework",
+            domains: ["Backend"]
         },
         html: {
-            href: "#html",
-            title: "HTML5 Logo",
-            desc: "Markup Language used in Web Development",
-            size: "md"
+            name: "HTML",
+            color: TECHNOLOGIES_COLORS.web,
+            icon: {
+                href: "#html",
+                title: "HTML5 Logo",
+                desc: "Markup Language used in Web Development",
+                size: "md"
+            },
+            kind: "Markup Language",
+            domains: ["Web Development"]
         },
         java: {
-            href: "#java",
-            title: "Java Logo",
-            desc: "Programming Language used in Desktop Apps",
-            size: "md"
+            name: "Java",
+            color: TECHNOLOGIES_COLORS.systems,
+            icon: {
+                href: "#java",
+                title: "Java Logo",
+                desc: "Programming Language used in Desktop Apps",
+                size: "md"
+            },
+            kind: "Programming Language",
+            domains: ["Desktop Apps"]
         },
         javascript: {
-            href: "#javascript",
-            title: "JavaScript Logo",
-            desc: "Programming Language used in Web Development",
-            size: "md"
+            name: "JavaScript",
+            color: TECHNOLOGIES_COLORS.systems,
+            icon: {
+                href: "#javascript",
+                title: "JavaScript Logo",
+                desc: "Programming Language used in Web Development",
+                size: "md"
+            },
+            kind: "Programming Language",
+            domains: ["Web Development"]
         },
         kicad: {
-            href: "#kicad",
-            title: "KiCAD Logo",
-            desc: "Engineering CAD Tool used in PCB Creation",
-            size: "md"
-        },
-        microprocessor: {
-            href: "#microprocessor",
-            title: "Microprocessor Icon",
-            desc: "Microprocessor/Microcontroller used in Embedded Systems",
-            size: "md"
+            name: "KiCAD",
+            color: TECHNOLOGIES_COLORS.embedded,
+            icon: {
+                href: "#kicad",
+                title: "KiCAD Logo",
+                desc: "Engineering CAD Tool used in PCB Creation",
+                size: "md"
+            },
+            kind: "CAD Tool",
+            domains: ["PCB Creation"]
         },
         multisim: {
-            href: "#multisim",
-            title: "MultiSim Logo",
-            desc: "Simulation Tool used in Electronics & Schematics Creation",
-            size: "md"
+            name: "MultiSim",
+            color: TECHNOLOGIES_COLORS.embedded,
+            icon: {
+                href: "#multisim",
+                title: "MultiSim Logo",
+                desc: "Simulation Tool used in Electronics & Schematics Creation",
+                size: "md"
+            },
+            kind: "Simulation Tool",
+            domains: ["Electronics", "Schematics Generation"]
         },
         mysql: {
-            href: "#mysql",
-            title: "MySQL Logo",
-            desc: "Relational Database used in Backend",
-            size: "md"
+            name: "MySQL",
+            color: TECHNOLOGIES_COLORS.databases,
+            icon: {
+                href: "#mysql",
+                title: "MySQL Logo",
+                desc: "Relational Database used in Backend",
+                size: "md"
+            },
+            kind: "Relational Database",
+            domains: ["Backend"]
         },
         opencv: {
-            href: "#opencv",
-            title: "OpenCV Logo",
-            desc: "Library used in Robotics",
-            size: "md"
+            name: "OpenCV",
+            color: TECHNOLOGIES_COLORS.embedded,
+            icon: {
+                href: "#opencv",
+                title: "OpenCV Logo",
+                desc: "Library used in Robotics",
+                size: "md"
+            },
+            kind: "Library",
+            domains: ["Robotics"]
         },
         php: {
-            href: "#php",
-            title: "PHP Logo",
-            desc: "Programming Language used in Web Development",
-            size: "md"
+            name: "PHP",
+            color: TECHNOLOGIES_COLORS.systems,
+            icon: {
+                href: "#php",
+                title: "PHP Logo",
+                desc: "Programming Language used in Web Development",
+                size: "md"
+            },
+            kind: "Programming Language",
+            domains: ["Web Development"]
         },
         phpmyadmin: {
-            href: "#phpmyadmin",
-            title: "phpMyAdmin Logo",
-            desc: "Administration Panel used in Backend Management",
-            size: "md"
+            name: "phpMyAdmin",
+            color: TECHNOLOGIES_COLORS.administration,
+            icon: {
+                href: "#phpmyadmin",
+                title: "phpMyAdmin Logo",
+                desc: "Administration Panel used in Backend Management",
+                size: "md"
+            },
+            kind: "Administration Panel",
+            domains: ["Backend"]
         },
         python: {
-            href: "#python",
-            title: "Python Logo",
-            desc: "Programming Language used in Backend & Robotics",
-            size: "md"
+            name: "Python",
+            color: TECHNOLOGIES_COLORS.systems,
+            icon: {
+                href: "#python",
+                title: "Python Logo",
+                desc: "Programming Language used in Backend & Robotics",
+                size: "md"
+            },
+            kind: "Programming Language",
+            domains: ["Backend", "Robotics"]
         },
         raspberrypi: {
-            href: "#raspberrypi",
-            title: "Raspberry Pi Logo",
-            desc: "Hardware Platform used in Robotics",
-            size: "md"
+            name: "Raspberry Pi",
+            color: TECHNOLOGIES_COLORS.embedded,
+            icon: {
+                href: "#raspberrypi",
+                title: "Raspberry Pi Logo",
+                desc: "Hardware Platform used in Robotics",
+                size: "md"
+            },
+            kind: "Hardware",
+            domains: ["Robotics"]
         },
         react: {
-            href: "#react",
-            title: "React Logo",
-            desc: "UI Library used in Web Development",
-            size: "md"
+            name: "React",
+            color: TECHNOLOGIES_COLORS.web,
+            icon: {
+                href: "#react",
+                title: "React Logo",
+                desc: "UI Library used in Web Development",
+                size: "md"
+            },
+            kind: "UI Library",
+            domains: ["Web Development"]
         },
         sketchup: {
-            href: "#sketchup",
-            title: "SketchUp Logo",
-            desc: "Engineering CAD Tool used in 3D Modeling",
-            size: "md"
+            name: "SketchUp",
+            color: TECHNOLOGIES_COLORS.tools,
+            icon: {
+                href: "#sketchup",
+                title: "SketchUp Logo",
+                desc: "Engineering CAD Tool used in 3D Modeling",
+                size: "md"
+            },
+            kind: "CAD Tool",
+            domains: ["3D Modeling"]
         },
         sqlite: {
-            href: "#sqlite",
-            title: "SQLite Logo",
-            desc: "Relational Database used in Backend",
-            size: "md"
+            name: "SQLite",
+            color: TECHNOLOGIES_COLORS.databases,
+            icon: {
+                href: "#sqlite",
+                title: "SQLite Logo",
+                desc: "Relational Database used in Backend",
+                size: "md"
+            },
+            kind: "Relational Database",
+            domains: ["Backend"]
         },
         tailwindcss: {
-            href: "#tailwindcss",
-            title: "TailwindCSS Logo",
-            desc: "CSS Library used in Web Development",
-            size: "md"
+            name: "TailwindCSS",
+            color: TECHNOLOGIES_COLORS.web,
+            icon: {
+                href: "#tailwindcss",
+                title: "TailwindCSS Logo",
+                desc: "CSS Library used in Web Development",
+                size: "md"
+            },
+            kind: "CSS Library",
+            domains: ["Web Development"]
         },
         typescript: {
-            href: "#typescript",
-            title: "TypeScript Logo",
-            desc: "Programming Language used in Web Development",
-            size: "md"
+            name: "TypeScript",
+            color: TECHNOLOGIES_COLORS.systems,
+            icon: {
+                href: "#typescript",
+                title: "TypeScript Logo",
+                desc: "Programming Language used in Web Development",
+                size: "md"
+            },
+            kind: "Programming Language",
+            domains: ["Web Development"]
         },
         ultiboard: {
-            href: "#ultiboard",
-            title: "UltiBoard Logo",
-            desc: "Engineering CAD Tool used in PCB Creation",
-            size: "md"
+            name: "UltiBoard",
+            color: TECHNOLOGIES_COLORS.embedded,
+            icon: {
+                href: "#ultiboard",
+                title: "UltiBoard Logo",
+                desc: "Engineering CAD Tool used in PCB Creation",
+                size: "md"
+            },
+            kind: "CAD Tool",
+            domains: ["PCB Creation"]
         },
         winui: {
-            href: "#winui",
-            title: "WinUI Logo",
-            desc: "Framework used in Desktop Apps",
-            size: "md"
-        }
-    },
-    brands: {
-        light: {
-            seloon_light: `${brandsPath}seloon_light.svg`,
-            wells: `${brandsPath}wells.svg`,
-            vesna_light: `${brandsPath}vesna_light.svg`,
-            cedes_light: `${brandsPath}cedes_light.svg`,
-            orona: `${brandsPath}orona.svg`,
-            thyssenkrupp: `${brandsPath}thyssenkrupp.svg`,
-            hidral: `${brandsPath}hidral.svg`
-        },
-        dark: {
-            seloon_dark: `${brandsPath}seloon_dark.svg`,
-            wells: `${brandsPath}wells.svg`,
-            vesna_dark: `${brandsPath}vesna_dark.svg`,
-            cedes_dark: `${brandsPath}cedes_dark.svg`,
-            orona: `${brandsPath}orona.svg`,
-            thyssenkrupp: `${brandsPath}thyssenkrupp.svg`,
-            hidral: `${brandsPath}hidral.svg`
+            name: "WinUI",
+            color: TECHNOLOGIES_COLORS.systems,
+            icon: {
+                href: "#winui",
+                title: "WinUI Logo",
+                desc: "Framework used in Desktop Apps",
+                size: "md"
+            },
+            kind: "Framework",
+            domains: ["Desktop Apps"]
         }
     },
     flags: {
-        de: `${flagsPath}de-de.svg`,
-        en: `${flagsPath}en-us.svg`,
-        es: `${flagsPath}es-mx.svg`
+        de: {
+            href: "#de",
+            title: "Germany Flag Icon",
+            desc: "Rounded Minimalistic Germany Flag",
+            size: "sm"
+        },
+        us: {
+            href: "#us",
+            title: "United States Flag Icon",
+            desc: "Rounded Minimalistic United States Flag",
+            size: "sm"
+        },
+        mx: {
+            href: "#mx",
+            title: "Mexico Flag Icon",
+            desc: "Rounded Minimalistic Mexico Flag",
+            size: "sm"
+        }
     }
 } as const;
 
