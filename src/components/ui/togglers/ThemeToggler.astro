@@ -1,10 +1,10 @@
 ---
-import { ASSETS } from "../../../config/assets";
+import { ICONS } from "../../../config/assets";
 import Icon from "../../ui/libraries/Icon.astro";
 ---
 
-<label class="btn btn-ghost shadow-none btn-square swap swap-rotate">
+<label class="btn btn-ghost shadow-none btn-square swap swap-rotate transition-transform duration-500 ease-out hover:text-secondary hover:scale-120">
     <input type="checkbox" class="theme-controller" value="dark" />
-    <Icon icon={ASSETS.icons.sun} classname="swap-off" />
-    <Icon icon={ASSETS.icons.moon} classname="swap-on" />
+    <Icon icon={ICONS.sun} classname="swap-off" />
+    <Icon icon={ICONS.moon} classname="swap-on" />
 </label>

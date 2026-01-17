@@ -1,17 +1,22 @@
 ---
 import { PAGES } from "../../config/pages";
-import { ASSETS } from "../../config/assets";
+import { SEO } from "../../config/routing";
 
 import Layout from "../../layouts/Layout.astro";
 import Breadcrumbs from "../../components/ui/Breadcrumbs.astro";
+import ComingSoon from "../../components/sections/ComingSoon.astro";
+
+const canonical: string = SEO.canonical("en");
 ---
 
-<Layout title={PAGES.projects.SEO_title}
-        description={PAGES.projects.SEO_description}
-        canonical_link={PAGES.projects.SEO_canonical}
-        navbarBG="transparent">
+<Layout
+    title={PAGES.projects.SEO_title}
+    description={PAGES.projects.SEO_description}
+    canonical_link={canonical}
+    navbarBG="transparent">
     <!-- mt-26 cancels out -mt-26 on Layout.astro for the fixed Navbar -->
     <div class="mt-26">
-        <Breadcrumbs miniIcon={ASSETS.icons.projects} page={PAGES.projects} />
+        <Breadcrumbs page={PAGES.projects} />
+        <ComingSoon />
     </div>
 </Layout>

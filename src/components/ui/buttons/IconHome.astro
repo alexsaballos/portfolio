@@ -1,13 +1,13 @@
 ---
-import { ASSETS } from "../../../config/assets";
-import { getHomeLink } from "../../../config/pages";
+import { ICONS } from "../../../config/assets";
+import { ROUTE } from "../../../config/routing";
+import type { AdmittedLanguagesType } from "../../../types/LocalesType";
 import Icon from "../../ui/libraries/Icon.astro";
 
-const locale: string = Astro.currentLocale ?? "en";
-const home: string = getHomeLink(locale);
+const { locale } = Astro.locals as { locale: AdmittedLanguagesType; };
 ---
-<div class="btn btn-ghost btn-square shadow-none">
-    <a href={home}>
-        <Icon icon={ASSETS.icons.home} />
+<div class="btn btn-ghost btn-square shadow-none transition-transform duration-500 ease-out hover:text-secondary hover:scale-120">
+    <a href={ROUTE.home(locale)}>
+        <Icon icon={ICONS.home} />
     </a>
 </div>

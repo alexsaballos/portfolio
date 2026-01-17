@@ -1,66 +1,33 @@
 ---
-import { PAGES, getPageLink } from "../../config/pages";
-import type { LocalesType } from "../../types/LocalesType"
+import { CATEGORY_PAGES } from "../../config/pages";
+import { ROUTE } from "../../config/routing";
+import type { AdmittedLanguagesType, LocalesType } from "../../types/LocalesType"
 
 import Image from "astro/components/Image.astro"
 import Icon from "../ui/libraries/Icon.astro";
 
-const { t } = Astro.locals as { t: LocalesType }
-const locale: string = Astro.currentLocale ?? "en";
-
-const CATEGORIES = {
-    projects: {
-        link: getPageLink(locale, PAGES.projects.slug),
-        picture: PAGES.projects.picture,
-        icon: PAGES.projects.icon,
-        title: t.categories.projects
-    },
-    experience: {
-        link: getPageLink(locale, PAGES.experience.slug),
-        picture: PAGES.experience.picture,
-        icon: PAGES.experience.icon,
-        title: t.categories.experience
-    },
-    leadership: {
-        link: getPageLink(locale, PAGES.leadership.slug),
-        picture: PAGES.leadership.picture,
-        icon: PAGES.leadership.icon,
-        title: t.categories.leadership
-    },
-    certifications: {
-        link: getPageLink(locale, PAGES.certifications.slug),
-        picture: PAGES.certifications.picture,
-        icon: PAGES.certifications.icon,
-        title: t.categories.certifications
-    },
-    honors: {
-        link: getPageLink(locale, PAGES.honors.slug),
-        picture: PAGES.honors.picture,
-        icon: PAGES.honors.icon,
-        title: t.categories.honors
-    }
-}
+const { t, locale } = Astro.locals as { t: LocalesType; locale: AdmittedLanguagesType }
 ---
 
 <section class="bg-base-100 pt-15 pb-10 px-5">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-y-12 md:gap-x-5 lg:gap-x-5 lg:gap-y-12">
-        {Object.values(CATEGORIES).map((category, i) => (
+        {Object.values(CATEGORY_PAGES).map((entry, i) => (
             <div class={`relative w-full ${(i === 0) ? "md:col-span-2" : "block"}`}>
                 <div class="absolute -top-7.5 left-1/2 -translate-x-1/2 z-1">
                     <div class="rounded-full bg-primary p-3 shadow-none">
-                        <Icon icon={category.icon} size="md" classname="text-white" />
+                        <Icon icon={entry.icon} size="md" classname="text-white" />
                     </div>
                 </div>
-                <a href={category.link}>
-                    <div class="card image-full rounded-2xl h-64 md:h-72 lg:h-80 group hover:ring-6 hover:ring-primary">
+                <a href={ROUTE.page(locale, entry.slug)}>
+                    <div class="card image-full rounded-2xl h-64 md:h-72 lg:h-80 group ring-4 ring-base-300 hover:ring-6 hover:ring-primary">
                         <figure>
-                            <Image src={category.picture} alt={category.title}
+                            <Image src={entry.picture} alt={t.categories[entry.key]}
                                     class="transition-transform duration-500 ease-out group-hover:scale-110" />
                         </figure>
                         <div class="absolute w-full h-full rounded-2xl bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                         <div class="card-body flex items-center justify-center relative">
                             <div class="card-title text-2xl place-content-center text-white group-hover:font-bold group-hover:border-b-4 group-hover:border-secondary">
-                                {category.title}
+                                {t.categories[entry.key]}
                             </div>
                         </div>
                     </div>

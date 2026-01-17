@@ -13,7 +13,8 @@ const { selection } = Astro.props as { selection: TechnologiesType };
             <p class="text-md text-left">{selection.kind} used in {selection.domains}</p>
         </div>
     </div>
-    <div class="badge badge-lg tech text-white transition-transform duration-500 ease-out hover:scale-115 hover:mx-2.5 hover:opacity-30" style={`--tech-color: ${selection.color}`}>
+    <div class="badge badge-lg tech text-white transition-transform duration-500 ease-out hover:opacity-30"
+        style={`--tech-color: ${selection.color}`}>
         <Icon icon={selection.icon} classname="py-0.5" />
         {selection.name}
     </div>

@@ -1,12 +1,21 @@
 import type { IconsType } from "./AssetsType";
 
+export type AdmittedLanguagesType = "de" | "en" | "es";
+export type AdmittedLangCountriesType = "de-de" | "en-us" | "es-mx";
+
 export type SingleLanguageType = {
     home: string;
-    flag: IconsType;
-    alt: string;
+    icon: IconsType;
+    picture: ImageMetadata;
     name: string;
-    code: string;
-    hello: string;
+    code: {
+        lang: AdmittedLanguagesType;
+        langcountry: AdmittedLangCountriesType;
+    }
+    text: {
+        hello: string;
+        select: string;
+    }
 }
 
 export type LanguagesType = {
@@ -24,6 +33,12 @@ export type LocalesType = {
     },
     breadcrumbs: {
         home: string;
+        projects: string;
+        experience: string;
+        leadership: string;
+        certifications: string;
+        honors: string;
+        contact: string;
     },
     about: {
         greeting: string;
@@ -46,5 +61,9 @@ export type LocalesType = {
     },
     footer: {
         copyright: string;
+    },
+    coming_soon: {
+        p1: string;
+        p2: string;
     }
 }

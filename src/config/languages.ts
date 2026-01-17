@@ -1,30 +1,48 @@
+import { FLAGS } from "./assets";
+import { ROUTE } from "./routing";
 import type { LanguagesType } from "../types/LocalesType";
-import { ASSETS } from "./assets";
-import { getHomeLink } from "./pages";
 
 export const LANGUAGES: LanguagesType = {
     de: {
-        home: getHomeLink("de"),
-        flag: ASSETS.flags.de,
-        alt: "de-de",
+        home: ROUTE.home("de"),
+        icon: FLAGS.de.icon,
+        picture: FLAGS.de.picture,
         name: "Deutsche",
-        code: "de",
-        hello: "Hallo!"
+        code: {
+            lang: "de",
+            langcountry: "de-de"
+        },
+        text: {
+            hello: "Hallo!",
+            select: "Wählen Sie eine Sprache aus"
+        }
     },
     en: {
-        home: getHomeLink("en"),
-        flag: ASSETS.flags.us,
-        alt: "en-us",
+        home: ROUTE.home("en"),
+        icon: FLAGS.us.icon,
+        picture: FLAGS.us.picture,
         name: "English",
-        code: "en",
-        hello: "Hello!"
+        code: {
+            lang: "en",
+            langcountry: "en-us"
+        },
+        text: {
+            hello: "Hallo!",
+            select: "Select a language"
+        }
     },
     es: {
-        home: getHomeLink("es"),
-        flag: ASSETS.flags.mx,
-        alt: "es-mx",
+        home: ROUTE.home("es"),
+        icon: FLAGS.mx.icon,
+        picture: FLAGS.mx.picture,
         name: "Español",
-        code: "es",
-        hello: "¡Hola!"
+        code: {
+            lang: "es",
+            langcountry: "es-mx"
+        },
+        text: {
+            hello: "¡Hola!",
+            select: "Seleccione un idioma"
+        }
     }
 }

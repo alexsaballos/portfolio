@@ -1,0 +1,13 @@
+---
+import { ICONS } from "../../config/assets";
+import type { LocalesType } from "../../types/LocalesType";
+import Icon from "../ui/libraries/Icon.astro";
+
+const { t } = Astro.locals as { t: LocalesType }
+---
+
+<section class="flex flex-col text-center place-items-center gap-4 pt-6 pb-16 px-2">
+    <Icon icon={ICONS.hourglass} size="ixl" classname="animate-pulse" />
+    <p class="text-3xl font-mono">{t.coming_soon.p1}</p>
+    <p class="text-xl font-mono">{t.coming_soon.p2}</p>
+</section>

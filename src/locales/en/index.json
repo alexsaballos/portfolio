@@ -6,7 +6,13 @@
         "scroll": "Scroll!"
     },
     "breadcrumbs": {
-        "home": "Home"
+        "home": "Home",
+        "projects": "Projects",
+        "experience": "Experience",
+        "leadership": "Leadership",
+        "certifications": "Certifications",
+        "honors": "Honors",
+        "contact": "Contact"
     },
     "about": {
         "greeting": "Welcome to my Portfolio!",
@@ -29,5 +35,9 @@
     },
     "footer": {
         "copyright": "All rights reserved"
+    },
+    "coming_soon": {
+        "p1": "Coming Soon!",
+        "p2": "Check back later to view this page"
     }
 }

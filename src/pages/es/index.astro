@@ -1,16 +1,19 @@
 ---
-import { SEO } from "../../config/meta";
+import { PAGES } from "../../config/pages";
+import { SEO } from "../../config/routing";
 import Layout from "../../layouts/Layout.astro";
 import IntroVideo from "../../components/sections/intro/IntroVideo.astro";
 import Intro from "../../components/sections/intro/Intro.astro";
 import About from "../../components/sections/About.astro";
 import Stack from "../../components/sections/Stack.astro";
 import Categories from "../../components/sections/Categories.astro";
+
+const canonical: string = SEO.canonical("es");
 ---
 
-<Layout title={SEO.title()}
-        description={SEO.description()}
-        canonical_link={SEO.canonical("/")}
+<Layout title={PAGES.home.SEO_title}
+        description={PAGES.home.SEO_description}
+        canonical_link={canonical}
         navbarBG="transparent">
     <!-- mt-26 IntroVideo cancels out -mt-26 on Layout.astro. mt-52 returns it to normality -->
     <div class="relative w-full p-10">

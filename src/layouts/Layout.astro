@@ -1,16 +1,17 @@
 ---
 import '../styles/global.css';
 
-import { SITE } from '../config/meta';
-// import { FAVICONS } from '../config/assets';
-import { PERSONAL } from '../config/personal';
+import { METADATA } from '../config/meta';
+import { PATHS } from '../config/assets';
+import { FAVICONS } from '../config/assets';
 import { getLocaleMessages } from '../i18n/utils';
 
 import IconLibrary from '../components/ui/libraries/IconLibrary.astro';
 import FlagLibrary from '../components/ui/libraries/FlagLibrary.astro';
-import Footer from '../components/sections/footer/Footer.astro';
 import Navbar from '../components/widgets/Navbar.astro';
 import Scroller from '../components/widgets/Scroller.astro';
+import Footer from '../components/sections/footer/Footer.astro';
+import type { AdmittedLanguagesType } from '../types/LocalesType';
 
 const { title, description, canonical_link, navbarBG } = Astro.props as {
 	title: string;
@@ -18,7 +19,8 @@ const { title, description, canonical_link, navbarBG } = Astro.props as {
 	canonical_link: string;
 	navbarBG: string;
 };
-const locale: string = Astro.currentLocale ?? "en";
+
+const locale: AdmittedLanguagesType = (Astro.currentLocale ?? "en") as AdmittedLanguagesType;
 
 Astro.locals.locale = locale;
 Astro.locals.t = await getLocaleMessages(locale);
@@ -26,7 +28,7 @@ Astro.locals.t = await getLocaleMessages(locale);
 
 <html lang={locale}>
 	<head>
-		<meta charset={SITE.charset} />
+		<meta charset={METADATA.charset} />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content={description} />
 
@@ -34,14 +36,14 @@ Astro.locals.t = await getLocaleMessages(locale);
 
 		<!-- Load saved theme from localStorage and fallback to light theme -->
 		<style>html {visibility: hidden;}</style>
-		<script is:inline type="module" src={`${PERSONAL.base}scripts/theme-load.js`}></script>
+		<script is:inline type="module" src={`${PATHS.scripts}theme-load.js`}></script>
 
-		<link rel="icon" href={SITE.favicon} type="image/x-icon" />
-		<link rel="manifest" href={SITE.manifest} />
+		<link rel="icon" href={METADATA.favicon} type="image/x-icon" />
+		<link rel="manifest" href={METADATA.manifest} />
 		<link rel="canonical" href={canonical_link} />
 
 		<!-- iPhone full compatibility -->
-		<!-- <link rel="apple-touch-icon" href={FAVICONS.apple180} /> -->
+		<link rel="apple-touch-icon" href={FAVICONS.apple180.src} />
 		<meta name="mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
@@ -50,13 +52,15 @@ Astro.locals.t = await getLocaleMessages(locale);
 		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content={canonical_link} />
-		<meta property="og:image" content={SITE.ogImage} />
+		<meta property="og:image" content={METADATA.ogImage} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
 
 		<!-- Twitter -->
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
-		<meta name="twitter:image" content={SITE.ogImage} />
+		<meta name="twitter:image" content={METADATA.ogImage} />
 	</head>
 	<body>
 		<IconLibrary /><FlagLibrary />		<!-- Inject all Icons early on in the DOM -->
@@ -64,6 +68,6 @@ Astro.locals.t = await getLocaleMessages(locale);
 		<div class="-mt-26"><slot/></div>	<!-- Dynamic page insertion (Accounts for Navbar top offset) -->
 		<Scroller />						<!-- Fixed scroller floating buttons on all screen sizes -->
 		<Footer />							<!-- Footer included with every page -->
-		<script is:inline type="module" src={`${PERSONAL.base}scripts/global.js`}></script>
+		<script is:inline type="module" src={`${PATHS.scripts}global.js`}></script>
 	</body>
 </html>

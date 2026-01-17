@@ -1,99 +1,99 @@
-import type { PagesType, PrimaryPagesListType, SecondaryPagesListType } from "../types/PagesType";
-import { ASSETS } from "./assets";
-import { SEO } from "./meta";
+import { ICONS, PICTURES } from "./assets";
+import { SEO } from "./routing";
 import { PERSONAL } from "./personal";
+import type { DirectoryPagesType, CategoryPagesListType, NavigationPagesListType } from "../types/PagesType";
 
-export const PAGES: PagesType = {
+export const PAGES: DirectoryPagesType = {
 	home: {
-		short_title: PERSONAL.short_name,
-        long_title: PERSONAL.long_name,
+		short_title: PERSONAL.name,
+        long_title: `${PERSONAL.name} - Engineering Portfolio`,
         link: "#",
         slug: "/",
-        icon: ASSETS.icons.home,
-        SEO_title: SEO.title(PERSONAL.short_name),
-        SEO_description: SEO.description(PERSONAL.description),
-        SEO_canonical: SEO.canonical("/")
+        key: "home",
+        icon: ICONS.home,
+        SEO_title: SEO.title(),
+        SEO_description: SEO.description(`Welcome to ${PERSONAL.name}' Engineering Portfolio`)
 	},
 	projects: {
 		short_title: "Projects",
         long_title: "Engineering & Software Projects",
         link: "#projects",
         slug: "/projects",
-        icon: ASSETS.icons.projects,
-        picture: ASSETS.pictures.categories.projects,
+        key: "projects",
+        icon: ICONS.projects,
+        picture: PICTURES.categories.projects,
         SEO_title: SEO.title("Engineering & Software Projects"),
-        SEO_description: SEO.description("Selected engineering and software projects by Alexander Saballos, including embedded systems, automation, and full-stack development."),
-        SEO_canonical: SEO.canonical("/projects")
+        SEO_description: SEO.description(`Selected engineering and software projects by ${PERSONAL.name}, including embedded systems, automation, and full-stack development.`)
 	},
     experience: {
         short_title: "Experience",
         long_title: "Professional & Technical Experience",
         link: "#experience",
         slug: "/experience",
-        icon: ASSETS.icons.experience,
-        picture: ASSETS.pictures.categories.experience,
+        key: "experience",
+        icon: ICONS.experience,
+        picture: PICTURES.categories.experience,
         SEO_title: SEO.title("Professional Experience"),
-        SEO_description: SEO.description("Professional experience of Alexander Saballos across engineering, software development, and technical business operations."),
-        SEO_canonical: SEO.canonical("/experience")
+        SEO_description: SEO.description(`Professional experience of ${PERSONAL.name} across engineering, software development, and technical business operations.`)
     },
     leadership: {
         short_title: "Leadership",
         long_title: "International Leadership Experience",
         link: "#leadership",
         slug: "/leadership",
-        icon: ASSETS.icons.leadership,
-        picture: ASSETS.pictures.categories.leadership,
+        key: "leadership",
+        icon: ICONS.leadership,
+        picture: PICTURES.categories.leadership,
         SEO_title: SEO.title("International Leadership Experience"),
-        SEO_description: SEO.description("International leadership experience by Alexander Saballos throughout his engineering education."),
-        SEO_canonical: SEO.canonical("/leadership")
+        SEO_description: SEO.description(`International leadership experience by ${PERSONAL.name} throughout his engineering education.`)
     },
     certifications: {
         short_title: "Certifications",
         long_title: "Professional Certifications & Licensure",
         link: "#certifications",
         slug: "/certifications",
-        icon: ASSETS.icons.certifications,
-        picture: ASSETS.pictures.categories.certifications,
+        key: "certifications",
+        icon: ICONS.certifications,
+        picture: PICTURES.categories.certifications,
         SEO_title: SEO.title("Engineering & Technical Certifications"),
-        SEO_description: SEO.description("Professional engineering certifications held by Alexander Saballos, including FE/EI licensure and formally issued credentials."),
-        SEO_canonical: SEO.canonical("/certifications")
+        SEO_description: SEO.description(`Professional engineering certifications held by ${PERSONAL.name}, including FE/EI licensure and formally issued credentials.`)
     },
     honors: {
         short_title: "Honors",
         long_title: "Honors & Distinctions",
         link: "#honors",
         slug: "/honors",
-        icon: ASSETS.icons.honors,
-        picture: ASSETS.pictures.categories.honors,
+        key: "honors",
+        icon: ICONS.honors,
+        picture: PICTURES.categories.honors,
         SEO_title: SEO.title("Honors & Distinctions"),
-        SEO_description: SEO.description("Academic honors, scholarships, and distinctions earned by Alexander Saballos throughout his engineering education."),
-        SEO_canonical: SEO.canonical("/honors")
+        SEO_description: SEO.description(`Academic honors, scholarships, and distinctions earned by ${PERSONAL.name} throughout his engineering education.`)
     },
     contact: {
         short_title: "Contact",
         long_title: "Get in touch!",
         link: "#contact",
         slug: "/contact",
-        icon: ASSETS.icons.contact,
-        SEO_title: SEO.title("Contact Alexander Saballos"),
-        SEO_description: SEO.description("Contact information for Alexander Saballos regarding engineering, software, or professional collaboration inquiries."),
-        SEO_canonical: SEO.canonical("/contact")
+        key: "contact",
+        icon: ICONS.contact,
+        SEO_title: SEO.title(`Contact ${PERSONAL.name}`),
+        SEO_description: SEO.description(`Contact information for ${PERSONAL.name} regarding engineering, software, or professional collaboration inquiries.`)
     }
 } as const;
 
-export const PRIMARY_PAGES: PrimaryPagesListType = {
+export const NAVIGATION_PAGES: NavigationPagesListType = {
+    projects: PAGES.projects,
+    experience: PAGES.experience,
+    leadership: PAGES.leadership,
+    certifications: PAGES.certifications,
+    honors: PAGES.honors,
+    contact: PAGES.contact
+} as const
+
+export const CATEGORY_PAGES: CategoryPagesListType = {
     projects: PAGES.projects,
     experience: PAGES.experience,
     leadership: PAGES.leadership,
     certifications: PAGES.certifications,
     honors: PAGES.honors
 } as const;
-
-export const SECONDARY_PAGES: SecondaryPagesListType = {
-    home: PAGES.home,
-    contact: PAGES.contact
-} as const
-
-// Dynamic page link localizers
-export const getHomeLink = (locale: string): string => `${PERSONAL.base}${locale}/`;
-export const getPageLink = (locale: string, page: string): string => `${PERSONAL.base}${locale}${page}/`;

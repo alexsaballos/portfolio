@@ -1,44 +1,16 @@
 ---
-import { ASSETS } from "../../config/assets";
-import { PAGES, getPageLink } from "../../config/pages";
-import type { LocalesType } from "../../types/LocalesType";
+import { ICONS } from "../../config/assets";
+import { ROUTE } from "../../config/routing";
+import { NAVIGATION_PAGES } from "../../config/pages";
+import type { AdmittedLanguagesType, LocalesType } from "../../types/LocalesType";
 
 import Icon from "../ui/libraries/Icon.astro";
 import IconHome from "../ui/buttons/IconHome.astro";
 import LanguageToggler from "../ui/togglers/LanguageToggler.astro";
 import ThemeToggler from "../ui/togglers/ThemeToggler.astro";
 
-const { t } = Astro.locals as { t: LocalesType };
-const locale: string = Astro.currentLocale ?? "en";
-
+const { t, locale } = Astro.locals as { t: LocalesType, locale: AdmittedLanguagesType }
 const { background } = Astro.props as { background: string; }
-
-const links = {
-    projects: {
-        name: t.navbar.projects,
-        link: getPageLink(locale, PAGES.projects.slug)
-    },
-    experience: {
-        name: t.navbar.experience,
-        link: getPageLink(locale, PAGES.experience.slug)
-    },
-    leadership: {
-        name: t.navbar.leadership,
-        link: getPageLink(locale, PAGES.leadership.slug)
-    },
-    certifications: {
-        name: t.navbar.certifications,
-        link: getPageLink(locale, PAGES.certifications.slug)
-    },
-    honors: {        
-        name: t.navbar.honors,
-        link: getPageLink(locale, PAGES.honors.slug)
-    },
-    contact: {
-        name: t.navbar.contact,
-        link: getPageLink(locale, PAGES.contact.slug)
-    }
-}
 ---
 
 <div class="drawer z-999 pt-5">
@@ -47,7 +19,7 @@ const links = {
         <div class={`navbar bg-${background} w-full`}>
             <div class="flex-none md:hidden">
                 <label for="intro-drawer" aria-label="Open Sidebar" class="btn btn-square btn-ghost ml-5">
-                    <Icon icon={ASSETS.icons.hamburger_menu} />
+                    <Icon icon={ICONS.hamburger_open} />
                 </label>
             </div>
             <div class="navbar-start ml-5 hidden md:flex">
@@ -55,7 +27,11 @@ const links = {
             </div>
             <div class="navbar-center hidden md:flex">
                 <ul class="menu menu-horizontal">
-                    {Object.values(links).map(entry => (<li><a href={entry.link} class="hover:font-bold">{entry.name}</a></li>))}
+                    {Object.values(NAVIGATION_PAGES).map(entry => (
+                        <li><a href={ROUTE.page(locale, entry.slug)} class="hover:font-bold border-secondary hover:border-b-4 hover:-my-1">
+                            {t.navbar[entry.key]}
+                        </a></li>
+                    ))}
                 </ul>
             </div>
             <div class="navbar-end hidden mr-5 md:flex">
@@ -68,7 +44,11 @@ const links = {
     <div class="drawer-side text-white">
         <label for="intro-drawer" aria-label="Close Sidebar" class="drawer-overlay"></label>
         <ul class="menu bg-primary min-h-full w-65 text-lg p-6 pt-10 gap-10 flex flex-col">
-            {Object.values(links).map(entry => (<li><a href={entry.link} class="hover:font-bold">{entry.name}</a></li>))}
+            {Object.values(NAVIGATION_PAGES).map(entry => (
+                <li><a href={ROUTE.page(locale, entry.slug)} class="hover:font-bold">
+                    {t.navbar[entry.key]}
+                </a></li>
+            ))}
             <div class="flex flex-row justify-center mt-auto py-1">
                 <IconHome />
                 <div class="divider divider-horizontal"></div>

@@ -1,30 +1,32 @@
 ---
-import { ASSETS } from "../../config/assets";
-import { getHomeLink, getPageLink } from "../../config/pages";
+import { ICONS } from "../../config/assets";
+import { ROUTE } from "../../config/routing";
 
-import type { IconsType } from "../../types/AssetsType";
-import type { LocalesType } from "../../types/LocalesType";
-import type { PrimaryPageType } from "../../types/PagesType";
+import type { NavigationPageType, CategoryPageType } from "../../types/PagesType";
+import type { AdmittedLanguagesType, LocalesType } from "../../types/LocalesType";
 
 import Icon from "../ui/libraries/Icon.astro";
 
 const { locale, t } = Astro.locals as {
-	locale: string;
+	locale: AdmittedLanguagesType;
 	t: LocalesType;
 };
 
-const { miniIcon, page } = Astro.props as {
-	miniIcon: IconsType;
-	page: PrimaryPageType;
-};
+const { page } = Astro.props as { page: (NavigationPageType | CategoryPageType); };
 
-const homeLink: string = getHomeLink(locale);
-const pageLink: string = getPageLink(locale, page.slug);
+const homeLink: string = ROUTE.home(locale);
+const pageLink: string = ROUTE.page(locale, page.slug);
 ---
 
-<div class="breadcrumbs text-lg">
+<div class="breadcrumbs text-md my-5 ml-5 sm:ml-10">
 	<ul>
-		<li><a href={homeLink}><Icon icon={ASSETS.icons.home} size="sm" />{t.breadcrumbs.home}</a></li>
-		<li><a href={pageLink}><Icon icon={miniIcon} size="sm" />{page.short_title}</a></li>
+		<li><a href={homeLink} class="hover:text-secondary hover:font-bold">
+			<Icon icon={ICONS.home} size="xs" />
+			<p>{t.breadcrumbs.home}</p>
+		</a></li>
+		<li><a href={pageLink}  class="hover:text-secondary hover:font-bold">
+			<Icon icon={page.icon} size="xs" />
+			<p>{t.breadcrumbs[page.key]}</p>
+		</a></li>
 	</ul>
 </div>

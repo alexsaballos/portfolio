@@ -1,6 +1,7 @@
 ---
-import { PAGES, getPageLink } from "../../../config/pages";
-import type { LocalesType } from "../../../types/LocalesType";
+import { NAVIGATION_PAGES } from "../../../config/pages";
+import { ROUTE } from "../../../config/routing";
+import type { AdmittedLanguagesType, LocalesType } from "../../../types/LocalesType";
 
 import SocialButtons from "../../ui/buttons/SocialButtons.astro";
 import IconHome from "../../ui/buttons/IconHome.astro";
@@ -8,47 +9,23 @@ import LanguageToggler from "../../ui/togglers/LanguageToggler.astro";
 import ThemeToggler from "../../ui/togglers/ThemeToggler.astro";
 import Copyright from "./Copyright.astro";
 
-const { t } = Astro.locals as { t: LocalesType };
-const locale = Astro.currentLocale ?? "en";
-
-const links = {
-    projects: {
-        name: t.navbar.projects,
-        link: getPageLink(locale, PAGES.projects.slug)
-    },
-    experience: {
-        name: t.navbar.experience,
-        link: getPageLink(locale, PAGES.experience.slug)
-    },
-    leadership: {
-        name: t.navbar.leadership,
-        link: getPageLink(locale, PAGES.leadership.slug)
-    },
-    certifications: {
-        name: t.navbar.certifications,
-        link: getPageLink(locale, PAGES.certifications.slug)
-    },
-    honors: {        
-        name: t.navbar.honors,
-        link: getPageLink(locale, PAGES.honors.slug)
-    },
-    contact: {
-        name: t.navbar.contact,
-        link: getPageLink(locale, PAGES.contact.slug)
-    }
-}
+const { t, locale } = Astro.locals as { t: LocalesType, locale: AdmittedLanguagesType }
 ---
 
 <footer class="text-white bg-primary rounded-t-4xl">
     <div class="p-2">
         <h1 class="text-3xl text-center font-bold mt-2 mb-4">{t.intro.name}</h1>
         <div class="flex flex-col gap-4 text-center sm:flex-row sm:justify-center sm:gap-6 my-2">
-            {Object.values(links).map(entry => (<nav><a href={entry.link} class="hover:font-bold">{entry.name}</a></nav>))}
+            {Object.values(NAVIGATION_PAGES).map(entry => (
+                <nav><a href={ROUTE.page(locale, entry.slug)} class="hover:font-bold">
+                    {t.navbar[entry.key]}
+                </a></nav>
+            ))}
         </div>
         <div class="flex flex-col sm:flex-row justify-center sm:gap-4 mt-4 mb-2">
             <SocialButtons />
             <div class="sm:border-l-4 border-secondary"></div>
-            <div class="flex flex-row justify-center mt-2 sm:mt-0 sm:-ml-1 gap-1">
+            <div class="flex flex-row justify-center mt-2 sm:mt-0 sm:-ml-1 gap-2">
                 <IconHome />
                 <LanguageToggler classname="dropdown-top" />
                 <ThemeToggler />

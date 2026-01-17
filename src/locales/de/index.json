@@ -6,7 +6,13 @@
         "scroll": "Scrollen!"
     },
     "breadcrumbs": {
-        "home": "Heim"
+        "home": "Heim",
+        "projects": "Projekte",
+        "experience": "Erfahrung",
+        "leadership": "Führung",
+        "certifications": "Zertifizierungen",
+        "honors": "Auszeichnungen",
+        "contact": "Kontakt"
     },
     "about": {
         "greeting": "Willkommen in meinem Portfolio!",
@@ -29,5 +35,9 @@
     },
     "footer": {
         "copyright": "Alle Rechte vorbehalten"
+    },
+    "coming_soon": {
+        "p1": "Demnächst verfügbar!",
+        "p2": "Schauen Sie später noch einmal vorbei, um diese Seite anzusehen"
     }
 }

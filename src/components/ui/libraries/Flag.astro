@@ -8,7 +8,7 @@ const { icon, size } = Astro.props as {
 
 const uuid = crypto.randomUUID();       // Accessibility
 const sizeMap = { sm: 20, md: 25 } as const;
-const pixelSize: 20 | 25 = sizeMap[(size ?? icon.size) as keyof typeof sizeMap];
+const pixelSize: (20 | 25) = sizeMap[(size ?? icon.size) as keyof typeof sizeMap];
 ---
 
 <svg

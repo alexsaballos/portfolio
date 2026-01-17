@@ -1,15 +1,15 @@
 ---
-import { ASSETS } from "../../config/assets";
+import { ICONS } from "../../config/assets";
 import Icon from "../ui/libraries/Icon.astro";
 ---
 
 <div class="flex flex-col gap-3 bottom-5 right-5 fixed z-998">
     <button id="scrollTop" aria-label="Scroll to Top"
         class="shadow-none border-none btn btn-square bg-secondary rounded-lg transition-transform duration-500 ease-out hover:scale-110 ring-4 ring-base-200">
-        <Icon icon={ASSETS.icons.chevron_up} classname="text-white" size="sm" />
+        <Icon icon={ICONS.chevron_up} classname="text-white" size="sm" />
     </button>
     <button id="scrollBottom" aria-label="Scroll to Bottom"
         class="shadow-none border-none btn btn-square bg-secondary rounded-lg transition-transform duration-500 ease-out hover:scale-110 ring-4 ring-base-200">
-        <Icon icon={ASSETS.icons.chevron_down} classname="text-white" size="sm" />
+        <Icon icon={ICONS.chevron_down} classname="text-white" size="sm" />
     </button>
 </div>

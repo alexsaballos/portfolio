@@ -1,10 +1,8 @@
 ---
-import { PERSONAL } from "./../../../config/personal"
-
-const source: string = `${PERSONAL.base}assets/misc/intro.webm`
+import { VIDEOS } from "../../../config/assets";
 ---
 
 <video class="absolute inset-0 h-full w-full object-cover opacity-20 pointer-events-none rounded-b-4xl"
     preload="auto" aria-hidden="true" autoplay loop muted playsinline >
-        <source src={source} type="video/webm" />
+        <source src={VIDEOS.IntroVideo} type="video/webm" />
 </video>
