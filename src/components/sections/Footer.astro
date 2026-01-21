@@ -1,0 +1,48 @@
+---
+import { NAVIGATION_PAGES } from "../../config/pages";
+import { ROUTE } from "../../config/routing";
+import { ICONS } from "../../config/assets";
+import type { AdmittedLanguagesType, LocalesType } from "../../types/LocalesType";
+
+import Icon from "../ui/libraries/Icon.astro";
+import SocialButtons from "../ui/buttons/SocialButtons.astro";
+import IconHome from "../ui/buttons/IconHome.astro";
+import LanguageToggler from "../ui/togglers/LanguageToggler.astro";
+import ThemeToggler from "../ui/togglers/ThemeToggler.astro";
+
+const { t, locale } = Astro.locals as { t: LocalesType, locale: AdmittedLanguagesType }
+---
+
+<footer class="text-white bg-primary rounded-t-4xl">
+
+    <!-- Footer Body -->
+    <div class="p-2">
+        <h1 class="text-3xl text-center font-bold mt-2 mb-4">{t.intro.name}</h1>
+        <div class="flex flex-col gap-4 text-center sm:flex-row sm:justify-center sm:gap-6 my-2">
+            {Object.values(NAVIGATION_PAGES).map(entry => (
+                <nav><a href={ROUTE.page(locale, entry.slug)} class="hover:font-bold">
+                    {t.navbar[entry.key]}
+                </a></nav>
+            ))}
+        </div>
+        <div class="flex flex-col sm:flex-row justify-center sm:gap-4 mt-4 mb-2">
+            <SocialButtons variant="social" />
+            <div class="sm:border-l-4 border-secondary"></div>
+            <div class="flex flex-row justify-center mt-2 sm:mt-0 sm:-ml-1 gap-2">
+                <IconHome />
+                <LanguageToggler classname="dropdown-top" />
+                <ThemeToggler />
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright Notice Body -->
+    <div class="px-1 bg-base-100 items-center justify-around gap-1">
+        <div class="flex flex-row items-center justify-center gap-2">
+            <Icon icon={ICONS.devices} classname="text-primary" />
+            <p class="align-middle text-base-content text-xs">
+                Copyright &copy; {new Date().getFullYear()} - {t.footer.copyright}
+            </p>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,92 @@
+---
+import { ICONS, PATHS } from "../../config/assets";
+import { PERSONAL } from "../../config/personal";
+import type { LocalesType } from "../../types/LocalesType";
+import SocialButtons from "../ui/buttons/SocialButtons.astro";
+import Icon from "../ui/libraries/Icon.astro";
+
+const { t } = Astro.locals as { t: LocalesType };
+---
+
+<div class="p-5 gap-5">
+    <div id="toast_contact" class="toast toast-center toast-top mt-3 md:mt-17 z-998">
+        <div id="toast_loading" role="alert" class="hidden alert alert-info rounded-4xl transition-transform duration-500 ease-out hover:scale-120">
+            <Icon icon={ICONS.spinner} size="sm" classname="animate-spin" />
+            {t.contact.alerts.loading}
+        </div>
+        <div id="toast_error" role="alert" class="hidden alert alert-error rounded-4xl transition-transform duration-500 ease-out hover:scale-120">
+            <Icon icon={ICONS.circle_xmark} size="sm" />
+            {t.contact.alerts.failure}
+        </div>
+    </div>
+    <div id="success_screen" class="hidden flex flex-col text-center place-items-center gap-4 pt-6 pb-16 px-2">
+        <Icon icon={ICONS.envelope_check} size="ixl" classname="text-emerald-700" />
+        <p class="text-3xl font-bold">{t.contact.alerts.success.p1}</p>
+        <p class="text-xl">{t.contact.alerts.success.p2}</p>
+    </div>
+    <div id="contact_form" class="group">
+        <h1 class="text-5xl text-center font-bold">{t.contact.CTA}</h1>
+        <div class="justify-items-center">
+            <p class="my-2">{t.contact.form_invite}</p>
+            <form enctype="application/x-www-form-urlencoded" data-endpoint={PERSONAL.resend_endpoint}>
+                <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+                    <legend class="fieldset-legend">{t.contact.required}</legend>
+
+                    <!-- Name input on contact form -->
+                    <label class="label">
+                        <Icon icon={ICONS.id_card} size="sm" />
+                        {t.contact.name.label}
+                    </label>
+                    <input name="name" required type="text" class="input mb-4" placeholder={t.contact.name.placeholder} />
+
+                    <!-- Email input on contact form -->
+                    <label class="label">
+                        <Icon icon={ICONS.at_sign} size="sm" />
+                        {t.contact.email.label}
+                    </label>
+                    <input name="email" required type="email" class="input mb-4" placeholder={t.contact.email.placeholder} />
+
+                    <!-- Subject selection on contact form -->
+                    <label class="label">
+                        <Icon icon={ICONS.rectangle_list} size="sm" />
+                        {t.contact.subject.label}
+                    </label>
+                    <select name="subject" required class="select mb-4">
+                        <option disabled selected>{t.contact.subject.options.placeholder}</option>
+                        <option value="Recruiting / Hiring">{t.contact.subject.options.recruiting}</option>
+                        <option value="Technical Collaboration">{t.contact.subject.options.technical}</option>
+                        <option value="Business Inquiry">{t.contact.subject.options.business}</option>
+                        <option value="Interview / Speaking Request">{t.contact.subject.options.interview}</option>
+                        <option value="Academic / Educational">{t.contact.subject.options.academic}</option>
+                        <option value="Advisory / Consulting">{t.contact.subject.options.consulting}</option>
+                        <option value="Other">{t.contact.subject.options.other}</option>
+                    </select>
+
+                    <!-- Message input on contact form -->
+                    <label class="label">
+                        <Icon icon={ICONS.message} size="sm" />
+                        {t.contact.message.label}
+                    </label>
+                    <textarea required name="message" class="textarea h-48 sm:w-140 lg:w-160" placeholder={t.contact.message.placeholder}></textarea>
+
+                    <!-- Submission button on contact form -->
+                    <button type="submit" aria-label={t.contact.send}
+                        class="btn btn-primary rounded-4xl place-self-center shadow-none transition-transform duration-300 ease-in-out hover:font-bold hover:scale-105 w-45 mt-4">
+                        <Icon icon={ICONS.paper_plane} size="sm" />
+                        {t.contact.send}
+                    </button>
+                </fieldset>
+            </form>
+            <div class="flex flex-col sm:flex-row justify-center sm:gap-4 mt-4 mb-2">
+                <p class="place-self-center">{t.contact.reach_on}</p>
+                <div class="sm:border-l-4 border-secondary"></div>
+                <div class="flex flex-row justify-center mt-2 sm:mt-0 sm:-ml-1 gap-2">
+                    <SocialButtons variant="contact" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Client-side JS that controls contact-info email sending responses thorugh toast alerts -->
+<script is:inline type="module" src={`${PATHS.scripts}contact_toast.js`}></script>

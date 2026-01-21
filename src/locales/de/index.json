@@ -18,6 +18,25 @@
         "greeting": "Willkommen in meinem Portfolio!",
         "introduction": "Dieser Bereich präsentiert Systeme und Projekte, die ich an der Schnittstelle von Hardware, Software und Infrastruktur entwickelt habe. Ich schloss mein Studium an der Harding University (AR, US) als Walton Scholar mit Auszeichnung (Cum Laude) ab und erwarb einen ABET-akkreditierten Bachelor of Science in Elektrotechnik mit Nebenfach Mathematik. Vor meinem Abschluss bestand ich die NCEES FE-Prüfung, wodurch ich die US-amerikanische EI/EiT-Lizenz erhielt. Meine Arbeit umfasst eingebettete Systeme, Stromversorgung und Leiterplattendesign, Automatisierung und Softwareentwicklung mit einem starken Fokus auf Dokumentation, langfristige Wartbarkeit und praxisorientierte Lösungen, die auch außerhalb des Labors zuverlässig funktionieren."
     },
+    "stack": {
+        "core": {
+            "header": "Kerntechnik",
+            "subheaders": {
+                "embedded": "Eingebettete & Robotiksysteme",
+                "software": "Software-Entwicklung",
+                "cad": "CAD-Ingenieurwesen"
+            }
+        },
+        "production": {
+            "header": "Produktion & Systemwerkzeuge",
+            "subheaders": {
+                "web": "Web",
+                "frameworks": "Frameworks",
+                "databases": "Datenbanken",
+                "operations": "Betrieb"
+            }
+        }
+    },
     "categories": {
         "projects": "Projekte",
         "experience": "Erfahrung",
@@ -39,5 +58,45 @@
     "coming_soon": {
         "p1": "Demnächst verfügbar!",
         "p2": "Schauen Sie später noch einmal vorbei, um diese Seite anzusehen"
+    },
+    "contact": {
+        "CTA": "Kontakt aufnehmen",
+        "form_invite": "Für professionelle Anfragen füllen Sie bitte das untenstehende Formular aus:",
+        "required": "Alle Felder sind erforderlich",
+        "name": {
+            "label": "Vollständiger Name",
+            "placeholder": "Bitte geben Sie Ihren Namen ein"
+        },
+        "email": {
+            "label": "E-Mail",
+            "placeholder": "z. B. benutzername@server.com"
+        },
+        "subject": {
+            "label": "Betreff",
+            "options": {
+                "placeholder": "Bitte wählen Sie einen Betreff",
+                "recruiting": "Recruiting / Einstellung",
+                "technical": "Technische Zusammenarbeit",
+                "business": "Geschäftliche Anfrage",
+                "interview": "Interview-/Sprechanfrage",
+                "academic": "Akademisch / Bildung",
+                "consulting": "Beratung / Unternehmensberatung",
+                "other": "Sonstiges"
+            }
+        },
+        "message": {
+            "label": "Nachricht",
+            "placeholder": "Bitte geben Sie Ihre Nachricht ein"
+        },
+        "send":"Nachricht senden",
+        "reach_on": "Sie können mich auch erreichen über",
+        "alerts": {
+            "loading": "Ihre Nachricht wird gesendet",
+            "success": {
+                "p1": "Ihre Nachricht wurde erfolgreich gesendet",
+                "p2": "Vielen Dank für Ihre Nachricht. Ich melde mich zeitnah zurück"
+            },
+            "failure": "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut"
+        }
     }
 }

@@ -1,53 +1,48 @@
 import { ICONS } from "./assets";
-import type { SocialLinksType, SocialButtonsType } from "../types/SocialType";
+import type { ButtonsListType } from "../types/SocialType";
 
-const SOCIAL_LINKS: SocialLinksType = {
-    whatsapp_URL: "https://wa.me/50582712533",
-    portfolio_URL: "https://alexsaballos.dev",
-    linkedin_URL: "https://www.linkedin.com/in/alex-saballos/",
-    github_URL: "https://github.com/alexsaballos",
-    handshake_URL: "https://app.joinhandshake.com/profiles/alexsaballos",
-    merit_URL: "https://meritpages.com/alexsaballos",
-    wisp_URL: "https://www.wispweb.org/",
-    hu_URL: "https://harding.edu"
-
-} as const;
-
-export const SOCIAL_BUTTONS: SocialButtonsType = {
+export const SOCIAL_BUTTONS: ButtonsListType["social"] = {
     linkedin: {
         icon: ICONS.linkedin,
         color: "#3A66B0",
-        link: SOCIAL_LINKS.linkedin_URL,
+        link: "https://www.linkedin.com/in/alex-saballos/",
         label: "My LinkedIn Profile"
     },
     github: {
         icon: ICONS.github,
         color: "#516870",
-        link: SOCIAL_LINKS.github_URL,
+        link: "https://github.com/alexsaballos",
         label: "My GitHub Profile"
     },
     handshake: {
         icon: ICONS.handshake,
         color: "#D3FB52",
-        link: SOCIAL_LINKS.handshake_URL,
+        link: "https://app.joinhandshake.com/profiles/alexsaballos",
         label: "My Handshake Profile"
     },
     merit: {
         icon: ICONS.merit,
         color: "#126579",
-        link: SOCIAL_LINKS.merit_URL,
+        link: "https://meritpages.com/alexsaballos",
         label: "My Merit Page"
     },
     wisp: {
         icon: ICONS.wisp,
         color: "#F2B100",
-        link: SOCIAL_LINKS.wisp_URL,
+        link: "https://www.wispweb.org/",
         label: "WISP Official Website"
     },
     hu: {
         icon: ICONS.hu,
         color: "#F2B100",
-        link: SOCIAL_LINKS.hu_URL,
+        link: "https://harding.edu",
         label: "Harding University Official Website"
     }
 } as const;
+
+const CONTACT_BUTTONS_KEYS = Object.keys(SOCIAL_BUTTONS).filter((k) =>
+    (k !== "merit" && k !== "wisp" && k !== "hu")) as Array<(keyof ButtonsListType["contact"])>;
+
+export const CONTACT_BUTTONS: ButtonsListType["contact"] = Object.fromEntries(
+    CONTACT_BUTTONS_KEYS.map((key) => [key, SOCIAL_BUTTONS[key]])
+) as ButtonsListType["contact"];

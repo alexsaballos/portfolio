@@ -4,6 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
     site: "https://alexsaballos.dev",
     base: "/",
+    output: "static",
     outDir: 'dist',
     vite: { plugins: [tailwindcss()] },
     i18n: {

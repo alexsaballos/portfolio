@@ -1,14 +1,16 @@
 ---
-import { SOCIAL_BUTTONS } from "../../../config/social";
+import { CONTACT_BUTTONS, SOCIAL_BUTTONS } from "../../../config/social";
+import type { ButtonsVariantNamesType } from "../../../types/SocialType";
 import Icon from "../../ui/libraries/Icon.astro";
 
-const { classname } = Astro.props as { classname: string; };
+const { variant } = Astro.props as { variant: ButtonsVariantNamesType; };
 ---
 
-<div class=`flex flex-row justify-center ${classname}`>
-    {Object.values(SOCIAL_BUTTONS).map(button => (
+<div class="flex flex-row justify-center">
+    {Object.values((variant == "social") ? SOCIAL_BUTTONS : CONTACT_BUTTONS).map(button => (
         <a class="p-0 m-0" href={button.link} aria-label={button.label} target="_blank" rel="noopener noreferrer">
-            <Icon icon={button.icon} size="lg" classname="shadow-none transition-transform duration-500 ease-out hover:text-secondary hover:scale-120" />
+            <Icon icon={button.icon} size="lg"
+                classname="shadow-none transition-transform duration-500 ease-out hover:text-secondary hover:scale-120" />
         </a>
     ))}
 </div>

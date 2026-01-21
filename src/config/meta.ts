@@ -1,5 +1,6 @@
-import { PICTURES } from "./assets";
+import { FAVICONS, PICTURES } from "./assets";
 import type { MetadataType } from "../types/MetaTypes";
+import type { FaviconsPngListType, FaviconsSvgListType } from "../types/AssetsType";
 
 // Extract official link & base from astro.config.mjs
 const linkSite: string = import.meta.env.SITE ?? "";
@@ -27,8 +28,10 @@ export const METADATA: MetadataType = {
         "Walton International Scholarship Program", "WISP",
         "Searcy", "Arkansas", "Managua", "Nicaragua", "United States of America"
     ],
+    manifest_favicons: (Object.keys(FAVICONS) as (FaviconsPngListType | FaviconsSvgListType)[])
+        .map(key => ({ ...FAVICONS[key] })),
 
-    // Social Previews & Crawlers
+    // Social Previews & Crawler Paths
     ogImage: PICTURES.ogImage,
     favicon: "/favicon.ico",
     manifest: "/manifest.webmanifest",

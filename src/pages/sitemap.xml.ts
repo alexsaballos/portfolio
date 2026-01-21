@@ -15,7 +15,7 @@ export async function GET() {
         `<url>
             <loc>${page.slug === "/" ? SEO.canonical("en", "") : SEO.canonical("en", page.slug)}</loc>
             ${Object.values(LANGUAGES).map(language => `
-                <xhtml:link rel="alternate" hreflang="${language.code}" href="${page.slug === "/" ? SEO.canonical(language.code, "") : SEO.canonical(language.code, page.slug)}" />`
+                <xhtml:link rel="alternate" hreflang="${language.code}" href="${page.slug === "/" ? SEO.canonical(language.code.lang, "") : SEO.canonical(language.code.lang, page.slug)}" />`
             .trim()).join("\n\t\t\t")}
             <xhtml:link rel="alternate" hreflang="x-default" href="${page.slug === "/" ? SEO.canonical("en", "") : SEO.canonical("en", page.slug)}" />
             <lastmod>${currentDate}</lastmod>

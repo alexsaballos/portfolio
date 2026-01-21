@@ -1,3 +1,7 @@
+import type { AdmittedCountriesType } from "./LocalesType";
+import type { CategoryPageNamesType } from "./PagesType";
+
+// Icons Typing
 export type IconsType = {
     href: string;
     title: string;
@@ -5,34 +9,17 @@ export type IconsType = {
     size: string;
 }
 
-export type IconsListType = {
-    email: IconsType;
-    phone: IconsType;
-    hourglass: IconsType;
-    linkedin: IconsType;
-    github: IconsType;
-    handshake: IconsType;
-    merit: IconsType;
-    wisp: IconsType;
-    hu: IconsType;
-    projects: IconsType;
-    experience: IconsType;
-    leadership: IconsType;
-    certifications: IconsType;
-    honors: IconsType;
-    contact: IconsType;
-    hamburger_open: IconsType;
-    hamburger_close: IconsType;
-    home: IconsType;
-    sun: IconsType;
-    moon: IconsType;
-    translate: IconsType;
-    chevron_up: IconsType;
-    chevron_down: IconsType;
-    angles_down: IconsType;
-    devices: IconsType;
-}
+export type IconsNamesType =
+    | "email" | "phone" | "hourglass" | "linkedin" | "github" | "handshake" | "merit"
+    | "wisp" | "hu" | "projects" | "experience" | "leadership" | "certifications" | "honors"
+    | "contact" | "home" | "hamburger_open" | "hamburger_close" | "education" | "puzzle"
+    | "id_card" | "at_sign" | "rectangle_list" | "message" | "paper_plane" | "spinner"
+    | "envelope_check" | "circle_check" | "circle_xmark" | "sun" | "moon" | "translate"
+    | "chevron_up" | "chevron_down" | "angles_down" | "devices"
 
+export type IconsListType = Record<IconsNamesType, IconsType>;
+
+// Paths Typing
 export type PathsListType = {
     scripts: string;
     favicons: string;
@@ -40,6 +27,7 @@ export type PathsListType = {
     videos: string;
 }
 
+// Videos & Pictures Typing
 export type VideosListType = {
     IntroVideo: string;
 }
@@ -47,96 +35,58 @@ export type VideosListType = {
 export type PicturesListType = {
     ogImage: string;
     PFP: ImageMetadata;
-    categories: {
-        projects: ImageMetadata;
-        experience: ImageMetadata;
-        leadership: ImageMetadata;
-        certifications: ImageMetadata;
-        honors: ImageMetadata;
-    }
+    categories: Record<CategoryPageNamesType, ImageMetadata>;
 }
 
-export type TechnologiesNamesType = "antdesign" | "arduino" | "astro" | "autocad" | "axios" | "baremetal" | "bootstrap" | "c" | "cpanel" | "cpp" | "csharp" | "css" | "daisyui" | "directus" | "flask" | "html" | "java" | "javascript" | "kicad" | "multisim" | "mysql" | "opencv" | "php" | "phpmyadmin" | "python" | "raspberrypi" | "react" | "sketchup" | "sqlite" | "tailwindcss" | "typescript" | "ultiboard" | "winui";
+// Technologies Typing
+export type TechnologiesTiersNamesType = "core" | "production";
+export type TechnologiesCoreSubheadersType = "embedded" | "software" | "cad";
+export type TechnologiesProductionSubheadersType = "web" | "frameworks" | "databases" | "operations";
+export type TechnologiesSubheadersNames = TechnologiesCoreSubheadersType | TechnologiesProductionSubheadersType;
+
+export type TechnologiesNamesType =
+    | "antdesign" | "arduino" | "astro" | "autocad" | "axios"
+    | "baremetal" | "bootstrap" | "c" | "cpanel" | "cpp" | "csharp" | "css"
+    | "daisyui" | "directus" | "flask" | "html" | "java" | "javascript"
+    | "jinja" | "kicad" | "multisim" | "mysql" | "opencv" | "php" | "phpmyadmin"
+    | "python" | "raspberrypi" | "react" | "sketchup" | "sqlite"
+    | "tailwindcss" | "typescript" | "ultiboard" | "winui";
+
+export type TechnologiesKindType =
+    | "programming_language" | "framework" | "library" | "hardware"
+    | "embedded_platform" | "operating_tool" | "database" | "cad_tool" | "simulation_tool";
+
+export type TechnologiesDomainType =
+    | "web" | "backend"  | "frontend" | "embedded" | "robotics" | "firmware"
+    | "systems" | "desktop" | "databases" | "electronics" | "pcb" | "cad" | "operations";
 
 export type TechnologiesType = {
-    name: string;
-    key: TechnologiesNamesType;
-    color: string;
-    icon: IconsType;
-    kind: string;
-    domains: string[];
-}
-
-export type TechnologiesListType = {
-    antdesign: TechnologiesType;
-    arduino: TechnologiesType;
-    astro: TechnologiesType;
-    autocad: TechnologiesType;
-    axios: TechnologiesType;
-    baremetal: TechnologiesType;
-    bootstrap: TechnologiesType;
-    c: TechnologiesType;
-    cpanel: TechnologiesType;
-    cpp: TechnologiesType;
-    csharp: TechnologiesType;
-    css: TechnologiesType;
-    daisyui: TechnologiesType;
-    directus: TechnologiesType;
-    flask: TechnologiesType;
-    html: TechnologiesType;
-    java: TechnologiesType;
-    javascript: TechnologiesType;
-    kicad: TechnologiesType;
-    multisim: TechnologiesType;
-    mysql: TechnologiesType;
-    opencv: TechnologiesType;
-    php: TechnologiesType;
-    phpmyadmin: TechnologiesType;
-    python: TechnologiesType;
-    raspberrypi: TechnologiesType;
-    react: TechnologiesType;
-    sketchup: TechnologiesType;
-    sqlite: TechnologiesType;
-    tailwindcss: TechnologiesType;
-    typescript: TechnologiesType;
-    ultiboard: TechnologiesType;
-    winui: TechnologiesType;
-}
-
-export type FlagsListType = {
-    de: {
-        picture: ImageMetadata;
+    visual: {
+        name: string;
+        color: string;
         icon: IconsType;
-    }
-    mx: {
-        picture: ImageMetadata;
-        icon: IconsType;
-    }
-    us: {
-        picture: ImageMetadata;
-        icon: IconsType;
+    };
+    hierarchy: {
+        tier: TechnologiesTiersNamesType;
+        subheader: TechnologiesSubheadersNames;
+    };
+    metadata: {
+        key: TechnologiesNamesType;
+        kind: TechnologiesKindType;
+        domains: TechnologiesDomainType[];
     }
 }
 
-export type FaviconsPngType = {
-    src: string;
-    sizes: string;
-    type: string;
-}
+export type TechnologiesListType = Record<TechnologiesNamesType, TechnologiesType>;
 
-export type FaviconsSvgType = {
-    src: string;
-    type: string;
-    purpose: string;
-}
+// Flags Typing
+export type FlagsListType = Record<AdmittedCountriesType, { picture: ImageMetadata; icon: IconsType; }>;
 
-export type FaviconListType = {
-    android192: FaviconsPngType;
-    android512: FaviconsPngType;
-    apple120: FaviconsPngType;
-    apple152: FaviconsPngType;
-    apple167: FaviconsPngType;
-    apple180: FaviconsPngType;
-    mstile150: FaviconsPngType;
-    safari_mask: FaviconsSvgType;
-}
+// Favicons Typing
+export type FaviconsSvgListType = "safari_mask";
+export type FaviconsPngListType =
+    "android192" | "android512" | "apple120" | "apple152" | "apple167" | "apple180" | "mstile150";
+
+export type FaviconListType =
+    Record<FaviconsPngListType, { src: string; sizes: string; type: string; }>
+    & Record<FaviconsSvgListType, { src: string; type: string; purpose: string; }>;

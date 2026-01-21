@@ -3,7 +3,7 @@
 import type { LocalesType } from "./types/LocalesType";
 
 declare namespace App {
-    interface Locals {
+    interface locals {
         readonly t: LocalesType;
         readonly locale: string;
     }

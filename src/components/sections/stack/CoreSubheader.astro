@@ -1,0 +1,22 @@
+---
+import { TECHNOLOGIES } from "../../../config/assets";
+import type { TechnologiesCoreSubheadersType } from "../../../types/AssetsType";
+import type { LocalesType } from "../../../types/LocalesType";
+import Technology from "../../ui/Technology.astro";
+
+const { t } = Astro.locals as { t: LocalesType; };
+const { subheader } = Astro.props as { subheader: TechnologiesCoreSubheadersType }
+---
+
+<div class="flex flex-col gap-2">
+    <h3 class="text-lg font-semibold">
+        {t.stack.core.subheaders[subheader]}
+    </h3>
+    <div class="flex flex-wrap gap-2 pl-2">
+        {Object.values(TECHNOLOGIES)
+        .filter((tech) => tech.hierarchy.subheader === subheader)
+        .map((tech) => (
+            <Technology selection={tech} key={tech.metadata.key} />
+        ))}
+    </div>
+</div>

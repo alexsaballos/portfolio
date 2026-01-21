@@ -1,6 +1,7 @@
-import { ICONS, PICTURES } from "./assets";
 import { SEO } from "./routing";
 import { PERSONAL } from "./personal";
+import { ICONS, PICTURES } from "./assets";
+
 import type { DirectoryPagesType, CategoryPagesListType, NavigationPagesListType } from "../types/PagesType";
 
 export const PAGES: DirectoryPagesType = {
@@ -76,24 +77,20 @@ export const PAGES: DirectoryPagesType = {
         slug: "/contact",
         key: "contact",
         icon: ICONS.contact,
-        SEO_title: SEO.title(`Contact ${PERSONAL.name}`),
+        SEO_title: SEO.title("Contact me"),
         SEO_description: SEO.description(`Contact information for ${PERSONAL.name} regarding engineering, software, or professional collaboration inquiries.`)
     }
 } as const;
 
-export const NAVIGATION_PAGES: NavigationPagesListType = {
-    projects: PAGES.projects,
-    experience: PAGES.experience,
-    leadership: PAGES.leadership,
-    certifications: PAGES.certifications,
-    honors: PAGES.honors,
-    contact: PAGES.contact
-} as const
+const NAV_KEYS = Object.keys(PAGES).filter((k) =>
+    (k !== "home")) as (keyof NavigationPagesListType)[];
+const CAT_KEYS = Object.keys(PAGES).filter((k) =>
+    (k !== "home" && k !== "contact")) as (keyof CategoryPagesListType)[];
 
-export const CATEGORY_PAGES: CategoryPagesListType = {
-    projects: PAGES.projects,
-    experience: PAGES.experience,
-    leadership: PAGES.leadership,
-    certifications: PAGES.certifications,
-    honors: PAGES.honors
-} as const;
+export const NAVIGATION_PAGES: NavigationPagesListType = Object.fromEntries(
+    NAV_KEYS.map((key) => [key, PAGES[key]])
+) as NavigationPagesListType;
+
+export const CATEGORY_PAGES: CategoryPagesListType = Object.fromEntries(
+    CAT_KEYS.map((key) => [key, PAGES[key]])
+) as CategoryPagesListType;

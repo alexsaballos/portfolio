@@ -1,6 +1,8 @@
-import type { IconsType } from "./AssetsType";
+import type { IconsType, TechnologiesCoreSubheadersType, TechnologiesProductionSubheadersType } from "./AssetsType";
+import type { CategoryPageNamesType, DirectoryPageNamesType, NavigationPageNamesType } from "./PagesType";
 
 export type AdmittedLanguagesType = "de" | "en" | "es";
+export type AdmittedCountriesType = "de" | "us" | "mx";
 export type AdmittedLangCountriesType = "de-de" | "en-us" | "es-mx";
 
 export type SingleLanguageType = {
@@ -18,11 +20,7 @@ export type SingleLanguageType = {
     }
 }
 
-export type LanguagesType = {
-    de: SingleLanguageType;
-    en: SingleLanguageType;
-    es: SingleLanguageType;
-}
+export type LanguagesType = Record<AdmittedLanguagesType, SingleLanguageType>;
 
 export type LocalesType = {
     intro: {
@@ -31,39 +29,66 @@ export type LocalesType = {
         headline: string;
         scroll: string;
     },
-    breadcrumbs: {
-        home: string;
-        projects: string;
-        experience: string;
-        leadership: string;
-        certifications: string;
-        honors: string;
-        contact: string;
-    },
+    breadcrumbs: Record<DirectoryPageNamesType, string>,
     about: {
         greeting: string;
         introduction: string;
     },
-    categories: {
-        projects: string;
-        experience: string;
-        leadership: string;
-        certifications: string;
-        honors: string;
-    },
-    navbar: {
-        projects: string;
-        experience: string;
-        leadership: string;
-        certifications: string;
-        honors: string;
-        contact: string;
-    },
-    footer: {
-        copyright: string;
-    },
+    stack: {
+        core: {
+            header: string;
+            subheaders: Record<TechnologiesCoreSubheadersType, string>;
+        },
+        production: {
+            header: string;
+            subheaders: Record<TechnologiesProductionSubheadersType, string>;
+        }
+    }
+    categories: Record<CategoryPageNamesType, string>,
+    navbar: Record<NavigationPageNamesType, string>,
+    footer: { copyright: string; },
     coming_soon: {
         p1: string;
         p2: string;
+    },
+    contact: {
+        CTA: string;
+        form_invite: string;
+        required: string;
+        name: {
+            label: string;
+            placeholder: string;
+        },
+        email: {
+            label: string;
+            placeholder: string;
+        },
+        subject: {
+            label: string;
+            options: {
+                placeholder: string;
+                recruiting: string;
+                technical: string;
+                business: string;
+                interview: string;
+                academic: string;
+                consulting: string;
+                other: string;
+            }
+        },
+        message: {
+            label: string;
+            placeholder: string;
+        },
+        send: string;
+        reach_on: string;
+        alerts: {
+            loading: string;
+            success: {
+                p1: string;
+                p2: string;
+            };
+            failure: string;
+        }
     }
 }

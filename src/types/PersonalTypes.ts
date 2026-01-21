@@ -1,4 +1,4 @@
 export type PersonalInfoType = {
     name: string;
-    email: string;
+    resend_endpoint: string;
 }

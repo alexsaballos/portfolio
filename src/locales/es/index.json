@@ -18,6 +18,25 @@
         "greeting": "¡Bienvenido a mi Portafolio!",
         "introduction": "Este espacio muestra los sistemas y proyectos que he desarrollado en la intersección de hardware, software e infraestructura. Me gradué con honores como becario Walton de Harding University (AR, USA) con una licenciatura en Ingeniería Eléctrica/Electrónica acreditada por ABET, una especialización en Matemáticas y aprobé el examen de formación profesional de NCEES antes de graduarme, lo que me permitió obtener una licencia EI/EiT Estadounidense. Mi trabajo abarca sistemas embebidos, diseño de potencia y PCB, automatización y desarrollo de software, con un fuerte énfasis en la documentación, la mantenibilidad a largo plazo y soluciones prácticas diseñadas para un rendimiento fiable más allá del laboratorio."
     },
+    "stack": {
+        "core": {
+            "header": "Núcleo de Ingeniería",
+            "subheaders": {
+                "embedded": "Sistemas Embebidos & Robótica",
+                "software": "Ingeniería de Software",
+                "cad": "CAD de Ingeniería"
+            }
+        },
+        "production": {
+            "header": "Producción & Herramientas de Sistemas",
+            "subheaders": {
+                "web": "Web",
+                "frameworks": "Frameworks",
+                "databases": "Bases de Datos",
+                "operations": "Operaciones"
+            }
+        }
+    },
     "categories": {
         "projects": "Proyectos",
         "experience": "Experiencia",
@@ -39,5 +58,45 @@
     "coming_soon": {
         "p1": "¡Próximamente!",
         "p2": "Visite luego para ver esta página"
+    },
+    "contact": {
+        "CTA": "Contácteme",
+        "form_invite": "Para consultas profesionales, por favor complete el siguiente formulario:",
+        "required": "Todos los campos son obligatorios",
+        "name": {
+            "label": "Nombre completo",
+            "placeholder": "Ingrese su nombre"
+        },
+        "email": {
+            "label": "Correo electrónico",
+            "placeholder": "usuario@servidor.com"
+        },
+        "subject": {
+            "label": "Asunto",
+            "options": {
+                "placeholder": "Seleccione un asunto",
+                "recruiting": "Reclutamiento / Selección",
+                "technical": "Colaboración técnica",
+                "business": "Consultas de negocio",
+                "interview": "Solicitud de Entrevista / Charla",
+                "academic": "Académico / Educativo",
+                "consulting": "Asesoría / Consultoría",
+                "other": "Otro"
+            }
+        },
+        "message": {
+            "label": "Mensaje",
+            "placeholder": "Ingrese su mensaje"
+        },
+        "send": "Enviar mensaje",
+        "reach_on": "También puede contactarme en",
+        "alerts": {
+            "loading": "Enviando su mensaje",
+            "success": {
+                "p1": "Su mensaje fue enviado exitosamente",
+                "p2": "Gracias por contactarme. Le responderé a la brevedad"
+            },
+            "failure": "Ha ocurrido un error. Inténtelo nuevamente"
+        }
     }
 }

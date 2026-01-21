@@ -7,12 +7,15 @@ import Flag from "../../ui/libraries/Flag.astro";
 import Icon from "../../ui/libraries/Icon.astro";
 
 const { classname } = Astro.props as { classname: string; }
+
+// Get the current URL's slug for appropriate LanguageToggling
 const segments: string[] = Astro.url.pathname.split("/").filter(Boolean);
 const pageSlug: string = (segments.length > 1) ? (`/${segments[1]}`) : "";
 ---
 
 <div class=`dropdown dropdown-center ${classname}`>
-    <div tabindex="0" role="button" class="btn btn-ghost btn-square shadow-none transition-transform duration-500 ease-out hover:text-secondary hover:scale-120">
+    <div tabindex="0" role="button"
+        class="btn btn-ghost btn-square shadow-none transition-transform duration-500 ease-out hover:text-secondary hover:scale-120">
         <Icon icon={ICONS.translate} />
     </div>
     <ul tabindex="-1" class="dropdown-content menu bg-base-200 text-base-content rounded-box gap-1 w-30 p-1">

@@ -18,6 +18,25 @@
         "greeting": "Welcome to my Portfolio!",
         "introduction": "This space showcases systems and projects I've built at the intersection of hardware, software, and infrastructure. I graduated Cum Laude as a Walton Scholar from Harding University (AR, US) with an ABET-accredited B.S. in Electrical Engineering, a minor in Mathematics, and passed the NCEES FE Exam prior to graduation, which enabled me to receive a US EI/EiT license. My work spans embedded systems, power and PCB design, automation, and software development, with a strong emphasis on documentation, long-term maintainability, and practical solutions designed to perform reliably beyond the lab environment."
     },
+    "stack": {
+        "core": {
+            "header": "Core Engineering",
+            "subheaders": {
+                "embedded": "Embedded & Robotics Systems",
+                "software": "Software Engineering",
+                "cad": "Engineering CAD"
+            }
+        },
+        "production": {
+            "header": "Production & Systems Tooling",
+            "subheaders": {
+                "web": "Web",
+                "frameworks": "Frameworks",
+                "databases": "Databases",
+                "operations": "Operations"
+            }
+        }
+    },
     "categories": {
         "projects": "Projects",
         "experience": "Experience",
@@ -39,5 +58,45 @@
     "coming_soon": {
         "p1": "Coming Soon!",
         "p2": "Check back later to view this page"
+    },
+    "contact": {
+        "CTA": "Get in Touch",
+        "form_invite": "For professional inquiries, please complete the form below:",
+        "required": "All fields are required",
+        "name": {
+            "label": "Full name",
+            "placeholder": "Please enter your name"
+        },
+        "email": {
+            "label": "Email",
+            "placeholder": "e.g. username@server.com"
+        },
+        "subject": {
+            "label": "Subject",
+            "options": {
+                "placeholder": "Please select a subject",
+                "recruiting": "Recruiting / Hiring",
+                "technical": "Technical Collaboration",
+                "business": "Business Inquiry",
+                "interview": "Interview / Speaking Request",
+                "academic": "Academic / Educational",
+                "consulting": "Advisory / Consulting",
+                "other": "Other"
+            }
+        },
+        "message": {
+            "label": "Message",
+            "placeholder": "Please enter your message"
+        },
+        "send": "Send message",
+        "reach_on": "You can also reach me on",
+        "alerts": {
+            "loading": "Sending your message",
+            "success": {
+                "p1": "Your message was sent successfully",
+                "p2": "Thank you for reaching out. I'll get back to you as soon as possible"
+            },
+            "failure": "There has been an error. Please try again later"
+        }
     }
 }

@@ -1,12 +1,11 @@
 ---
 import { ICONS } from "../../../config/assets";
-import { LANGUAGES } from "../../../config/languages";
 import type { LocalesType } from "../../../types/LocalesType";
 
+import RotatingText from "../../ui/RotatingText.astro";
 import Avatar from "../../ui/Avatar.astro";
 import SocialButtons from "../../ui/buttons/SocialButtons.astro";
 import Icon from "../../ui/libraries/Icon.astro";
-import Flag from "../../ui/libraries/Flag.astro";
 
 const { t } = Astro.locals as { t: LocalesType; };
 ---
@@ -14,25 +13,20 @@ const { t } = Astro.locals as { t: LocalesType; };
 <section class="flex flex-col gap-10">
     <div class="gap-10 text-center justify-center flex flex-col items-center">
         <Avatar classname="justify-center w-60 h-60" />
-        <div>
-            <span class="align-middle">
-                <span class="text-rotate duration-5000 text-4xl font-mono">
-                    <span class="justify-items-center">
-                        {Object.values(LANGUAGES).map(entry => (
-                            <span class="inline-flex items-center align-middle gap-2">
-                                <Flag icon={entry.icon} size="md" />
-                                <p>{entry.text.hello}</p>
-                            </span>
-                        ))}
-                    </span>
-                </span>
+
+        <!-- Includes: Rotating Hello, introduction, headline, and SocialButtons -->
+        <div class="group">
+            <span class="align-middle">                
+                <RotatingText text="hello" classname="text-4xl" />
                 <span class="text-2xl">{t.intro.name_is}</span>
             </span>
             <h1 class="text-6xl sm:text-7xl font-bold mt-2">{t.intro.name}</h1>
             <h2 class="text-xl my-2">{t.intro.headline}</h2>
-            <SocialButtons />
+            <SocialButtons variant="social" />
         </div>
     </div>
+
+    <!-- "Scroll" Invitation -->
     <div class="place-items-center">
         <p class="text-2xl font-light">{t.intro.scroll}</p>
         <Icon icon={ICONS.angles_down} size="dxl" classname="text-secondary animate-pulse" />

@@ -27,7 +27,7 @@ export const LANGUAGES: LanguagesType = {
             langcountry: "en-us"
         },
         text: {
-            hello: "Hallo!",
+            hello: "Hello!",
             select: "Select a language"
         }
     },

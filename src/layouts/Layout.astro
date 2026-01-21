@@ -5,13 +5,13 @@ import { METADATA } from '../config/meta';
 import { PATHS } from '../config/assets';
 import { FAVICONS } from '../config/assets';
 import { getLocaleMessages } from '../i18n/utils';
+import type { AdmittedLanguagesType } from '../types/LocalesType';
 
 import IconLibrary from '../components/ui/libraries/IconLibrary.astro';
 import FlagLibrary from '../components/ui/libraries/FlagLibrary.astro';
 import Navbar from '../components/widgets/Navbar.astro';
 import Scroller from '../components/widgets/Scroller.astro';
-import Footer from '../components/sections/footer/Footer.astro';
-import type { AdmittedLanguagesType } from '../types/LocalesType';
+import Footer from '../components/sections/Footer.astro';
 
 const { title, description, canonical_link, navbarBG } = Astro.props as {
 	title: string;

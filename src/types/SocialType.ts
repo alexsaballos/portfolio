@@ -1,28 +1,16 @@
 import type { IconsType } from "./AssetsType";
 
-export type SocialLinksType = {
-    whatsapp_URL: string;
-    portfolio_URL: string;
-    linkedin_URL: string;
-    github_URL: string;
-    handshake_URL: string;
-    merit_URL: string;
-    wisp_URL: string;
-    hu_URL: string;
-}
-
-export type SingleSocialButtonType = {
+export type BaseSocialButtonType = {
     icon: IconsType;
     color: string;
     link: string;
     label: string;
 }
 
-export type SocialButtonsType = {
-    linkedin: SingleSocialButtonType;
-    github: SingleSocialButtonType;
-    handshake: SingleSocialButtonType;
-    merit: SingleSocialButtonType;
-    hu: SingleSocialButtonType;
-    wisp: SingleSocialButtonType;
+export type ButtonsVariantNamesType = "social" | "contact";
+export type SocialButtonsNamesType = "linkedin" | "github" | "handshake" | "merit" | "wisp" | "hu";
+export type ContactButtonsNamesType = Exclude<SocialButtonsNamesType, ("merit" | "wisp" | "hu")>;
+export type ButtonsListType = {
+    social: Record<SocialButtonsNamesType, BaseSocialButtonType>;
+    contact: Record<ContactButtonsNamesType, BaseSocialButtonType>;
 }

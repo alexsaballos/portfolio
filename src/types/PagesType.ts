@@ -1,69 +1,32 @@
 import type { IconsType } from "./AssetsType";
 
-// Short name SSOT locked types per page
-export type DirectoryPageNamesType = "home" | "projects" | "experience" | "leadership" | "certifications" | "honors" | "contact";
-export type NavigationPageNamesType = "projects" | "experience" | "leadership" | "certifications" | "honors" | "contact";
-export type CategoryPageNamesType = "projects" | "experience" | "leadership" | "certifications" | "honors";
+// Single-word SSOT locked keys per page
+export type DirectoryPageNamesType =
+"home" | "projects" | "experience" | "leadership" | "certifications" | "honors" | "contact";
 
-// Internal SSOT Structure per page
-export type HomePageType = {
+export type NavigationPageNamesType = Exclude<DirectoryPageNamesType, "home">;
+export type CategoryPageNamesType = Exclude<DirectoryPageNamesType, ("home" | "contact")>;
+
+// Internal Base (keyless) SSOT Structure per page
+export type BasePageType = {
     short_title: string;
     long_title: string;
     link: string;
     slug: string;
-    key: DirectoryPageNamesType;
     icon: IconsType;
     SEO_title: string;
     SEO_description: string;
 }
 
-export type NavigationPageType = {
-    short_title: string;
-    long_title: string;
-    link: string;
-    slug: string;
-    key: NavigationPageNamesType;
-    icon: IconsType;
-    SEO_title: string;
-    SEO_description: string;
-}
-
-export type CategoryPageType = {
-    short_title: string;
-    long_title: string;
-    link: string;
-    slug: string;
+// Categorized Page Types according to their own Key
+export type HomePageType = BasePageType & { key: DirectoryPageNamesType; };
+export type NavigationPageType = BasePageType & { key: NavigationPageNamesType; };
+export type CategoryPageType = BasePageType & {
     key: CategoryPageNamesType;
-    icon: IconsType;
     picture: ImageMetadata;
-    SEO_title: string;
-    SEO_description: string;
-}
+};
 
-// List of different pages categories based on SSOT
-export type DirectoryPagesType = {
-    home: HomePageType,
-    projects: CategoryPageType,
-    experience: CategoryPageType,
-    leadership: CategoryPageType,
-    certifications: CategoryPageType,
-    honors: CategoryPageType,
-    contact: NavigationPageType
-}
-
-export type NavigationPagesListType = {
-    projects: CategoryPageType,
-    experience: CategoryPageType,
-    leadership: CategoryPageType,
-    certifications: CategoryPageType,
-    honors: CategoryPageType,
-    contact: NavigationPageType
-}
-
-export type CategoryPagesListType = {
-    projects: CategoryPageType,
-    experience: CategoryPageType,
-    leadership: CategoryPageType,
-    certifications: CategoryPageType,
-    honors: CategoryPageType
-}
+// List of all pages directories based on SSOT
+export type CategoryPagesListType = Record<CategoryPageNamesType, CategoryPageType>;
+export type NavigationPagesListType = CategoryPagesListType & { contact: NavigationPageType; };
+export type DirectoryPagesType = NavigationPagesListType & { home: HomePageType; };

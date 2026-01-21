@@ -1,0 +1,21 @@
+---
+import { LANGUAGES } from "../../config/languages";
+import type { SingleLanguageType } from "../../types/LocalesType";
+import Flag from "./libraries/Flag.astro";
+
+const { text, classname } = Astro.props as {
+    text: keyof SingleLanguageType["text"];
+    classname: string;
+}
+---
+
+<span class=`text-rotate duration-8000 font-mono ${classname}`>
+    <span class="justify-items-center">
+        {Object.values(LANGUAGES).map(entry => (
+            <span class="inline-flex items-center align-middle gap-2">
+                <Flag icon={entry.icon} size="md" />
+                <p>{entry.text[text]}</p>
+            </span>
+        ))}
+    </span>
+</span>

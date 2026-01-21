@@ -1,3 +1,4 @@
+import type { FaviconListType } from "./AssetsType";
 import type { AdmittedLanguagesType } from "./LocalesType";
 
 export type MetadataType = {
@@ -14,6 +15,7 @@ export type MetadataType = {
         theme: string;
     };
     manifest_categories: string[];
+    manifest_favicons: Array<FaviconListType[keyof FaviconListType]>;
     ogImage: string;
     favicon: string;
     manifest: string;
