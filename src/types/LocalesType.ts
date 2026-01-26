@@ -1,4 +1,4 @@
-import type { IconsType, TechnologiesCoreSubheadersType, TechnologiesProductionSubheadersType } from "./AssetsType";
+import type { IconsType, TechnologiesCoreSubheadersType, TechnologiesNamesType, TechnologiesProductionSubheadersType } from "./AssetsType";
 import type { CategoryPageNamesType, DirectoryPageNamesType, NavigationPageNamesType } from "./PagesType";
 
 export type AdmittedLanguagesType = "de" | "en" | "es";
@@ -35,6 +35,7 @@ export type LocalesType = {
         introduction: string;
     },
     stack: {
+        title: string;
         core: {
             header: string;
             subheaders: Record<TechnologiesCoreSubheadersType, string>;
@@ -42,9 +43,13 @@ export type LocalesType = {
         production: {
             header: string;
             subheaders: Record<TechnologiesProductionSubheadersType, string>;
-        }
+        },
+        technologies: Record<TechnologiesNamesType, string>;
     }
-    categories: Record<CategoryPageNamesType, string>,
+    categories: {
+        title: string;
+        categories: Record<CategoryPageNamesType, string>
+    },
     navbar: Record<NavigationPageNamesType, string>,
     footer: { copyright: string; },
     coming_soon: {

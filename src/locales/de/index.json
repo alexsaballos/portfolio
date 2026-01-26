@@ -19,6 +19,7 @@
         "introduction": "Dieser Bereich präsentiert Systeme und Projekte, die ich an der Schnittstelle von Hardware, Software und Infrastruktur entwickelt habe. Ich schloss mein Studium an der Harding University (AR, US) als Walton Scholar mit Auszeichnung (Cum Laude) ab und erwarb einen ABET-akkreditierten Bachelor of Science in Elektrotechnik mit Nebenfach Mathematik. Vor meinem Abschluss bestand ich die NCEES FE-Prüfung, wodurch ich die US-amerikanische EI/EiT-Lizenz erhielt. Meine Arbeit umfasst eingebettete Systeme, Stromversorgung und Leiterplattendesign, Automatisierung und Softwareentwicklung mit einem starken Fokus auf Dokumentation, langfristige Wartbarkeit und praxisorientierte Lösungen, die auch außerhalb des Labors zuverlässig funktionieren."
     },
     "stack": {
+        "title": "Technologie-Stack",
         "core": {
             "header": "Kerntechnik",
             "subheaders": {
@@ -35,14 +36,53 @@
                 "databases": "Datenbanken",
                 "operations": "Betrieb"
             }
+        },
+        "technologies": {
+            "antdesign": "UI-Bibliothek verwendet in Webentwicklung",
+            "arduino": "Hardwareplattform verwendet in Robotik",
+            "astro": "Framework verwendet in Webentwicklung",
+            "autocad": "Ingenieur-CAD-Tool verwendet in Diagrammerstellung",
+            "axios": "API-Bibliothek verwendet in Webentwicklung",
+            "baremetal": "Low-Level-Programmierung für Embedded-Systeme",
+            "bootstrap": "UI-Bibliothek verwendet in Webentwicklung",
+            "c": "Programmiersprache verwendet in Embedded-Systemen",
+            "cpanel": "Administrationspanel verwendet im Backend-Management",
+            "cpp": "Programmiersprache verwendet in Desktop-Anwendungen",
+            "csharp": "Programmiersprache verwendet in Desktop-Anwendungen",
+            "css": "Stylesheets verwendet in Webentwicklung",
+            "daisyui": "UI-Bibliothek verwendet in Webentwicklung",
+            "directus": "Administrationspanel verwendet im Content-Management",
+            "flask": "Framework verwendet im Backend",
+            "html": "Markup-Sprache verwendet in Webentwicklung",
+            "java": "Programmiersprache verwendet in Desktop-Anwendungen",
+            "javascript": "Programmiersprache verwendet in Webentwicklung",
+            "jinja": "Template-Engine verwendet in Webentwicklung",
+            "kicad": "Ingenieur-CAD-Tool verwendet in PCB-Erstellung",
+            "multisim": "Simulationstool verwendet in Elektronik und Schaltplänen",
+            "mysql": "Relationale Datenbank verwendet im Backend",
+            "opencv": "Optik-Bibliothek verwendet in Robotik",
+            "php": "Programmiersprache verwendet in Webentwicklung",
+            "phpmyadmin": "Administrationspanel verwendet im Backend-Management",
+            "python": "Programmiersprache verwendet im Backend und Robotik",
+            "raspberrypi": "Hardwareplattform verwendet in Robotik",
+            "react": "UI-Bibliothek verwendet in Webentwicklung",
+            "sketchup": "Ingenieur-CAD-Tool verwendet in 3D-Modellierung",
+            "sqlite": "Relationale Datenbank verwendet im Backend",
+            "tailwindcss": "CSS-Bibliothek verwendet in Webentwicklung",
+            "typescript": "Programmiersprache verwendet in Webentwicklung",
+            "ultiboard": "Ingenieur-CAD-Tool verwendet in PCB-Erstellung",
+            "winui": "Framework verwendet in Desktop-Anwendungen"
         }
     },
     "categories": {
-        "projects": "Projekte",
-        "experience": "Erfahrung",
-        "leadership": "Führung",
-        "certifications": "Lizenzen & Zertifizierungen",
-        "honors": "Auszeichnungen"
+        "title": "Portfolio-Bereiche",
+        "categories": {
+            "projects": "Projekte",
+            "experience": "Erfahrung",
+            "leadership": "Führung",
+            "certifications": "Lizenzen & Zertifizierungen",
+            "honors": "Auszeichnungen"
+        }
     },
     "navbar": {
         "projects": "Projekte",

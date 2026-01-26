@@ -1,21 +1,23 @@
 ---
 import type { TechnologiesType } from "../../types/AssetsType";
+import type { LocalesType } from "../../types/LocalesType";
 import Icon from "../ui/libraries/Icon.astro";
 
 const { selection } = Astro.props as { selection: TechnologiesType };
+const { t } = Astro.locals as { t: LocalesType; };
 ---
 
-<div class="tooltip tech" style={`--tech-color: ${selection.visual.color}`}>
+<div class="tooltip tech select-none" style={`--tech-color: ${selection.visual.color}`}>
     <div class="tooltip-content rounded-2xl flex flex-row ring-4 ring-base-300">
         <Icon icon={selection.visual.icon} size="dxl" classname="flex-1 justify-center" />
         <div class="flex-2">
             <h1 class="font-bold text-lg text-left">{selection.visual.name}</h1>
-            <p class="text-md text-left">{selection.visual.icon.desc}</p>
+            <p class="text-md text-left">{t.stack.technologies[selection.metadata.key]}</p>
         </div>
     </div>
     <div class="badge badge-lg tech text-white transition-transform duration-500 ease-out hover:opacity-30"
         style={`--tech-color: ${selection.visual.color}`}>
         <Icon icon={selection.visual.icon} classname="py-0.5" />
-        {selection.visual.name}
+        <p>{selection.visual.name}</p>
     </div>
 </div>

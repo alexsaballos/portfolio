@@ -62,19 +62,6 @@ export const PICTURES: PicturesListType = {
 // COMPLETE SVG ASSETS REFERENCE
 // Complete UI Icons Reference
 export const ICONS: IconsListType = {
-    // Main contact information
-    email: {
-        href: "#email",
-        title: "Email Icon",
-        desc: "Square with Round Corners - An envelope representing email communication.",
-        size: "sm"
-    },
-    phone: {
-        href: "#phone",
-        title: "Phone Icon",
-        desc: "A ringing phone representing mobile phone communication.",
-        size: "sm"
-    },
 
     // Coming soon
     hourglass: {
@@ -181,18 +168,6 @@ export const ICONS: IconsListType = {
     },
 
     // Contact subject field icons
-    education: {
-        href: "#education",
-        title: "Education Icon",
-        desc: "Graduation Cap used on Education Inquiries on Contact Page.",
-        size: "md"
-    },
-    puzzle: {
-        href: "#puzzle",
-        title: "Puzzle Piece Icon",
-        desc: "Puzzle Piece used to represent an additional or edge case.",
-        size: "md"
-    },
     id_card: {
         href: "#id_card",
         title: "ID Card Icon",

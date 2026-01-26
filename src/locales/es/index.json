@@ -19,6 +19,7 @@
         "introduction": "Este espacio muestra los sistemas y proyectos que he desarrollado en la intersección de hardware, software e infraestructura. Me gradué con honores como becario Walton de Harding University (AR, USA) con una licenciatura en Ingeniería Eléctrica/Electrónica acreditada por ABET, una especialización en Matemáticas y aprobé el examen de formación profesional de NCEES antes de graduarme, lo que me permitió obtener una licencia EI/EiT Estadounidense. Mi trabajo abarca sistemas embebidos, diseño de potencia y PCB, automatización y desarrollo de software, con un fuerte énfasis en la documentación, la mantenibilidad a largo plazo y soluciones prácticas diseñadas para un rendimiento fiable más allá del laboratorio."
     },
     "stack": {
+        "title": "Stack Tecnológico",
         "core": {
             "header": "Núcleo de Ingeniería",
             "subheaders": {
@@ -35,14 +36,53 @@
                 "databases": "Bases de Datos",
                 "operations": "Operaciones"
             }
+        },
+        "technologies": {
+            "antdesign": "Libería UI usada en Desarrollo Web",
+            "arduino": "Plataforma de Hardware usada en Robótica",
+            "astro": "Framework usado in Desarrollo Web",
+            "autocad": "Herramienta CAD usada en Diseño de Diagramas",
+            "axios": "Libería API usada en Desarrollo Web",
+            "baremetal": "Programación de Bajo Nivel en Sistemas Embebidos",
+            "bootstrap": "Libería UI usada en Desarrollo Web",
+            "c": "Lenguaje de Programación usado en Sistemas Embebidos",
+            "cpanel": "Panel de Administración usado en Backend",
+            "cpp": "Lenguaje de Programación usado en Apps de Escritorio",
+            "csharp": "Lenguaje de Programación usado en Apps de Escritorio",
+            "css": "Sheets de Estilo usadas en Desarrollo Web",
+            "daisyui": "Libería UI usada en Desarrollo Web",
+            "directus": "Panel de Administración usado en Backend",
+            "flask": "Framework usado en Backend",
+            "html": "Lenguaje de Marcado usado en Desarrollo Web",
+            "java": "Lenguaje de Programación usado en Apps de Escritorio",
+            "javascript": "Lenguaje de Programación usado en Desarrollo Web",
+            "jinja": "Motor de Plantillas usado en Desarrollo Web",
+            "kicad": "Herramienta CAD usada en Diseño de PCB",
+            "multisim": "Simulador usado en Electrónica & Creación de Diagramas",
+            "mysql": "Base de Datos Relacional usada en Backend",
+            "opencv": "Libería de Ópticas usada en Robótica",
+            "php": "Lenguaje de Programación usado en Desarrollo Web",
+            "phpmyadmin": "Panel de Administración usado en Backend",
+            "python": "Lenguaje de Programación usado en Backend & Robótica",
+            "raspberrypi": "Plataforma de Hardware usada en Robótica",
+            "react": "Libería UI usada en Desarrollo Web",
+            "sketchup": "Herramienta CAD usada en Modelado 3D",
+            "sqlite": "Base de Datos Relacional usada en Backend",
+            "tailwindcss": "Libería CSS usada en Desarrollo Web",
+            "typescript": "Lenguaje de Programación usado en Desarrollo Web",
+            "ultiboard": "Herramienta CAD usada en Diseño de PCB",
+            "winui": "Framework usado en Apps de Escritorio"
         }
     },
     "categories": {
-        "projects": "Proyectos",
-        "experience": "Experiencia",
-        "leadership": "Liderazgo",
-        "certifications": "Licencias & Certificaciones",
-        "honors": "Honores"
+        "title": "Secciones del Portafolio",
+        "categories": {
+            "projects": "Proyectos",
+            "experience": "Experiencia",
+            "leadership": "Liderazgo",
+            "certifications": "Licencias & Certificaciones",
+            "honors": "Honores"
+        }
     },
     "navbar": {
         "projects": "Proyectos",

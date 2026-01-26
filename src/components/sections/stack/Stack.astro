@@ -1,6 +1,7 @@
 ---
 import type { TechnologiesCoreSubheadersType, TechnologiesProductionSubheadersType } from "../../../types/AssetsType";
 import type { LocalesType } from "../../../types/LocalesType";
+import Title from "../../ui/text/Title.astro";
 import CoreSubheader from "./CoreSubheader.astro";
 import ProductionSubheader from "./ProductionSubheader.astro";
 
@@ -13,11 +14,12 @@ const productionSubheaders3: TechnologiesProductionSubheadersType = "operations"
 ---
 
 <section class="bg-base-300 rounded-4xl py-10 px-5 lg:px-30">
+    <Title title={t.stack.title} />
     <div class="grid gap-10 xl:px-10">
 
         <!-- ================= CORE ================= -->
         <div class="group grid gap-6">
-            <h2 class="text-2xl font-bold tracking-tight">{t.stack.core.header}</h2>
+            <h2 class="text-2xl font-bold tracking-tight mt-4">{t.stack.core.header}</h2>
             <div class="flex flex-col flex-wrap gap-6">
 
                 <!-- Embedded & Software Subheaders -->

@@ -1,31 +1,20 @@
 ---
-import { ICONS, PATHS } from "../../config/assets";
-import { PERSONAL } from "../../config/personal";
-import type { LocalesType } from "../../types/LocalesType";
-import SocialButtons from "../ui/buttons/SocialButtons.astro";
-import Icon from "../ui/libraries/Icon.astro";
+import { ICONS, PATHS } from "../../../config/assets";
+import { PERSONAL } from "../../../config/personal";
+import type { LocalesType } from "../../../types/LocalesType";
+
+import Icon from "../../ui/libraries/Icon.astro";
+import Title from "../../ui/text/Title.astro";
+import ContactStatus from "./ContactStatus.astro";
+import SocialButtons from "../../ui/buttons/SocialButtons.astro";
 
 const { t } = Astro.locals as { t: LocalesType };
 ---
 
 <div class="p-5 gap-5">
-    <div id="toast_contact" class="toast toast-center toast-top mt-3 md:mt-17 z-998">
-        <div id="toast_loading" role="alert" class="hidden alert alert-info rounded-4xl transition-transform duration-500 ease-out hover:scale-120">
-            <Icon icon={ICONS.spinner} size="sm" classname="animate-spin" />
-            {t.contact.alerts.loading}
-        </div>
-        <div id="toast_error" role="alert" class="hidden alert alert-error rounded-4xl transition-transform duration-500 ease-out hover:scale-120">
-            <Icon icon={ICONS.circle_xmark} size="sm" />
-            {t.contact.alerts.failure}
-        </div>
-    </div>
-    <div id="success_screen" class="hidden flex flex-col text-center place-items-center gap-4 pt-6 pb-16 px-2">
-        <Icon icon={ICONS.envelope_check} size="ixl" classname="text-emerald-700" />
-        <p class="text-3xl font-bold">{t.contact.alerts.success.p1}</p>
-        <p class="text-xl">{t.contact.alerts.success.p2}</p>
-    </div>
+    <ContactStatus />
     <div id="contact_form" class="group">
-        <h1 class="text-5xl text-center font-bold">{t.contact.CTA}</h1>
+        <Title title={t.contact.CTA} />
         <div class="justify-items-center">
             <p class="my-2">{t.contact.form_invite}</p>
             <form enctype="application/x-www-form-urlencoded" data-endpoint={PERSONAL.resend_endpoint}>

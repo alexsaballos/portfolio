@@ -19,6 +19,7 @@
         "introduction": "This space showcases systems and projects I've built at the intersection of hardware, software, and infrastructure. I graduated Cum Laude as a Walton Scholar from Harding University (AR, US) with an ABET-accredited B.S. in Electrical Engineering, a minor in Mathematics, and passed the NCEES FE Exam prior to graduation, which enabled me to receive a US EI/EiT license. My work spans embedded systems, power and PCB design, automation, and software development, with a strong emphasis on documentation, long-term maintainability, and practical solutions designed to perform reliably beyond the lab environment."
     },
     "stack": {
+        "title": "Technology Stack",
         "core": {
             "header": "Core Engineering",
             "subheaders": {
@@ -35,14 +36,53 @@
                 "databases": "Databases",
                 "operations": "Operations"
             }
+        },
+        "technologies": {
+            "antdesign": "UI Library used in Web Development",
+            "arduino": "Hardware Platform used in Robotics",
+            "astro": "Framework used in Web Development",
+            "autocad": "Engineering CAD Tool used in Diagram Creation",
+            "axios": "API Library used in Web Development",
+            "baremetal": "Low-Level Programming used in Embedded Systems",
+            "bootstrap": "UI Library used in Web Development",
+            "c": "Programming Language used in Embedded Systems",
+            "cpanel": "Administration Panel used in Backend Management",
+            "cpp": "Programming Language used in Desktop Apps",
+            "csharp": "Programming Language used in Desktop Apps",
+            "css": "Style Sheets used in Web Development",
+            "daisyui": "UI Library used in Web Development",
+            "directus": "Administration Panel used in Content Management",
+            "flask": "Framework used in Backend",
+            "html": "Markup Language used in Web Development",
+            "java": "Programming Language used in Desktop Apps",
+            "javascript": "Programming Language used in Web Development",
+            "jinja": "Templating Engine used in Web Development",
+            "kicad": "Engineering CAD Tool used in PCB Creation",
+            "multisim": "Simulation Tool used in Electronics & Schematics",
+            "mysql": "Relational Database used in Backend",
+            "opencv": "Optics Library used in Robotics",
+            "php": "Programming Language used in Web Development",
+            "phpmyadmin": "Administration Panel used in Backend Management",
+            "python": "Programming Language used in Backend & Robotics",
+            "raspberrypi": "Hardware Platform used in Robotics",
+            "react": "UI Library used in Web Development",
+            "sketchup": "Engineering CAD Tool used in 3D Modeling",
+            "sqlite": "Relational Database used in Backend",
+            "tailwindcss": "CSS Library used in Web Development",
+            "typescript": "Programming Language used in Web Development",
+            "ultiboard": "Engineering CAD Tool used in PCB Creation",
+            "winui": "Framework used in Desktop Apps"
         }
     },
     "categories": {
-        "projects": "Projects",
-        "experience": "Experience",
-        "leadership": "Leadership",
-        "certifications": "Licenses & Certifications",
-        "honors": "Honors"
+        "title": "Portfolio Sections",
+        "categories": {
+            "projects": "Projects",
+            "experience": "Experience",
+            "leadership": "Leadership",
+            "certifications": "Licenses & Certifications",
+            "honors": "Honors"
+        }
     },
     "navbar": {
         "projects": "Projects",

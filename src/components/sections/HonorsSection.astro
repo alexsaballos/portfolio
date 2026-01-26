@@ -1,0 +1,94 @@
+---
+import Title from "../ui/text/Title.astro";
+
+export interface HonorItemEntry {
+  title: string;
+  descriptor?: string;
+  impact?: string;
+  link?: string;
+}
+
+export interface HonorItem {
+  tier: string;
+  items: HonorItemEntry[];
+}
+
+const HONORS: HonorItem[] = [
+  {
+    tier: "External & Competitive",
+    items: [
+      {
+        title: "Walton International Scholarship",
+        descriptor: "Highly competitive international merit scholarship",
+        impact: "Full tuition coverage — enabled 100% debt-free graduation",
+        link: "https://www.wispweb.org/"
+      },
+      {
+        title: "NCEES FE Exam — Honor Graduate",
+        descriptor: "National licensure exam | Electrical Engineering",
+        impact: "Recognized with Honors for pre-graduation completion",
+        link: "https://ncees.org/outreach/ncees-graduation-honor-cords/"
+      }
+    ]
+  },
+  {
+    tier: "Selective Academic Distinction",
+    items: [
+      {
+        title: "Distinguished Scholar — HU American Studies Institute",
+        descriptor: "Selected for academic excellence and interdisciplinary performance",
+        link: "https://www.harding.edu/about/offices-departments/american-studies-institute/programs-training/"
+      },
+      {
+        title: "HU Honors Scholar / Honors Student",
+        descriptor: "Recognized for consistent academic excellence",
+        link: "https://www.harding.edu/honors/"
+      }
+    ]
+  },
+  {
+    tier: "Academic Performance",
+    items: [
+      {
+        title: "B.S. Electrical Engineering",
+        descriptor: "Graduated Cum Laude",
+        link: "https://www.harding.edu/arts-sciences/engineering-physics/academic-programs/"
+      },
+      {
+        title: "Dean's List",
+        descriptor: "All semesters"
+      }
+    ]
+  }
+];
+---
+
+<section class="bg-base-300 py-10 px-5 lg:px-20">
+  <Title title="Honors & Distinctions" />
+
+  <div class="grid gap-6 lg:grid-cols-3">
+    {HONORS.map((tier, i) => (
+      <div class={`bg-base-200 rounded-3xl p-6 shadow-md hover:shadow-lg transition`}>
+        <!-- Tier Header -->
+        <h3 class={`text-lg font-semibold mb-4 ${i === 0 ? "text-primary" : i === 1 ? "text-secondary" : "text-base-content/80"}`}>
+          {tier.tier}
+        </h3>
+
+        <!-- Tier Entries -->
+        <ul class="space-y-2">
+          {tier.items.map(item => (
+            <li>
+              <p class="font-medium">
+                {item.link
+                  ? <a href={item.link} target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">{item.title}</a>
+                  : item.title
+                }
+              </p>
+              {item.descriptor && <p class="text-sm text-base-content/70">{item.descriptor}</p>}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</section>
