@@ -12,7 +12,7 @@ export type IconsType = {
 export type IconsNamesType =
     | "hourglass" | "linkedin" | "github" | "handshake" | "merit" | "wisp" | "hu"
     | "projects" | "experience" | "leadership" | "certifications" | "honors"
-    | "contact" | "home" | "hamburger_open" | "hamburger_close" | "id_card"
+    | "contact" | "home" | "hamburger_open" | "hamburger_close" | "link" | "id_card"
     | "at_sign" | "rectangle_list" | "message" | "paper_plane" | "spinner"
     | "envelope_check" | "circle_check" | "circle_xmark" | "sun" | "moon"
     | "translate" | "chevron_up" | "chevron_down" | "angles_down" | "devices"
@@ -36,6 +36,7 @@ export type PicturesListType = {
     ogImage: string;
     PFP: ImageMetadata;
     categories: Record<CategoryPageNamesType, ImageMetadata>;
+    honors: Record<("ncees" | "hu" | "wisp"), ImageMetadata>;
 }
 
 // Technologies Typing

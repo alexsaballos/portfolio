@@ -20,6 +20,10 @@ import honorsPicture from "../images/categories/honors.jpg"
 // Pictures used on Experience.astro
 // Pictures used on Certifications.astro
 // Pictures used on Honors.astro
+import nceesPicture from "../images/logos/ncees.png"
+import huPicture from "../images/logos/hu.png"
+import wispPicture from "../images/logos/wisp.png"
+
 // Pictures used on Contact.astro
 
 const TECHNOLOGIES_COLORS = {
@@ -56,6 +60,11 @@ export const PICTURES: PicturesListType = {
         leadership: leadershipPicture,
         certifications: certificationsPicture,
         honors: honorsPicture
+    },
+    honors: {
+        ncees: nceesPicture,
+        hu: huPicture,
+        wisp: wispPicture
     }
 } as const;
 
@@ -164,6 +173,14 @@ export const ICONS: IconsListType = {
         href: "#hamburger_close",
         title: "Hamburger Close Icon",
         desc: "Hamburger Menu Closing on Mobile Devices.",
+        size: "md"
+    },
+
+    // Link icon
+    link: {
+        href: "#link",
+        title: "Link Icon",
+        desc: "Link Icon used to represent an external website.",
         size: "md"
     },
 
