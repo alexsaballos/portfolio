@@ -1,161 +1,86 @@
 ---
-import { HONORS } from "../../config/honors";
-import { ICONS, PICTURES } from "../../config/assets";
+import { HONOR_LINKS } from "../../config/honors";
+import { ICONS } from "../../config/assets";
+import type { HonorsOrgListType, HonorsListType, HonorsLinkType, FlatHonorLinks, NestedHonorLinks } from "../../types/HonorsType";
+import type { LocalesType } from "../../types/LocalesType";
 
 import Icon from "../ui/libraries/Icon.astro";
 import Title from "../ui/text/Title.astro";
 import Image from "astro/components/Image.astro";
 
-export interface HonorItemEntry {
-    title: string;
-    summary: string;
-    details: string;
-    link?: {
-		url: string;
-		name: string;
-	};
-	verification?: {
-		url: string;
-		name: string;
-	};
+const { t } = Astro.locals as { t: LocalesType; }
+const HONORS_KEYS: HonorsOrgListType[] = ["ncees", "wisp", "hu"];
+
+// Type-aware award discriminator
+function isFlatOrg(org: FlatHonorLinks | NestedHonorLinks): org is FlatHonorLinks {
+  	return ("link" in org) || ("verification" in org);
 }
 
-export interface HonorItem {
-    issuer: string;
-	logo: ImageMetadata;
-    items: HonorItemEntry[];
+// Type-aware URL getter through discriminator
+function resolveHonorResource(
+	organization: HonorsOrgListType,
+	awardKey: HonorsListType,
+	type: HonorsLinkType
+): string | undefined {
+	const org = HONOR_LINKS[organization];
+	return (isFlatOrg(org)) ? org[type] : org[awardKey]?.[type];
 }
-
-const HonorsEntries: HonorItem[] = [
-  {
-	issuer: "National Council of Examiners for Engineering and Surveying (NCEES)",
-	logo: PICTURES.honors.ncees,
-	items: [
-		{
-			title: "Honor Graduate - NCEES FE Exam (Electrical & Computer) [2025]",
-			summary: "Passed the NCEES Fundamentals of Engineering Exam while still an undergraduate, qualifying for official NCEES Honor Graduate recognition — an early milestone toward professional engineering licensure.",
-			details: "Current engineering and surveying students who pass the FE or FS exam prior to graduating from a participating program are eligible to receive a free NCEES honor cord to wear at their graduation ceremony. To receive a cord, students must select the appropriate option during the exam registration process and receive notification of passing results on the exam at least 21 days before their graduation date.",
-			link: {
-				url: HONORS.ncees.link,
-				name: "NCEES Website"
-			},
-			verification: {
-				url: HONORS.ncees.verification,
-				name: "Pearson Credly"
-			}
-		}
-	]
-  },
-  {
-    issuer: "Walton International Scholarship Program (WISP)",
-	logo: PICTURES.honors.wisp,
-    items: [
-		{
-			title: "Walton Scholar - Harding University [2021-2025]",
-			summary: "Awarded the Walton International Scholarship, a highly competitive, full-tuition merit scholarship for top international students, enabling a debt-free undergraduate education.",
-			details: "Founded in 1985 by Sam and Helen Walton, the Walton International Scholarship Program (WISP) provides free college education for the brightest and most capable students from Central America, Belize, and Mexico.",
-			link: {
-				url: HONORS.wisp,
-				name: "WISP Website"
-			}
-		}
-    ]
-  },
-  {
-    issuer: "Harding University (HU)",
-	logo: PICTURES.honors.hu,
-    items: [
-		{
-			title: "Cum Laude Graduate - BSc. Electrical Engineering [2025]",
-			summary: "Graduated with Cum Laude honors in Electrical Engineering, recognizing sustained academic excellence across a rigorous ABET-accredited curriculum.",
-			details: "Graduated with Cum Laude honors in the Bachelor of Science in Electrical Engineering program, awarded to students who demonstrate consistent high academic performance across their undergraduate coursework. This distinction reflects a cumulative GPA of 3.7 on a 4.0 scale, achieved while completing an ABET-accredited engineering curriculum emphasizing advanced mathematics, circuit analysis, power systems, electronics, control systems, and embedded computing.",
-			link: {
-				url: HONORS.hu_engineering.link,
-				name: "HU Engineering Dept"
-			},
-			verification: {
-				url: HONORS.hu_engineering.verification,
-				name: "Instructure Parchment"
-			}
-      },
-      {
-			title: "Distinguished Scholar - HU American Studies Institute (HU ASI) [2024]",
-			summary: "Selected as a Distinguished Scholar for exceptional academic performance and interdisciplinary excellence within Harding University's competitive American Studies Institute program.",
-			details: "Harding University students of all majors are eligible to apply to the American Studies Institute Distinguished Scholars program. The prerequisites for automatic invitation include a 3.8-grade point average or above and standing as a junior, senior, or freshman member of Harding University's Honors Scholar Program. Each fall there is an open application process for those with an automatic invitation and those who have a 3.6-grade point average.",
-			link: {
-				url: HONORS.hu_asi,
-				name: "HU ASI Program"
-			}
-      },
-      {
-        title: "Honor Student - HU Honors College [2021-2025]",
-		summary: "Admitted to and maintained standing in the Honors College, a selective program representing approximately 10% of the undergraduate population and emphasizing academic rigor, leadership, and service.",
-        details: "The Honors College annually admits around 100 students, bringing its total enrollment to approximately 400, representing about 10% of Harding's undergraduate student body, in line with national norms for honors education. Honors students must maintain a 3.25 GPA, are encouraged to pursue Honors College recognition at graduation, and are expected to engage in leadership and service at the University and/or in the community.",
-        link: {
-			url: HONORS.hu_honors,
-			name: "HU Honors College"
-		}
-      },
-      {
-        title: "Dean's List [2021-2025]",
-		summary: "Recognized on the Dean's List on multiple semesters for achieving a semester GPA of 3.65 or higher while carrying a full academic course load.",
-        details: "The dean's list is published each semester by Dr. Marty Spears, University provost, honoring those who have achieved high scholarship. To be eligible, a student must be carrying 12 or more hours with a 3.65 or higher grade-point average and no incompletes.",
-        verification: {
-			url: HONORS.hu_deans_list,
-			name: "HU Merit Pages"
-		}
-      }
-    ]
-  }
-];
 ---
 
 <section class="pb-10 px-5 lg:px-10 xl:px-20">
-	<Title title="Honors & Distinctions" classname="mt-4 mb-8" />
+	<Title title={t.honors.texts.title} classname="mt-4 mb-8" />
 
 	<div class="gap-6 flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-2">
-		{HonorsEntries.map((entry, i) => (
+		{HONORS_KEYS.map((organization, i) => (
 			<div class={`bg-base-200 rounded-4xl p-6 ring-4 ring-gray-500 relative
 				${(i === 0) ? "lg:col-start-1 lg:row-start-1" : ""}
 				${(i === 1) ? "lg:col-start-1 lg:row-start-2" : ""}
 				${(i === 2) ? "lg:col-start-2 lg:row-start-1 lg:row-span-2" : ""}`}>
 
-				<Image src={entry.logo} alt={`${entry.issuer} Logo`} class="w-full rounded-2xl place-self-center max-h-40 max-w-120" />
+				<Image src={HONOR_LINKS[organization].picture} alt={`${t.honors[organization].name} Logo`} class="w-full rounded-2xl place-self-center max-h-40 max-w-120" />
 
-				<h3 class="text-xl text-secondary font-bold my-4">{entry.issuer}</h3>
+				<h3 class="text-xl text-secondary font-bold my-4">{t.honors[organization].name}</h3>
 				<ul class="space-y-4">
-					{entry.items.map(item => (
+					{t.honors[organization].awards.map(award => (
 						<li>
-							<p class="font-medium">{item.title}</p>							
+							<p class="font-medium">{award.title}</p>							
 							<details class="group">
 								<summary class="list-none cursor-pointer">
-									<p class="text-sm text-base-content/70 group-open:hidden">{item.summary}</p>
+									<p class="text-sm text-base-content/70 group-open:hidden">{award.summary}</p>
 									<span class="flex flex-row gap-2 text-sm text-secondary my-1 group-open:hidden hover:underline">
-										Read full description
+										{t.honors.texts.description}
 										<Icon icon={ICONS.angles_down} size="xs" classname="mt-0.5" />
 									</span>
 								</summary>
-								<p class="text-sm text-base-content/70 mt-2">{item.details}</p>
+								<p class="text-sm text-base-content/70 mt-2">{award.details}</p>
 							</details>
 							
-							{(item.link || item.verification) && (
-								<div class="flex flex-row flex-wrap gap-2 my-2">
-									<p class="text-xs tracking-wide align-middle uppercase text-base-content/60">Resources</p>
+							{(award.link || award.verification) && (
+								<div class="flex flex-row flex-wrap items-center gap-2 my-2">
+									<p class="text-xs tracking-wide leading-none uppercase text-base-content/60">
+										{t.honors.texts.resources}
+									</p>
 									<div class="flex flex-wrap gap-2">
-										{item.verification && 
-											<a href={item.verification.url} target="_blank" rel="noopener noreferrer"
-												class="badge badge-accent badge-sm rounded-4xl transition-transform duration-500 ease-out hover:scale-105 hover:opacity-70">
+										{award.verification && (() => {
+											const url = resolveHonorResource(organization, award.key, "verification");
+											return url && (
+												<a href={url} target="_blank" rel="noopener noreferrer"
+													class="badge badge-accent badge-sm rounded-4xl transition-transform duration-500 ease-out hover:scale-105 hover:opacity-70" >
 													<Icon icon={ICONS.certifications} size="xs" />
-													{item.verification.name}
-											</a>
-										}
-										{item.link && 
-											<a href={item.link.url} target="_blank" rel="noopener noreferrer"
-												class="badge badge-primary badge-sm rounded-4xl transition-transform duration-500 ease-out hover:scale-105 hover:opacity-70">
+													{award.verification.name}
+												</a>
+											);
+										})()}
+										{award.link && (() => {
+											const url = resolveHonorResource(organization, award.key, "link");
+											return url && (
+												<a href={url} target="_blank" rel="noopener noreferrer"
+													class="badge badge-primary badge-sm rounded-4xl transition-transform duration-500 ease-out hover:scale-105 hover:opacity-70">
 													<Icon icon={ICONS.link} size="xs" />
-													{item.link.name}
-											</a>
-										}
+													{award.link.name}
+												</a>
+											);
+										})()}
 									</div>
 								</div>
 							)}

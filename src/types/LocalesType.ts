@@ -1,4 +1,5 @@
 import type { IconsType, TechnologiesCoreSubheadersType, TechnologiesNamesType, TechnologiesProductionSubheadersType } from "./AssetsType";
+import type { HonorsType } from "./HonorsType";
 import type { CategoryPageNamesType, DirectoryPageNamesType, NavigationPageNamesType } from "./PagesType";
 
 export type AdmittedLanguagesType = "de" | "en" | "es";
@@ -56,6 +57,13 @@ export type LocalesType = {
         p1: string;
         p2: string;
     },
+    honors: {
+        texts: {
+            title: string;
+            description: string;
+            resources: string;
+        }
+    } & HonorsType;
     contact: {
         CTA: string;
         form_invite: string;

@@ -36,7 +36,7 @@ export type PicturesListType = {
     ogImage: string;
     PFP: ImageMetadata;
     categories: Record<CategoryPageNamesType, ImageMetadata>;
-    honors: Record<("ncees" | "hu" | "wisp"), ImageMetadata>;
+    honors: Record<("ncees" | "wisp" | "hu"), ImageMetadata>;
 }
 
 // Technologies Typing

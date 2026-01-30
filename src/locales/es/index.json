@@ -99,6 +99,91 @@
         "p1": "¡Próximamente!",
         "p2": "Visite luego para ver esta página"
     },
+    "honors": {
+        "texts": {
+            "title": "Honores & Distinciones",
+            "description": "Lea la descripción completa",
+            "resources": "Recursos"
+        },
+        "ncees": {
+            "name": "Consejo Nacional de Examinadores de Ingeniería y Topografía (NCEES)",
+            "key": "ncees",
+            "awards": [
+                {
+                    "title": "Graduado con honores - Examen NCEES FE (eléctrico y computación) [2025]",
+                    "key": "ncees_award",
+                    "summary": "Aprobé el examen de FE NCEES mientras aún era estudiante universitario, lo que me permitió obtener el reconocimiento oficial de graduado con honores de NCEES, un hito temprano hacia la obtención de la licencia US PE.",
+                    "details": "Los estudiantes de ingeniería y topografía que aprueben el examen FE o FS antes de graduarse de un programa participante pueden recibir un cordón de honor gratuito de NCEES para usar en su ceremonia de graduación. Para recibirlo, deben seleccionar la opción correspondiente durante el proceso de inscripción al examen y recibir la notificación de aprobación al menos 21 días antes de su fecha de graduación.",
+                    "link": {
+                        "name": "Página de NCEES"
+                    },
+                    "verification": {
+                        "name": "Pearson Credly"
+                    }
+                }
+            ]
+        },
+        "wisp": {
+            "name": "Programa de Becas Internacionales Walton (WISP)",
+            "key": "wisp",
+            "awards": [
+                {
+                    "title": "Académico Walton - Harding University [2021-2025]",
+                    "key": "wisp_award",
+                    "summary": "Recibí la Beca Internacional Walton, una beca de mérito altamente competitiva que cubre todos los gastos para los mejores estudiantes internacionales, y que permite una educación universitaria sin deudas.",
+                    "details": "Fundado en 1985 por Sam y Helen Walton, el Programa de Becas Internacionales Walton (WISP) ofrece educación universitaria gratuita a los estudiantes más brillantes y capaces de Centroamérica, Belice y México.",
+                    "link": {
+                        "name": "Página de WISP"
+                    }
+                }
+            ]
+        },
+        "hu": {
+            "name": "Harding University (HU)",
+            "key": "hu",
+            "awards": [
+                {
+                    "title": "Graduado con honores Cum Laude - BSc. Ingeniería Eléctrica/Electrónica [2025]",
+                    "key": "engineering",
+                    "summary": "Graduado con honores Cum Laude en Ingeniería Eléctrica/Electrónica, en reconocimiento a la excelencia académica sostenida a través de un riguroso plan de estudios acreditado por ABET.",
+                    "details": "Graduado con honores Cum Laude en Ingeniería Eléctrica/Electrónica, otorgada a estudiantes que demuestran un alto rendimiento académico constante durante sus estudios de pregrado. Esta distinción refleja un promedio general (GPA) de 3.7 en una escala de 4.0, obtenido al completar un programa de ingeniería acreditado por ABET, con énfasis en matemáticas avanzadas, análisis de circuitos, sistemas de potencia, electrónica, sistemas de control y computación integrada.",
+                    "link": {
+                        "name": "Departamento de Ingeniería HU"
+                    },
+                    "verification": {
+                        "name": "Instructure Parchment"
+                    }
+                },
+                {
+                    "title": "Académico distinguido - Instituto de Estudios Americanos de HU (HU ASI) [2024]",
+                    "key": "asi",
+                    "summary": "Seleccionado como académico distinguido por desempeño académico excepcional y excelencia interdisciplinaria dentro del programa del Instituto de Estudios Americanos de la Universidad Harding.",
+                    "details": "Los estudiantes de la Universidad Harding, de todas las carreras, pueden aplicar al programa de Académicos Distinguidos del Instituto de Estudios Americanos. Los requisitos para una invitación automática incluyen un promedio de calificaciones de 3.8 o superior y ser miembro del Programa de Académicos con Honores de la Universidad Harding, ya sea de penúltimo, último o primer año. Cada otoño, se abre un proceso de solicitud para quienes reciben una invitación automática y quienes tienen un promedio de calificaciones de 3.6.",
+                    "link": {
+                        "name": "Programa HU ASI"
+                    }
+                },
+                {
+                    "title": "Estudiante de Honor - Facultad de Honores de HU [2021-2025]",
+                    "key": "honors",
+                    "summary": "Admitido y en buen estatus en la Facultad de Honores (HU Honors College), un programa selectivo que representa aproximadamente el 10% de la población de estudiantes de pregrado y enfatiza el rigor académico, el liderazgo y el servicio.",
+                    "details": "El Colegio de Honores admite anualmente a unos 100 estudiantes, lo que eleva su matrícula total a aproximadamente 400, representando el 10% del alumnado de pregrado de Harding de acuerdo con las normas nacionales para la educación con honores. Los estudiantes con honores deben mantener un promedio general (GPA) de 3.25 y se espera que participen en actividades de liderazgo y servicio en la Universidad y/o en la comunidad.",
+                    "link": {
+                        "name": "Facultad de Honores HU"
+                    }
+                },
+                {
+                    "title": "Cuadro de Honor del Decano [2021-2025]",
+                    "key": "deans_list",
+                    "summary": "Reconocido en la Lista del Decano en múltiples semestres por lograr un GPA semestral de 3.65 o superior mientras cursaba una carga académica completa.",
+                    "details": "El Dr. Marty Spears, rector de la Universidad, publica cada semestre la lista del decano, en la que se reconoce a quienes han alcanzado un alto nivel académico. Para ser elegible, el estudiante debe tener 12 o más horas de estudio (horas crédito), un promedio de calificaciones de 3.65 o superior y no tener asignaturas incompletas.",
+                    "verification": {
+                        "name": "Páginas de Mérito HU"
+                    }
+                }
+            ]
+        }
+    },
     "contact": {
         "CTA": "Contácteme",
         "form_invite": "Para consultas profesionales, por favor complete el siguiente formulario:",

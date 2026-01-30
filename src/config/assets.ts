@@ -63,8 +63,8 @@ export const PICTURES: PicturesListType = {
     },
     honors: {
         ncees: nceesPicture,
-        hu: huPicture,
-        wisp: wispPicture
+        wisp: wispPicture,
+        hu: huPicture
     }
 } as const;
 
