@@ -7,7 +7,7 @@ export const LANGUAGES: LanguagesType = {
         home: ROUTE.home("de"),
         icon: FLAGS.de.icon,
         picture: FLAGS.de.picture,
-        name: "Deutsche",
+        name: "Deutsch",
         code: {
             lang: "de",
             langcountry: "de-de"
@@ -45,4 +45,4 @@ export const LANGUAGES: LanguagesType = {
             select: "Seleccione un idioma"
         }
     }
-}
+} as const;

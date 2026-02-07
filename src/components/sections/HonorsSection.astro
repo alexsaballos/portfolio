@@ -1,29 +1,38 @@
 ---
-import { HONOR_LINKS } from "../../config/honors";
 import { ICONS } from "../../config/assets";
+import { HONOR_LINKS } from "../../config/honors";
+
 import type { HonorsOrgListType, HonorsListType, HonorsLinkType, FlatHonorLinks, NestedHonorLinks } from "../../types/HonorsType";
 import type { LocalesType } from "../../types/LocalesType";
 
-import Icon from "../ui/libraries/Icon.astro";
 import Title from "../ui/text/Title.astro";
+import Icon from "../ui/libraries/Icon.astro";
 import Image from "astro/components/Image.astro";
 
 const { t } = Astro.locals as { t: LocalesType; }
 const HONORS_KEYS: HonorsOrgListType[] = ["ncees", "wisp", "hu"];
 
 // Type-aware award discriminator
-function isFlatOrg(org: FlatHonorLinks | NestedHonorLinks): org is FlatHonorLinks {
-  	return ("link" in org) || ("verification" in org);
-}
+function isFlatOrg(org: FlatHonorLinks | NestedHonorLinks): org is FlatHonorLinks
+	{ return ("link" in org) || ("verification" in org); }
 
 // Type-aware URL getter through discriminator
 function resolveHonorResource(
 	organization: HonorsOrgListType,
 	awardKey: HonorsListType,
 	type: HonorsLinkType
-): string | undefined {
+): (string | undefined) {
 	const org = HONOR_LINKS[organization];
 	return (isFlatOrg(org)) ? org[type] : org[awardKey]?.[type];
+}
+
+// Type-aware Year getter through discriminator
+function resolveHonorYear(
+	organization: HonorsOrgListType,
+	awardKey: HonorsListType
+): (string | undefined) {
+	const org = HONOR_LINKS[organization];
+	return (isFlatOrg(org)) ? org.year : org[awardKey]?.year;
 }
 ---
 
@@ -37,13 +46,15 @@ function resolveHonorResource(
 				${(i === 1) ? "lg:col-start-1 lg:row-start-2" : ""}
 				${(i === 2) ? "lg:col-start-2 lg:row-start-1 lg:row-span-2" : ""}`}>
 
-				<Image src={HONOR_LINKS[organization].picture} alt={`${t.honors[organization].name} Logo`} class="w-full rounded-2xl place-self-center max-h-40 max-w-120" />
+				<Image src={HONOR_LINKS[organization].picture} alt={`${t.honors[organization].name} Logo`}
+					class="w-full rounded-2xl place-self-center max-h-40 max-w-120" />
 
 				<h3 class="text-xl text-secondary font-bold my-4">{t.honors[organization].name}</h3>
 				<ul class="space-y-4">
 					{t.honors[organization].awards.map(award => (
-						<li>
-							<p class="font-medium">{award.title}</p>							
+						<li>							
+							<p class="font-medium">{`${award.title} [${resolveHonorYear(organization, award.key)}]`}</p>
+
 							<details class="group">
 								<summary class="list-none cursor-pointer">
 									<p class="text-sm text-base-content/70 group-open:hidden">{award.summary}</p>

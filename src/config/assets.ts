@@ -19,12 +19,15 @@ import honorsPicture from "../images/categories/honors.jpg"
 // Pictures used on Projects.astro
 // Pictures used on Experience.astro
 // Pictures used on Certifications.astro
+import iasscPicture from "../images/logos/iassc.png"
+import arpelsPicture from "../images/logos/arpels.png"
+import cs50Picture from "../images/logos/cs50.png"
+import courseraPicture from "../images/logos/coursera.png"
+
 // Pictures used on Honors.astro
 import nceesPicture from "../images/logos/ncees.png"
 import huPicture from "../images/logos/hu.png"
 import wispPicture from "../images/logos/wisp.png"
-
-// Pictures used on Contact.astro
 
 const TECHNOLOGIES_COLORS = {
     embedded: "#D48D17",
@@ -60,6 +63,12 @@ export const PICTURES: PicturesListType = {
         leadership: leadershipPicture,
         certifications: certificationsPicture,
         honors: honorsPicture
+    },
+    certifications: {
+        iassc: iasscPicture,
+        arpels: arpelsPicture,
+        cs50: cs50Picture,
+        coursera: courseraPicture
     },
     honors: {
         ncees: nceesPicture,

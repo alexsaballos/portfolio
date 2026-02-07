@@ -1,31 +1,38 @@
+import { LINKS } from "./links";
 import { PICTURES } from "./assets";
 import { SOCIAL_BUTTONS } from "./social";
 import type { HonorsSSOT } from "../types/HonorsType";
 
 export const HONOR_LINKS: HonorsSSOT = {
+    ncees: {
+        year: "2025",
+        picture: PICTURES.honors.ncees,
+        link: LINKS.ncees,
+        verification: LINKS.credly.award
+    },
     wisp: {
+        year: "2021-2025",
         picture: PICTURES.honors.wisp,
         link: SOCIAL_BUTTONS.wisp.link
     },
-    ncees: {
-        picture: PICTURES.honors.ncees,
-        link: "https://ncees.org/outreach/ncees-graduation-honor-cords/",
-        verification: "https://www.credly.com/badges/b45ec691-e8b4-438d-8f49-df1e603622a5/public_url"
-    },
     hu: {
         picture: PICTURES.honors.hu,
+        engineering: {
+            year: "2025",
+            link: LINKS.hu.engineering_dept,
+            verification: LINKS.parchment
+        },
         asi: {
-            link: "https://www.harding.edu/about/offices-departments/american-studies-institute/programs-training/"
+            year: "2024",
+            link: LINKS.hu.asi
         },
         honors: {
-            link: "https://www.harding.edu/honors/"
-        },
-        engineering: {
-            link: "https://www.harding.edu/arts-sciences/engineering-physics/academic-programs/",
-            verification: "https://www.parchment.com/u/award/e6ff0291d43e184f3aa6a25b1191a13b"
+            year: "2021-2025",
+            link: LINKS.hu.honors
         },
         deans_list: {
+            year: "2021-2025",
             verification: SOCIAL_BUTTONS.merit.link
         }
     }
-}
+} as const;

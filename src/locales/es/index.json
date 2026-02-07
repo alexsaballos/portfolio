@@ -99,6 +99,48 @@
         "p1": "¡Próximamente!",
         "p2": "Visite luego para ver esta página"
     },
+    "certifications": {
+        "texts": {
+            "title": "Licencias & Certificaciones",
+            "description": "Lea la descripción completa",
+            "resources": "Recursos",
+            "planned": "Planificado"
+        },
+        "iassc": {
+            "name": "Lean Six Sigma Green Belt (alineado a IASSC)",
+            "summary": "Curso universitario de nivel avanzado alineado a Lean Six Sigma Green Belt, cursado en Harding University, con énfasis en mejora de procesos, análisis estadístico y toma de decisiones basada en datos.",
+            "details": "Cursé y aprobé con A la asignatura ENGR-4550 (Lean Six Sigma) durante la primavera de 2025 como materia electiva de último año en ingeniería en Harding University. El curso fue impartido siguiendo los estándares de Lean Six Sigma Green Belt de la American Society for Quality (ASQ) e incluyó DMAIC, control estadístico de procesos, análisis de causa raíz, optimización de procesos y reducción de desperdicios en contextos de ingeniería y operaciones. La certificación Lean Six Sigma Green Belt de IASSC está planificada para 2026.",
+            "info": "Sitio web de IASSC"
+        },
+        "arpels": {
+            "name": "Junta Estatal de Licencias para Ingenieros y Agrimensores Profesionales de Arkansas, USA | EI/EiT",
+            "summary": "Estatus de Ingeniero Interno (EI/EIT) obtenido tras aprobar el examen Fundamentals of Engineering (FE) de NCEES y graduarme de un programa de ingeniería acreditado por ABET.",
+            "details": "La credencial de Ingeniero Interno (EI/EIT) certifica la finalización de un programa de ingeniería acreditado por ABET y la aprobación del examen FE del NCEES. Representa el primer paso formal hacia la licencia de Ingeniero Profesional (PE) y demuestra competencia verificada en fundamentos de ingeniería, ética y responsabilidad profesional.",
+            "verification": "Pearson Credly",
+            "info": "Página de AR PEPS (EI/EiT)"
+        },
+        "hu": {
+            "name": "Harding University (HU) | Ingeniería Eléctrica/Electrónica (Cum Laude)",
+            "summary": "Título en Ingeniería Eléctrica/Electrónica (Cum Laude) de un programa acreditado por ABET.",
+            "details": "Título en Ingeniería Eléctrica/Electrónica obtenida en Harding University, una institución acreditada por ABET, graduado con honores (Cum Laude) y un GPA de 3.7/4.0. La formación académica incluyó sistemas de potencia, electrónica, microprocesadores, sistemas de control y matemáticas aplicadas, junto con un enfoque sólido en proyectos de diseño de ingeniería.",
+            "verification": "Instructure Parchment",
+            "info": "Departamento de Ingeniería HU"
+        },
+        "cs50": {
+            "name": "CS50x (Harvard University) — Con Honores",
+            "summary": "Introducción rigurosa a la informática y a los fundamentos de ingeniería de software de Harvard University, aprobada con honores.",
+            "details": "CS50 es el curso insignia de introducción a la informática de Harvard University, completado con honores. El curso cubre algoritmos, estructuras de datos, gestión de memoria, abstracción y principios fundamentales de ingeniería de software, con énfasis en la resolución de problemas y la comprensión de bajo nivel de la computación. El contenido incluye C, Python, SQL, JavaScript, HTML y CSS.",
+            "verification": "Certificado CS50",
+            "info": "Sitio web de CS50x.ni"
+        },
+        "coursera": {
+            "name": "Duke University | Resolución de Problemas con Software (Java) — Con Honores",
+            "summary": "Programación aplicada en Java y resolución algorítmica de problemas a través del currículo de ciencias de la computación de Duke University, aprobado con honores.",
+            "details": "Curso de Duke University completado con honores, enfocado en la resolución de problemas del mundo real utilizando Java, con énfasis en pensamiento algorítmico, procesamiento de datos, depuración y diseño de programas. El curso se centra en traducir problemas en soluciones de software correctas, eficientes y mantenibles.",
+            "verification": "Certificado de Coursera",
+            "info": "Descripción del curso"
+        }
+    },
     "honors": {
         "texts": {
             "title": "Honores & Distinciones",
@@ -110,7 +152,7 @@
             "key": "ncees",
             "awards": [
                 {
-                    "title": "Graduado con honores - Examen NCEES FE (eléctrico y computación) [2025]",
+                    "title": "Graduado con honores - Examen NCEES FE (eléctrico y computación)",
                     "key": "ncees_award",
                     "summary": "Aprobé el examen de FE NCEES mientras aún era estudiante universitario, lo que me permitió obtener el reconocimiento oficial de graduado con honores de NCEES, un hito temprano hacia la obtención de la licencia US PE.",
                     "details": "Los estudiantes de ingeniería y topografía que aprueben el examen FE o FS antes de graduarse de un programa participante pueden recibir un cordón de honor gratuito de NCEES para usar en su ceremonia de graduación. Para recibirlo, deben seleccionar la opción correspondiente durante el proceso de inscripción al examen y recibir la notificación de aprobación al menos 21 días antes de su fecha de graduación.",
@@ -128,7 +170,7 @@
             "key": "wisp",
             "awards": [
                 {
-                    "title": "Académico Walton - Harding University [2021-2025]",
+                    "title": "Académico Walton - Harding University",
                     "key": "wisp_award",
                     "summary": "Recibí la Beca Internacional Walton, una beca de mérito altamente competitiva que cubre todos los gastos para los mejores estudiantes internacionales, y que permite una educación universitaria sin deudas.",
                     "details": "Fundado en 1985 por Sam y Helen Walton, el Programa de Becas Internacionales Walton (WISP) ofrece educación universitaria gratuita a los estudiantes más brillantes y capaces de Centroamérica, Belice y México.",
@@ -143,7 +185,7 @@
             "key": "hu",
             "awards": [
                 {
-                    "title": "Graduado con honores Cum Laude - BSc. Ingeniería Eléctrica/Electrónica [2025]",
+                    "title": "Graduado con honores Cum Laude - BSc. Ingeniería Eléctrica/Electrónica",
                     "key": "engineering",
                     "summary": "Graduado con honores Cum Laude en Ingeniería Eléctrica/Electrónica, en reconocimiento a la excelencia académica sostenida a través de un riguroso plan de estudios acreditado por ABET.",
                     "details": "Graduado con honores Cum Laude en Ingeniería Eléctrica/Electrónica, otorgada a estudiantes que demuestran un alto rendimiento académico constante durante sus estudios de pregrado. Esta distinción refleja un promedio general (GPA) de 3.7 en una escala de 4.0, obtenido al completar un programa de ingeniería acreditado por ABET, con énfasis en matemáticas avanzadas, análisis de circuitos, sistemas de potencia, electrónica, sistemas de control y computación integrada.",
@@ -155,7 +197,7 @@
                     }
                 },
                 {
-                    "title": "Académico distinguido - Instituto de Estudios Americanos de HU (HU ASI) [2024]",
+                    "title": "Académico distinguido - Instituto de Estudios Americanos de HU (HU ASI)",
                     "key": "asi",
                     "summary": "Seleccionado como académico distinguido por desempeño académico excepcional y excelencia interdisciplinaria dentro del programa del Instituto de Estudios Americanos de la Universidad Harding.",
                     "details": "Los estudiantes de la Universidad Harding, de todas las carreras, pueden aplicar al programa de Académicos Distinguidos del Instituto de Estudios Americanos. Los requisitos para una invitación automática incluyen un promedio de calificaciones de 3.8 o superior y ser miembro del Programa de Académicos con Honores de la Universidad Harding, ya sea de penúltimo, último o primer año. Cada otoño, se abre un proceso de solicitud para quienes reciben una invitación automática y quienes tienen un promedio de calificaciones de 3.6.",
@@ -164,7 +206,7 @@
                     }
                 },
                 {
-                    "title": "Estudiante de Honor - Facultad de Honores de HU [2021-2025]",
+                    "title": "Estudiante de Honor - Facultad de Honores de HU",
                     "key": "honors",
                     "summary": "Admitido y en buen estatus en la Facultad de Honores (HU Honors College), un programa selectivo que representa aproximadamente el 10% de la población de estudiantes de pregrado y enfatiza el rigor académico, el liderazgo y el servicio.",
                     "details": "El Colegio de Honores admite anualmente a unos 100 estudiantes, lo que eleva su matrícula total a aproximadamente 400, representando el 10% del alumnado de pregrado de Harding de acuerdo con las normas nacionales para la educación con honores. Los estudiantes con honores deben mantener un promedio general (GPA) de 3.25 y se espera que participen en actividades de liderazgo y servicio en la Universidad y/o en la comunidad.",
@@ -173,7 +215,7 @@
                     }
                 },
                 {
-                    "title": "Cuadro de Honor del Decano [2021-2025]",
+                    "title": "Cuadro de Honor del Decano",
                     "key": "deans_list",
                     "summary": "Reconocido en la Lista del Decano en múltiples semestres por lograr un GPA semestral de 3.65 o superior mientras cursaba una carga académica completa.",
                     "details": "El Dr. Marty Spears, rector de la Universidad, publica cada semestre la lista del decano, en la que se reconoce a quienes han alcanzado un alto nivel académico. Para ser elegible, el estudiante debe tener 12 o más horas de estudio (horas crédito), un promedio de calificaciones de 3.65 o superior y no tener asignaturas incompletas.",

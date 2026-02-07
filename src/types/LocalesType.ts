@@ -1,4 +1,5 @@
 import type { IconsType, TechnologiesCoreSubheadersType, TechnologiesNamesType, TechnologiesProductionSubheadersType } from "./AssetsType";
+import type { CertLocaleType } from "./CertificationsType";
 import type { HonorsType } from "./HonorsType";
 import type { CategoryPageNamesType, DirectoryPageNamesType, NavigationPageNamesType } from "./PagesType";
 
@@ -57,6 +58,14 @@ export type LocalesType = {
         p1: string;
         p2: string;
     },
+    certifications: {
+        texts: {
+            title: string;
+            description: string;
+            resources: string;
+            planned: string;
+        }
+    } & CertLocaleType;
     honors: {
         texts: {
             title: string;

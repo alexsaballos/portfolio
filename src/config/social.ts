@@ -1,41 +1,36 @@
 import { ICONS } from "./assets";
+import { LINKS } from "./links";
 import type { ButtonsListType } from "../types/SocialType";
 
 export const SOCIAL_BUTTONS: ButtonsListType["social"] = {
     linkedin: {
         icon: ICONS.linkedin,
-        color: "#3A66B0",
-        link: "https://www.linkedin.com/in/alex-saballos/",
+        link: LINKS.linkedin,
         label: "My LinkedIn Profile"
     },
     github: {
         icon: ICONS.github,
-        color: "#516870",
-        link: "https://github.com/alexsaballos",
+        link: LINKS.github,
         label: "My GitHub Profile"
     },
     handshake: {
         icon: ICONS.handshake,
-        color: "#D3FB52",
-        link: "https://app.joinhandshake.com/profiles/alexsaballos",
+        link: LINKS.handshake,
         label: "My Handshake Profile"
     },
     merit: {
         icon: ICONS.merit,
-        color: "#126579",
-        link: "https://meritpages.com/alexsaballos",
+        link: LINKS.merit_pages,
         label: "My Merit Page"
     },
     wisp: {
         icon: ICONS.wisp,
-        color: "#F2B100",
-        link: "https://www.wispweb.org/",
+        link: LINKS.wisp,
         label: "WISP Official Website"
     },
     hu: {
         icon: ICONS.hu,
-        color: "#F2B100",
-        link: "https://harding.edu",
+        link: LINKS.hu.main,
         label: "Harding University Official Website"
     }
 } as const;

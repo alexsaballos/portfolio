@@ -4,7 +4,7 @@ import { SEO } from "../../config/routing";
 
 import Layout from "../../layouts/Layout.astro";
 import Breadcrumbs from "../../components/ui/Breadcrumbs.astro";
-import ComingSoon from "../../components/sections/ComingSoon.astro";
+import CertificationsSection from "../../components/sections/CertificationsSection.astro";
 
 const canonical: string = SEO.canonical("de");
 ---
@@ -17,6 +17,6 @@ const canonical: string = SEO.canonical("de");
     <!-- mt-26 cancels out -mt-26 on Layout.astro for the fixed Navbar -->
     <div class="mt-26">
         <Breadcrumbs page={PAGES.certifications} />
-        <ComingSoon />
+        <CertificationsSection />
     </div>
 </Layout>

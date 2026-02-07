@@ -10,16 +10,17 @@ export type AwardType = {
     details: string;
     link?: { name: string; };
 	verification?: { name: string; };
-}
+};
 
 export type HonorsType = Record<HonorsOrgListType, {
     name: string;
     key: HonorsOrgListType;
     awards: AwardType[];
-}>
+}>;
 
 // SSOT (picture & links) structure
 export type HonorLinkResource = {
+    year: string;
     link?: string;
     verification?: string;
 };
@@ -30,6 +31,6 @@ export type FlatHonorLinks = {
 
 export type NestedHonorLinks = {
     picture: ImageMetadata;
-} & Record<HonorsListType, (HonorLinkResource | undefined)>;
+} & Partial<Record<HonorsListType, (HonorLinkResource | undefined)>>;
 
-export type HonorsSSOT = Record<HonorsOrgListType, (FlatHonorLinks | NestedHonorLinks)>
+export type HonorsSSOT = Record<HonorsOrgListType, (FlatHonorLinks | NestedHonorLinks)>;

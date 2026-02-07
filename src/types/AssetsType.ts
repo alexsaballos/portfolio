@@ -36,6 +36,7 @@ export type PicturesListType = {
     ogImage: string;
     PFP: ImageMetadata;
     categories: Record<CategoryPageNamesType, ImageMetadata>;
+    certifications: Record<("iassc" | "arpels" | "cs50" | "coursera"), ImageMetadata>;
     honors: Record<("ncees" | "wisp" | "hu"), ImageMetadata>;
 }
 

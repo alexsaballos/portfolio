@@ -99,6 +99,48 @@
         "p1": "Demnächst verfügbar!",
         "p2": "Schauen Sie später noch einmal vorbei, um diese Seite anzusehen"
     },
+    "certifications": {
+        "texts": {
+            "title": "Lizenzen & Zertifizierungen",
+            "description": "Lesen Sie die vollständige Beschreibung",
+            "resources": "Ressourcen",
+            "planned": "Geplant"
+        },
+        "iassc": {
+            "name": "Lean Six Sigma Green Belt (IASSC-orientiert)",
+            "summary": "Hochschulkurs auf fortgeschrittenem Niveau mit Ausrichtung auf Lean Six Sigma Green Belt, absolviert an der Harding University, mit Schwerpunkt auf Prozessverbesserung, statistischer Analyse und datenbasierter Entscheidungsfindung.",
+            "details": "Abschluss des Kurses ENGR-4550 (Lean Six Sigma) im Frühjahr 2025 als ingenieurwissenschaftliches Wahlfach im letzten Studienjahr an der Harding University, bestanden mit der Note A. Der Kurs wurde gemäß den Lean Six Sigma Green Belt Standards der American Society for Quality (ASQ) unterrichtet und umfasste DMAIC, statistische Prozesskontrolle, Ursachenanalyse, Prozessoptimierung sowie die Reduktion von Verschwendung in ingenieurwissenschaftlichen und operativen Anwendungsbereichen. Die IASSC Lean Six Sigma Green Belt Zertifizierung ist für 2026 geplant.",
+            "info": "IASSC-Website"
+        },
+        "arpels": {
+            "name": "US-amerikanische staatliche Zulassungsbehörde für professionelle Ingenieure und Vermessungsingenieure | EI/EiT",
+            "summary": "Engineer-in-Training-Status (EI/EIT), erworben durch das Bestehen der NCEES Fundamentals of Engineering (FE) Prüfung.",
+            "details": "Die Engineer-in-Training (EI/EIT) Qualifikation bestätigt den Abschluss eines ABET-akkreditierten Ingenieurstudiums sowie das Bestehen der NCEES FE-Prüfung. Sie stellt den ersten formalen Schritt auf dem Weg zur Professional-Engineer-(PE)-Lizenz dar und weist verifizierte Kompetenzen in ingenieurwissenschaftlichen Grundlagen, Ethik und beruflicher Verantwortung nach.",
+            "verification": "Pearson Credly",
+            "info": "AR PEPS (EI/EIT) Website"
+        },
+        "hu": {
+            "name": "Harding University (HU) | Bachelor of Science in Elektrotechnik (mit Auszeichnung)",
+            "summary": "Bachelor of Science in Elektrotechnik (Cum Laude) aus einem ABET-akkreditierten Studiengang.",
+            "details": "Abschluss eines Bachelor of Science in Elektrotechnik an der Harding University, einer ABET-akkreditierten Hochschule, mit Auszeichnung (Cum Laude) und einem GPA von 3,7/4,0. Der akademische Schwerpunkt umfasste Energiesysteme, Elektronik, Mikroprozessoren, Regelungstechnik und angewandte Mathematik sowie umfangreiche projektbasierte Ingenieurarbeit.",
+            "verification": "Instructure Parchment",
+            "info": "Ingenieurabteilung der HU"
+        },
+        "cs50": {
+            "name": "CS50x (Harvard University) — Mit Auszeichnung",
+            "summary": "Anspruchsvolle Einführung in die Informatik und grundlegende Prinzipien der Softwareentwicklung an der Harvard University, abgeschlossen mit Auszeichnung.",
+            "details": "CS50 ist der offizielle Einführungskurs in die Informatik der Harvard University und wurde mit Auszeichnung abgeschlossen. Der Kurs behandelt Algorithmen, Datenstrukturen, Speicherverwaltung, Abstraktion sowie grundlegende Prinzipien der Softwaretechnik, mit Schwerpunkt auf Problemlösung und einem tiefgehenden Verständnis der Rechnerarchitektur. Die Inhalte umfassen C, Python, SQL, JavaScript, HTML und CSS.",
+            "verification": "CS50-Zertifikat",
+            "info": "CS50x-Website"
+        },
+        "coursera": {
+            "name": "Duke University | Problemlösung mit Software (Java) — Mit Auszeichnung",
+            "summary": "Anwendungsorientierte Java-Programmierung und algorithmische Problemlösung im Rahmen des Informatikcurriculums der Duke University, abgeschlossen mit Auszeichnung.",
+            "details": "Mit Auszeichnung abgeschlossener Kurs der Duke University mit Fokus auf die Lösung realer Probleme mittels Java. Behandelt werden algorithmisches Denken, Datenverarbeitung, Fehlersuche sowie Softwareentwurf. Der Kurs legt besonderen Wert auf die Umsetzung von Problemstellungen in korrekte, effiziente und wartbare Softwarelösungen.",
+            "verification": "Coursera-Zertifikat",
+            "info": "Kursübersicht"
+        }
+    },
     "honors": {
         "texts": {
             "title": "Ehrungen und Auszeichnungen",
@@ -110,7 +152,7 @@
             "key": "ncees",
             "awards": [
                 {
-                    "title": "Ehrenabsolvent - NCEES FE-Prüfung (Elektrotechnik und Computer) [2025]",
+                    "title": "Ehrenabsolvent - NCEES FE-Prüfung (Elektrotechnik und Computer)",
                     "key": "ncees_award",
                     "summary": "Bereits als Student bestand er die NCEES-Prüfung „Fundamentals of Engineering“ und qualifizierte sich damit für die offizielle NCEES-Ehrengraduierten-Auszeichnung – ein früher Meilenstein auf dem Weg zur Berufszulassung als Ingenieur.",
                     "details": "Studierende der Ingenieurwissenschaften und des Vermessungswesens, die vor ihrem Abschluss an einem teilnehmenden Studiengang die FE- oder FS-Prüfung bestehen, erhalten eine kostenlose NCEES-Ehrenschnur für ihre Abschlussfeier. Um die Schnur zu erhalten, müssen die Studierenden die entsprechende Option bei der Prüfungsanmeldung auswählen und mindestens 21 Tage vor ihrem Abschlusstermin eine Benachrichtigung über das Bestehen der Prüfung erhalten.",
@@ -128,7 +170,7 @@
             "key": "wisp",
             "awards": [
                 {
-                    "title": "Walton-Stipendiat - Harding University [2021-2025]",
+                    "title": "Walton-Stipendiat - Harding University",
                     "key": "wisp_award",
                     "summary": "Er erhielt das Walton International Scholarship, ein äußerst wettbewerbsorientiertes, die gesamten Studiengebühren abdeckendes Leistungsstipendium für herausragende internationale Studierende, das ein schuldenfreies Bachelorstudium ermöglicht.",
                     "details": "Das Walton International Scholarship Program (WISP) wurde 1985 von Sam und Helen Walton gegründet und bietet den begabtesten und fähigsten Studenten aus Mittelamerika, Belize und Mexiko eine kostenlose Hochschulausbildung.",
@@ -143,7 +185,7 @@
             "key": "hu",
             "awards": [
                 {
-                    "title": "Cum Laude-Absolvent - BSc Elektrotechnik [2025]",
+                    "title": "Cum Laude-Absolvent - BSc Elektrotechnik",
                     "key": "engineering",
                     "summary": "Abschluss mit Auszeichnung (Cum Laude) im Bereich Elektrotechnik, eine Anerkennung für kontinuierliche akademische Exzellenz in einem anspruchsvollen, ABET-akkreditierten Lehrplan.",
                     "details": "Ich habe das Bachelorstudium der Elektrotechnik mit Auszeichnung (Cum Laude) abgeschlossen. Diese Auszeichnung wird Studierenden verliehen, die während ihres gesamten Bachelorstudiums konstant hervorragende Studienleistungen erbracht haben. Sie entspricht einem Notendurchschnitt von 3,7 (von maximal 4,0), der im Rahmen eines ABET-akkreditierten Ingenieurstudiums mit Schwerpunkt auf fortgeschrittener Mathematik, Schaltungsanalyse, Energiesystemen, Elektronik, Steuerungstechnik und eingebetteten Systemen erzielt wurde.",
@@ -155,7 +197,7 @@
                     }
                 },
                 {
-                    "title": "Distinguished Scholar - HU American Studies Institute (HU ASI) [2024]",
+                    "title": "Distinguished Scholar - HU American Studies Institute (HU ASI)",
                     "key": "asi",
                     "summary": "Ausgewählt als Distinguished Scholar für herausragende akademische Leistungen und interdisziplinäre Exzellenz im Rahmen des wettbewerbsorientierten American Studies Institute-Programms der Harding University.",
                     "details": "Studierende aller Fachrichtungen der Harding University können sich für das Distinguished Scholars-Programm des American Studies Institute bewerben. Voraussetzung für die automatische Einladung ist ein Notendurchschnitt von mindestens 3,8 sowie die Mitgliedschaft im Honors Scholar Program der Harding University (im dritten, vierten oder ersten Studienjahr). Jedes Jahr im Herbst findet ein offenes Bewerbungsverfahren für automatisch eingeladene Studierende und Studierende mit einem Notendurchschnitt von mindestens 3,6 statt.",
@@ -164,7 +206,7 @@
                     }
                 },
                 {
-                    "title": "Ehrenstudent - HU Honors College [2021-2025]",
+                    "title": "Ehrenstudent - HU Honors College",
                     "key": "honors",
                     "summary": "Aufnahme in das Honors College und Beibehaltung des Status als Mitglied dieses selektiven Programms, das etwa 10 % der Studentenschaft repräsentiert und akademische Strenge, Führungsqualitäten und soziales Engagement betont.",
                     "details": "Das Honors College nimmt jährlich rund 100 Studierende auf, wodurch sich die Gesamtzahl der Studierenden auf etwa 400 erhöht. Dies entspricht etwa 10 % der gesamten Studierendenschaft der Harding University und liegt damit im nationalen Durchschnitt für Honors-Programme. Honors-Studierende müssen einen Notendurchschnitt von mindestens 3,25 erreichen, werden ermutigt, die Auszeichnung des Honors College bei ihrem Abschluss anzustreben, und sollen sich in der Universität und/oder der Gemeinde in Führungspositionen und im sozialen Bereich engagieren.",
@@ -173,7 +215,7 @@
                     }
                 },
                 {
-                    "title": "Dekansliste [2021-2025]",
+                    "title": "Dekansliste",
                     "key": "deans_list",
                     "summary": "Wurde in mehreren Semestern auf der Dekansliste ausgezeichnet, weil sie trotz eines vollen Studienpensums einen Semester-Notendurchschnitt von 3,65 oder höher erreichte.",
                     "details": "Die Dekansliste wird jedes Semester von Dr. Marty Spears, dem Universitätsrektor, veröffentlicht und würdigt Studierende mit herausragenden Studienleistungen. Um aufgenommen zu werden, müssen Studierende mindestens 12 Semesterwochenstunden mit einem Notendurchschnitt von mindestens 3,65 belegen und dürfen keine unvollständigen Kurse haben.",

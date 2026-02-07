@@ -2,7 +2,6 @@ import type { IconsType } from "./AssetsType";
 
 export type BaseSocialButtonType = {
     icon: IconsType;
-    color: string;
     link: string;
     label: string;
 }
