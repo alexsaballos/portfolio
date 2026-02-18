@@ -7,7 +7,7 @@ export type BaseSocialButtonType = {
 }
 
 export type ButtonsVariantNamesType = "social" | "contact";
-export type SocialButtonsNamesType = "linkedin" | "github" | "handshake" | "merit" | "wisp" | "hu";
+export type SocialButtonsNamesType = "linkedin" | "github" | "handshake" | "merit" | "credly" | "wisp" | "hu";
 export type ContactButtonsNamesType = Exclude<SocialButtonsNamesType, ("merit" | "wisp" | "hu")>;
 export type ButtonsListType = {
     social: Record<SocialButtonsNamesType, BaseSocialButtonType>;

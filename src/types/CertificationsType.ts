@@ -1,4 +1,4 @@
-export type CertsOrgListType = "iassc" | "arpels" | "hu" | "cs50" | "coursera";
+export type CertsOrgListType = "arpels" | "hu" | "iassc" | "cs50" | "coursera";
 export type CertListType = Record<CertsOrgListType, {
     year: string;
     picture: ImageMetadata;

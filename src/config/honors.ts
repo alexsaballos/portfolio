@@ -1,7 +1,7 @@
 import { LINKS } from "./links";
 import { PICTURES } from "./assets";
 import { SOCIAL_BUTTONS } from "./social";
-import type { HonorsSSOT } from "../types/HonorsType";
+import type { HonorsOrgListType, HonorsSSOT } from "../types/HonorsType";
 
 export const HONOR_LINKS: HonorsSSOT = {
     ncees: {
@@ -35,4 +35,6 @@ export const HONOR_LINKS: HonorsSSOT = {
             verification: SOCIAL_BUTTONS.merit.link
         }
     }
-} as const;
+} as const satisfies HonorsSSOT;
+
+export const HONORS_KEYS = Object.keys(HONOR_LINKS) as HonorsOrgListType[];

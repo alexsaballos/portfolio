@@ -1,6 +1,6 @@
 ---
 import { ICONS } from "../../config/assets";
-import { HONOR_LINKS } from "../../config/honors";
+import { HONOR_LINKS, HONORS_KEYS } from "../../config/honors";
 
 import type { HonorsOrgListType, HonorsListType, HonorsLinkType, FlatHonorLinks, NestedHonorLinks } from "../../types/HonorsType";
 import type { LocalesType } from "../../types/LocalesType";
@@ -10,7 +10,6 @@ import Icon from "../ui/libraries/Icon.astro";
 import Image from "astro/components/Image.astro";
 
 const { t } = Astro.locals as { t: LocalesType; }
-const HONORS_KEYS: HonorsOrgListType[] = ["ncees", "wisp", "hu"];
 
 // Type-aware award discriminator
 function isFlatOrg(org: FlatHonorLinks | NestedHonorLinks): org is FlatHonorLinks

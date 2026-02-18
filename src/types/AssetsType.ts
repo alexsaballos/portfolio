@@ -10,7 +10,7 @@ export type IconsType = {
 }
 
 export type IconsNamesType =
-    | "hourglass" | "linkedin" | "github" | "handshake" | "merit" | "wisp" | "hu"
+    | "hourglass" | "linkedin" | "github" | "handshake" | "merit" | "credly" | "wisp" | "hu"
     | "projects" | "experience" | "leadership" | "certifications" | "honors"
     | "contact" | "home" | "hamburger_open" | "hamburger_close" | "link" | "id_card"
     | "at_sign" | "rectangle_list" | "message" | "paper_plane" | "spinner"

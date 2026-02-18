@@ -1,24 +1,21 @@
 ---
-import { CERT_LINKS } from "../../config/certifications";
+import { CERT_KEYS, CERT_LINKS } from "../../config/certifications";
 import { ICONS } from "../../config/assets";
-
 import type { LocalesType } from "../../types/LocalesType";
-import type { CertsOrgListType } from "../../types/CertificationsType";
 
 import Icon from "../ui/libraries/Icon.astro";
 import Title from "../ui/text/Title.astro";
 import Image from "astro/components/Image.astro";
 
 const { t } = Astro.locals as { t: LocalesType; }
-const CERT_KEYS: CertsOrgListType[] = ["arpels", "hu", "iassc", "cs50", "coursera"];
 ---
 
 <section class="pb-10 px-5 lg:px-10 xl:px-20">
 	<Title title={t.certifications.texts.title} classname="mt-4 mb-8" />
 
 	<div class="gap-6 flex flex-col lg:grid lg:grid-cols-3 lg:grid-rows-2">
-		{CERT_KEYS.map((organization, i) => (
-			<div class={`bg-base-200 rounded-4xl p-6 ring-4 ring-gray-500 relative`}>
+		{CERT_KEYS.map(organization => (
+			<div class="bg-base-200 rounded-4xl p-6 ring-4 ring-gray-500 relative">
 
 				<Image src={CERT_LINKS[organization].picture} alt={`${t.certifications[organization].name} Logo`}
 					class="w-full rounded-2xl place-self-center max-h-40 max-w-120" />
@@ -40,9 +37,7 @@ const CERT_KEYS: CertsOrgListType[] = ["arpels", "hu", "iassc", "cs50", "courser
 						</details>
 						
 						<div class="flex flex-row flex-wrap items-center gap-2 my-2">
-							<p class="text-xs tracking-wide leading-none uppercase text-base-content/60">
-								{t.honors.texts.resources}
-							</p>
+							<p class="text-xs tracking-wide leading-none uppercase text-base-content/60">{t.honors.texts.resources}</p>
 							<div class="flex flex-wrap gap-2">
 								{CERT_LINKS[organization].verification && 
 									<a href={CERT_LINKS[organization].verification} target="_blank" rel="noopener noreferrer"

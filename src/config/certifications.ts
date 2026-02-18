@@ -1,13 +1,8 @@
 import { LINKS } from "./links";
 import { PICTURES } from "./assets";
-import type { CertListType } from "../types/CertificationsType";
+import type { CertListType, CertsOrgListType } from "../types/CertificationsType";
 
 export const CERT_LINKS: CertListType = {
-    iassc: {
-        year: "2026",
-        picture: PICTURES.certifications.iassc,
-        info: LINKS.iassc.main
-    },
     arpels: {
         year: "2025",
         picture: PICTURES.certifications.arpels,
@@ -19,6 +14,11 @@ export const CERT_LINKS: CertListType = {
         picture: PICTURES.honors.hu,
         verification: LINKS.parchment,
         info: LINKS.hu.engineering_dept
+    },
+    iassc: {
+        year: "2026",
+        picture: PICTURES.certifications.iassc,
+        info: LINKS.iassc.main
     },
     cs50: {
         year: "2020",
@@ -32,4 +32,6 @@ export const CERT_LINKS: CertListType = {
         verification: LINKS.coursera.award,
         info: LINKS.coursera.main
     }
-} as const;
+} as const satisfies CertListType;
+
+export const CERT_KEYS = Object.keys(CERT_LINKS) as CertsOrgListType[];

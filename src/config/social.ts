@@ -23,6 +23,11 @@ export const SOCIAL_BUTTONS: ButtonsListType["social"] = {
         link: LINKS.merit_pages,
         label: "My Merit Page"
     },
+    credly: {
+        icon: ICONS.credly,
+        link: LINKS.credly.profile,
+        label: "My Credly Profile"
+    },
     wisp: {
         icon: ICONS.wisp,
         link: LINKS.wisp,
@@ -36,7 +41,7 @@ export const SOCIAL_BUTTONS: ButtonsListType["social"] = {
 } as const;
 
 const CONTACT_BUTTONS_KEYS = Object.keys(SOCIAL_BUTTONS).filter((k) =>
-    (k !== "merit" && k !== "wisp" && k !== "hu")) as Array<(keyof ButtonsListType["contact"])>;
+    (k !== "merit" && k !== "wisp" && k !== "hu" && k !== "credly")) as Array<(keyof ButtonsListType["contact"])>;
 
 export const CONTACT_BUTTONS: ButtonsListType["contact"] = Object.fromEntries(
     CONTACT_BUTTONS_KEYS.map((key) => [key, SOCIAL_BUTTONS[key]])

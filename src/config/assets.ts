@@ -114,6 +114,12 @@ export const ICONS: IconsListType = {
         desc: "Square with Rounded Corners - Merit Pages Logo.",
         size: "md"
     },
+    credly: {
+        href: "#credly",
+        title: "Credly Icon",
+        desc: "Square with Rounded Corners - Credly Logo.",
+        size: "md"
+    },
     wisp: {
         href: "#wisp",
         title: "WISP Icon",
