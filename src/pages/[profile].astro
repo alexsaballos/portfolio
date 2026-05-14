@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Avatar from "../components/ui/Avatar.astro";
+import Title from "../components/ui/text/Title.astro";
+import Icon from "../components/ui/libraries/Icon.astro";
+
+import { PAGES } from "../config/pages";
+import { PATHS } from "../config/assets";
+import { VANITY } from "../config/vanity";
+
+export const getStaticPaths = () => Object.keys(VANITY).map(
+    profile => ({ params: { profile }}));
+
+// Intercepts requested slug and redirects appropriately (fallback to main redirection index)
+const { profile } = Astro.params as { profile: keyof typeof VANITY };
+const url: string = VANITY[profile].frontend.link ?? "/";
+---
+
+<Layout
+    title={PAGES.contact.SEO_title}
+    description={PAGES.contact.SEO_description}
+    canonical_link={profile}
+    navbarBG="transparent">
+    <div class="mt-26 mb-8 justify-items-center px-2">
+        <Title title="Redirecting you to"/>
+        <div class="flex flex-row items-center">
+            <Icon icon={VANITY[profile].frontend.icon} classname="h-45 w-45 sm:h-55 sm:w-55 md:h-65 md:w-65" />
+            <Avatar classname="h-30 w-30 sm:h-40 sm:w-40 md:h-50 md:w-50" />
+        </div>
+
+        <!-- Injects the slug's URL into an external JS module for countdown redirection -->
+        <h2 class="text-4xl text-center font-bold mb-2" id="countdownVanityContainer" data-url={url}>
+            {VANITY[profile].frontend.text.owner} {VANITY[profile].frontend.name} {VANITY[profile].frontend.text.type} in
+            <span id="countdownVanitySpan">3</span>
+        </h2>
+
+        <p class="mt-3 text-center">Not getting redirected? Click
+            <a href={url} class="text-primary hover:text-secondary hover:underline">here</a>
+            to proceed.
+        </p>
+    </div>
+    <script is:inline type="module" src={`${PATHS.scripts}countdown_vanity.js`}></script>
+</Layout>

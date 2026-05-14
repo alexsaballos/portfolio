@@ -81,7 +81,8 @@
             "experience": "Experiencia",
             "leadership": "Liderazgo",
             "certifications": "Licencias & Certificaciones",
-            "honors": "Honores"
+            "honors": "Honores",
+            "contact": "Contacto"
         }
     },
     "navbar": {

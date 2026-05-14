@@ -1,5 +1,5 @@
 import type { AdmittedCountriesType } from "./LocalesType";
-import type { CategoryPageNamesType } from "./PagesType";
+import type { NavigationPageNamesType } from "./PagesType";
 
 // Icons Typing
 export type IconsType = {
@@ -10,12 +10,13 @@ export type IconsType = {
 }
 
 export type IconsNamesType =
-    | "hourglass" | "linkedin" | "github" | "handshake" | "merit" | "credly" | "wisp" | "hu"
+    | "hourglass" | "linkedin" | "github" | "handshake" | "merit" | "credly" | "wisp" | "hu" | "coursera"
+    | "edx" | "googledev" | "figma" | "gravatar" | "khanacademy" | "peoplecert" | "quizlet" | "sidimaqsa"
     | "projects" | "experience" | "leadership" | "certifications" | "honors"
     | "contact" | "home" | "hamburger_open" | "hamburger_close" | "link" | "id_card"
     | "at_sign" | "rectangle_list" | "message" | "paper_plane" | "spinner"
     | "envelope_check" | "circle_check" | "circle_xmark" | "sun" | "moon"
-    | "translate" | "chevron_up" | "chevron_down" | "angles_down" | "devices"
+    | "translate" | "chevron_up" | "chevron_down" | "angles_down" | "devices";
 
 export type IconsListType = Record<IconsNamesType, IconsType>;
 
@@ -35,7 +36,7 @@ export type VideosListType = {
 export type PicturesListType = {
     ogImage: string;
     PFP: ImageMetadata;
-    categories: Record<CategoryPageNamesType, ImageMetadata>;
+    categories: Record<NavigationPageNamesType, ImageMetadata>;
     certifications: Record<("iassc" | "arpels" | "cs50" | "coursera"), ImageMetadata>;
     honors: Record<("ncees" | "wisp" | "hu"), ImageMetadata>;
 }

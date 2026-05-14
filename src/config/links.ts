@@ -1,44 +1,87 @@
-export const API = {
-    domain: "https://alexsaballos.dev/",
-    resend: "https://api.alexsaballos.dev/contact.php"
+export const SYSTEM = {
+    domain: "https://alexsaballos.dev",
+    API: {
+        resend: "https://api.alexsaballos.dev/contact.php"
+    }
 } as const;
 
 export const LINKS = {
-    abet: "https://www.abet.org/",
-    arpels: "https://labor.arkansas.gov/licensing/state-board-of-licensure-for-professional-engineers-and-professional-surveyors/engineer-intern-ei-licensure-overview/",
-    asgc: "https://www.arkansasspacegrant.org/",
-    coursera: {
-        main: "https://www.coursera.org/learn/java-programming",
-        profile: "https://www.coursera.org/learner/alexsaballos",
-        award: "https://coursera.org/share/c3adae20358ad94fe6c9c5572a6147ef"
+    organizations: {
+        abet: "https://www.abet.org/",
+        arpels: "https://labor.arkansas.gov/licensing/state-board-of-licensure-for-professional-engineers-and-professional-surveyors/engineer-intern-ei-licensure-overview/",
+        asgc: "https://www.arkansasspacegrant.org/",
+        hu: {
+            main: "https://harding.edu",
+            engineering: "https://www.harding.edu/arts-sciences/engineering-physics/academic-programs/",
+            math: "https://www.harding.edu/arts-sciences/math/",
+            asi: "https://www.harding.edu/about/offices-departments/american-studies-institute/programs-training/",
+            honors: "https://www.harding.edu/honors/",
+            arc: "https://www.harding.edu/life-at-harding/arc/academic-resources/index.html"
+        },
+        ieee: "https://www.ieee.org/",
+        ncees: "https://ncees.org/outreach/ncees-graduation-honor-cords/",
+        sidimaqsa: "https://sidimaqsa.com/",
+        wisp: "https://www.wispweb.org/"
     },
-    credly: {
-        profile: "https://www.credly.com/users/alexsaballos",
-        award: "https://www.credly.com/badges/b45ec691-e8b4-438d-8f49-df1e603622a5/public_url"
+    profiles: {
+        coursera: "https://www.coursera.org/learner/alexsaballos",
+        credly: "https://www.credly.com/users/alexsaballos",
+        edx: "https://profile.edx.org/u/alexsaballos",
+        figma: "https://www.figma.com/@alexsaballos",
+        github: "https://github.com/alexsaballos",
+        gravatar: "https://gravatar.com/alexsaballos",
+        googledev: "https://g.dev/alexsaballos",
+        handshake: "https://app.joinhandshake.com/profiles/alexsaballos",
+        khanacademy: "https://www.khanacademy.org/profile/alexsaballosr",
+        linkedin: "https://www.linkedin.com/in/alexsaballosr/",
+        merit: "https://meritpages.com/alexsaballos",
+        peoplecert: "https://www.peoplecert.org/public-profile?ed=XCHu3ZqUTNJBe8JMoFGOl1FSa2IleHoP"
     },
-    cs50: {
-        main: "https://code-fu.net.ni/",
-        award: "https://certificates.cs50.io/a876293f-4d46-4232-8fc2-397a90cfb3d7.pdf?size=letter"
+    other: {
+        facebook: "https://www.facebook.com/alexsaballosr",
+        instagram: "https://www.instagram.com/alexsaballosr/",
+        messenger: "https://m.me/alexsaballosr",
+        quizlet: "https://quizlet.com/user/alexsaballosr/",
+        youtube: "https://www.youtube.com/@alexsaballosr"
     },
-    github: "https://github.com/alexsaballos",
-    handshake: "https://app.joinhandshake.com/profiles/alexsaballos",
-    hu: {
-        main: "https://harding.edu",
-        engineering_dept: "https://www.harding.edu/arts-sciences/engineering-physics/academic-programs/",
-        math_dept: "https://www.harding.edu/arts-sciences/math/",
-        asi: "https://www.harding.edu/about/offices-departments/american-studies-institute/programs-training/",
-        honors: "https://www.harding.edu/honors/",
-        arc: "https://www.harding.edu/life-at-harding/arc/academic-resources/index.html"
+    // TODO [Optional]
+    gaming: {
+        ea: "024LinkMaster420",
+        epicgames: "024LinkMaster420",
+        googleplay: "https://my.play/024LinkMaster420",
+        nintendo: "https://lounge.nintendo.com/friendcode/0084-4695-2517/DXnT1KnLkV",
+        playstation: "https://profile.playstation.com/LinkMaster024420",
+        rockstar: "",
+        steam: "https://steamcommunity.com/id/024linkmaster420/",
+        ubisoft: "https://ubisoftconnect.com/LinkMaster42002",
+        xbox: "TheRealAlex8523"
     },
-    iassc: {
-        main: "https://iassc.org/",
-        award: ""
+    payment: {
+        cashapp: "https://cash.app/$alexsaballosr",
+        paypal: "https://www.paypal.com/paypalme/AlexSaballos",
+        venmo: "https://www.venmo.com/u/alexsaballos",
+        venmoplus: "+alexsaballos.venmo"
     },
-    ieee: "https://www.ieee.org/",
-    linkedin: "https://www.linkedin.com/in/alex-saballos/",
-    merit_pages: "https://meritpages.com/alexsaballos",
-    ncees: "https://ncees.org/outreach/ncees-graduation-honor-cords/",
-    parchment: "https://www.parchment.com/u/award/e6ff0291d43e184f3aa6a25b1191a13b",
-    sidimaqsa: "https://sidimaqsa.com/",
-    wisp: "https://www.wispweb.org/"
+    certifications: {
+        coursera: {
+            main: "https://www.coursera.org/learn/java-programming",
+            profile: "https://www.coursera.org/learner/alexsaballos",
+            award: "https://coursera.org/share/c3adae20358ad94fe6c9c5572a6147ef"
+        },
+        credly: {
+            profile: "https://www.credly.com/users/alexsaballos",
+            award: "https://www.credly.com/badges/b45ec691-e8b4-438d-8f49-df1e603622a5/public_url"
+        },
+        cs50: {
+            main: "https://code-fu.net.ni/",
+            award: "https://certificates.cs50.io/a876293f-4d46-4232-8fc2-397a90cfb3d7.pdf?size=letter"
+        },
+        edx: "https://profile.edx.org/u/alexsaballos",
+        iassc: {
+            main: "https://iassc.org/",
+            profile: "https://www.peoplecert.org/public-profile?ed=XCHu3ZqUTNJBe8JMoFGOl1FSa2IleHoP",
+            award: ""
+        },
+        parchment: "https://www.parchment.com/u/award/e6ff0291d43e184f3aa6a25b1191a13b"
+    }
 } as const;

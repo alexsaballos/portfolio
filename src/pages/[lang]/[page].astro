@@ -1,0 +1,52 @@
+---
+import type { AdmittedLanguagesType } from "../../types/LocalesType";
+import type { NavigationPageNamesType } from "../../types/PagesType";
+
+import { SEO } from "../../config/routing";
+import { LANGUAGES } from "../../config/languages";
+import { NAVIGATION_PAGES } from "../../config/pages";
+
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/ui/Breadcrumbs.astro";
+
+import CertificationsSection from "../../components/sections/CertificationsSection.astro";
+import ComingSoon from "../../components/sections/ComingSoon.astro";
+import HonorsSection from "../../components/sections/HonorsSection.astro";
+import ContactSection from "../../components/sections/contact/ContactSection.astro";
+
+export const getStaticPaths = () =>
+    Object.keys(LANGUAGES).flatMap(lang => (
+        Object.keys(NAVIGATION_PAGES).map(page => (
+            { params: { lang, page }}
+        ))
+    ));
+
+const { lang, page } = Astro.params as {
+    lang: AdmittedLanguagesType;
+    page: NavigationPageNamesType;
+};
+---
+
+<Layout
+    title={NAVIGATION_PAGES[page].SEO_title}
+    description={NAVIGATION_PAGES[page].SEO_description}
+    canonical_link={SEO.canonical_page(lang)}
+    navbarBG="transparent">
+    
+    <!-- mt-26 cancels out -mt-26 on Layout.astro for the fixed Navbar -->
+    <div class="mt-26">
+        <Breadcrumbs page={NAVIGATION_PAGES[page]} />
+        {(() => {
+            // Currently <HonorsSection /> Makes the entire app crash
+            switch (page) {
+                case "projects": return <ComingSoon />;
+                case "experience": return <ComingSoon />;
+                case "leadership": return <ComingSoon />;
+                case "certifications": return <CertificationsSection />;
+                case "honors": return <HonorsSection />;
+                case "contact": return <ContactSection />;
+                default: return <ComingSoon />;
+            }
+        })()}
+    </div>
+</Layout>

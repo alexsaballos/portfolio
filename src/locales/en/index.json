@@ -2,7 +2,7 @@
     "intro": {
         "name_is": "My name is",
         "name": "Alexander Saballos",
-        "headline": "Electrical Engineer (US EI/EiT) | Software Engineer | HU Walton Alumni",
+        "headline": "Electrical Engineer (US EI/EiT) | Software Engineer | HU Walton Alumnus",
         "scroll": "Scroll!"
     },
     "breadcrumbs": {
@@ -81,7 +81,8 @@
             "experience": "Experience",
             "leadership": "Leadership",
             "certifications": "Licenses & Certifications",
-            "honors": "Honors"
+            "honors": "Honors",
+            "contact": "Contact"
         }
     },
     "navbar": {

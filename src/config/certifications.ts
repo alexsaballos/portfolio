@@ -6,31 +6,31 @@ export const CERT_LINKS: CertListType = {
     arpels: {
         year: "2025",
         picture: PICTURES.certifications.arpels,
-        verification: LINKS.credly.award,
-        info: LINKS.arpels
+        verification: LINKS.certifications.credly.award,
+        info: LINKS.organizations.arpels
     },
     hu: {
         year: "2025",
         picture: PICTURES.honors.hu,
-        verification: LINKS.parchment,
-        info: LINKS.hu.engineering_dept
+        verification: LINKS.certifications.parchment,
+        info: LINKS.organizations.hu.engineering
     },
     iassc: {
         year: "2026",
         picture: PICTURES.certifications.iassc,
-        info: LINKS.iassc.main
+        info: LINKS.certifications.iassc.main
     },
     cs50: {
         year: "2020",
         picture: PICTURES.certifications.cs50,
-        verification: LINKS.cs50.award,
-        info: LINKS.cs50.main
+        verification: LINKS.certifications.cs50.award,
+        info: LINKS.certifications.cs50.main
     },
     coursera: {
         year: "2020",
         picture: PICTURES.certifications.coursera,
-        verification: LINKS.coursera.award,
-        info: LINKS.coursera.main
+        verification: LINKS.certifications.coursera.award,
+        info: LINKS.certifications.coursera.main
     }
 } as const satisfies CertListType;
 

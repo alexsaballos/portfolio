@@ -1,5 +1,5 @@
 ---
-import { API } from "../../../config/links";
+import { SYSTEM } from "../../../config/links";
 import { ICONS, PATHS } from "../../../config/assets";
 import type { LocalesType } from "../../../types/LocalesType";
 
@@ -17,7 +17,7 @@ const { t } = Astro.locals as { t: LocalesType };
         <Title title={t.contact.CTA} />
         <div class="justify-items-center">
             <p class="my-2">{t.contact.form_invite}</p>
-            <form enctype="application/x-www-form-urlencoded" data-endpoint={API.resend}>
+            <form enctype="application/x-www-form-urlencoded" data-endpoint={SYSTEM.API.resend}>
                 <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
                     <legend class="fieldset-legend">{t.contact.required}</legend>
 

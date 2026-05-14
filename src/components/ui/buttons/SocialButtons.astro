@@ -1,15 +1,18 @@
 ---
-import { CONTACT_BUTTONS, SOCIAL_BUTTONS } from "../../../config/social";
-import type { ButtonsVariantNamesType } from "../../../types/SocialType";
+import type { BaseVanityEntryType, VanityEntryGroupType } from "../../../types/VanityType";
 import Icon from "../../ui/libraries/Icon.astro";
+import { pickVanityGroup } from "../../../config/vanity";
 
-const { variant } = Astro.props as { variant: ButtonsVariantNamesType; };
+const { variant } = Astro.props as { variant: VanityEntryGroupType; };
+const RequestedButtons: BaseVanityEntryType[] = Object.values(
+    (variant === "social") ? pickVanityGroup("social") : pickVanityGroup("contact")
+);
 ---
 
 <div class="flex flex-row justify-center">
-    {Object.values((variant == "social") ? SOCIAL_BUTTONS : CONTACT_BUTTONS).map(button => (
-        <a class="p-0 m-0" href={button.link} aria-label={button.label} target="_blank" rel="noopener noreferrer">
-            <Icon icon={button.icon} size="lg"
+    {RequestedButtons.map(button => (
+        <a class="p-0 m-0" href={button.frontend.link} aria-label={button.metadata.label} target="_blank" rel="noopener noreferrer">
+            <Icon icon={button.frontend.icon} size="lg"
                 classname="shadow-none transition-transform duration-500 ease-out hover:text-secondary hover:scale-120" />
         </a>
     ))}

@@ -1,0 +1,22 @@
+---
+import type { DirectoryPageNamesType } from "../types/PagesType";
+import { SEO } from "../config/routing";
+import { PAGES } from "../config/pages";
+import Layout from "../layouts/Layout.astro";
+import LanguageGate from "../components/sections/LanguageGate/LanguageGate.astro";
+
+// Intercepts requested slug and redirects appropriately (fallback to main redirection index)
+export const getStaticPaths = () => Object.keys(PAGES).map(
+    page => ({ params: { page }}));
+const { page } = Astro.params as { page: DirectoryPageNamesType };
+---
+
+<Layout
+    title={PAGES[page].SEO_title}
+    description={PAGES[page].SEO_description}
+    canonical_link={SEO.canonical_page("en")}
+    navbarBG="transparent">
+    <div class="mt-26">
+        <LanguageGate page={PAGES[page].slug} />
+    </div>
+</Layout>

@@ -1,7 +1,7 @@
 ---
-import { NAVIGATION_PAGES } from "../../config/pages";
 import { ROUTE } from "../../config/routing";
 import { ICONS } from "../../config/assets";
+import { NAVIGATION_PAGES } from "../../config/pages";
 import type { AdmittedLanguagesType, LocalesType } from "../../types/LocalesType";
 
 import Icon from "../ui/libraries/Icon.astro";
@@ -13,7 +13,7 @@ import ThemeToggler from "../ui/togglers/ThemeToggler.astro";
 const { t, locale } = Astro.locals as { t: LocalesType, locale: AdmittedLanguagesType }
 ---
 
-<footer class="text-white bg-primary rounded-t-4xl">
+<footer class="text-white bg-primary rounded-4xl">
 
     <!-- Footer Body -->
     <div class="p-2">
@@ -37,7 +37,7 @@ const { t, locale } = Astro.locals as { t: LocalesType, locale: AdmittedLanguage
     </div>
 
     <!-- Copyright Notice Body -->
-    <div class="px-1 bg-base-100 items-center justify-around gap-1">
+    <div class="px-1 bg-base-100 items-center justify-around">
         <div class="flex flex-row items-center justify-center gap-2">
             <Icon icon={ICONS.devices} classname="text-primary" />
             <p class="align-middle text-base-content text-xs">

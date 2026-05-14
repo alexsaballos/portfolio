@@ -8,9 +8,10 @@ export const SEO = {
         pageTitle ? (`${pageTitle} | ${PERSONAL.name}`) : PERSONAL.name,
     description: (desc: string) =>
         desc,
-    canonical: (locale: AdmittedLanguagesType, slug?: string) => slug
+    canonical_page: (locale: AdmittedLanguagesType, slug?: string) => slug
         ? (`${METADATA.officialRoot}/${locale}${slug}/`)
-        : (`${METADATA.officialRoot}/${locale}/`)
+        : (`${METADATA.officialRoot}/${locale}/`),
+    canonical_vanity: (slug: string) => `${METADATA.officialRoot}${slug}/`
 } as const;
 
 // Dynamic localized URL Generator (I18N)

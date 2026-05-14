@@ -1,4 +1,6 @@
-import type { VideosListType, PicturesListType, IconsListType, TechnologiesListType, FlagsListType, FaviconListType, PathsListType } from "../types/AssetsType";
+import type {
+    VideosListType, PicturesListType, IconsListType, TechnologiesListType, FlagsListType, FaviconListType, PathsListType
+} from "../types/AssetsType";
 
 // Picture used on OgImage & Intro.astro
 import pfpPicture from "../images/intro/pfp.jpg"
@@ -14,6 +16,7 @@ import experiencePicture from "../images/categories/experience.jpg"
 import leadershipPicture from "../images/categories/leadership.jpg"
 import certificationsPicture from "../images/categories/certifications.jpg"
 import honorsPicture from "../images/categories/honors.jpg"
+import contactPicture from "../images/categories/contact.jpg"
 
 // TODO:
 // Pictures used on Projects.astro
@@ -62,7 +65,8 @@ export const PICTURES: PicturesListType = {
         experience: experiencePicture,
         leadership: leadershipPicture,
         certifications: certificationsPicture,
-        honors: honorsPicture
+        honors: honorsPicture,
+        contact: contactPicture
     },
     certifications: {
         iassc: iasscPicture,
@@ -130,6 +134,60 @@ export const ICONS: IconsListType = {
         href: "#hu",
         title: "Harding University Icon",
         desc: "Square with Rounded Corners - Harding University Logo.",
+        size: "md"
+    },
+    coursera: {
+        href: "#coursera",
+        title: "Coursera Icon",
+        desc: "Square with Rounded Corners - Coursera Logo.",
+        size: "md"
+    },
+    edx: {
+        href: "#edx",
+        title: "EdX Icon",
+        desc: "Square with Rounded Corners - EdX Logo.",
+        size: "md"
+    },
+    googledev: {
+        href: "#googledev",
+        title: "Google Developers Icon",
+        desc: "Square with Rounded Corners - Google Developers Logo.",
+        size: "md"
+    },
+    figma: {
+        href: "#figma",
+        title: "Figma Icon",
+        desc: "Square with Rounded Corners - Figma Logo.",
+        size: "md"
+    },
+    gravatar: {
+        href: "#gravatar",
+        title: "Gravatar Icon",
+        desc: "Square with Rounded Corners - Gravatar Logo.",
+        size: "md"
+    },
+    khanacademy: {
+        href: "#khanacademy",
+        title: "Khan Academy Icon",
+        desc: "Square with Rounded Corners - Khan Academy Logo.",
+        size: "md"
+    },
+    peoplecert: {
+        href: "#peoplecert",
+        title: "PeopleCert Icon",
+        desc: "Square with Rounded Corners - PeopleCert Logo.",
+        size: "md"
+    },
+    quizlet: {
+        href: "#quizlet",
+        title: "Quizlet Icon",
+        desc: "Square with Rounded Corners - Quizlet Logo.",
+        size: "md"
+    },
+    sidimaqsa: {
+        href: "#sidimaqsa",
+        title: "SIDIMAQSA Icon",
+        desc: "Square with Rounded Corners - SIDIMAQSA Logo.",
         size: "md"
     },
 

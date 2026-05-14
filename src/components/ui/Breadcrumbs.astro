@@ -1,10 +1,8 @@
 ---
+import type { NavigationPageType } from "../../types/PagesType";
+import type { AdmittedLanguagesType, LocalesType } from "../../types/LocalesType";
 import { ICONS } from "../../config/assets";
 import { ROUTE } from "../../config/routing";
-
-import type { NavigationPageType, CategoryPageType } from "../../types/PagesType";
-import type { AdmittedLanguagesType, LocalesType } from "../../types/LocalesType";
-
 import Icon from "../ui/libraries/Icon.astro";
 
 const { locale, t } = Astro.locals as {
@@ -12,19 +10,16 @@ const { locale, t } = Astro.locals as {
 	t: LocalesType;
 };
 
-const { page } = Astro.props as { page: (NavigationPageType | CategoryPageType); };
-
-const homeLink: string = ROUTE.home(locale);
-const pageLink: string = ROUTE.page(locale, page.slug);
+const { page } = Astro.props as { page: NavigationPageType; };
 ---
 
 <div class="breadcrumbs text-md ml-5 sm:ml-10">
 	<ul>
-		<li><a href={homeLink} class="hover:text-secondary hover:font-bold">
+		<li><a href={ROUTE.home(locale)} class="hover:text-secondary hover:font-bold">
 			<Icon icon={ICONS.home} size="xs" />
 			<p>{t.breadcrumbs.home}</p>
 		</a></li>
-		<li><a href={pageLink}  class="hover:text-secondary hover:font-bold">
+		<li><a href={ROUTE.page(locale, page.slug)} class="hover:text-secondary hover:font-bold">
 			<Icon icon={page.icon} size="xs" />
 			<p>{t.breadcrumbs[page.key]}</p>
 		</a></li>

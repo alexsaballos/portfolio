@@ -1,16 +1,14 @@
 ---
-import { PAGES } from "../config/pages";
-import LanguageGate from "../components/sections/LanguageGate/LanguageGate.astro";
-import Layout from "../layouts/Layout.astro";
 import { SEO } from "../config/routing";
-
-const canonical: string = SEO.canonical("en");
+import { PAGES } from "../config/pages";
+import Layout from "../layouts/Layout.astro";
+import LanguageGate from "../components/sections/LanguageGate/LanguageGate.astro";
 ---
 
 <Layout
     title={PAGES.home.SEO_title}
     description={PAGES.home.SEO_description}
-    canonical_link={canonical}
+    canonical_link={SEO.canonical_page("en")}
     navbarBG="transparent">
     <div class="mt-26">
         <LanguageGate page={PAGES.home.slug} />
