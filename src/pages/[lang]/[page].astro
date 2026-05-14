@@ -37,7 +37,6 @@ const { lang, page } = Astro.params as {
     <div class="mt-26">
         <Breadcrumbs page={NAVIGATION_PAGES[page]} />
         {(() => {
-            // Currently <HonorsSection /> Makes the entire app crash
             switch (page) {
                 case "projects": return <ComingSoon />;
                 case "experience": return <ComingSoon />;
