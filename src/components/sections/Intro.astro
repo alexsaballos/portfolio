@@ -1,0 +1,32 @@
+---
+import Navbar from "../widgets/Navbar.astro";
+import RotatingText from "../ui/text/RotatingText.astro";
+import Avatar from "../ui/Avatar.astro";
+import SocialButtons from "../ui/buttons/SocialButtons.astro";
+import { PERSONAL } from "../../config/personal";
+import { VIDEOS } from "../../config/assets";
+
+const t = Astro.locals.t;
+---
+
+<section class="relative min-h-screen flex flex-col">
+    <video class="absolute inset-0 h-full w-full select-none object-cover opacity-20 pointer-events-none rounded-b-4xl"
+        preload="auto" aria-hidden="true" muted autoplay loop playsinline >
+        <source src={VIDEOS.IntroVideo} type="video/webm" />
+    </video>
+    <Navbar />
+    <div class="flex-1 flex flex-col group justify-center text-center items-center">
+        
+        <!-- Includes: Rotating Hello, introduction, headline, and SocialButtons -->
+        <Avatar classname="w-60 h-60 mb-10" />
+        <div class="max-w-sm sm:max-w-full">
+            <span class="align-middle">
+                <RotatingText text="hello" classname="text-4xl" />
+                <span class="text-2xl">{t.intro.name_is}</span>
+            </span>
+            <h1 class="text-6xl sm:text-7xl font-bold mt-2">{PERSONAL.name}</h1>
+            <h2 class="text-xl my-2">{t.intro.headline}</h2>
+            <SocialButtons variant="social" />
+        </div>
+    </div>
+</section>

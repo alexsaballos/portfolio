@@ -1,6 +1,6 @@
 import { PERSONAL } from "./personal";
-import { LINKS, SYSTEM } from "./links";
 import { FAVICONS, PICTURES } from "./assets";
+
 import type { MetadataType } from "../types/MetaTypes";
 import type { FaviconsPngListType, FaviconsSvgListType } from "../types/AssetsType";
 
@@ -12,14 +12,25 @@ export const METADATA: MetadataType = {
     url: linkSite,
     base: "",
     officialRoot: linkSite,
+    siteName: `${PERSONAL.name} Professional Portfolio`,
     text_direction: "ltr",
     defaultLanguage: "en",
     charset: "UTF-8",
     display: "standalone",
     orientation: "any",
     colors: {
-        background: "#FFFFFF",
-        theme: "#004DB8"
+        dark: {
+            background: "#1D232A",    // Equivalent to bg-base-100 on dark mode
+            primary: "#3168B5",
+            secondary: "#B57E31",
+            accent: "#68B531"
+        },
+        light: {
+            background: "#FFFFFF",    // Equivalent to bg-base-100 on light mode
+            primary: "#004DB8",
+            secondary: "#B86B00",
+            accent: "#68B531"
+        }
     },
     manifest_categories: [
         "Portfolio", "Electrical Engineering", "Software Engineering", "Web Development", "App Development",
@@ -34,40 +45,13 @@ export const METADATA: MetadataType = {
         .map(key => ({ ...FAVICONS[key] })),
 
     // Social Previews & Crawler Paths
-    ogImage: PICTURES.ogImage,
+    opengraph: {
+        image: PICTURES.ogImage,
+        image_width: "1200",
+        image_height: "630",
+        image_type: "image/png"
+    },
     favicon: "/favicon.ico",
     manifest: "/manifest.webmanifest",
     robots: "/robots.txt"
-} as const;
-
-// Schema.org Structured Data Identity Linking
-const sameAsLinks = Object.values(LINKS.profiles)
-export const SCHEMAORG = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Alexander Saballos",
-  "url": "https://alexsaballos.dev",
-  "image": "https://alexsaballos.dev/images/profile.jpg",
-  "jobTitle": "Electrical Engineer",
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "Harding University"
-  },
-  "knowsLanguage": [
-    "English", "Spanish", "German"
-  ],
-  "knowsAbout": [
-    "Electrical Engineering", "Embedded Systems", "Software Engineering", "Automation", "PCB Design"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "professional",
-    "url": "https://alexsaballos.dev/en/contact/"
-  },
-  "sameAs": [
-    "https://github.com/alexsaballos",
-    "https://linkedin.com/in/alexsaballosr",
-    "https://meritpages.com/alexsaballos",
-    "https://gravatar.com/alexsaballos"
-  ]
 } as const;

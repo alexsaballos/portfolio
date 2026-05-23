@@ -2,21 +2,19 @@
 import { ICONS } from "../../config/assets";
 import { ROUTE } from "../../config/routing";
 import { NAVIGATION_PAGES } from "../../config/pages";
-import type { AdmittedLanguagesType, LocalesType } from "../../types/LocalesType";
 
 import Icon from "../ui/libraries/Icon.astro";
 import IconHome from "../ui/buttons/IconHome.astro";
 import LanguageToggler from "../ui/togglers/LanguageToggler.astro";
 import ThemeToggler from "../ui/togglers/ThemeToggler.astro";
 
-const { t, locale } = Astro.locals as { t: LocalesType, locale: AdmittedLanguagesType }
-const { background } = Astro.props as { background: string; }
+const { t, l } = Astro.locals;
 ---
 
-<div class="drawer z-999 pt-5">
+<nav class="drawer top-0 left-0 w-full z-999 pt-5">
     <input id="intro-drawer" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content flex flex-col">
-        <div class={`navbar bg-${background} w-full`}>
+        <div class={"navbar bg-transparent w-full"}>
             <div class="flex-none md:hidden">
                 <label for="intro-drawer" aria-label="Open Sidebar" class="btn btn-square btn-ghost ml-5">
                     <Icon icon={ICONS.hamburger_open} />
@@ -28,8 +26,8 @@ const { background } = Astro.props as { background: string; }
             <div class="navbar-center hidden md:flex">
                 <ul class="menu menu-horizontal">
                     {Object.values(NAVIGATION_PAGES).map(entry => (
-                        <li><a href={ROUTE.page(locale, entry.slug)} class="hover:font-bold border-secondary hover:border-b-4 hover:-my-1">
-                            {t.navbar[entry.key]}
+                        <li><a href={ROUTE.page(l, entry.metadata.slug)} class="border-secondary hover:font-bold hover:border-b-4 hover:-my-1">
+                            {t.navigation[entry.key]}
                         </a></li>
                     ))}
                 </ul>
@@ -45,8 +43,8 @@ const { background } = Astro.props as { background: string; }
         <label for="intro-drawer" aria-label="Close Sidebar" class="drawer-overlay"></label>
         <ul class="menu bg-primary min-h-full w-65 text-lg p-6 pt-10 gap-10 flex flex-col">
             {Object.values(NAVIGATION_PAGES).map(entry => (
-                <li><a href={ROUTE.page(locale, entry.slug)} class="hover:font-bold">
-                    {t.navbar[entry.key]}
+                <li><a href={ROUTE.page(l, entry.metadata.slug)} class="hover:font-bold">
+                    {t.navigation[entry.key]}
                 </a></li>
             ))}
             <div class="flex flex-row justify-center mt-auto py-1">
@@ -58,4 +56,4 @@ const { background } = Astro.props as { background: string; }
             </div>
         </ul>
     </div>
-</div>
+</nav>

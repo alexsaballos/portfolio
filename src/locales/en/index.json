@@ -75,17 +75,9 @@
         }
     },
     "categories": {
-        "title": "Portfolio Sections",
-        "categories": {
-            "projects": "Projects",
-            "experience": "Experience",
-            "leadership": "Leadership",
-            "certifications": "Licenses & Certifications",
-            "honors": "Honors",
-            "contact": "Contact"
-        }
+        "title": "Portfolio Sections"
     },
-    "navbar": {
+    "navigation": {
         "projects": "Projects",
         "experience": "Experience",
         "leadership": "Leadership",

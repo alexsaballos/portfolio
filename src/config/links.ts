@@ -1,5 +1,6 @@
 export const SYSTEM = {
     domain: "https://alexsaballos.dev",
+    pfp: "https://alexsaballos.dev/images/profile.jpg",
     API: {
         resend: "https://api.alexsaballos.dev/contact.php"
     }
@@ -35,13 +36,14 @@ export const LINKS = {
         khanacademy: "https://www.khanacademy.org/profile/alexsaballosr",
         linkedin: "https://www.linkedin.com/in/alexsaballosr/",
         merit: "https://meritpages.com/alexsaballos",
-        peoplecert: "https://www.peoplecert.org/public-profile?ed=XCHu3ZqUTNJBe8JMoFGOl1FSa2IleHoP"
+        orcid: "https://orcid.org/0009-0006-9378-4212",
+        peoplecert: "https://www.peoplecert.org/public-profile?ed=XCHu3ZqUTNJBe8JMoFGOl1FSa2IleHoP",
+        quizlet: "https://quizlet.com/user/alexsaballosr/"
     },
     other: {
         facebook: "https://www.facebook.com/alexsaballosr",
         instagram: "https://www.instagram.com/alexsaballosr/",
         messenger: "https://m.me/alexsaballosr",
-        quizlet: "https://quizlet.com/user/alexsaballosr/",
         youtube: "https://www.youtube.com/@alexsaballosr"
     },
     // TODO [Optional]
@@ -63,6 +65,10 @@ export const LINKS = {
         venmoplus: "+alexsaballos.venmo"
     },
     certifications: {
+        aha: {
+            main: "https://www.heart.org/",
+            award: "https://ecards.heart.org/student/eCards?cid=0864054B-208D-40E2-B4DD-9C05AA68B3B5"
+        },
         coursera: {
             main: "https://www.coursera.org/learn/java-programming",
             profile: "https://www.coursera.org/learner/alexsaballos",

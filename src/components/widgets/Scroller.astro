@@ -1,15 +1,27 @@
 ---
 import { ICONS } from "../../config/assets";
 import Icon from "../ui/libraries/Icon.astro";
+
+const ScrollButtons = {
+    top: {
+        id: "scrollTop",
+        aria_label: "Scroll to Top",
+        icon: ICONS.chevron_up
+    },
+    bottom: {
+        id: "scrollBottom",
+        aria_label: "Scroll to Bottom",
+        icon: ICONS.chevron_down
+    }
+} as const;
 ---
 
-<div class="flex flex-col gap-3 bottom-5 right-5 fixed z-998">
-    <button id="scrollTop" aria-label="Scroll to Top"
-        class="shadow-none border-none btn btn-square bg-secondary rounded-lg transition-transform duration-500 ease-out hover:scale-110 ring-4 ring-base-200">
-        <Icon icon={ICONS.chevron_up} classname="text-white" size="sm" />
-    </button>
-    <button id="scrollBottom" aria-label="Scroll to Bottom"
-        class="shadow-none border-none btn btn-square bg-secondary rounded-lg transition-transform duration-500 ease-out hover:scale-110 ring-4 ring-base-200">
-        <Icon icon={ICONS.chevron_down} classname="text-white" size="sm" />
-    </button>
+<div id="scrollControls"
+    class="fixed bottom-5 right-5 z-998 flex flex-col gap-3 opacity-0 pointer-events-none transition-opacity duration-500 ease-out">
+        {Object.values(ScrollButtons).map(button =>
+            <button id={button.id} aria-label={button.aria_label}
+                class="shadow-none border-none btn btn-square bg-secondary rounded-lg hover:scale-110 transition-transform duration-300 ring-4 ring-base-200">
+                    <Icon icon={button.icon} classname="text-white" size="sm" />
+            </button>
+        )}
 </div>

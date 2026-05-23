@@ -1,11 +1,10 @@
 ---
+import Technology from "../../ui/Technology.astro";
 import { TECHNOLOGIES } from "../../../config/assets";
 import type { TechnologiesCoreSubheadersType } from "../../../types/AssetsType";
-import type { LocalesType } from "../../../types/LocalesType";
-import Technology from "../../ui/Technology.astro";
 
-const { t } = Astro.locals as { t: LocalesType; };
-const { subheader } = Astro.props as { subheader: TechnologiesCoreSubheadersType }
+const t = Astro.locals.t;
+const subheader = Astro.props.subheader as TechnologiesCoreSubheadersType;
 ---
 
 <div class="flex flex-col gap-2">

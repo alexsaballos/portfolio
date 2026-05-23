@@ -1,17 +1,23 @@
-import type { IconsType, TechnologiesCoreSubheadersType, TechnologiesNamesType, TechnologiesProductionSubheadersType } from "./AssetsType";
+import type {
+    IconsType, TechnologiesCoreSubheadersType, TechnologiesNamesType, TechnologiesProductionSubheadersType
+} from "./AssetsType";
 import type { CertLocaleType } from "./CertificationsType";
 import type { HonorsType } from "./HonorsType";
-import type { CategoryPageNamesType, DirectoryPageNamesType, NavigationPageNamesType } from "./PagesType";
+import type { DirectoryPageNamesType, NavigationPageNamesType } from "./PagesType";
 
 export type AdmittedLanguagesType = "de" | "en" | "es";
 export type AdmittedCountriesType = "de" | "us" | "mx";
 export type AdmittedLangCountriesType = "de-de" | "en-us" | "es-mx";
 
 export type SingleLanguageType = {
+    key: AdmittedLanguagesType;
     home: string;
     icon: IconsType;
     picture: ImageMetadata;
-    name: string;
+    name: {
+        standard: string;
+        localized: string;
+    };
     code: {
         lang: AdmittedLanguagesType;
         langcountry: AdmittedLangCountriesType;
@@ -48,11 +54,8 @@ export type LocalesType = {
         },
         technologies: Record<TechnologiesNamesType, string>;
     }
-    categories: {
-        title: string;
-        categories: Record<CategoryPageNamesType, string>
-    },
-    navbar: Record<NavigationPageNamesType, string>,
+    categories: { title: string; },
+    navigation: Record<NavigationPageNamesType, string>,
     footer: { copyright: string; },
     coming_soon: {
         p1: string;

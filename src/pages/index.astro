@@ -1,16 +1,12 @@
 ---
-import { SEO } from "../config/routing";
 import { PAGES } from "../config/pages";
-import Layout from "../layouts/Layout.astro";
-import LanguageGate from "../components/sections/LanguageGate/LanguageGate.astro";
+import { METADATA } from "../config/meta";
+import PageLayout from "../layouts/PageLayout.astro";
+import Navbar from "../components/widgets/Navbar.astro";
+import LanguageGate from "../components/sections/LanguageGate.astro";
 ---
 
-<Layout
-    title={PAGES.home.SEO_title}
-    description={PAGES.home.SEO_description}
-    canonical_link={SEO.canonical_page("en")}
-    navbarBG="transparent">
-    <div class="mt-26">
-        <LanguageGate page={PAGES.home.slug} />
-    </div>
-</Layout>
+<PageLayout page="home" lang={METADATA.defaultLanguage}>
+    <Navbar />
+    <LanguageGate page={PAGES.home.metadata.slug} />
+</PageLayout>

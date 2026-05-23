@@ -2,14 +2,13 @@
 import { ICONS } from "../../config/assets";
 import { HONOR_LINKS, HONORS_KEYS } from "../../config/honors";
 
-import type { HonorsOrgListType, HonorsListType, HonorsLinkType, FlatHonorLinks, NestedHonorLinks } from "../../types/HonorsType";
-import type { LocalesType } from "../../types/LocalesType";
-
 import Title from "../ui/text/Title.astro";
 import Icon from "../ui/libraries/Icon.astro";
 import Image from "astro/components/Image.astro";
 
-const { t } = Astro.locals as { t: LocalesType; }
+import type { HonorsOrgListType, HonorsListType, HonorsLinkType, FlatHonorLinks, NestedHonorLinks } from "../../types/HonorsType";
+
+const t = Astro.locals.t;
 
 // Type-aware award discriminator
 function isFlatOrg(org: FlatHonorLinks | NestedHonorLinks): org is FlatHonorLinks

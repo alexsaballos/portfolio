@@ -17,6 +17,7 @@
 }
 
 .root {
+	color-scheme: light dark;
 	--tech-embedded: "#D48D17";
 	--tech-systems: "#3168B5";
 	--tech-web: "#524391";

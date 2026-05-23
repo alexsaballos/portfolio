@@ -1,13 +1,13 @@
 ---
 import { ICONS } from "../../../config/assets";
 import { ROUTE } from "../../../config/routing";
-import type { AdmittedLanguagesType } from "../../../types/LocalesType";
 import Icon from "../../ui/libraries/Icon.astro";
 
-const { locale } = Astro.locals as { locale: AdmittedLanguagesType; };
+const l = Astro.locals.l;
 ---
+
 <div class="btn btn-ghost btn-square shadow-none transition-transform duration-500 ease-out hover:text-secondary hover:scale-120">
-    <a href={ROUTE.home(locale)}>
+    <a href={ROUTE.home(l)}>
         <Icon icon={ICONS.home} />
     </a>
 </div>

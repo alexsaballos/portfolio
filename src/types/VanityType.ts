@@ -21,5 +21,5 @@ export type BaseVanityEntryType = {
 };
 
 export type VanityNamesType = "linkedin" | "github" | "handshake" | "merit" | "credly" | "wisp" | "hu" |"coursera" | "edx" |
-    "googledev" | "figma" | "gravatar" | "khanacademy" | "peoplecert" | "quizlet" | "sidimaqsa";
+    "googledev" | "figma" | "gravatar" | "khanacademy" | "orcid" | "peoplecert" | "quizlet" | "sidimaqsa";
 export type VanityListType = Record<VanityNamesType, BaseVanityEntryType>;

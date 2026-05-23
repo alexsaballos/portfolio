@@ -1,28 +1,29 @@
 ---
-import { LANGUAGES } from "../../../config/languages";
-import { ROUTE } from "../../../config/routing";
+import { LANGUAGES } from "../../config/languages";
+import { ROUTE } from "../../config/routing";
 import Image from "astro/components/Image.astro";
-import RotatingText from "../../ui/text/RotatingText.astro";
+import RotatingText from "../ui/text/RotatingText.astro";
+import type { DirectoryPageSlugsType } from "../../types/PagesType";
 
-const { page } =  Astro.props as { page: string; }
+const page =  Astro.props.page as DirectoryPageSlugsType;
 ---
 
-<section class="p-2 text-center my-8">
+<section class="p-2 text-center mb-10">
     <RotatingText text="select" classname="text-lg sm:text-xl my-4" />
 
     <!-- Language Selection for Unlocalized Disambiguation Pages -->
     <div class="flex flex-col justify-around place-items-center md:flex-row p-2 gap-8">
         {Object.values(LANGUAGES).map((entry) => (
-            <a href={ROUTE.page(entry.code.lang, page)}>
+            <a href={(page === "") ? ROUTE.home(entry.code.lang) : ROUTE.page(entry.code.lang, page)}>
                 <div class="card image-full rounded-2xl max-w-160 lg:max-w-100 h-48 sm:h-64 md:h-72 group ring-4 ring-base-300 hover:ring-6 hover:ring-primary">
                     <figure>
-                        <Image src={entry.picture} alt={entry.name}
+                        <Image src={entry.picture} alt={entry.name.localized}
                                 class="transition-transform duration-500 ease-out group-hover:scale-110" />
                     </figure>
                     <div class="absolute w-full h-full rounded-2xl bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                     <div class="card-body flex items-center justify-center relative">
                         <div class="card-title text-2xl place-content-center text-white group-hover:font-bold group-hover:border-b-4 group-hover:border-secondary">
-                            {entry.name}
+                            {entry.name.localized}
                         </div>
                     </div>
                 </div>

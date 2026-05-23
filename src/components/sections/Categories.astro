@@ -1,13 +1,12 @@
 ---
 import { ROUTE } from "../../config/routing";
 import { NAVIGATION_PAGES } from "../../config/pages";
-import type { AdmittedLanguagesType, LocalesType } from "../../types/LocalesType"
 
 import Title from "../ui/text/Title.astro";
 import Icon from "../ui/libraries/Icon.astro";
 import Image from "astro/components/Image.astro";
 
-const { t, locale } = Astro.locals as { t: LocalesType; locale: AdmittedLanguagesType }
+const { t, l } = Astro.locals;
 ---
 
 <section class="bg-base-100 pt-15 pb-10 px-5">
@@ -17,18 +16,18 @@ const { t, locale } = Astro.locals as { t: LocalesType; locale: AdmittedLanguage
             <div class="relative select-none w-full">
                 <div class="absolute -top-7.5 left-1/2 -translate-x-1/2 z-1">
                     <div class="rounded-full bg-primary p-3 shadow-none">
-                        <Icon icon={entry.icon} size="md" classname="text-white" />
+                        <Icon icon={entry.frontend.icon} size="md" classname="text-white" />
                     </div>
                 </div>
-                <a href={ROUTE.page(locale, entry.slug)}>
+                <a href={ROUTE.page(l, entry.metadata.slug)}>
                     <div class="card image-full rounded-2xl h-64 md:h-72 lg:h-80 group ring-4 ring-base-300 hover:ring-6 hover:ring-primary">
                         <figure>
-                            <Image src={entry.picture} alt={t.categories.categories[entry.key]} class="transition-transform duration-500 ease-out group-hover:scale-110" />
+                            <Image src={entry.frontend.picture!} alt={t.navigation[entry.key]} class="transition-transform duration-500 ease-out group-hover:scale-110" />
                         </figure>
                         <div class="absolute w-full h-full rounded-2xl bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                         <div class="card-body flex items-center justify-center relative">
                             <div class="card-title text-2xl place-content-center text-white group-hover:font-bold group-hover:border-b-4 group-hover:border-secondary">
-                                {t.categories.categories[entry.key]}
+                                {t.navigation[entry.key]}
                             </div>
                         </div>
                     </div>

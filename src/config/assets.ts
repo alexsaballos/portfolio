@@ -1,3 +1,4 @@
+import { SYSTEM } from "./links";
 import type {
     VideosListType, PicturesListType, IconsListType, TechnologiesListType, FlagsListType, FaviconListType, PathsListType
 } from "../types/AssetsType";
@@ -58,7 +59,7 @@ export const VIDEOS: VideosListType = {
 
 // Complete Videos Reference
 export const PICTURES: PicturesListType = {
-    ogImage: `${PATHS.pictures}og_image.png`,
+    ogImage: `${SYSTEM.domain}${PATHS.pictures}og_image.png`,
     PFP: pfpPicture,
     categories: {
         projects: projectsPicture,
@@ -170,6 +171,12 @@ export const ICONS: IconsListType = {
         href: "#khanacademy",
         title: "Khan Academy Icon",
         desc: "Square with Rounded Corners - Khan Academy Logo.",
+        size: "md"
+    },
+    orcid: {
+        href: "#orcid",
+        title: "Orcid Icon",
+        desc: "Square with Rounded Corners - Orcid Logo.",
         size: "md"
     },
     peoplecert: {

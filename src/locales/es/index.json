@@ -75,17 +75,9 @@
         }
     },
     "categories": {
-        "title": "Secciones del Portafolio",
-        "categories": {
-            "projects": "Proyectos",
-            "experience": "Experiencia",
-            "leadership": "Liderazgo",
-            "certifications": "Licencias & Certificaciones",
-            "honors": "Honores",
-            "contact": "Contacto"
-        }
+        "title": "Secciones del Portafolio"
     },
-    "navbar": {
+    "navigation": {
         "projects": "Proyectos",
         "experience": "Experiencia",
         "leadership": "Liderazgo",

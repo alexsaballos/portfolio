@@ -1,7 +1,7 @@
 ---
+import Flag from "../libraries/Flag.astro";
 import { LANGUAGES } from "../../../config/languages";
 import type { SingleLanguageType } from "../../../types/LocalesType";
-import Flag from "../libraries/Flag.astro";
 
 const { text, classname } = Astro.props as {
     text: keyof SingleLanguageType["text"];

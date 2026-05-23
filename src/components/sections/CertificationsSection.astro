@@ -1,13 +1,12 @@
 ---
-import { CERT_KEYS, CERT_LINKS } from "../../config/certifications";
 import { ICONS } from "../../config/assets";
-import type { LocalesType } from "../../types/LocalesType";
+import { CERT_KEYS, CERT_LINKS } from "../../config/certifications";
 
 import Icon from "../ui/libraries/Icon.astro";
 import Title from "../ui/text/Title.astro";
 import Image from "astro/components/Image.astro";
 
-const { t } = Astro.locals as { t: LocalesType; }
+const t = Astro.locals.t;
 ---
 
 <section class="pb-10 px-5 lg:px-10 xl:px-20">

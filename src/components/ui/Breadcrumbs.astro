@@ -1,26 +1,21 @@
 ---
-import type { NavigationPageType } from "../../types/PagesType";
-import type { AdmittedLanguagesType, LocalesType } from "../../types/LocalesType";
 import { ICONS } from "../../config/assets";
 import { ROUTE } from "../../config/routing";
 import Icon from "../ui/libraries/Icon.astro";
+import type { NavigationPageType } from "../../types/PagesType";
 
-const { locale, t } = Astro.locals as {
-	locale: AdmittedLanguagesType;
-	t: LocalesType;
-};
-
-const { page } = Astro.props as { page: NavigationPageType; };
+const { l, t } = Astro.locals;
+const page = Astro.props.page as NavigationPageType;
 ---
 
 <div class="breadcrumbs text-md ml-5 sm:ml-10">
 	<ul>
-		<li><a href={ROUTE.home(locale)} class="hover:text-secondary hover:font-bold">
+		<li><a href={ROUTE.home(l)} class="hover:text-secondary hover:font-bold">
 			<Icon icon={ICONS.home} size="xs" />
 			<p>{t.breadcrumbs.home}</p>
 		</a></li>
-		<li><a href={ROUTE.page(locale, page.slug)} class="hover:text-secondary hover:font-bold">
-			<Icon icon={page.icon} size="xs" />
+		<li><a href={ROUTE.page(l, page.metadata.slug)} class="hover:text-secondary hover:font-bold">
+			<Icon icon={page.frontend.icon} size="xs" />
 			<p>{t.breadcrumbs[page.key]}</p>
 		</a></li>
 	</ul>

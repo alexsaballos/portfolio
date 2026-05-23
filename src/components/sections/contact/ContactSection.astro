@@ -1,14 +1,13 @@
 ---
 import { SYSTEM } from "../../../config/links";
 import { ICONS, PATHS } from "../../../config/assets";
-import type { LocalesType } from "../../../types/LocalesType";
 
 import Icon from "../../ui/libraries/Icon.astro";
 import Title from "../../ui/text/Title.astro";
 import ContactStatus from "./ContactStatus.astro";
 import SocialButtons from "../../ui/buttons/SocialButtons.astro";
 
-const { t } = Astro.locals as { t: LocalesType };
+const t = Astro.locals.t;
 ---
 
 <div class="p-5 gap-5">
@@ -18,7 +17,7 @@ const { t } = Astro.locals as { t: LocalesType };
         <div class="justify-items-center">
             <p class="my-2">{t.contact.form_invite}</p>
             <form enctype="application/x-www-form-urlencoded" data-endpoint={SYSTEM.API.resend}>
-                <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+                <fieldset class="fieldset bg-base-200 border border-base-300 rounded-4xl w-xs p-4">
                     <legend class="fieldset-legend">{t.contact.required}</legend>
 
                     <!-- Name input on contact form -->

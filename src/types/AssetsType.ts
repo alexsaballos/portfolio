@@ -11,8 +11,8 @@ export type IconsType = {
 
 export type IconsNamesType =
     | "hourglass" | "linkedin" | "github" | "handshake" | "merit" | "credly" | "wisp" | "hu" | "coursera"
-    | "edx" | "googledev" | "figma" | "gravatar" | "khanacademy" | "peoplecert" | "quizlet" | "sidimaqsa"
-    | "projects" | "experience" | "leadership" | "certifications" | "honors"
+    | "edx" | "googledev" | "figma" | "gravatar" | "khanacademy" | "orcid" | "peoplecert" | "quizlet"
+    | "sidimaqsa" | "projects" | "experience" | "leadership" | "certifications" | "honors"
     | "contact" | "home" | "hamburger_open" | "hamburger_close" | "link" | "id_card"
     | "at_sign" | "rectangle_list" | "message" | "paper_plane" | "spinner"
     | "envelope_check" | "circle_check" | "circle_xmark" | "sun" | "moon"

@@ -1,0 +1,87 @@
+---
+import '../styles/global.css';
+
+import { PATHS } from '../config/assets';
+import { SYSTEM } from '../config/links';
+import { ERRORS } from '../config/errors';
+import { PERSONAL } from '../config/personal';
+import { METADATA } from '../config/meta';
+import { FAVICONS } from '../config/assets';
+import { getLocaleMessages } from '../locales/utils';
+
+import type { ErrorsCodeType } from '../types/ErrorsType';
+import type { AdmittedLanguagesType } from '../types/LocalesType';
+
+import IconLibrary from '../components/ui/libraries/IconLibrary.astro';
+import FlagLibrary from '../components/ui/libraries/FlagLibrary.astro';
+import Navbar from '../components/widgets/Navbar.astro';
+import Footer from '../components/sections/Footer.astro';
+
+// Error Code Paramtrization
+const { code } = Astro.props as { code: ErrorsCodeType; };
+const currentError = ERRORS[code] ?? ERRORS[500];
+const lang: AdmittedLanguagesType = (Astro.currentLocale as AdmittedLanguagesType) ?? METADATA.defaultLanguage;
+
+// Astro system-wide language save
+Astro.locals.l = lang;
+Astro.locals.t = await getLocaleMessages(lang);
+---
+
+<html lang={lang}>
+	<head>
+		<!-- General metadata including icon -->
+		<meta charset={METADATA.charset} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="application-name" content={METADATA.siteName} />
+		<meta name="description" content={currentError.description} />
+		<meta name="author" content={PERSONAL.name} />
+		<link rel="icon" href={METADATA.favicon} type="image/x-icon" />
+		<link rel="manifest" href={METADATA.manifest} />
+		<title>{currentError.title}</title>
+
+		<!-- Robots & Crawlers -->
+		<meta name="robots" content="noindex,nofollow" />
+		<meta name="googlebot" content="noindex,nofollow" />
+
+		<!-- Theme Management -->
+		<meta name="theme-color" content={METADATA.colors.light.background} />
+		<meta name="theme-color-light" content={METADATA.colors.light.background} />
+		<meta name="theme-color-dark" content={METADATA.colors.dark.background} />
+        <meta name="color-scheme" content="light dark" />
+		<style>html {visibility: hidden;}</style>
+        <noscript><style>html {visibility: visible !important;}</style></noscript>
+		<script is:inline type="module" src={`${PATHS.scripts}theme-load.js`}></script>
+
+		<!-- Apple -->
+		<link rel="apple-touch-icon" href={FAVICONS.apple180.src} />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-title" content={METADATA.siteName} />
+		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+		<meta name="format-detection" content="telephone=no,email=no,address=no" />
+
+		<!-- OpenGraph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={currentError.title} />
+		<meta property="og:site_name" content={METADATA.siteName} />
+		<meta property="og:description" content={currentError.description} />
+		<meta property="og:locale" content={lang} />
+
+		<!-- Twitter -->
+		<meta property="twitter:domain" content={SYSTEM.domain} />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content={currentError.title} />
+		<meta name="twitter:description" content={currentError.description} />
+	</head>
+	<body>
+		<IconLibrary /><FlagLibrary />				<!-- Inject all Icons early on in the DOM -->
+		<div class="min-h-screen flex flex-col">
+			<Navbar />
+			<main id="main-content" class="flex-1 flex items-center justify-center py-30 md:py-10 px-5">
+				<slot />							<!-- Dynamic page insertion -->
+			</main>
+			<Footer />								<!-- Footer included with every page -->
+		</div>
+		<script is:inline type="module" src={`${PATHS.scripts}theme-sync.js`}></script>
+	</body>
+</html>

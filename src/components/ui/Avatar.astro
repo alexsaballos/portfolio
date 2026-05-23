@@ -2,10 +2,10 @@
 import { PICTURES } from "../../config/assets";
 import Image from "astro/components/Image.astro";
 
-const { classname } = Astro.props as { classname: string; };
+const classname = Astro.props.classname as string;
 ---
 
-<div class="avatar">
+<div class="avatar select-none">
     <div class=`ring-secondary ring-4 rounded-full hover:ring-6 ${classname}`>
         <figure>
             <Image src={PICTURES.PFP} alt="Alexander Saballos - Profile Picture" />

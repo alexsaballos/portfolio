@@ -1,11 +1,10 @@
 ---
+import Technology from "../../ui/Technology.astro";
 import { TECHNOLOGIES } from "../../../config/assets";
 import type { TechnologiesProductionSubheadersType } from "../../../types/AssetsType";
-import type { LocalesType } from "../../../types/LocalesType";
-import Technology from "../../ui/Technology.astro";
 
-const { t } = Astro.locals as { t: LocalesType; };
-const { subheader } = Astro.props as { subheader: TechnologiesProductionSubheadersType }
+const t = Astro.locals.t;
+const subheader = Astro.props.subheader as TechnologiesProductionSubheadersType;
 ---
 
 <fieldset class="fieldset bg-base-100 border border-base-100 rounded-xl p-4">

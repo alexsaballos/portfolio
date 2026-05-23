@@ -17,14 +17,14 @@ export const VANITY: VanityListType = {
             },
         },
         metadata: {
-            slug: "/linkedin",
+            slug: "linkedin",
             label: "My LinkedIn Profile",
             groups: ["contact", "social"]
         },
         SEO: {
             title: SEO.title("LinkedIn Profile"),
             description: SEO.description(`LinkedIn Professional Profile of ${PERSONAL.name}`),
-            canonical: SEO.canonical_vanity("/linkedin")
+            canonical: SEO.canonical.vanity("linkedin")
         }
     },
     github: {
@@ -39,14 +39,14 @@ export const VANITY: VanityListType = {
             }
         },
         metadata: {
-            slug: "/github",
+            slug: "github",
             label: "My GitHub Profile",
             groups: ["contact", "social"]
         },
         SEO: {
             title: SEO.title("GitHub Profile"),
             description: SEO.description(`GitHub Professional Profile of ${PERSONAL.name}`),
-            canonical: SEO.canonical_vanity("/github")
+            canonical: SEO.canonical.vanity("github")
         }
     },
     handshake: {
@@ -61,14 +61,14 @@ export const VANITY: VanityListType = {
             }
         },
         metadata: {
-            slug: "/handshake",
+            slug: "handshake",
             label: "My Handshake Profile",
             groups: ["contact", "social"]
         },
         SEO: {
             title: SEO.title("Handshake Profile"),
             description: SEO.description(`Handshake Professional Profile of ${PERSONAL.name}`),
-            canonical: SEO.canonical_vanity("/handshake")
+            canonical: SEO.canonical.vanity("handshake")
         }
     },
     merit: {
@@ -83,14 +83,14 @@ export const VANITY: VanityListType = {
             }
         },
         metadata: {
-            slug: "/merit",
+            slug: "merit",
             label: "My Merit Page",
             groups: ["social"]
         },
         SEO: {
             title: SEO.title("Merit Page Profile"),
             description: SEO.description(`Merit Page Profile of ${PERSONAL.name}`),
-            canonical: SEO.canonical_vanity("/merit")
+            canonical: SEO.canonical.vanity("merit")
         }
     },
     credly: {
@@ -105,14 +105,14 @@ export const VANITY: VanityListType = {
             }
         },
         metadata: {
-            slug: "/credly",
+            slug: "credly",
             label: "My Credly Profile",
             groups: ["social"]
         },
         SEO: {
             title: SEO.title("Credly Profile"),
             description: SEO.description(`Credly Professional Profile of ${PERSONAL.name}`),
-            canonical: SEO.canonical_vanity("/credly")
+            canonical: SEO.canonical.vanity("credly")
         }
     },
     wisp: {
@@ -127,14 +127,14 @@ export const VANITY: VanityListType = {
             }
         },
         metadata: {
-            slug: "/wisp",
+            slug: "wisp",
             label: "WISP Official Website",
             groups: ["social"]
         },
         SEO: {
             title: SEO.title("WISP Website"),
             description: SEO.description(`WISP Website - ${PERSONAL.name}`),
-            canonical: SEO.canonical_vanity("/wisp")
+            canonical: SEO.canonical.vanity("wisp")
         }
     },
     hu: {
@@ -149,14 +149,14 @@ export const VANITY: VanityListType = {
             }
         },
         metadata: {
-            slug: "/hu",
+            slug: "hu",
             label: "Harding University Official Website",
             groups: ["social"]
         },
         SEO: {
             title: SEO.title("HU Website"),
             description: SEO.description(`Harding University Website - ${PERSONAL.name}`),
-            canonical: SEO.canonical_vanity("/hu")
+            canonical: SEO.canonical.vanity("hu")
         }
     },
     coursera: {
@@ -171,14 +171,14 @@ export const VANITY: VanityListType = {
             }
         },
         metadata: {
-            slug: "/coursera",
+            slug: "coursera",
             label: "My Coursera Profile",
             groups: ["ungrouped"]
         },
         SEO: {
             title: SEO.title("Coursera Profile"),
             description: SEO.description(`Coursera Professional Profile of ${PERSONAL.name}`),
-            canonical: SEO.canonical_vanity("/coursera")
+            canonical: SEO.canonical.vanity("coursera")
         }
     },
     edx: {
@@ -193,14 +193,14 @@ export const VANITY: VanityListType = {
             }
         },
         metadata: {
-            slug: "/edx",
+            slug: "edx",
             label: "My EdX Profile",
             groups: ["ungrouped"]
         },
         SEO: {
             title: SEO.title("EdX Profile"),
             description: SEO.description(`EdX Professional Profile of ${PERSONAL.name}`),
-            canonical: SEO.canonical_vanity("/edx")
+            canonical: SEO.canonical.vanity("edx")
         }
     },
     googledev: {
@@ -215,14 +215,14 @@ export const VANITY: VanityListType = {
             }
         },
         metadata: {
-            slug: "/googledev",
+            slug: "googledev",
             label: "My Google Developer Profile",
             groups: ["ungrouped"]
         },
         SEO: {
             title: SEO.title("Google Developer Profile"),
             description: SEO.description(`Google Developer Professional Profile of ${PERSONAL.name}`),
-            canonical: SEO.canonical_vanity("/googledev")
+            canonical: SEO.canonical.vanity("googledev")
         }
     },
     figma: {
@@ -237,14 +237,14 @@ export const VANITY: VanityListType = {
             }
         },
         metadata: {
-            slug: "/figma",
+            slug: "figma",
             label: "My Figma Profile",
             groups: ["ungrouped"]
         },
         SEO: {
             title: SEO.title("Figma Profile"),
             description: SEO.description(`Figma Professional Profile of ${PERSONAL.name}`),
-            canonical: SEO.canonical_vanity("/figma")
+            canonical: SEO.canonical.vanity("figma")
         }
     },
     gravatar: {
@@ -259,14 +259,14 @@ export const VANITY: VanityListType = {
             }
         },
         metadata: {
-            slug: "/gravatar",
+            slug: "gravatar",
             label: "My Gravatar Profile",
             groups: ["ungrouped"]
         },
         SEO: {
             title: SEO.title("Gravatar Profile"),
             description: SEO.description(`Gravatar Professional Profile of ${PERSONAL.name}`),
-            canonical: SEO.canonical_vanity("/gravatar")
+            canonical: SEO.canonical.vanity("gravatar")
         }
     },
     khanacademy: {
@@ -281,14 +281,36 @@ export const VANITY: VanityListType = {
             }
         },
         metadata: {
-            slug: "/khanacademy",
+            slug: "khanacademy",
             label: "My Khan Academy Profile",
             groups: ["ungrouped"]
         },
         SEO: {
             title: SEO.title("Khan Academy Profile"),
             description: SEO.description(`Khan Academy Professional Profile of ${PERSONAL.name}`),
-            canonical: SEO.canonical_vanity("/khanacademy")
+            canonical: SEO.canonical.vanity("khanacademy")
+        }
+    },
+    orcid: {
+        key: "orcid",
+        frontend: {
+            name: "ORCiD",
+            link: LINKS.profiles.orcid,
+            icon: ICONS.orcid,
+            text: {
+                owner: "my",
+                type: "profile"
+            }
+        },
+        metadata: {
+            slug: "orcid",
+            label: "My ORCiD Profile",
+            groups: ["ungrouped"]
+        },
+        SEO: {
+            title: SEO.title("ORCiD Profile"),
+            description: SEO.description(`ORCiD ID Profile of ${PERSONAL.name}`),
+            canonical: SEO.canonical.vanity("orcid")
         }
     },
     peoplecert: {
@@ -303,21 +325,21 @@ export const VANITY: VanityListType = {
             }
         },
         metadata: {
-            slug: "/peoplecert",
+            slug: "peoplecert",
             label: "My PeopleCert Profile",
             groups: ["ungrouped"]
         },
         SEO: {
             title: SEO.title("PeopleCert Profile"),
             description: SEO.description(`PeopleCert Professional Profile of ${PERSONAL.name}`),
-            canonical: SEO.canonical_vanity("/peoplecert")
+            canonical: SEO.canonical.vanity("peoplecert")
         }
     },
     quizlet: {
         key: "quizlet",
         frontend: {
             name: "Quizlet",
-            link: LINKS.other.quizlet,
+            link: LINKS.profiles.quizlet,
             icon: ICONS.quizlet,
             text: {
                 owner: "my",
@@ -325,14 +347,14 @@ export const VANITY: VanityListType = {
             }
         },
         metadata: {
-            slug: "/quizlet",
+            slug: "quizlet",
             label: "My Quizlet Profile",
             groups: ["ungrouped"]
         },
         SEO: {
             title: SEO.title("Quizlet Profile"),
             description: SEO.description(`Quizlet Professional Profile of ${PERSONAL.name}`),
-            canonical: SEO.canonical_vanity("/quizlet")
+            canonical: SEO.canonical.vanity("quizlet")
         }
     },
     sidimaqsa: {
@@ -347,14 +369,14 @@ export const VANITY: VanityListType = {
             }
         },
         metadata: {
-            slug: "/sidimaqsa",
+            slug: "sidimaqsa",
             label: "My Business Website",
             groups: ["ungrouped"]
         },
         SEO: {
             title: SEO.title("SIDIMAQSA Website"),
             description: SEO.description(`SIDIMAQSA Website - ${PERSONAL.name}`),
-            canonical: SEO.canonical_vanity("/sidimaqsa")
+            canonical: SEO.canonical.vanity("sidimaqsa")
         }
     }
 } as const;

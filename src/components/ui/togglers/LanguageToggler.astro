@@ -2,15 +2,19 @@
 import { ICONS } from "../../../config/assets";
 import { LANGUAGES } from "../../../config/languages";
 import { ROUTE } from "../../../config/routing";
+import type { AdmittedLanguagesType } from "../../../types/LocalesType";
+import type { DirectoryPageSlugsType } from "../../../types/PagesType";
 
 import Flag from "../../ui/libraries/Flag.astro";
 import Icon from "../../ui/libraries/Icon.astro";
 
-const { classname } = Astro.props as { classname: string; }
+const classname = Astro.props.classname as string;
 
 // Get the current URL's slug for appropriate LanguageToggling
 const segments: string[] = Astro.url.pathname.split("/").filter(Boolean);
-const pageSlug: string = (segments.length > 1) ? (`/${segments[1]}`) : "";
+const pageSlug = ((segments.length > 1) ? (`${segments[1]}`) : "") as DirectoryPageSlugsType;
+const routedPage = (lang: AdmittedLanguagesType): string =>
+    ((pageSlug == "") ? ROUTE.home(lang) : ROUTE.page(lang, pageSlug));
 ---
 
 <div class=`dropdown dropdown-center ${classname}`>
@@ -20,12 +24,10 @@ const pageSlug: string = (segments.length > 1) ? (`/${segments[1]}`) : "";
     </div>
     <ul tabindex="-1" class="dropdown-content menu bg-base-200 text-base-content rounded-box gap-1 w-30 my-2 p-1">
         {Object.values(LANGUAGES).map((entry) => (
-            <li>
-                <a href={ROUTE.page(entry.code.lang, pageSlug)}>
-                    <Flag icon={entry.icon} size="sm" />
-                    <p>{entry.name}</p>
-                </a>
-            </li>
+            <li><a href={routedPage(entry.code.lang)}>
+                <Flag icon={entry.icon} size="sm" />
+                <p>{entry.name.localized}</p>
+            </a></li>
         ))}
     </ul>
 </div>

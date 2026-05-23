@@ -4,10 +4,14 @@ import type { LanguagesType } from "../types/LocalesType";
 
 export const LANGUAGES: LanguagesType = {
     de: {
+        key: "de",
         home: ROUTE.home("de"),
         icon: FLAGS.de.icon,
         picture: FLAGS.de.picture,
-        name: "Deutsch",
+        name: {
+            standard: "German",
+            localized: "Deutsch"
+        },
         code: {
             lang: "de",
             langcountry: "de-de"
@@ -18,10 +22,14 @@ export const LANGUAGES: LanguagesType = {
         }
     },
     en: {
+        key: "en",
         home: ROUTE.home("en"),
         icon: FLAGS.us.icon,
         picture: FLAGS.us.picture,
-        name: "English",
+        name: {
+            standard: "English",
+            localized: "English"
+        },
         code: {
             lang: "en",
             langcountry: "en-us"
@@ -32,10 +40,14 @@ export const LANGUAGES: LanguagesType = {
         }
     },
     es: {
+        key: "es",
         home: ROUTE.home("es"),
         icon: FLAGS.mx.icon,
         picture: FLAGS.mx.picture,
-        name: "Español",
+        name: {
+            standard: "Spanish",
+            localized: "Español"
+        },
         code: {
             lang: "es",
             langcountry: "es-mx"

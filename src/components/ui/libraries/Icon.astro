@@ -8,8 +8,8 @@ const { icon, size, classname: classname = "" } = Astro.props as {
 };
 
 const uuid = crypto.randomUUID();       // Accessibility
-const sizeMap = { dxs: 6, xs: 15, sm: 20, md: 35, lg: 45, xl: 60, dxl:70, ixl:280 } as const;
-const pixelSize: (6 | 15 | 20 | 35 | 45 | 60 | 70 | 280) = sizeMap[(size ?? icon.size) as keyof typeof sizeMap];
+const sizeMap = { dxs: 6, xs: 15, sm: 20, md: 35, lg: 45, xl: 60, dxl:70, exl: 150, ixl:280 } as const;
+const pixelSize: (6 | 15 | 20 | 35 | 45 | 60 | 70 | 150 | 280) = sizeMap[(size ?? icon.size) as keyof typeof sizeMap];
 ---
 
 <svg

@@ -1,10 +1,12 @@
 /// <reference types="astro/client" />
 
-import type { LocalesType } from "./types/LocalesType";
+import type { AdmittedLanguagesType, LocalesType } from "./types/LocalesType";
 
-declare namespace App {
-    interface locals {
-        readonly t: LocalesType;
-        readonly locale: string;
+declare global {
+    namespace App {
+        interface Locals {
+            t: LocalesType;             // Saves current language from /[lang]/
+            l: AdmittedLanguagesType;   // Saves all translated text web-wide
+        }
     }
 }

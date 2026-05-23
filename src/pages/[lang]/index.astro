@@ -1,34 +1,22 @@
 ---
 import type { AdmittedLanguagesType } from "../../types/LocalesType";
 
-import { SEO } from "../../config/routing";
-import { PAGES } from "../../config/pages";
 import { LANGUAGES } from "../../config/languages";
 
-import Layout from "../../layouts/Layout.astro";
-import IntroVideo from "../../components/sections/intro/IntroVideo.astro";
-import Intro from "../../components/sections/intro/Intro.astro";
+import PageLayout from "../../layouts/PageLayout.astro";
+import Intro from "../../components/sections/Intro.astro";
 import About from "../../components/sections/About.astro";
 import Stack from "../../components/sections/stack/Stack.astro";
 import Categories from "../../components/sections/Categories.astro";
 
+// Intercepts requested slug and redirects appropriately (fallback to main redirection index)
 export const getStaticPaths = () => Object.keys(LANGUAGES).map(
     lang => ({ params: { lang }}));
-
-// Intercepts requested slug and redirects appropriately (fallback to main redirection index)
-const { lang } = Astro.params as { lang: AdmittedLanguagesType };
 ---
 
-<Layout title={PAGES.home.SEO_title}
-        description={PAGES.home.SEO_description}
-        canonical_link={SEO.canonical_page(lang)}
-        navbarBG="transparent">
-    <!-- mt-26 IntroVideo cancels out -mt-26 on Layout.astro. mt-52 returns it to normality -->
-    <div class="relative w-full p-10">
-        <div class="-mt-26"><IntroVideo /></div>
-        <div class="mt-52"><Intro /></div>
-    </div>
+<PageLayout page="home" lang={Astro.params.lang as AdmittedLanguagesType}>
+    <Intro />
     <About />
     <Stack />
     <Categories />
-</Layout>
+</PageLayout>

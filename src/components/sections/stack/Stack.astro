@@ -1,11 +1,10 @@
 ---
-import type { TechnologiesCoreSubheadersType, TechnologiesProductionSubheadersType } from "../../../types/AssetsType";
-import type { LocalesType } from "../../../types/LocalesType";
 import Title from "../../ui/text/Title.astro";
 import CoreSubheader from "./CoreSubheader.astro";
 import ProductionSubheader from "./ProductionSubheader.astro";
+import type { TechnologiesCoreSubheadersType, TechnologiesProductionSubheadersType } from "../../../types/AssetsType";
 
-const { t } = Astro.locals as { t: LocalesType; };
+const t = Astro.locals.t;
 const coreSubheaders1: TechnologiesCoreSubheadersType[] = ["embedded", "software"];
 const coreSubheaders2: TechnologiesCoreSubheadersType = "cad";
 const productionSubheaders1: TechnologiesProductionSubheadersType = "web";

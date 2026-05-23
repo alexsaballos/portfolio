@@ -1,8 +1,6 @@
 ---
-import type { LocalesType } from "../../types/LocalesType";
 import Title from "../ui/text/Title.astro";
-
-const { t } = Astro.locals as { t: LocalesType };
+const t = Astro.locals.t;
 ---
 
 <section class="bg-base-100 py-10 px-5">

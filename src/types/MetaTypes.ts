@@ -5,18 +5,19 @@ export type MetadataType = {
     url: string;
     base: string;
     officialRoot: string;
+    siteName: string;
     text_direction: string;
     defaultLanguage: AdmittedLanguagesType;
     charset: string;
     display: string;
     orientation: string;
     colors: {
-        background: string;
-        theme: string;
+        dark: Record<("background" | "primary" | "secondary" | "accent"), string>;
+        light: Record<("background" | "primary" | "secondary" | "accent"), string>;
     };
     manifest_categories: string[];
     manifest_favicons: Array<FaviconListType[keyof FaviconListType]>;
-    ogImage: string;
+    opengraph: Record<("image" | "image_width" | "image_height" | "image_type"), string>;
     favicon: string;
     manifest: string;
     robots: string;

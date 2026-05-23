@@ -1,10 +1,9 @@
 ---
-import type { TechnologiesType } from "../../types/AssetsType";
-import type { LocalesType } from "../../types/LocalesType";
 import Icon from "../ui/libraries/Icon.astro";
+import type { TechnologiesType } from "../../types/AssetsType";
 
-const { selection } = Astro.props as { selection: TechnologiesType };
-const { t } = Astro.locals as { t: LocalesType; };
+const selection = Astro.props.selection as TechnologiesType;
+const t = Astro.locals.t;
 ---
 
 <div class="tooltip tech select-none" style={`--tech-color: ${selection.visual.color}`}>
