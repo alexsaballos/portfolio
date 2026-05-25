@@ -1,9 +1,9 @@
 ---
-import { ERRORS } from "../../config/errors";
-import { METADATA } from "../../config/meta";
-import { ROUTE } from "../../config/routing";
-import ErrorLayout from "../../layouts/ErrorLayout.astro";
-import type { ErrorsCodeType } from "../../types/ErrorsType";
+import { ERRORS } from "@config/errors";
+import { METADATA } from "@config/meta";
+import { ROUTE } from "@config/routing";
+import ErrorLayout from "@layouts/ErrorLayout.astro";
+import type { ErrorsCodeType } from "@typing/ErrorsType";
 
 export const getStaticPaths = () => Object.keys(ERRORS).map(
     code => ({ params: { code }}));
@@ -16,8 +16,9 @@ const currentError = ERRORS[Number(Astro.params.code) as ErrorsCodeType];
     <div class="flex flex-col text-center gap-5">
         <h1 class="text-6xl font-light">Error</h1>
         <h2 class="text-9xl font-bold">{currentError.code}</h2>
-        <h3 class="text-3xl font-light">{currentError.description}</h3>
-        <h4 class="text-2xl font-light">Not to worry though. Take a look at other sections or return
+        <h3 class="text-6xl font-light">{currentError.name}</h3>
+        <h4 class="text-2xl font-light">{currentError.description} <br>
+            Not to worry though. Take a look at other sections or return
             <a class="text-primary hover:text-secondary hover:underline" href={ROUTE.home(METADATA.defaultLanguage)}>home</a>.
         </h4>
     </div>

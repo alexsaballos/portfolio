@@ -1,37 +1,37 @@
-import { SYSTEM } from "./links";
+import { SYSTEM } from "@config/links";
 import type {
     VideosListType, PicturesListType, IconsListType, TechnologiesListType, FlagsListType, FaviconListType, PathsListType
-} from "../types/AssetsType";
+} from "@typing/AssetsType";
 
 // Picture used on OgImage & Intro.astro
-import pfpPicture from "../images/intro/pfp.jpg"
+import pfpPicture from "@images/intro/pfp.jpg"
 
 // Pictures used on LanguageGate.astro
-import de from "../images/flags/de.jpg";
-import mx from "../images/flags/mx.jpg";
-import us from "../images/flags/us.jpg";
+import de from "@images/flags/de.jpg";
+import mx from "@images/flags/mx.jpg";
+import us from "@images/flags/us.jpg";
 
 // Pictures used on Categories.astro
-import projectsPicture from "../images/categories/projects.jpg"
-import experiencePicture from "../images/categories/experience.jpg"
-import leadershipPicture from "../images/categories/leadership.jpg"
-import certificationsPicture from "../images/categories/certifications.jpg"
-import honorsPicture from "../images/categories/honors.jpg"
-import contactPicture from "../images/categories/contact.jpg"
+import projectsPicture from "@images/categories/projects.jpg"
+import experiencePicture from "@images/categories/experience.jpg"
+import leadershipPicture from "@images/categories/leadership.jpg"
+import certificationsPicture from "@images/categories/certifications.jpg"
+import honorsPicture from "@images/categories/honors.jpg"
+import contactPicture from "@images/categories/contact.jpg"
 
 // TODO:
 // Pictures used on Projects.astro
 // Pictures used on Experience.astro
 // Pictures used on Certifications.astro
-import iasscPicture from "../images/logos/iassc.png"
-import arpelsPicture from "../images/logos/arpels.png"
-import cs50Picture from "../images/logos/cs50.png"
-import courseraPicture from "../images/logos/coursera.png"
+import iasscPicture from "@images/logos/iassc.png"
+import arpelsPicture from "@images/logos/arpels.png"
+import cs50Picture from "@images/logos/cs50.png"
+import courseraPicture from "@images/logos/coursera.png"
 
 // Pictures used on Honors.astro
-import nceesPicture from "../images/logos/ncees.png"
-import huPicture from "../images/logos/hu.png"
-import wispPicture from "../images/logos/wisp.png"
+import nceesPicture from "@images/logos/ncees.png"
+import huPicture from "@images/logos/hu.png"
+import wispPicture from "@images/logos/wisp.png"
 
 const TECHNOLOGIES_COLORS = {
     embedded: "#D48D17",
@@ -44,21 +44,21 @@ const TECHNOLOGIES_COLORS = {
 
 // COMPLETE ABSOLUTE PATHS REFERENCE
 // Absolute Paths needed for all Client-side Assets & JS
-export const PATHS: PathsListType = {
+export const PATHS = {
     scripts: "/scripts/",
     favicons: "/assets/favicons/",
     pictures: "/assets/pictures/",
     videos: "/assets/videos/"
-} as const;
+} as const satisfies PathsListType;
 
 // COMPLETE PICTURES & VIDEOS REFERENCE
 // Complete Pictures Reference
-export const VIDEOS: VideosListType = {
+export const VIDEOS = {
     IntroVideo: `${PATHS.videos}intro.webm`
-} as const;
+} as const satisfies VideosListType;
 
 // Complete Videos Reference
-export const PICTURES: PicturesListType = {
+export const PICTURES = {
     ogImage: `${SYSTEM.domain}${PATHS.pictures}og_image.png`,
     PFP: pfpPicture,
     categories: {
@@ -80,11 +80,11 @@ export const PICTURES: PicturesListType = {
         wisp: wispPicture,
         hu: huPicture
     }
-} as const;
+} as const satisfies PicturesListType;
 
 // COMPLETE SVG ASSETS REFERENCE
 // Complete UI Icons Reference
-export const ICONS: IconsListType = {
+export const ICONS = {
 
     // Coming soon
     hourglass: {
@@ -371,10 +371,10 @@ export const ICONS: IconsListType = {
         desc: "All of our supported devices for this website",
         size: "md"
     }
-} as const;
+} as const satisfies IconsListType;
 
 // Complete Technologies Reference
-export const TECHNOLOGIES: TechnologiesListType = {
+export const TECHNOLOGIES = {
     antdesign: {
         visual: {
             name: "AntDesign",
@@ -1089,10 +1089,10 @@ export const TECHNOLOGIES: TechnologiesListType = {
             domains: ["desktop", "systems"]
         }
     }
-} as const;
+} as const satisfies TechnologiesListType;
 
 // Complete Flag Icons Reference
-export const FLAGS: FlagsListType = {
+export const FLAGS = {
     de: {
         picture: de,
         icon: {
@@ -1120,11 +1120,11 @@ export const FLAGS: FlagsListType = {
             size: "sm"
         }
     }
-} as const;
+} as const satisfies FlagsListType;
 
 // COMPLETE WEBMANIFEST REFERENCE
 // Complete manifest.webmanifest Reference - Android, Apple, Microsoft, and Safari
-export const FAVICONS: FaviconListType = {
+export const FAVICONS = {
     android192: {
         src: `${PATHS.favicons}android-chrome-192x192.png`,
         sizes: "192x192",
@@ -1165,4 +1165,4 @@ export const FAVICONS: FaviconListType = {
         type: "image/svg+xml",
         purpose: "maskable"
     }
-} as const;
+} as const satisfies FaviconListType;

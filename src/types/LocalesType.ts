@@ -1,9 +1,9 @@
 import type {
     IconsType, TechnologiesCoreSubheadersType, TechnologiesNamesType, TechnologiesProductionSubheadersType
-} from "./AssetsType";
-import type { CertLocaleType } from "./CertificationsType";
-import type { HonorsType } from "./HonorsType";
-import type { DirectoryPageNamesType, NavigationPageNamesType } from "./PagesType";
+} from "@typing/AssetsType";
+import type { CertLocaleType } from "@typing/CertificationsType";
+import type { HonorsType } from "@typing/HonorsType";
+import type { DirectoryPageNamesType, NavigationPageNamesType } from "@typing/PagesType";
 
 export type AdmittedLanguagesType = "de" | "en" | "es";
 export type AdmittedCountriesType = "de" | "us" | "mx";

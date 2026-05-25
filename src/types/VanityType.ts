@@ -1,4 +1,4 @@
-import type { IconsType } from "./AssetsType";
+import type { IconsType } from "@typing/AssetsType";
 
 export type VanityEntryGroupType = "contact" | "social" | "ungrouped";
 export type BaseVanityEntryType = {

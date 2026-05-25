@@ -1,12 +1,12 @@
 ---
-import Icon from "../ui/libraries/Icon.astro";
-import type { TechnologiesType } from "../../types/AssetsType";
+import Icon from "@libraries/Icon.astro";
+import type { TechnologiesType } from "@typing/AssetsType";
 
 const selection = Astro.props.selection as TechnologiesType;
 const t = Astro.locals.t;
 ---
 
-<div class="tooltip tech select-none" style={`--tech-color: ${selection.visual.color}`}>
+<div data-aos="zoom-in" class="tooltip tech select-none" style={`--tech-color: ${selection.visual.color}`}>
     <div class="tooltip-content rounded-2xl flex flex-row ring-4 ring-base-300">
         <Icon icon={selection.visual.icon} size="dxl" classname="flex-1 justify-center" />
         <div class="flex-2">

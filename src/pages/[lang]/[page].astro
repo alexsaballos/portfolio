@@ -1,18 +1,18 @@
 ---
-import type { AdmittedLanguagesType } from "../../types/LocalesType";
-import type { NavigationPageNamesType } from "../../types/PagesType";
-
 import { LANGUAGES } from "../../config/languages";
 import { NAVIGATION_PAGES } from "../../config/pages";
 
-import PageLayout from "../../layouts/PageLayout.astro";
-import Breadcrumbs from "../../components/ui/Breadcrumbs.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import Breadcrumbs from "@ui/Breadcrumbs.astro";
 
-import ComingSoon from "../../components/sections/ComingSoon.astro";
-import CertificationsSection from "../../components/sections/CertificationsSection.astro";
-import HonorsSection from "../../components/sections/HonorsSection.astro";
-import ContactSection from "../../components/sections/contact/ContactSection.astro";
-import Navbar from "../../components/widgets/Navbar.astro";
+import ComingSoon from "@sections/ComingSoon.astro";
+import CertificationsSection from "@sections/CertificationsSection.astro";
+import HonorsSection from "@sections/HonorsSection.astro";
+import ContactSection from "@sections/contact/ContactSection.astro";
+import Navbar from "@widgets/Navbar.astro";
+
+import type { AdmittedLanguagesType } from "@typing/LocalesType";
+import type { NavigationPageNamesType } from "@typing/PagesType";
 
 export const getStaticPaths = () =>
     Object.keys(LANGUAGES).flatMap(lang => (

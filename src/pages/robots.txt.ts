@@ -1,4 +1,4 @@
-import { METADATA } from "../config/meta";
+import { METADATA } from "@config/meta";
 
 if (!METADATA.url) throw new Error("SITE is required to generate robots.txt");
 

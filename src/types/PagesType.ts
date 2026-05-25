@@ -1,4 +1,4 @@
-import type { IconsType } from "./AssetsType";
+import type { IconsType } from "@typing/AssetsType";
 
 // Single-word SSOT locked keys per page
 export type DirectoryPageNamesType =

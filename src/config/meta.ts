@@ -1,14 +1,14 @@
-import { PERSONAL } from "./personal";
-import { FAVICONS, PICTURES } from "./assets";
+import { PERSONAL } from "@config/personal";
+import { FAVICONS, PICTURES } from "@config/assets";
 
-import type { MetadataType } from "../types/MetaTypes";
-import type { FaviconsPngListType, FaviconsSvgListType } from "../types/AssetsType";
+import type { MetadataType } from "@typing/MetaTypes";
+import type { FaviconsPngListType, FaviconsSvgListType } from "@typing/AssetsType";
 
 // Extract official link & base from astro.config.mjs
 const linkSite: string = import.meta.env.SITE ?? "";
 
 // Site-wide Metadata
-export const METADATA: MetadataType = {
+export const METADATA = {
     url: linkSite,
     base: "",
     officialRoot: linkSite,
@@ -54,4 +54,4 @@ export const METADATA: MetadataType = {
     favicon: "/favicon.ico",
     manifest: "/manifest.webmanifest",
     robots: "/robots.txt"
-} as const;
+} as const satisfies MetadataType;

@@ -1,7 +1,7 @@
-import { SYSTEM } from "../links";
-import { METADATA } from "../meta";
-import { PERSONAL } from "../personal";
-import { LANGUAGES } from "../languages";
+import { SYSTEM } from "@config/links";
+import { METADATA } from "@config/meta";
+import { PERSONAL } from "@config/personal";
+import { LANGUAGES } from "@config/languages";
 
 // Website Entity - Alexander Saballos' Portfolio - Schema.org Structured Data Identity Linking
 export const SCHEMAORG_WEBSITE = {

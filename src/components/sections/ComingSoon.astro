@@ -1,12 +1,13 @@
 ---
-import { ICONS } from "../../config/assets";
-import Icon from "../ui/libraries/Icon.astro";
+import { ICONS } from "@config/assets";
+import Icon from "@libraries/Icon.astro";
+import Title from "@text/Title.astro";
 
 const t = Astro.locals.t;
 ---
 
-<section class="flex flex-col font-light text-center place-items-center gap-4 py-30 md:py-10 px-5">
-    <Icon icon={ICONS.hourglass} size="exl" classname="animate-pulse text-center" />
-    <h1 class="text-6xl">{t.coming_soon.p1}</h1>
-    <h2 class="text-3xl">{t.coming_soon.p2}</h2>
+<section data-aos="fade-in" class="flex flex-col text-center place-items-center gap-4 py-30 md:py-10 px-5">
+    <Icon icon={ICONS.hourglass} size="exl" />
+    <Title title={t.coming_soon.p1} />
+    <h2 class="text-2xl font-light">{t.coming_soon.p2}</h2>
 </section>

@@ -1,10 +1,12 @@
 ---
-import Title from "../../ui/text/Title.astro";
-import CoreSubheader from "./CoreSubheader.astro";
-import ProductionSubheader from "./ProductionSubheader.astro";
-import type { TechnologiesCoreSubheadersType, TechnologiesProductionSubheadersType } from "../../../types/AssetsType";
+import Title from "@text/Title.astro";
+import CoreSubheader from "@sections/stack/CoreSubheader.astro";
+import ProductionSubheader from "@sections/stack/ProductionSubheader.astro";
+import type { TechnologiesCoreSubheadersType, TechnologiesProductionSubheadersType } from "@typing/AssetsType";
 
 const t = Astro.locals.t;
+
+// Subheaders keys
 const coreSubheaders1: TechnologiesCoreSubheadersType[] = ["embedded", "software"];
 const coreSubheaders2: TechnologiesCoreSubheadersType = "cad";
 const productionSubheaders1: TechnologiesProductionSubheadersType = "web";
@@ -12,8 +14,8 @@ const productionSubheaders2: TechnologiesProductionSubheadersType[] = ["framewor
 const productionSubheaders3: TechnologiesProductionSubheadersType = "operations";
 ---
 
-<section class="bg-base-300 rounded-4xl py-10 px-5 lg:px-30">
-    <Title title={t.stack.title} />
+<section data-aos="fade-up" class="bg-base-300 rounded-4xl py-10 px-5 lg:px-30">
+    <div data-aos="fade-up"><Title title={t.stack.title} /></div>
     <div class="grid gap-10 xl:px-10">
 
         <!-- ================= CORE ================= -->
@@ -22,34 +24,40 @@ const productionSubheaders3: TechnologiesProductionSubheadersType = "operations"
             <div class="flex flex-col flex-wrap gap-6">
 
                 <!-- Embedded & Software Subheaders -->
-                <div class="flex flex-col lg:flex-row gap-6">
+                <div data-aos="fade-up" class="flex flex-col lg:flex-row gap-6">
                     {Object.values(coreSubheaders1).map(entry => (
                         <CoreSubheader subheader={entry} />
                     ))}
                 </div>
 
                 <!-- CAD Subheader -->
-                <CoreSubheader subheader={coreSubheaders2} />
+                <div data-aos="fade-up">
+                    <CoreSubheader subheader={coreSubheaders2} />
+                </div>
             </div>
         </div>
 
         <!-- ============== PRODUCTION ============== -->
         <div class="group grid gap-3 mt-4">
-            <h2 class="text-2xl font-bold tracking-tight">{t.stack.production.header}</h2>
+            <h2 data-aos="fade-up" class="text-2xl font-bold tracking-tight">{t.stack.production.header}</h2>
             <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
                 <!-- Web Subheader -->
-                <ProductionSubheader subheader={productionSubheaders1} />
+                <div data-aos="fade-up">
+                    <ProductionSubheader subheader={productionSubheaders1} />
+                </div>
 
                 <!-- Frameworks & Databases Subheaders -->
-                <div class="flex lg:flex-col gap-6 lg:gap-y-14 xl:gap-y-5">
+                <div data-aos="fade-up" class="flex lg:flex-col gap-6 lg:gap-y-14 xl:gap-y-5">
                     {Object.values(productionSubheaders2).map(entry => (
                         <ProductionSubheader subheader={entry} />
                     ))}
                 </div>
 
                 <!-- Operations Subheader -->
-                <ProductionSubheader subheader={productionSubheaders3} />
+                <div data-aos="fade-up">
+                    <ProductionSubheader subheader={productionSubheaders3} />
+                </div>
 
             </div>
         </div>

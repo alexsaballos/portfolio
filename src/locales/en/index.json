@@ -253,7 +253,7 @@
         "alerts": {
             "loading": "Sending your message",
             "success": {
-                "p1": "Your message was sent successfully",
+                "p1": "Message sent successfully",
                 "p2": "Thank you for reaching out. I'll get back to you as soon as possible"
             },
             "failure": "There has been an error. Please try again later"

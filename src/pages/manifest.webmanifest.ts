@@ -1,6 +1,6 @@
-import { METADATA } from "../config/meta";
-import { PAGES } from "../config/pages";
-import { ROUTE } from "../config/routing";
+import { METADATA } from "@config/meta";
+import { PAGES } from "@config/pages";
+import { ROUTE } from "@config/routing";
 
 export async function GET() {
     const manifest:string = JSON.stringify(

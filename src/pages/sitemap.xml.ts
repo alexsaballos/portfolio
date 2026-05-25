@@ -1,9 +1,9 @@
-import { LANGUAGES } from "../config/languages";
-import { METADATA } from "../config/meta";
-import { VANITY } from "../config/vanity";
-import { PAGES } from "../config/pages";
-import { SEO } from "../config/routing";
-import type { AdmittedLanguagesType } from "../types/LocalesType";
+import { LANGUAGES } from "@config/languages";
+import { METADATA } from "@config/meta";
+import { VANITY } from "@config/vanity";
+import { PAGES } from "@config/pages";
+import { SEO } from "@config/routing";
+import type { AdmittedLanguagesType } from "@typing/LocalesType";
 
 // Indentation needs to stay like this in order to avoid tabulation & break issues
 export async function GET() {

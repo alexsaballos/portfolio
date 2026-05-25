@@ -1,13 +1,13 @@
 ---
-import type { AdmittedLanguagesType } from "../../types/LocalesType";
+import { LANGUAGES } from "@config/languages";
 
-import { LANGUAGES } from "../../config/languages";
+import PageLayout from "@layouts/PageLayout.astro";
+import Intro from "@sections/Intro.astro";
+import About from "@sections/About.astro";
+import Stack from "@sections/stack/Stack.astro";
+import Categories from "@sections/Categories.astro";
 
-import PageLayout from "../../layouts/PageLayout.astro";
-import Intro from "../../components/sections/Intro.astro";
-import About from "../../components/sections/About.astro";
-import Stack from "../../components/sections/stack/Stack.astro";
-import Categories from "../../components/sections/Categories.astro";
+import type { AdmittedLanguagesType } from "@typing/LocalesType";
 
 // Intercepts requested slug and redirects appropriately (fallback to main redirection index)
 export const getStaticPaths = () => Object.keys(LANGUAGES).map(

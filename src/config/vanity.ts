@@ -1,10 +1,10 @@
-import type { VanityListType, VanityEntryGroupType } from "../types/VanityType";
-import { LINKS } from "./links";
-import { SEO } from "./routing";
-import { ICONS } from "./assets";
-import { PERSONAL } from "./personal";
+import { LINKS } from "@config/links";
+import { SEO } from "@config/routing";
+import { ICONS } from "@config/assets";
+import { PERSONAL } from "@config/personal";
+import type { VanityListType, VanityEntryGroupType } from "@typing/VanityType";
 
-export const VANITY: VanityListType = {
+export const VANITY = {
     linkedin: {
         key: "linkedin",
         frontend: {
@@ -379,10 +379,9 @@ export const VANITY: VanityListType = {
             canonical: SEO.canonical.vanity("sidimaqsa")
         }
     }
-} as const;
+} as const satisfies VanityListType;
 
 export const pickVanityGroup = (group: VanityEntryGroupType) =>
     Object.fromEntries(Object.entries(VANITY).filter(([, value]) =>
-            value.metadata.groups.includes(group)
-        )
-    );
+            (value.metadata.groups as readonly string[]).includes(group)
+    ));

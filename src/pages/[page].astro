@@ -1,10 +1,12 @@
 ---
-import type { DirectoryPageNamesType } from "../types/PagesType";
-import { PAGES } from "../config/pages";
-import { METADATA } from "../config/meta";
-import PageLayout from "../layouts/PageLayout.astro";
-import Navbar from "../components/widgets/Navbar.astro";
-import LanguageGate from "../components/sections/LanguageGate.astro";
+import { PAGES } from "@config/pages";
+import { METADATA } from "@config/meta";
+
+import PageLayout from "@layouts/PageLayout.astro";
+import Navbar from "@widgets/Navbar.astro";
+import LanguageGate from "@sections/LanguageGate.astro";
+
+import type { DirectoryPageNamesType } from "@typing/PagesType";
 
 // Intercepts requested slug and redirects appropriately (fallback to main redirection index)
 export const getStaticPaths = () => Object.keys(PAGES).map(

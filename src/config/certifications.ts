@@ -1,8 +1,8 @@
-import { LINKS } from "./links";
-import { PICTURES } from "./assets";
-import type { CertListType, CertsOrgListType } from "../types/CertificationsType";
+import { LINKS } from "@config/links";
+import { PICTURES } from "@config/assets";
+import type { CertListType, CertsOrgListType } from "@typing/CertificationsType";
 
-export const CERT_LINKS: CertListType = {
+export const CERT_LINKS = {
     arpels: {
         year: "2025",
         picture: PICTURES.certifications.arpels,
@@ -18,6 +18,7 @@ export const CERT_LINKS: CertListType = {
     iassc: {
         year: "2026",
         picture: PICTURES.certifications.iassc,
+        verification: undefined,
         info: LINKS.certifications.iassc.main
     },
     cs50: {

@@ -1,17 +1,17 @@
 ---
-import { ICONS } from "../../config/assets";
-import { ROUTE } from "../../config/routing";
-import { NAVIGATION_PAGES } from "../../config/pages";
+import { ICONS } from "@config/assets";
+import { ROUTE } from "@config/routing";
+import { NAVIGATION_PAGES } from "@config/pages";
 
-import Icon from "../ui/libraries/Icon.astro";
-import IconHome from "../ui/buttons/IconHome.astro";
-import LanguageToggler from "../ui/togglers/LanguageToggler.astro";
-import ThemeToggler from "../ui/togglers/ThemeToggler.astro";
+import Icon from "@libraries/Icon.astro";
+import IconHome from "@buttons/IconHome.astro";
+import LanguageToggler from "@togglers/LanguageToggler.astro";
+import ThemeToggler from "@togglers/ThemeToggler.astro";
 
 const { t, l } = Astro.locals;
 ---
 
-<nav class="drawer top-0 left-0 w-full z-999 pt-5">
+<nav class="drawer top-0 left-0 w-full z-998 pt-5">
     <input id="intro-drawer" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content flex flex-col">
         <div class={"navbar bg-transparent w-full"}>

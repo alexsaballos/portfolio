@@ -1,21 +1,20 @@
 ---
-import '../styles/global.css';
+import '@styles/global.css';
 
-import { PATHS } from '../config/assets';
-import { SYSTEM } from '../config/links';
-import { ERRORS } from '../config/errors';
-import { PERSONAL } from '../config/personal';
-import { METADATA } from '../config/meta';
-import { FAVICONS } from '../config/assets';
-import { getLocaleMessages } from '../locales/utils';
+import { SYSTEM } from '@config/links';
+import { ERRORS } from '@config/errors';
+import { METADATA } from '@config/meta';
+import { PERSONAL } from '@config/personal';
+import { PATHS, FAVICONS } from '@config/assets';
+import { getLocaleMessages } from '@locales/utils';
 
-import type { ErrorsCodeType } from '../types/ErrorsType';
-import type { AdmittedLanguagesType } from '../types/LocalesType';
+import type { ErrorsCodeType } from '@typing/ErrorsType';
+import type { AdmittedLanguagesType } from '@typing/LocalesType';
 
-import IconLibrary from '../components/ui/libraries/IconLibrary.astro';
-import FlagLibrary from '../components/ui/libraries/FlagLibrary.astro';
-import Navbar from '../components/widgets/Navbar.astro';
-import Footer from '../components/sections/Footer.astro';
+import IconLibrary from '@libraries/IconLibrary.astro';
+import FlagLibrary from '@libraries/FlagLibrary.astro';
+import Navbar from '@widgets/Navbar.astro';
+import Footer from '@sections/Footer.astro';
 
 // Error Code Paramtrization
 const { code } = Astro.props as { code: ErrorsCodeType; };

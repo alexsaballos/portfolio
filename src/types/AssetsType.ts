@@ -1,5 +1,5 @@
-import type { AdmittedCountriesType } from "./LocalesType";
-import type { NavigationPageNamesType } from "./PagesType";
+import type { AdmittedCountriesType } from "@typing/LocalesType";
+import type { NavigationPageNamesType } from "@typing/PagesType";
 
 // Icons Typing
 export type IconsType = {

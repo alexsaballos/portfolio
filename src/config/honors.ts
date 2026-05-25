@@ -1,8 +1,8 @@
-import { LINKS } from "./links";
-import { PICTURES } from "./assets";
-import type { HonorsOrgListType, HonorsSSOT } from "../types/HonorsType";
+import { LINKS } from "@config/links";
+import { PICTURES } from "@config/assets";
+import type { HonorsOrgListType, HonorsSSOT } from "@typing/HonorsType";
 
-export const HONOR_LINKS: HonorsSSOT = {
+export const HONOR_LINKS = {
     ncees: {
         year: "2025",
         picture: PICTURES.honors.ncees,
@@ -12,7 +12,8 @@ export const HONOR_LINKS: HonorsSSOT = {
     wisp: {
         year: "2021-2025",
         picture: PICTURES.honors.wisp,
-        link: LINKS.organizations.wisp
+        link: LINKS.organizations.wisp,
+        verification: undefined
     },
     hu: {
         picture: PICTURES.honors.hu,
@@ -23,14 +24,17 @@ export const HONOR_LINKS: HonorsSSOT = {
         },
         asi: {
             year: "2024",
-            link: LINKS.organizations.hu.asi
+            link: LINKS.organizations.hu.asi,
+            verification: undefined
         },
         honors: {
             year: "2021-2025",
-            link: LINKS.organizations.hu.honors
+            link: LINKS.organizations.hu.honors,
+            verification: undefined
         },
         deans_list: {
             year: "2021-2025",
+            link: undefined,
             verification: LINKS.profiles.merit
         }
     }

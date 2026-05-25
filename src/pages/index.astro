@@ -1,9 +1,10 @@
 ---
-import { PAGES } from "../config/pages";
-import { METADATA } from "../config/meta";
-import PageLayout from "../layouts/PageLayout.astro";
-import Navbar from "../components/widgets/Navbar.astro";
-import LanguageGate from "../components/sections/LanguageGate.astro";
+import { PAGES } from "@config/pages";
+import { METADATA } from "@config/meta";
+
+import PageLayout from "@layouts/PageLayout.astro";
+import Navbar from "@widgets/Navbar.astro";
+import LanguageGate from "@sections/LanguageGate.astro";
 ---
 
 <PageLayout page="home" lang={METADATA.defaultLanguage}>

@@ -1,16 +1,16 @@
 ---
-import { SYSTEM } from "../../../config/links";
-import { ICONS, PATHS } from "../../../config/assets";
+import { SYSTEM } from "@config/links";
+import { ICONS, PATHS } from "@config/assets";
 
-import Icon from "../../ui/libraries/Icon.astro";
-import Title from "../../ui/text/Title.astro";
-import ContactStatus from "./ContactStatus.astro";
-import SocialButtons from "../../ui/buttons/SocialButtons.astro";
+import Icon from "@libraries/Icon.astro";
+import Title from "@text/Title.astro";
+import ContactStatus from "@sections/contact/ContactStatus.astro";
+import SocialButtons from "@buttons/SocialButtons.astro";
 
 const t = Astro.locals.t;
 ---
 
-<div class="p-5 gap-5">
+<section data-aos="fade-up" class="p-5 gap-5">
     <ContactStatus />
     <div id="contact_form" class="group">
         <Title title={t.contact.CTA} />
@@ -21,25 +21,25 @@ const t = Astro.locals.t;
                     <legend class="fieldset-legend">{t.contact.required}</legend>
 
                     <!-- Name input on contact form -->
-                    <label class="label">
+                    <label data-aos="fade-in" data-aos-delay="300" class="label">
                         <Icon icon={ICONS.id_card} size="sm" />
                         {t.contact.name.label}
                     </label>
-                    <input name="name" required type="text" class="input mb-4" placeholder={t.contact.name.placeholder} />
+                    <input data-aos="fade-in" data-aos-delay="300" name="name" required type="text" class="input mb-4" placeholder={t.contact.name.placeholder} />
 
                     <!-- Email input on contact form -->
-                    <label class="label">
+                    <label data-aos="fade-in" data-aos-delay="600" class="label">
                         <Icon icon={ICONS.at_sign} size="sm" />
                         {t.contact.email.label}
                     </label>
-                    <input name="email" required type="email" class="input mb-4" placeholder={t.contact.email.placeholder} />
+                    <input data-aos="fade-in" data-aos-delay="600" name="email" required type="email" class="input mb-4" placeholder={t.contact.email.placeholder} />
 
                     <!-- Subject selection on contact form -->
-                    <label class="label">
+                    <label data-aos="fade-in" data-aos-delay="900" class="label">
                         <Icon icon={ICONS.rectangle_list} size="sm" />
                         {t.contact.subject.label}
                     </label>
-                    <select name="subject" required class="select mb-4">
+                    <select data-aos="fade-in" data-aos-delay="900" name="subject" required class="select mb-4">
                         <option disabled selected>{t.contact.subject.options.placeholder}</option>
                         <option value="Recruiting / Hiring">{t.contact.subject.options.recruiting}</option>
                         <option value="Technical Collaboration">{t.contact.subject.options.technical}</option>
@@ -51,15 +51,15 @@ const t = Astro.locals.t;
                     </select>
 
                     <!-- Message input on contact form -->
-                    <label class="label">
+                    <label data-aos="fade-in" data-aos-delay="1200" class="label">
                         <Icon icon={ICONS.message} size="sm" />
                         {t.contact.message.label}
                     </label>
-                    <textarea required name="message" class="textarea h-48 sm:w-140 lg:w-160" placeholder={t.contact.message.placeholder}></textarea>
+                    <textarea data-aos="fade-in" data-aos-delay="1200" required name="message" class="textarea h-48 sm:w-140 lg:w-160" placeholder={t.contact.message.placeholder}></textarea>
 
                     <!-- Submission button on contact form -->
-                    <button type="submit" aria-label={t.contact.send}
-                        class="btn btn-primary rounded-4xl place-self-center shadow-none transition-transform duration-300 ease-in-out hover:font-bold hover:scale-105 w-45 mt-4">
+                    <button data-aos="fade-in" data-aos-delay="1500" type="submit" aria-label={t.contact.send}
+                        class="btn btn-primary rounded-4xl place-self-center shadow-none transition-transform duration-300 ease-in-out hover:btn-secondary hover:font-bold hover:scale-105 w-45 mt-4">
                         <Icon icon={ICONS.paper_plane} size="sm" />
                         {t.contact.send}
                     </button>
@@ -74,7 +74,7 @@ const t = Astro.locals.t;
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <!-- Client-side JS that controls contact-info email sending responses thorugh toast alerts -->
 <script is:inline type="module" src={`${PATHS.scripts}contact_toast.js`}></script>

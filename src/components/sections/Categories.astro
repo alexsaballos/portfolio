@@ -1,19 +1,19 @@
 ---
-import { ROUTE } from "../../config/routing";
-import { NAVIGATION_PAGES } from "../../config/pages";
+import { ROUTE } from "@config/routing";
+import { NAVIGATION_PAGES } from "@config/pages";
 
-import Title from "../ui/text/Title.astro";
-import Icon from "../ui/libraries/Icon.astro";
+import Title from "@text/Title.astro";
+import Icon from "@libraries/Icon.astro";
 import Image from "astro/components/Image.astro";
 
 const { t, l } = Astro.locals;
 ---
 
-<section class="bg-base-100 pt-15 pb-10 px-5">
+<section data-aos="fade-up" class="bg-base-100 pt-15 pb-10 px-5">
     <Title title={t.categories.title} classname="mb-14" />
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-y-12 md:gap-x-5 lg:gap-x-5 lg:gap-y-12">
         {Object.values(NAVIGATION_PAGES).map(entry => (
-            <div class="relative select-none w-full">
+            <div data-aos="zoom-in" class="relative select-none w-full">
                 <div class="absolute -top-7.5 left-1/2 -translate-x-1/2 z-1">
                     <div class="rounded-full bg-primary p-3 shadow-none">
                         <Icon icon={entry.frontend.icon} size="md" classname="text-white" />
@@ -26,7 +26,7 @@ const { t, l } = Astro.locals;
                         </figure>
                         <div class="absolute w-full h-full rounded-2xl bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                         <div class="card-body flex items-center justify-center relative">
-                            <div class="card-title text-2xl place-content-center text-white group-hover:font-bold group-hover:border-b-4 group-hover:border-secondary">
+                            <div data-aos="fade-in" data-aos-delay="300" class="card-title text-2xl place-content-center text-white group-hover:font-bold group-hover:border-b-4 group-hover:border-secondary">
                                 {t.navigation[entry.key]}
                             </div>
                         </div>

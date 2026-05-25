@@ -253,7 +253,7 @@
         "alerts": {
             "loading": "Enviando su mensaje",
             "success": {
-                "p1": "Su mensaje fue enviado exitosamente",
+                "p1": "Mensaje enviado exitosamente",
                 "p2": "Gracias por contactarme. Le responderé a la brevedad"
             },
             "failure": "Ha ocurrido un error. Inténtelo nuevamente"

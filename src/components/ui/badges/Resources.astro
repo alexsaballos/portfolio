@@ -1,0 +1,17 @@
+---
+import { ICONS } from "@config/assets"
+import Icon from "@ui/libraries/Icon.astro"
+
+const { link, text, variant } = Astro.props as {
+    link: string;
+    text: string;
+    variant: "certification" | "external";
+}
+const bgColor = (variant === "certification") ? "accent" : "primary"
+---
+
+<a data-aos="zoom-in" href={link} target="_blank" rel="noopener noreferrer"
+    class=`badge badge-${bgColor} badge-sm rounded-4xl transition-transform duration-500 ease-out hover:scale-105 hover:opacity-70` >
+    <Icon icon={(variant === "certification") ? ICONS.certifications : ICONS.link} size="xs" />
+    {text}
+</a>

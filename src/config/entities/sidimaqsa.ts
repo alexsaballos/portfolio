@@ -1,4 +1,4 @@
-import { LINKS, SYSTEM } from "../links";
+import { LINKS, SYSTEM } from "@config/links";
 
 // Business Entity - SIDIMAQSA - Schema.org Structured Data Identity Linking
 export const SCHEMAORG_SIDIMAQSA = {

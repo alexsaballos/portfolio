@@ -1,10 +1,10 @@
-import { SEO } from "./routing";
-import { PERSONAL } from "./personal";
-import { ICONS, PICTURES } from "./assets";
+import { SEO } from "@config/routing";
+import { PERSONAL } from "@config/personal";
+import { ICONS, PICTURES } from "@config/assets";
 
-import type { DirectoryPagesListType, NavigationPagesListType } from "../types/PagesType";
+import type { DirectoryPagesListType, NavigationPagesListType } from "@typing/PagesType";
 
-export const PAGES: DirectoryPagesListType = {
+export const PAGES = {
 	home: {
         key: "home",
         frontend: {
@@ -130,7 +130,7 @@ export const PAGES: DirectoryPagesListType = {
             description: SEO.description(`Contact information for ${PERSONAL.name} regarding engineering, software, or professional collaboration inquiries.`)
         }
     }
-} as const;
+} as const satisfies DirectoryPagesListType;
 
 export const NAVIGATION_PAGES: NavigationPagesListType = Object.fromEntries(
     Object.entries(PAGES).filter(([key]) => (key !== "home"))

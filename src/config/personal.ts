@@ -1,7 +1,7 @@
-import type { PersonalInfoType } from "../types/PersonalTypes";
+import type { PersonalInfoType } from "@typing/PersonalTypes";
 
-export const PERSONAL: PersonalInfoType = {
+export const PERSONAL = {
     name: "Alexander Saballos",
     jobTitle: "Electrical & Software Engineer",
     college: "Harding University"
-} as const;
+} as const satisfies PersonalInfoType;

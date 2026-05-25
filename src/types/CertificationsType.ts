@@ -5,10 +5,3 @@ export type CertListType = Record<CertsOrgListType, {
     verification?: string;
     info: string;
 }>;
-export type CertLocaleType = Record<CertsOrgListType, {
-    name: string;
-    summary: string;
-    details: string;
-    verification: string;
-    info: string;
-}>;

@@ -1,5 +1,5 @@
-import type { FaviconListType } from "./AssetsType";
-import type { AdmittedLanguagesType } from "./LocalesType";
+import type { FaviconListType } from "@typing/AssetsType";
+import type { AdmittedLanguagesType } from "@typing/LocalesType";
 
 export type MetadataType = {
     url: string;

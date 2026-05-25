@@ -1,8 +1,8 @@
-import { FLAGS } from "./assets";
-import { ROUTE } from "./routing";
-import type { LanguagesType } from "../types/LocalesType";
+import { FLAGS } from "@config/assets";
+import { ROUTE } from "@config/routing";
+import type { LanguagesType } from "@typing/LocalesType";
 
-export const LANGUAGES: LanguagesType = {
+export const LANGUAGES = {
     de: {
         key: "de",
         home: ROUTE.home("de"),
@@ -57,4 +57,4 @@ export const LANGUAGES: LanguagesType = {
             select: "Seleccione un idioma"
         }
     }
-} as const;
+} as const satisfies LanguagesType;

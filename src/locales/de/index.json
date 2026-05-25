@@ -253,7 +253,7 @@
         "alerts": {
             "loading": "Ihre Nachricht wird gesendet",
             "success": {
-                "p1": "Ihre Nachricht wurde erfolgreich gesendet",
+                "p1": "Nachricht erfolgreich gesendet",
                 "p2": "Vielen Dank für Ihre Nachricht. Ich melde mich zeitnah zurück"
             },
             "failure": "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut"

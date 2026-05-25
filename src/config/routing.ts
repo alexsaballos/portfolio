@@ -1,8 +1,8 @@
-import { METADATA } from "./meta";
-import { PERSONAL } from "./personal";
-import type { VanityNamesType } from "../types/VanityType";
-import type { AdmittedLanguagesType } from "../types/LocalesType";
-import type { DirectoryPageSlugsType } from "../types/PagesType";
+import { METADATA } from "@config/meta";
+import { PERSONAL } from "@config/personal";
+import type { VanityNamesType } from "@typing/VanityType";
+import type { AdmittedLanguagesType } from "@typing/LocalesType";
+import type { DirectoryPageSlugsType } from "@typing/PagesType";
 
 // SEO Metadata Generator for pages.ts SSOT & Dynamic canonical localized URL Generator
 export const SEO = {

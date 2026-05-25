@@ -1,10 +1,10 @@
 ---
-import Navbar from "../widgets/Navbar.astro";
-import RotatingText from "../ui/text/RotatingText.astro";
-import Avatar from "../ui/Avatar.astro";
-import SocialButtons from "../ui/buttons/SocialButtons.astro";
-import { PERSONAL } from "../../config/personal";
-import { VIDEOS } from "../../config/assets";
+import Navbar from "@widgets/Navbar.astro";
+import RotatingText from "@text/RotatingText.astro";
+import Avatar from "@ui/Avatar.astro";
+import SocialButtons from "@buttons/SocialButtons.astro";
+import { PERSONAL } from "@config/personal";
+import { VIDEOS } from "@config/assets";
 
 const t = Astro.locals.t;
 ---
@@ -14,12 +14,12 @@ const t = Astro.locals.t;
         preload="auto" aria-hidden="true" muted autoplay loop playsinline >
         <source src={VIDEOS.IntroVideo} type="video/webm" />
     </video>
-    <Navbar />
-    <div class="flex-1 flex flex-col group justify-center text-center items-center">
+    <div data-aos="fade-down" data-aos-delay="800"><Navbar /></div>
+    <div class="flex-1 flex flex-col group justify-center text-center items-center py-5">
         
         <!-- Includes: Rotating Hello, introduction, headline, and SocialButtons -->
-        <Avatar classname="w-60 h-60 mb-10" />
-        <div class="max-w-sm sm:max-w-full">
+        <div data-aos="zoom-in"><Avatar classname="w-60 h-60 mb-10 scale-110" /></div>
+        <div data-aos="fade-up" data-aos-delay="800" class="max-w-sm sm:max-w-full">
             <span class="align-middle">
                 <RotatingText text="hello" classname="text-4xl" />
                 <span class="text-2xl">{t.intro.name_is}</span>

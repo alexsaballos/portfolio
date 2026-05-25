@@ -1,12 +1,15 @@
 ---
-import { ICONS } from "../../config/assets";
-import { HONOR_LINKS, HONORS_KEYS } from "../../config/honors";
+import { ICONS } from "@config/assets";
+import { HONOR_LINKS, HONORS_KEYS } from "@config/honors";
 
-import Title from "../ui/text/Title.astro";
-import Icon from "../ui/libraries/Icon.astro";
+import Title from "@text/Title.astro";
+import Icon from "@libraries/Icon.astro";
+import Resources from "@ui/badges/Resources.astro";
 import Image from "astro/components/Image.astro";
 
-import type { HonorsOrgListType, HonorsListType, HonorsLinkType, FlatHonorLinks, NestedHonorLinks } from "../../types/HonorsType";
+import type {
+	HonorsOrgListType, HonorsListType, HonorsLinkType, FlatHonorLinks, NestedHonorLinks
+} from "@typing/HonorsType";
 
 const t = Astro.locals.t;
 
@@ -21,7 +24,7 @@ function resolveHonorResource(
 	type: HonorsLinkType
 ): (string | undefined) {
 	const org = HONOR_LINKS[organization];
-	return (isFlatOrg(org)) ? org[type] : org[awardKey]?.[type];
+	return (isFlatOrg(org)) ? org[type] : (org as NestedHonorLinks)[awardKey]?.[type];
 }
 
 // Type-aware Year getter through discriminator
@@ -30,16 +33,16 @@ function resolveHonorYear(
 	awardKey: HonorsListType
 ): (string | undefined) {
 	const org = HONOR_LINKS[organization];
-	return (isFlatOrg(org)) ? org.year : org[awardKey]?.year;
+	return (isFlatOrg(org)) ? org.year : (org as NestedHonorLinks)[awardKey]?.year;
 }
 ---
 
-<section class="pb-10 px-5 lg:px-10 xl:px-20">
+<section data-aos="fade-up" class="pb-10 px-5 lg:px-10 xl:px-20">
 	<Title title={t.honors.texts.title} classname="mt-4 mb-8" />
 
 	<div class="gap-6 flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-2">
 		{HONORS_KEYS.map((organization, i) => (
-			<div class={`bg-base-200 rounded-4xl p-6 ring-4 ring-gray-500 relative
+			<div data-aos="zoom-in" class={`bg-base-200 rounded-4xl p-6 ring-4 ring-gray-500 relative
 				${(i === 0) ? "lg:col-start-1 lg:row-start-1" : ""}
 				${(i === 1) ? "lg:col-start-1 lg:row-start-2" : ""}
 				${(i === 2) ? "lg:col-start-2 lg:row-start-1 lg:row-span-2" : ""}`}>
@@ -70,26 +73,8 @@ function resolveHonorYear(
 										{t.honors.texts.resources}
 									</p>
 									<div class="flex flex-wrap gap-2">
-										{award.verification && (() => {
-											const url = resolveHonorResource(organization, award.key, "verification");
-											return url && (
-												<a href={url} target="_blank" rel="noopener noreferrer"
-													class="badge badge-accent badge-sm rounded-4xl transition-transform duration-500 ease-out hover:scale-105 hover:opacity-70" >
-													<Icon icon={ICONS.certifications} size="xs" />
-													{award.verification.name}
-												</a>
-											);
-										})()}
-										{award.link && (() => {
-											const url = resolveHonorResource(organization, award.key, "link");
-											return url && (
-												<a href={url} target="_blank" rel="noopener noreferrer"
-													class="badge badge-primary badge-sm rounded-4xl transition-transform duration-500 ease-out hover:scale-105 hover:opacity-70">
-													<Icon icon={ICONS.link} size="xs" />
-													{award.link.name}
-												</a>
-											);
-										})()}
+										{award.verification && <Resources variant="certification" link={resolveHonorResource(organization, award.key, "verification")} text={award.verification.name} />}
+										{award.link && <Resources variant="external" link={resolveHonorResource(organization, award.key, "link")} text={award.link.name} />}
 									</div>
 								</div>
 							)}

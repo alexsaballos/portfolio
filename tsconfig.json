@@ -1,5 +1,27 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "include": ["src/**/*", "global.d.ts"],
-  "exclude": ["dist"]
+	"extends": "astro/tsconfigs/strict",
+	"include": ["src/**/*", "global.d.ts"],
+	"exclude": ["dist"],
+	"compilerOptions": {
+		"paths": {
+			// Specialized Components path section
+			"@sections/*": ["./src/components/sections/*"],
+			"@ui/*": ["./src/components/ui/*"],
+			"@badges/*": ["./src/components/ui/badges/*"],
+			"@buttons/*": ["./src/components/ui/buttons/*"],
+			"@libraries/*": ["./src/components/ui/libraries/*"],
+			"@text/*": ["./src/components/ui/text/*"],
+			"@togglers/*": ["./src/components/ui/togglers/*"],
+			"@widgets/*": ["./src/components/widgets/*"],
+
+			// Other Items Source path section
+			"@config/*": ["./src/config/*"],
+			"@images/*": ["./src/images/*"],
+			"@layouts/*": ["./src/layouts/*"],
+			"@locales/*": ["./src/locales/*"],
+			"@pages/*": ["./src/pages/*"],
+			"@styles/*": ["./src/styles/*"],
+			"@typing/*": ["./src/types/*"]
+		}
+	}
 }

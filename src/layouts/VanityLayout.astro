@@ -1,21 +1,20 @@
 ---
-import '../styles/global.css';
+import '@styles/global.css';
 
-import { PATHS } from '../config/assets';
-import { VANITY } from '../config/vanity';
-import { PERSONAL } from '../config/personal';
-import { METADATA } from '../config/meta';
-import { FAVICONS } from '../config/assets';
-import { LINKS, SYSTEM } from '../config/links';
-import { SCHEMAORG_GRAPH } from '../config/entities/graph';
-import { getLocaleMessages } from '../locales/utils';
+import { VANITY } from '@config/vanity';
+import { PERSONAL } from '@config/personal';
+import { METADATA } from '@config/meta';
+import { LINKS, SYSTEM } from '@config/links';
+import { PATHS, FAVICONS } from '@config/assets';
+import { SCHEMAORG_GRAPH } from '@config/entities/graph';
+import { getLocaleMessages } from '@locales/utils';
 
-import type { VanityNamesType } from '../types/VanityType';
+import type { VanityNamesType } from '@typing/VanityType';
 
-import IconLibrary from '../components/ui/libraries/IconLibrary.astro';
-import FlagLibrary from '../components/ui/libraries/FlagLibrary.astro';
-import Footer from '../components/sections/Footer.astro';
-import Navbar from '../components/widgets/Navbar.astro';
+import IconLibrary from '@libraries/IconLibrary.astro';
+import FlagLibrary from '@libraries/FlagLibrary.astro';
+import Footer from '@sections/Footer.astro';
+import Navbar from '@widgets/Navbar.astro';
 
 // Layout parametrization for every page
 const { profile } = Astro.props as { profile: VanityNamesType; };
