@@ -21,13 +21,13 @@ export const SCHEMAORG_GRAPH =
                     "@type": "ListItem",
                     "position": PAGES["home"].SEO.schemaorg_position,
                     "name": PAGES["home"].frontend.short_title,
-                    "item": String(SEO.canonical.home(locale))
+                    "item": SEO.canonical.home(locale)
                 },
                 {
                     "@type": "ListItem",
                     "position": PAGES[page].SEO.schemaorg_position,
                     "name": PAGES[page].frontend.short_title,
-                    "item": String(SEO.canonical.page(locale, PAGES[page].metadata.slug))
+                    "item": SEO.canonical.page(locale, PAGES[page].metadata.slug)
                 }
             ]
         };

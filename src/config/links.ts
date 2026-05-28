@@ -1,3 +1,5 @@
+import type { GeneralLinksType, SystemLinksType } from "@typing/LinksType";
+
 export const SYSTEM = {
     domain: "https://alexsaballos.dev",
     pfp: "https://alexsaballos.dev/images/profile.jpg",
@@ -5,7 +7,7 @@ export const SYSTEM = {
         google_analytics: "https://www.googletagmanager.com/gtag/js?id=",
         resend: "https://api.alexsaballos.dev/contact.php"
     }
-} as const;
+} as const satisfies SystemLinksType;
 
 export const LINKS = {
     organizations: {
@@ -91,4 +93,4 @@ export const LINKS = {
         },
         parchment: "https://www.parchment.com/u/award/e6ff0291d43e184f3aa6a25b1191a13b"
     }
-} as const;
+} as const satisfies GeneralLinksType;
