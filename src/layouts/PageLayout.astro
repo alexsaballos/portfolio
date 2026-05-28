@@ -4,11 +4,13 @@ import '@styles/global.css';
 
 import { SEO } from '@config/routing';
 import { PAGES } from '@config/pages';
-import { PERSONAL } from '@config/personal';
 import { METADATA } from '@config/meta';
+import { FAVICONS } from '@config/assets';
+import { PERSONAL } from '@config/personal';
 import { LANGUAGES } from '@config/languages';
 import { LINKS, SYSTEM } from '@config/links';
-import { PATHS, FAVICONS } from '@config/assets';
+
+import { SPECULATION } from "@scripts/speculation";
 import { SCHEMAORG_GRAPH } from '@config/entities/graph';
 
 import { getLocaleMessages } from '@locales/utils';
@@ -20,6 +22,7 @@ import IconLibrary from '@libraries/IconLibrary.astro';
 import FlagLibrary from '@libraries/FlagLibrary.astro';
 import Scroller from '@widgets/Scroller.astro';
 import Footer from '@sections/Footer.astro';
+import Loader from "@widgets/Loader.astro";
 
 // Layout parametrization for every page
 const { page, lang } = Astro.props as {
@@ -63,8 +66,6 @@ Astro.locals.t = await getLocaleMessages(lang);
 		<meta name="theme-color-dark" content={METADATA.colors.dark.background} />
         <meta name="color-scheme" content="light dark" />
 		<style>html {visibility: hidden;}</style>
-        <noscript><style>html {visibility: visible !important;}</style></noscript>
-		<script is:inline type="module" src={`${PATHS.scripts}theme-load.js`}></script>
 
 		<!-- SEO - Multilingual Canonical Links -->
 		<link rel="canonical" href={currentSEO.canonical} />
@@ -114,10 +115,19 @@ Astro.locals.t = await getLocaleMessages(lang);
 		<meta name="twitter:image" content={METADATA.opengraph.image} />
 		<meta name="twitter:image:alt" content={METADATA.siteName} />
 
-		<!-- Schema.org Entities & Graph -->
-		<script is:inline type="application/ld+json" set:html={SCHEMAORG_GRAPH} />
+		<!-- Schema.org Entities & Graph (Four-Entity Schema.org Graph) | Speculation API -->
+		<script is:inline type="application/ld+json" set:html={SCHEMAORG_GRAPH(lang, page)} />
+		<script is:inline type="speculationrules" set:html={JSON.stringify(SPECULATION())} />
+
+		<!-- Google tag (gtag.js) -->
+		<script is:inline async src={METADATA.api_keys.google_analytics.stream_url} />
+		<script>
+            import { initGoogleAnalytics } from "@scripts/google-analytics.ts";
+            initGoogleAnalytics("standard");
+        </script>
 	</head>
 	<body>
+		<Loader />
 		<IconLibrary /><FlagLibrary />		<!-- Inject all Icons early on in the DOM -->
 		<div class="min-h-screen flex flex-col">
 			<main id="main-content" class="flex-1 flex flex-col">
@@ -126,12 +136,12 @@ Astro.locals.t = await getLocaleMessages(lang);
 			<Footer />						<!-- Footer included with every page -->
 		</div>
 		<Scroller />						<!-- Fixed scroller floating buttons on all screen sizes -->
-		<script is:inline type="module" src={`${PATHS.scripts}global.js`}></script>
-		
-		<script>
-			import { aosInit } from "../scripts/aos";
-			document.addEventListener("DOMContentLoaded", () => {aosInit();});
-		</script>
 
+		<!-- Scripts at the very bottom of the page. Speculation Rules only apply to PageLayout.astro -->
+        <noscript><style>
+			html {visibility: visible !important;}
+		</style></noscript>
+		<script src="@scripts/global.ts"></script>
+		<script src="@scripts/scroller.ts"></script>
 	</body>
 </html>

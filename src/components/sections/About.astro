@@ -1,11 +1,9 @@
 ---
 import Title from "@text/Title.astro";
-const t = Astro.locals.t;
+const t = Astro.locals.t.about;
 ---
 
-<section data-aos="fade-up" class="bg-base-100 py-10 px-5">
-    <header class="flex flex-col gap-5 items-center text-center">
-        <Title title={t.about.greeting} />
-        <p class="max-w-5xl">{t.about.introduction}</p>
-    </header>
+<section data-aos="fade-up" class="bg-base-100 flex flex-col gap-5 items-center text-center py-10 px-5">
+    <Title title={t.greeting} />
+    <p class="max-w-5xl">{t.introduction}</p>
 </section>

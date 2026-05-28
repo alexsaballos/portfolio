@@ -1,19 +1,15 @@
 import type { AdmittedCountriesType } from "@typing/LocalesType";
 import type { NavigationPageNamesType } from "@typing/PagesType";
+import type { CertsOrgListType } from "@typing/CertificationsType";
+import type { HonorsOrgListType } from "@typing/HonorsType";
 
 // Icons Typing
-export type IconsType = {
-    href: string;
-    title: string;
-    desc: string;
-    size: string;
-}
-
+export type IconsType = Record<("href" | "title" | "desc" | "size"), string>;
 export type IconsNamesType =
     | "hourglass" | "linkedin" | "github" | "handshake" | "merit" | "credly" | "wisp" | "hu" | "coursera"
     | "edx" | "googledev" | "figma" | "gravatar" | "khanacademy" | "orcid" | "peoplecert" | "quizlet"
     | "sidimaqsa" | "projects" | "experience" | "leadership" | "certifications" | "honors"
-    | "contact" | "home" | "hamburger_open" | "hamburger_close" | "link" | "id_card"
+    | "contact" | "home" | "hamburger_open" | "hamburger_close" | "download" | "fullscreen" | "link" | "id_card"
     | "at_sign" | "rectangle_list" | "message" | "paper_plane" | "spinner"
     | "envelope_check" | "circle_check" | "circle_xmark" | "sun" | "moon"
     | "translate" | "chevron_up" | "chevron_down" | "angles_down" | "devices";
@@ -21,24 +17,16 @@ export type IconsNamesType =
 export type IconsListType = Record<IconsNamesType, IconsType>;
 
 // Paths Typing
-export type PathsListType = {
-    scripts: string;
-    favicons: string;
-    pictures: string;
-    videos: string;
-}
+export type PathsListType = Record<("docs" | "resume" | "favicons" | "pictures" | "videos"), string>;
 
 // Videos & Pictures Typing
-export type VideosListType = {
-    IntroVideo: string;
-}
-
+export type VideosListType = Record<("IntroVideo"), string>;
 export type PicturesListType = {
     ogImage: string;
     PFP: ImageMetadata;
     categories: Record<NavigationPageNamesType, ImageMetadata>;
-    certifications: Record<("iassc" | "arpels" | "cs50" | "coursera"), ImageMetadata>;
-    honors: Record<("ncees" | "wisp" | "hu"), ImageMetadata>;
+    certifications: Record<Exclude<CertsOrgListType, "hu">, ImageMetadata>;
+    honors: Record<HonorsOrgListType, ImageMetadata>;
 }
 
 // Technologies Typing

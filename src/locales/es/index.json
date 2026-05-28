@@ -1,9 +1,7 @@
 {
     "intro": {
         "name_is": "Mi nombre es",
-        "name": "Alexander Saballos",
-        "headline": "Ingeniero Eléctrico/Electrónico (EI/EiT USA) | Ingeniero de Software | Exalumno HU Walton",
-        "scroll": "¡Deslice!"
+        "headline": "Ingeniero Eléctrico/Electrónico (EI/EiT USA) | Ingeniero de Software | Exalumno HU Walton"
     },
     "breadcrumbs": {
         "home": "Inicio",
@@ -17,6 +15,15 @@
     "about": {
         "greeting": "¡Bienvenido a mi Portafolio!",
         "introduction": "Este espacio muestra los sistemas y proyectos que he desarrollado en la intersección de hardware, software e infraestructura. Me gradué con honores como becario Walton de Harding University (AR, USA) con una licenciatura en Ingeniería Eléctrica/Electrónica acreditada por ABET, una especialización en Matemáticas y aprobé el examen de formación profesional de NCEES antes de graduarme, lo que me permitió obtener una licencia EI/EiT Estadounidense. Mi trabajo abarca sistemas embebidos, diseño de potencia y PCB, automatización y desarrollo de software, con un fuerte énfasis en la documentación, la mantenibilidad a largo plazo y soluciones prácticas diseñadas para un rendimiento fiable más allá del laboratorio."
+    },
+    "resume_preview": {
+        "title": "Curriculum Vitae",
+        "intro": "Este es mi curriculum actual en Español. Si desea leer vaiantes en Inglés o Alemán, por favor haga click aquí.",
+        "headline": "Ingeniero eléctrico, electrónico y de Software",
+        "fullscreen": "Pantalla Completa",
+        "download": "Descargar PDF",
+        "optimized": "Optimizado para: mercados hispanoamericanos",
+        "updated": "Actualizado en: Mayo 2026"
     },
     "stack": {
         "title": "Stack Tecnológico",
@@ -103,6 +110,7 @@
             "name": "Lean Six Sigma Green Belt (alineado a IASSC)",
             "summary": "Curso universitario de nivel avanzado alineado a Lean Six Sigma Green Belt, cursado en Harding University, con énfasis en mejora de procesos, análisis estadístico y toma de decisiones basada en datos.",
             "details": "Cursé y aprobé con A la asignatura ENGR-4550 (Lean Six Sigma) durante la primavera de 2025 como materia electiva de último año en ingeniería en Harding University. El curso fue impartido siguiendo los estándares de Lean Six Sigma Green Belt de la American Society for Quality (ASQ) e incluyó DMAIC, control estadístico de procesos, análisis de causa raíz, optimización de procesos y reducción de desperdicios en contextos de ingeniería y operaciones. La certificación Lean Six Sigma Green Belt de IASSC está planificada para 2026.",
+            "verification": "PeopleCert",
             "info": "Sitio web de IASSC"
         },
         "arpels": {

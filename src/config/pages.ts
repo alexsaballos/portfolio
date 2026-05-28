@@ -19,7 +19,8 @@ export const PAGES = {
         },
         SEO: {
             title: SEO.title(),
-            description: SEO.description(`Welcome to ${PERSONAL.name}' Engineering Portfolio`)
+            description: SEO.description(`Welcome to ${PERSONAL.name}' Engineering Portfolio`),
+            schemaorg_position: 1
         }
 	},
 	projects: {
@@ -37,7 +38,8 @@ export const PAGES = {
         },
         SEO: {
             title: SEO.title("Engineering & Software Projects"),
-            description: SEO.description(`Selected engineering and software projects by ${PERSONAL.name}, including embedded systems, automation, and full-stack development.`)
+            description: SEO.description(`Selected engineering and software projects by ${PERSONAL.name}, including embedded systems, automation, and full-stack development.`),
+            schemaorg_position: 2
         }
 	},
     experience: {
@@ -55,7 +57,8 @@ export const PAGES = {
         },
         SEO: {
             title: SEO.title("Professional Experience"),
-            description: SEO.description(`Professional experience of ${PERSONAL.name} across engineering, software development, and technical business operations.`)
+            description: SEO.description(`Professional experience of ${PERSONAL.name} across engineering, software development, and technical business operations.`),
+            schemaorg_position: 2
         }
     },
     leadership: {
@@ -73,7 +76,8 @@ export const PAGES = {
         },
         SEO: {
             title: SEO.title("International Leadership Experience"),
-            description: SEO.description(`International leadership experience by ${PERSONAL.name} throughout his engineering education.`)
+            description: SEO.description(`International leadership experience by ${PERSONAL.name} throughout his engineering education.`),
+            schemaorg_position: 2
         }
     },
     certifications: {
@@ -91,7 +95,8 @@ export const PAGES = {
         },
         SEO: {
             title: SEO.title("Engineering & Technical Certifications"),
-            description: SEO.description(`Professional engineering certifications held by ${PERSONAL.name}, including FE/EI licensure and formally issued credentials.`)
+            description: SEO.description(`Professional engineering certifications held by ${PERSONAL.name}, including FE/EI licensure and formally issued credentials.`),
+            schemaorg_position: 2
         }
     },
     honors: {
@@ -109,7 +114,8 @@ export const PAGES = {
         },
         SEO: {
             title: SEO.title("Honors & Distinctions"),
-            description: SEO.description(`Academic honors, scholarships, and distinctions earned by ${PERSONAL.name} throughout his engineering education.`)
+            description: SEO.description(`Academic honors, scholarships, and distinctions earned by ${PERSONAL.name} throughout his engineering education.`),
+            schemaorg_position: 2
         }
     },
     contact: {
@@ -127,7 +133,8 @@ export const PAGES = {
         },
         SEO: {
             title: SEO.title("Contact me"),
-            description: SEO.description(`Contact information for ${PERSONAL.name} regarding engineering, software, or professional collaboration inquiries.`)
+            description: SEO.description(`Contact information for ${PERSONAL.name} regarding engineering, software, or professional collaboration inquiries.`),
+            schemaorg_position: 2
         }
     }
 } as const satisfies DirectoryPagesListType;

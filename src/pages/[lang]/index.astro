@@ -8,6 +8,7 @@ import Stack from "@sections/stack/Stack.astro";
 import Categories from "@sections/Categories.astro";
 
 import type { AdmittedLanguagesType } from "@typing/LocalesType";
+import ResumePreview from "@sections/ResumePreview.astro";
 
 // Intercepts requested slug and redirects appropriately (fallback to main redirection index)
 export const getStaticPaths = () => Object.keys(LANGUAGES).map(
@@ -17,6 +18,7 @@ export const getStaticPaths = () => Object.keys(LANGUAGES).map(
 <PageLayout page="home" lang={Astro.params.lang as AdmittedLanguagesType}>
     <Intro />
     <About />
+    <ResumePreview />
     <Stack />
     <Categories />
 </PageLayout>

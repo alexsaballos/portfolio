@@ -11,7 +11,7 @@ import type {
 	HonorsOrgListType, HonorsListType, HonorsLinkType, FlatHonorLinks, NestedHonorLinks
 } from "@typing/HonorsType";
 
-const t = Astro.locals.t;
+const t = Astro.locals.t.honors;
 
 // Type-aware award discriminator
 function isFlatOrg(org: FlatHonorLinks | NestedHonorLinks): org is FlatHonorLinks
@@ -38,7 +38,7 @@ function resolveHonorYear(
 ---
 
 <section data-aos="fade-up" class="pb-10 px-5 lg:px-10 xl:px-20">
-	<Title title={t.honors.texts.title} classname="mt-4 mb-8" />
+	<Title title={t.texts.title} classname="mt-4 mb-8" />
 
 	<div class="gap-6 flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-2">
 		{HONORS_KEYS.map((organization, i) => (
@@ -47,12 +47,12 @@ function resolveHonorYear(
 				${(i === 1) ? "lg:col-start-1 lg:row-start-2" : ""}
 				${(i === 2) ? "lg:col-start-2 lg:row-start-1 lg:row-span-2" : ""}`}>
 
-				<Image src={HONOR_LINKS[organization].picture} alt={`${t.honors[organization].name} Logo`}
+				<Image src={HONOR_LINKS[organization].picture} alt={`${t[organization].name} Logo`}
 					class="w-full rounded-2xl place-self-center max-h-40 max-w-120" />
 
-				<h3 class="text-xl text-secondary font-bold my-4">{t.honors[organization].name}</h3>
+				<h3 class="text-xl text-secondary font-bold my-4">{t[organization].name}</h3>
 				<ul class="space-y-4">
-					{t.honors[organization].awards.map(award => (
+					{t[organization].awards.map(award => (
 						<li>							
 							<p class="font-medium">{`${award.title} [${resolveHonorYear(organization, award.key)}]`}</p>
 
@@ -60,7 +60,7 @@ function resolveHonorYear(
 								<summary class="list-none cursor-pointer">
 									<p class="text-sm text-base-content/70 group-open:hidden">{award.summary}</p>
 									<span class="flex flex-row gap-2 text-sm text-secondary my-1 group-open:hidden hover:underline">
-										{t.honors.texts.description}
+										{t.texts.description}
 										<Icon icon={ICONS.angles_down} size="xs" classname="mt-0.5" />
 									</span>
 								</summary>
@@ -70,7 +70,7 @@ function resolveHonorYear(
 							{(award.link || award.verification) && (
 								<div class="flex flex-row flex-wrap items-center gap-2 my-2">
 									<p class="text-xs tracking-wide leading-none uppercase text-base-content/60">
-										{t.honors.texts.resources}
+										{t.texts.resources}
 									</p>
 									<div class="flex flex-wrap gap-2">
 										{award.verification && <Resources variant="certification" link={resolveHonorResource(organization, award.key, "verification")} text={award.verification.name} />}

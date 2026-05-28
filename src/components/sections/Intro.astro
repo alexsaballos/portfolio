@@ -6,7 +6,7 @@ import SocialButtons from "@buttons/SocialButtons.astro";
 import { PERSONAL } from "@config/personal";
 import { VIDEOS } from "@config/assets";
 
-const t = Astro.locals.t;
+const t = Astro.locals.t.intro;
 ---
 
 <section class="relative min-h-screen flex flex-col">
@@ -22,10 +22,10 @@ const t = Astro.locals.t;
         <div data-aos="fade-up" data-aos-delay="800" class="max-w-sm sm:max-w-full">
             <span class="align-middle">
                 <RotatingText text="hello" classname="text-4xl" />
-                <span class="text-2xl">{t.intro.name_is}</span>
+                <span class="text-2xl">{t.name_is}</span>
             </span>
             <h1 class="text-6xl sm:text-7xl font-bold mt-2">{PERSONAL.name}</h1>
-            <h2 class="text-xl my-2">{t.intro.headline}</h2>
+            <h2 class="text-xl my-2">{t.headline}</h2>
             <SocialButtons variant="social" />
         </div>
     </div>

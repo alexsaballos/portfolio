@@ -9,4 +9,14 @@ declare global {
             l: AdmittedLanguagesType;   // Saves all translated text web-wide
         }
     }
+    
+    // Google Analytics interfaces - Window & Document
+    interface Window {
+        dataLayer: any[];
+        gtag: (...args: any[]) => void;
+    }
+
+    interface Document {
+        readonly prerendering?: boolean;
+    }
 }

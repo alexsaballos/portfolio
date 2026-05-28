@@ -1,11 +1,12 @@
 ---
+import "aos/dist/aos.css";
 import '@styles/global.css';
 
 import { SYSTEM } from '@config/links';
 import { ERRORS } from '@config/errors';
 import { METADATA } from '@config/meta';
 import { PERSONAL } from '@config/personal';
-import { PATHS, FAVICONS } from '@config/assets';
+import { FAVICONS } from '@config/assets';
 import { getLocaleMessages } from '@locales/utils';
 
 import type { ErrorsCodeType } from '@typing/ErrorsType';
@@ -15,6 +16,7 @@ import IconLibrary from '@libraries/IconLibrary.astro';
 import FlagLibrary from '@libraries/FlagLibrary.astro';
 import Navbar from '@widgets/Navbar.astro';
 import Footer from '@sections/Footer.astro';
+import Loader from "@widgets/Loader.astro";
 
 // Error Code Paramtrization
 const { code } = Astro.props as { code: ErrorsCodeType; };
@@ -34,6 +36,7 @@ Astro.locals.t = await getLocaleMessages(lang);
 		<meta name="application-name" content={METADATA.siteName} />
 		<meta name="description" content={currentError.description} />
 		<meta name="author" content={PERSONAL.name} />
+		<meta name="generator" content={Astro.generator} />
 		<link rel="icon" href={METADATA.favicon} type="image/x-icon" />
 		<link rel="manifest" href={METADATA.manifest} />
 		<title>{currentError.title}</title>
@@ -48,8 +51,6 @@ Astro.locals.t = await getLocaleMessages(lang);
 		<meta name="theme-color-dark" content={METADATA.colors.dark.background} />
         <meta name="color-scheme" content="light dark" />
 		<style>html {visibility: hidden;}</style>
-        <noscript><style>html {visibility: visible !important;}</style></noscript>
-		<script is:inline type="module" src={`${PATHS.scripts}theme-load.js`}></script>
 
 		<!-- Apple -->
 		<link rel="apple-touch-icon" href={FAVICONS.apple180.src} />
@@ -71,8 +72,16 @@ Astro.locals.t = await getLocaleMessages(lang);
 		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:title" content={currentError.title} />
 		<meta name="twitter:description" content={currentError.description} />
+		
+		<!-- Google tag (gtag.js) -->
+		<script is:inline async src={METADATA.api_keys.google_analytics.stream_url} />
+		<script>
+            import { initGoogleAnalytics } from "@scripts/google-analytics.ts";
+            initGoogleAnalytics("error");
+        </script>
 	</head>
 	<body>
+		<Loader />
 		<IconLibrary /><FlagLibrary />				<!-- Inject all Icons early on in the DOM -->
 		<div class="min-h-screen flex flex-col">
 			<Navbar />
@@ -81,6 +90,11 @@ Astro.locals.t = await getLocaleMessages(lang);
 			</main>
 			<Footer />								<!-- Footer included with every page -->
 		</div>
-		<script is:inline type="module" src={`${PATHS.scripts}theme-sync.js`}></script>
+
+		<!-- Scripts at the very bottom of the page -->
+        <noscript><style>
+			html {visibility: visible !important;}
+		</style></noscript>
+		<script src="@scripts/global.ts"></script>
 	</body>
 </html>

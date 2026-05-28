@@ -11,6 +11,9 @@ export type MetadataType = {
     charset: string;
     display: string;
     orientation: string;
+    api_keys: {
+        google_analytics: Record<("stream_id" | "measurement_id" | "stream_url"), string>;
+    }
     colors: {
         dark: Record<("background" | "primary" | "secondary" | "accent"), string>;
         light: Record<("background" | "primary" | "secondary" | "accent"), string>;

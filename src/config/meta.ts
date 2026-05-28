@@ -1,3 +1,4 @@
+import { SYSTEM } from "@config/links";
 import { PERSONAL } from "@config/personal";
 import { FAVICONS, PICTURES } from "@config/assets";
 
@@ -18,6 +19,13 @@ export const METADATA = {
     charset: "UTF-8",
     display: "standalone",
     orientation: "any",
+    api_keys: {
+        google_analytics: {
+            stream_id: "14957967801",
+            measurement_id: "G-Z0X55Z8KWP",
+            stream_url: `${SYSTEM.API.google_analytics}G-Z0X55Z8KWP`
+        }
+    },
     colors: {
         dark: {
             background: "#1D232A",    // Equivalent to bg-base-100 on dark mode

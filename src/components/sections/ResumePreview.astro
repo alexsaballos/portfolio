@@ -1,0 +1,57 @@
+---
+import Title from "@ui/text/Title.astro";
+import Icon from "@ui/libraries/Icon.astro";
+
+import { PERSONAL } from "@config/personal";
+import { ICONS, getPublicFile } from "@config/assets";
+import PDFViewer from "@widgets/PDFViewer.astro";
+
+const t = Astro.locals.t.resume_preview;
+const resumeUrl = getPublicFile("resume", "alexander-saballos-resume-es.pdf");
+---
+
+<section id="resume" class="py-10 px-5 flex flex-col items-center justify-center">
+
+    <!-- Header -->
+    <div data-aos="fade-up" class="flex flex-col gap-5 items-center text-center">
+        <Title title={t.title} />
+        <p class="max-w-5xl mb-5">{t.intro}</p>
+    </div>
+
+    <!-- Resume Card -->
+    <div data-aos="fade-up" data-aos-delay="150" class="bg-base-300 rounded-4xl w-full md:max-w-5xl">
+
+        <!-- Top Bar -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-5 ">
+
+            <!-- Left -->
+            <div class="flex flex-col">
+                <h3 class="text-xl font-semibold">{PERSONAL.name}</h3>
+                <p class="text-sm opacity-70 mt-1">{t.headline}</p>
+            </div>
+
+            <!-- Right -->
+            <div class="flex flex-wrap flex-row gap-3 items-center">
+                <a data-aos="zoom-in" data-aos-delay="500" href={resumeUrl} target="_blank" rel="noopener noreferrer"
+                    class="btn btn-primary shadow-none rounded-4xl">
+                    <Icon icon={ICONS.fullscreen} />
+                    {t.fullscreen}
+                </a>
+                <a data-aos="zoom-in" data-aos-delay="500" href={resumeUrl} download
+                    class="btn btn-secondary shadow-none rounded-4xl">
+                    <Icon icon={ICONS.download} />
+                    {t.download}
+                </a>
+            </div>
+        </div>
+
+        <!-- PDF Viewer -->
+        <PDFViewer pdf={resumeUrl} />
+
+        <!-- Footer -->
+        <div class="px-6 py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+            <p class="text-sm opacity-60">{t.optimized}</p>
+            <p class="text-sm opacity-60">{t.updated}</p>
+        </div>
+    </div>
+</section>

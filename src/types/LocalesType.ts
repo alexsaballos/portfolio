@@ -1,8 +1,8 @@
 import type {
     IconsType, TechnologiesCoreSubheadersType, TechnologiesNamesType, TechnologiesProductionSubheadersType
 } from "@typing/AssetsType";
-import type { CertLocaleType } from "@typing/CertificationsType";
 import type { HonorsType } from "@typing/HonorsType";
+import type { CertLocaleType } from "./CertificationsType";
 import type { DirectoryPageNamesType, NavigationPageNamesType } from "@typing/PagesType";
 
 export type AdmittedLanguagesType = "de" | "en" | "es";
@@ -14,34 +14,21 @@ export type SingleLanguageType = {
     home: string;
     icon: IconsType;
     picture: ImageMetadata;
-    name: {
-        standard: string;
-        localized: string;
-    };
+    name: Record<("standard" | "localized"), string>;
     code: {
         lang: AdmittedLanguagesType;
         langcountry: AdmittedLangCountriesType;
     }
-    text: {
-        hello: string;
-        select: string;
-    }
+    text: Record<("hello" | "select"), string>;
 }
 
 export type LanguagesType = Record<AdmittedLanguagesType, SingleLanguageType>;
 
 export type LocalesType = {
-    intro: {
-        name_is: string;
-        name: string;
-        headline: string;
-        scroll: string;
-    },
-    breadcrumbs: Record<DirectoryPageNamesType, string>,
-    about: {
-        greeting: string;
-        introduction: string;
-    },
+    intro: Record<("name_is" | "headline"), string>;
+    breadcrumbs: Record<DirectoryPageNamesType, string>;
+    about: Record<("greeting" | "introduction"), string>;
+    resume_preview: Record<("title" | "intro" | "headline" | "fullscreen" | "download" | "optimized" | "updated"), string>;
     stack: {
         title: string;
         core: {
@@ -53,66 +40,28 @@ export type LocalesType = {
             subheaders: Record<TechnologiesProductionSubheadersType, string>;
         },
         technologies: Record<TechnologiesNamesType, string>;
-    }
-    categories: { title: string; },
+    };
+    categories: Record<"title", string>;
     navigation: Record<NavigationPageNamesType, string>,
-    footer: { copyright: string; },
-    coming_soon: {
-        p1: string;
-        p2: string;
-    },
+    footer: Record<"copyright", string>;
+    coming_soon: Record<("p1" | "p2"), string>;
     certifications: {
-        texts: {
-            title: string;
-            description: string;
-            resources: string;
-            planned: string;
-        }
+        texts: Record<("title" | "description" | "resources" | "planned"), string>;
     } & CertLocaleType;
     honors: {
-        texts: {
-            title: string;
-            description: string;
-            resources: string;
-        }
+        texts: Record<("title" | "description" | "resources"), string>;
     } & HonorsType;
-    contact: {
-        CTA: string;
-        form_invite: string;
-        required: string;
-        name: {
-            label: string;
-            placeholder: string;
-        },
-        email: {
-            label: string;
-            placeholder: string;
-        },
+    contact: Record<("CTA" | "form_invite" | "required" | "send" | "reach_on"), string> & {
+        name: Record<("label" | "placeholder"), string>;
+        email: Record<("label" | "placeholder"), string>;
         subject: {
             label: string;
-            options: {
-                placeholder: string;
-                recruiting: string;
-                technical: string;
-                business: string;
-                interview: string;
-                academic: string;
-                consulting: string;
-                other: string;
-            }
+            options: Record<("placeholder" | "recruiting" | "technical" | "business" | "interview" | "academic" | "consulting" | "other"), string>;
         },
-        message: {
-            label: string;
-            placeholder: string;
-        },
-        send: string;
-        reach_on: string;
+        message: Record<("label" | "placeholder"), string>;
         alerts: {
             loading: string;
-            success: {
-                p1: string;
-                p2: string;
-            };
+            success: Record<("p1" | "p2"), string>;
             failure: string;
         }
     }

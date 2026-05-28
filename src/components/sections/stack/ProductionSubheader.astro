@@ -3,13 +3,13 @@ import Technology from "@badges/Technology.astro";
 import { TECHNOLOGIES } from "@config/assets";
 import type { TechnologiesProductionSubheadersType } from "@typing/AssetsType";
 
-const t = Astro.locals.t;
+const t = Astro.locals.t.stack.production;
 const subheader = Astro.props.subheader as TechnologiesProductionSubheadersType;
 ---
 
 <fieldset class="fieldset bg-base-100 border border-base-100 rounded-xl p-4">
     <legend class="fieldset-legend text-[15px] font-medium">
-        {t.stack.production.subheaders[subheader]}
+        {t.subheaders[subheader]}
     </legend>
     <div class="flex flex-wrap gap-2 -mt-2">
         {Object.values(TECHNOLOGIES)

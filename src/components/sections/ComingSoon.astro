@@ -3,11 +3,11 @@ import { ICONS } from "@config/assets";
 import Icon from "@libraries/Icon.astro";
 import Title from "@text/Title.astro";
 
-const t = Astro.locals.t;
+const t = Astro.locals.t.coming_soon;
 ---
 
-<section data-aos="fade-in" class="flex flex-col text-center place-items-center gap-4 py-30 md:py-10 px-5">
-    <Icon icon={ICONS.hourglass} size="exl" />
-    <Title title={t.coming_soon.p1} />
-    <h2 class="text-2xl font-light">{t.coming_soon.p2}</h2>
+<section class="flex flex-col text-center place-items-center gap-4 py-30 md:py-10 px-5">
+    <div data-aos="fade-in" data-aos-delay="500"><Icon icon={ICONS.hourglass} size="exl" /></div>
+    <div data-aos="fade-up" data-aos-delay="1000"><Title title={t.p1} /></div>
+    <h2 data-aos="fade-up" data-aos-delay="1500" class="text-2xl font-light">{t.p2}</h2>
 </section>

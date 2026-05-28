@@ -18,7 +18,7 @@ export const CERT_LINKS = {
     iassc: {
         year: "2026",
         picture: PICTURES.certifications.iassc,
-        verification: undefined,
+        verification: LINKS.profiles.peoplecert,
         info: LINKS.certifications.iassc.main
     },
     cs50: {

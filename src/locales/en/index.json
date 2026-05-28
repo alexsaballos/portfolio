@@ -1,9 +1,7 @@
 {
     "intro": {
         "name_is": "My name is",
-        "name": "Alexander Saballos",
-        "headline": "Electrical Engineer (US EI/EiT) | Software Engineer | HU Walton Alumnus",
-        "scroll": "Scroll!"
+        "headline": "Electrical Engineer (US EI/EiT) | Software Engineer | HU Walton Alumnus"
     },
     "breadcrumbs": {
         "home": "Home",
@@ -17,6 +15,15 @@
     "about": {
         "greeting": "Welcome to my Portfolio!",
         "introduction": "This space showcases systems and projects I've built at the intersection of hardware, software, and infrastructure. I graduated Cum Laude as a Walton Scholar from Harding University (AR, US) with an ABET-accredited B.S. in Electrical Engineering, a minor in Mathematics, and passed the NCEES FE Exam prior to graduation, which enabled me to receive a US EI/EiT license. My work spans embedded systems, power and PCB design, automation, and software development, with a strong emphasis on documentation, long-term maintainability, and practical solutions designed to perform reliably beyond the lab environment."
+    },
+    "resume_preview": {
+        "title": "Resume",
+        "intro": "Here's my current resume in English. If you want to read Spanish or German variants, please click here.",
+        "headline": "Electrical & Software Engineer",
+        "fullscreen": "Open Fullscreen",
+        "download": "Download PDF",
+        "optimized": "Optimized for: US markets",
+        "updated": "Last updated: May 2026"
     },
     "stack": {
         "title": "Technology Stack",
@@ -103,6 +110,7 @@
             "name": "Lean Six Sigma Green Belt (IASSC-aligned)",
             "summary": "Senior-level Lean Six Sigma Green Belt-aligned coursework completed at Harding University, emphasizing process improvement, statistical analysis, and data-driven decision making.",
             "details": "Completed ENGR-4550 (Lean Six Sigma) during Spring 2025 as a senior-level engineering elective at Harding University, earning an A. The course was taught following American Society for Quality (ASQ) Lean Six Sigma Green Belt standards and covered DMAIC, statistical process control, root cause analysis, process optimization, and waste reduction across engineering and operational contexts. IASSC Lean Six Sigma Green Belt certification is planned for 2026.",
+            "verification": "PeopleCert",
             "info": "IASSC Website"
         },
         "arpels": {

@@ -24,6 +24,7 @@ export type BasePageType = {
     SEO: {
         title: string;
         description: string;
+        schemaorg_position: number;
     }
 };
 

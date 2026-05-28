@@ -3,7 +3,7 @@ const themeColorMeta = document.querySelector('meta[name="theme-color"]');
 const darkColor = document.querySelector('meta[name="theme-color-dark"]')?.getAttribute('content');
 const lightColor = document.querySelector('meta[name="theme-color-light"]')?.getAttribute('content');
 
-const setThemeColor = (color) => {
+const setThemeColor = (color: string) => {
     if (themeColorMeta) themeColorMeta.setAttribute('content', color);
 };
 

@@ -1,12 +1,12 @@
 ---
+import { ROUTE } from "@config/routing";
+import { VANITY } from "@config/vanity";
+import { METADATA } from "@config/meta";
+
 import VanityLayout from "@layouts/VanityLayout.astro";
 import Avatar from "@ui/Avatar.astro";
 import Title from "@text/Title.astro";
 import Icon from "@libraries/Icon.astro";
-
-import { VANITY } from "@config/vanity";
-import { METADATA } from "@config/meta";
-import { ROUTE } from "@config/routing";
 
 import type { VanityNamesType } from "@typing/VanityType";
 
@@ -20,23 +20,25 @@ const currentURL: string = VANITY[profile].frontend.link;
 
 <VanityLayout profile={profile}>
     <div class="justify-items-center">
-        <Title title="Redirecting you to"/>
-        <div class="flex flex-row items-center">
+        <div data-aos="fade-up" data-aos-delay="500"><Title title="Redirecting you to"/></div>
+        <div data-aos="fade-in" data-aos-delay="1000" class="flex flex-row items-center">
             <Icon icon={VANITY[profile].frontend.icon} classname="h-45 w-45 sm:h-55 sm:w-55 md:h-65 md:w-65" />
             <Avatar classname="h-30 w-30 sm:h-40 sm:w-40 md:h-50 md:w-50" />
         </div>
 
         <!-- Injects the slug's URL into an external JS module for countdown redirection -->
-        <h2 class="text-4xl text-center font-bold mb-2" id="countdownVanityContainer" data-url={currentURL}>
+        <h2 data-aos="fade-up" data-aos-delay="1500" class="text-4xl text-center font-bold mb-2" id="countdownVanityContainer" data-url={currentURL}>
             {VANITY[profile].frontend.text.owner} {VANITY[profile].frontend.name} {VANITY[profile].frontend.text.type} in
             <span id="countdownVanitySpan">3</span>
         </h2>
 
-        <h3 class="text-2xl font-light mt-3 text-center">Not getting redirected?<br>
+        <h3 data-aos="fade-up" data-aos-delay="2000" class="text-2xl font-light mt-3 text-center">Not getting redirected?<br>
             Click <a href={currentURL} class="text-primary hover:text-secondary hover:underline">here</a>
-            to proceed, take a look at other sections, or return
+            to proceed, take a look at
+            <a class="text-primary hover:text-secondary hover:underline" href=`${ROUTE.home(METADATA.defaultLanguage)}#categories`>other sections</a>,
+            or return
             <a class="text-primary hover:text-secondary hover:underline" href={ROUTE.home(METADATA.defaultLanguage)}>home</a>.
         </h3>
     </div>
-    <!-- <script is:inline type="module" src={`${PATHS.scripts}countdown_vanity.js`}></script> -->
+    <script src="@scripts/countdown_vanity.ts"></script>
 </VanityLayout>

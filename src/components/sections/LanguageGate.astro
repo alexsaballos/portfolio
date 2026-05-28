@@ -12,7 +12,7 @@ const page =  Astro.props.page as DirectoryPageSlugsType;
     <div class="flex flex-col justify-around place-items-center md:flex-row p-2 gap-10">
         {Object.values(LANGUAGES).map((entry) => (
             <div class="flex flex-col gap-2">
-                <a href={(page === "") ? ROUTE.home(entry.code.lang) : ROUTE.page(entry.code.lang, page)}>
+                <a data-aos="fade-up" href={(page === "") ? ROUTE.home(entry.code.lang) : ROUTE.page(entry.code.lang, page)}>
                     <div class="card image-full rounded-2xl max-w-160 lg:max-w-100 h-48 sm:h-64 md:h-72 group ring-4 ring-base-300 hover:ring-6 hover:ring-primary">
                         <figure>
                             <Image src={entry.picture} alt={entry.name.localized} class="transition-transform duration-500 ease-out group-hover:scale-110" />
@@ -25,7 +25,7 @@ const page =  Astro.props.page as DirectoryPageSlugsType;
                         </div>
                     </div>
                 </a>
-                <p class="text-md font-light sm:text-lg">{entry.text.select}</p>
+                <p data-aos="zoom-in" data-aos-delay="500" class="text-md font-light sm:text-lg">{entry.text.select}</p>
             </div>
         ))}
     </div>

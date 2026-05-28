@@ -2,6 +2,7 @@ export const SYSTEM = {
     domain: "https://alexsaballos.dev",
     pfp: "https://alexsaballos.dev/images/profile.jpg",
     API: {
+        google_analytics: "https://www.googletagmanager.com/gtag/js?id=",
         resend: "https://api.alexsaballos.dev/contact.php"
     }
 } as const;

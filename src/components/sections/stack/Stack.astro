@@ -4,7 +4,7 @@ import CoreSubheader from "@sections/stack/CoreSubheader.astro";
 import ProductionSubheader from "@sections/stack/ProductionSubheader.astro";
 import type { TechnologiesCoreSubheadersType, TechnologiesProductionSubheadersType } from "@typing/AssetsType";
 
-const t = Astro.locals.t;
+const t = Astro.locals.t.stack;
 
 // Subheaders keys
 const coreSubheaders1: TechnologiesCoreSubheadersType[] = ["embedded", "software"];
@@ -15,12 +15,12 @@ const productionSubheaders3: TechnologiesProductionSubheadersType = "operations"
 ---
 
 <section data-aos="fade-up" class="bg-base-300 rounded-4xl py-10 px-5 lg:px-30">
-    <div data-aos="fade-up"><Title title={t.stack.title} /></div>
+    <div data-aos="fade-up"><Title title={t.title} /></div>
     <div class="grid gap-10 xl:px-10">
 
         <!-- ================= CORE ================= -->
         <div class="group grid gap-6">
-            <h2 class="text-2xl font-bold tracking-tight mt-4">{t.stack.core.header}</h2>
+            <h2 class="text-2xl font-bold tracking-tight mt-4">{t.core.header}</h2>
             <div class="flex flex-col flex-wrap gap-6">
 
                 <!-- Embedded & Software Subheaders -->
@@ -39,7 +39,7 @@ const productionSubheaders3: TechnologiesProductionSubheadersType = "operations"
 
         <!-- ============== PRODUCTION ============== -->
         <div class="group grid gap-3 mt-4">
-            <h2 data-aos="fade-up" class="text-2xl font-bold tracking-tight">{t.stack.production.header}</h2>
+            <h2 data-aos="fade-up" class="text-2xl font-bold tracking-tight">{t.production.header}</h2>
             <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
                 <!-- Web Subheader -->

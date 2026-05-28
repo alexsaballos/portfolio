@@ -43,13 +43,18 @@ const TECHNOLOGIES_COLORS = {
 }
 
 // COMPLETE ABSOLUTE PATHS REFERENCE
-// Absolute Paths needed for all Client-side Assets & JS
+// Absolute Paths needed for all Client-side Assets
 export const PATHS = {
-    scripts: "/scripts/",
+    docs: "/assets/docs/",
+    resume: "/assets/docs/resume/",
     favicons: "/assets/favicons/",
     pictures: "/assets/pictures/",
     videos: "/assets/videos/"
 } as const satisfies PathsListType;
+
+// Helper function to get a publicly served file (Astro/Vite untouched)
+export const getPublicFile =
+    (predefinedPath: keyof typeof PATHS, file: string): string => `${PATHS[predefinedPath]}${file}`;
 
 // COMPLETE PICTURES & VIDEOS REFERENCE
 // Complete Pictures Reference
@@ -254,6 +259,20 @@ export const ICONS = {
         title: "Hamburger Close Icon",
         desc: "Hamburger Menu Closing on Mobile Devices.",
         size: "md"
+    },
+
+    // Resume icons
+    download: {
+        href: "#download",
+        title: "Download to Device Icon",
+        desc: "Download to Device Icon.",
+        size: "sm"
+    },
+    fullscreen: {
+        href: "#fullscreen",
+        title: "Open Fullscreen View Externally Icon",
+        desc: "Open Fullscreen View Externally Icon.",
+        size: "sm"
     },
 
     // Link icon

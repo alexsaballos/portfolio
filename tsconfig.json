@@ -4,7 +4,7 @@
 	"exclude": ["dist"],
 	"compilerOptions": {
 		"paths": {
-			// Specialized Components path section
+			// Source - Specialized Components path section
 			"@sections/*": ["./src/components/sections/*"],
 			"@ui/*": ["./src/components/ui/*"],
 			"@badges/*": ["./src/components/ui/badges/*"],
@@ -14,12 +14,13 @@
 			"@togglers/*": ["./src/components/ui/togglers/*"],
 			"@widgets/*": ["./src/components/widgets/*"],
 
-			// Other Items Source path section
+			// Source - Other Items path section
 			"@config/*": ["./src/config/*"],
 			"@images/*": ["./src/images/*"],
 			"@layouts/*": ["./src/layouts/*"],
 			"@locales/*": ["./src/locales/*"],
 			"@pages/*": ["./src/pages/*"],
+			"@scripts/*": ["./src/scripts/*"],
 			"@styles/*": ["./src/styles/*"],
 			"@typing/*": ["./src/types/*"]
 		}

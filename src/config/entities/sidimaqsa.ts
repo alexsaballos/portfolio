@@ -18,11 +18,6 @@ export const SCHEMAORG_SIDIMAQSA = {
         "addressRegion": "Managua",
         "addressCountry": "NI"
     },
-    "industry": [
-        "Industrial Services",
-        "Elevator Systems",
-        "Escalator Systems"
-    ],
     "founder": {
         "@id": `${SYSTEM.domain}#person`
     }

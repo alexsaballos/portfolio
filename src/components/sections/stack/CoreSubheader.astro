@@ -3,13 +3,13 @@ import Technology from "@badges/Technology.astro";
 import { TECHNOLOGIES } from "@config/assets";
 import type { TechnologiesCoreSubheadersType } from "@typing/AssetsType";
 
-const t = Astro.locals.t;
+const t = Astro.locals.t.stack.core;
 const subheader = Astro.props.subheader as TechnologiesCoreSubheadersType;
 ---
 
 <div class="flex flex-col gap-2">
     <h3 class="text-lg font-semibold">
-        {t.stack.core.subheaders[subheader]}
+        {t.subheaders[subheader]}
     </h3>
     <div class="flex flex-wrap gap-2 pl-2">
         {Object.values(TECHNOLOGIES)

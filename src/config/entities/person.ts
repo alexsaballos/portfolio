@@ -9,6 +9,8 @@ export const SCHEMAORG_PERSON = {
 	"@id": `${SYSTEM.domain}#person`,
     "name": PERSONAL.name,
 	"gender": "https://schema.org/Male",
+	"height": "1.85 m",
+	"pronouns": "he/him",
     "url": SYSTEM.domain,
     "image": SYSTEM.pfp,
 	"mainEntityOfPage": {
@@ -48,9 +50,9 @@ export const SCHEMAORG_PERSON = {
 			"value": "9869"
 		}
 	],
-	"hasCredential": [
+	"hasCertification": [
 		{
-			"@type": "EducationalOccupationalCredential",
+			"@type": ["Certification", "EducationalOccupationalCredential"],
 			"credentialCategory": "license",
 			"name": "Engineer in Training (EiT/EI)",
     		"validFrom": "2025-05-22",
@@ -62,7 +64,7 @@ export const SCHEMAORG_PERSON = {
 			}
 		},
 		{
-			"@type": "EducationalOccupationalCredential",
+			"@type": ["Certification", "EducationalOccupationalCredential"],
 			"credentialCategory": "license",
 			"name": "Basic Life Support (CPR & AED) Program",
     		"validFrom": "2024-08-13",
@@ -75,7 +77,7 @@ export const SCHEMAORG_PERSON = {
 			}
 		},
 		{
-			"@type": "EducationalOccupationalCredential",
+			"@type": ["Certification", "EducationalOccupationalCredential"],
 			"credentialCategory": "degree",
 			"name": "Bachelor of Science in Electrical Engineering",
     		"validFrom": "2025-05-10",
@@ -88,7 +90,7 @@ export const SCHEMAORG_PERSON = {
 			}
 		},
 		{
-			"@type": "EducationalOccupationalCredential",
+			"@type": ["Certification", "EducationalOccupationalCredential"],
 			"credentialCategory": "certificate",
 			"name": "CS50",
     		"validFrom": "2020-06-10",
@@ -101,7 +103,7 @@ export const SCHEMAORG_PERSON = {
 			}
 		},
 		{
-			"@type": "EducationalOccupationalCredential",
+			"@type": ["Certification", "EducationalOccupationalCredential"],
 			"credentialCategory": "certificate",
 			"name": "Solving Problems with Software (Java)",
     		"validFrom": "2020-10-24",
@@ -115,71 +117,13 @@ export const SCHEMAORG_PERSON = {
 		}
 	],
 	"award": [
-		{
-			"@type": "Award",
-			"name": "Walton International Scholarship Program (WISP)",
-			"description": "Full academic scholarship awarded to outstanding Central American students based on academic excellence and leadership potential.",
-			"url": LINKS.organizations.wisp,
-			"provider": {
-				"@type": "Organization",
-				"name": "Walton Family Foundation"
-			}
-		},
-		{
-			"@type": "Award",
-			"name": "NCEES Honor Graduate - FE Exam (Electrical & Computer)",
-			"description": "Passed the Fundamentals of Engineering exam prior to graduation.",
-			"url": LINKS.organizations.ncees,
-			"provider": {
-				"@type": "Organization",
-				"name": "National Council of Examiners for Engineering and Surveying (NCEES)"
-			}
-		},
-		{
-			"@type": "Award",
-			"name": "Cum Laude Graduate - BSc. Electrical Engineering",
-			"url": LINKS.organizations.hu.main,
-			"provider": {
-				"@type": "CollegeOrUniversity",
-				"name": "Harding University"
-			}
-		},
-		{
-			"@type": "Award",
-			"name": "Distinguished Scholar - Harding University American Studies Institute",
-			"url": LINKS.organizations.hu.asi,
-			"provider": {
-				"@type": "CollegeOrUniversity",
-				"name": "Harding University American Studies Institute"
-			}
-		},
-		{
-			"@type": "Award",
-			"name": "Honor Student - Harding University Honors College",
-			"url": LINKS.organizations.hu.honors,
-			"provider": {
-				"@type": "CollegeOrUniversity",
-				"name": "Harding University Honors College"
-			}
-		},
-		{
-			"@type": "Award",
-			"name": "Dean's List - Harding University Provost",
-			"url": LINKS.profiles.merit,
-			"provider": {
-				"@type": "CollegeOrUniversity",
-				"name": "Harding University Office of the Provost"
-			}
-		},
-		{
-			"@type": "Award",
-			"name": "High School Valedictorian",
-			"description": "Graduated as class valedictorian at 16 years old.",
-			"provider": {
-				"@type": "EducationalOrganization",
-				"name": "Fe y Alegria Nicaragua"
-			}
-		}
+		"Walton International Scholarship Program (WISP)",
+		"NCEES Honor Graduate - FE Exam (Electrical & Computer)",
+		"Cum Laude Graduate - BSc. Electrical Engineering",
+		"Distinguished Scholar - Harding University American Studies Institute",
+		"Honor Student - Harding University Honors College",
+		"Dean's List - Harding University Provost",
+		"High School Valedictorian at 16 Years Old"
 	],
     "knowsLanguage": Object.values(LANGUAGES).map(lang => ({
 		"@type": "Language",

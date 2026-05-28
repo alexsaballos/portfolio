@@ -1,11 +1,12 @@
 ---
+import "aos/dist/aos.css";
 import '@styles/global.css';
 
 import { VANITY } from '@config/vanity';
-import { PERSONAL } from '@config/personal';
 import { METADATA } from '@config/meta';
+import { FAVICONS } from '@config/assets';
+import { PERSONAL } from '@config/personal';
 import { LINKS, SYSTEM } from '@config/links';
-import { PATHS, FAVICONS } from '@config/assets';
 import { SCHEMAORG_GRAPH } from '@config/entities/graph';
 import { getLocaleMessages } from '@locales/utils';
 
@@ -15,6 +16,7 @@ import IconLibrary from '@libraries/IconLibrary.astro';
 import FlagLibrary from '@libraries/FlagLibrary.astro';
 import Footer from '@sections/Footer.astro';
 import Navbar from '@widgets/Navbar.astro';
+import Loader from "@widgets/Loader.astro";
 
 // Layout parametrization for every page
 const { profile } = Astro.props as { profile: VanityNamesType; };
@@ -36,6 +38,7 @@ Astro.locals.t = await getLocaleMessages(lang);
 		<meta name="application-name" content={METADATA.siteName} />
 		<meta name="description" content={currentSEO.description} />
 		<meta name="author" content={PERSONAL.name} />
+		<meta name="generator" content={Astro.generator} />
 		<link rel="icon" href={METADATA.favicon} type="image/x-icon" />
 		<link rel="manifest" href={METADATA.manifest} />
 		<title>{currentSEO.title}</title>
@@ -50,8 +53,6 @@ Astro.locals.t = await getLocaleMessages(lang);
 		<meta name="theme-color-dark" content={METADATA.colors.dark.background} />
         <meta name="color-scheme" content="light dark" />
 		<style>html {visibility: hidden;}</style>
-        <noscript><style>html {visibility: visible !important;}</style></noscript>
-		<script is:inline type="module" src={`${PATHS.scripts}theme-load.js`}></script>
 
 		<!-- SEO - Monolingual Vanity Canonical Links -->
 		<link rel="canonical" href={currentSEO.canonical} />
@@ -94,10 +95,18 @@ Astro.locals.t = await getLocaleMessages(lang);
 		<meta name="twitter:image" content={METADATA.opengraph.image} />
 		<meta name="twitter:image:alt" content={METADATA.siteName} />
 
-		<!-- Schema.org Entities & Graph -->
-		<script is:inline type="application/ld+json" set:html={SCHEMAORG_GRAPH} />
+		<!-- Schema.org Entities & Graph (Three-Entity Schema.org Graph) | No speculation API -->
+		<script is:inline type="application/ld+json" set:html={SCHEMAORG_GRAPH(lang, "home")} />
+		
+		<!-- Google tag (gtag.js) -->
+		<script is:inline async src={METADATA.api_keys.google_analytics.stream_url} />
+		<script>
+            import { initGoogleAnalytics } from "@scripts/google-analytics.ts";
+            initGoogleAnalytics("vanity");
+        </script>
 	</head>
 	<body>
+		<Loader />
 		<IconLibrary /><FlagLibrary />			<!-- Inject all Icons early on in the DOM -->
 		<div class="min-h-screen flex flex-col">
 			<Navbar />
@@ -106,6 +115,11 @@ Astro.locals.t = await getLocaleMessages(lang);
 			</main>
 			<Footer />							<!-- Footer included with every page -->
 		</div>
-		<script is:inline type="module" src={`${PATHS.scripts}theme-sync.js`}></script>
+
+		<!-- Scripts at the very bottom of the page -->
+        <noscript><style>
+			html {visibility: visible !important;}
+		</style></noscript>
+		<script src="@scripts/global.ts"></script>
 	</body>
 </html>
