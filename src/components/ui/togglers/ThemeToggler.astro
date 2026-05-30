@@ -1,10 +1,9 @@
 ---
-import { ICONS } from "@config/assets";
-import Icon from "@libraries/Icon.astro";
+import TestIcon from "@ui/TestIcon.astro";
 ---
 
 <label class="btn btn-ghost shadow-none btn-square swap swap-rotate transition-transform duration-500 ease-out hover:text-secondary hover:scale-120">
     <input type="checkbox" class="theme-controller" value="dark" />
-    <Icon icon={ICONS.sun} classname="swap-off" />
-    <Icon icon={ICONS.moon} classname="swap-on" />
+    <TestIcon name="sun" classname="swap-off" />
+    <TestIcon name="moon" classname="swap-on" />
 </label>

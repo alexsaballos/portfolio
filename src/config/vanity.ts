@@ -1,6 +1,5 @@
-import { LINKS } from "@config/links";
 import { SEO } from "@config/routing";
-import { ICONS } from "@config/assets";
+import { LINKS } from "@config/links";
 import { PERSONAL } from "@config/personal";
 import type { VanityListType, VanityEntryGroupType } from "@typing/VanityType";
 
@@ -10,7 +9,7 @@ export const VANITY = {
         frontend: {
             name: "LinkedIn",
             link: LINKS.profiles.linkedin,
-            icon: ICONS.linkedin,
+            icon: "linkedin",
             text: {
                 owner: "my",
                 type: "profile"
@@ -32,7 +31,7 @@ export const VANITY = {
         frontend: {
             name: "GitHub",
             link: LINKS.profiles.github,
-            icon: ICONS.github,
+            icon: "github",
             text: {
                 owner: "my",
                 type: "profile"
@@ -54,7 +53,7 @@ export const VANITY = {
         frontend: {
             name: "Handshake",
             link: LINKS.profiles.handshake,
-            icon: ICONS.handshake,
+            icon: "handshake",
             text: {
                 owner: "my",
                 type: "profile"
@@ -76,7 +75,7 @@ export const VANITY = {
         frontend: {
             name: "Merit",
             link: LINKS.profiles.merit,
-            icon: ICONS.merit,
+            icon: "merit",
             text: {
                 owner: "my",
                 type: "profile"
@@ -98,7 +97,7 @@ export const VANITY = {
         frontend: {
             name: "Credly",
             link: LINKS.certifications.credly.profile,
-            icon: ICONS.credly,
+            icon: "credly",
             text: {
                 owner: "my",
                 type: "profile"
@@ -120,7 +119,7 @@ export const VANITY = {
         frontend: {
             name: "WISP",
             link: LINKS.organizations.wisp,
-            icon: ICONS.wisp,
+            icon: "wisp",
             text: {
                 owner: "",
                 type: "website"
@@ -142,7 +141,7 @@ export const VANITY = {
         frontend: {
             name: "Harding University",
             link: LINKS.organizations.hu.main,
-            icon: ICONS.hu,
+            icon: "hu",
             text: {
                 owner: "",
                 type: "website"
@@ -164,7 +163,7 @@ export const VANITY = {
         frontend: {
             name: "Coursera",
             link: LINKS.profiles.coursera,
-            icon: ICONS.coursera,
+            icon: "coursera",
             text: {
                 owner: "my",
                 type: "profile"
@@ -186,7 +185,7 @@ export const VANITY = {
         frontend: {
             name: "EdX",
             link: LINKS.profiles.edx,
-            icon: ICONS.edx,
+            icon: "edx",
             text: {
                 owner: "my",
                 type: "profile"
@@ -208,7 +207,7 @@ export const VANITY = {
         frontend: {
             name: "Google Developer",
             link: LINKS.profiles.googledev,
-            icon: ICONS.googledev,
+            icon: "googledev",
             text: {
                 owner: "my",
                 type: "profile"
@@ -230,7 +229,7 @@ export const VANITY = {
         frontend: {
             name: "Figma",
             link: LINKS.profiles.figma,
-            icon: ICONS.figma,
+            icon: "figma",
             text: {
                 owner: "my",
                 type: "profile"
@@ -252,7 +251,7 @@ export const VANITY = {
         frontend: {
             name: "Gravatar",
             link: LINKS.profiles.gravatar,
-            icon: ICONS.gravatar,
+            icon: "gravatar",
             text: {
                 owner: "my",
                 type: "profile"
@@ -274,7 +273,7 @@ export const VANITY = {
         frontend: {
             name: "Khan Academy",
             link: LINKS.profiles.khanacademy,
-            icon: ICONS.khanacademy,
+            icon: "khanacademy",
             text: {
                 owner: "my",
                 type: "profile"
@@ -296,7 +295,7 @@ export const VANITY = {
         frontend: {
             name: "ORCiD",
             link: LINKS.profiles.orcid,
-            icon: ICONS.orcid,
+            icon: "orcid",
             text: {
                 owner: "my",
                 type: "profile"
@@ -318,7 +317,7 @@ export const VANITY = {
         frontend: {
             name: "PeopleCert",
             link: LINKS.profiles.peoplecert,
-            icon: ICONS.peoplecert,
+            icon: "peoplecert",
             text: {
                 owner: "my",
                 type: "profile"
@@ -340,7 +339,7 @@ export const VANITY = {
         frontend: {
             name: "Quizlet",
             link: LINKS.profiles.quizlet,
-            icon: ICONS.quizlet,
+            icon: "quizlet",
             text: {
                 owner: "my",
                 type: "profile"
@@ -362,7 +361,7 @@ export const VANITY = {
         frontend: {
             name: "SIDIMAQSA",
             link: LINKS.organizations.sidimaqsa,
-            icon: ICONS.sidimaqsa,
+            icon: "sidimaqsa",
             text: {
                 owner: "my",
                 type: "business"

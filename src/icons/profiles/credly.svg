@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   role="img"
+   viewBox="0 0 640 640"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="credly.svg"
+   width="640"
+   height="640"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.0846354"
+     inkscape:cx="313.93038"
+     inkscape:cy="305.63266"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <title
+     id="title1">Credly</title>
+  <path
+     id="path1-5"
+     inkscape:label="path1"
+     d="M 160 96 C 124.7 96 96 124.7 96 160 L 96 480 C 96 515.3 124.7 544 160 544 L 480 544 C 515.3 544 544 515.3 544 480 L 544 160 C 544 124.7 515.3 96 480 96 L 160 96 z M 420.24414 146.52734 C 423.63218 146.56725 427.01939 147.38149 430.14062 149.08398 C 442.59314 155.82909 445.70517 171.78569 437.5332 182.68164 C 403.80763 227.56258 401.47266 270.10694 401.47266 270.49609 C 400.95381 282.68919 390.96571 292.28906 378.90234 292.28906 C 378.51319 292.28906 378.25356 292.1582 377.99414 292.1582 C 365.41192 291.76906 355.68426 281.26307 356.20312 268.81055 C 356.20312 267.64312 356.85153 253.50466 362.81836 232.36133 C 367.74748 214.97969 357.50091 198.63477 339.4707 198.63477 C 313.9171 198.50505 284.6007 232.10192 263.7168 272.83203 C 229.73181 339.24544 233.10499 441.45898 289.66016 441.45898 C 346.21533 441.45898 386.16704 407.60423 413.92578 369.20898 C 420.41146 359.9993 432.99345 357.6647 442.20312 364.15039 L 442.46289 364.41016 C 442.59261 364.41016 442.72189 364.66992 442.85156 364.66992 C 451.80182 370.89618 454.2676 383.21807 448.30078 392.42773 C 422.74718 431.86071 378.51463 493.47461 284.86133 493.47461 C 173.04811 493.47461 173.04683 350.78982 211.96094 259.99023 C 230.63971 216.27671 287.32552 121.19637 387.20508 166.20703 C 390.05877 167.50417 393.43009 166.59621 395.24609 164.00195 C 396.93237 161.40767 398.74958 158.94389 400.69531 156.34961 C 405.33257 150.10714 412.79045 146.43956 420.24414 146.52734 z " />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Credly</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

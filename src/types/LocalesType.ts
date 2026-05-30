@@ -12,7 +12,7 @@ export type AdmittedLangCountriesType = "de-de" | "en-us" | "es-mx";
 export type SingleLanguageType = {
     key: AdmittedLanguagesType;
     home: string;
-    icon: IconsType;
+    icon: AdmittedCountriesType;
     picture: ImageMetadata;
     name: Record<("standard" | "localized"), string>;
     code: {

@@ -1,13 +1,12 @@
 ---
-import { ICONS } from "@config/assets";
 import { ROUTE } from "@config/routing";
-import Icon from "@libraries/Icon.astro";
+import TestIcon from "@ui/TestIcon.astro";
 
 const l = Astro.locals.l;
 ---
 
 <div class="btn btn-ghost btn-square shadow-none transition-transform duration-500 ease-out hover:text-secondary hover:scale-120">
     <a href={ROUTE.home(l)}>
-        <Icon icon={ICONS.home} />
+        <TestIcon name="home" />
     </a>
 </div>

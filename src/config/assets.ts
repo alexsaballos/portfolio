@@ -90,152 +90,438 @@ export const PICTURES = {
 // COMPLETE SVG ASSETS REFERENCE
 // Complete UI Icons Reference
 export const ICONS = {
+    // FLAGS GROUPING
+    de: {
+        name: "de",
+        group: "flags",
+        title: "Germany Flag Icon",
+        desc: "Rounded Minimalistic Germany Flag",
+        size: "sm"
+    },
+    mx: {
+        name: "mx",
+        group: "flags",
+        title: "Mexico Flag Icon",
+        desc: "Rounded Minimalistic Mexico Flag",
+        size: "sm"
+    },
+    us: {
+        name: "us",
+        group: "flags",
+        title: "United States Flag Icon",
+        desc: "Rounded Minimalistic United States Flag",
+        size: "sm"
+    },
+
+    // PROFILE GROUPING - Vanity Links
+    linkedin: {
+        name: "linkedin",
+        group: "profiles",
+        title: "LinkedIn Icon",
+        desc: "Square with Rounded Corners - Linkedin Logo.",
+        size: "lg"
+    },
+    github: {
+        name: "github",
+        group: "profiles",
+        title: "GitHub Icon",
+        desc: "Square with Rounded Corners - GitHub Logo.",
+        size: "lg"
+    },
+    handshake: {
+        name: "handshake",
+        group: "profiles",
+        title: "Handshake Icon",
+        desc: "Square with Rounded Corners - Handshake Logo.",
+        size: "lg"
+    },
+    merit: {
+        name: "merit",
+        group: "profiles",
+        title: "Merit Pages Icon",
+        desc: "Square with Rounded Corners - Merit Pages Logo.",
+        size: "lg"
+    },
+    credly: {
+        name: "credly",
+        group: "profiles",
+        title: "Credly Icon",
+        desc: "Square with Rounded Corners - Credly Logo.",
+        size: "lg"
+    },
+    wisp: {
+        name: "wisp",
+        group: "profiles",
+        title: "WISP Icon",
+        desc: "Square with Rounded Corners - WISP Logo.",
+        size: "lg"
+    },
+    hu: {
+        name: "hu",
+        group: "profiles",
+        title: "Harding University Icon",
+        desc: "Square with Rounded Corners - Harding University Logo.",
+        size: "lg"
+    },
+    coursera: {
+        name: "coursera",
+        group: "profiles",
+        title: "Coursera Icon",
+        desc: "Square with Rounded Corners - Coursera Logo.",
+        size: "lg"
+    },
+    edx: {
+        name: "edx",
+        group: "profiles",
+        title: "EdX Icon",
+        desc: "Square with Rounded Corners - EdX Logo.",
+        size: "lg"
+    },
+    googledev: {
+        name: "googledev",
+        group: "profiles",
+        title: "Google Developers Icon",
+        desc: "Square with Rounded Corners - Google Developers Logo.",
+        size: "lg"
+    },
+    figma: {
+        name: "figma",
+        group: "profiles",
+        title: "Figma Icon",
+        desc: "Square with Rounded Corners - Figma Logo.",
+        size: "lg"
+    },
+    gravatar: {
+        name: "gravatar",
+        group: "profiles",
+        title: "Gravatar Icon",
+        desc: "Square with Rounded Corners - Gravatar Logo.",
+        size: "lg"
+    },
+    khanacademy: {
+        name: "khanacademy",
+        group: "profiles",
+        title: "Khan Academy Icon",
+        desc: "Square with Rounded Corners - Khan Academy Logo.",
+        size: "lg"
+    },
+    orcid: {
+        name: "orcid",
+        group: "profiles",
+        title: "Orcid Icon",
+        desc: "Square with Rounded Corners - Orcid Logo.",
+        size: "lg"
+    },
+    peoplecert: {
+        name: "peoplecert",
+        group: "profiles",
+        title: "PeopleCert Icon",
+        desc: "Square with Rounded Corners - PeopleCert Logo.",
+        size: "lg"
+    },
+    quizlet: {
+        name: "quizlet",
+        group: "profiles",
+        title: "Quizlet Icon",
+        desc: "Square with Rounded Corners - Quizlet Logo.",
+        size: "lg"
+    },
+    sidimaqsa: {
+        name: "sidimaqsa",
+        group: "profiles",
+        title: "SIDIMAQSA Icon",
+        desc: "Square with Rounded Corners - SIDIMAQSA Logo.",
+        size: "lg"
+    },
+
+    // TECHNOLOGIES GROUPING
+    antdesign: {
+        name: "antdesign",
+        group: "technologies",
+        title: "Ant Design Logo",
+        desc: "UI Library used in Web Development",
+        size: "md"
+    },
+    arduino: {
+        name: "arduino",
+        group: "technologies",
+        title: "Arduino Logo",
+        desc: "Hardware Platform used in Robotics",
+        size: "md"
+    },
+    astro: {
+        name: "astro",
+        group: "technologies",
+        title: "Astro Logo",
+        desc: "Framework used in Web Development",
+        size: "md"
+    },
+    autocad: {
+        name: "autocad",
+        group: "technologies",
+        title: "AutoCAD Logo",
+        desc: "Engineering CAD Tool used in Diagram Creation",
+        size: "md"
+    },
+    axios: {
+        name: "axios",
+        group: "technologies",
+        title: "Axios Logo",
+        desc: "API Library used in Web Development",
+        size: "md"
+    },
+    baremetal: {
+        name: "microchip",
+        group: "gui",
+        title: "Microprocessor Icon",
+        desc: "Microprocessor/Microcontroller used in Embedded Systems",
+        size: "md"
+    },
+    bootstrap: {
+        name: "bootstrap",
+        group: "technologies",
+        title: "Bootstrap Logo",
+        desc: "UI Library used in Web Development",
+        size: "md"
+    },
+    c: {
+        name: "c",
+        group: "technologies",
+        title: "C Logo",
+        desc: "Programming Language used in Embedded Systems",
+        size: "md"
+    },
+    cpanel: {
+        name: "cpanel",
+        group: "technologies",
+        title: "cpanel Logo",
+        desc: "Administration Panel used in Backend Management",
+        size: "md"
+    },
+    cpp: {
+        name: "cpp",
+        group: "technologies",
+        title: "C++ Logo",
+        desc: "Programming Language used in Desktop Apps",
+        size: "md"
+    },
+    csharp: {
+        name: "csharp",
+        group: "technologies",
+        title: "C# Logo",
+        desc: "Programming Language used in Desktop Apps",
+        size: "md"
+    },
+    css: {
+        name: "css",
+        group: "technologies",
+        title: "CSS3 Logo",
+        desc: "Styling Language used in Web Development",
+        size: "md"
+    },
+    daisyui: {
+        name: "daisyui",
+        group: "technologies",
+        title: "daisyUI Logo",
+        desc: "UI Library used in Web Development",
+        size: "md"
+    },
+    directus: {
+        name: "directus",
+        group: "technologies",
+        title: "directus Logo",
+        desc: "Administration Panel used in Content Management",
+        size: "md"
+    },
+    flask: {
+        name: "flask",
+        group: "technologies",
+        title: "Flask Logo",
+        desc: "Framework used in Backend",
+        size: "md"
+    },
+    html: {
+        name: "html",
+        group: "technologies",
+        title: "HTML5 Logo",
+        desc: "Markup Language used in Web Development",
+        size: "md"
+    },
+    java: {
+        name: "java",
+        group: "technologies",
+        title: "Java Logo",
+        desc: "Programming Language used in Desktop Apps",
+        size: "md"
+    },
+    javascript: {
+        name: "javascript",
+        group: "technologies",
+        title: "JavaScript Logo",
+        desc: "Programming Language used in Web Development",
+        size: "md"
+    },
+    jinja: {
+        name: "jinja",
+        group: "technologies",
+        title: "Jinja Logo",
+        desc: "Templating Engine used in Web Development",
+        size: "md"
+    },
+    kicad: {
+        name: "kicad",
+        group: "technologies",
+        title: "KiCAD Logo",
+        desc: "Engineering CAD Tool used in PCB Creation",
+        size: "md"
+    },
+    multisim: {
+        name: "multisim",
+        group: "technologies",
+        title: "MultiSim Logo",
+        desc: "Simulation Tool used in Electronics & Schematics Creation",
+        size: "md"
+    },
+    mysql: {
+        name: "mysql",
+        group: "technologies",
+        title: "MySQL Logo",
+        desc: "Relational Database used in Backend",
+        size: "md"
+    },
+    opencv: {
+        name: "opencv",
+        group: "technologies",
+        title: "OpenCV Logo",
+        desc: "Library used in Robotics",
+        size: "md"
+    },
+    php: {
+        name: "php",
+        group: "technologies",
+        title: "PHP Logo",
+        desc: "Programming Language used in Web Development",
+        size: "md"
+    },
+    phpmyadmin: {
+        name: "phpmyadmin",
+        group: "technologies",
+        title: "phpMyAdmin Logo",
+        desc: "Administration Panel used in Backend Management",
+        size: "md"
+    },
+    python: {
+        name: "python",
+        group: "technologies",
+        title: "Python Logo",
+        desc: "Programming Language used in Backend & Robotics",
+        size: "md"
+    },
+    raspberrypi: {
+        name: "raspberrypi",
+        group: "technologies",
+        title: "Raspberry Pi Logo",
+        desc: "Hardware Platform used in Robotics",
+        size: "md"
+    },
+    react: {
+        name: "react",
+        group: "technologies",
+        title: "React Logo",
+        desc: "UI Library used in Web Development",
+        size: "md"
+    },
+    sketchup: {
+        name: "sketchup",
+        group: "technologies",
+        title: "SketchUp Logo",
+        desc: "Engineering CAD Tool used in 3D Modeling",
+        size: "md"
+    },
+    sqlite: {
+        name: "sqlite",
+        group: "technologies",
+        title: "SQLite Logo",
+        desc: "Relational Database used in Backend",
+        size: "md"
+    },
+    tailwindcss: {
+        name: "tailwindcss",
+        group: "technologies",
+        title: "TailwindCSS Logo",
+        desc: "CSS Library used in Web Development",
+        size: "md"
+    },
+    typescript: {
+        name: "typescript",
+        group: "technologies",
+        title: "TypeScript Logo",
+        desc: "Programming Language used in Web Development",
+        size: "md"
+    },
+    ultiboard: {
+        name: "multisim",
+        group: "technologies",
+        title: "UltiBoard Logo",
+        desc: "Engineering CAD Tool used in PCB Creation",
+        size: "md"
+    },
+    winui: {
+        name: "winui",
+        group: "technologies",
+        title: "WinUI Logo",
+        desc: "Framework used in Desktop Apps",
+        size: "md"
+    },
 
     // Coming soon
     hourglass: {
-        href: "#hourglass",
+        name: "hourglass",
+        group: "gui",
         title: "Hourglass Icon",
         desc: "Coming soon item.",
-        size: "dxl"
-    },
-
-    // Social media icons
-    linkedin: {
-        href: "#linkedin",
-        title: "LinkedIn Icon",
-        desc: "Square with Rounded Corners - Linkedin Logo.",
-        size: "md"
-    },
-    github: {
-        href: "#github",
-        title: "GitHub Icon",
-        desc: "Square with Rounded Corners - GitHub Logo.",
-        size: "md"
-    },
-    handshake: {
-        href: "#handshake",
-        title: "Handshake Icon",
-        desc: "Square with Rounded Corners - Handshake Logo.",
-        size: "md"
-    },
-    merit: {
-        href: "#merit",
-        title: "Merit Pages Icon",
-        desc: "Square with Rounded Corners - Merit Pages Logo.",
-        size: "md"
-    },
-    credly: {
-        href: "#credly",
-        title: "Credly Icon",
-        desc: "Square with Rounded Corners - Credly Logo.",
-        size: "md"
-    },
-    wisp: {
-        href: "#wisp",
-        title: "WISP Icon",
-        desc: "Square with Rounded Corners - WISP Logo.",
-        size: "md"
-    },
-    hu: {
-        href: "#hu",
-        title: "Harding University Icon",
-        desc: "Square with Rounded Corners - Harding University Logo.",
-        size: "md"
-    },
-    coursera: {
-        href: "#coursera",
-        title: "Coursera Icon",
-        desc: "Square with Rounded Corners - Coursera Logo.",
-        size: "md"
-    },
-    edx: {
-        href: "#edx",
-        title: "EdX Icon",
-        desc: "Square with Rounded Corners - EdX Logo.",
-        size: "md"
-    },
-    googledev: {
-        href: "#googledev",
-        title: "Google Developers Icon",
-        desc: "Square with Rounded Corners - Google Developers Logo.",
-        size: "md"
-    },
-    figma: {
-        href: "#figma",
-        title: "Figma Icon",
-        desc: "Square with Rounded Corners - Figma Logo.",
-        size: "md"
-    },
-    gravatar: {
-        href: "#gravatar",
-        title: "Gravatar Icon",
-        desc: "Square with Rounded Corners - Gravatar Logo.",
-        size: "md"
-    },
-    khanacademy: {
-        href: "#khanacademy",
-        title: "Khan Academy Icon",
-        desc: "Square with Rounded Corners - Khan Academy Logo.",
-        size: "md"
-    },
-    orcid: {
-        href: "#orcid",
-        title: "Orcid Icon",
-        desc: "Square with Rounded Corners - Orcid Logo.",
-        size: "md"
-    },
-    peoplecert: {
-        href: "#peoplecert",
-        title: "PeopleCert Icon",
-        desc: "Square with Rounded Corners - PeopleCert Logo.",
-        size: "md"
-    },
-    quizlet: {
-        href: "#quizlet",
-        title: "Quizlet Icon",
-        desc: "Square with Rounded Corners - Quizlet Logo.",
-        size: "md"
-    },
-    sidimaqsa: {
-        href: "#sidimaqsa",
-        title: "SIDIMAQSA Icon",
-        desc: "Square with Rounded Corners - SIDIMAQSA Logo.",
-        size: "md"
+        size: "exl"
     },
 
     // Porfolio categories icons
-    projects: {
-        href: "#projects",
+    microchip: {
+        name: "microchip",
+        group: "gui",
         title: "Microprocessor Projects Icon",
         desc: "Microprocessor Symbolizing Electrical Engineering & Software Projects",
         size: "md"
     },
-    experience: {
-        href: "#experience",
+    briefcase: {
+        name: "briefcase",
+        group: "gui",
         title: "Briefcase Icon",
         desc: "Representing Work Experience Across Different Industries",
         size: "md"
     },
     leadership: {
-        href: "#leadership",
+        name: "leadership",
+        group: "gui",
         title: "Users with Gear Icon",
         desc: "Representing Leadership Experience Across Different Areas",
         size: "md"
     },
     certifications: {
-        href: "#certifications",
+        name: "certifications",
+        group: "gui",
         title: "Certifications Icon",
         desc: "Licences & Certifications Obtained Throughout my Career",
         size: "md"
     },
-    honors: {
-        href: "#honors",
+    award: {
+        name: "award",
+        group: "gui",
         title: "Award Icon",
         desc: "Awards to Reinforce my Current Portfolio",
         size: "md"
     },
-    contact: {
-        href: "#contact",
+    envelope_closed: {
+        name: "envelope_closed",
+        group: "gui",
         title: "Envelope Icon",
         desc: "Contact Information for my Portfolio's Viewers",
         size: "md"
@@ -243,19 +529,22 @@ export const ICONS = {
 
     // Hamburger Menu available only on medium screens and downward to replace navbar
     home: {
-        href: "#home",
+        name: "home",
+        group: "gui",
         title: "Home Icon",
         desc: "Home Icon that Redirects to the Main Page",
         size: "sm"
     },
     hamburger_open: {
-        href: "#hamburger_open",
+        name: "hamburger_open",
+        group: "gui",
         title: "Hamburger Open Icon",
         desc: "Hamburger Menu Opening on Mobile Devices.",
         size: "md"
     },
     hamburger_close: {
-        href: "#hamburger_close",
+        name: "hamburger_close",
+        group: "gui",
         title: "Hamburger Close Icon",
         desc: "Hamburger Menu Closing on Mobile Devices.",
         size: "md"
@@ -263,13 +552,15 @@ export const ICONS = {
 
     // Resume icons
     download: {
-        href: "#download",
+        name: "download",
+        group: "gui",
         title: "Download to Device Icon",
         desc: "Download to Device Icon.",
         size: "sm"
     },
     fullscreen: {
-        href: "#fullscreen",
+        name: "fullscreen",
+        group: "gui",
         title: "Open Fullscreen View Externally Icon",
         desc: "Open Fullscreen View Externally Icon.",
         size: "sm"
@@ -277,87 +568,100 @@ export const ICONS = {
 
     // Link icon
     link: {
-        href: "#link",
+        name: "link",
+        group: "gui",
         title: "Link Icon",
         desc: "Link Icon used to represent an external website.",
-        size: "md"
+        size: "sm"
     },
 
     // Contact subject field icons
     id_card: {
-        href: "#id_card",
+        name: "id_card",
+        group: "gui",
         title: "ID Card Icon",
         desc: "ID Card used to represent a name entry.",
-        size: "md"
+        size: "sm"
     },
-    at_sign: {
-        href: "#at_sign",
+    at: {
+        name: "at",
+        group: "gui",
         title: "@ Sign",
         desc: "At Sign used to represent an email entry.",
-        size: "md"
+        size: "sm"
     },
-    rectangle_list: {
-        href: "#rectangle_list",
+    list: {
+        name: "list",
+        group: "gui",
         title: "Rectangle List Icon",
         desc: "Rectangle List used to represent a category list.",
-        size: "md"
+        size: "sm"
     },
     message: {
-        href: "#message",
+        name: "message",
+        group: "gui",
         title: "Message Icon",
         desc: "Message Icon used to represent a message list.",
-        size: "md"
+        size: "sm"
     },
     paper_plane: {
-        href: "#paper_plane",
+        name: "paper_plane",
+        group: "gui",
         title: "Paper Plane Icon",
         desc: "Paper Plane used to represent a button submission.",
-        size: "md"
+        size: "sm"
     },
 
     // Success & Failure icons for alerts
     spinner: {
-        href: "#spinner",
+        name: "spinner",
+        group: "gui",
         title: "Spinner Icon",
         desc: "Spinner to be animate-spin'ed to represent loading and processing.",
-        size: "md"
-    },
-    envelope_check: {
-        href: "#envelope_check",
-        title: "Envelope Check Icon",
-        desc: "Envelope Check Icon used to represent a sucessful message submission.",
-        size: "md"
+        size: "sm"
     },
     circle_check: {
-        href: "#circle_check",
+        name: "circle_check",
+        group: "gui",
         title: "Circle Check Icon",
         desc: "Check Icon used to represent a sucessful operation.",
-        size: "md"
+        size: "sm"
     },
     circle_xmark: {
-        href: "#circle_xmark",
+        name: "circle_xmark",
+        group: "gui",
         title: "Circle X Mark Icon",
         desc: "X Icon used to represent an operation failure.",
-        size: "md"
+        size: "sm"
+    },
+    envelope_check: {
+        name: "envelope_check",
+        group: "gui",
+        title: "Envelope Check Icon",
+        desc: "Envelope Check Icon used to represent a sucessful message submission.",
+        size: "exl"
     },
 
     // Theme-controller icons for both hamburger menu and navbar
     sun: {
-        href: "#sun",
+        name: "sun",
+        group: "gui",
         title: "Sun Icon",
         desc: "Representing Light Mode on Theme Toggles (NavBar & Hamburger Menu).",
         size: "sm"
     },
     moon: {
-        href: "#moon",
+        name: "moon",
+        group: "gui",
         title: "Moon Icon",
         desc: "Representing Dark Mode on Theme Toggles (NavBar & Hamburger Menu).",
         size: "sm"
     },
 
     // Change language icon for border tab widget
-    translate: {
-        href: "#translate",
+    globe: {
+        name: "globe",
+        group: "gui",
         title: "Change Language Icon",
         desc: "Translate Tab Icon inside a right-screen-border fixed widget.",
         size: "sm"
@@ -365,27 +669,24 @@ export const ICONS = {
 
     // Up & Down icon scrollers
     chevron_up: {
-        href: "#chevron_up",
+        name: "chevron_up",
+        group: "gui",
         title: "Scroll Up Icon",
         desc: "Scroll to Top Icon represented by a Chevron Up Icon inside a button.",
-        size: "lg"
+        size: "sm"
     },
     chevron_down: {
-        href: "#chevron_down",
+        name: "chevron_down",
+        group: "gui",
         title: "Scroll Down Icon",
         desc: "Scroll to Bottom Icon represented by a Chevron Down Icon inside a button.",
-        size: "lg"
-    },
-    angles_down: {
-        href: "#angles_down",
-        title: "Scroll Down into the Website",
-        desc: "Scroll Down Invitation denoted by a Double Down Angle Icon.",
-        size: "lg"
+        size: "sm"
     },
 
     // Supported Devices & Developer - Footer Copyright Notice
     devices: {
-        href: "#devices",
+        name: "devices",
+        group: "gui",
         title: "Supported Devices Icon",
         desc: "All of our supported devices for this website",
         size: "md"
@@ -398,12 +699,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "AntDesign",
             color: TECHNOLOGIES_COLORS.web,
-            icon: {
-                href: "#antdesign",
-                title: "Ant Design Logo",
-                desc: "UI Library used in Web Development",
-                size: "md"
-            }
+            icon: "antdesign"
         },
         hierarchy: {
             tier: "production",
@@ -419,12 +715,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "Arduino",
             color: TECHNOLOGIES_COLORS.embedded,
-            icon: {
-                href: "#arduino",
-                title: "Arduino Logo",
-                desc: "Hardware Platform used in Robotics",
-                size: "md"
-            }
+            icon: "arduino"
         },
         hierarchy: {
             tier: "core",
@@ -440,12 +731,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "Astro",
             color: TECHNOLOGIES_COLORS.web,
-            icon: {
-                href: "#astro",
-                title: "Astro Logo",
-                desc: "Framework used in Web Development",
-                size: "md"
-            }
+            icon: "astro"
         },
         hierarchy: {
             tier: "production",
@@ -461,12 +747,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "AutoCAD",
             color: TECHNOLOGIES_COLORS.tools,
-            icon: {
-                href: "#autocad",
-                title: "AutoCAD Logo",
-                desc: "Engineering CAD Tool used in Diagram Creation",
-                size: "md"
-            }
+            icon: "autocad"
         },
         hierarchy: {
             tier: "core",
@@ -482,12 +763,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "Axios",
             color: TECHNOLOGIES_COLORS.web,
-            icon: {
-                href: "#axios",
-                title: "Axios Logo",
-                desc: "API Library used in Web Development",
-                size: "md"
-            },
+            icon: "axios",
         },
         hierarchy: {
             tier: "production",
@@ -503,12 +779,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "Bare-Metal Embedded",
             color: TECHNOLOGIES_COLORS.embedded,
-            icon: {
-                href: "#microprocessor",
-                title: "Microprocessor Icon",
-                desc: "Microprocessor/Microcontroller used in Embedded Systems",
-                size: "md"
-            }
+            icon: "baremetal"
         },
         hierarchy: {
             tier: "core",
@@ -524,12 +795,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "Bootstrap",
             color: TECHNOLOGIES_COLORS.web,
-            icon: {
-                href: "#bootstrap",
-                title: "Bootstrap Logo",
-                desc: "UI Library used in Web Development",
-                size: "md"
-            }
+            icon: "bootstrap"
         },
         hierarchy: {
             tier: "production",
@@ -545,12 +811,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "C",
             color: TECHNOLOGIES_COLORS.software,
-            icon: {
-                href: "#c",
-                title: "C Logo",
-                desc: "Programming Language used in Embedded Systems",
-                size: "md"
-            }
+            icon: "c"
         },
         hierarchy: {
             tier: "core",
@@ -566,12 +827,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "cPanel",
             color: TECHNOLOGIES_COLORS.operations,
-            icon: {
-                href: "#cpanel",
-                title: "cpanel Logo",
-                desc: "Administration Panel used in Backend Management",
-                size: "md"
-            }
+            icon: "cpanel"
         },
         hierarchy: {
             tier: "production",
@@ -587,12 +843,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "C++",
             color: TECHNOLOGIES_COLORS.software,
-            icon: {
-                href: "#cpp",
-                title: "C++ Logo",
-                desc: "Programming Language used in Desktop Apps",
-                size: "md"
-            }
+            icon: "cpp"
         },
         hierarchy: {
             tier: "core",
@@ -608,12 +859,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "C#",
             color: TECHNOLOGIES_COLORS.software,
-            icon: {
-                href: "#csharp",
-                title: "C# Logo",
-                desc: "Programming Language used in Desktop Apps",
-                size: "md"
-            }
+            icon: "csharp"
         },
         hierarchy: {
             tier: "core",
@@ -629,12 +875,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "CSS",
             color: TECHNOLOGIES_COLORS.web,
-            icon: {
-                href: "#css",
-                title: "CSS3 Logo",
-                desc: "Styling Language used in Web Development",
-                size: "md"
-            }
+            icon: "css"
         },
         hierarchy: {
             tier: "production",
@@ -650,12 +891,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "daisyUI",
             color: TECHNOLOGIES_COLORS.web,
-            icon: {
-                href: "#daisyui",
-                title: "daisyUI Logo",
-                desc: "UI Library used in Web Development",
-                size: "md"
-            }
+            icon: "daisyui"
         },
         hierarchy: {
             tier: "production",
@@ -671,12 +907,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "Directus",
             color: TECHNOLOGIES_COLORS.operations,
-            icon: {
-                href: "#directus",
-                title: "directus Logo",
-                desc: "Administration Panel used in Content Management",
-                size: "md"
-            }
+            icon: "directus"
         },
         hierarchy: {
             tier: "production",
@@ -692,12 +923,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "Flask",
             color: TECHNOLOGIES_COLORS.web,
-            icon: {
-                href: "#flask",
-                title: "Flask Logo",
-                desc: "Framework used in Backend",
-                size: "md"
-            }
+            icon: "flask"
         },
         hierarchy: {
             tier: "production",
@@ -713,12 +939,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "HTML",
             color: TECHNOLOGIES_COLORS.web,
-            icon: {
-                href: "#html",
-                title: "HTML5 Logo",
-                desc: "Markup Language used in Web Development",
-                size: "md"
-            }
+            icon: "html"
         },
         hierarchy: {
             tier: "production",
@@ -734,12 +955,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "Java",
             color: TECHNOLOGIES_COLORS.software,
-            icon: {
-                href: "#java",
-                title: "Java Logo",
-                desc: "Programming Language used in Desktop Apps",
-                size: "md"
-            },
+            icon: "java",
         },
         hierarchy: {
             tier: "core",
@@ -755,12 +971,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "JavaScript",
             color: TECHNOLOGIES_COLORS.software,
-            icon: {
-                href: "#javascript",
-                title: "JavaScript Logo",
-                desc: "Programming Language used in Web Development",
-                size: "md"
-            }
+            icon: "javascript"
         },
         hierarchy: {
             tier: "core",
@@ -776,12 +987,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "Jinja",
             color: TECHNOLOGIES_COLORS.web,
-            icon: {
-                href: "#jinja",
-                title: "Jinja Logo",
-                desc: "Templating Engine used in Web Development",
-                size: "md"
-            }
+            icon: "jinja"
         },
         hierarchy: {
             tier: "production",
@@ -797,12 +1003,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "KiCAD",
             color: TECHNOLOGIES_COLORS.embedded,
-            icon: {
-                href: "#kicad",
-                title: "KiCAD Logo",
-                desc: "Engineering CAD Tool used in PCB Creation",
-                size: "md"
-            }
+            icon: "kicad"
         },
         hierarchy: {
             tier: "core",
@@ -818,12 +1019,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "MultiSim",
             color: TECHNOLOGIES_COLORS.embedded,
-            icon: {
-                href: "#multisim",
-                title: "MultiSim Logo",
-                desc: "Simulation Tool used in Electronics & Schematics Creation",
-                size: "md"
-            }
+            icon: "multisim"
         },
         hierarchy: {
             tier: "core",
@@ -839,12 +1035,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "MySQL",
             color: TECHNOLOGIES_COLORS.databases,
-            icon: {
-                href: "#mysql",
-                title: "MySQL Logo",
-                desc: "Relational Database used in Backend",
-                size: "md"
-            }
+            icon: "mysql"
         },
         hierarchy: {
             tier: "production",
@@ -860,12 +1051,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "OpenCV",
             color: TECHNOLOGIES_COLORS.embedded,
-            icon: {
-                href: "#opencv",
-                title: "OpenCV Logo",
-                desc: "Library used in Robotics",
-                size: "md"
-            }
+            icon: "opencv"
         },
         hierarchy: {
             tier: "core",
@@ -881,12 +1067,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "PHP",
             color: TECHNOLOGIES_COLORS.software,
-            icon: {
-                href: "#php",
-                title: "PHP Logo",
-                desc: "Programming Language used in Web Development",
-                size: "md"
-            }
+            icon: "php"
         },
         hierarchy: {
             tier: "core",
@@ -902,12 +1083,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "phpMyAdmin",
             color: TECHNOLOGIES_COLORS.operations,
-            icon: {
-                href: "#phpmyadmin",
-                title: "phpMyAdmin Logo",
-                desc: "Administration Panel used in Backend Management",
-                size: "md"
-            }
+            icon: "phpmyadmin"
         },
         hierarchy: {
             tier: "production",
@@ -923,12 +1099,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "Python",
             color: TECHNOLOGIES_COLORS.software,
-            icon: {
-                href: "#python",
-                title: "Python Logo",
-                desc: "Programming Language used in Backend & Robotics",
-                size: "md"
-            }
+            icon: "python"
         },
         hierarchy: {
             tier: "core",
@@ -944,12 +1115,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "Raspberry Pi",
             color: TECHNOLOGIES_COLORS.embedded,
-            icon: {
-                href: "#raspberrypi",
-                title: "Raspberry Pi Logo",
-                desc: "Hardware Platform used in Robotics",
-                size: "md"
-            },
+            icon: "raspberrypi",
         },
         hierarchy: {
             tier: "core",
@@ -965,12 +1131,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "React",
             color: TECHNOLOGIES_COLORS.web,
-            icon: {
-                href: "#react",
-                title: "React Logo",
-                desc: "UI Library used in Web Development",
-                size: "md"
-            }
+            icon: "react"
         },
         hierarchy: {
             tier: "production",
@@ -986,12 +1147,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "SketchUp",
             color: TECHNOLOGIES_COLORS.tools,
-            icon: {
-                href: "#sketchup",
-                title: "SketchUp Logo",
-                desc: "Engineering CAD Tool used in 3D Modeling",
-                size: "md"
-            }
+            icon: "sketchup"
         },
         hierarchy: {
             tier: "core",
@@ -1007,12 +1163,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "SQLite",
             color: TECHNOLOGIES_COLORS.databases,
-            icon: {
-                href: "#sqlite",
-                title: "SQLite Logo",
-                desc: "Relational Database used in Backend",
-                size: "md"
-            }
+            icon: "sqlite"
         },
         hierarchy: {
             tier: "production",
@@ -1028,12 +1179,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "TailwindCSS",
             color: TECHNOLOGIES_COLORS.web,
-            icon: {
-                href: "#tailwindcss",
-                title: "TailwindCSS Logo",
-                desc: "CSS Library used in Web Development",
-                size: "md"
-            }
+            icon: "tailwindcss"
         },
         hierarchy: {
             tier: "production",
@@ -1049,12 +1195,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "TypeScript",
             color: TECHNOLOGIES_COLORS.software,
-            icon: {
-                href: "#typescript",
-                title: "TypeScript Logo",
-                desc: "Programming Language used in Web Development",
-                size: "md"
-            }
+            icon: "typescript"
         },
         hierarchy: {
             tier: "core",
@@ -1070,12 +1211,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "UltiBoard",
             color: TECHNOLOGIES_COLORS.embedded,
-            icon: {
-                href: "#multisim",
-                title: "UltiBoard Logo",
-                desc: "Engineering CAD Tool used in PCB Creation",
-                size: "md"
-            }
+            icon: "ultiboard"
         },
         hierarchy: {
             tier: "core",
@@ -1091,12 +1227,7 @@ export const TECHNOLOGIES = {
         visual: {
             name: "WinUI",
             color: TECHNOLOGIES_COLORS.software,
-            icon: {
-                href: "#winui",
-                title: "WinUI Logo",
-                desc: "Framework used in Desktop Apps",
-                size: "md"
-            }
+            icon: "winui"
         },
         hierarchy: {
             tier: "production",
@@ -1114,30 +1245,15 @@ export const TECHNOLOGIES = {
 export const FLAGS = {
     de: {
         picture: de,
-        icon: {
-            href: "#de",
-            title: "Germany Flag Icon",
-            desc: "Rounded Minimalistic Germany Flag",
-            size: "sm"
-        }
+        icon: "de"
     },
     mx: {
         picture: mx,
-        icon: {
-            href: "#mx",
-            title: "Mexico Flag Icon",
-            desc: "Rounded Minimalistic Mexico Flag",
-            size: "sm"
-        }
+        icon: "mx"
     },
     us: {
         picture: us,
-        icon: {
-            href: "#us",
-            title: "United States Flag Icon",
-            desc: "Rounded Minimalistic United States Flag",
-            size: "sm"
-        }
+        icon: "us"
     }
 } as const satisfies FlagsListType;
 

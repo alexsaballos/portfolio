@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   role="img"
+   viewBox="0 0 640 640"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="quizlet.svg"
+   width="640"
+   height="640"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.0846354"
+     inkscape:cx="332.36975"
+     inkscape:cy="311.16446"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="1071"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <title
+     id="title1">Quizlet</title>
+  <path
+     id="path1-8"
+     style="fill:#000000"
+     d="m 160,96 c -35.3,0 -64,28.7 -64,64 v 320 c 0,35.3 28.7,64 64,64 h 320 c 35.3,0 64,-28.7 64,-64 V 160 c 0,-35.3 -28.7,-64 -64,-64 z m 151.20898,44.33398 a 176.72902,176.72902 0 0 1 20.45118,0.1504 l -0.19141,-0.10352 a 176.78898,176.78898 0 0 1 86.97852,29.63672 177.94329,177.94329 0 0 1 60.59375,69.3789 179.03762,179.03762 0 0 1 -11.57422,177.95899 4.9470332,4.9470332 0 0 0 -0.75,1.99414 4.9320421,4.9320421 0 0 0 2.86328,5.27539 70.937457,70.937457 0 0 0 16.58008,4.7832 5.0069973,5.0069973 0 0 1 4.13867,4.96094 v 60.53516 a 4.9770152,4.9770152 0 0 1 -4.97656,4.97656 136.95786,136.95786 0 0 1 -77.90821,-23.16211 4.9020603,4.9020603 0 0 0 -4.96289,-0.26953 176.63907,176.63907 0 0 1 -157.90039,3.38867 177.52354,177.52354 0 0 1 -63.5625,-50.64062 178.69284,178.69284 0 0 1 -34.47851,-73.76954 178.81276,178.81276 0 0 1 39.4414,-153.70312 177.32865,177.32865 0 0 1 65.70508,-47.80664 176.72902,176.72902 0 0 1 59.55273,-13.58399 z m 8.91407,70 a 106.93087,106.93087 0 0 0 -41.15235,8.26954 107.63545,107.63545 0 0 0 -48.19726,39.83203 108.53491,108.53491 0 0 0 -18.06446,60.03906 l -0.0742,-0.0156 a 108.35502,108.35502 0 0 0 31.5254,76.28907 107.14075,107.14075 0 0 0 135.65429,13.43164 107.96526,107.96526 0 0 0 39.6211,-48.48047 A 108.51992,108.51992 0 0 0 396.125,241.96094 106.93087,106.93087 0 0 0 320.12305,210.33398 Z"
+     inkscape:label="path1" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Quizlet</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

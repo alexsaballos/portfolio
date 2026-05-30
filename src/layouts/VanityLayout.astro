@@ -12,14 +12,12 @@ import { getLocaleMessages } from '@locales/utils';
 
 import type { VanityNamesType } from '@typing/VanityType';
 
-import IconLibrary from '@libraries/IconLibrary.astro';
-import FlagLibrary from '@libraries/FlagLibrary.astro';
 import Footer from '@sections/Footer.astro';
 import Navbar from '@widgets/Navbar.astro';
 import Loader from "@widgets/Loader.astro";
 
 // Layout parametrization for every page
-const { profile } = Astro.props as { profile: VanityNamesType; };
+const profile = Astro.props.profile as VanityNamesType;
 
 // Current profile SEO determination
 const lang = METADATA.defaultLanguage;
@@ -108,11 +106,10 @@ Astro.locals.t = await getLocaleMessages(lang);
 	</head>
 	<body>
 		<Loader />
-		<IconLibrary /><FlagLibrary />			<!-- Inject all Icons early on in the DOM -->
 		<div class="min-h-screen flex flex-col">
 			<Navbar />
 			<main id="main-content" class="flex-1 flex items-center justify-center py-30 md:py-0 md:pb-2 px-5">
-				<slot/>							<!-- Dynamic page insertion -->
+				<slot />						<!-- Dynamic page insertion -->
 			</main>
 			<Footer />							<!-- Footer included with every page -->
 		</div>

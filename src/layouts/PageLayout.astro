@@ -17,9 +17,6 @@ import { getLocaleMessages } from '@locales/utils';
 
 import type { AdmittedLanguagesType } from '@typing/LocalesType';
 import type { DirectoryPageNamesType } from '@typing/PagesType';
-
-import IconLibrary from '@libraries/IconLibrary.astro';
-import FlagLibrary from '@libraries/FlagLibrary.astro';
 import Scroller from '@widgets/Scroller.astro';
 import Footer from '@sections/Footer.astro';
 import Loader from "@widgets/Loader.astro";
@@ -129,7 +126,6 @@ Astro.locals.t = await getLocaleMessages(lang);
 	</head>
 	<body>
 		<Loader />
-		<IconLibrary /><FlagLibrary />		<!-- Inject all Icons early on in the DOM -->
 		<div class="min-h-screen flex flex-col">
 			<main id="main-content" class="flex-1 flex flex-col">
 				<slot />					<!-- Dynamic page insertion -->

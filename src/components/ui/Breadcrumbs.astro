@@ -1,8 +1,7 @@
 ---
-import { ICONS } from "@config/assets";
 import { ROUTE } from "@config/routing";
-import Icon from "@libraries/Icon.astro";
 import type { NavigationPageType } from "@typing/PagesType";
+import TestIcon from "./TestIcon.astro";
 
 const { l, t } = Astro.locals;
 const page = Astro.props.page as NavigationPageType;
@@ -11,11 +10,11 @@ const page = Astro.props.page as NavigationPageType;
 <div class="breadcrumbs text-md ml-5 sm:ml-10">
 	<ul>
 		<li><a href={ROUTE.home(l)} class="hover:text-secondary hover:font-bold">
-			<Icon icon={ICONS.home} size="xs" />
+			<TestIcon name="home" size="xs" />
 			<p>{t.breadcrumbs.home}</p>
 		</a></li>
 		<li><a href={ROUTE.page(l, page.metadata.slug)} class="hover:text-secondary hover:font-bold">
-			<Icon icon={page.frontend.icon} size="xs" />
+			<TestIcon name={page.frontend.icon} size="xs" />
 			<p>{t.breadcrumbs[page.key]}</p>
 		</a></li>
 	</ul>

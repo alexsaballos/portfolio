@@ -12,14 +12,12 @@ import { getLocaleMessages } from '@locales/utils';
 import type { ErrorsCodeType } from '@typing/ErrorsType';
 import type { AdmittedLanguagesType } from '@typing/LocalesType';
 
-import IconLibrary from '@libraries/IconLibrary.astro';
-import FlagLibrary from '@libraries/FlagLibrary.astro';
 import Navbar from '@widgets/Navbar.astro';
 import Footer from '@sections/Footer.astro';
 import Loader from "@widgets/Loader.astro";
 
 // Error Code Paramtrization
-const { code } = Astro.props as { code: ErrorsCodeType; };
+const code = Astro.props.code as ErrorsCodeType;
 const currentError = ERRORS[code] ?? ERRORS[500];
 const lang: AdmittedLanguagesType = (Astro.currentLocale as AdmittedLanguagesType) ?? METADATA.defaultLanguage;
 
@@ -83,7 +81,6 @@ Astro.locals.t = await getLocaleMessages(lang);
 	</head>
 	<body>
 		<Loader />
-		<IconLibrary /><FlagLibrary />				<!-- Inject all Icons early on in the DOM -->
 		<div class="min-h-screen flex flex-col">
 			<Navbar />
 			<main id="main-content" class="flex-1 flex items-center justify-center py-30 md:py-10 px-5">

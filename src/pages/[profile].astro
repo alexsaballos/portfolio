@@ -6,7 +6,7 @@ import { METADATA } from "@config/meta";
 import VanityLayout from "@layouts/VanityLayout.astro";
 import Avatar from "@ui/Avatar.astro";
 import Title from "@text/Title.astro";
-import Icon from "@libraries/Icon.astro";
+import TestIcon from "@ui/TestIcon.astro";
 
 import type { VanityNamesType } from "@typing/VanityType";
 
@@ -22,7 +22,7 @@ const currentURL: string = VANITY[profile].frontend.link;
     <div class="justify-items-center">
         <div data-aos="fade-up" data-aos-delay="500"><Title title="Redirecting you to"/></div>
         <div data-aos="fade-in" data-aos-delay="1000" class="flex flex-row items-center">
-            <Icon icon={VANITY[profile].frontend.icon} classname="h-45 w-45 sm:h-55 sm:w-55 md:h-65 md:w-65" />
+            <TestIcon name={VANITY[profile].frontend.icon} classname="h-45 w-45 sm:h-55 sm:w-55 md:h-65 md:w-65" />
             <Avatar classname="h-30 w-30 sm:h-40 sm:w-40 md:h-50 md:w-50" />
         </div>
 

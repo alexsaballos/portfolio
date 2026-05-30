@@ -1,12 +1,11 @@
 ---
-import { ICONS } from "@config/assets";
 import { LANGUAGES } from "@config/languages";
 import { ROUTE } from "@config/routing";
+
 import type { AdmittedLanguagesType } from "@typing/LocalesType";
 import type { DirectoryPageSlugsType } from "@typing/PagesType";
 
-import Flag from "@libraries/Flag.astro";
-import Icon from "@libraries/Icon.astro";
+import TestIcon from "@ui/TestIcon.astro";
 
 const classname = Astro.props.classname as string;
 
@@ -20,12 +19,12 @@ const routedPage = (lang: AdmittedLanguagesType): string =>
 <div class=`dropdown dropdown-center ${classname}`>
     <div tabindex="0" role="button"
         class="btn btn-ghost btn-square shadow-none transition-transform duration-500 ease-out hover:text-secondary hover:scale-120">
-        <Icon icon={ICONS.translate} />
+        <TestIcon name="globe" />
     </div>
     <ul tabindex="-1" class="dropdown-content menu bg-base-200 text-base-content rounded-box gap-1 w-30 my-2 p-1">
         {Object.values(LANGUAGES).map((entry) => (
             <li><a href={routedPage(entry.code.lang)}>
-                <Flag icon={entry.icon} size="sm" />
+                <TestIcon name={entry.icon} />
                 <p>{entry.name.localized}</p>
             </a></li>
         ))}

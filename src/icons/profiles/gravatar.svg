@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   role="img"
+   viewBox="0 0 640 640"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="gravatar.svg"
+   width="640"
+   height="640"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.0846354"
+     inkscape:cx="330.52582"
+     inkscape:cy="287.19328"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="1071"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <title
+     id="title1">Gravatar</title>
+  <path
+     id="path1-7"
+     d="m 160,96 c -35.3,0 -64,28.7 -64,64 v 320 c 0,35.3 28.7,64 64,64 h 320 c 35.3,0 64,-28.7 64,-64 V 160 c 0,-35.3 -28.7,-64 -64,-64 z m 158,52.42188 c 94.20204,0 170.57812,76.37607 170.57812,170.57812 0,94.20205 -76.37608,170.57812 -170.57812,170.57812 -94.20205,0 -170.57812,-76.37607 -170.57812,-170.57812 0,-47.10813 19.10345,-89.75363 49.93554,-120.64258 13.33356,-13.33357 34.94183,-13.33357 48.27539,0 13.33356,13.33357 13.33356,34.94182 0,48.27539 -18.52199,18.50779 -29.96484,44.09378 -29.96484,72.36719 0,56.50417 45.84207,102.31836 102.33203,102.31836 56.48996,0 102.33203,-45.82786 102.33203,-102.33203 0,-44.56367 -28.48619,-82.43313 -68.2168,-96.50586 v 79.46094 c 0,18.82051 -15.26629,34.08789 -34.11523,34.08789 -18.84894,0 -34.11523,-15.26738 -34.11523,-34.08789 v -119.4043 c 0,-18.84893 15.26629,-34.11523 34.11523,-34.11523 z"
+     inkscape:label="path1" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Gravatar</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

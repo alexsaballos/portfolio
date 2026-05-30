@@ -1,4 +1,4 @@
-import type { IconsType } from "@typing/AssetsType";
+import type { IconsNamesType } from "@typing/AssetsType";
 
 export type VanityEntryGroupType = "contact" | "social" | "ungrouped";
 export type BaseVanityEntryType = {
@@ -6,7 +6,7 @@ export type BaseVanityEntryType = {
     frontend: {
         name: string;
         link: string;
-        icon: IconsType;
+        icon: IconsNamesType;
         text: {
             owner: "my" | "";
             type: "profile" | "website" | "business";

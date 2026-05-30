@@ -1,7 +1,7 @@
 ---
-import Icon from "@libraries/Icon.astro";
 import { pickVanityGroup } from "@config/vanity";
 import type { BaseVanityEntryType, VanityEntryGroupType } from "@typing/VanityType";
+import TestIcon from "@ui/TestIcon.astro";
 
 const variant = Astro.props.variant as VanityEntryGroupType;
 const RequestedButtons: BaseVanityEntryType[] = Object.values(
@@ -12,7 +12,7 @@ const RequestedButtons: BaseVanityEntryType[] = Object.values(
 <div class="flex flex-row justify-center">
     {RequestedButtons.map(button => (
         <a class="p-0 m-0" href={button.frontend.link} aria-label={button.metadata.label} target="_blank" rel="noopener noreferrer">
-            <Icon icon={button.frontend.icon} size="lg"
+            <TestIcon name={button.frontend.icon}
                 classname="shadow-none transition-transform duration-500 ease-out hover:text-secondary hover:scale-120" />
         </a>
     ))}

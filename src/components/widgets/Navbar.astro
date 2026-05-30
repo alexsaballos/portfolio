@@ -1,12 +1,11 @@
 ---
-import { ICONS } from "@config/assets";
 import { ROUTE } from "@config/routing";
 import { NAVIGATION_PAGES } from "@config/pages";
 
-import Icon from "@libraries/Icon.astro";
 import IconHome from "@buttons/IconHome.astro";
 import LanguageToggler from "@togglers/LanguageToggler.astro";
 import ThemeToggler from "@togglers/ThemeToggler.astro";
+import TestIcon from "@ui/TestIcon.astro";
 
 const { t, l } = Astro.locals;
 ---
@@ -17,7 +16,7 @@ const { t, l } = Astro.locals;
         <div class={"navbar bg-transparent w-full"}>
             <div class="flex-none md:hidden">
                 <label for="intro-drawer" aria-label="Open Sidebar" class="btn btn-square btn-ghost ml-5">
-                    <Icon icon={ICONS.hamburger_open} />
+                    <TestIcon name="hamburger_open" />
                 </label>
             </div>
             <div class="navbar-start ml-5 hidden md:flex">

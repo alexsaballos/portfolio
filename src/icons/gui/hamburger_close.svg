@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 640 640"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="hamburger_close.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.0842119"
+     inkscape:cx="291.91711"
+     inkscape:cy="340.80054"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="1071"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <!--!Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+  <path
+     d="m 159.76259,107.04985 c -14.57764,-14.57764 -38.25172,-14.57764 -52.82936,0 -14.57764,14.57764 -14.57764,38.25172 0,52.82936 L 267.17064,320 107.04985,480.23741 c -14.57764,14.57764 -14.57764,38.25172 0,52.82936 14.57764,14.57764 38.25172,14.57764 52.82936,0 L 320,372.82936 480.23741,532.95015 c 14.57764,14.57764 38.25172,14.57764 52.82936,0 14.57764,-14.57764 14.57764,-38.25172 0,-52.82936 L 372.82936,320 532.95015,159.76259 c 14.57764,-14.57764 14.57764,-38.25172 0,-52.82936 -14.57764,-14.57764 -38.25172,-14.57764 -52.82936,0 L 320,267.17064 Z"
+     id="path1"
+     style="stroke-width:1.16621" />
+</svg>

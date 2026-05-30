@@ -1,20 +1,22 @@
+import type { VanityNamesType } from "./VanityType";
+import type { HonorsOrgListType } from "@typing/HonorsType";
 import type { AdmittedCountriesType } from "@typing/LocalesType";
 import type { NavigationPageNamesType } from "@typing/PagesType";
 import type { CertsOrgListType } from "@typing/CertificationsType";
-import type { HonorsOrgListType } from "@typing/HonorsType";
 
 // Icons Typing
-export type IconsType = Record<("href" | "title" | "desc" | "size"), string>;
-export type IconsNamesType =
-    | "hourglass" | "linkedin" | "github" | "handshake" | "merit" | "credly" | "wisp" | "hu" | "coursera"
-    | "edx" | "googledev" | "figma" | "gravatar" | "khanacademy" | "orcid" | "peoplecert" | "quizlet"
-    | "sidimaqsa" | "projects" | "experience" | "leadership" | "certifications" | "honors"
-    | "contact" | "home" | "hamburger_open" | "hamburger_close" | "download" | "fullscreen" | "link" | "id_card"
-    | "at_sign" | "rectangle_list" | "message" | "paper_plane" | "spinner"
-    | "envelope_check" | "circle_check" | "circle_xmark" | "sun" | "moon"
-    | "translate" | "chevron_up" | "chevron_down" | "angles_down" | "devices";
+export type IconsKitNamesType = "flags" | "gui" | "profiles" | "technologies";
+export type IconsCustomNamesType = "certifications" | "devices" | "sun";
+export type IconsNamesType = AdmittedCountriesType | VanityNamesType | TechnologiesNamesType | IconsCustomNamesType
+    | "hourglass" | "microchip" | "briefcase" | "leadership" | "award"
+    | "envelope_closed" | "envelope_check" | "home" | "hamburger_open" | "hamburger_close" | "download"
+    | "fullscreen" | "link" | "id_card" | "at" | "list" | "message"
+    | "paper_plane" | "spinner" | "circle_check" | "circle_xmark"
+    | "moon" | "globe" | "chevron_up" | "chevron_down";
 
+export type IconsType = { name: IconsNamesType; group: IconsKitNamesType } & Record<("title" | "desc" | "size"), string>;
 export type IconsListType = Record<IconsNamesType, IconsType>;
+export type IconsPixelSizesType = "dxs" | "xs" | "sm" | "md" | "lg" | "xl" | "dxl" | "exl" | "ixl";
 
 // Paths Typing
 export type PathsListType = Record<("docs" | "resume" | "favicons" | "pictures" | "videos"), string>;
@@ -55,7 +57,7 @@ export type TechnologiesType = {
     visual: {
         name: string;
         color: string;
-        icon: IconsType;
+        icon: IconsNamesType;
     };
     hierarchy: {
         tier: TechnologiesTiersNamesType;
@@ -71,7 +73,7 @@ export type TechnologiesType = {
 export type TechnologiesListType = Record<TechnologiesNamesType, TechnologiesType>;
 
 // Flags Typing
-export type FlagsListType = Record<AdmittedCountriesType, { picture: ImageMetadata; icon: IconsType; }>;
+export type FlagsListType = Record<AdmittedCountriesType, { picture: ImageMetadata; icon: IconsNamesType; }>;
 
 // Favicons Typing
 export type FaviconsSvgListType = "safari_mask";

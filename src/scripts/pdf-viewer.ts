@@ -48,8 +48,6 @@ viewers.forEach(async (viewer) => {
             viewport
         }).promise;
 
-        viewer.appendChild(canvas);
-
         // Create the page number indicator badge
         const pageIndicator = document.createElement("div");
         const pageWrapper = document.createElement("div");
@@ -60,7 +58,7 @@ viewers.forEach(async (viewer) => {
         pageIndicator.textContent = `${pageNum} / ${totalPages}`;
 
         // Create a wrapper container for each page
-        pageWrapper.className = "relative flex-shrink-0 flex justify-center w-full mb-6";
+        pageWrapper.className = "relative flex-shrink-0 flex justify-center w-full";
         pageWrapper.appendChild(canvas);
         pageWrapper.appendChild(pageIndicator);
         

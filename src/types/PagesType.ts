@@ -1,4 +1,4 @@
-import type { IconsType } from "@typing/AssetsType";
+import type { IconsNamesType } from "@typing/AssetsType";
 
 // Single-word SSOT locked keys per page
 export type DirectoryPageNamesType =
@@ -13,7 +13,7 @@ export type BasePageType = {
     frontend: {
         short_title: string;
         long_title: string;
-        icon: IconsType;
+        icon: IconsNamesType;
         picture?: ImageMetadata;
     },
     metadata:{

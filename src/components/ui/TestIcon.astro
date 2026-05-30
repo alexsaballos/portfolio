@@ -1,0 +1,23 @@
+---
+import { ICONS } from "@config/assets";
+import { Icon } from "astro-icon/components";
+import type { IconsNamesType, IconsPixelSizesType } from "@typing/AssetsType";
+
+const { name, size, classname: classname = "" } = Astro.props as {
+    name: IconsNamesType;
+    size?: IconsPixelSizesType;
+    classname?: string;
+};
+
+const uuid = crypto.randomUUID();   // Aria Label Accessibility
+const requestedIcon = ICONS[name];
+const sizeMap: Record<IconsPixelSizesType, number> =
+    { dxs: 6, xs: 15, sm: 20, md: 35, lg: 45, xl: 60, dxl:70, exl: 150, ixl:280 };
+const pixelSize = sizeMap[size ?? requestedIcon.size];
+---
+
+<Icon
+    name=`${requestedIcon.group}/${requestedIcon.name}` size={pixelSize} title={requestedIcon.title} desc={requestedIcon.desc}
+    focusable="false" aria-labelledby={`icon-title-${uuid} icon-desc-${uuid}`}
+    class={`shrink-0 ${classname}`}
+/>

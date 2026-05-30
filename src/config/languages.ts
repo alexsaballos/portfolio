@@ -6,7 +6,7 @@ export const LANGUAGES = {
     de: {
         key: "de",
         home: ROUTE.home("de"),
-        icon: FLAGS.de.icon,
+        icon: "de",
         picture: FLAGS.de.picture,
         name: {
             standard: "German",
@@ -24,7 +24,7 @@ export const LANGUAGES = {
     en: {
         key: "en",
         home: ROUTE.home("en"),
-        icon: FLAGS.us.icon,
+        icon: "us",
         picture: FLAGS.us.picture,
         name: {
             standard: "English",
@@ -42,7 +42,7 @@ export const LANGUAGES = {
     es: {
         key: "es",
         home: ROUTE.home("es"),
-        icon: FLAGS.mx.icon,
+        icon: "mx",
         picture: FLAGS.mx.picture,
         name: {
             standard: "Spanish",

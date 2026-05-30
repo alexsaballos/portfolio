@@ -1,6 +1,6 @@
 import { SEO } from "@config/routing";
+import { PICTURES } from "@config/assets";
 import { PERSONAL } from "@config/personal";
-import { ICONS, PICTURES } from "@config/assets";
 
 import type { DirectoryPagesListType, NavigationPagesListType } from "@typing/PagesType";
 
@@ -10,7 +10,7 @@ export const PAGES = {
         frontend: {
             short_title: PERSONAL.name,
             long_title: `${PERSONAL.name} - Engineering Portfolio`,
-            icon: ICONS.home
+            icon: "home"
         },
         metadata: {
             link: "#",
@@ -28,7 +28,7 @@ export const PAGES = {
         frontend: {
             short_title: "Projects",
             long_title: "Engineering & Software Projects",
-            icon: ICONS.projects,
+            icon: "microchip",
             picture: PICTURES.categories.projects
         },
         metadata: {
@@ -47,7 +47,7 @@ export const PAGES = {
         frontend: {
             short_title: "Experience",
             long_title: "Professional & Technical Experience",
-            icon: ICONS.experience,
+            icon: "briefcase",
             picture: PICTURES.categories.experience
         },
         metadata: {
@@ -66,7 +66,7 @@ export const PAGES = {
         frontend: {
             short_title: "Leadership",
             long_title: "International Leadership Experience",
-            icon: ICONS.leadership,
+            icon: "leadership",
             picture: PICTURES.categories.leadership
         },
         metadata: {
@@ -85,7 +85,7 @@ export const PAGES = {
         frontend: {
             short_title: "Certifications",
             long_title: "Professional Certifications & Licensure",
-            icon: ICONS.certifications,
+            icon: "certifications",
             picture: PICTURES.categories.certifications
         },
         metadata: {
@@ -104,7 +104,7 @@ export const PAGES = {
         frontend: {
             short_title: "Honors",
             long_title: "Honors & Distinctions",
-            icon: ICONS.honors,
+            icon: "award",
             picture: PICTURES.categories.honors
         },
         metadata: {
@@ -123,7 +123,7 @@ export const PAGES = {
         frontend: {
             short_title: "Contact",
             long_title: "Get in touch!",
-            icon: ICONS.contact,
+            icon: "envelope_closed",
             picture: PICTURES.categories.contact
         },
         metadata: {

@@ -1,17 +1,16 @@
 ---
-import { ICONS } from "@config/assets";
-import Icon from "@libraries/Icon.astro";
+import TestIcon from "@ui/TestIcon.astro";
 
 const ScrollButtons = {
     top: {
         id: "scrollTop",
         aria_label: "Scroll to Top",
-        icon: ICONS.chevron_up
+        icon: "chevron_up"
     },
     bottom: {
         id: "scrollBottom",
         aria_label: "Scroll to Bottom",
-        icon: ICONS.chevron_down
+        icon: "chevron_down"
     }
 } as const;
 ---
@@ -21,7 +20,7 @@ const ScrollButtons = {
         {Object.values(ScrollButtons).map(button =>
             <button id={button.id} aria-label={button.aria_label}
                 class="shadow-none border-none btn btn-square bg-secondary rounded-lg hover:scale-110 transition-transform duration-300 ring-4 ring-base-200">
-                    <Icon icon={button.icon} classname="text-white" size="sm" />
+                    <TestIcon name={button.icon} classname="text-white" />
             </button>
         )}
 </div>

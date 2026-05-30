@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="640"
+   height="640"
+   viewBox="0 0 640 640"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   sodipodi:docname="autocad.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="1.0494603"
+     inkscape:cx="329.69326"
+     inkscape:cy="307.3008"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="1071"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1" />
+  <path
+     style="fill:#000000"
+     d="m 184.45333,137.545 v 0.26167 L 120,176.41333 V 474.98 l 64.94167,-38.86667 H 490.605 V 158.835 c 0,-11.7 -9.62167,-21.29 -21.32167,-21.29 z M 309.55,204.375 h 55.01333 l 49.74,165.85333 H 371.17167 L 361.7,333.73667 h -49.74 l -9.505,36.035 h -40.26667 z m 197.72167,0.455 V 452.78 H 189.53333 L 155.06,473.41833 v 7.74667 c 0,11.7 9.655,21.29 21.355,21.29 H 520 V 204.83 Z M 336.11333,231.36 319.545,303.43167 h 34.11333 z"
+     id="path1" />
+</svg>

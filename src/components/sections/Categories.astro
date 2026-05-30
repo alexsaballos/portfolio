@@ -3,7 +3,7 @@ import { ROUTE } from "@config/routing";
 import { NAVIGATION_PAGES } from "@config/pages";
 
 import Title from "@text/Title.astro";
-import Icon from "@libraries/Icon.astro";
+import TestIcon from "@ui/TestIcon.astro";
 import Image from "astro/components/Image.astro";
 
 const { t, l } = Astro.locals;
@@ -16,7 +16,7 @@ const { t, l } = Astro.locals;
             <div data-aos="zoom-in" class="relative select-none w-full">
                 <div class="absolute -top-7.5 left-1/2 -translate-x-1/2 z-1">
                     <div class="rounded-full bg-primary p-3 shadow-none">
-                        <Icon icon={entry.frontend.icon} size="md" classname="text-white" />
+                        <TestIcon name={entry.frontend.icon} classname="text-white" />
                     </div>
                 </div>
                 <a href={ROUTE.page(l, entry.metadata.slug)}>

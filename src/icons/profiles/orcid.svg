@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 640 640"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="orcid-brands-solid-full.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.65078125"
+     inkscape:cx="252.77311"
+     inkscape:cy="352.65306"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="1071"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <!--!Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+  <path
+     id="path1-8"
+     style="fill:#000000"
+     d="M 160 96 C 124.7 96 96 124.7 96 160 L 96 480 C 96 515.3 124.7 544 160 544 L 480 544 C 515.3 544 544 515.3 544 480 L 544 160 C 544 124.7 515.3 96 480 96 L 160 96 z M 320 142.68359 C 417.95263 142.68359 497.31641 222.04737 497.31641 320 C 497.31641 417.95264 417.95263 497.31641 320 497.31641 C 222.04736 497.31641 142.68359 417.95262 142.68359 320 C 142.68359 222.04737 222.04736 142.68359 320 142.68359 z M 251.57617 207.39062 C 243.85437 207.39063 237.5625 213.68249 237.5625 221.4043 C 237.5625 229.12611 243.85435 235.41797 251.57617 235.41797 C 259.29798 235.41797 265.58984 229.12611 265.58984 221.4043 C 265.58984 213.6825 259.29798 207.39062 251.57617 207.39062 z M 240.92383 252.29102 L 240.92383 400.65039 L 262.22852 400.65039 L 262.22852 252.29102 L 240.92383 252.29102 z M 293.54492 252.29102 L 293.54492 400.79297 L 351.45898 400.79297 L 351.45898 400.86523 C 400.29231 400.86523 430.10742 364.68671 430.10742 326.57812 C 430.10742 291.47246 406.013 252.29102 351.17383 252.29102 L 293.54492 252.29102 z M 314.85156 271.52344 L 347.66992 271.52344 C 389.28192 271.52346 408.22852 296.76257 408.22852 326.50586 C 408.22852 344.80943 397.14728 381.48828 348.81445 381.48828 L 314.85156 381.48828 L 314.85156 271.52344 z "
+     inkscape:label="path1" />
+</svg>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="640"
+   height="640"
+   viewBox="0 0 640 640"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   sodipodi:docname="arduino.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="1.0494603"
+     inkscape:cx="315.4002"
+     inkscape:cy="324.45247"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="1071"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1" />
+  <path
+     style="fill:#000000"
+     d="m 421.45,222.43333 c -5,0 -10.11667,0.28334 -15.11667,1.15 C 364.13333,229.7 335.83333,260.9 320,284.81667 304.16667,260.9 275.86667,229.7 233.66667,223.58333 a 108.16667,108.16667 0 0 0 -15.11667,-1.15 c -54.41667,0 -98.55,43.73334 -98.55,97.56667 0,53.83333 44.26667,97.56666 98.55,97.56666 5,0 10.11667,-0.28332 15.26667,-1.14999 42.18333,-6.26666 70.5,-37.45 86.33333,-61.38333 15.81667,23.93333 44.11667,55.11667 86.33333,61.38333 4.98334,0.71667 10.11667,1.14999 15.25,1.14999 54,0 98.26667,-43.73332 98.26667,-97.56666 0,-53.83333 -44.26667,-97.56667 -98.55,-97.56667 z m -192.61667,159.8 A 63.95,63.95 0 0 1 218.41667,382.95 c -35.8,0 -64.81667,-28.33334 -64.81667,-62.95 0,-34.75 29.15,-62.95 64.96667,-62.95 3.46666,0 6.93333,0.28333 10.4,0.71668 C 268.8,263.6 293.08333,303.9 301.41667,320 c -8.46667,16.23333 -32.9,56.4 -72.58334,62.23333 z M 421.46667,382.95 c -3.46667,0 -6.93334,-0.28334 -10.4,-0.71667 C 371.23333,376.4 346.8,336.1 338.61667,320 c 8.18333,-16.1 32.61666,-56.4 72.45,-62.23333 3.46666,-0.43334 6.93333,-0.71667 10.4,-0.71667 35.81666,0 64.83333,28.33333 64.83333,62.95 0,34.75 -29.16667,62.95 -64.83333,62.95 z m 27.5,-73.4 v 18.9 h -20.08334 v 19.7 h -19.26666 v -19.7 H 389.5 v -18.9 h 20.1 v -19.71667 h 19.26667 V 309.55 Z m -258.2,18.75 h 59.56666 V 309.55 H 190.75 v 18.75 z"
+     id="path1" />
+</svg>

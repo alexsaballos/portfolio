@@ -1,11 +1,10 @@
 ---
-import { ICONS } from "@config/assets";
 import { HONOR_LINKS, HONORS_KEYS } from "@config/honors";
 
 import Title from "@text/Title.astro";
-import Icon from "@libraries/Icon.astro";
-import Resources from "@ui/badges/Resources.astro";
+import TestIcon from "@ui/TestIcon.astro";
 import Image from "astro/components/Image.astro";
+import Resources from "@ui/badges/Resources.astro";
 
 import type {
 	HonorsOrgListType, HonorsListType, HonorsLinkType, FlatHonorLinks, NestedHonorLinks
@@ -61,7 +60,7 @@ function resolveHonorYear(
 									<p class="text-sm text-base-content/70 group-open:hidden">{award.summary}</p>
 									<span class="flex flex-row gap-2 text-sm text-secondary my-1 group-open:hidden hover:underline">
 										{t.texts.description}
-										<Icon icon={ICONS.angles_down} size="xs" classname="mt-0.5" />
+										<TestIcon name="chevron_down" size="xs" classname="mt-0.5" />
 									</span>
 								</summary>
 								<p class="text-sm text-base-content/70 mt-2">{award.details}</p>

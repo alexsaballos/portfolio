@@ -1,10 +1,10 @@
 ---
 import Title from "@ui/text/Title.astro";
-import Icon from "@ui/libraries/Icon.astro";
 
 import { PERSONAL } from "@config/personal";
-import { ICONS, getPublicFile } from "@config/assets";
+import { getPublicFile } from "@config/assets";
 import PDFViewer from "@widgets/PDFViewer.astro";
+import TestIcon from "@ui/TestIcon.astro";
 
 const t = Astro.locals.t.resume_preview;
 const resumeUrl = getPublicFile("resume", "alexander-saballos-resume-es.pdf");
@@ -34,12 +34,12 @@ const resumeUrl = getPublicFile("resume", "alexander-saballos-resume-es.pdf");
             <div class="flex flex-wrap flex-row gap-3 items-center">
                 <a data-aos="zoom-in" data-aos-delay="500" href={resumeUrl} target="_blank" rel="noopener noreferrer"
                     class="btn btn-primary shadow-none rounded-4xl">
-                    <Icon icon={ICONS.fullscreen} />
+                    <TestIcon name="fullscreen" />
                     {t.fullscreen}
                 </a>
                 <a data-aos="zoom-in" data-aos-delay="500" href={resumeUrl} download
                     class="btn btn-secondary shadow-none rounded-4xl">
-                    <Icon icon={ICONS.download} />
+                    <TestIcon name="download" />
                     {t.download}
                 </a>
             </div>

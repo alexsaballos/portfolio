@@ -1,5 +1,5 @@
 ---
-import Flag from "@libraries/Flag.astro";
+import TestIcon from "@ui/TestIcon.astro";
 import { LANGUAGES } from "@config/languages";
 import type { SingleLanguageType } from "@typing/LocalesType";
 
@@ -13,7 +13,7 @@ const { text, classname } = Astro.props as {
     <span class="justify-items-center">
         {Object.values(LANGUAGES).map(entry => (
             <span class="inline-flex items-center align-middle gap-2">
-                <Flag icon={entry.icon} size="md" />
+                <TestIcon name={entry.icon} size="md" />
                 <p>{entry.text[text]}</p>
             </span>
         ))}
