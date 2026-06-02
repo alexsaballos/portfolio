@@ -20,19 +20,16 @@ Astro.locals.t = await getLocaleMessages(lang);
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} dir={METADATA.text_direction}>
 	<CommonHead type="error" lang={lang} code={code} />
 	<body>
 		<Loader />
 		<div class="min-h-screen flex flex-col">
 			<Navbar />
 			<main id="main-content" class="flex-1 flex items-center justify-center py-30 md:py-10 px-5">
-				<slot />							<!-- Dynamic page insertion -->
+				<slot />	<!-- Dynamic page insertion -->
 			</main>
-			<Footer />								<!-- Footer included with every page -->
+			<Footer />		<!-- Footer included with every page -->
 		</div>
-
-		<!-- Scripts at the very bottom of the page -->
-		<script src="@scripts/global.ts"></script>
 	</body>
 </html>

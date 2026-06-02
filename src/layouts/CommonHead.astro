@@ -79,6 +79,8 @@ const currentLang = lang ?? METADATA.defaultLanguage;
     <meta name="application-name" content={METADATA.siteName} />
     <meta name="description" content={currentSEO.description} />
     <meta name="author" content={PERSONAL.name} />
+    <meta name="creator" content={PERSONAL.name} />
+    <meta name="publisher" content={PERSONAL.name} />
     <meta name="generator" content={Astro.generator} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{currentSEO.title}</title>
@@ -182,7 +184,8 @@ const currentLang = lang ?? METADATA.defaultLanguage;
     {isNotError && <script is:inline type="application/ld+json" set:html={SCHEMAORG_GRAPH(currentLang, (isStandard ? page! : "home"))}></script>}
     {isStandard && <script is:inline type="speculationrules" set:html={JSON.stringify(SPECULATION())}></script>}
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) & Global script initializer -->
     <script is:inline async src={METADATA.api_keys.google_analytics.stream_url}></script>
-    <script src="@scripts/google-analytics-init.ts"></script>
+    <script src="@scripts/global.ts"></script>
+    {isStandard && <script src="@scripts/scroller.ts"></script>}
 </head>

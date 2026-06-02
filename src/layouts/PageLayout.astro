@@ -4,6 +4,7 @@ import Footer from '@sections/Footer.astro';
 import Loader from "@widgets/Loader.astro";
 import CommonHead from "@layouts/CommonHead.astro";
 
+import { METADATA } from '@config/meta';
 import { getLocaleMessages } from '@locales/utils';
 
 import type { AdmittedLanguagesType } from '@typing/LocalesType';
@@ -21,20 +22,16 @@ Astro.locals.t = await getLocaleMessages(lang);
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} dir={METADATA.text_direction}>
 	<CommonHead type="standard" lang={lang} page={page} />
 	<body>
 		<Loader />
 		<div class="min-h-screen flex flex-col">
 			<main id="main-content" class="flex-1 flex flex-col">
-				<slot />					<!-- Dynamic page insertion -->
+				<slot />	<!-- Dynamic page insertion -->
 			</main>
-			<Footer />						<!-- Footer included with every page -->
+			<Footer />		<!-- Footer included with every page -->
 		</div>
-		<Scroller />						<!-- Fixed scroller floating buttons on all screen sizes -->
-
-		<!-- Scripts at the very bottom of the page. Speculation Rules only apply to PageLayout.astro -->
-		<script src="@scripts/global.ts"></script>
-		<script src="@scripts/scroller.ts"></script>
+		<Scroller />		<!-- Fixed scroller floating buttons only on standard pages -->
 	</body>
 </html>

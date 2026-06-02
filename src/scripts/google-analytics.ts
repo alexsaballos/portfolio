@@ -23,7 +23,10 @@ export const logAnalyticsEvent = (eventName: string, params: Record<string, any>
 };
 
 // GA Initialization system handling standard paths, errors, and redirects
-export const initGoogleAnalytics = (pageType: "standard" | "error" | "vanity" = "standard"): void => {
+export const initGoogleAnalytics = (): void => {
+
+    // Read given data-analytics-type parameter from the <head> tag on each layout
+    const pageType = (document.head.getAttribute("data-analytics-type") ?? "standard") as ("standard" | "vanity" | "error");
     
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || function() { window.dataLayer.push(arguments); };
