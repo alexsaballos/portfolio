@@ -1,38 +1,18 @@
 ---
-import "aos/dist/aos.css";
-import '@styles/global.css';
-
-import { SEO } from '@config/routing';
-import { PAGES } from '@config/pages';
-import { METADATA } from '@config/meta';
-import { FAVICONS } from '@config/assets';
-import { PERSONAL } from '@config/personal';
-import { LANGUAGES } from '@config/languages';
-import { LINKS, SYSTEM } from '@config/links';
-
-import { SPECULATION } from "@scripts/speculation";
-import { SCHEMAORG_GRAPH } from '@config/entities/graph';
+import Scroller from '@widgets/Scroller.astro';
+import Footer from '@sections/Footer.astro';
+import Loader from "@widgets/Loader.astro";
+import CommonHead from "@layouts/CommonHead.astro";
 
 import { getLocaleMessages } from '@locales/utils';
 
 import type { AdmittedLanguagesType } from '@typing/LocalesType';
 import type { DirectoryPageNamesType } from '@typing/PagesType';
-import Scroller from '@widgets/Scroller.astro';
-import Footer from '@sections/Footer.astro';
-import Loader from "@widgets/Loader.astro";
 
 // Layout parametrization for every page
 const { page, lang } = Astro.props as {
 	page: DirectoryPageNamesType;
     lang: AdmittedLanguagesType;
-};
-
-// Current page determination alongside respective SEO
-const currentSEO = {
-	title: PAGES[page].SEO.title,
-	description: PAGES[page].SEO.description,
-	slug: PAGES[page].metadata.slug,
-	canonical: SEO.canonical.page(lang, PAGES[page].metadata.slug)
 };
 
 // Astro system-wide language save
@@ -42,88 +22,7 @@ Astro.locals.t = await getLocaleMessages(lang);
 
 <!doctype html>
 <html lang={lang}>
-	<head>
-		<!-- General metadata including icon -->
-		<meta charset={METADATA.charset} />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="application-name" content={METADATA.siteName} />
-		<meta name="description" content={currentSEO.description} />
-		<meta name="author" content={PERSONAL.name} />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" href={METADATA.favicon} type="image/x-icon" />
-		<link rel="manifest" href={METADATA.manifest} />
-		<title>{currentSEO.title}</title>
-		
-		<!-- Robots & Crawlers -->
-		<meta name="robots" content="index,follow" />
-		<meta name="googlebot" content="index,follow" />
-
-		<!-- Theme Management -->
-		<meta name="theme-color" content={METADATA.colors.light.background} />
-		<meta name="theme-color-light" content={METADATA.colors.light.background} />
-		<meta name="theme-color-dark" content={METADATA.colors.dark.background} />
-        <meta name="color-scheme" content="light dark" />
-		<style>html {visibility: hidden;}</style>
-
-		<!-- SEO - Multilingual Canonical Links -->
-		<link rel="canonical" href={currentSEO.canonical} />
-		{Object.values(LANGUAGES).map(entry =>
-			<link rel="alternate" hreflang={entry.code.lang} href={SEO.canonical.page(entry.code.lang, currentSEO.slug)} />
-		)}
-		<link rel="alternate" hreflang="x-default" href={SEO.canonical.page("en", currentSEO.slug)} />
-
-		<!-- rel="me" Verification System -->
-		{Object.values(LINKS.profiles).map(entry => <link rel="me" href={entry} /> )}
-
-		<!-- Microsoft -->
-		<meta name="msapplication-TileColor" content={METADATA.colors.dark.primary} />
-
-		<!-- Apple -->
-		<link rel="apple-touch-icon" href={FAVICONS.apple180.src} />
-		<meta name="mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-title" content={METADATA.siteName} />
-		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
-		<meta name="format-detection" content="telephone=no,email=no,address=no" />
-
-		<!-- OpenGraph -->
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content={currentSEO.canonical} />
-		<meta property="og:title" content={currentSEO.title} />
-		<meta property="og:site_name" content={METADATA.siteName} />
-		<meta property="og:description" content={currentSEO.description} />
-		<meta property="og:locale" content={LANGUAGES[lang].code.langcountry} />
-		{Object.values(LANGUAGES).map(entry =>
-			(entry.key !== lang) && <meta property="og:locale:alternate" content={entry.code.langcountry}/>
-		)}
-		<meta property="og:image" content={METADATA.opengraph.image} />
-		<meta property="og:image:url" content={METADATA.opengraph.image} />
-		<meta property="og:image:secure_url" content={METADATA.opengraph.image} />
-		<meta property="og:image:type" content={METADATA.opengraph.image_type} />
-		<meta property="og:image:alt" content={METADATA.siteName} />
-		<meta property="og:image:width" content={METADATA.opengraph.image_width} />
-		<meta property="og:image:height" content={METADATA.opengraph.image_height} />
-
-		<!-- Twitter -->
-		<meta property="twitter:url" content={currentSEO.canonical} />
-		<meta property="twitter:domain" content={SYSTEM.domain} />
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content={currentSEO.title} />
-		<meta name="twitter:description" content={currentSEO.description} />
-		<meta name="twitter:image" content={METADATA.opengraph.image} />
-		<meta name="twitter:image:alt" content={METADATA.siteName} />
-
-		<!-- Schema.org Entities & Graph (Four-Entity Schema.org Graph) | Speculation API -->
-		<script is:inline type="application/ld+json" set:html={SCHEMAORG_GRAPH(lang, page)} />
-		<script is:inline type="speculationrules" set:html={JSON.stringify(SPECULATION())} />
-
-		<!-- Google tag (gtag.js) -->
-		<script is:inline async src={METADATA.api_keys.google_analytics.stream_url} />
-		<script>
-            import { initGoogleAnalytics } from "@scripts/google-analytics.ts";
-            initGoogleAnalytics("standard");
-        </script>
-	</head>
+	<CommonHead type="standard" lang={lang} page={page} />
 	<body>
 		<Loader />
 		<div class="min-h-screen flex flex-col">
@@ -135,9 +34,6 @@ Astro.locals.t = await getLocaleMessages(lang);
 		<Scroller />						<!-- Fixed scroller floating buttons on all screen sizes -->
 
 		<!-- Scripts at the very bottom of the page. Speculation Rules only apply to PageLayout.astro -->
-        <noscript><style>
-			html {visibility: visible !important;}
-		</style></noscript>
 		<script src="@scripts/global.ts"></script>
 		<script src="@scripts/scroller.ts"></script>
 	</body>

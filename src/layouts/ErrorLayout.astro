@@ -1,24 +1,17 @@
 ---
-import "aos/dist/aos.css";
-import '@styles/global.css';
+import Navbar from '@widgets/Navbar.astro';
+import Footer from '@sections/Footer.astro';
+import Loader from "@widgets/Loader.astro";
+import CommonHead from "@layouts/CommonHead.astro";
 
-import { SYSTEM } from '@config/links';
-import { ERRORS } from '@config/errors';
 import { METADATA } from '@config/meta';
-import { PERSONAL } from '@config/personal';
-import { FAVICONS } from '@config/assets';
 import { getLocaleMessages } from '@locales/utils';
 
 import type { ErrorsCodeType } from '@typing/ErrorsType';
 import type { AdmittedLanguagesType } from '@typing/LocalesType';
 
-import Navbar from '@widgets/Navbar.astro';
-import Footer from '@sections/Footer.astro';
-import Loader from "@widgets/Loader.astro";
-
 // Error Code Paramtrization
 const code = Astro.props.code as ErrorsCodeType;
-const currentError = ERRORS[code] ?? ERRORS[500];
 const lang: AdmittedLanguagesType = (Astro.currentLocale as AdmittedLanguagesType) ?? METADATA.defaultLanguage;
 
 // Astro system-wide language save
@@ -28,57 +21,7 @@ Astro.locals.t = await getLocaleMessages(lang);
 
 <!doctype html>
 <html lang={lang}>
-	<head>
-		<!-- General metadata including icon -->
-		<meta charset={METADATA.charset} />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="application-name" content={METADATA.siteName} />
-		<meta name="description" content={currentError.description} />
-		<meta name="author" content={PERSONAL.name} />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" href={METADATA.favicon} type="image/x-icon" />
-		<link rel="manifest" href={METADATA.manifest} />
-		<title>{currentError.title}</title>
-
-		<!-- Robots & Crawlers -->
-		<meta name="robots" content="noindex,nofollow" />
-		<meta name="googlebot" content="noindex,nofollow" />
-
-		<!-- Theme Management -->
-		<meta name="theme-color" content={METADATA.colors.light.background} />
-		<meta name="theme-color-light" content={METADATA.colors.light.background} />
-		<meta name="theme-color-dark" content={METADATA.colors.dark.background} />
-        <meta name="color-scheme" content="light dark" />
-		<style>html {visibility: hidden;}</style>
-
-		<!-- Apple -->
-		<link rel="apple-touch-icon" href={FAVICONS.apple180.src} />
-		<meta name="mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-title" content={METADATA.siteName} />
-		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
-		<meta name="format-detection" content="telephone=no,email=no,address=no" />
-
-		<!-- OpenGraph -->
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content={currentError.title} />
-		<meta property="og:site_name" content={METADATA.siteName} />
-		<meta property="og:description" content={currentError.description} />
-		<meta property="og:locale" content={lang} />
-
-		<!-- Twitter -->
-		<meta property="twitter:domain" content={SYSTEM.domain} />
-		<meta name="twitter:card" content="summary" />
-		<meta name="twitter:title" content={currentError.title} />
-		<meta name="twitter:description" content={currentError.description} />
-		
-		<!-- Google tag (gtag.js) -->
-		<script is:inline async src={METADATA.api_keys.google_analytics.stream_url} />
-		<script>
-            import { initGoogleAnalytics } from "@scripts/google-analytics.ts";
-            initGoogleAnalytics("error");
-        </script>
-	</head>
+	<CommonHead type="error" lang={lang} code={code} />
 	<body>
 		<Loader />
 		<div class="min-h-screen flex flex-col">
@@ -90,9 +33,6 @@ Astro.locals.t = await getLocaleMessages(lang);
 		</div>
 
 		<!-- Scripts at the very bottom of the page -->
-        <noscript><style>
-			html {visibility: visible !important;}
-		</style></noscript>
 		<script src="@scripts/global.ts"></script>
 	</body>
 </html>

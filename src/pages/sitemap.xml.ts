@@ -8,12 +8,17 @@ import type { AdmittedLanguagesType } from "@typing/LocalesType";
 // Indentation needs to stay like this in order to avoid tabulation & break issues
 export async function GET() {
     const currentDate: string = new Date().toISOString().split("T")[0];
-
     const sitemap: string =
 `<?xml version="1.0" encoding="${METADATA.charset}"?>
 <urlset 
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://alexsaballos.dev/</loc>
+        <lastmod>${currentDate}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>${PAGES["home"].metadata.sitemap_priority}</priority>
+    </url>
     ${Object.values(PAGES).flatMap(page => {
 
         // Localized Canonical Page per Slug
@@ -21,17 +26,19 @@ export async function GET() {
         const DefaultLangCanonicalPage = LocalizedCanonicalPage(METADATA.defaultLanguage);
         
         return (
-        `<url>
-            <loc>${DefaultLangCanonicalPage}</loc>
-            ${Object.values(LANGUAGES).map(language =>
-                `<xhtml:link rel="alternate" hreflang="${language.code.lang}" href="${LocalizedCanonicalPage(language.code.lang)}" />`
-            .trim()).join("\n\t\t\t")}
-            <xhtml:link rel="alternate" hreflang="x-default" href="${DefaultLangCanonicalPage}" />
-            <lastmod>${currentDate}</lastmod>
-            <changefreq>monthly</changefreq>
-            <priority>${page.metadata.sitemap_priority}</priority>
-        </url>`
-    )}).join("\n\t\t")}
+        Object.values(LANGUAGES).map(lang =>
+            `<url>
+                <loc>${LocalizedCanonicalPage(lang.key)}</loc>
+                ${Object.values(LANGUAGES).map(language =>
+                    `<xhtml:link rel="alternate" hreflang="${language.code.lang}" href="${LocalizedCanonicalPage(language.code.lang)}" />`
+                .trim()).join("\n\t\t\t\t")}
+                <xhtml:link rel="alternate" hreflang="x-default" href="${DefaultLangCanonicalPage}" />
+                <lastmod>${currentDate}</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>${page.metadata.sitemap_priority}</priority>
+            </url>`
+        )
+    )}).join("\n\t")}
     ${Object.values(VANITY).flatMap(profile =>
         `<url>
             <loc>${profile.SEO.canonical}</loc>
@@ -39,7 +46,7 @@ export async function GET() {
             <changefreq>monthly</changefreq>
             <priority>0.3</priority>
         </url>`
-    ).join("\n\t\t")}
+    ).join("\n\t")}
 </urlset>`;
 
     return new Response(sitemap, {

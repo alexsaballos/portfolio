@@ -6,7 +6,10 @@ export function initAOS() {
 	const runAOS = () => {
 		// Only initialize when html is finally visible to avoid 0px bounding box calculations
 		if (window.getComputedStyle(htmlElement).visibility !== "hidden") {
-			AOS.init({ duration: 800 });
+			AOS.init({
+				duration: 800,
+				disableMutationObserver: true
+			});
 			AOS.refresh();
 		}
 	};

@@ -9,8 +9,8 @@ export type IconsKitNamesType = "flags" | "gui" | "profiles" | "technologies";
 export type IconsCustomNamesType = "certifications" | "devices" | "sun";
 export type IconsNamesType = AdmittedCountriesType | VanityNamesType | TechnologiesNamesType | IconsCustomNamesType
     | "hourglass" | "microchip" | "briefcase" | "leadership" | "award"
-    | "envelope_closed" | "envelope_check" | "home" | "hamburger_open" | "hamburger_close" | "download"
-    | "fullscreen" | "link" | "id_card" | "at" | "list" | "message"
+    | "envelope_closed" | "envelope_check" | "home" | "hamburger_open" | "hamburger_close"
+    | "download" | "fullscreen" | "link" | "angles_down" | "id_card" | "at" | "list" | "message"
     | "paper_plane" | "spinner" | "circle_check" | "circle_xmark"
     | "moon" | "globe" | "chevron_up" | "chevron_down";
 
@@ -19,7 +19,7 @@ export type IconsListType = Record<IconsNamesType, IconsType>;
 export type IconsPixelSizesType = "dxs" | "xs" | "sm" | "md" | "lg" | "xl" | "dxl" | "exl" | "ixl";
 
 // Paths Typing
-export type PathsListType = Record<("docs" | "resume" | "favicons" | "pictures" | "videos"), string>;
+export type PathsListType = Record<("docs" | "resume" | "favicons" | "screenshots" | "pictures" | "videos"), string>;
 
 // Videos & Pictures Typing
 export type VideosListType = Record<("IntroVideo"), string>;
@@ -76,10 +76,22 @@ export type TechnologiesListType = Record<TechnologiesNamesType, TechnologiesTyp
 export type FlagsListType = Record<AdmittedCountriesType, { picture: ImageMetadata; icon: IconsNamesType; }>;
 
 // Favicons Typing
-export type FaviconsSvgListType = "safari_mask";
-export type FaviconsPngListType =
-    "android192" | "android512" | "apple120" | "apple152" | "apple167" | "apple180" | "mstile150";
+export type FaviconsBrowserNamesType = "safari_mask" | "svg" | "ico";
+export type FaviconsManifestNamesType =
+    "android192" | "android512" | "apple120" | "apple152" | "apple167" | "apple180" | "mstile150" | "manifest";
+export type FaviconsBrowserType = Record<FaviconsBrowserNamesType, {
+    src: string; type: string; purpose: "maskable" | "non-maskable";
+}>
+export type FaviconsManifestType = Record<FaviconsManifestNamesType, {
+    src: string; sizes: string; type: string; purpose: "maskable" | "any"
+}>
+export type FaviconListType = {
+    manifest: FaviconsManifestType;
+    browser: FaviconsBrowserType;
+};
 
-export type FaviconListType =
-    Record<FaviconsPngListType, { src: string; sizes: string; type: string; }>
-    & Record<FaviconsSvgListType, { src: string; type: string; purpose: string; }>;
+// Screenshots Typing
+export type ScreenshotType = Record<("src" | "sizes" | "type" | "form_factor" | "label"), string>;
+export type ScreenshotsSingleType = Record<("desktop" | "mobile"), ScreenshotType>;
+export type ScreenshotsPageListType = "home";
+export type ScreenshotsListType = Record<ScreenshotsPageListType, ScreenshotsSingleType>

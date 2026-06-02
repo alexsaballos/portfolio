@@ -1,18 +1,17 @@
 import { SYSTEM } from "@config/links";
 import { PERSONAL } from "@config/personal";
-import { FAVICONS, PICTURES } from "@config/assets";
+import { FAVICONS, PICTURES, SCREENSHOTS } from "@config/assets";
 
 import type { MetadataType } from "@typing/MetaTypes";
-import type { FaviconsPngListType, FaviconsSvgListType } from "@typing/AssetsType";
 
 // Extract official link & base from astro.config.mjs
-const linkSite: string = import.meta.env.SITE ?? "";
+const astroconfig_linkSite = import.meta.env.SITE ?? "";
 
 // Site-wide Metadata
 export const METADATA = {
-    url: linkSite,
+    url: astroconfig_linkSite,
     base: "",
-    officialRoot: linkSite,
+    officialRoot: astroconfig_linkSite,
     siteName: `${PERSONAL.name} Professional Portfolio`,
     text_direction: "ltr",
     defaultLanguage: "en",
@@ -23,7 +22,7 @@ export const METADATA = {
         google_analytics: {
             stream_id: "14957967801",
             measurement_id: "G-Z0X55Z8KWP",
-            stream_url: `${SYSTEM.API.google_analytics}G-Z0X55Z8KWP`
+            stream_url: `${SYSTEM.API.google_analytics}/gtag/js?id=G-Z0X55Z8KWP`
         }
     },
     colors: {
@@ -40,6 +39,7 @@ export const METADATA = {
             accent: "#68B531"
         }
     },
+    screenshots: Object.values(SCREENSHOTS).flatMap(type => Object.values(type)),
     manifest_categories: [
         "Portfolio", "Electrical Engineering", "Software Engineering", "Web Development", "App Development",
         "Bare-Metal Embedded", "Engineering Projects", "Engineering Experience", "Leadership",
@@ -49,8 +49,12 @@ export const METADATA = {
         "Walton International Scholarship Program", "WISP",
         "Searcy", "Arkansas", "Managua", "Nicaragua", "United States of America"
     ],
-    manifest_favicons: (Object.keys(FAVICONS) as (FaviconsPngListType | FaviconsSvgListType)[])
-        .map(key => ({ ...FAVICONS[key] })),
+    manifest_favicons: Object.values(FAVICONS.manifest).flatMap(icon => icon),
+    technologies_used: [
+        "Visual Studio Code", "AstroJS", "Typescript", "TailwindCSS",
+        "HTML5", "CSS3", "DaisyUI", "AOS", "astro-icon", "pdf.js",
+        "Google Analytics 4"
+    ],
 
     // Social Previews & Crawler Paths
     opengraph: {
@@ -59,7 +63,7 @@ export const METADATA = {
         image_height: "630",
         image_type: "image/png"
     },
-    favicon: "/favicon.ico",
     manifest: "/manifest.webmanifest",
+    humans: "/humans.txt",
     robots: "/robots.txt"
 } as const satisfies MetadataType;

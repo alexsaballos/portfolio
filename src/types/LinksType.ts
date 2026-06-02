@@ -1,7 +1,5 @@
-export type SystemLinksType = {
-    domain: string;
-    pfp: string;
-    API: Record<("google_analytics" | "resend"), string>;
+export type SystemLinksType = Record<("domain" | "pfp"), string> & {
+    API: Record<("google_analytics" | "resend" | "webmention"), string>;
 }
 
 export type GeneralLinksType = {

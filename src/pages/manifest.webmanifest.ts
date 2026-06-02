@@ -1,3 +1,4 @@
+import { FAVICONS } from "@config/assets";
 import { METADATA } from "@config/meta";
 import { PAGES } from "@config/pages";
 import { ROUTE } from "@config/routing";
@@ -20,8 +21,10 @@ export async function GET() {
             "name": entry.frontend.long_title,
             "short_name": entry.frontend.short_title,
             "url": (entry.key === "home") ? ROUTE.home(METADATA.defaultLanguage) : ROUTE.page(METADATA.defaultLanguage, entry.metadata.slug),
-            "description": entry.SEO.description
+            "description": entry.SEO.description,
+            "icons": [FAVICONS.manifest.manifest]
         })),
+        "screenshots": METADATA.screenshots,
 
         "background_color": METADATA.colors.dark.background,
         "theme_color": METADATA.colors.dark.primary,

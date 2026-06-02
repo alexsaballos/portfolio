@@ -2,10 +2,11 @@ import type { GeneralLinksType, SystemLinksType } from "@typing/LinksType";
 
 export const SYSTEM = {
     domain: "https://alexsaballos.dev",
-    pfp: "https://alexsaballos.dev/images/profile.jpg",
+    pfp: "https://alexsaballos.dev/assets/pictures/pfp.webp",
     API: {
-        google_analytics: "https://www.googletagmanager.com/gtag/js?id=",
-        resend: "https://api.alexsaballos.dev/contact.php"
+        google_analytics: "https://www.googletagmanager.com",
+        resend: "https://api.alexsaballos.dev/contact.php",
+        webmention: "https://webmention.io/alexsaballos.dev_en_/webmention"
     }
 } as const satisfies SystemLinksType;
 

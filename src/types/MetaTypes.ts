@@ -1,4 +1,4 @@
-import type { FaviconListType } from "@typing/AssetsType";
+import type { FaviconListType, FaviconsBrowserType, ScreenshotType } from "@typing/AssetsType";
 import type { AdmittedLanguagesType } from "@typing/LocalesType";
 
 export type MetadataType = {
@@ -13,15 +13,17 @@ export type MetadataType = {
     orientation: string;
     api_keys: {
         google_analytics: Record<("stream_id" | "measurement_id" | "stream_url"), string>;
-    }
+    };
+    screenshots: ScreenshotType[];
     colors: {
         dark: Record<("background" | "primary" | "secondary" | "accent"), string>;
         light: Record<("background" | "primary" | "secondary" | "accent"), string>;
     };
     manifest_categories: string[];
-    manifest_favicons: Array<FaviconListType[keyof FaviconListType]>;
+    manifest_favicons: Record<("src" | "sizes" | "type"), string>[];
+    technologies_used: string[];
     opengraph: Record<("image" | "image_width" | "image_height" | "image_type"), string>;
-    favicon: string;
     manifest: string;
+    humans: string;
     robots: string;
 }

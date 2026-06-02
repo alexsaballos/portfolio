@@ -1,6 +1,7 @@
 import { SYSTEM } from "@config/links";
 import type {
-    VideosListType, PicturesListType, IconsListType, TechnologiesListType, FlagsListType, FaviconListType, PathsListType
+    VideosListType, PicturesListType, IconsListType, TechnologiesListType, FlagsListType, FaviconListType, PathsListType,
+    ScreenshotsListType
 } from "@typing/AssetsType";
 
 // Picture used on OgImage & Intro.astro
@@ -48,6 +49,7 @@ export const PATHS = {
     docs: "/assets/docs/",
     resume: "/assets/docs/resume/",
     favicons: "/assets/favicons/",
+    screenshots: "/assets/screenshots/",
     pictures: "/assets/pictures/",
     videos: "/assets/videos/"
 } as const satisfies PathsListType;
@@ -566,13 +568,20 @@ export const ICONS = {
         size: "sm"
     },
 
-    // Link icon
+    // Link & Read More icons
     link: {
         name: "link",
         group: "gui",
         title: "Link Icon",
         desc: "Link Icon used to represent an external website.",
         size: "sm"
+    },
+    angles_down: {
+        name: "angles_down",
+        group: "gui",
+        title: "Read More Icon",
+        desc: "Angles pointing downward used to represent a read-more option.",
+        size: "xs"
     },
 
     // Contact subject field icons
@@ -1260,44 +1269,91 @@ export const FLAGS = {
 // COMPLETE WEBMANIFEST REFERENCE
 // Complete manifest.webmanifest Reference - Android, Apple, Microsoft, and Safari
 export const FAVICONS = {
-    android192: {
-        src: `${PATHS.favicons}android-chrome-192x192.png`,
-        sizes: "192x192",
-        type: "image/png"
+    manifest: {
+        android192: {
+            src: `${PATHS.favicons}android-chrome-192x192.png`,
+            sizes: "192x192",
+            type: "image/png",
+            purpose: "maskable"
+        },
+        android512: {
+            src: `${PATHS.favicons}android-chrome-512x512.png`,
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "maskable"
+        },
+        apple120: {
+            src: `${PATHS.favicons}apple-touch-icon-120x120.png`,
+            sizes: "120x120",
+            type: "image/png",
+            purpose: "maskable"
+        },
+        apple152: {
+            src: `${PATHS.favicons}apple-touch-icon-152x152.png`,
+            sizes: "152x152",
+            type: "image/png",
+            purpose: "any"
+        },
+        apple167: {
+            src: `${PATHS.favicons}apple-touch-icon-167x167.png`,
+            sizes: "167x167",
+            type: "image/png",
+            purpose: "any"
+        },
+        apple180: {
+            src: `${PATHS.favicons}apple-touch-icon-180x180.png`,
+            sizes: "180x180",
+            type: "image/png",
+            purpose: "any"
+        },
+        mstile150: {
+            src: `${PATHS.favicons}microsoft-tile-150x150.png`,
+            sizes: "150x150",
+            type: "image/png",
+            purpose: "any"
+        },
+        manifest: {
+            src: `${PATHS.favicons}manifest-shortcut-96x96.png`,
+            sizes: "96x96",
+            type: "image/png",
+            purpose: "maskable"
+        }
     },
-    android512: {
-        src: `${PATHS.favicons}android-chrome-512x512.png`,
-        sizes: "512x512",
-        type: "image/png"
-    },
-    apple120: {
-        src: `${PATHS.favicons}apple-touch-icon-120x120.png`,
-        sizes: "120x120",
-        type: "image/png"
-    },
-    apple152: {
-        src: `${PATHS.favicons}apple-touch-icon-152x152.png`,
-        sizes: "152x152",
-        type: "image/png"
-    },
-    apple167: {
-        src: `${PATHS.favicons}apple-touch-icon-167x167.png`,
-        sizes: "167x167",
-        type: "image/png"
-    },
-    apple180: {
-        src: `${PATHS.favicons}apple-touch-icon-180x180.png`,
-        sizes: "180x180",
-        type: "image/png"
-    },
-    mstile150: {
-        src: `${PATHS.favicons}microsoft-tile-150x150.png`,
-        sizes: "150x150",
-        type: "image/png"
-    },
-    safari_mask: {
-        src: `${PATHS.favicons}safari-pinned-tab.svg`,
-        type: "image/svg+xml",
-        purpose: "maskable"
+    browser: {
+        safari_mask: {
+            src: `${PATHS.favicons}safari-pinned-tab.svg`,
+            type: "image/svg+xml",
+            purpose: "maskable"
+        },
+        svg: {
+            src: "/favicon.svg",
+            type: "image/svg+xml",
+            purpose: "maskable"
+        },
+        ico: {
+            src: "/favicon.ico",
+            type: "image/x-icon",
+            purpose: "non-maskable"
+        }
     }
 } as const satisfies FaviconListType;
+
+// Screenshots for Richer PWA on Webmanifest
+export const SCREENSHOTS = {
+    home: {
+        desktop:{
+            src: `${PATHS.screenshots}home-desktop.png`,
+            sizes: "1920x1080",
+            type: "image/png",
+            form_factor: "wide",
+            label: "Professional portfolio homepage on desktop"
+        },
+        mobile: {
+            src: `${PATHS.screenshots}home-mobile.png`,
+            sizes: "1290x2796",
+            type: "image/png",
+            form_factor: "narrow",
+            label: "Professional portfolio homepage on mobile"
+        }
+    }
+} as const satisfies ScreenshotsListType;
