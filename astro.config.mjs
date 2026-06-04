@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import icon from 'astro-icon';
 import tailwindcss from "@tailwindcss/vite";
-import { wellKnownMover } from './src/hooks/wellKnownMover.ts';
+import { postBuildCleaner } from './src/hooks/postBuildCleaner.ts';
 
 export default defineConfig({
     site: 'https://alexsaballos.dev',
@@ -11,7 +11,7 @@ export default defineConfig({
     outDir: 'dist',
     integrations: [
         icon(),
-        wellKnownMover()
+        postBuildCleaner()
     ],
     devToolbar: { enabled: false },
     vite: { plugins: [tailwindcss()] },
