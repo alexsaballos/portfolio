@@ -1,0 +1,30 @@
+name: Deploy Astro to cPanel
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Node and Build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Sync to cPanel via SFTP
+        uses: easingthemes/ssh-deploy@v5.1.0
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_CPANEL_PRIVATE_KEY }}
+          PASSPHRASE: ${{ secrets.SSH_CPANEL_PASSWORD }}
+          ARGS: "-rlgoDzvc --delete"
+          SOURCE: "dist/"
+          REMOTE_HOST: "66.29.146.106"
+          REMOTE_USER: "alexwook"
+          TARGET: "/home/alexwook/public_html/"

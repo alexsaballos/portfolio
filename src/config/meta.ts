@@ -63,6 +63,7 @@ export const METADATA = {
         image_height: "630",
         image_type: "image/png"
     },
+    sitemap: "/sitemap.xml",
     manifest: "/manifest.webmanifest",
     humans: "/humans.txt",
     robots: "/robots.txt"

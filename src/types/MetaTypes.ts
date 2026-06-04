@@ -1,4 +1,4 @@
-import type { FaviconListType, FaviconsBrowserType, ScreenshotType } from "@typing/AssetsType";
+import type { ScreenshotType } from "@typing/AssetsType";
 import type { AdmittedLanguagesType } from "@typing/LocalesType";
 
 export type MetadataType = {
@@ -23,6 +23,7 @@ export type MetadataType = {
     manifest_favicons: Record<("src" | "sizes" | "type"), string>[];
     technologies_used: string[];
     opengraph: Record<("image" | "image_width" | "image_height" | "image_type"), string>;
+    sitemap: string;
     manifest: string;
     humans: string;
     robots: string;

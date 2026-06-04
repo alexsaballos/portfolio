@@ -4,7 +4,6 @@ import { SYSTEM, LINKS } from "@config/links";
 
 // Person Entity - Alexander Saballos - Schema.org Structured Data Identity Linking
 export const SCHEMAORG_PERSON = {
-    "@context": "https://schema.org",
     "@type": "Person",
 	"@id": `${SYSTEM.domain}#person`,
     "name": PERSONAL.name,
@@ -151,5 +150,14 @@ export const SCHEMAORG_PERSON = {
 		})),
       "url": `${SYSTEM.domain}/contact/`
     },
-    "sameAs": Object.values(LINKS.profiles)
+    "sameAs": Object.values(LINKS.profiles),
+	"brand": {
+		"@type": "Brand",
+		"@id": `${SYSTEM.domain}#personal-brand`,
+		"name": PERSONAL.name,
+		"owner": {
+			"@id": `${SYSTEM.domain}#person`
+		},
+		"logo": SYSTEM.logo
+	}
 } as const;

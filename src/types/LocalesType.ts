@@ -1,5 +1,5 @@
 import type {
-    IconsType, TechnologiesCoreSubheadersType, TechnologiesNamesType, TechnologiesProductionSubheadersType
+    TechnologiesCoreSubheadersType, TechnologiesNamesType, TechnologiesProductionSubheadersType
 } from "@typing/AssetsType";
 import type { HonorsType } from "@typing/HonorsType";
 import type { CertLocaleType } from "./CertificationsType";
@@ -56,7 +56,7 @@ export type LocalesType = {
         email: Record<("label" | "placeholder"), string>;
         subject: {
             label: string;
-            options: Record<("placeholder" | "recruiting" | "technical" | "business" | "interview" | "academic" | "consulting" | "other"), string>;
+            options: Record<("placeholder" | "recruiting" | "technical" | "business" | "interview" | "academic" | "consulting" | "webmaster" | "other"), string>;
         },
         message: Record<("label" | "placeholder"), string>;
         alerts: {

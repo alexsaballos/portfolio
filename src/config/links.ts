@@ -3,9 +3,11 @@ import type { GeneralLinksType, SystemLinksType } from "@typing/LinksType";
 export const SYSTEM = {
     domain: "https://alexsaballos.dev",
     pfp: "https://alexsaballos.dev/assets/pictures/pfp.webp",
+    logo: "https://alexsaballos.dev/assets/pictures/my_logo.webp",
     API: {
         google_analytics: "https://www.googletagmanager.com",
         resend: "https://api.alexsaballos.dev/contact.php",
+        webfinger: "http://webfinger.net",
         webmention: "https://webmention.io/alexsaballos.dev_en_/webmention"
     }
 } as const satisfies SystemLinksType;

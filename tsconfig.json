@@ -16,6 +16,7 @@
 
 			// Source - Other Items path section
 			"@config/*": ["./src/config/*"],
+			"@hooks/*": ["./src/hooks/*"],
 			"@images/*": ["./src/images/*"],
 			"@layouts/*": ["./src/layouts/*"],
 			"@locales/*": ["./src/locales/*"],

@@ -20,8 +20,12 @@
     - hreflang
     - rel="me" Verification System
 
-   Possible future implementations:
+   Possible future head tag implementations:
     - RSS Feed
+
+    Non-head tag implementations:
+    - ./well-known/security.txt
+    - ./well-known/webfinger
 */
 
 import "aos/dist/aos.css";
@@ -85,9 +89,10 @@ const currentLang = lang ?? METADATA.defaultLanguage;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{currentSEO.title}</title>
 
-    <!-- Referrer Policy -->
+    <!-- Referrer & CSP Policies -->
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+
     <!-- Webmention enabling - webmention.io -->
     <link rel="webmention" href={SYSTEM.API.webmention} />
 
@@ -98,12 +103,13 @@ const currentLang = lang ?? METADATA.defaultLanguage;
     <link rel="mask-icon" href={FAVICONS.browser.safari_mask.src} color={METADATA.colors.dark.primary} />
     <link rel="apple-touch-icon" href={FAVICONS.manifest.apple180.src} sizes={FAVICONS.manifest.apple180.sizes} />
 
-    <!-- Robots & Crawlers - Errors must never be indexed -->
+    <!-- Robots, Crawlers, & Sitemap.xml - Errors must never be indexed -->
     <meta name="robots" content={isNotError ? "index,follow" : "noindex,nofollow"} />
     <meta name="googlebot" content={isNotError ? "index,follow" : "noindex,nofollow"} />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href={METADATA.sitemap} />
 
     <!-- Humans.txt File -->
-    <link type="text/plain" rel="author" href={METADATA.humans} />
+    <link rel="author" type="text/plain" title="Humans" href={METADATA.humans} />
 
     <!-- Theme Management -->
     <meta name="color-scheme" content="light dark" />

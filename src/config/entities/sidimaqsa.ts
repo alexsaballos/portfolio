@@ -8,6 +8,7 @@ export const SCHEMAORG_SIDIMAQSA = {
     "url": LINKS.organizations.sidimaqsa,
     "description": "Elevator and escalator installation, modernization, repair, and maintenance company.",
     "foundingDate": "2016",
+    "priceRange": "$$$",
     "areaServed": {
         "@type": "Country",
         "name": "Nicaragua"
@@ -16,7 +17,9 @@ export const SCHEMAORG_SIDIMAQSA = {
         "@type": "PostalAddress",
         "addressLocality": "Managua",
         "addressRegion": "Managua",
-        "addressCountry": "NI"
+        "addressCountry": "NI",
+        "streetAddress": "Ciudad el Doral, Km 18 Carretera Nueva a León",
+        "postalCode": "15500"
     },
     "founder": {
         "@id": `${SYSTEM.domain}#person`

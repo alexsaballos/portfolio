@@ -1,8 +1,10 @@
 import { SEO } from "@config/routing";
 import { PAGES } from "@config/pages";
 import { SCHEMAORG_PERSON } from "@config/entities/person";
+import { SCHEMAORG_PROFILEPAGE } from "./profile_page";
 import { SCHEMAORG_WEBSITE } from "@config/entities/website";
 import { SCHEMAORG_SIDIMAQSA } from "@config/entities/sidimaqsa";
+import { SCHEMAORG_OCCUPATIONALEXP } from "./occupational_experience";
 
 import type { AdmittedLanguagesType } from "@typing/LocalesType";
 import type { DirectoryPageNamesType } from "@typing/PagesType";
@@ -10,9 +12,15 @@ import type { DirectoryPageNamesType } from "@typing/PagesType";
 export const SCHEMAORG_GRAPH =
 	(locale: AdmittedLanguagesType, page: DirectoryPageNamesType): string => {
 
-	const graph: any[] = [SCHEMAORG_PERSON, SCHEMAORG_WEBSITE, SCHEMAORG_SIDIMAQSA];
+	const graph: any[] = [
+        SCHEMAORG_PROFILEPAGE,
+        SCHEMAORG_PERSON,
+        SCHEMAORG_WEBSITE,
+        SCHEMAORG_OCCUPATIONALEXP,
+        SCHEMAORG_SIDIMAQSA
+    ];
 
-	    // 2. Google recommends skipping BreadcrumbList on the root home page
+    // Google recommends skipping BreadcrumbList on the root home page
     if (page !== "home") {
         const breadcrumbEntity = {
             "@type": "BreadcrumbList",

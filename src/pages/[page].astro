@@ -1,22 +1,22 @@
 ---
-import { PAGES } from "@config/pages";
 import { METADATA } from "@config/meta";
+import { NAVIGATION_PAGES } from "@config/pages";
 
 import PageLayout from "@layouts/PageLayout.astro";
 import Navbar from "@widgets/Navbar.astro";
 import LanguageGate from "@sections/LanguageGate.astro";
 
-import type { DirectoryPageNamesType } from "@typing/PagesType";
+import type { NavigationPageNamesType } from "@typing/PagesType";
 
 // Intercepts requested slug and redirects appropriately (fallback to main redirection index)
-export const getStaticPaths = () => Object.keys(PAGES).map(
+export const getStaticPaths = () => Object.keys(NAVIGATION_PAGES).map(
     page => ({ params: { page }}));
-const page = Astro.params.page as DirectoryPageNamesType;
+const page = Astro.params.page as NavigationPageNamesType;
 ---
 
 <PageLayout page={page} lang={METADATA.defaultLanguage}>
     <Navbar />
     <div class="flex-1 flex items-center justify-center">
-        <LanguageGate page={PAGES[page].metadata.slug} />
+        <LanguageGate page={NAVIGATION_PAGES[page].metadata.slug} />
     </div>
 </PageLayout>

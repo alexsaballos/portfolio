@@ -9,5 +9,7 @@ import LanguageGate from "@sections/LanguageGate.astro";
 
 <PageLayout page="home" lang={METADATA.defaultLanguage}>
     <Navbar />
-    <LanguageGate page={PAGES.home.metadata.slug} />
+    <div class="flex-1 flex items-center justify-center">
+        <LanguageGate page={PAGES.home.metadata.slug} />
+    </div>
 </PageLayout>
