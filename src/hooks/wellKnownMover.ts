@@ -5,11 +5,19 @@ import { fileURLToPath } from "url";
 import type { AstroIntegration } from "astro";
 
 export function wellKnownMover(): AstroIntegration {
+
+    // Console-compatible text formatter
     const orangeHOOK = "\x1b[38;5;208m[HOOK]\x1b[0m";
+    const darkOrangeText = '\x1b[38;5;94m';
+    const lightOrangeBg = '\x1b[48;5;215m';
+    const reset = '\x1b[0m';
+
     return {
         name: "well-known-post-build-mover",
         hooks: {
             "astro:build:done": async ({ dir }) => {
+                // Hook starting notice
+                console.log(`${darkOrangeText}${lightOrangeBg} Running custom Astro Hooks ${reset}`)
                 console.log(`${orangeHOOK} Initializing WellKnownMover...\n`);
 
                 // Path generator

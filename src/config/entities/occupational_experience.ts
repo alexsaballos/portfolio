@@ -6,10 +6,6 @@ export const SCHEMAORG_OCCUPATIONALEXP = {
     "monthsOfExperience": 12,
         "qualifications": {
         "@type": "EducationalOccupationalCredential",
-        "name": "This is a mere test to see if it gets correctly synced",
-        "recognizedBy": {
-            "@type": "Organization",
-            "name": "Arkansas State Board Of Licensure for Professional Engineers"
-        }
+        "name": "Engineer Intern (EI/EiT) License"
     }
 } as const;
