@@ -105,6 +105,7 @@ const currentLang = lang ?? METADATA.defaultLanguage;
 
     <!-- Robots, Crawlers, & Sitemap.xml - Errors must never be indexed -->
     <meta name="robots" content={isNotError ? "index,follow" : "noindex,nofollow"} />
+    <meta name="bingbot" content={isNotError ? "index,follow" : "noindex,nofollow"} />
     <meta name="googlebot" content={isNotError ? "index,follow" : "noindex,nofollow"} />
     <link rel="sitemap" type="application/xml" title="Sitemap" href={METADATA.sitemap} />
 
