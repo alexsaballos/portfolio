@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.3
 
       - name: Install Node and Build
         run: |
@@ -19,7 +19,7 @@ jobs:
           npm run build
 
       - name: Sync to cPanel via SFTP
-        uses: easingthemes/ssh-deploy@v5.1.0
+        uses: easingthemes/ssh-deploy@v6.0.1
         with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_CPANEL_PRIVATE_KEY }}
           REMOTE_PORT: ${{ secrets.CPANEL_PORT }}
