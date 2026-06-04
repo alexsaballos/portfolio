@@ -1,4 +1,4 @@
-name: Deploy Astro to cPanel
+name: Deploy Astro Portfolio to cPanel shared Hosting
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
         uses: easingthemes/ssh-deploy@v5.1.0
         with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_CPANEL_PRIVATE_KEY }}
-          PASSPHRASE: ${{ secrets.SSH_CPANEL_PASSWORD }}
+          REMOTE_PORT: "21098"
           ARGS: "-rlgoDzvc --delete"
           SOURCE: "dist/"
           REMOTE_HOST: "66.29.146.106"
