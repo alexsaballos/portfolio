@@ -5,15 +5,18 @@
 RewriteEngine On
 RewriteBase /
 
-# Force trailing slash if request is not a physical file
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_URI} !(.*)/$
+# 1. Skip rewrites for real assets (CSS, JS, images, fonts, etc.)
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# 2. Force trailing slash for URLs missing it (unless it looks like a file)
+RewriteCond %{REQUEST_URI} !\.html$
+RewriteCond %{REQUEST_URI} !/$
 RewriteRule ^(.*)$ /$1/ [L,R=301]
 
-# Vanity routes (request /linkedin/ -> serve /linkedin.html)
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{DOCUMENT_ROOT}/$1.html -f
-RewriteRule ^(.*)/$ /$1.html [L]
+# 3. Vanity routes: Capture `/linkedin/` and test if `/profiles/linkedin.html` exists
+RewriteCond %{DOCUMENT_ROOT}/profiles/$1.html -f
+RewriteRule ^([^/]+)/$ /profiles/$1.html [L]
 
 # Language directories use index.html
 DirectoryIndex index.html
