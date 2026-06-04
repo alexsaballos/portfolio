@@ -1,18 +1,19 @@
-# build output
+# Build output
 dist/
 
-# generated types
+# Generated types
 .astro/
 
-# dependencies
+# NPM Dependencies
 node_modules/
 
 # logs
 npm-debug.log*
 pnpm-debug.log*
 
-# environment variables
+# Environment Variables
 .env
+.env.local
 .env.production
 
 # macOS-specific files

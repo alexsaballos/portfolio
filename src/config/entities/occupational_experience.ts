@@ -4,8 +4,12 @@ export const SCHEMAORG_OCCUPATIONALEXP = {
     "@type": "OccupationalExperienceRequirements",
     "@id": `${SYSTEM.domain}#experience-requirement`,
     "monthsOfExperience": 12,
-    "recognizedBy": {
-        "@type": "Organization",
-        "name": "Arkansas State Board Of Licensure for Professional Engineers"
+        "qualifications": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Engineer Intern (EI/EiT) License",
+        "recognizedBy": {
+            "@type": "Organization",
+            "name": "Arkansas State Board Of Licensure for Professional Engineers"
+        }
     }
 } as const;

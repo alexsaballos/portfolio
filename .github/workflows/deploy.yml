@@ -22,9 +22,9 @@ jobs:
         uses: easingthemes/ssh-deploy@v5.1.0
         with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_CPANEL_PRIVATE_KEY }}
-          REMOTE_PORT: "21098"
+          REMOTE_PORT: ${{ secrets.CPANEL_PORT }}
           ARGS: "-rlgoDzvc --delete"
           SOURCE: "dist/"
-          REMOTE_HOST: "66.29.146.106"
-          REMOTE_USER: "alexwook"
-          TARGET: "/home/alexwook/public_html/"
+          REMOTE_HOST: ${{ secrets.CPANEL_IP }}
+          REMOTE_USER: ${{ secrets.CPANEL_USERNAME }}
+          TARGET: "/home/${{ secrets.CPANEL_USERNAME }}/public_html/"
