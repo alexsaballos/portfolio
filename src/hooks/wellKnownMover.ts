@@ -44,12 +44,13 @@ export function wellKnownMover(): AstroIntegration {
 
                 // Delete unoptimized picture files from _astro
                 if (fs.existsSync(assetsDir)) {
-                    fs.readdirSync(assetsDir).forEach(file => {
+                    console.log(`${orangeHOOK} Purging unoptimized source image:`);
+                    fs.readdirSync(assetsDir).forEach((file, i) => {
                         const isUnoptimized = [".png", ".jpg", ".jpeg"].includes(path.extname(file).toLowerCase());
 
                         if (isUnoptimized) {
                             fs.unlinkSync(path.join(assetsDir, file));
-                            console.log(`${orangeHOOK} Purged unoptimized source image: _astro/${file}`);
+                            console.log(`${orangeHOOK} ▶ (${i}): _astro/${file}`);
                         }
                     });
                 }
