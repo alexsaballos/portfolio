@@ -7,18 +7,21 @@ import type { AstroIntegration } from "astro";
 export function wellKnownMover(): AstroIntegration {
 
     // Console-compatible text formatter
-    const orangeHOOK = "\x1b[38;5;208m[HOOK]\x1b[0m";
-    const darkOrangeText = '\x1b[38;5;94m';
+    const darkOrangeText = '\x1b[38;5;208m';
     const lightOrangeBg = '\x1b[48;5;215m';
-    const reset = '\x1b[0m';
+    const lightGrayText = "\x1b[90m";
+    const resetColor = '\x1b[0m';
+    const regularHOOK = `${lightGrayText}${new Date().toLocaleTimeString('en-GB')}${resetColor} ${darkOrangeText}[HOOK]${resetColor}`;
+    const orangeCHECK = `${darkOrangeText}✓${resetColor}`;
+    const orangePLAY = `${darkOrangeText}▶${resetColor}`;
 
     return {
         name: "well-known-post-build-mover",
         hooks: {
             "astro:build:done": async ({ dir }) => {
                 // Hook starting notice
-                console.log(`${darkOrangeText}${lightOrangeBg} Running custom Astro Hooks ${reset}`)
-                console.log(`${orangeHOOK} ${darkOrangeText}Initializing WellKnownMover...${reset}\n`);
+                console.log(`\n${darkOrangeText}${lightOrangeBg} Running custom Astro Hooks ${resetColor}`)
+                console.log(`${regularHOOK} ${darkOrangeText}Initializing WellKnownMover...${resetColor}\n`);
 
                 // Path generator
                 const distPath = (target: string):string => path.join(fileURLToPath(dir), target);
@@ -33,18 +36,18 @@ export function wellKnownMover(): AstroIntegration {
                 // Move security.txt
                 if (fs.existsSync(sourceSecurity)) {
                     fs.renameSync(sourceSecurity, path.join(wellKnownDir, "security.txt"));
-                    console.log(`${orangeHOOK} ${darkOrangeText}✓${reset} Moved: /dist/.well-known/security.txt`);
+                    console.log(`${regularHOOK} ${orangeCHECK} Moved: /dist/.well-known/security.txt`);
                 }
 
                 // Move and strip extension from webfinger.json
                 if (fs.existsSync(sourceWebfinger)) {
                     fs.renameSync(sourceWebfinger, path.join(wellKnownDir, "webfinger"));
-                    console.log(`${orangeHOOK} ${darkOrangeText}✓${reset} Moved & Stripped: /dist/.well-known/webfinger (Extensionless)\n`)
+                    console.log(`${regularHOOK} ${orangeCHECK} Moved & Stripped: /dist/.well-known/webfinger (Extensionless)\n`)
                 }
 
                 // Delete unoptimized picture files from _astro
                 if (fs.existsSync(assetsDir)) {
-                    console.log(`${orangeHOOK} Purging unoptimized source image:`);
+                    console.log(`${regularHOOK} Purging unoptimized source image:`);
                     let index = 1;
                     
                     fs.readdirSync(assetsDir).forEach(file => {
@@ -52,11 +55,11 @@ export function wellKnownMover(): AstroIntegration {
 
                         if (isUnoptimized) {
                             fs.unlinkSync(path.join(assetsDir, file));
-                            console.log(`${orangeHOOK} ${darkOrangeText}▶${reset} (${index++}): _astro/${file}`);
+                            console.log(`${regularHOOK} ${orangePLAY} (${index++}): _astro/${file}`);
                         }
                     });
                 }
-                console.log(`\n${orangeHOOK} ${darkOrangeText}✓ WellKnownMover Sucessful${reset}\n`)
+                console.log(`\n${regularHOOK} ${orangeCHECK} WellKnownMover Sucessful${resetColor}\n`);
             }
         }
     };
