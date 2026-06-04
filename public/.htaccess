@@ -1,8 +1,14 @@
 # ----------------------------------------------------------------------
-# URL REWRITING
+# URL REWRITING & FORCE HTTPS / NON-WWW
 # ----------------------------------------------------------------------
 RewriteEngine On
 RewriteBase /
+
+# Force HTTPS and Strip WWW in one single redirect step
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
+RewriteRule ^(.*)$ https://%1%{REQUEST_URI} [L,R=301]
 
 # Skip rewrites for real assets (CSS, JS, images, fonts, etc.)
 RewriteCond %{REQUEST_FILENAME} -f
@@ -13,15 +19,15 @@ RewriteCond %{REQUEST_URI} !\.html$
 RewriteCond %{REQUEST_URI} !/$
 RewriteRule ^(.*)$ /$1/ [L,R=301]
 
-# 1. Handle language subpages (e.g., /en/contact/ -> /en/contact.html)
+# Handle language subpages (show: /en/contact/ -> serve: /en/contact.html)
 RewriteCond %{DOCUMENT_ROOT}/$1/$2.html -f
 RewriteRule ^(en|es|de)/([^/]+)/$ /$1/$2.html [L]
 
-# 2. FIX: Handle root-level pages (e.g., /contact/ -> /contact.html)
+# Handle root-level unlocalized pages (show: /contact/ -> serve: /contact.html)
 RewriteCond %{DOCUMENT_ROOT}/$1.html -f
 RewriteRule ^([^/]+)/$ /$1.html [L]
 
-# 3. Vanity routes: Capture single-level paths and test if profile exists
+# Vanity routes: Capture single-level paths and test if profile exists
 RewriteCond %{DOCUMENT_ROOT}/profiles/$1.html -f
 RewriteRule ^([^/]+)/$ /profiles/$1.html [L]
 
@@ -31,7 +37,6 @@ DirectoryIndex index.html
 # ----------------------------------------------------------------------
 # SECURITY HEADERS
 # ----------------------------------------------------------------------
-
 <IfModule mod_headers.c>
 
     # Prevent MIME-type sniffing
@@ -44,15 +49,12 @@ DirectoryIndex index.html
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
 
     # Disable browser features not used by this site
-    Header always set Permissions-Policy
-        "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
 
-    # Enforce HTTPS for one year
-    # Only enable if HTTPS is working everywhere
-    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    # Enforce HTTPS with Preload (Optimized for .dev domain)
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
 </IfModule>
-
 
 # ----------------------------------------------------------------------
 # CUSTOM ERROR PAGES
@@ -77,14 +79,13 @@ ErrorDocument 504 /errors/504.html
     ExpiresActive On
     ExpiresDefault "access plus 1 month"
 
-    # Dynamic content
+    # No caching - Dynamic content, feeds, XML, metadata
     ExpiresByType text/html "access plus 0 seconds"
     ExpiresByType application/json "access plus 0 seconds"
-
-    # Feeds, XML, metadata
     ExpiresByType text/xml "access plus 0 seconds"
     ExpiresByType application/xml "access plus 0 seconds"
 
+    # One year caching on:
     # Stylesheets
     ExpiresByType text/css "access plus 1 year"
 
@@ -93,7 +94,7 @@ ErrorDocument 504 /errors/504.html
     ExpiresByType application/javascript "access plus 1 year"
     ExpiresByType application/x-javascript "access plus 1 year"
 
-    # Images
+    # Images & video
     ExpiresByType image/svg+xml "access plus 1 year"
     ExpiresByType image/x-icon "access plus 1 year"
     ExpiresByType image/png "access plus 1 year"
@@ -107,11 +108,9 @@ ErrorDocument 504 /errors/504.html
 
 </IfModule>
 
-
 # ----------------------------------------------------------------------
 # CACHE-CONTROL HEADERS
 # ----------------------------------------------------------------------
-
 <IfModule mod_headers.c>
 
     # HTML should always be revalidated
