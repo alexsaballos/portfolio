@@ -46,30 +46,6 @@ export const LINKS = {
         peoplecert: "https://www.peoplecert.org/public-profile?ed=XCHu3ZqUTNJBe8JMoFGOl1FSa2IleHoP",
         quizlet: "https://quizlet.com/user/alexsaballosr/"
     },
-    other: {
-        facebook: "https://www.facebook.com/alexsaballosr",
-        instagram: "https://www.instagram.com/alexsaballosr/",
-        messenger: "https://m.me/alexsaballosr",
-        youtube: "https://www.youtube.com/@alexsaballosr"
-    },
-    // TODO [Optional]
-    gaming: {
-        ea: "024LinkMaster420",
-        epicgames: "024LinkMaster420",
-        googleplay: "https://my.play/024LinkMaster420",
-        nintendo: "https://lounge.nintendo.com/friendcode/0084-4695-2517/DXnT1KnLkV",
-        playstation: "https://profile.playstation.com/LinkMaster024420",
-        rockstar: "",
-        steam: "https://steamcommunity.com/id/024linkmaster420/",
-        ubisoft: "https://ubisoftconnect.com/LinkMaster42002",
-        xbox: "TheRealAlex8523"
-    },
-    payment: {
-        cashapp: "https://cash.app/$alexsaballosr",
-        paypal: "https://www.paypal.com/paypalme/AlexSaballos",
-        venmo: "https://www.venmo.com/u/alexsaballos",
-        venmoplus: "+alexsaballos.venmo"
-    },
     certifications: {
         aha: {
             main: "https://www.heart.org/",

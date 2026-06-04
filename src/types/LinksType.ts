@@ -15,11 +15,6 @@ export type GeneralLinksType = {
         "coursera" | "credly" | "edx" | "figma" | "github" | "gravatar" | "googledev"
         | "handshake" | "khanacademy" | "linkedin" | "merit" | "orcid" | "peoplecert" | "quizlet"
     ), string>,
-    other: Record<("facebook" | "instagram" | "messenger" | "youtube"), string>,
-    gaming: Record<(
-        "ea" | "epicgames" | "googleplay" | "nintendo" | "playstation" | "rockstar" | "steam" | "ubisoft" | "xbox"
-    ), string>,
-    payment: Record<("cashapp" | "paypal" | "venmo" | "venmoplus"), string>,
     certifications: {
         aha: Record<("main" | "award"), string>;
         coursera: Record<("main" | "profile" | "award"), string>;
