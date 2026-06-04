@@ -14,7 +14,11 @@ RewriteCond %{REQUEST_URI} !\.html$
 RewriteCond %{REQUEST_URI} !/$
 RewriteRule ^(.*)$ /$1/ [L,R=301]
 
-# Vanity routes: Capture `/linkedin/` and test if `/profiles/linkedin.html` exists
+# 1. FIX: Handle language subpages (e.g., /en/contact/ -> /en/contact.html)
+RewriteCond %{DOCUMENT_ROOT}/$1/$2.html -f
+RewriteRule ^(en|es|de)/([^/]+)/$ /$1/$2.html [L]
+
+# 2. Vanity routes: Capture single-level paths and test if file exists
 RewriteCond %{DOCUMENT_ROOT}/profiles/$1.html -f
 RewriteRule ^([^/]+)/$ /profiles/$1.html [L]
 
