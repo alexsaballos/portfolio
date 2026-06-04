@@ -18,7 +18,7 @@ export function wellKnownMover(): AstroIntegration {
             "astro:build:done": async ({ dir }) => {
                 // Hook starting notice
                 console.log(`${darkOrangeText}${lightOrangeBg} Running custom Astro Hooks ${reset}`)
-                console.log(`${orangeHOOK} Initializing WellKnownMover...\n`);
+                console.log(`${orangeHOOK} ${darkOrangeText}Initializing WellKnownMover...${reset}\n`);
 
                 // Path generator
                 const distPath = (target: string):string => path.join(fileURLToPath(dir), target);
@@ -33,28 +33,30 @@ export function wellKnownMover(): AstroIntegration {
                 // Move security.txt
                 if (fs.existsSync(sourceSecurity)) {
                     fs.renameSync(sourceSecurity, path.join(wellKnownDir, "security.txt"));
-                    console.log(`${orangeHOOK} Moved: /dist/.well-known/security.txt`);
+                    console.log(`${orangeHOOK} ${darkOrangeText}✓${reset} Moved: /dist/.well-known/security.txt`);
                 }
 
                 // Move and strip extension from webfinger.json
                 if (fs.existsSync(sourceWebfinger)) {
                     fs.renameSync(sourceWebfinger, path.join(wellKnownDir, "webfinger"));
-                    console.log(`${orangeHOOK} Moved & Stripped: /dist/.well-known/webfinger (Extensionless)\n`)
+                    console.log(`${orangeHOOK} ${darkOrangeText}✓${reset} Moved & Stripped: /dist/.well-known/webfinger (Extensionless)\n`)
                 }
 
                 // Delete unoptimized picture files from _astro
                 if (fs.existsSync(assetsDir)) {
                     console.log(`${orangeHOOK} Purging unoptimized source image:`);
-                    fs.readdirSync(assetsDir).forEach((file, i) => {
+                    let index = 1;
+                    
+                    fs.readdirSync(assetsDir).forEach(file => {
                         const isUnoptimized = [".png", ".jpg", ".jpeg"].includes(path.extname(file).toLowerCase());
 
                         if (isUnoptimized) {
                             fs.unlinkSync(path.join(assetsDir, file));
-                            console.log(`${orangeHOOK} ▶ (${i}): _astro/${file}`);
+                            console.log(`${orangeHOOK} ${darkOrangeText}▶${reset} (${index++}): _astro/${file}`);
                         }
                     });
                 }
-                console.log(`\n${orangeHOOK} WellKnownMover Sucessful\n`)
+                console.log(`\n${orangeHOOK} ${darkOrangeText}✓ WellKnownMover Sucessful${reset}\n`)
             }
         }
     };
