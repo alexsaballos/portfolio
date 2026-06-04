@@ -1,7 +1,6 @@
 # ----------------------------------------------------------------------
 # URL REWRITING
 # ----------------------------------------------------------------------
-
 RewriteEngine On
 RewriteBase /
 
@@ -14,17 +13,20 @@ RewriteCond %{REQUEST_URI} !\.html$
 RewriteCond %{REQUEST_URI} !/$
 RewriteRule ^(.*)$ /$1/ [L,R=301]
 
-# 1. FIX: Handle language subpages (e.g., /en/contact/ -> /en/contact.html)
+# 1. Handle language subpages (e.g., /en/contact/ -> /en/contact.html)
 RewriteCond %{DOCUMENT_ROOT}/$1/$2.html -f
 RewriteRule ^(en|es|de)/([^/]+)/$ /$1/$2.html [L]
 
-# 2. Vanity routes: Capture single-level paths and test if file exists
+# 2. FIX: Handle root-level pages (e.g., /contact/ -> /contact.html)
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([^/]+)/$ /$1.html [L]
+
+# 3. Vanity routes: Capture single-level paths and test if profile exists
 RewriteCond %{DOCUMENT_ROOT}/profiles/$1.html -f
 RewriteRule ^([^/]+)/$ /profiles/$1.html [L]
 
 # Language directories use index.html
 DirectoryIndex index.html
-
 
 # ----------------------------------------------------------------------
 # SECURITY HEADERS
@@ -55,7 +57,6 @@ DirectoryIndex index.html
 # ----------------------------------------------------------------------
 # CUSTOM ERROR PAGES
 # ----------------------------------------------------------------------
-
 ErrorDocument 400 /errors/400.html
 ErrorDocument 401 /errors/401.html
 ErrorDocument 403 /errors/403.html
@@ -69,9 +70,8 @@ ErrorDocument 504 /errors/504.html
 
 
 # ----------------------------------------------------------------------
-# BROWSER LEVERAGE CACHING (MOD_EXPIRES)
+# BROWSER CACHING RULES
 # ----------------------------------------------------------------------
-
 <IfModule mod_expires.c>
 
     ExpiresActive On
