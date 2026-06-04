@@ -5,16 +5,16 @@
 RewriteEngine On
 RewriteBase /
 
-# 1. Skip rewrites for real assets (CSS, JS, images, fonts, etc.)
+# Skip rewrites for real assets (CSS, JS, images, fonts, etc.)
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^ - [L]
 
-# 2. Force trailing slash for URLs missing it (unless it looks like a file)
+# Force trailing slash for URLs missing it (unless it looks like a file)
 RewriteCond %{REQUEST_URI} !\.html$
 RewriteCond %{REQUEST_URI} !/$
 RewriteRule ^(.*)$ /$1/ [L,R=301]
 
-# 3. Vanity routes: Capture `/linkedin/` and test if `/profiles/linkedin.html` exists
+# Vanity routes: Capture `/linkedin/` and test if `/profiles/linkedin.html` exists
 RewriteCond %{DOCUMENT_ROOT}/profiles/$1.html -f
 RewriteRule ^([^/]+)/$ /profiles/$1.html [L]
 

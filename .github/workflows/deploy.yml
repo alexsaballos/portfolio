@@ -8,12 +8,15 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: Production
+      url: https://alexsaballos.dev
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v6.0.3
 
-      - name: Install Node and Build
+      - name: Install Node and Run Build
         run: |
           npm ci
           npm run build
