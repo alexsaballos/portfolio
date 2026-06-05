@@ -19,8 +19,12 @@ export default defineConfig({
             strategies: 'generateSW',
             manifest: false,
             workbox: {
+                maximumFileSizeToCacheInBytes: 6000000,
                 globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,webm,woff,woff2}'],
-                maximumFileSizeToCacheInBytes: 6000000
+                globIgnores: [
+                    '**/screenshots/**/*',
+                    '**/profiles/**/*'
+                ],
             }
         })
     ],
