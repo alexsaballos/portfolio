@@ -34,7 +34,7 @@ export async function GET() {
 
         "launch_handler": { "client_mode": [ "focus-existing", "auto" ] },
         "prefer_related_applications": false,
-        "display_override": [ "window-controls-overlay", "standalone" ]
+        "display_override": [ "window-controls-overlay", "minimal-ui" ]
     }, null, "\t");
 
     return new Response(manifest, {
