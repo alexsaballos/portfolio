@@ -26,6 +26,15 @@ export default defineConfig({
                     '**/profiles/**/*',
                     '**/errors/**/*',
                 ],
+                navigateFallbackDenylist: [,
+                    /^\/.well-known\//,
+                    /^\/errors\//,
+                    /^\/profiles\//,
+                    /^\/manifest\.webmanifest$/,
+                    /^\/sitemap\.xml$/,
+                    /^\/robots\.txt$/,
+                    /^\/humans\.txt$/,
+                ]
             }
         })
     ],
