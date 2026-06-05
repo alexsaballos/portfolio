@@ -30,7 +30,8 @@ export async function GET() {
         "theme_color": METADATA.colors.dark.primary,
 
         "categories": METADATA.manifest_categories,
-        "icons": METADATA.manifest_favicons
+        "icons": METADATA.manifest_favicons,
+        "display_override": [ "window-controls-overlay", "standalone" ]
     }, null, "\t");
 
     return new Response(manifest, {
