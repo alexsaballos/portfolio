@@ -1273,50 +1273,42 @@ export const FAVICONS = {
         android192: {
             src: `${PATHS.favicons}android-chrome-192x192.png`,
             sizes: "192x192",
-            type: "image/png",
-            purpose: "maskable"
+            type: "image/png"
         },
         android512: {
             src: `${PATHS.favicons}android-chrome-512x512.png`,
             sizes: "512x512",
-            type: "image/png",
-            purpose: "maskable"
+            type: "image/png"
         },
         apple120: {
             src: `${PATHS.favicons}apple-touch-icon-120x120.png`,
             sizes: "120x120",
-            type: "image/png",
-            purpose: "maskable"
+            type: "image/png"
         },
         apple152: {
             src: `${PATHS.favicons}apple-touch-icon-152x152.png`,
             sizes: "152x152",
-            type: "image/png",
-            purpose: "any"
+            type: "image/png"
         },
         apple167: {
             src: `${PATHS.favicons}apple-touch-icon-167x167.png`,
             sizes: "167x167",
-            type: "image/png",
-            purpose: "any"
+            type: "image/png"
         },
         apple180: {
             src: `${PATHS.favicons}apple-touch-icon-180x180.png`,
             sizes: "180x180",
-            type: "image/png",
-            purpose: "any"
+            type: "image/png"
         },
         mstile150: {
             src: `${PATHS.favicons}microsoft-tile-150x150.png`,
             sizes: "150x150",
-            type: "image/png",
-            purpose: "any"
+            type: "image/png"
         },
         manifest: {
             src: `${PATHS.favicons}manifest-shortcut-96x96.png`,
             sizes: "96x96",
-            type: "image/png",
-            purpose: "maskable"
+            type: "image/png"
         }
     },
     browser: {

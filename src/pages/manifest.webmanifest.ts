@@ -6,7 +6,7 @@ import { ROUTE } from "@config/routing";
 export async function GET() {
     const manifest:string = JSON.stringify(
     {
-        "id": ROUTE.home(METADATA.defaultLanguage),
+        "id": "/",
         "name": PAGES.home.frontend.long_title,
         "short_name": PAGES.home.frontend.short_title,
         "description": PAGES.home.SEO.description,
@@ -14,14 +14,14 @@ export async function GET() {
         "dir": METADATA.text_direction,
 
         "start_url": ROUTE.home(METADATA.defaultLanguage),
-        "scope": ROUTE.home(METADATA.defaultLanguage),
+        "scope": "/",
         "display": METADATA.display,
         "orientation": METADATA.orientation,
         "shortcuts" : Object.values(PAGES).map(entry => ({
             "name": entry.frontend.long_title,
             "short_name": entry.frontend.short_title,
-            "url": (entry.key === "home") ? ROUTE.home(METADATA.defaultLanguage) : ROUTE.page(METADATA.defaultLanguage, entry.metadata.slug),
             "description": entry.SEO.description,
+            "url": (entry.key === "home") ? ROUTE.home(METADATA.defaultLanguage) : ROUTE.page(METADATA.defaultLanguage, entry.metadata.slug),
             "icons": [FAVICONS.manifest.manifest]
         })),
         "screenshots": METADATA.screenshots,
@@ -31,6 +31,9 @@ export async function GET() {
 
         "categories": METADATA.manifest_categories,
         "icons": METADATA.manifest_favicons,
+
+        "launch_handler": { "client_mode": [ "focus-existing", "auto" ] },
+        "prefer_related_applications": false,
         "display_override": [ "window-controls-overlay", "standalone" ]
     }, null, "\t");
 

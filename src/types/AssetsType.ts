@@ -83,7 +83,7 @@ export type FaviconsBrowserType = Record<FaviconsBrowserNamesType, {
     src: string; type: string; purpose: "maskable" | "non-maskable";
 }>
 export type FaviconsManifestType = Record<FaviconsManifestNamesType, {
-    src: string; sizes: string; type: string; purpose: "maskable" | "any"
+    src: string; sizes: string; type: string;
 }>
 export type FaviconListType = {
     manifest: FaviconsManifestType;
