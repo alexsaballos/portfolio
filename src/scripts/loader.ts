@@ -41,11 +41,9 @@ const setupLinkInterceptors = () => {
 
 // Execute based on loading environment state
 if (document.readyState === 'complete') {
-    finishLoading();
-    setupLinkInterceptors();
+    finishLoading(); setupLinkInterceptors();
 } else {
     window.addEventListener('load', () => {
-        finishLoading();
-        setupLinkInterceptors();
+        finishLoading(); setupLinkInterceptors();
     });
 }
