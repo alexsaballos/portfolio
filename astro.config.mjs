@@ -23,7 +23,8 @@ export default defineConfig({
                 globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,webm,woff,woff2}'],
                 globIgnores: [
                     '**/screenshots/**/*',
-                    '**/profiles/**/*'
+                    '**/profiles/**/*',
+                    '**/errors/**/*',
                 ],
             }
         })
