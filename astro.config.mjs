@@ -28,28 +28,21 @@ export default defineConfig({
                     '**/errors/**/*'
                 ],
                 navigateFallbackDenylist: [
+                    /^\/$/,
+                    /^\/de\//,
+                    /^\/en\//,
+                    /^\/es\//,
+
                     /^\/.well-known\//,
                     /^\/errors\//,
                     /^\/profiles\//,
+
                     /^\/manifest\.webmanifest$/,
                     /^\/sitemap\.xml$/,
                     /^\/robots\.txt$/,
                     /^\/humans\.txt$/
                 ]
-            },
-            runtimeCaching: [
-                {
-                    urlPattern: ({ request }) => request.mode === 'navigate',
-                    handler: 'NetworkFirst',
-                    options: {
-                        cacheName: 'html-pages-cache',
-                        expiration: {
-                            maxEntries: 50,
-                            maxAgeSeconds: 60 * 60 * 24 * 7
-                        }
-                    }
-                }
-            ]
+            }
         })
     ],
     devToolbar: { enabled: false },
