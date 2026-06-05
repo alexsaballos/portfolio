@@ -27,6 +27,10 @@ RewriteRule ^(en|es|de)/([^/]+)/$ /$1/$2.html [L]
 RewriteCond %{DOCUMENT_ROOT}/$1.html -f
 RewriteRule ^([^/]+)/$ /$1.html [L]
 
+# Handle deep-nested error pages (show: /errors/502/ -> serve: /errors/502.html)
+RewriteCond %{DOCUMENT_ROOT}/errors/$1.html -f
+RewriteRule ^errors/([^/]+)/$ /errors/$1.html [L]
+
 # Vanity routes: Capture single-level paths and test if profile exists
 RewriteCond %{DOCUMENT_ROOT}/profiles/$1.html -f
 RewriteRule ^([^/]+)/$ /profiles/$1.html [L]
