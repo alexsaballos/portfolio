@@ -1,10 +1,10 @@
 ---
 import Title from "@ui/text/Title.astro";
+import PDFViewer from "@widgets/PDFViewer.astro";
+import TestIcon from "@ui/TestIcon.astro";
 
 import { PERSONAL } from "@config/personal";
 import { getPublicFile } from "@config/assets";
-import PDFViewer from "@widgets/PDFViewer.astro";
-import TestIcon from "@ui/TestIcon.astro";
 
 const t = Astro.locals.t.resume_preview;
 const resumeUrl = getPublicFile("resume", "alexander-saballos-resume-es.pdf");
