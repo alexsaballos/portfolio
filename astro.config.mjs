@@ -19,7 +19,6 @@ export default defineConfig({
             strategies: 'generateSW',
             manifest: false,
             workbox: {
-                cleanUrls: false,
                 directoryIndex: 'index.html',
                 maximumFileSizeToCacheInBytes: 6000000,
                 globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,webm,woff,woff2}'],
@@ -37,7 +36,20 @@ export default defineConfig({
                     /^\/robots\.txt$/,
                     /^\/humans\.txt$/
                 ]
-            }
+            },
+            runtimeCaching: [
+                {
+                    urlPattern: ({ request }) => request.mode === 'navigate',
+                    handler: 'NetworkFirst',
+                    options: {
+                        cacheName: 'html-pages-cache',
+                        expiration: {
+                            maxEntries: 50,
+                            maxAgeSeconds: 60 * 60 * 24 * 7
+                        }
+                    }
+                }
+            ]
         })
     ],
     devToolbar: { enabled: false },
