@@ -16,6 +16,10 @@
 	--color-accent: #68B531;
 }
 
+@media print {
+    #scrollTop #scrollBottom #scrollControls { display: none !important; }
+}
+
 .root {
 	color-scheme: light dark;
 	--tech-embedded: "#D48D17";

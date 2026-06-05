@@ -14,7 +14,7 @@ export const LANGUAGES = {
         },
         code: {
             lang: "de",
-            langcountry: "de-de"
+            langcountry: "de_DE"
         },
         text: {
             hello: "Hallo!",
@@ -32,7 +32,7 @@ export const LANGUAGES = {
         },
         code: {
             lang: "en",
-            langcountry: "en-us"
+            langcountry: "en_US"
         },
         text: {
             hello: "Hello!",
@@ -50,7 +50,7 @@ export const LANGUAGES = {
         },
         code: {
             lang: "es",
-            langcountry: "es-mx"
+            langcountry: "es_MX"
         },
         text: {
             hello: "¡Hola!",

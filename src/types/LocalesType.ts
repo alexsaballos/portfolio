@@ -7,7 +7,7 @@ import type { DirectoryPageNamesType, NavigationPageNamesType } from "@typing/Pa
 
 export type AdmittedLanguagesType = "de" | "en" | "es";
 export type AdmittedCountriesType = "de" | "us" | "mx";
-export type AdmittedLangCountriesType = "de-de" | "en-us" | "es-mx";
+export type AdmittedLangCountriesType = "de_DE" | "en_US" | "es_MX";
 
 export type SingleLanguageType = {
     key: AdmittedLanguagesType;

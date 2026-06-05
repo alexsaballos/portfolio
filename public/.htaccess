@@ -135,4 +135,14 @@ ErrorDocument 504 /errors/504.html
         Header set Cache-Control "public, max-age=31536000, immutable"
     </FilesMatch>
 
+    # Force the browser to always revalidate the service worker file
+    <FilesMatch "sw\.js$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+    </FilesMatch>
+
+    # Allow Workbox to safely bypass the browser disk cache during installation updates
+    <FilesMatch "workbox-.*\.js$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+    </FilesMatch>
+
 </IfModule>
