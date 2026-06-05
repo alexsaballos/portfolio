@@ -24,16 +24,16 @@ export default defineConfig({
                 globIgnores: [
                     '**/screenshots/**/*',
                     '**/profiles/**/*',
-                    '**/errors/**/*',
+                    '**/errors/**/*'
                 ],
-                navigateFallbackDenylist: [,
+                navigateFallbackDenylist: [
                     /^\/.well-known\//,
                     /^\/errors\//,
                     /^\/profiles\//,
                     /^\/manifest\.webmanifest$/,
                     /^\/sitemap\.xml$/,
                     /^\/robots\.txt$/,
-                    /^\/humans\.txt$/,
+                    /^\/humans\.txt$/
                 ]
             }
         })
