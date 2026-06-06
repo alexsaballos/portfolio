@@ -11,11 +11,11 @@ const { t, l } = Astro.locals;
 ---
 
 <nav class="drawer top-0 left-0 w-full z-998 pt-5">
-    <input id="intro-drawer" type="checkbox" class="drawer-toggle" />
+    <input id="nav-drawer" type="checkbox" class="drawer-toggle" aria-label="Toggle navigation menu" />
     <div class="drawer-content flex flex-col">
         <div class={"navbar bg-transparent w-full"}>
             <div class="flex-none md:hidden">
-                <label for="intro-drawer" aria-label="Open Sidebar" class="btn btn-square btn-ghost ml-5">
+                <label for="nav-drawer" class="btn btn-square btn-ghost ml-5" aria-label="Open navigation menu">
                     <TestIcon name="hamburger_open" />
                 </label>
             </div>
@@ -39,7 +39,7 @@ const { t, l } = Astro.locals;
         </div>
     </div>
     <div class="drawer-side text-white">
-        <label for="intro-drawer" aria-label="Close Sidebar" class="drawer-overlay"></label>
+        <label for="nav-drawer" class="drawer-overlay"></label>
         <ul class="menu bg-primary min-h-full w-65 text-lg p-6 pt-10 gap-10 flex flex-col">
             {Object.values(NAVIGATION_PAGES).map(entry => (
                 <li><a href={ROUTE.page(l, entry.metadata.slug)} class="hover:font-bold">

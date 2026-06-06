@@ -52,25 +52,27 @@ const subjectOptions = {
                     <legend class="fieldset-legend">{t.required}</legend>
 
                     <!-- Name input on contact form -->
-                    <label data-aos="fade-in" data-aos-delay="300" class="label">
+                    <label data-aos="fade-in" data-aos-delay="300" for="contactFormName" class="label">
                         <TestIcon name="id_card" />
                         {t.name.label}
                     </label>
-                    <input data-aos="fade-in" data-aos-delay="300" name="name" required type="text" class="input mb-4" placeholder={t.name.placeholder} />
+                    <input data-aos="fade-in" data-aos-delay="300" id="contactFormName" name="name" required type="text"
+                        class="input mb-4" placeholder={t.name.placeholder} autocomplete="name" />
 
                     <!-- Email input on contact form -->
-                    <label data-aos="fade-in" data-aos-delay="600" class="label">
+                    <label data-aos="fade-in" data-aos-delay="600" for="contactFormEmail" class="label">
                         <TestIcon name="at" />
                         {t.email.label}
                     </label>
-                    <input data-aos="fade-in" data-aos-delay="600" name="email" required type="email" class="input mb-4" placeholder={t.email.placeholder} />
+                    <input data-aos="fade-in" data-aos-delay="600" id="contactFormEmail" name="email" required type="email"
+                        class="input mb-4" placeholder={t.email.placeholder} autocomplete="email" />
 
                     <!-- Subject selection on contact form -->
-                    <label data-aos="fade-in" data-aos-delay="900" class="label">
+                    <label data-aos="fade-in" data-aos-delay="900" for="contactFormSubject" class="label">
                         <TestIcon name="list" />
                         {t.subject.label}
                     </label>
-                    <select data-aos="fade-in" data-aos-delay="900" name="subject" required class="select mb-4">
+                    <select data-aos="fade-in" data-aos-delay="900" id="contactFormSubject" name="subject" required class="select mb-4">
                         <option disabled selected>{t.subject.options.placeholder}</option>
                         {Object.values(subjectOptions).map(option =>
                             <option value={option.value}>{t.subject.options[option.key as keyof typeof subjectOptions]}</option>
@@ -78,11 +80,12 @@ const subjectOptions = {
                     </select>
 
                     <!-- Message input on contact form -->
-                    <label data-aos="fade-in" data-aos-delay="1200" class="label">
+                    <label data-aos="fade-in" data-aos-delay="1200" for="contactFormMessage" class="label">
                         <TestIcon name="message" />
                         {t.message.label}
                     </label>
-                    <textarea data-aos="fade-in" data-aos-delay="1200" required name="message" class="textarea h-48 sm:w-140 lg:w-160" placeholder={t.message.placeholder}></textarea>
+                    <textarea data-aos="fade-in" data-aos-delay="1200" id="contactFormMessage" required name="message" class="textarea h-48 sm:w-140 lg:w-160"
+                        placeholder={t.message.placeholder}></textarea>
 
                     <!-- Submission button on contact form -->
                     <button data-aos="fade-in" data-aos-delay="1200" type="submit" aria-label={t.send}
