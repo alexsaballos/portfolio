@@ -4,6 +4,10 @@ export const SYSTEM = {
     domain: "https://alexsaballos.dev",
     pfp: "https://alexsaballos.dev/assets/pictures/pfp.webp",
     logo: "https://alexsaballos.dev/assets/pictures/my_logo.webp",
+    notable: {
+        card_canon: "https://alexsaballos.dev/card/",
+        card_utm: "https://alexsaballos.dev/card/?utm_source=qr&utm_medium=card_page&utm_campaign=networking"
+    },
     API: {
         google_analytics: "https://www.googletagmanager.com",
         resend: "https://api.alexsaballos.dev/contact.php",

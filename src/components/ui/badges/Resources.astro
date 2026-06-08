@@ -8,7 +8,7 @@ const { link, text, variant } = Astro.props as
 ---
 
 <a data-aos="zoom-in" href={link} target="_blank" rel="noopener noreferrer"
-    class=`badge ${(variant === "certification") ? "badge-accent" : "badge-primary"} badge-sm rounded-4xl transition-transform duration-500 ease-out hover:scale-105 hover:opacity-70` >
+    class=`select-none badge ${(variant === "certification") ? "badge-accent" : "badge-primary"} badge-sm rounded-4xl transition-transform duration-500 ease-out hover:scale-105 hover:opacity-70` >
     <TestIcon name={(variant === "certification") ? "certifications" : "link"} size="xs" />
     {text}
 </a>

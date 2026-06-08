@@ -7,7 +7,7 @@ const classname = Astro.props.classname as string;
 ---
 
 <div class="avatar select-none">
-    <div class=`ring-secondary ring-4 rounded-full hover:ring-6 ${classname}`>
+    <div class=`ring-secondary ring-4 rounded-full shadow-none ${classname}`>
         <figure>
             <Image src={PICTURES.PFP} alt=`${PERSONAL.name} - Profile Picture` />
         </figure>

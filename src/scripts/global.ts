@@ -9,5 +9,5 @@ import { initGoogleAnalytics } from "@scripts/google-analytics.ts";
 import { initSW } from "@scripts/service_worker_reg.ts";
 
 // Manually initialize GA4 & AOS
-initGoogleAnalytics(); initSW();
+initGoogleAnalytics(); //initSW();
 AOS.init({ duration: 800 });

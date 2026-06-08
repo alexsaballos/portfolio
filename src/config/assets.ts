@@ -584,7 +584,7 @@ export const ICONS = {
         size: "xs"
     },
 
-    // Contact subject field icons
+    // Contact subject field & card icons
     id_card: {
         name: "id_card",
         group: "gui",
@@ -619,6 +619,34 @@ export const ICONS = {
         title: "Paper Plane Icon",
         desc: "Paper Plane used to represent a button submission.",
         size: "sm"
+    },
+    qr_code: {
+        name: "qr_code",
+        group: "gui",
+        title: "QR Code Icon",
+        desc: "QR Code used to represent scannable text.",
+        size: "lg"
+    },
+    earth: {
+        name: "earth",
+        group: "gui",
+        title: "Earth Icon",
+        desc: "Earth Icon used to represent worldwide location.",
+        size: "sm"
+    },
+    copy: {
+        name: "copy",
+        group: "gui",
+        title: "Copy Icon",
+        desc: "Icon used to represent copyable text.",
+        size: "sm"
+    },
+    share: {
+        name: "share",
+        group: "gui",
+        title: "Share Icon",
+        desc: "Sharing Icon used to represent sharing content.",
+        size: "md"
     },
 
     // Success & Failure icons for alerts
