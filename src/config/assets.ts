@@ -634,6 +634,20 @@ export const ICONS = {
         desc: "Earth Icon used to represent worldwide location.",
         size: "sm"
     },
+    industry: {
+        name: "industry",
+        group: "gui",
+        title: "Industry Icon",
+        desc: "Industry Icon used to represent an Industry.",
+        size: "sm"
+    },
+    graduation: {
+        name: "graduation",
+        group: "gui",
+        title: "Graduation Cap Icon",
+        desc: "Graduation Cap Icon used to represent College.",
+        size: "sm"
+    },
     copy: {
         name: "copy",
         group: "gui",
