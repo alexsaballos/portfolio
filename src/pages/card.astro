@@ -36,7 +36,7 @@ const lang = METADATA.defaultLanguage;
                     </div>
 
                     <!-- Main Card Container -->
-                    <div class="flex flex-col bg-base-300 border border-base-200 rounded-3xl items-start gap-4 p-6 mx-2">
+                    <div class="flex flex-col bg-base-300 rounded-3xl items-start gap-2 p-6 mx-2">
                         
                         <div class="flex flex-row justify-between w-full">
                             <!-- QR Code modal opening -->
@@ -107,47 +107,57 @@ const lang = METADATA.defaultLanguage;
                             <p class="text-md font-medium text-primary">Electrical Engineer (US EI/EiT) & Software Engineer</p>
                             <span class="text-sm opacity-60 flex flex-row gap-2 ">
                                 <TestIcon name="earth" />
-                                Latinamerica & United States
+                                Latinamerica, US, & Canada
                             </span>
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-success/10 text-success border border-success/20">
-                                <span class="w-2 h-2 rounded-full bg-success animate-pulse"></span>
+                            <span class="inline-flex items-center gap-2 mt-3 px-3 py-1 rounded-full text-xs font-medium bg-success/10 text-success border border-success/20">
+                                <span class="w-2 h-2 rounded-full bg-success animate-pulse select-none outline-none"></span>
                                 Available for projects
                             </span>
                         </div>
 
-                        <!-- Social Media Row -->
-                        <div class="self-center w-full border-y border-base-100 py-3">
-                            <div class="scale-90"><SocialButtons variant="social" /></div>
-                        </div>
-
                         <!-- Bio / About -->
-                        <div class="flex flex-col my-2 gap-6">
+                        <div class="flex flex-col my-2 gap-6 border-y border-base-100 py-6">
                             <div class="space-y-2">
                                 <h3 class="text-xs uppercase tracking-wider opacity-50 font-bold">About</h3>
                                 <p class="text-sm leading-relaxed opacity-90">
-                                    HU Walton Alumnus. Spanning the stack from power distribution and PCB design to embedded firmware and robust software infrastructure.
+                                    Spanning the stack from power distribution and PCB design to embedded firmware and robust software infrastructure.
                                 </p>
                             </div>
 
-                            <!-- Technical Competencies (Fills visual void) -->
+                            <!-- Credentials -->
                             <div class="space-y-2">
-                                <h3 class="text-xs uppercase tracking-wider opacity-50 font-bold">Core Stack</h3>
+                                <h3 class="text-xs uppercase tracking-wider opacity-50 font-bold">Credentials</h3>
                                 <div class="flex flex-wrap gap-1.5">
-                                    {["Altium Designer", "Embedded C/C++", "Firmware", "TypeScript", "Docker"].map(entry => (
-                                        <span class="px-3 py-1 text-xs bg-base-100 rounded-lg border border-base-200 font-mono">{entry}</span>
+                                    {["EI/EiT US License", "US BSc. Electrical Engineering", "HU Walton Alumnus"].map(entry => (
+                                        <span class="px-3 py-1 text-xs bg-primary/5 text-primary rounded-lg border border-primary/20 font-medium tracking-wide">{entry}</span>
                                     ))}
                                 </div>
                             </div>
 
-                            <!-- Languages (Fills visual void) -->
+                            <!-- Specialties -->
+                            <div class="space-y-2">
+                                <h3 class="text-xs uppercase tracking-wider opacity-50 font-bold">Specialties</h3>
+                                <div class="flex flex-wrap gap-1.5">
+                                    {["Embedded Systems", "PCB Design", "Industrial Automation", "Software Engineering"].map(entry => (
+                                        <span class="px-3 py-1 text-xs bg-base-100 rounded-lg font-mono">{entry}</span>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <!-- Languages -->
                             <div class="space-y-2">
                                 <h3 class="text-xs uppercase tracking-wider opacity-50 font-bold">Languages</h3>
                                 <div class="flex flex-wrap gap-1.5">
                                     {Object.values(LANGUAGES).map(entry => (
-                                        <span class="px-3 py-1 text-xs bg-primary/5 text-primary rounded-lg border border-primary/20 font-medium tracking-wide">{entry.name.standard}</span>
+                                        <span class="px-3 py-1 text-xs bg-secondary/5 text-secondary rounded-lg border border-secondary/20 font-medium tracking-wide">{entry.name.standard}</span>
                                     ))}
                                 </div>
                             </div>
+                        </div>
+
+                        <!-- Social Media Row -->
+                        <div class="self-center w-full">
+                            <div class="scale-90"><SocialButtons variant="social" /></div>
                         </div>
 
                         <!-- Primary Actions Area -->
