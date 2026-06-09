@@ -27,4 +27,5 @@ export type MetadataType = {
     manifest: string;
     humans: string;
     robots: string;
+    vcard: string;
 }

@@ -25,8 +25,10 @@ const lang = METADATA.defaultLanguage;
 	<body>
 		<Loader />
 		<div class="min-h-screen">
+            <div class="justify-self-end p-5 scale-150"><ThemeToggler /></div>
 			<main id="main-content" class="flex-1 flex flex-col">
-                <div class="relative flex flex-col w-full max-w-xl self-center mt-30 mb-10 px-1">
+
+                <div class="relative flex flex-col w-full max-w-xl self-center mt-10 mb-5 px-1">
                 
                     <!-- Avatar Wrapper -->
                     <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-2">
@@ -150,22 +152,20 @@ const lang = METADATA.defaultLanguage;
 
                         <!-- Primary Actions Area -->
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full border-t border-base-100 pt-6">
-                            <a class="btn btn-primary rounded-2xl gap-2 font-medium shadow-none" href={ROUTE.home(lang)}>
+                            <a href={ROUTE.home(lang)} class="btn btn-primary rounded-2xl gap-2 font-medium shadow-none">
                                 <TestIcon name="globe" />Website
                             </a>
-                            <button class="btn btn-secondary rounded-2xl gap-2 font-medium shadow-none">
+                            <a download href={METADATA.vcard} class="btn btn-secondary rounded-2xl gap-2 font-medium shadow-none">
                                 <TestIcon name="download" />Save Contact
-                            </button>
-                            <a class="btn btn-success btn-outline rounded-2xl gap-2 font-medium shadow-none" href={ROUTE.page(lang, "contact")}>
+                            </a>
+                            <a href={ROUTE.page(lang, "contact")} class="btn btn-success btn-outline rounded-2xl gap-2 font-medium shadow-none">
                                 <TestIcon name="paper_plane" />Message
                             </a>
                         </div>
 
-                        <ThemeToggler />
-
                     </div>
                 </div>
-                
+
             <!-- Client-side JS that controls contact-info email sending responses thorugh toast alerts -->
             <script src="@scripts/card_toast.ts"></script>
 
