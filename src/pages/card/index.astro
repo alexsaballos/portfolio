@@ -14,8 +14,6 @@ import SocialButtons from "@ui/buttons/SocialButtons.astro";
 import TestIcon from "@ui/TestIcon.astro";
 import ThemeToggler from "@ui/togglers/ThemeToggler.astro";
 
-import qrCode from "./qr-code.svg"
-
 const lang = METADATA.defaultLanguage;
 ---
 
@@ -76,7 +74,7 @@ const lang = METADATA.defaultLanguage;
 
                                 <!-- QR Code Container (Strict high-contrast wrapper) -->
                                 <div class="bg-white p-1 rounded-2xl shadow-xl shadow-base-300/10 border border-base-300 flex items-center justify-center">
-                                    <Image src={qrCode} width={220} height={220} class="aspect-square object-contain" alt="Scan this QR code to visit my professional landing page" />
+                                    <Image src="/card/qr.svg" width={220} height={220} class="aspect-square object-contain" alt="Scan this QR code to visit my professional landing page" />
                                 </div>
 
                                 <!-- Action Bar: Copy URL & Download -->
@@ -87,7 +85,7 @@ const lang = METADATA.defaultLanguage;
                                         class="btn btn-sm btn-primary shadow-none rounded-none text-xs font-semibold text-primary-content">
                                         <TestIcon name="copy" />
                                     </button>
-                                    <a download href={qrCode.src}
+                                    <a download href="/card/qr.svg"
                                         class="btn btn-sm btn-secondary shadow-none rounded-r-lg text-xs font-semibold text-primary-content">
                                         <TestIcon name="download" />
                                     </a>
@@ -179,7 +177,7 @@ const lang = METADATA.defaultLanguage;
                             <a href={ROUTE.home(lang)} class="btn btn-primary rounded-2xl gap-2 font-medium shadow-none">
                                 <TestIcon name="globe" />Website
                             </a>
-                            <a download href={METADATA.vcard} class="btn btn-secondary rounded-2xl gap-2 font-medium shadow-none">
+                            <a download href={METADATA.vcard_vcf} class="btn btn-secondary rounded-2xl gap-2 font-medium shadow-none">
                                 <TestIcon name="download" />Save Contact
                             </a>
                             <a href={ROUTE.page(lang, "contact")} class="btn btn-success btn-outline rounded-2xl gap-2 font-medium shadow-none">

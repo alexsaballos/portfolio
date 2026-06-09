@@ -67,5 +67,6 @@ export const METADATA = {
     manifest: "/manifest.webmanifest",
     humans: "/humans.txt",
     robots: "/robots.txt",
-    vcard: "/vcard.vcf"
+    vcard_vcf: "/card/vcard.vcf",
+    vcard_xml: "/card/vcard.xml"
 } as const satisfies MetadataType;

@@ -15,10 +15,12 @@
     "astro-icon": "^1.1.5",
     "daisyui": "^5.5.14",
     "pdfjs-dist": "^5.6.205",
+    "qrcode": "^1.5.4",
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
     "@types/aos": "^3.0.8",
+    "@types/qrcode": "^1.5.6",
     "@vite-pwa/astro": "^1.2.0"
   }
 }
