@@ -10,8 +10,8 @@ import Image from "astro/components/Image.astro";
 import CommonHead from "@layouts/CommonHead.astro";
 import Loader from "@widgets/Loader.astro";
 import Avatar from "@ui/Avatar.astro";
-import SocialButtons from "@ui/buttons/SocialButtons.astro";
 import TestIcon from "@ui/TestIcon.astro";
+import SocialButtons from "@ui/buttons/SocialButtons.astro";
 import ThemeToggler from "@ui/togglers/ThemeToggler.astro";
 
 const lang = METADATA.defaultLanguage;
@@ -69,17 +69,17 @@ const lang = METADATA.defaultLanguage;
                                 <!-- Header Content -->
                                 <div class="space-y-1">
                                     <h3 class="text-2xl font-bold tracking-tight text-base-content">Scan to Connect</h3>
-                                    <p class="text-xs text-base-content/60 font-medium">Share my profile with others instantly</p>
+                                    <p class="text-xs text-base-content/60 font-medium">Share my profile instantly</p>
                                 </div>
 
                                 <!-- QR Code Container (Strict high-contrast wrapper) -->
-                                <div class="bg-white p-1 rounded-2xl shadow-xl shadow-base-300/10 border border-base-300 flex items-center justify-center">
+                                <div class="bg-white p-2 rounded-2xl shadow-xl shadow-base-300/10 border border-base-300 flex items-center justify-center">
                                     <Image src="/card/qr.svg" width={220} height={220} class="aspect-square object-contain" alt="Scan this QR code to visit my professional landing page" />
                                 </div>
 
                                 <!-- Action Bar: Copy URL & Download -->
                                 <div class="join w-full max-w-xs justify-center">
-                                    <input readonly aria-readonly="true" type="text" value={SYSTEM.notable.card_utm}
+                                    <input name="card_link_modal" readonly aria-readonly="true" type="text" value={SYSTEM.notable.card_utm}
                                         class="input input-primary input-sm shadow-none select-none rounded-l-lg font-mono text-xs" />
                                     <button id="card_button_copy" onclick={`navigator.clipboard.writeText("${SYSTEM.notable.card_utm}")`}
                                         class="btn btn-sm btn-primary shadow-none rounded-none text-xs font-semibold text-primary-content">
@@ -102,21 +102,21 @@ const lang = METADATA.defaultLanguage;
                         <!-- Header Section with Availability Badge -->
                         <div class="flex flex-col text-center items-center w-full gap-2 mt-4">
                             <h1 class="text-4xl font-bold tracking-tight">{PERSONAL.name}</h1>
-                            <p class="text-md font-medium text-primary">Electrical & Software Engineer</p>
+                            <h2 class="text-md font-medium text-primary">Electrical & Software Engineer</h2>
                             <div class="flex flex-wrap justify-center gap-2 sm:gap-4">
-                                <span class="text-sm opacity-60 flex flex-row gap-2 ">
+                                <span class="flex flex-row gap-2 opacity-60">
                                     <TestIcon name="earth" />
-                                    The Americas
+                                    <p class="text-sm">The Americas</p>
                                 </span>
-                                <span class="text-sm opacity-60 flex flex-row gap-2 ">
-                                    <TestIcon name="industry" size="sm" />
-                                    <a class="link link-primary" href={LINKS.organizations.sidimaqsa}>
+                                <span class="flex flex-row gap-2 ">
+                                    <TestIcon name="industry" classname="opacity-60" />
+                                    <a class="link link-primary text-sm" href={LINKS.organizations.sidimaqsa}>
                                         SIDIMAQSA
                                     </a>
                                 </span>
-                                <span class="text-sm opacity-60 flex flex-row gap-2 ">
-                                    <TestIcon name="graduation" size="sm" />
-                                    <a class="link link-secondary" href={LINKS.organizations.hu.main}>
+                                <span class="flex flex-row gap-2 ">
+                                    <TestIcon name="graduation" classname="opacity-60" />
+                                    <a class="link link-secondary text-sm" href={LINKS.organizations.hu.main}>
                                         Harding University
                                     </a>
                                 </span>
@@ -151,7 +151,7 @@ const lang = METADATA.defaultLanguage;
                                 <h3 class="text-xs uppercase tracking-wider opacity-50 font-bold">Specialties</h3>
                                 <div class="flex flex-wrap gap-1.5">
                                     {["Embedded Systems", "PCB Design", "Industrial Automation", "Software Engineering", "Web/Mobile/Desktop App Developer"].map(entry => (
-                                        <span class="px-3 py-1 text-xs bg-base-100 rounded-lg font-mono">{entry}</span>
+                                        <span class="px-3 py-1 text-xs bg-base-100 opacity-50 rounded-lg border border-gray-400 font-mono tracking-wide">{entry}</span>
                                     ))}
                                 </div>
                             </div>
@@ -169,7 +169,7 @@ const lang = METADATA.defaultLanguage;
 
                         <!-- Social Media Row -->
                         <div class="self-center w-full">
-                            <div class="scale-90"><SocialButtons variant="social" /></div>
+                            <div class="scale-90 text-gray-600"><SocialButtons variant="social" /></div>
                         </div>
 
                         <!-- Primary Actions Area -->

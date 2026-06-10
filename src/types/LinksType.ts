@@ -1,6 +1,6 @@
 export type SystemLinksType = Record<("domain" | "pfp" | "logo"), string> &
     { notable: Record<("card_canon" | "card_utm"), string> } &
-    { API: Record<("google_analytics" | "resend" | "webfinger" | "webmention"), string>; }
+    { API: Record<("google_analytics" | "wallet_apple" | "wallet_google" | "resend" | "webfinger" | "webmention"), string>; }
 
 export type GeneralLinksType = {
     organizations: Record<(
