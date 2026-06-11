@@ -662,6 +662,13 @@ export const ICONS = {
         desc: "Sharing Icon used to represent sharing content.",
         size: "md"
     },
+    google_wallet: {
+        name: "google_wallet",
+        group: "gui",
+        title: "Google Wallet Icon",
+        desc: "Google Wallet Iconified Logo used to offer GW Local Saving.",
+        size: "sm"
+    },
 
     // Success & Failure icons for alerts
     spinner: {

@@ -5,8 +5,9 @@ import { PERSONAL } from "@config/personal";
 const successToast = document.getElementById("card_toast_success");
 const copyButton = document.getElementById("card_button_copy");
 const shareButton = document.getElementById("card_button_share");
+const gwButton = document.getElementById("gw_button");
 
-if (!successToast || !copyButton || !shareButton) throw new Error("Missing elements on the DOM");
+if (!successToast || !copyButton || !shareButton || !gwButton) throw new Error("Missing elements on the DOM");
 
 // Toast showing function on click
 copyButton.addEventListener("click", async () => {
@@ -28,4 +29,24 @@ shareButton.addEventListener("click", async () => {
         } catch (err)
             { if (err instanceof Error && err.name !== "AbortError") console.error("Error sharing:", err); }
     } else copyButton.click();  // Fallback - Trigger copy button
+});
+
+// Add to Google Wallet Button
+gwButton.addEventListener("click", async () => {
+    try {
+        const response = await fetch(SYSTEM.API.wallet_google,
+            {
+                method: "POST",
+                headers: { "Content-Type": "application/json" }
+            }
+        );
+
+        const data = await response.json();
+        if (!data.success) throw new Error(data.body);
+        window.location.href = data.body;
+    }
+    catch (error) {
+        console.error(error);
+        alert("Unable to create Google Wallet pass");
+    }
 });

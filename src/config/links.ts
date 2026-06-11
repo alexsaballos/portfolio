@@ -12,7 +12,7 @@ export const SYSTEM = {
         google_analytics: "https://www.googletagmanager.com",
         resend: "https://api.alexsaballos.dev/endpoints/resend/contact.php",
         wallet_apple: "https://api.alexsaballos.dev/endpoints/wallet/apple/",
-        wallet_google: "https://api.alexsaballos.dev/endpoints/wallet/google/",
+        wallet_google: "https://api.alexsaballos.dev/endpoints/wallet/google/gwallet.php",
         webfinger: "http://webfinger.net",
         webmention: "https://webmention.io/alexsaballos.dev_en_/webmention"
     }
