@@ -1,13 +1,15 @@
-// Reads injected url redirection from "/src/pages/[slug].astro"
-let seconds: number = 3;
+// Element selections: injected url redirection from "/src/pages/[slug].astro" & countdown text
 const url = document.getElementById("countdownVanityContainer")!.dataset.url as string;
-if (!url) throw new Error("Missing redirect URL for countdown vanity.");
+const countdownText = document.getElementById("countdownVanitySpan");
+
+if (!url || !countdownText) throw new Error("Missing elements on the DOM");
 
 // Wait 2s for AOS to settle & start 1s counting interval
+let seconds = 3;
 setTimeout(() => {
     const interval = setInterval(() => {
         seconds--;
-        document.getElementById("countdownVanitySpan")!.textContent = `${seconds}`;
+        countdownText.textContent = `${seconds}`;
         
         if (seconds <= 0) {
             clearInterval(interval);

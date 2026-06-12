@@ -3,6 +3,7 @@ import { METADATA } from "@config/meta";
 import { VANITY } from "@config/routes/vanity";
 import { LANGUAGES } from "@config/languages";
 import { LOCALIZED_PAGES, UNLOCALIZED_PAGES } from "@config/routes/pages";
+
 import type { UnlocalizedPageType } from "@typing/PagesType";
 import type { AdmittedLanguagesType } from "@typing/LocalesType";
 
@@ -17,11 +18,11 @@ export async function GET() {
     ${Object.values(UNLOCALIZED_PAGES).flatMap(page => {
         // Unlocalized Canonical Pages
         const LocalizedCanonicalPage = (entry: UnlocalizedPageType): string =>
-            (entry.key === "home") ? `${METADATA.url}/` : SEO.canonical.unloc(page.key);
+            (entry.key === "home") ? `${METADATA.url}/` : SEO.canonical.unloc(entry.key);
 
         return (
             `<url>
-                <loc>${LocalizedCanonicalPage(page)}</loc>
+                <loc>${LocalizedCanonicalPage(page as UnlocalizedPageType)}</loc>
                 <lastmod>${currentDate}</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>${page.metadata.sitemap_priority}</priority>

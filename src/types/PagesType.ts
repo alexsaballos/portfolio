@@ -38,6 +38,6 @@ export type NavigationPageType = BasePageType & { key: NavigationPageNamesType }
 
 // List of all pages directories based on SSOT
 export type DirectoryPagesListType = Record<DirectoryPageNamesType, DirectoryPageType>;
-export type LocalizedPagesListType = Record<LocalizedPageNamesType, LocalizedPageType>;
-export type UnlocalizedPagesListType = Record<UnlocalizedPageNamesType, UnlocalizedPageType>;
-export type NavigationPagesListType = Record<NavigationPageNamesType, NavigationPageType>;
+export type LocalizedPagesListType = Partial<Record<LocalizedPageNamesType, LocalizedPageType>>;
+export type UnlocalizedPagesListType = Partial<Record<UnlocalizedPageNamesType, UnlocalizedPageType>>;
+export type NavigationPagesListType = Partial<Record<NavigationPageNamesType, NavigationPageType>>;

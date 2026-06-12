@@ -2,7 +2,7 @@ import { SEO } from "@config/routes/routing";
 import { PICTURES } from "@config/assets";
 import { PERSONAL } from "@config/personal";
 
-import type { DirectoryPagesListType, LocalizedPageType, NavigationPageType, UnlocalizedPageType } from "@typing/PagesType";
+import type { DirectoryPagesListType, LocalizedPagesListType, NavigationPagesListType, UnlocalizedPagesListType } from "@typing/PagesType";
 
 export const PAGES = {
 	home: {
@@ -168,12 +168,12 @@ export const PAGES = {
 // Page categories based on localization and navigation
 export const LOCALIZED_PAGES = Object.fromEntries(
     Object.entries(PAGES).filter(([_, page]) => (page.metadata.categories as string[]).includes("localized")
-));
+)) as UnlocalizedPagesListType;
 
 export const UNLOCALIZED_PAGES = Object.fromEntries(
     Object.entries(PAGES).filter(([_, page]) => (page.metadata.categories as string[]).includes("unlocalized")
-));
+)) as LocalizedPagesListType;
 
 export const NAVIGATION_PAGES = Object.fromEntries(
     Object.entries(PAGES).filter(([_, page]) => (page.metadata.categories as string[]).includes("navigation")
-));
+)) as NavigationPagesListType;

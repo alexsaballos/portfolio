@@ -17,6 +17,6 @@ const page = Astro.params.page as NavigationPageNamesType;
 <PageLayout page={page} lang={METADATA.defaultLanguage}>
     <Navbar />
     <div class="flex-1 flex items-center justify-center">
-        <LanguageGate page={NAVIGATION_PAGES[page].metadata.slug} />
+        <LanguageGate page={NAVIGATION_PAGES[page]!.metadata.slug} />
     </div>
 </PageLayout>
