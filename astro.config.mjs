@@ -22,20 +22,27 @@ export default defineConfig({
                 maximumFileSizeToCacheInBytes: 6000000,
                 globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,webm,woff,woff2}'],
                 globIgnores: [
-                    '**/screenshots/**/*',
+                    '**/card/**/*',
                     '**/profiles/**/*',
-                    '**/errors/**/*'
+                    '**/errors/**/*',
+                    '**/screenshots/**/*'
                 ],
                 navigateFallbackDenylist: [
+                    // Domain root
                     /^\/$/,
+                    /^\/.well-known\//,
+
+                    // Localized folders
                     /^\/de\//,
                     /^\/en\//,
                     /^\/es\//,
 
-                    /^\/.well-known\//,
-                    /^\/errors\//,
+                    // Unlocalized folders
+                    /^\/card\//,
                     /^\/profiles\//,
+                    /^\/errors\//,
 
+                    // Root files
                     /^\/manifest\.webmanifest$/,
                     /^\/sitemap\.xml$/,
                     /^\/robots\.txt$/,
