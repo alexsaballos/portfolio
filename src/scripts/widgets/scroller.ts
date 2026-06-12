@@ -1,8 +1,10 @@
+// Element selections: topbutton, bottombutton, and controller
 const topBtn = document.getElementById("scrollTop");
 const bottomBtn = document.getElementById("scrollBottom");
 const controls = document.getElementById("scrollControls");
 
-if (!topBtn || !bottomBtn || !controls) throw new Error("Missing elements on the DOM");
+if (!topBtn || !bottomBtn || !controls)
+    throw new Error("Missing elements on the DOM");
 
 const SCROLL_THRESHOLD:number = 500;
 

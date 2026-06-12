@@ -1,7 +1,7 @@
 import { FAVICONS } from "@config/assets";
 import { METADATA } from "@config/meta";
-import { PAGES } from "@config/pages";
-import { ROUTE } from "@config/routing";
+import { PAGES } from "@config/routes/pages";
+import { ROUTE } from "@config/routes/routing";
 
 export async function GET() {
     const manifest:string = JSON.stringify(

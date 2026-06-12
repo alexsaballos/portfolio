@@ -18,12 +18,12 @@ viewers.forEach(async (viewer) => {
 
         const page = await pdf.getPage(pageNum);
 
-        // 1. Dynamic Resolution scaling based on parent container width
+        // Dynamic Resolution scaling based on parent container width
         const unscaledViewport = page.getViewport({ scale: 1.0 });
         const scale = targetWidth / unscaledViewport.width;
         const viewport = page.getViewport({ scale: scale });
 
-        // 2. High-DPI / Retina Display Sharpness Fix
+        // High-DPI / Retina Display Sharpness
         const pixelRatio = window.devicePixelRatio || 1;
         const canvas = document.createElement("canvas");
         const context = canvas.getContext("2d");

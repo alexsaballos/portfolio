@@ -1,8 +1,8 @@
 ---
-import { HONOR_LINKS, HONORS_KEYS } from "@config/honors";
+import { HONOR_LINKS, HONORS_KEYS } from "@config/pages/honors";
 
 import Title from "@text/Title.astro";
-import TestIcon from "@ui/TestIcon.astro";
+import CommonIcon from "@ui/CommonIcon.astro";
 import Image from "astro/components/Image.astro";
 import Resources from "@ui/badges/Resources.astro";
 
@@ -60,7 +60,7 @@ function resolveHonorYear(
 									<p class="text-sm text-base-content/70 group-open:hidden">{award.summary}</p>
 									<span class="flex flex-row gap-2 text-sm text-secondary my-1 group-open:hidden hover:underline">
 										{t.texts.description}
-										<TestIcon name="angles_down" classname="mt-1" />
+										<CommonIcon name="angles_down" classname="mt-1" />
 									</span>
 								</summary>
 								<p class="text-sm text-base-content/70 mt-2">{award.details}</p>

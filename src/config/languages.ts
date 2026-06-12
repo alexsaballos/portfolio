@@ -1,5 +1,5 @@
 import { FLAGS } from "@config/assets";
-import { ROUTE } from "@config/routing";
+import { ROUTE } from "@config/routes/routing";
 import type { LanguagesType } from "@typing/LocalesType";
 
 export const LANGUAGES = {

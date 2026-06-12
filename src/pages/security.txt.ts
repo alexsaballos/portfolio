@@ -1,6 +1,6 @@
 import { LANGUAGES } from "@config/languages";
 import { SYSTEM } from "@config/links";
-import { SEO } from "@config/routing";
+import { SEO } from "@config/routes/routing";
 
 export async function GET() {
     const expiryDate = new Date();

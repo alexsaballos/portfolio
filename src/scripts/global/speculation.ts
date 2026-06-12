@@ -1,5 +1,5 @@
-import { PAGES } from "@config/pages";
-import { VANITY } from "@config/vanity";
+import { PAGES } from "@config/routes/pages";
+import { VANITY } from "@config/routes/vanity";
 
 const matches_href = (): string[] => Object.values(PAGES).map(page => 
     (page.key === "home") ? "/*/?" : `/*/${page.key}/`);

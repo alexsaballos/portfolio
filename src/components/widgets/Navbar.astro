@@ -1,11 +1,11 @@
 ---
-import { ROUTE } from "@config/routing";
-import { NAVIGATION_PAGES } from "@config/pages";
+import { ROUTE } from "@config/routes/routing";
+import { NAVIGATION_PAGES } from "@config/routes/pages";
 
 import IconHome from "@buttons/IconHome.astro";
 import LanguageToggler from "@togglers/LanguageToggler.astro";
 import ThemeToggler from "@togglers/ThemeToggler.astro";
-import TestIcon from "@ui/TestIcon.astro";
+import CommonIcon from "@ui/CommonIcon.astro";
 
 const { t, l } = Astro.locals;
 ---
@@ -16,7 +16,7 @@ const { t, l } = Astro.locals;
         <div class={"navbar bg-transparent w-full"}>
             <div class="flex-none md:hidden">
                 <label for="nav-drawer" class="btn btn-square btn-ghost ml-5" aria-label="Open navigation menu">
-                    <TestIcon name="hamburger_open" />
+                    <CommonIcon name="hamburger_open" />
                 </label>
             </div>
             <div class="navbar-start ml-5 hidden md:flex">

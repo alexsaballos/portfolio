@@ -1,10 +1,11 @@
-import { SEO } from "@config/routing";
-import { PAGES } from "@config/pages";
-import { SCHEMAORG_PERSON } from "@config/entities/person";
-import { SCHEMAORG_PROFILEPAGE } from "./profile_page";
-import { SCHEMAORG_WEBSITE } from "@config/entities/website";
-import { SCHEMAORG_SIDIMAQSA } from "@config/entities/sidimaqsa";
-import { SCHEMAORG_OCCUPATIONALEXP } from "./occupational_experience";
+import { SEO } from "@config/routes/routing";
+import { PAGES } from "@config/routes/pages";
+
+import { SCHEMAORG_PERSON } from "@config/schemaorg/person";
+import { SCHEMAORG_PROFILEPAGE } from "@config/schemaorg/profile_page";
+import { SCHEMAORG_WEBSITE } from "@config/schemaorg/website";
+import { SCHEMAORG_SIDIMAQSA } from "@config/schemaorg/sidimaqsa";
+import { SCHEMAORG_OCCUPATIONALEXP } from "@config/schemaorg/occupational_experience";
 
 import type { AdmittedLanguagesType } from "@typing/LocalesType";
 import type { DirectoryPageNamesType } from "@typing/PagesType";

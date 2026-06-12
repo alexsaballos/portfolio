@@ -2,20 +2,21 @@ import { METADATA } from "@config/meta";
 import { PERSONAL } from "@config/personal";
 import type { VanityNamesType } from "@typing/VanityType";
 import type { AdmittedLanguagesType } from "@typing/LocalesType";
-import type { DirectoryPageSlugsType } from "@typing/PagesType";
+import type { DirectoryPageSlugsType, UnlocalizedPageNamesType } from "@typing/PagesType";
 
 // SEO Metadata Generator for pages.ts SSOT & Dynamic canonical localized URL Generator
+const root = METADATA.officialRoot;
+
 export const SEO = {
     title: (pageTitle?: string): string => pageTitle ? (`${pageTitle} | ${PERSONAL.name}`) : PERSONAL.name,
     description: (desc: string): string => desc,
     canonical: {
-        home: (locale: AdmittedLanguagesType):string =>
-              (`${METADATA.officialRoot}/${locale}/`),
+        home: (locale: AdmittedLanguagesType):string => (`${root}/${locale}/`),
         page: (locale: AdmittedLanguagesType, slug?: DirectoryPageSlugsType): string => slug
-            ? (`${METADATA.officialRoot}/${locale}/${slug}/`)
-            : (`${METADATA.officialRoot}/${locale}/`),
-        vanity: (profile: VanityNamesType): string =>
-              `${METADATA.officialRoot}/${profile}/`
+            ? (`${root}/${locale}/${slug}/`)
+            : (`${root}/${locale}/`),
+        unloc: (slug: UnlocalizedPageNamesType): string => (`${root}/${slug}/`),
+        vanity: (profile: VanityNamesType): string => (`${root}/${profile}/`)
     }
 } as const;
 

@@ -1,6 +1,6 @@
 ---
 import Title from "@text/Title.astro";
-import TestIcon from "@ui/TestIcon.astro";
+import CommonIcon from "@ui/CommonIcon.astro";
 import ContactStatus from "@sections/contact/ContactStatus.astro";
 import SocialButtons from "@buttons/SocialButtons.astro";
 
@@ -53,7 +53,7 @@ const subjectOptions = {
 
                     <!-- Name input on contact form -->
                     <label data-aos="fade-in" data-aos-delay="300" for="contactFormName" class="label">
-                        <TestIcon name="id_card" />
+                        <CommonIcon name="id_card" />
                         {t.name.label}
                     </label>
                     <input data-aos="fade-in" data-aos-delay="300" id="contactFormName" name="name" required type="text"
@@ -61,7 +61,7 @@ const subjectOptions = {
 
                     <!-- Email input on contact form -->
                     <label data-aos="fade-in" data-aos-delay="600" for="contactFormEmail" class="label">
-                        <TestIcon name="at" />
+                        <CommonIcon name="at" />
                         {t.email.label}
                     </label>
                     <input data-aos="fade-in" data-aos-delay="600" id="contactFormEmail" name="email" required type="email"
@@ -69,7 +69,7 @@ const subjectOptions = {
 
                     <!-- Subject selection on contact form -->
                     <label data-aos="fade-in" data-aos-delay="900" for="contactFormSubject" class="label">
-                        <TestIcon name="list" />
+                        <CommonIcon name="list" />
                         {t.subject.label}
                     </label>
                     <select data-aos="fade-in" data-aos-delay="900" id="contactFormSubject" name="subject" required class="select mb-4">
@@ -81,7 +81,7 @@ const subjectOptions = {
 
                     <!-- Message input on contact form -->
                     <label data-aos="fade-in" data-aos-delay="1200" for="contactFormMessage" class="label">
-                        <TestIcon name="message" />
+                        <CommonIcon name="message" />
                         {t.message.label}
                     </label>
                     <textarea data-aos="fade-in" data-aos-delay="1200" id="contactFormMessage" required name="message" class="textarea h-48 sm:w-140 lg:w-160"
@@ -90,7 +90,7 @@ const subjectOptions = {
                     <!-- Submission button on contact form -->
                     <button data-aos="fade-in" data-aos-delay="1200" type="submit" aria-label={t.send}
                         class="btn btn-primary rounded-4xl place-self-center shadow-none transition-transform duration-300 ease-in-out hover:btn-secondary hover:font-bold hover:scale-105 w-45 mt-4">
-                        <TestIcon name="paper_plane" />
+                        <CommonIcon name="paper_plane" />
                         {t.send}
                     </button>
                 </fieldset>
@@ -107,4 +107,4 @@ const subjectOptions = {
 </section>
 
 <!-- Client-side JS that controls contact-info email sending responses thorugh toast alerts -->
-<script src="@scripts/contact_toast.ts"></script>
+<script src="@scripts/pages/contact.ts"></script>

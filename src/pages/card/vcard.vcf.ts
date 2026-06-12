@@ -1,4 +1,4 @@
-import { SEO } from "@config/routing";
+import { SEO } from "@config/routes/routing";
 import { METADATA } from "@config/meta";
 import { PERSONAL } from "@config/personal";
 import { LANGUAGES } from "@config/languages";

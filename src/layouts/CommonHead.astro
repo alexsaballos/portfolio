@@ -35,17 +35,17 @@
 import "aos/dist/aos.css";
 import '@styles/global.css';
 
-import { SEO } from "@config/routing";
-import { PAGES } from "@config/pages";
-import { VANITY } from "@config/vanity";
-import { ERRORS } from "@config/errors";
+import { SEO } from "@config/routes/routing";
+import { PAGES } from "@config/routes/pages";
+import { VANITY } from "@config/routes/vanity";
+import { ERRORS } from "@config/routes/errors";
 import { METADATA } from "@config/meta";
 import { FAVICONS } from "@config/assets";
 import { PERSONAL } from "@config/personal";
 import { LANGUAGES } from "@config/languages";
 import { LINKS, SYSTEM } from "@config/links";
-import { SPECULATION } from "@scripts/speculation";
-import { SCHEMAORG_GRAPH } from "@config/entities/graph";
+import { SCHEMAORG_GRAPH } from "@config/schemaorg/graph";
+import { SPECULATION } from "@scripts/global/speculation";
 
 import type { ErrorsCodeType } from "@typing/ErrorsType";
 import type { VanityNamesType } from "@typing/VanityType";
@@ -53,7 +53,7 @@ import type { DirectoryPageNamesType } from "@typing/PagesType";
 import type { AdmittedLanguagesType } from "@typing/LocalesType";
 
 const { type, lang, page, profile, code } = Astro.props as {
-    type: "standard" | "vanity" | "error";
+    type: "standard" | "card" | "vanity" | "error";
     lang: AdmittedLanguagesType;
     page?: DirectoryPageNamesType;
     profile?: VanityNamesType;
@@ -62,13 +62,18 @@ const { type, lang, page, profile, code } = Astro.props as {
 
 const getCurrentSEO = () => {
     switch (type) {
-        case "standard":
-            return {
-                title: PAGES[page!].SEO.title,
-                description: PAGES[page!].SEO.description,
-                slug: PAGES[page!].metadata.slug,
-                canonical: SEO.canonical.page(lang!, PAGES[page!].metadata.slug)
-            };
+        case "standard": return {
+            title: PAGES[page!].SEO.title,
+            description: PAGES[page!].SEO.description,
+            slug: PAGES[page!].metadata.slug,
+            canonical: SEO.canonical.page(lang!, PAGES[page!].metadata.slug)
+        };
+        case "card": return {
+            title: PAGES["card"].SEO.title,
+            description: PAGES["card"].SEO.description,
+            slug: PAGES["card"].metadata.slug,
+            canonical: SEO.canonical.page(lang!, PAGES["card"].metadata.slug)
+        };
         case "vanity": return VANITY[profile!].SEO;
         case "error": return (ERRORS[code!] ?? ERRORS[500]);
     }
@@ -198,5 +203,4 @@ const currentLang = lang ?? METADATA.defaultLanguage;
     <!-- Google tag (gtag.js) & Global script initializer -->
     <script is:inline async src={METADATA.api_keys.google_analytics.stream_url}></script>
     <script src="@scripts/global.ts"></script>
-    {isStandard && <script src="@scripts/scroller.ts"></script>}
 </head>

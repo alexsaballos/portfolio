@@ -1,6 +1,6 @@
 import { SYSTEM } from "@config/links";
 
-// Element selections for the form itself, the toastRoot, and status toasts
+// Element selections: contact form, toastRoot, and status toasts
 const form = document.querySelector("form");
 const contactForm = document.getElementById("contact_form");
 const successScreen = document.getElementById("success_screen");
@@ -11,13 +11,14 @@ const errorToast = document.getElementById("toast_error");
 if (!form || !contactForm || !successScreen || !toastRoot || !loadingToast || !errorToast)
     throw new Error("Missing elements on the DOM");
 
-// Toast showing function
+// Error toast showing function
 const showErrorStatus = () => {
     hideLoadingToast();
     errorToast.classList.remove("hidden");
     setTimeout(() => errorToast.classList.add("hidden"), 4000);
 };
 
+// Sucess screen showing function
 const showSuccessScreen = () => {
     hideLoadingToast();
     contactForm.classList.add("hidden");
@@ -28,6 +29,7 @@ const showSuccessScreen = () => {
 const showLoadingToast = () => loadingToast.classList.remove("hidden");
 const hideLoadingToast = () => loadingToast.classList.add("hidden");
 
+// Form submission detection
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 

@@ -1,13 +1,13 @@
 ---
-import { ROUTE } from "@config/routing";
+import { ROUTE } from "@config/routes/routing";
 import { PERSONAL } from "@config/personal";
-import { NAVIGATION_PAGES } from "@config/pages";
+import { NAVIGATION_PAGES } from "@config/routes/pages";
 
 import SocialButtons from "@buttons/SocialButtons.astro";
 import IconHome from "@buttons/IconHome.astro";
 import LanguageToggler from "@togglers/LanguageToggler.astro";
 import ThemeToggler from "@togglers/ThemeToggler.astro";
-import TestIcon from "@ui/TestIcon.astro";
+import CommonIcon from "@ui/CommonIcon.astro";
 
 const { t, l } = Astro.locals;
 ---
@@ -38,7 +38,7 @@ const { t, l } = Astro.locals;
     <!-- Copyright Notice Body -->
     <div class="px-1 bg-transparent items-center justify-around">
         <div class="flex flex-row items-center justify-center gap-2">
-            <TestIcon name="devices" classname="text-primary" />
+            <CommonIcon name="devices" classname="text-primary" />
             <p class="align-middle text-base-content text-xs">
                 Copyright &copy; {new Date().getFullYear()} - {t.footer.copyright}
             </p>

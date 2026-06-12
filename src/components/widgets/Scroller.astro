@@ -1,5 +1,5 @@
 ---
-import TestIcon from "@ui/TestIcon.astro";
+import CommonIcon from "@ui/CommonIcon.astro";
 
 const ScrollButtons = {
     top: {
@@ -20,7 +20,8 @@ const ScrollButtons = {
         {Object.values(ScrollButtons).map(button =>
             <button id={button.id} aria-label={button.aria_label}
                 class="shadow-none border-none btn btn-square bg-secondary rounded-lg hover:scale-110 transition-transform duration-300 ring-4 ring-base-200">
-                    <TestIcon name={button.icon} classname="text-white" />
+                    <CommonIcon name={button.icon} classname="text-white" />
             </button>
         )}
 </div>
+<script src="@scripts/widgets/scroller.ts"></script>
