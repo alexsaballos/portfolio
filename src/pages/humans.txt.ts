@@ -1,4 +1,4 @@
-import { LINKS } from "@config/links";
+import { LINKS } from "@config/routes/links";
 import { METADATA } from "@config/meta";
 import { PERSONAL } from "@config/personal";
 import { LANGUAGES } from "@config/languages";

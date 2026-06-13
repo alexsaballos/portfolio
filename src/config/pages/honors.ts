@@ -1,4 +1,4 @@
-import { LINKS } from "@config/links";
+import { LINKS } from "@config/routes/links";
 import { PICTURES } from "@config/assets";
 import type { HonorsOrgListType, HonorsSSOT } from "@typing/HonorsType";
 

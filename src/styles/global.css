@@ -16,6 +16,12 @@
 	--color-accent: #68B531;
 }
 
+@layer utilities {
+	.hover-animate {
+		@apply shadow-none transition-transform duration-500 ease-in-out hover:scale-105;
+	}
+}
+
 @media print {
     #scrollTop #scrollBottom #scrollControls { display: none !important; }
 }

@@ -1,4 +1,4 @@
-import { SYSTEM } from "@config/links";
+import { SYSTEM } from "@config/routes/links";
 
 export const SCHEMAORG_PROFILEPAGE = {
     "@type": "ProfilePage",

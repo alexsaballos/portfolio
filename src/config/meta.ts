@@ -1,4 +1,4 @@
-import { SYSTEM } from "@config/links";
+import { SYSTEM } from "@config/routes/links";
 import { PERSONAL } from "@config/personal";
 import { FAVICONS, PICTURES, SCREENSHOTS } from "@config/assets";
 

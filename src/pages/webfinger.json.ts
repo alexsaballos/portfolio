@@ -1,4 +1,4 @@
-import { LINKS, SYSTEM } from "@config/links"
+import { LINKS, SYSTEM } from "@config/routes/links"
 
 export async function GET() {
     const body = {

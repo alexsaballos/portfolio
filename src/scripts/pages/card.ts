@@ -1,4 +1,4 @@
-import { SYSTEM } from "@config/links";
+import { SYSTEM } from "@config/routes/links";
 import { PERSONAL } from "@config/personal";
 
 // Element selections: success toast, copy button, and share button

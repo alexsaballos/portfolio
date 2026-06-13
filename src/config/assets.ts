@@ -1,4 +1,4 @@
-import { SYSTEM } from "@config/links";
+import { SYSTEM } from "@config/routes/links";
 import type {
     VideosListType, PicturesListType, IconsListType, TechnologiesListType, FlagsListType, FaviconListType, PathsListType,
     ScreenshotsListType

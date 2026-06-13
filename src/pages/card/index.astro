@@ -2,7 +2,7 @@
 import { ROUTE } from "@config/routes/routing";
 import { METADATA } from "@config/meta";
 import { PERSONAL } from "@config/personal";
-import { LINKS, SYSTEM } from "@config/links"
+import { LINKS, SYSTEM } from "@config/routes/links"
 import { LANGUAGES } from "@config/languages";
 
 import Image from "astro/components/Image.astro";
@@ -110,13 +110,13 @@ const lang = METADATA.defaultLanguage;
                                 </span>
                                 <span class="flex flex-row gap-2 ">
                                     <CommonIcon name="industry" classname="opacity-60" />
-                                    <a class="link link-primary text-sm" href={LINKS.organizations.sidimaqsa}>
+                                    <a class="link link-primary text-sm focus-visible:rounded-sm" href={LINKS.organizations.sidimaqsa}>
                                         SIDIMAQSA
                                     </a>
                                 </span>
                                 <span class="flex flex-row gap-2 ">
                                     <CommonIcon name="graduation" classname="opacity-60" />
-                                    <a class="link link-secondary text-sm" href={LINKS.organizations.hu.main}>
+                                    <a class="link link-secondary text-sm focus-visible:rounded-sm" href={LINKS.organizations.hu.main}>
                                         Harding University
                                     </a>
                                 </span>
@@ -174,17 +174,25 @@ const lang = METADATA.defaultLanguage;
 
                         <!-- Primary Actions Area -->
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full border-t border-base-100 pt-6">
-                            <a href={ROUTE.home(lang)} class="btn btn-primary rounded-2xl gap-2 font-medium shadow-none">
-                                <CommonIcon name="globe" />Website
+                            <a href={ROUTE.home(lang)} aria-label="Website"
+                                class="btn btn-primary hover-animate rounded-2xl gap-2 font-medium">
+                                <CommonIcon name="globe" />
+                                <span>Website</span>
                             </a>
-                            <a download href={METADATA.vcard_vcf} class="btn btn-secondary rounded-2xl gap-2 font-medium shadow-none">
-                                <CommonIcon name="download" />Save vCard
+                            <a download href={METADATA.vcard_vcf} aria-label="Save vCard"
+                                class="btn btn-secondary hover-animate rounded-2xl gap-2 font-medium">
+                                <CommonIcon name="download" />
+                                <span>Save vCard</span>
                             </a>
-                            <a href={ROUTE.page(lang, "contact")} class="btn btn-success btn-outline rounded-2xl gap-2 font-medium shadow-none">
-                                <CommonIcon name="paper_plane" />Message
+                            <a href={ROUTE.page(lang, "contact")} aria-label="Message"
+                                class="btn btn-success btn-outline hover-animate rounded-2xl gap-2 font-medium">
+                                <CommonIcon name="paper_plane" />
+                                <span>Message</span>
                             </a>
-                            <button id="gw_button" class="btn btn-error btn-outline rounded-2xl gap-2 font-medium shadow-none sm:col-span-full">
-                                <CommonIcon name="google_wallet" />Add to Google Wallet
+                            <button id="gw_button" aria-label="Add to Google Wallet"
+                                class="btn btn-error btn-outline hover-animate rounded-2xl gap-2 font-medium sm:col-span-full">
+                                <CommonIcon name="google_wallet" />
+                                <span>Add to Google Wallet</span>
                             </button>
                         </div>
 

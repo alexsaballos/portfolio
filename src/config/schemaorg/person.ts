@@ -1,6 +1,6 @@
 import { PERSONAL } from "@config/personal";
 import { LANGUAGES } from "@config/languages";
-import { SYSTEM, LINKS } from "@config/links";
+import { SYSTEM, LINKS } from "@config/routes/links";
 
 // Person Entity - Alexander Saballos - Schema.org Structured Data Identity Linking
 export const SCHEMAORG_PERSON = {

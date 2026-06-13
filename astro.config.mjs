@@ -12,7 +12,7 @@ export default defineConfig({
     output: 'static',
     outDir: 'dist',
     integrations: [
-        icon(),
+        icon({ iconDir: 'src/assets/icons' }),
         postBuildCleaner(),
         AstroPWA({
             registerType: 'autoUpdate',

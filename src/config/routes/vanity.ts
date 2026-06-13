@@ -1,5 +1,5 @@
 import { SEO } from "@config/routes/routing";
-import { LINKS } from "@config/links";
+import { LINKS } from "@config/routes/links";
 import { PERSONAL } from "@config/personal";
 import type { VanityListType, VanityEntryGroupType } from "@typing/VanityType";
 

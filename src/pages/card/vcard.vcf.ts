@@ -2,7 +2,7 @@ import { SEO } from "@config/routes/routing";
 import { METADATA } from "@config/meta";
 import { PERSONAL } from "@config/personal";
 import { LANGUAGES } from "@config/languages";
-import { LINKS, SYSTEM } from "@config/links";
+import { LINKS, SYSTEM } from "@config/routes/links";
 
 export async function GET() {
     const vcard = [

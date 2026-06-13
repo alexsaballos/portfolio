@@ -1,4 +1,4 @@
-import { SYSTEM } from "@config/links";
+import { SYSTEM } from "@config/routes/links";
 
 // Element selections: contact form, toastRoot, and status toasts
 const form = document.querySelector("form");

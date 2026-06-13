@@ -1,5 +1,5 @@
 import { LANGUAGES } from "@config/languages";
-import { SYSTEM } from "@config/links";
+import { SYSTEM } from "@config/routes/links";
 import { SEO } from "@config/routes/routing";
 
 export async function GET() {

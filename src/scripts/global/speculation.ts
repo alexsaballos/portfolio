@@ -2,7 +2,9 @@ import { PAGES } from "@config/routes/pages";
 import { VANITY } from "@config/routes/vanity";
 
 const matches_href = (): string[] => Object.values(PAGES).map(page => 
-    (page.key === "home") ? "/*/?" : `/*/${page.key}/`);
+    (page.key === "home") ? ("/*/?") :
+    (page.key === "card") ? ("/card/") : (`/*/${page.key}/`)
+);
 
 const matches_not = (): string[] => Object.values(VANITY).map(profile =>
     `/${profile.key}/`)

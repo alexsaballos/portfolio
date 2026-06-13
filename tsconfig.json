@@ -14,10 +14,13 @@
 			"@togglers/*": ["./src/components/ui/togglers/*"],
 			"@widgets/*": ["./src/components/widgets/*"],
 
+			// Images - Assets component
+			"@icons/*": ["./src/assets/icons/*"],
+			"@images/*": ["./src/assets/images/*"],
+
 			// Source - Other Items path section
 			"@config/*": ["./src/config/*"],
 			"@hooks/*": ["./src/hooks/*"],
-			"@images/*": ["./src/images/*"],
 			"@layouts/*": ["./src/layouts/*"],
 			"@locales/*": ["./src/locales/*"],
 			"@pages/*": ["./src/pages/*"],
