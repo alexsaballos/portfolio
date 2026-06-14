@@ -1,13 +1,13 @@
-// Global JS import system. Belongs on "/src/layouts/CommonHead.astro"
-import "@scripts/global/theme-load";            // Loads the LocalStorage'd preferred theme from the user's browser
-import "@scripts/global/theme-sync";            // Keeps theme togglers in sync (mobile & desktop)
-import "@scripts/global/google-analytics";      // Google Analytics initializer
-
+// Global JS import system. Belongs ONLY "/src/layouts/CommonHead.astro"
+import "@scripts/global/google-analytics";
 import AOS from "aos";
+
 import { registerSW } from "virtual:pwa-register";
+import { initGlobalThemeLoader } from "@scripts/global/theme-load";
 import { initGoogleAnalytics } from "@scripts/global/google-analytics";
 
-// Manually initialize GA4 & AOS
+// Manually initialize: GlobalThemeLoader, GA4, AstroPWA's Service Worker, AOS
+initGlobalThemeLoader();
 initGoogleAnalytics();
-AOS.init({ duration: 800 });
 registerSW({ immediate: true });
+AOS.init({ duration: 800, disableMutationObserver: true });
