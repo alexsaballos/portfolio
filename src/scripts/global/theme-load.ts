@@ -1,6 +1,6 @@
 export const initGlobalThemeLoader = (): void => {
     try {
-        const theme = localStorage.getItem('theme') ?? 'light';
+        let theme = localStorage.getItem('theme') ?? 'light';
         document.documentElement.setAttribute('data-theme', theme);
     }
     catch(e) { document.documentElement.setAttribute('data-theme', 'light'); }
