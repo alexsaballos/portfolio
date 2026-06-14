@@ -4,9 +4,10 @@ import "@scripts/global/theme-sync";            // Keeps theme togglers in sync 
 import "@scripts/global/google-analytics";      // Google Analytics initializer
 
 import AOS from "aos";
+import { registerSW } from "virtual:pwa-register";
 import { initGoogleAnalytics } from "@scripts/global/google-analytics";
-import { initSW } from "@scripts/global/service_worker_reg";
 
 // Manually initialize GA4 & AOS
-initGoogleAnalytics(); initSW();
+initGoogleAnalytics();
 AOS.init({ duration: 800 });
+registerSW({ immediate: true });
