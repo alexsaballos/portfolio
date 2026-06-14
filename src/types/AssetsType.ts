@@ -1,4 +1,4 @@
-import type { VanityNamesType } from "./VanityType";
+import type { VanityNamesType } from "@typing/VanityType";
 import type { HonorsOrgListType } from "@typing/HonorsType";
 import type { AdmittedCountriesType } from "@typing/LocalesType";
 import type { NavigationPageNamesType } from "@typing/PagesType";
@@ -8,7 +8,7 @@ import type { CertsOrgListType } from "@typing/CertificationsType";
 export type IconsKitNamesType = "flags" | "gui" | "profiles" | "technologies";
 export type IconsCustomNamesType = "certifications" | "devices" | "sun";
 export type IconsNamesType = AdmittedCountriesType | VanityNamesType | TechnologiesNamesType | IconsCustomNamesType
-    | "hourglass" | "microchip" | "briefcase" | "leadership" | "award"
+    | "hourglass" | "projects" | "briefcase" | "leadership" | "award"
     | "envelope_closed" | "envelope_check" | "home" | "hamburger_open" | "hamburger_close"
     | "download" | "fullscreen" | "link" | "angles_down" | "id_card" | "at" | "list" | "message"
     | "paper_plane" | "qr_code" | "earth" | "copy" | "share" | "google_wallet" | "graduation" | "industry" | "spinner"
@@ -39,8 +39,8 @@ export type TechnologiesSubheadersNames = TechnologiesCoreSubheadersType | Techn
 
 export type TechnologiesNamesType =
     | "antdesign" | "arduino" | "astro" | "autocad" | "axios"
-    | "baremetal" | "bootstrap" | "c" | "cpanel" | "cpp" | "csharp" | "css"
-    | "daisyui" | "directus" | "flask" | "html" | "java" | "javascript"
+    | "bootstrap" | "c" | "cpanel" | "cpp" | "csharp" | "css"
+    | "daisyui" | "directus" | "embedded" | "flask" | "html" | "java" | "javascript"
     | "jinja" | "kicad" | "multisim" | "mysql" | "opencv" | "php" | "phpmyadmin"
     | "python" | "raspberrypi" | "react" | "sketchup" | "sqlite"
     | "tailwindcss" | "typescript" | "ultiboard" | "winui";

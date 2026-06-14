@@ -5,6 +5,7 @@
 	"compilerOptions": {
 		"paths": {
 			// Source - Specialized Components path section
+			"@src/*": ["./src/*"],
 			"@sections/*": ["./src/components/sections/*"],
 			"@ui/*": ["./src/components/ui/*"],
 			"@badges/*": ["./src/components/ui/badges/*"],

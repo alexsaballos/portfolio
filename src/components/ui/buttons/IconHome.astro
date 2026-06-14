@@ -5,8 +5,7 @@ import CommonIcon from "@ui/CommonIcon.astro";
 const l = Astro.locals.l;
 ---
 
-<div class="btn btn-ghost btn-square shadow-none transition-transform duration-500 ease-out hover:text-secondary hover:scale-120">
-    <a href={ROUTE.home(l)}>
-        <CommonIcon name="home" />
-    </a>
-</div>
+<a href={ROUTE.home(l)} aria-label="Return to Home Page"
+    class="btn btn-ghost btn-square shadow-none transition-transform duration-500 ease-out hover:text-secondary hover:scale-120">
+    <CommonIcon name="home" />
+</a>

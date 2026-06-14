@@ -1,5 +1,1 @@
-export type PersonalInfoType = {
-    name: string;
-    jobTitle: string;
-    college: string;
-}
+export type PersonalInfoType = Record<("name" | "jobTitle" | "college"), string>;

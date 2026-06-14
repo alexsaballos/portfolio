@@ -29,3 +29,8 @@ export const ROUTE = {
     vanity: (profile: VanityNamesType): string =>
         `/${profile}/`
 } as const;
+
+// Dynamic UTM tag generator for GA4
+export const UTM = {
+    
+}

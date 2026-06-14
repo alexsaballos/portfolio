@@ -272,13 +272,6 @@ export const ICONS = {
         desc: "API Library used in Web Development",
         size: "md"
     },
-    baremetal: {
-        name: "microchip",
-        group: "gui",
-        title: "Microprocessor Icon",
-        desc: "Microprocessor/Microcontroller used in Embedded Systems",
-        size: "md"
-    },
     bootstrap: {
         name: "bootstrap",
         group: "technologies",
@@ -333,6 +326,13 @@ export const ICONS = {
         group: "technologies",
         title: "directus Logo",
         desc: "Administration Panel used in Content Management",
+        size: "md"
+    },
+    embedded: {
+        name: "embedded",
+        group: "technologies",
+        title: "Microprocessor DIP40 Icon",
+        desc: "Microprocessor/Microcontroller in DIP40 used in Embedded Systems",
         size: "md"
     },
     flask: {
@@ -486,8 +486,8 @@ export const ICONS = {
     },
 
     // Porfolio categories icons
-    microchip: {
-        name: "microchip",
+    projects: {
+        name: "projects",
         group: "gui",
         title: "Microprocessor Projects Icon",
         desc: "Microprocessor Symbolizing Electrical Engineering & Software Projects",
@@ -833,22 +833,6 @@ export const TECHNOLOGIES = {
             domains: ["web"]
         }
     },
-    baremetal: {
-        visual: {
-            name: "Bare-Metal Embedded",
-            color: TECHNOLOGIES_COLORS.embedded,
-            icon: "baremetal"
-        },
-        hierarchy: {
-            tier: "core",
-            subheader: "embedded"
-        },
-        metadata: {
-            key: "baremetal",
-            kind: "hardware",
-            domains: ["embedded", "firmware", "robotics", "systems"]
-        }
-    },
     bootstrap: {
         visual: {
             name: "Bootstrap",
@@ -975,6 +959,22 @@ export const TECHNOLOGIES = {
             key: "directus",
             kind: "operating_tool",
             domains: ["backend", "operations"]
+        }
+    },
+    embedded: {
+        visual: {
+            name: "Bare-Metal Embedded",
+            color: TECHNOLOGIES_COLORS.embedded,
+            icon: "embedded"
+        },
+        hierarchy: {
+            tier: "core",
+            subheader: "embedded"
+        },
+        metadata: {
+            key: "embedded",
+            kind: "hardware",
+            domains: ["embedded", "firmware", "robotics", "systems"]
         }
     },
     flask: {

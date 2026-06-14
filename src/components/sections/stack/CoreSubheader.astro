@@ -8,9 +8,9 @@ const subheader = Astro.props.subheader as TechnologiesCoreSubheadersType;
 ---
 
 <div class="flex flex-col gap-2">
-    <h3 class="text-lg font-semibold">
+    <p class="text-lg font-semibold">
         {t.subheaders[subheader]}
-    </h3>
+    </p>
     <div class="flex flex-wrap gap-2 pl-2">
         {Object.values(TECHNOLOGIES)
         .filter((tech) => tech.hierarchy.subheader === subheader)

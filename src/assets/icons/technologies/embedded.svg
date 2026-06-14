@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   fill="#000000"
+   width="640"
+   height="640"
+   viewBox="0 0 640 640"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="embedded.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.73627494"
+     inkscape:cx="326.64428"
+     inkscape:cy="455.67217"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="1071"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     d="M 520,400 V 240 c 0,-22.06 -17.94,-40 -40,-40 H 160 c -22.06001,0 -40,17.94 -40,40 v 160 c 0,22.06001 17.93999,40 40,40 h 320 c 22.06,0 40,-17.93999 40,-40 z M 160,240 h 320 v 160 l -320,0.02 z M 420,140 v 40 h 40 v -40 h -10 v -20 h -20 v 20 z m 40,360 V 460.00001 H 420 V 500 h 10 v 20 h 20 V 500 Z M 340,140 v 40 h 40 V 140 H 369.99999 V 120 H 350 v 20 z m 40,360 V 460.00001 H 340 V 500 h 10 v 20 h 19.99999 V 500 Z M 259.99999,140 v 40 H 300 V 140 H 289.99999 V 120 H 270 v 20 z M 300,500 V 460.00001 H 259.99999 V 500 H 270 v 20 h 19.99999 V 500 Z M 179.99999,140 v 40 H 220 V 140 H 209.99999 V 120 H 190 v 20 z M 220,500 V 460.00001 H 179.99999 V 500 H 190 v 20 h 19.99999 v -20 z"
+     id="path1"
+     style="stroke-width:20" />
+</svg>

@@ -29,7 +29,7 @@ export const PAGES = {
         frontend: {
             short_title: "Projects",
             long_title: "Engineering & Software Projects",
-            icon: "microchip",
+            icon: "projects",
             picture: PICTURES.categories.projects
         },
         metadata: {

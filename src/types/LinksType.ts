@@ -25,3 +25,7 @@ export type GeneralLinksType = {
         parchment: string;
     }
 }
+
+export type utmMedium = "nfc" | "qr" | "gwallet" | "social" | "email" | "resume" | "event";
+export type utmSource = "business_card" | "google_wallet" | "linkedin" | "github" | "handshake" | "orcid" | "gravatar"
+    | "email_signature" | "resume" | "portfolio" | "conference" | "presentation" | "sms" | "whatsapp";
