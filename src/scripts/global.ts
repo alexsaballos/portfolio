@@ -3,11 +3,9 @@ import "@scripts/global/google-analytics";
 import AOS from "aos";
 
 import { registerSW } from "virtual:pwa-register";
-import { initGlobalThemeLoader } from "@scripts/global/theme-load";
 import { initGoogleAnalytics } from "@scripts/global/google-analytics";
 
 // Manually initialize: GlobalThemeLoader, GA4, AstroPWA's Service Worker, AOS
-initGlobalThemeLoader();
 initGoogleAnalytics();
 registerSW({ immediate: true });
 AOS.init({ duration: 800, disableMutationObserver: true });

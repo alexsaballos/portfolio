@@ -1,6 +1,8 @@
 import type { ScreenshotType } from "@typing/AssetsType";
 import type { AdmittedLanguagesType } from "@typing/LocalesType";
 
+export type ThemesType = "light" | "dark";
+
 export type MetadataType = {
     url: string;
     base: string;

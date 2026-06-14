@@ -1,19 +1,19 @@
+import type { ThemesType } from "@src/types/MetaTypes";
+
 document.addEventListener("DOMContentLoaded", () => {
     const themeToggles = document.querySelectorAll<HTMLInputElement>('.theme-controller');
-
     const syncToggles = () => {
-        themeToggles.forEach(toggler =>
-            toggler.checked = document.documentElement.getAttribute('data-theme') === 'dark');
+        const isDark = (document.documentElement.getAttribute('data-theme') === 'dark');
+        themeToggles.forEach(t => t.checked = isDark);
     };
-
-    syncToggles();  // Sync toggles (navbar & hamburger) on load
+    syncToggles();
 
     themeToggles.forEach(t => {
         t.addEventListener('change', () => {
-            const newTheme: ('dark' | 'light') = t.checked ? 'dark' : 'light';
+            const newTheme: ThemesType = (t.checked) ? 'dark' : 'light';
             document.documentElement.setAttribute('data-theme', newTheme);
-            syncToggles();
             localStorage.setItem('theme', newTheme);
+            syncToggles();
         });
     });
 });

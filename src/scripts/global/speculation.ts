@@ -9,7 +9,7 @@ const matches_href = (): string[] => Object.values(PAGES).map(page =>
 const matches_not = (): string[] => Object.values(VANITY).map(profile =>
     `/${profile.key}/`)
 
-export const SPECULATION = () => ({
+export const SPECULATION = JSON.stringify({
     "prerender": [
         {
             "source": "document",

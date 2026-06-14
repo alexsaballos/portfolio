@@ -22,7 +22,7 @@ Astro.locals.t = await getLocaleMessages(lang);
 ---
 
 <!doctype html>
-<html lang={lang} dir={METADATA.text_direction}>
+<html lang={lang} dir={METADATA.text_direction} data-theme="light">
 	<CommonHead type="standard" lang={lang} page={page} />
 	<body>
 		<Loader />
