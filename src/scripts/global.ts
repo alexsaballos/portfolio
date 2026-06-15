@@ -1,3 +1,6 @@
+// Handles theme-switching directly at the very beginning to prevent FOUT
+document.documentElement.setAttribute('data-theme', ((localStorage.getItem('theme') || 'light') ?? 'light'));
+
 // Global JS import system. Belongs ONLY "/src/layouts/CommonHead.astro"
 import "@scripts/global/google-analytics";
 import AOS from "aos";

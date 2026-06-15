@@ -1,52 +1,54 @@
 ---
-import { CERT_KEYS, CERT_LINKS } from "@config/pages/certifications";
+import { CERTIFICATIONS } from "@config/pages/certifications";
 
 import Title from "@text/Title.astro";
-import Image from "astro/components/Image.astro";
 import CommonIcon from "@ui/CommonIcon.astro";
 import Resources from "@ui/badges/Resources.astro";
+import Image from "astro/components/Image.astro";
 
 const t = Astro.locals.t.certifications;
 ---
 
 <section data-aos="fade-up" class="pb-10 px-5 lg:px-10 xl:px-20">
-	<Title title={t.texts.title} classname="mt-4 mb-8" />
+	<Title title={t.texts.title} classname="mt-4 mb-8 mx-1" />
+	<div class="gap-6 mx-1 items-center flex flex-col lg:grid lg:grid-cols-3">
+		{Object.values(CERTIFICATIONS).map(org => {
+			const translation = t[org.key];
+			return (
+				<article data-aos="zoom-in" class="bg-base-200 rounded-lg ring-1 ring-base-content/10 max-w-120 flex flex-col">
 
-	<div class="gap-6 flex flex-col lg:grid lg:grid-cols-3 lg:grid-rows-2">
-		{CERT_KEYS.map(organization => (
-			<div data-aos="zoom-in" class="bg-base-200 rounded-4xl p-6 ring-4 ring-gray-500 relative">
+					<!-- Banner Image -->
+					<Image src={org.picture} alt={`${translation.name} Logo`} class="w-full rounded-t-lg object-cover max-h-40 max-w-120" />
 
-				<Image src={CERT_LINKS[organization].picture} alt={`${t[organization].name} Logo`}
-					class="w-full rounded-2xl place-self-center max-h-40 max-w-120" />
-
-				<h1 class="text-xl text-secondary font-bold my-4">
-					{`${t[organization].name} [${(organization == "iassc") ? (t.texts.planned + " ") : ""}${CERT_LINKS[organization].year}]`}
-				</h1>
-				<ul class="space-y-4">
-					<li>					
-						<details class="group">
-							<summary class="list-none cursor-pointer">
-								<p class="text-sm text-base-content/70 group-open:hidden">{t[organization].summary}</p>
+					<!-- Title, Issuer, Description, and Resources -->
+					<div class="group p-3">
+						<h3 class="text-lg text-secondary font-semibold">{translation.name}</h3>
+						<h4 class="text-md tracking-wider opacity-50 font-thin">{translation.issuer}</h4>
+						<div class="flex flex-wrap gap-2 my-4">
+							<div class="badge badge-info badge-sm rounded-full select-none font-semibold">{org.year}</div>
+							<div class="badge badge-info badge-sm rounded-full select-none badge-outline font-semibold">{t.texts[org.status]}</div>
+							{org.honors && <div class="badge badge-info badge-sm rounded-full select-none badge-outline font-semibold">{t.texts[org.honors]}</div>}
+						</div>
+						<details class="group my-4">
+							<summary class="list-none cursor-pointer select-none">
+								<p class="text-sm text-base-content/70 group-open:hidden line-clamp-2">{translation.details}</p>
 								<span class="flex flex-row gap-2 text-sm text-secondary my-1 group-open:hidden hover:underline">
 									{t.texts.description}
 									<CommonIcon name="angles_down" classname="mt-1" />
 								</span>
 							</summary>
-							<p class="text-sm text-base-content/70 mt-2">{t[organization].details}</p>
+							<p class="text-sm text-base-content/70 mt-2">{translation.details}</p>
 						</details>
-						
-						<div class="flex flex-row flex-wrap items-center gap-2 my-2">
+						<div class="flex flex-col gap-2 mt-4 mb-2">
 							<p class="text-xs tracking-wide leading-none uppercase text-base-content/60">{t.texts.resources}</p>
 							<div class="flex flex-wrap gap-2">
-								<Resources variant="certification"
-										link={CERT_LINKS[organization].verification} text={t[organization].verification} />
-								<Resources variant="external"
-										link={CERT_LINKS[organization].info} text={t[organization].info} />
+								<Resources variant="certification" link={org.verification} text={translation.verification} />
+								<Resources variant="external" link={org.info} text={translation.info} />
 							</div>
 						</div>
-					</li>
-				</ul>
-			</div>
-		))}
+					</div>
+				</article>
+			)
+		})}
 	</div>
 </section>

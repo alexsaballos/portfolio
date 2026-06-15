@@ -1,0 +1,276 @@
+---
+import { TECHNOLOGIES } from "@src/config/assets";
+import Technology from "../ui/badges/Technology.astro";
+import type { TechnologiesType } from "@src/types/AssetsType";
+
+const featuredProjects = [
+    {
+        title: "PCS Enterprise Platform",
+        category: "Business Systems",
+        image: "https://picsum.photos/1200/800?1",
+        description:
+            "A full-scale enterprise platform developed for elevator and escalator operations. Includes inventory management, maintenance scheduling, quotations, invoicing, customer management, analytics, and role-based access control.",
+        stack: ["winui", "csharp", "php", "mysql"]
+    },
+    {
+        title: "ATX CNC Tool Exchanger",
+        category: "Electrical Engineering",
+        image: "https://picsum.photos/1200/800?2",
+        description:
+            "Automated tool exchange system designed for CNC machinery featuring custom PCB development, motor control systems, embedded firmware, and industrial automation workflows.",
+        stack: ["multisim", "ultiboard", "embedded", "c"]
+    }
+];
+
+const softwareProjects = [
+    {
+        title: "HU Remembers",
+        description:
+            "Digital archival platform enabling librarians and researchers to preserve institutional history.",
+        stack: ["react", "php", "mysql"]
+    },
+    {
+        title: "HU Bison Index",
+        description:
+            "Dynamic directory and search platform designed around flexible database querying.",
+        stack: ["react", "antdesign", "mysql"]
+    },
+    {
+        title: "Digital Business Card",
+        description:
+            "Analytics-enabled personal branding ecosystem integrating Wallet passes, NFC cards and QR distribution.",
+        stack: ["astro", "php", "csharp"]
+    }
+];
+
+const engineeringProjects = [
+    {
+        title: "Maze Solver Robot",
+        description:
+            "Fully custom autonomous maze navigation robot built from PCB to firmware.",
+        stack: ["multisim", "ultiboard", "embedded", "c"]
+    },
+    {
+        title: "NASA Autonomous Vehicle",
+        description:
+            "Scale autonomous vehicle featuring color recognition and self-driving functionality.",
+        stack: ["typescript", "opencv", "python"]
+    }
+];
+---
+
+<section class="container mx-auto px-6 py-20">
+
+    <!-- HERO -->
+
+    <div class="mb-20 text-center">
+        <div class="badge badge-primary badge-lg mb-4">
+            Engineering Portfolio
+        </div>
+
+        <h1 class="text-5xl font-black lg:text-7xl">
+            Projects
+        </h1>
+
+        <p class="mx-auto mt-6 max-w-3xl text-lg text-base-content/70">
+            A collection of software engineering, embedded systems,
+            electrical engineering and business infrastructure projects
+            developed across academia, industry and entrepreneurship.
+        </p>
+    </div>
+
+    <!-- FEATURED -->
+
+    <div class="mb-10 flex items-center justify-between">
+        <h2 class="text-3xl font-bold">
+            Featured Projects
+        </h2>
+
+        <a class="btn btn-outline btn-sm">
+            View All
+        </a>
+    </div>
+
+    <div class="space-y-8">
+
+        {featuredProjects.map(project => (
+            <div class="card border border-base-300 bg-base-100 shadow-xl">
+
+                <div class="grid lg:grid-cols-2">
+
+                    <figure class="h-full">
+                        <img
+                            src={project.image}
+                            alt={project.title}
+                            class="h-full w-full object-cover"
+                        />
+                    </figure>
+
+                    <div class="card-body justify-center p-10">
+
+                        <div class="badge badge-secondary mb-3">
+                            {project.category}
+                        </div>
+
+                        <h3 class="text-4xl font-bold">
+                            {project.title}
+                        </h3>
+
+                        <p class="mt-4 text-base-content/70">
+                            {project.description}
+                        </p>
+
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            {project.stack.map(item => (
+                                <Technology selection={TECHNOLOGIES[item as TechnologiesType]} />
+                            ))}
+                        </div>
+
+                        <div class="mt-8 flex gap-3">
+                            <button class="btn btn-primary">
+                                Case Study
+                            </button>
+
+                            <button class="btn btn-outline">
+                                Source Code
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        ))}
+
+    </div>
+
+    <!-- SOFTWARE -->
+
+    <div class="mt-24 mb-8">
+        <h2 class="text-3xl font-bold">
+            Software Engineering
+        </h2>
+
+        <p class="mt-2 text-base-content/60">
+            Web applications, APIs, enterprise systems and digital products.
+        </p>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+
+        {softwareProjects.map(project => (
+            <div class="card border border-base-300 bg-base-100 shadow-md transition-all hover:-translate-y-1 hover:shadow-xl">
+
+                <div class="card-body">
+
+                    <h3 class="card-title text-xl">
+                        {project.title}
+                    </h3>
+
+                    <p class="text-base-content/70">
+                        {project.description}
+                    </p>
+
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        {project.stack.map(item => (
+                            <span class="badge badge-outline">
+                                {item}
+                            </span>
+                        ))}
+                    </div>
+
+                    <div class="card-actions mt-6 justify-end">
+                        <button class="btn btn-primary btn-sm">
+                            View Project
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        ))}
+
+    </div>
+
+    <!-- ENGINEERING -->
+
+    <div class="mt-24 mb-8">
+        <h2 class="text-3xl font-bold">
+            Electrical Engineering
+        </h2>
+
+        <p class="mt-2 text-base-content/60">
+            Embedded systems, automation, PCB design and hardware development.
+        </p>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+
+        {engineeringProjects.map(project => (
+            <div class="card border border-base-300 bg-base-100 shadow-md transition-all hover:-translate-y-1 hover:shadow-xl">
+
+                <div class="card-body">
+
+                    <h3 class="card-title text-xl">
+                        {project.title}
+                    </h3>
+
+                    <p class="text-base-content/70">
+                        {project.description}
+                    </p>
+
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        {project.stack.map(item => (
+                            <span class="badge badge-outline">
+                                {item}
+                            </span>
+                        ))}
+                    </div>
+
+                    <div class="card-actions mt-6 justify-end">
+                        <button class="btn btn-primary btn-sm">
+                            View Project
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        ))}
+
+    </div>
+
+    <!-- CTA -->
+
+    <div class="mt-24">
+
+        <div class="hero rounded-box bg-base-200">
+
+            <div class="hero-content py-16 text-center">
+
+                <div>
+
+                    <h2 class="text-4xl font-bold">
+                        Interested in the details?
+                    </h2>
+
+                    <p class="mt-4 max-w-2xl text-base-content/70">
+                        Many of these projects include architecture decisions,
+                        engineering tradeoffs, PCB design considerations,
+                        firmware implementations and business impact metrics.
+                    </p>
+
+                    <button class="btn btn-primary mt-8">
+                        Contact Me
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

@@ -46,7 +46,7 @@ export type LocalesType = {
     footer: Record<"copyright", string>;
     coming_soon: Record<("p1" | "p2"), string>;
     certifications: {
-        texts: Record<("title" | "description" | "resources" | "planned"), string>;
+        texts: Record<("title" | "description" | "resources" | "completed" | "progress" | "planned" | "laude" | "honors"), string>;
     } & CertLocaleType;
     honors: {
         texts: Record<("title" | "description" | "resources"), string>;

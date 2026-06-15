@@ -102,40 +102,49 @@
     "certifications": {
         "texts": {
             "title": "Licencias & Certificaciones",
-            "description": "Lea la descripción completa",
+            "description": "Leer más",
             "resources": "Recursos",
-            "planned": "Planificado"
+            "completed": "Completado",
+            "progress": "En curso",
+            "planned": "Planificado",
+            "laude": "Cum Laude",
+            "honors": "Honores"
         },
         "iassc": {
-            "name": "Lean Six Sigma Green Belt (alineado a IASSC)",
+            "name": "Lean Six Sigma Green Belt",
+            "issuer": "IASSC",
             "summary": "Curso universitario de nivel avanzado alineado a Lean Six Sigma Green Belt, cursado en Harding University, con énfasis en mejora de procesos, análisis estadístico y toma de decisiones basada en datos.",
             "details": "Cursé y aprobé con A la asignatura ENGR-4550 (Lean Six Sigma) durante la primavera de 2025 como materia electiva de último año en ingeniería en Harding University. El curso fue impartido siguiendo los estándares de Lean Six Sigma Green Belt de la American Society for Quality (ASQ) e incluyó DMAIC, control estadístico de procesos, análisis de causa raíz, optimización de procesos y reducción de desperdicios en contextos de ingeniería y operaciones. La certificación Lean Six Sigma Green Belt de IASSC está planificada para 2026.",
             "verification": "PeopleCert",
             "info": "Sitio web de IASSC"
         },
         "arpels": {
-            "name": "Junta Estatal de Licencias para Ingenieros y Agrimensores Profesionales de Arkansas, USA | EI/EiT",
+            "name": "Ingeniero Practicante (EI/EiT)",
+            "issuer": "Estado de Arkansas, EE. UU.",
             "summary": "Estatus de Ingeniero Interno (EI/EIT) obtenido tras aprobar el examen Fundamentals of Engineering (FE) de NCEES y graduarme de un programa de ingeniería acreditado por ABET.",
             "details": "La credencial de Ingeniero Interno (EI/EIT) certifica la finalización de un programa de ingeniería acreditado por ABET y la aprobación del examen FE del NCEES. Representa el primer paso formal hacia la licencia de Ingeniero Profesional (PE) y demuestra competencia verificada en fundamentos de ingeniería, ética y responsabilidad profesional.",
             "verification": "Pearson Credly",
             "info": "Página de AR PEPS (EI/EiT)"
         },
         "hu": {
-            "name": "Harding University (HU) | Ingeniería Eléctrica/Electrónica (Cum Laude)",
+            "name": "Ingeniería Eléctrica/Electrónica",
+            "issuer": "Harding University",
             "summary": "Título en Ingeniería Eléctrica/Electrónica (Cum Laude) de un programa acreditado por ABET.",
             "details": "Título en Ingeniería Eléctrica/Electrónica obtenida en Harding University, una institución acreditada por ABET, graduado con honores (Cum Laude) y un GPA de 3.7/4.0. La formación académica incluyó sistemas de potencia, electrónica, microprocesadores, sistemas de control y matemáticas aplicadas, junto con un enfoque sólido en proyectos de diseño de ingeniería.",
             "verification": "Instructure Parchment",
             "info": "Departamento de Ingeniería HU"
         },
         "cs50": {
-            "name": "CS50x (Harvard University) — Con Honores",
+            "name": "CS50x",
+            "issuer": "Harvard University",
             "summary": "Introducción rigurosa a la informática y a los fundamentos de ingeniería de software de Harvard University, aprobada con honores.",
             "details": "CS50 es el curso insignia de introducción a la informática de Harvard University, completado con honores. El curso cubre algoritmos, estructuras de datos, gestión de memoria, abstracción y principios fundamentales de ingeniería de software, con énfasis en la resolución de problemas y la comprensión de bajo nivel de la computación. El contenido incluye C, Python, SQL, JavaScript, HTML y CSS.",
             "verification": "Certificado CS50",
             "info": "Sitio web de CS50x.ni"
         },
         "coursera": {
-            "name": "Duke University | Resolución de Problemas con Software (Java) — Con Honores",
+            "name": "Resolución de Problemas con Software (Java)",
+            "issuer": "Duke University & Coursera",
             "summary": "Programación aplicada en Java y resolución algorítmica de problemas a través del currículo de ciencias de la computación de Duke University, aprobado con honores.",
             "details": "Curso de Duke University completado con honores, enfocado en la resolución de problemas del mundo real utilizando Java, con énfasis en pensamiento algorítmico, procesamiento de datos, depuración y diseño de programas. El curso se centra en traducir problemas en soluciones de software correctas, eficientes y mantenibles.",
             "verification": "Certificado de Coursera",

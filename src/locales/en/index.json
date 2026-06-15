@@ -102,40 +102,49 @@
     "certifications": {
         "texts": {
             "title": "Licences & Certifications",
-            "description": "Read full description",
+            "description": "Read more",
             "resources": "Resources",
-            "planned": "Planned"
+            "completed": "Completed",
+            "progress": "In progress",
+            "planned": "Planned",
+            "laude": "Cum Laude",
+            "honors": "Honors"
         },
         "iassc": {
-            "name": "Lean Six Sigma Green Belt (IASSC-aligned)",
+            "name": "Lean Six Sigma Green Belt",
+            "issuer": "IASSC",
             "summary": "Senior-level Lean Six Sigma Green Belt-aligned coursework completed at Harding University, emphasizing process improvement, statistical analysis, and data-driven decision making.",
             "details": "Completed ENGR-4550 (Lean Six Sigma) during Spring 2025 as a senior-level engineering elective at Harding University, earning an A. The course was taught following American Society for Quality (ASQ) Lean Six Sigma Green Belt standards and covered DMAIC, statistical process control, root cause analysis, process optimization, and waste reduction across engineering and operational contexts. IASSC Lean Six Sigma Green Belt certification is planned for 2026.",
             "verification": "PeopleCert",
             "info": "IASSC Website"
         },
         "arpels": {
-            "name": "State Board Of Licensure for Professional Engineers and Professional Surveyors | EI/EiT",
+            "name": "Engineer Intern (EI/EiT)",
+            "issuer": "State of Arkansas, USA",
             "summary": "Engineer in Training (EI/EIT) status obtained through successful completion of the NCEES Fundamentals of Engineering (FE) exam.",
             "details": "The Engineer in Training (EI/EIT) credential signifies completion of an ABET-accredited engineering degree and passing the NCEES FE examination. It represents the first formal step toward Professional Engineer (PE) licensure and demonstrates verified competency in core engineering fundamentals, ethics, and professional responsibility.",
             "verification": "Pearson Credly",
             "info": "AR PEPS (EI/EIT) Website"
         },
         "hu": {
-            "name": "Harding University (HU) | Bachelor of Science in Electrical Engineering (Cum Laude)",
+            "name": "Bachelor of Science in Electrical Engineering",
+            "issuer": "Harding University",
             "summary": "Bachelor of Science in Electrical Engineering (Cum Laude), ABET-accredited program.",
             "details": "Completed a Bachelor of Science in Electrical Engineering from Harding University, an ABET-accredited institution, graduating Cum Laude with a 3.7/4.0 GPA. Academic focus included power systems, electronics, microprocessors, control systems, and applied mathematics, alongside extensive project-based engineering design work.",
             "verification": "Instructure Parchment",
             "info": "HU Engineering Dept"
         },
         "cs50": {
-            "name": "CS50x (Harvard University) — With Honors",
+            "name": "CS50x",
+            "issuer": "Harvard University",
             "summary": "Rigorous introduction to computer science and software engineering fundamentals from Harvard University, completed with Honors.",
             "details": "CS50 is Harvard University's flagship introduction to computer science, completed with Honors. The course covers algorithms, data structures, memory management, abstraction, and core software engineering principles, with an emphasis on problem-solving and low-level understanding of computation. Coursework spans C, Python, SQL, JavaScript, HTML, and CSS.",
             "verification": "CS50 Certificate",
             "info": "CS50x.ni Website"
         },
         "coursera": {
-            "name": "Duke University | Solving Problems with Software (Java) — With Honors",
+            "name": "Solving Problems with Software (Java)",
+            "issuer": "Duke University & Coursera",
             "summary": "Applied Java programming and algorithmic problem-solving through Duke University’s computer science curriculum, completed with Honors.",
             "details": "Completed with Honors, this Duke University course focuses on solving real-world problems using Java, emphasizing algorithmic thinking, data processing, debugging, and program design. The course centers on translating problem statements into correct, efficient, and maintainable software solutions.",
             "verification": "Coursera Certificate",

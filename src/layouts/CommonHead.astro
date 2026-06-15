@@ -198,8 +198,6 @@ const currentLang = lang ?? METADATA.defaultLanguage;
     <!-- Schema.org Entities & Graph (Four-Entity Schema.org Graph) | Speculation API -->
     <!-- Schema.org graph only disallowed on error pages -->
     <!-- Speculation only allowed on standard pages -->
-    <!-- Handles theme-switching directly to prevent FOUT -->
-    <script is:inline>document.documentElement.setAttribute('data-theme', ((localStorage.getItem('theme') || 'light') ?? 'light'));</script>
     {isNotError && <script is:inline type="application/ld+json" set:html={SCHEMAORG_GRAPH(currentLang, (isStandard ? page! : "home"))}></script>}
     {isStandard && <script is:inline type="speculationrules" set:html={SPECULATION}></script>}
 
