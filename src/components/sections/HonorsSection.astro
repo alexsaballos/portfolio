@@ -11,7 +11,6 @@ const t = Astro.locals.t.honors;
 
 <section data-aos="fade-up" class="pb-10 sm:px-15 md:px-25 lg:px-30 xl:px-40">
 	<Title title={t.texts.title} classname="mt-4 mb-8" />
-
 	<div class="flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-2 gap-6 mx-2">
 		{Object.values(HONORS).map((org, i) => {
 			const translation = t[org.key];
