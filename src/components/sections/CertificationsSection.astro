@@ -18,15 +18,15 @@ const t = Astro.locals.t.certifications;
 				<article data-aos="zoom-in" class="bg-base-200 rounded-lg ring-1 ring-base-content/10 max-w-120 flex flex-col">
 
 					<!-- Banner Image -->
-					<Image src={org.picture} alt={`${translation.name} Logo`} class="w-full rounded-t-lg object-cover max-h-40 max-w-120" />
+					<Image src={org.picture} alt={translation.name} class="w-full rounded-t-lg object-cover max-h-40 max-w-120" />
 
 					<!-- Title, Issuer, Description, and Resources -->
 					<div class="group p-3">
 						<h3 class="text-lg text-secondary font-semibold">{translation.name}</h3>
-						<h4 class="text-md tracking-wider opacity-50 font-thin">{translation.issuer}</h4>
+						<h4 class="text-md tracking-wider text-base-content/70 font-thin">{translation.issuer}</h4>
 						<div class="flex flex-wrap gap-2 my-4">
 							<div class="badge badge-info badge-sm rounded-full select-none font-semibold">{org.year}</div>
-							<div class="badge badge-info badge-sm rounded-full select-none badge-outline font-semibold">{t.texts[org.status]}</div>
+							<div class="badge badge-info badge-sm rounded-full select-none badge-outline bg-info/20 font-semibold">{t.texts[org.status]}</div>
 							{org.honors && <div class="badge badge-info badge-sm rounded-full select-none badge-outline font-semibold">{t.texts[org.honors]}</div>}
 						</div>
 						<details class="group my-4">

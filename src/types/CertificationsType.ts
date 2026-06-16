@@ -2,7 +2,7 @@ export type CertsOrgListType = "iassc" | "arpels" | "hu" | "cs50" | "coursera";
 export type CertListType = Record<CertsOrgListType, {
     key: CertsOrgListType
     year: string;
-    status: "completed" | "progress" | "planned";
+    status: "active" | "completed" | "progress" | "planned";
     honors: undefined | "laude" | "honors";
     picture: ImageMetadata;
     verification: string;

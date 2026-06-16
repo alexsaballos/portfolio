@@ -104,6 +104,7 @@
             "title": "Lizenzen & Zertifizierungen",
             "description": "Mehr lesen",
             "resources": "Ressourcen",
+            "active": "Aktiv",
             "completed": "Vollendet",
             "progress": "Im Gange",
             "planned": "Geplant",
@@ -127,7 +128,7 @@
             "info": "AR PEPS (EI/EIT) Website"
         },
         "hu": {
-            "name": "Bachelor of Science in Elektrotechnik",
+            "name": "B.S. Elektrotechnik",
             "issuer": "Harding University",
             "summary": "Bachelor of Science in Elektrotechnik (Cum Laude) aus einem ABET-akkreditierten Studiengang.",
             "details": "Abschluss eines Bachelor of Science in Elektrotechnik an der Harding University, einer ABET-akkreditierten Hochschule, mit Auszeichnung (Cum Laude) und einem GPA von 3,7/4,0. Der akademische Schwerpunkt umfasste Energiesysteme, Elektronik, Mikroprozessoren, Regelungstechnik und angewandte Mathematik sowie umfangreiche projektbasierte Ingenieurarbeit.",

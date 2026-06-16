@@ -6,7 +6,7 @@ export const CERTIFICATIONS = {
     arpels: {
         key: "arpels",
         year: "2025",
-        status: "completed",
+        status: "active",
         honors: undefined,
         picture: PICTURES.certifications.arpels,
         verification: LINKS.certifications.credly.award,

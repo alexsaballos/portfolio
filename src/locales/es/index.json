@@ -104,6 +104,7 @@
             "title": "Licencias & Certificaciones",
             "description": "Leer más",
             "resources": "Recursos",
+            "active": "Activo",
             "completed": "Completado",
             "progress": "En curso",
             "planned": "Planificado",
@@ -127,7 +128,7 @@
             "info": "Página de AR PEPS (EI/EiT)"
         },
         "hu": {
-            "name": "Ingeniería Eléctrica/Electrónica",
+            "name": "B.S. Ingeniería Eléctrica/Electrónica",
             "issuer": "Harding University",
             "summary": "Título en Ingeniería Eléctrica/Electrónica (Cum Laude) de un programa acreditado por ABET.",
             "details": "Título en Ingeniería Eléctrica/Electrónica obtenida en Harding University, una institución acreditada por ABET, graduado con honores (Cum Laude) y un GPA de 3.7/4.0. La formación académica incluyó sistemas de potencia, electrónica, microprocesadores, sistemas de control y matemáticas aplicadas, junto con un enfoque sólido en proyectos de diseño de ingeniería.",

@@ -104,6 +104,7 @@
             "title": "Licences & Certifications",
             "description": "Read more",
             "resources": "Resources",
+            "active": "Active",
             "completed": "Completed",
             "progress": "In progress",
             "planned": "Planned",
@@ -127,7 +128,7 @@
             "info": "AR PEPS (EI/EIT) Website"
         },
         "hu": {
-            "name": "Bachelor of Science in Electrical Engineering",
+            "name": "B.S. Electrical Engineering",
             "issuer": "Harding University",
             "summary": "Bachelor of Science in Electrical Engineering (Cum Laude), ABET-accredited program.",
             "details": "Completed a Bachelor of Science in Electrical Engineering from Harding University, an ABET-accredited institution, graduating Cum Laude with a 3.7/4.0 GPA. Academic focus included power systems, electronics, microprocessors, control systems, and applied mathematics, alongside extensive project-based engineering design work.",
