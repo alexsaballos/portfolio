@@ -26,6 +26,8 @@ export const ROUTE = {
         `/${locale}/`,
     page: (locale: AdmittedLanguagesType, pageSlug: DirectoryPageSlugsType): string =>
         `/${locale}/${pageSlug}/`,
+    unloc: (slug: UnlocalizedPageNamesType): string =>
+        `/${slug}/`,
     vanity: (profile: VanityNamesType): string =>
         `/${profile}/`
 } as const;

@@ -741,13 +741,20 @@ export const ICONS = {
         size: "sm"
     },
 
-    // Supported Devices & Developer - Footer Copyright Notice
+    // Supported Devices & Authentication - Footer Copyright Notice
     devices: {
         name: "devices",
         group: "gui",
         title: "Supported Devices Icon",
         desc: "All of our supported devices for this website",
         size: "md"
+    },
+    shield: {
+        name: "shield",
+        group: "gui",
+        title: "Shield with Check Icon",
+        desc: "Shield with Check Icon used to represent Trust & Authentication.",
+        size: "sm"
     }
 } as const satisfies IconsListType;
 

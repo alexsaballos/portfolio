@@ -10,18 +10,19 @@ import ThemeToggler from "@togglers/ThemeToggler.astro";
 import CommonIcon from "@ui/CommonIcon.astro";
 
 const { t, l } = Astro.locals;
+const translation = t.footer;
 ---
 
-<footer data-aos="fade-in" class="text-white">
+<footer data-aos="fade-in">
 
     <!-- Footer Body -->
-    <div class="p-2 bg-primary rounded-4xl">
+    <div class="p-2 bg-primary rounded-4xl text-white">
         <h1 class="text-3xl text-center font-bold my-2">{PERSONAL.name}</h1>
         <div class="flex flex-col gap-4 text-center sm:flex-row sm:justify-center sm:gap-6 mt-4 mb-2">
             {Object.values(NAVIGATION_PAGES).map(entry => (
-                <nav><a href={ROUTE.page(l, entry.metadata.slug)} class="hover:font-bold hover:text-secondary">
+                <a href={ROUTE.page(l, entry.metadata.slug)} class="hover:font-bold hover:text-secondary">
                     {t.navigation[entry.key]}
-                </a></nav>
+                </a>
             ))}
         </div>
         <div class="flex flex-col sm:flex-row justify-center sm:gap-4 mt-4 mb-2">
@@ -35,13 +36,28 @@ const { t, l } = Astro.locals;
         </div>
     </div>
 
-    <!-- Copyright Notice Body -->
-    <div class="px-1 bg-transparent items-center justify-around">
+     <aside class="flex flex-col items-center gap-1 w-full select-none">
+        <!-- Main Copyright Block -->
         <div class="flex flex-row items-center justify-center gap-2">
             <CommonIcon name="devices" classname="text-primary" />
-            <p class="align-middle text-base-content text-xs">
-                Copyright &copy; {new Date().getFullYear()} - {t.footer.copyright}
+            <span class="align-middle text-xs text-base-content/50">
+                Copyright &copy; {new Date().getFullYear()} - {translation.copyright}
+            </span>
+        </div>
+
+        <!-- Trust Loop Divider -->
+        <div class="w-12 border-t border-base-content/10"></div>
+
+        <!-- Business Card Identity Verification Handshake -->
+        <div class="flex flex-col items-center px-2 pb-2 gap-0.5">
+            <div class="flex flex-row gap-1.5 text-xs font-semibold uppercase tracking-wider">
+                <CommonIcon name="shield" classname="text-success/80" />
+                <span class="text-base-content/50">{translation.protocol}</span>
+            </div>
+            <p class="text-xs text-base-content/50">
+                {translation.hosting}
+                <a href={ROUTE.unloc("card")} class="link link-primary font-mono font-medium hover:text-secondary">{translation.here}</a>.
             </p>
         </div>
-    </div>
+    </aside>
 </footer>

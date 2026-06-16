@@ -43,13 +43,13 @@ export type LocalesType = {
     };
     categories: Record<"title", string>;
     navigation: Record<NavigationPageNamesType, string>,
-    footer: Record<"copyright", string>;
+    footer: Record<"copyright" | "protocol" | "hosting" | "here", string>;
     coming_soon: Record<("p1" | "p2"), string>;
     certifications: {
         texts: Record<("title" | "description" | "resources" | "active" | "completed" | "progress" | "planned" | "laude" | "honors"), string>;
     } & CertLocaleType;
     honors: LOChonorsType;
-    contact: Record<("CTA" | "form_invite" | "required" | "send" | "reach_on"), string> & {
+    contact: Record<("CTA" | "exclusive" | "form_invite" | "required" | "send" | "reach_on"), string> & {
         name: Record<("label" | "placeholder"), string>;
         email: Record<("label" | "placeholder"), string>;
         subject: {

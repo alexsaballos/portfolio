@@ -12,7 +12,7 @@ export type IconsNamesType = AdmittedCountriesType | VanityNamesType | Technolog
     | "envelope_closed" | "envelope_check" | "home" | "hamburger_open" | "hamburger_close"
     | "download" | "fullscreen" | "link" | "angles_down" | "id_card" | "at" | "list" | "message"
     | "paper_plane" | "qr_code" | "earth" | "copy" | "share" | "google_wallet" | "graduation" | "industry" | "spinner"
-    | "circle_check" | "circle_xmark" | "moon" | "globe" | "chevron_up" | "chevron_down";
+    | "shield" | "circle_check" | "circle_xmark" | "moon" | "globe" | "chevron_up" | "chevron_down";
 
 export type IconsType = { name: IconsNamesType; group: IconsKitNamesType } & Record<("title" | "desc" | "size"), string>;
 export type IconsListType = Record<IconsNamesType, IconsType>;

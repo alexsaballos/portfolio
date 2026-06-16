@@ -93,7 +93,10 @@
         "contact": "Contacto"
     },
     "footer": {
-        "copyright": "Todos los derechos reservados"
+        "copyright": "Todos los derechos reservados",
+        "protocol": "Protocolo de verificación de identidad",
+        "hosting": "La única tarjeta de negocios digital de mis tarjetas físicas NFC y QR se encuentra alojada de forma segura",
+        "here": "aquí"
     },
     "coming_soon": {
         "p1": "¡Próximamente!",
@@ -220,6 +223,7 @@
     },
     "contact": {
         "CTA": "Contácteme",
+        "exclusive": "Canal Exclusivo de Comunicación",
         "form_invite": "Para consultas profesionales, por favor complete el siguiente formulario:",
         "required": "Todos los campos son obligatorios",
         "name": {

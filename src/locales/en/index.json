@@ -93,7 +93,10 @@
         "contact": "Contact"
     },
     "footer": {
-        "copyright": "All rights reserved"
+        "copyright": "All rights reserved",
+        "protocol": "Identity Verification Protocol",
+        "hosting": "The only official digital business card for my physical NFC and QR cards is hosted securely",
+        "here": "here"
     },
     "coming_soon": {
         "p1": "Coming Soon!",
@@ -220,6 +223,7 @@
     },
     "contact": {
         "CTA": "Get in Touch",
+        "exclusive": "Exclusive Communication Channel",
         "form_invite": "For professional inquiries, please complete the form below:",
         "required": "All fields are required",
         "name": {

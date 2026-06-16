@@ -46,9 +46,15 @@ const subjectOptions = {
     <div id="contact_form" class="group">
         <Title title={t.CTA} />
         <div class="justify-items-center">
-            <p class="my-2">{t.form_invite}</p>
+            <div class="flex flex-col">
+                <span class="justify-center badge badge-success badge-outline text-xs font-semibold gap-1 mt-3">
+                    <CommonIcon name="shield" />
+                    <span>{t.exclusive}</span>
+                </span>
+            </div>
+            <p class="mt-4 text-base-content/70">{t.form_invite}</p>
             <form enctype="application/x-www-form-urlencoded">
-                <fieldset class="fieldset bg-base-200 border border-base-300 rounded-4xl w-xs p-4">
+                <fieldset class="fieldset bg-base-200 border border-base-300 rounded-xl w-xs p-4">
                     <legend class="fieldset-legend">{t.required}</legend>
 
                     <!-- Name input on contact form -->

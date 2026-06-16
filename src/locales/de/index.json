@@ -93,7 +93,10 @@
         "contact": "Kontakt"
     },
     "footer": {
-        "copyright": "Alle Rechte vorbehalten"
+        "copyright": "Alle Rechte vorbehalten",
+        "protocol": "Protokoll zur Identitätsprüfung",
+        "hosting": "Die einzige offizielle digitale Visitenkarte für meine physischen NFC- und QR-Karten wird sicher gehostet",
+        "here": "hier"
     },
     "coming_soon": {
         "p1": "Demnächst verfügbar!",
@@ -220,6 +223,7 @@
     },
     "contact": {
         "CTA": "Kontakt aufnehmen",
+        "exclusive": "Exklusiver Kommunikationskanal",
         "form_invite": "Für professionelle Anfragen füllen Sie bitte das untenstehende Formular aus:",
         "required": "Alle Felder sind erforderlich",
         "name": {
