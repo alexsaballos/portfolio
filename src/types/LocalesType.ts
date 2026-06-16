@@ -1,7 +1,7 @@
 import type {
     TechnologiesCoreSubheadersType, TechnologiesNamesType, TechnologiesProductionSubheadersType
 } from "@typing/AssetsType";
-import type { HonorsType } from "@typing/HonorsType";
+import type { LOChonorsType } from "@typing/HonorsType";
 import type { CertLocaleType } from "./CertificationsType";
 import type { DirectoryPageNamesType, NavigationPageNamesType } from "@typing/PagesType";
 
@@ -48,9 +48,7 @@ export type LocalesType = {
     certifications: {
         texts: Record<("title" | "description" | "resources" | "active" | "completed" | "progress" | "planned" | "laude" | "honors"), string>;
     } & CertLocaleType;
-    honors: {
-        texts: Record<("title" | "description" | "resources"), string>;
-    } & HonorsType;
+    honors: LOChonorsType;
     contact: Record<("CTA" | "form_invite" | "required" | "send" | "reach_on"), string> & {
         name: Record<("label" | "placeholder"), string>;
         email: Record<("label" | "placeholder"), string>;

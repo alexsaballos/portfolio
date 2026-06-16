@@ -1,86 +1,64 @@
 ---
-import { HONOR_LINKS, HONORS_KEYS } from "@config/pages/honors";
+import { HONORS } from "@config/pages/honors";
 
 import Title from "@text/Title.astro";
 import CommonIcon from "@ui/CommonIcon.astro";
 import Image from "astro/components/Image.astro";
 import Resources from "@ui/badges/Resources.astro";
 
-import type {
-	HonorsOrgListType, HonorsListType, HonorsLinkType, FlatHonorLinks, NestedHonorLinks
-} from "@typing/HonorsType";
-
 const t = Astro.locals.t.honors;
-
-// Type-aware award discriminator
-function isFlatOrg(org: FlatHonorLinks | NestedHonorLinks): org is FlatHonorLinks
-	{ return ("link" in org) || ("verification" in org); }
-
-// Type-aware URL getter through discriminator
-function resolveHonorResource(
-	organization: HonorsOrgListType,
-	awardKey: HonorsListType,
-	type: HonorsLinkType
-): (string | undefined) {
-	const org = HONOR_LINKS[organization];
-	return (isFlatOrg(org)) ? org[type] : (org as NestedHonorLinks)[awardKey]?.[type];
-}
-
-// Type-aware Year getter through discriminator
-function resolveHonorYear(
-	organization: HonorsOrgListType,
-	awardKey: HonorsListType
-): (string | undefined) {
-	const org = HONOR_LINKS[organization];
-	return (isFlatOrg(org)) ? org.year : (org as NestedHonorLinks)[awardKey]?.year;
-}
 ---
 
-<section data-aos="fade-up" class="pb-10 px-5 lg:px-10 xl:px-20">
+<section data-aos="fade-up" class="pb-10 sm:px-15 md:px-25 lg:px-30 xl:px-40">
 	<Title title={t.texts.title} classname="mt-4 mb-8" />
 
-	<div class="gap-6 flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-2">
-		{HONORS_KEYS.map((organization, i) => (
-			<div data-aos="zoom-in" class={`bg-base-200 rounded-4xl p-6 ring-4 ring-gray-500 relative
-				${(i === 0) ? "lg:col-start-1 lg:row-start-1" : ""}
-				${(i === 1) ? "lg:col-start-1 lg:row-start-2" : ""}
-				${(i === 2) ? "lg:col-start-2 lg:row-start-1 lg:row-span-2" : ""}`}>
+	<div class="flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-2 gap-6 mx-2">
+		{Object.values(HONORS).map((org, i) => {
+			const translation = t[org.key];
+			const mainLayoutCalc =
+				(i === 0) ? "lg:col-start-1 lg:row-start-1" :
+				(i === 1) ? "lg:col-start-1 lg:row-start-2" :
+				(i === 2) ? "lg:col-start-2 lg:row-start-1 lg:row-span-2" : "";
+			return (
+				<article data-aos="zoom-in" class={`bg-base-200 rounded-lg ring-1 ring-base-content/10 ${mainLayoutCalc}`}>
+					<Image src={org.picture} alt={translation.issuer} class="w-full rounded-t-lg object-cover max-h-40" />
 
-				<Image src={HONOR_LINKS[organization].picture} alt={`${t[organization].name} Logo`}
-					class="w-full rounded-2xl place-self-center max-h-40 max-w-120" />
-
-				<h1 class="text-xl text-secondary font-bold my-4">{t[organization].name}</h1>
-				<ul class="space-y-4">
-					{t[organization].awards.map(award => (
-						<li>							
-							<h2 class="font-medium">{`${award.title} [${resolveHonorYear(organization, award.key)}]`}</h2>
-
-							<details class="group">
-								<summary class="list-none cursor-pointer">
-									<p class="text-sm text-base-content/70 group-open:hidden">{award.summary}</p>
-									<span class="flex flex-row gap-2 text-sm text-secondary my-1 group-open:hidden hover:underline">
-										{t.texts.description}
-										<CommonIcon name="angles_down" classname="mt-1" />
-									</span>
-								</summary>
-								<p class="text-sm text-base-content/70 mt-2">{award.details}</p>
-							</details>
-							
-							{(award.link || award.verification) && (
-								<div class="flex flex-row flex-wrap items-center gap-2 my-2">
-									<p class="text-xs tracking-wide leading-none uppercase text-base-content/60">
-										{t.texts.resources}
-									</p>
-									<div class="flex flex-wrap gap-2">
-										{award.verification && <Resources variant="certification" link={resolveHonorResource(organization, award.key, "verification")} text={award.verification.name} />}
-										{award.link && <Resources variant="external" link={resolveHonorResource(organization, award.key, "link")} text={award.link.name} />}
-									</div>
-								</div>
-							)}
-						</li>
-					))}
-				</ul>
-			</div>
-		))}
+					<div class="p-3">
+						<ul class="group">
+							{translation.awards.map((entry_awr, j) => {
+								const entry_org = org.awards[j];
+								return (
+									<li>
+										<h4 class="text-lg text-secondary font-semibold">{entry_awr.title}</h4>
+										<div class="flex flex-wrap flex-row gap-2 my-0.5 items-center">
+											<h3 class="text-md tracking-wider text-base-content/70 font-thin">{entry_awr.issuer}</h3>
+											<div class="badge badge-info badge-sm rounded-full select-none font-semibold">{entry_org.year}</div>
+										</div>
+										<details class="group my-2">
+											<summary class="list-none cursor-pointer select-none">
+												<p class="text-sm text-base-content/70 group-open:hidden line-clamp-2">{entry_awr.details}</p>
+												<span class="flex flex-row gap-2 text-sm text-secondary my-1 group-open:hidden hover:underline">
+													{t.texts.description}
+													<CommonIcon name="angles_down" classname="mt-1" />
+												</span>
+											</summary>
+											<p class="text-sm text-base-content/70 mt-2">{entry_awr.details}</p>
+										</details>
+										<div class="flex flex-col gap-2 my-2">
+											<p class="text-xs tracking-wide leading-none uppercase text-base-content/60">{t.texts.resources}</p>
+											<div class="flex flex-wrap gap-2">
+												{entry_org.verification && <Resources variant="certification" link={entry_org.verification} text={entry_awr.verification} />}
+												{entry_org.info && <Resources variant="external" link={entry_org.info} text={entry_awr.info} />}
+											</div>
+										</div>
+										{((i === 2) && (j !== 3)) && (<div class="divider my-0.5"></div>)}
+									</li>
+								);
+							})}
+						</ul>
+					</div>
+				</article>
+			)
+		})}
 	</div>
 </section>

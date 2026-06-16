@@ -1,7 +1,7 @@
 ---
 import { pickVanityGroup } from "@config/routes/vanity";
-import type { BaseVanityEntryType, VanityEntryGroupType } from "@typing/VanityType";
 import CommonIcon from "@ui/CommonIcon.astro";
+import type { BaseVanityEntryType, VanityEntryGroupType } from "@typing/VanityType";
 
 const variant = Astro.props.variant as VanityEntryGroupType;
 const RequestedButtons: BaseVanityEntryType[] = Object.values(

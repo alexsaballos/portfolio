@@ -155,84 +155,65 @@
     "honors": {
         "texts": {
             "title": "Ehrungen und Auszeichnungen",
-            "description": "Lesen Sie die vollständige Beschreibung",
+            "description": "Mehr lesen",
             "resources": "Ressourcen"
         },
         "ncees": {
-            "name": "Nationaler Rat der Prüfer für Ingenieurwesen und Vermessung (NCEES)",
-            "key": "ncees",
+            "issuer": "Nationaler Rat der Prüfer für Ingenieurwesen und Vermessung (US NCEES)",
             "awards": [
                 {
-                    "title": "Ehrenabsolvent - NCEES FE-Prüfung (Elektrotechnik und Computer)",
-                    "key": "ncees_award",
+                    "title": "Ehrenabsolvent",
+                    "issuer": "NCEES",
                     "summary": "Bereits als Student bestand er die NCEES-Prüfung „Fundamentals of Engineering“ und qualifizierte sich damit für die offizielle NCEES-Ehrengraduierten-Auszeichnung – ein früher Meilenstein auf dem Weg zur Berufszulassung als Ingenieur.",
                     "details": "Studierende der Ingenieurwissenschaften und des Vermessungswesens, die vor ihrem Abschluss an einem teilnehmenden Studiengang die FE- oder FS-Prüfung bestehen, erhalten eine kostenlose NCEES-Ehrenschnur für ihre Abschlussfeier. Um die Schnur zu erhalten, müssen die Studierenden die entsprechende Option bei der Prüfungsanmeldung auswählen und mindestens 21 Tage vor ihrem Abschlusstermin eine Benachrichtigung über das Bestehen der Prüfung erhalten.",
-                    "link": {
-                        "name": "NCEES-Website"
-                    },
-                    "verification": {
-                        "name": "Pearson Credly"
-                    }
+                    "info": "NCEES-Website",
+                    "verification": "Pearson Credly"
                 }
             ]
         },
         "wisp": {
-            "name": "Walton International Scholarship Program (WISP)",
-            "key": "wisp",
+            "issuer": "Walton International Scholarship Program",
             "awards": [
                 {
-                    "title": "Walton-Stipendiat - Harding University",
-                    "key": "wisp_award",
+                    "title": "Walton-Stipendiat",
+                    "issuer": "Walton-Stiftung",
                     "summary": "Er erhielt das Walton International Scholarship, ein äußerst wettbewerbsorientiertes, die gesamten Studiengebühren abdeckendes Leistungsstipendium für herausragende internationale Studierende, das ein schuldenfreies Bachelorstudium ermöglicht.",
                     "details": "Das Walton International Scholarship Program (WISP) wurde 1985 von Sam und Helen Walton gegründet und bietet den begabtesten und fähigsten Studenten aus Mittelamerika, Belize und Mexiko eine kostenlose Hochschulausbildung.",
-                    "link": {
-                        "name": "WISP-Website"
-                    }
+                    "info": "WISP-Website"
                 }
             ]
         },
         "hu": {
-            "name": "Harding University (HU)",
-            "key": "hu",
+            "issuer": "Harding University",
             "awards": [
                 {
-                    "title": "Cum Laude-Absolvent - BSc Elektrotechnik",
-                    "key": "engineering",
+                    "title": "Cum Laude-Absolvent",
+                    "issuer": "Universitätsrat",
                     "summary": "Abschluss mit Auszeichnung (Cum Laude) im Bereich Elektrotechnik, eine Anerkennung für kontinuierliche akademische Exzellenz in einem anspruchsvollen, ABET-akkreditierten Lehrplan.",
                     "details": "Ich habe das Bachelorstudium der Elektrotechnik mit Auszeichnung (Cum Laude) abgeschlossen. Diese Auszeichnung wird Studierenden verliehen, die während ihres gesamten Bachelorstudiums konstant hervorragende Studienleistungen erbracht haben. Sie entspricht einem Notendurchschnitt von 3,7 (von maximal 4,0), der im Rahmen eines ABET-akkreditierten Ingenieurstudiums mit Schwerpunkt auf fortgeschrittener Mathematik, Schaltungsanalyse, Energiesystemen, Elektronik, Steuerungstechnik und eingebetteten Systemen erzielt wurde.",
-                    "link": {
-                        "name": "Ingenieurabteilung der HU"
-                    },
-                    "verification": {
-                        "name": "Instructure Parchment"
-                    }
+                    "info": "Ingenieurabteilung der HU",
+                    "verification": "Instructure Parchment"
                 },
                 {
-                    "title": "Distinguished Scholar - HU American Studies Institute (HU ASI)",
-                    "key": "asi",
-                    "summary": "Ausgewählt als Distinguished Scholar für herausragende akademische Leistungen und interdisziplinäre Exzellenz im Rahmen des wettbewerbsorientierten American Studies Institute-Programms der Harding University.",
+                    "title": "Ausgezeichneter Gelehrter",
+                    "issuer": "Institut für Amerikastudien",
+                    "summary": "Ausgewählt als ausgezeichneter Gelehrter für herausragende akademische Leistungen und interdisziplinäre Exzellenz im Rahmen des wettbewerbsorientierten American Studies Institute-Programms der Harding University.",
                     "details": "Studierende aller Fachrichtungen der Harding University können sich für das Distinguished Scholars-Programm des American Studies Institute bewerben. Voraussetzung für die automatische Einladung ist ein Notendurchschnitt von mindestens 3,8 sowie die Mitgliedschaft im Honors Scholar Program der Harding University (im dritten, vierten oder ersten Studienjahr). Jedes Jahr im Herbst findet ein offenes Bewerbungsverfahren für automatisch eingeladene Studierende und Studierende mit einem Notendurchschnitt von mindestens 3,6 statt.",
-                    "link": {
-                        "name": "HU ASI-Programm"
-                    }
+                    "info": "HU ASI-Programm"
                 },
                 {
-                    "title": "Ehrenstudent - HU Honors College",
-                    "key": "honors",
+                    "title": "Ehrenstudent",
+                    "issuer": "Honors College",
                     "summary": "Aufnahme in das Honors College und Beibehaltung des Status als Mitglied dieses selektiven Programms, das etwa 10 % der Studentenschaft repräsentiert und akademische Strenge, Führungsqualitäten und soziales Engagement betont.",
                     "details": "Das Honors College nimmt jährlich rund 100 Studierende auf, wodurch sich die Gesamtzahl der Studierenden auf etwa 400 erhöht. Dies entspricht etwa 10 % der gesamten Studierendenschaft der Harding University und liegt damit im nationalen Durchschnitt für Honors-Programme. Honors-Studierende müssen einen Notendurchschnitt von mindestens 3,25 erreichen, werden ermutigt, die Auszeichnung des Honors College bei ihrem Abschluss anzustreben, und sollen sich in der Universität und/oder der Gemeinde in Führungspositionen und im sozialen Bereich engagieren.",
-                    "link": {
-                        "name": "HU Honors College"
-                    }
+                    "info": "HU Honors College"
                 },
                 {
                     "title": "Dekansliste",
-                    "key": "deans_list",
+                    "issuer": "Universitätsrektor",
                     "summary": "Wurde in mehreren Semestern auf der Dekansliste ausgezeichnet, weil sie trotz eines vollen Studienpensums einen Semester-Notendurchschnitt von 3,65 oder höher erreichte.",
                     "details": "Die Dekansliste wird jedes Semester von Dr. Marty Spears, dem Universitätsrektor, veröffentlicht und würdigt Studierende mit herausragenden Studienleistungen. Um aufgenommen zu werden, müssen Studierende mindestens 12 Semesterwochenstunden mit einem Notendurchschnitt von mindestens 3,65 belegen und dürfen keine unvollständigen Kurse haben.",
-                    "verification": {
-                        "name": "HU-Verdienstseiten"
-                    }
+                    "verification": "HU-Verdienstseiten"
                 }
             ]
         }

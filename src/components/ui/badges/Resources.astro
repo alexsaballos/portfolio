@@ -4,11 +4,11 @@ import CommonIcon from "@ui/CommonIcon.astro";
 const { link, text, variant } = Astro.props as
     Record<("link" | "text"), string> & { variant: "certification" | "external"; }
 
-const calculatedClass = (variant === "certification") ? "badge-accent" : "badge-secondary badge-outline text-secondary bg-secondary/20";
+const calculatedClass = (variant === "certification") ? "badge-accent bg-accent/40" : "badge-secondary text-secondary";
 ---
 
 <a href={link} target="_blank" rel="noopener noreferrer"
-    class=`badge ${calculatedClass} badge-sm rounded-sm select-none transition-transform duration-500 ease-out hover:scale-105 hover:opacity-70` >
+    class=`badge ${calculatedClass} badge-outline badge-sm rounded-sm select-none transition-transform duration-500 ease-out hover:scale-105 hover:opacity-70` >
     <CommonIcon name={(variant === "certification") ? "certifications" : "link"} size="xs" />
     {text}
 </a>

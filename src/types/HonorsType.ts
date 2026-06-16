@@ -1,36 +1,35 @@
 export type HonorsOrgListType = "ncees" | "wisp" | "hu";
-export type HonorsListType = "ncees_award" | "wisp_award" | "engineering" | "asi" | "honors" | "deans_list";
 export type HonorsLinkType = "link" | "verification";
 
-// Locale (i18n) structure
+// SSOT (picture & links) structure
 export type AwardType = {
+    year: string;
+    info?: string;
+	verification?: string;
+};
+
+export type OrgType = {
+    key: HonorsOrgListType;
+    picture: ImageMetadata;
+    awards: AwardType[];
+};
+
+export type HonorsSSOT = Record<HonorsOrgListType, OrgType>;
+
+// Locale (i18n) structure
+export type LOChonorsAwardType = {
     title: string;
-    key: HonorsListType;
+    issuer: string;
     summary: string;
     details: string;
-    link?: { name: string; };
-	verification?: { name: string; };
-};
-
-export type HonorsType = Record<HonorsOrgListType, {
-    name: string;
-    key: HonorsOrgListType;
-    awards: AwardType[];
-}>;
-
-// SSOT (picture & links) structure
-export type HonorLinkResource = {
-    year: string;
-    link?: string;
+    info?: string;
     verification?: string;
+}
+
+export type LOChonorsOrgType = {
+    issuer: string;
+    awards: LOChonorsAwardType[]
 };
-
-export type FlatHonorLinks = {
-    picture: ImageMetadata;
-} & HonorLinkResource;
-
-export type NestedHonorLinks = {
-    picture: ImageMetadata;
-} & Partial<Record<HonorsListType, (HonorLinkResource | undefined)>>;
-
-export type HonorsSSOT = Record<HonorsOrgListType, (FlatHonorLinks | NestedHonorLinks)>;
+export type LOChonorsType = {
+    texts: Record<("title" | "description" | "resources"), string>
+} & Record<HonorsOrgListType, LOChonorsOrgType>
