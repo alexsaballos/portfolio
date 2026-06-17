@@ -20,7 +20,7 @@ export const PROJECTS = {
     portfolio: {
         key: "portfolio",
         images: ["https://picsum.photos/1200/800?2"],
-        stack: ["astro", "tailwindcss", "daisyui", "typescript", "cpanel", "php", "google_wallet", "google_analytics"],
+        stack: ["astro", "tailwindcss", "daisyui", "typescript", "cpanel", "php", "resend", "google_wallet", "google_analytics"],
         categories: ["software_engineering", "web_development"],
         privacy: "public",
         client: "personal",
