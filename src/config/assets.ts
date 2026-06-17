@@ -342,6 +342,27 @@ export const ICONS = {
         desc: "Framework used in Backend",
         size: "md"
     },
+    google_analytics: {
+        name: "google_analytics",
+        group: "technologies",
+        title: "Google Analytics Logo",
+        desc: "Framework used in Web Development",
+        size: "md"
+    },
+    google_maps: {
+        name: "google_maps",
+        group: "technologies",
+        title: "Google Maps Logo",
+        desc: "Framework used in Web Development",
+        size: "md"
+    },
+    google_wallet: {
+        name: "google_wallet",
+        group: "technologies",
+        title: "Google Wallet Icon",
+        desc: "Framework used in Web Development",
+        size: "md"
+    },
     html: {
         name: "html",
         group: "technologies",
@@ -431,6 +452,20 @@ export const ICONS = {
         group: "technologies",
         title: "React Logo",
         desc: "UI Library used in Web Development",
+        size: "md"
+    },
+    resend: {
+        name: "resend",
+        group: "technologies",
+        title: "Resend API Logo",
+        desc: "Framework used in Web Development",
+        size: "md"
+    },
+    sass: {
+        name: "sass",
+        group: "technologies",
+        title: "Sass Logo",
+        desc: "Framework used in Web Development",
         size: "md"
     },
     sketchup: {
@@ -661,13 +696,6 @@ export const ICONS = {
         title: "Share Icon",
         desc: "Sharing Icon used to represent sharing content.",
         size: "md"
-    },
-    google_wallet: {
-        name: "google_wallet",
-        group: "gui",
-        title: "Google Wallet Icon",
-        desc: "Google Wallet Iconified Logo used to offer GW Local Saving.",
-        size: "sm"
     },
 
     // Success & Failure icons for alerts
@@ -1000,6 +1028,54 @@ export const TECHNOLOGIES = {
             domains: ["web", "backend"]
         }
     },
+    google_analytics: {
+        visual: {
+            name: "Google Analytics",
+            color: TECHNOLOGIES_COLORS.web,
+            icon: "google_analytics"
+        },
+        hierarchy: {
+            tier: "production",
+            subheader: "api"
+        },
+        metadata: {
+            key: "google_analytics",
+            kind: "framework",
+            domains: ["web", "operations"]
+        }
+    },
+    google_maps: {
+        visual: {
+            name: "Google Maps",
+            color: TECHNOLOGIES_COLORS.web,
+            icon: "google_maps"
+        },
+        hierarchy: {
+            tier: "production",
+            subheader: "api"
+        },
+        metadata: {
+            key: "google_maps",
+            kind: "framework",
+            domains: ["web", "operations"]
+        }
+    },
+    google_wallet: {
+        visual: {
+            name: "Google Wallet",
+            color: TECHNOLOGIES_COLORS.web,
+            icon: "google_wallet"
+        },
+        hierarchy: {
+            tier: "production",
+            subheader: "api"
+        },
+        metadata: {
+            key: "google_wallet",
+            kind: "framework",
+            domains: ["web", "operations"]
+        }
+    },
     html: {
         visual: {
             name: "HTML",
@@ -1205,6 +1281,38 @@ export const TECHNOLOGIES = {
         metadata: {
             key: "react",
             kind: "library",
+            domains: ["web", "frontend"]
+        }
+    },
+    resend: {
+        visual: {
+            name: "Resend Email",
+            color: TECHNOLOGIES_COLORS.web,
+            icon: "resend"
+        },
+        hierarchy: {
+            tier: "production",
+            subheader: "api"
+        },
+        metadata: {
+            key: "resend",
+            kind: "framework",
+            domains: ["web", "operations"]
+        }
+    },
+    sass: {
+        visual: {
+            name: "Sass",
+            color: TECHNOLOGIES_COLORS.web,
+            icon: "sass"
+        },
+        hierarchy: {
+            tier: "production",
+            subheader: "web"
+        },
+        metadata: {
+            key: "sass",
+            kind: "framework",
             domains: ["web", "frontend"]
         }
     },

@@ -4,7 +4,7 @@ const bottomBtn = document.getElementById("scrollBottom");
 const controls = document.getElementById("scrollControls");
 
 if (!topBtn || !bottomBtn || !controls)
-    throw new Error("Missing elements on the DOM");
+    throw new Error("[SCROLLER] Missing elements on the DOM");
 
 const SCROLL_THRESHOLD:number = 500;
 

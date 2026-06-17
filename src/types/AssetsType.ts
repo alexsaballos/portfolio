@@ -1,8 +1,8 @@
-import type { VanityNamesType } from "@typing/VanityType";
-import type { HonorsOrgListType } from "@typing/HonorsType";
+import type { VanityNamesType } from "@src/types/routes/VanityType";
+import type { HonorsOrgListType } from "@src/types/pages/HonorsType";
 import type { AdmittedCountriesType } from "@typing/LocalesType";
-import type { NavigationPageNamesType } from "@typing/PagesType";
-import type { CertsOrgListType } from "@typing/CertificationsType";
+import type { NavigationPageNamesType } from "@src/types/routes/PagesType";
+import type { CertsOrgListType } from "@src/types/pages/CertificationsType";
 
 // Icons Typing
 export type IconsKitNamesType = "flags" | "gui" | "profiles" | "technologies";
@@ -11,7 +11,7 @@ export type IconsNamesType = AdmittedCountriesType | VanityNamesType | Technolog
     | "hourglass" | "projects" | "briefcase" | "leadership" | "award"
     | "envelope_closed" | "envelope_check" | "home" | "hamburger_open" | "hamburger_close"
     | "download" | "fullscreen" | "link" | "angles_down" | "id_card" | "at" | "list" | "message"
-    | "paper_plane" | "qr_code" | "earth" | "copy" | "share" | "google_wallet" | "graduation" | "industry" | "spinner"
+    | "paper_plane" | "qr_code" | "earth" | "copy" | "share" | "graduation" | "industry" | "spinner"
     | "shield" | "circle_check" | "circle_xmark" | "moon" | "globe" | "chevron_up" | "chevron_down";
 
 export type IconsType = { name: IconsNamesType; group: IconsKitNamesType } & Record<("title" | "desc" | "size"), string>;
@@ -34,16 +34,16 @@ export type PicturesListType = {
 // Technologies Typing
 export type TechnologiesTiersNamesType = "core" | "production";
 export type TechnologiesCoreSubheadersType = "embedded" | "software" | "cad";
-export type TechnologiesProductionSubheadersType = "web" | "frameworks" | "databases" | "operations";
+export type TechnologiesProductionSubheadersType = "web" | "frameworks" | "databases" | "operations" | "api";
 export type TechnologiesSubheadersNames = TechnologiesCoreSubheadersType | TechnologiesProductionSubheadersType;
 
 export type TechnologiesNamesType =
-    | "antdesign" | "arduino" | "astro" | "autocad" | "axios"
-    | "bootstrap" | "c" | "cpanel" | "cpp" | "csharp" | "css"
-    | "daisyui" | "directus" | "embedded" | "flask" | "html" | "java" | "javascript"
-    | "jinja" | "kicad" | "multisim" | "mysql" | "opencv" | "php" | "phpmyadmin"
-    | "python" | "raspberrypi" | "react" | "sketchup" | "sqlite"
-    | "tailwindcss" | "typescript" | "ultiboard" | "winui";
+    | "antdesign" | "arduino" | "astro" | "autocad" | "axios" | "bootstrap"
+    | "c" | "cpanel" | "cpp" | "csharp" | "css" | "daisyui" | "directus"
+    | "embedded" | "flask" | "google_analytics" | "google_maps" | "google_wallet"
+    | "html" | "java" | "javascript" | "jinja" | "kicad" | "multisim" | "mysql" | "opencv"
+    | "php" | "phpmyadmin" | "python" | "raspberrypi" | "react" | "resend" | "sass"
+    | "sketchup" | "sqlite" | "tailwindcss" | "typescript" | "ultiboard" | "winui";
 
 export type TechnologiesKindType =
     | "programming_language" | "framework" | "library" | "hardware"

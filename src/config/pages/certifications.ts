@@ -1,6 +1,6 @@
 import { LINKS } from "@config/routes/links";
 import { PICTURES } from "@config/assets";
-import type { CertListType } from "@typing/CertificationsType";
+import type { CertListType } from "@src/types/pages/CertificationsType";
 
 export const CERTIFICATIONS = {
     arpels: {

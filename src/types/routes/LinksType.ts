@@ -3,6 +3,11 @@ export type SystemLinksType = Record<("domain" | "pfp" | "logo"), string> &
     { API: Record<("google_analytics" | "wallet_apple" | "wallet_google" | "resend" | "webfinger" | "webmention"), string>; }
 
 export type GeneralLinksType = {
+    profiles: Record<(
+        "coursera" | "credly" | "edx" | "figma" | "github" | "gravatar" | "googledev"
+        | "handshake" | "khanacademy" | "linkedin" | "merit" | "orcid" | "peoplecert" | "quizlet"
+    ), string>,
+    projects: Record<("arctos" | "github_portfolio" | "hu_remembers" | "hu_bison" | "hu_kiosk"), string>;
     organizations: Record<(
         "abet" | "arpels" | "asgc" | "ieee" | "ncees" |  "sidimaqsa" | "wisp"
     ), string>
@@ -11,10 +16,6 @@ export type GeneralLinksType = {
             "main" | "engineering" | "math" | "asi" | "honors" | "arc"
         ), string>;
     },
-    profiles: Record<(
-        "coursera" | "credly" | "edx" | "figma" | "github" | "gravatar" | "googledev"
-        | "handshake" | "khanacademy" | "linkedin" | "merit" | "orcid" | "peoplecert" | "quizlet"
-    ), string>,
     certifications: {
         aha: Record<("main" | "award"), string>;
         coursera: Record<("main" | "profile" | "award"), string>;

@@ -1,8 +1,8 @@
 import { METADATA } from "@config/meta";
 import { PERSONAL } from "@config/personal";
-import type { VanityNamesType } from "@typing/VanityType";
+import type { VanityNamesType } from "@src/types/routes/VanityType";
 import type { AdmittedLanguagesType } from "@typing/LocalesType";
-import type { DirectoryPageSlugsType, UnlocalizedPageNamesType } from "@typing/PagesType";
+import type { DirectoryPageSlugsType, UnlocalizedPageNamesType } from "@src/types/routes/PagesType";
 
 // SEO Metadata Generator for pages.ts SSOT & Dynamic canonical localized URL Generator
 const root = METADATA.officialRoot;

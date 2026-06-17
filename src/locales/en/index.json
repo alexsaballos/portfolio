@@ -41,7 +41,8 @@
                 "web": "Web",
                 "frameworks": "Frameworks",
                 "databases": "Databases",
-                "operations": "Operations"
+                "operations": "Operations",
+                "api": "API"
             }
         },
         "technologies": {
@@ -60,6 +61,9 @@
             "directus": "Administration Panel used in Content Management",
             "embedded": "Low-Level Programming used in Embedded Systems",
             "flask": "Framework used in Backend",
+            "google_analytics": "API used in Web Development",
+            "google_maps": "API used in Web Development",
+            "google_wallet": "API used in Web Development",
             "html": "Markup Language used in Web Development",
             "java": "Programming Language used in Desktop Apps",
             "javascript": "Programming Language used in Web Development",
@@ -73,6 +77,8 @@
             "python": "Programming Language used in Backend & Robotics",
             "raspberrypi": "Hardware Platform used in Robotics",
             "react": "UI Library used in Web Development",
+            "resend": "API used in Web Development",
+            "sass": "Style Sheets used in Web Development",
             "sketchup": "Engineering CAD Tool used in 3D Modeling",
             "sqlite": "Relational Database used in Backend",
             "tailwindcss": "CSS Library used in Web Development",
@@ -219,6 +225,90 @@
                     "verification": "HU Merit Pages"
                 }
             ]
+        }
+    },
+    "projects": {
+        "texts": {
+            "software": {
+                "title": "Software Engineering",
+                "description": "Web applications, business systems, APIs, desktop software, and full-stack engineering projects"
+            },
+            "electrical": {
+                "title": "Electrical & Embedded Engineering",
+                "description": "PCB design, embedded systems, robotics, firmware, and hardware-focused engineering projects"
+            },
+            "categories": {
+                "business": "Business",
+                "electrical_engineering": "Electrical Engineering",
+                "embedded_systems": "Embedded Systems",
+                "software_engineering": "Software Engineering",
+                "web_development": "Web Development",
+                "robotics": "Robotics"
+            },
+            "privacy": {
+                "public": "Public",
+                "private": "Private"
+            },
+            "client": {
+                "personal": "Personal",
+                "academic": "Academic",
+                "contract": "Contract"
+            },
+            "status": {
+                "completed": "Completed",
+                "ongoing": "Ongoing",
+                "maintained": "Maintained"
+            },
+            "featured": "Flagship",
+            "links": {
+                "website": "Website",
+                "github": "Read Code",
+                "video": "Watch Videos"
+            }
+        },
+        "pcs": {
+            "title": "SIDIMAQSA's Control Panel (PCS)",
+            "summary": "Brief description placeholder"
+        },
+        "portfolio": {
+            "title": "My Professional Portfolio",
+            "summary": "Brief description placeholder"
+        },
+        "sidimaqsa": {
+            "title": "SIDIMAQSA's Website",
+            "summary": "Brief description placeholder"
+        },
+        "atx": {
+            "title": "Automatic Tool Exchanger (ATX)",
+            "summary": "Brief description placeholder"
+        },
+        "arctos": {
+            "title": "ARCTOS Robotic Arm",
+            "summary": "Brief description placeholder"
+        },
+        "maze_robot": {
+            "title": "Maze Navigator Robot",
+            "summary": "Brief description placeholder"
+        },
+        "asgc": {
+            "title": "Scaled-down Autonomous Car",
+            "summary": "Brief description placeholder"
+        },
+        "digital_clock": {
+            "title": "Digital Clock made of Logic Gates",
+            "summary": "Brief description placeholder"
+        },
+        "hu_remembers": {
+            "title": "HU Emblem Searcher",
+            "summary": "Brief description placeholder"
+        },
+        "hu_bison": {
+            "title": "'The Bison' HU Newspaper Searcher",
+            "summary": "Brief description placeholder"
+        },
+        "hu_kiosk": {
+            "title": "HU Centennial Anniversary Kiosk",
+            "summary": "Brief description placeholder"
         }
     },
     "contact": {

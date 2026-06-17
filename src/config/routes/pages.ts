@@ -2,7 +2,7 @@ import { SEO } from "@config/routes/routing";
 import { PICTURES } from "@config/assets";
 import { PERSONAL } from "@config/personal";
 
-import type { DirectoryPagesListType, LocalizedPagesListType, NavigationPagesListType, UnlocalizedPagesListType } from "@typing/PagesType";
+import type { DirectoryPagesListType, LocalizedPagesListType, NavigationPagesListType, UnlocalizedPagesListType } from "@src/types/routes/PagesType";
 
 export const PAGES = {
 	home: {

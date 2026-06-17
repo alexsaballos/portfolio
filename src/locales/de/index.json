@@ -41,7 +41,8 @@
                 "web": "Web",
                 "frameworks": "Frameworks",
                 "databases": "Datenbanken",
-                "operations": "Betrieb"
+                "operations": "Betrieb",
+                "api": "API"
             }
         },
         "technologies": {
@@ -60,6 +61,9 @@
             "directus": "Administrationspanel verwendet im Content-Management",
             "embedded": "Low-Level-Programmierung für Embedded-Systeme",
             "flask": "Framework verwendet im Backend",
+            "google_analytics": "API, die in der Webentwicklung verwendet wird",
+            "google_maps": "API, die in der Webentwicklung verwendet wird",
+            "google_wallet": "API, die in der Webentwicklung verwendet wird",
             "html": "Markup-Sprache verwendet in Webentwicklung",
             "java": "Programmiersprache verwendet in Desktop-Anwendungen",
             "javascript": "Programmiersprache verwendet in Webentwicklung",
@@ -73,6 +77,8 @@
             "python": "Programmiersprache verwendet im Backend und Robotik",
             "raspberrypi": "Hardwareplattform verwendet in Robotik",
             "react": "UI-Bibliothek verwendet in Webentwicklung",
+            "resend": "API, die in der Webentwicklung verwendet wird",
+            "sass": "Stylesheets, die in der Webentwicklung verwendet werden",
             "sketchup": "Ingenieur-CAD-Tool verwendet in 3D-Modellierung",
             "sqlite": "Relationale Datenbank verwendet im Backend",
             "tailwindcss": "CSS-Bibliothek verwendet in Webentwicklung",
@@ -219,6 +225,90 @@
                     "verification": "HU-Verdienstseiten"
                 }
             ]
+        }
+    },
+    "projects": {
+        "texts": {
+            "software": {
+                "title": "Softwareentwicklung",
+                "description": "Webanwendungen, Business-Systeme, APIs, Desktop-Software und Full-Stack-Engineering-Projekte"
+            },
+            "electrical": {
+                "title": "Elektro- & Embedded-Engineering",
+                "description": "Leiterplatten-Design, eingebettete Systeme, Robotik, Firmware und hardwareorientierte Engineering-Projekte"
+            },
+            "categories": {
+                "business": "Business",
+                "electrical_engineering": "Elektrotechnik",
+                "embedded_systems": "Eingebettete Systeme",
+                "software_engineering": "Softwareentwicklung",
+                "web_development": "Webentwicklung",
+                "robotics": "Robotik"
+            },
+            "privacy": {
+                "public": "Öffentlich",
+                "private": "Privat"
+            },
+            "client": {
+                "personal": "Persönlich",
+                "academic": "Akademisch",
+                "contract": "Auftragsarbeit"
+            },
+            "status": {
+                "completed": "Abgeschlossen",
+                "ongoing": "Laufend",
+                "maintained": "Gepflegt"
+            },
+            "featured": "Flaggschiff",
+            "links": {
+                "website": "Website",
+                "github": "Code ansehen",
+                "video": "Videos ansehen"
+            }
+        },
+        "pcs": {
+            "title": "Bedienfeld (PCS) von SIDIMAQSA",
+            "summary": "Platzhalter für Kurzbeschreibung"
+        },
+        "portfolio": {
+            "title": "Mein professionelles Portfolio",
+            "summary": "Platzhalter für Kurzbeschreibung"
+        },
+        "sidimaqsa": {
+            "title": "Website von SIDIMAQSA",
+            "summary": "Platzhalter für Kurzbeschreibung"
+        },
+        "atx": {
+            "title": "Automatischer Werkzeugwechsler (ATX)",
+            "summary": "Platzhalter für Kurzbeschreibung"
+        },
+        "arctos": {
+            "title": "ARCTOS Roboterarm",
+            "summary": "Platzhalter für Kurzbeschreibung"
+        },
+        "maze_robot": {
+            "title": "Labyrinth-Navigator-Roboter",
+            "summary": "Platzhalter für Kurzbeschreibung"
+        },
+        "asgc": {
+            "title": "Autonomes Auto im Kleinformat",
+            "summary": "Platzhalter für Kurzbeschreibung"
+        },
+        "digital_clock": {
+            "title": "Digitale Uhr aus Logikgattern",
+            "summary": "Platzhalter für Kurzbeschreibung"
+        },
+        "hu_remembers": {
+            "title": "HU-Emblem-Sucher",
+            "summary": "Platzhalter für Kurzbeschreibung"
+        },
+        "hu_bison": {
+            "title": "HU-Zeitungs-Sucher „The Bison“",
+            "summary": "Platzhalter für Kurzbeschreibung"
+        },
+        "hu_kiosk": {
+            "title": "Kiosk zum 100-jährigen HU-Jubiläum",
+            "summary": "Platzhalter für Kurzbeschreibung"
         }
     },
     "contact": {

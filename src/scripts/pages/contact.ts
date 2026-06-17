@@ -9,7 +9,7 @@ const loadingToast = document.getElementById("toast_loading");
 const errorToast = document.getElementById("toast_error");
 
 if (!form || !contactForm || !successScreen || !toastRoot || !loadingToast || !errorToast)
-    throw new Error("Missing elements on the DOM");
+    throw new Error("[CONTACT] Missing elements on the DOM");
 
 // Error toast showing function
 const showErrorStatus = () => {

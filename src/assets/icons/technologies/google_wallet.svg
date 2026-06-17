@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 640 640"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="google_wallet.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.3015625"
+     inkscape:cx="356.11044"
+     inkscape:cy="314.62185"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="1071"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <!--!Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+  <path
+     d="m 259.99974,204.64286 c 33.57142,54.10714 57.32142,100.98214 75.26785,145.08928 -7.41071,30.17857 -16.78571,59.375 -27.94643,87.76786 -11.78571,-46.69643 -23.66071,-90.44643 -50,-132.58929 5.80358,-32.5 2.05358,-65.71428 2.67858,-100.26785 z M 217.58902,270 h -83.21428 c -5.80358,0 -9.375,6.69643 -5.80358,11.33929 37.67858,48.48214 64.01786,105.17857 81.875,167.23214 h 92.41072 C 288.39259,386.33929 268.30331,329.19643 229.19616,275.80357 226.51759,272.23214 222.05331,270 217.58902,270 Z m 42.67857,-78.57143 C 321.42831,287.85714 376.33902,400.80357 383.66045,520 H 485.17831 C 474.46402,396.78571 424.10688,283.39286 357.32116,191.42857 Z M 485.08902,130.26786 C 483.48188,124.19643 477.76759,120 471.51759,120 h -78.83928 c -4.73215,0 -8.03572,4.46429 -6.96429,9.19643 11.78572,41.51786 19.91072,85.26786 23.66072,130.35714 43.03571,76.96429 71.16071,159.19643 80.89285,241.78572 14.10715,-54.01786 22.58929,-119.19643 22.58929,-181.25 0,-65.71429 -10.80357,-129.55358 -27.76786,-189.82143 z"
+     id="path1"
+     style="stroke-width:0.892857" />
+</svg>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   role="img"
+   viewBox="0 0 640 640"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="google_analytics.svg"
+   width="640"
+   height="640"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.0846354"
+     inkscape:cx="304.71068"
+     inkscape:cy="296.41296"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="1071"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <title
+     id="title1">Google Analytics</title>
+  <path
+     d="m 500.66551,169.97157 v 299.97699 c 0.14333,27.45488 -21.9949,49.82811 -49.44978,49.97311 a 49.679777,49.679777 0 0 1 -6.1283,-0.34667 c -25.46656,-3.76665 -44.12814,-25.92988 -43.50814,-51.66643 V 172.00823 c -0.615,-25.76322 18.09325,-47.93645 43.5948,-51.66643 27.26821,-3.19166 51.9631,16.32659 55.15475,43.59647 0.23334,2.00165 0.34667,4.01665 0.33667,6.03164 z m -311.7886,250.94221 c -27.36154,0 -49.54311,22.18323 -49.54311,49.54311 0,27.36155 22.18157,49.54311 49.54311,49.54311 27.36154,0 49.54311,-22.18156 49.54311,-49.54311 0,-27.36154 -22.18323,-49.54311 -49.54311,-49.54311 z M 320.08965,270.75112 c -0.28499,0 -0.56999,0 -0.85499,0.005 -27.49154,1.50666 -48.82145,24.56656 -48.18312,52.0931 v 133.07607 c 0,36.1165 15.8916,58.04141 39.17483,62.71638 26.86321,5.44331 53.05309,-11.91994 58.4964,-38.78315 0.66666,-3.28999 0.99999,-6.63831 0.98833,-9.99663 V 320.55423 c 0.05,-27.45654 -22.16657,-49.75311 -49.62145,-49.80311 z"
+     id="path1"
+     style="stroke-width:16.6666" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Google Analytics</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -8,7 +8,7 @@ import Avatar from "@ui/Avatar.astro";
 import Title from "@text/Title.astro";
 import CommonIcon from "@ui/CommonIcon.astro";
 
-import type { VanityNamesType } from "@typing/VanityType";
+import type { VanityNamesType } from "@src/types/routes/VanityType";
 
 export const getStaticPaths = () => Object.keys(VANITY).map(
     profile => ({ params: { profile }}));

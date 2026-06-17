@@ -12,27 +12,30 @@ const { t, l } = Astro.locals;
 <section id="categories" data-aos="fade-up" class="bg-base-100 pt-15 pb-10 px-5 lg:px-20">
     <Title title={t.categories.title} classname="mb-14" />
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-y-12 md:gap-x-5 lg:gap-x-5 lg:gap-y-12">
-        {Object.values(NAVIGATION_PAGES).map(entry => (
-            <div data-aos="zoom-in" class="relative select-none w-full">
-                <div class="absolute -top-7.5 left-1/2 -translate-x-1/2 z-1">
-                    <div class="rounded-full bg-primary p-3 shadow-none">
-                        <CommonIcon name={entry.frontend.icon} classname="text-white" />
-                    </div>
-                </div>
-                <a href={ROUTE.page(l, entry.metadata.slug)}>
-                    <div class="card image-full rounded-2xl h-64 md:h-72 lg:h-80 group ring-4 ring-base-300 hover:ring-6 hover:ring-primary">
-                        <figure>
-                            <Image src={entry.frontend.picture!} alt={t.navigation[entry.key]} class="transition-transform duration-500 ease-out group-hover:scale-110" />
-                        </figure>
-                        <div class="absolute w-full h-full rounded-2xl bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-                        <div class="card-body flex items-center justify-center relative">
-                            <div data-aos="fade-in" data-aos-delay="300" class="card-title text-2xl place-content-center text-white group-hover:font-bold group-hover:border-b-4 group-hover:border-secondary">
-                                {t.navigation[entry.key]}
-                            </div>
+        {Object.values(NAVIGATION_PAGES).map(entry => {
+            const translation = t.navigation[entry.key];
+            return(
+                <div data-aos="zoom-in" class="relative select-none w-full">
+                    <div class="absolute -top-7.5 left-1/2 -translate-x-1/2 z-1">
+                        <div class="rounded-full bg-primary p-3 shadow-none">
+                            <CommonIcon name={entry.frontend.icon} classname="text-white" />
                         </div>
                     </div>
-                </a>
-            </div>
-        ))}
+                    <a href={ROUTE.page(l, entry.metadata.slug)}>
+                        <div class="card image-full rounded-2xl h-64 md:h-72 lg:h-80 group ring-4 ring-base-300 hover:ring-6 hover:ring-primary">
+                            <figure>
+                                <Image src={entry.frontend.picture!} alt={translation} class="transition-transform duration-500 ease-out group-hover:scale-110" />
+                            </figure>
+                            <div class="absolute w-full h-full rounded-2xl bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                            <div class="card-body flex items-center justify-center relative">
+                                <div data-aos="fade-in" data-aos-delay="300" class="card-title text-2xl place-content-center text-white group-hover:font-bold group-hover:border-b-4 group-hover:border-secondary">
+                                    {translation}
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            )
+        })}
     </div>
 </section>

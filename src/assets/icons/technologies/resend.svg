@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   role="img"
+   viewBox="0 0 640 640"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="resend.svg"
+   width="640"
+   height="640"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.54231771"
+     inkscape:cx="403.82233"
+     inkscape:cy="321.76711"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="1071"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <title
+     id="title1">Resend</title>
+  <path
+     d="m 364.65,120 c 77.46667,0 123.55,46.08333 123.55,107.23333 0,61.15 -46.08333,107.23334 -123.55,107.23334 H 325.5 L 520,520 H 382.58333 l -148,-140.66667 c -10.6,-9.8 -15.5,-21.21666 -15.5,-31 0,-13.85 9.78334,-26.08333 28.55,-31.38333 l 76.23334,-20.4 C 352.81667,288.8 372.8,266.38333 372.8,237.01667 372.8,201.13333 343.45,180.35 307.15,180.35 H 120 V 120 Z"
+     id="path1"
+     style="stroke-width:16.6667" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Resend</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -1,4 +1,4 @@
-import type { GeneralLinksType, SystemLinksType } from "@typing/LinksType";
+import type { GeneralLinksType, SystemLinksType } from "@src/types/routes/LinksType";
 
 export const SYSTEM = {
     domain: "https://alexsaballos.dev",
@@ -19,6 +19,29 @@ export const SYSTEM = {
 } as const satisfies SystemLinksType;
 
 export const LINKS = {
+    profiles: {
+        coursera: "https://www.coursera.org/learner/alexsaballos",
+        credly: "https://www.credly.com/users/alexsaballos",
+        edx: "https://profile.edx.org/u/alexsaballos",
+        figma: "https://www.figma.com/@alexsaballos",
+        github: "https://github.com/alexsaballos",
+        gravatar: "https://gravatar.com/alexsaballos",
+        googledev: "https://g.dev/alexsaballos",
+        handshake: "https://app.joinhandshake.com/profiles/alexsaballos",
+        khanacademy: "https://www.khanacademy.org/profile/alexsaballosr",
+        linkedin: "https://www.linkedin.com/in/alexsaballosr/",
+        merit: "https://meritpages.com/alexsaballos",
+        orcid: "https://orcid.org/0009-0006-9378-4212",
+        peoplecert: "https://www.peoplecert.org/public-profile?ed=XCHu3ZqUTNJBe8JMoFGOl1FSa2IleHoP",
+        quizlet: "https://quizlet.com/user/alexsaballosr/"
+    },
+    projects: {
+        arctos: "https://arctosrobotics.com/",
+        github_portfolio: "https://github.com/alexsaballos/portfolio",
+        hu_remembers: "https://library.harding.edu/huremembers",
+        hu_bison: "https://library.harding.edu/thebison",
+        hu_kiosk: "https://digital.harding.edu:8080/hukiosk/"
+    },
     organizations: {
         abet: "https://www.abet.org/",
         arpels: "https://labor.arkansas.gov/licensing/state-board-of-licensure-for-professional-engineers-and-professional-surveyors/engineer-intern-ei-licensure-overview/",
@@ -35,22 +58,6 @@ export const LINKS = {
         ncees: "https://ncees.org/outreach/ncees-graduation-honor-cords/",
         sidimaqsa: "https://sidimaqsa.com/",
         wisp: "https://www.wispweb.org/"
-    },
-    profiles: {
-        coursera: "https://www.coursera.org/learner/alexsaballos",
-        credly: "https://www.credly.com/users/alexsaballos",
-        edx: "https://profile.edx.org/u/alexsaballos",
-        figma: "https://www.figma.com/@alexsaballos",
-        github: "https://github.com/alexsaballos",
-        gravatar: "https://gravatar.com/alexsaballos",
-        googledev: "https://g.dev/alexsaballos",
-        handshake: "https://app.joinhandshake.com/profiles/alexsaballos",
-        khanacademy: "https://www.khanacademy.org/profile/alexsaballosr",
-        linkedin: "https://www.linkedin.com/in/alexsaballosr/",
-        merit: "https://meritpages.com/alexsaballos",
-        orcid: "https://orcid.org/0009-0006-9378-4212",
-        peoplecert: "https://www.peoplecert.org/public-profile?ed=XCHu3ZqUTNJBe8JMoFGOl1FSa2IleHoP",
-        quizlet: "https://quizlet.com/user/alexsaballosr/"
     },
     certifications: {
         aha: {

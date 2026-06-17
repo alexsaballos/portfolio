@@ -13,7 +13,7 @@ import ContactSection from "@sections/contact/ContactSection.astro";
 import Navbar from "@widgets/Navbar.astro";
 
 import type { AdmittedLanguagesType } from "@typing/LocalesType";
-import type { NavigationPageNamesType } from "@typing/PagesType";
+import type { NavigationPageNamesType } from "@src/types/routes/PagesType";
 
 export const getStaticPaths = () =>
     Object.keys(LANGUAGES).flatMap(lang => (

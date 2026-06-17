@@ -1,5 +1,5 @@
 import { PERSONAL } from "@config/personal";
-import type { ErrorsListType } from "@typing/ErrorsType";
+import type { ErrorsListType } from "@src/types/routes/ErrorsType";
 
 export const ERRORS = {
     400: {

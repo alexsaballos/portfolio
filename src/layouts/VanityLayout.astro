@@ -7,7 +7,7 @@ import CommonHead from "@layouts/CommonHead.astro";
 import { METADATA } from '@config/meta';
 import { getLocaleMessages } from '@locales/utils';
 
-import type { VanityNamesType } from '@typing/VanityType';
+import type { VanityNamesType } from '@src/types/routes/VanityType';
 
 // Layout parametrization for every page
 const profile = Astro.props.profile as VanityNamesType;

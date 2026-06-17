@@ -1,6 +1,6 @@
 import { LINKS } from "@config/routes/links";
 import { PICTURES } from "@config/assets";
-import type { HonorsSSOT } from "@typing/HonorsType";
+import type { HonorsSSOT } from "@src/types/pages/HonorsType";
 
 export const HONORS = {
     ncees: {

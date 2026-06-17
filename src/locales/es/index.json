@@ -41,7 +41,8 @@
                 "web": "Web",
                 "frameworks": "Frameworks",
                 "databases": "Bases de Datos",
-                "operations": "Operaciones"
+                "operations": "Operaciones",
+                "api": "API"
             }
         },
         "technologies": {
@@ -60,6 +61,9 @@
             "directus": "Panel de Administración usado en Backend",
             "embedded": "Programación de Bajo Nivel en Sistemas Embebidos",
             "flask": "Framework usado en Backend",
+            "google_analytics": "API usada en Desarrollo Web",
+            "google_maps": "API usada en Desarrollo Web",
+            "google_wallet": "API usada en Desarrollo Web",
             "html": "Lenguaje de Marcado usado en Desarrollo Web",
             "java": "Lenguaje de Programación usado en Apps de Escritorio",
             "javascript": "Lenguaje de Programación usado en Desarrollo Web",
@@ -73,6 +77,8 @@
             "python": "Lenguaje de Programación usado en Backend & Robótica",
             "raspberrypi": "Plataforma de Hardware usada en Robótica",
             "react": "Libería UI usada en Desarrollo Web",
+            "resend": "API usada en Desarrollo Web",
+            "sass": "Sheets de Estilo usadas en Desarrollo Web",
             "sketchup": "Herramienta CAD usada en Modelado 3D",
             "sqlite": "Base de Datos Relacional usada en Backend",
             "tailwindcss": "Libería CSS usada en Desarrollo Web",
@@ -219,6 +225,90 @@
                     "verification": "Páginas de Mérito HU"
                 }
             ]
+        }
+    },
+    "projects": {
+        "texts": {
+            "software": {
+                "title": "Ingeniería de software",
+                "description": "Aplicaciones Web, sistemas de negocios, APIs, software de escritorio y proyectos de ingeniería full stack"
+            },
+            "electrical": {
+                "title": "Ingeniería eléctrica y embebida",
+                "description": "Diseño de PCB, sistemas embebidos, robótica, firmware, y proyectos de ingeniería enfocados en hardware"
+            },
+            "categories": {
+                "business": "Negocios",
+                "electrical_engineering": "Ingeniería eléctrica",
+                "embedded_systems": "Sistemas embebidos",
+                "software_engineering": "Ingeniería de software",
+                "web_development": "Desarrollo web",
+                "robotics": "Robótica"
+            },
+            "privacy": {
+                "public": "Público",
+                "private": "Privado"
+            },
+            "client": {
+                "personal": "Personal",
+                "academic": "Académico",
+                "contract": "Contrato"
+            },
+            "status": {
+                "completed": "Completado",
+                "ongoing": "En progreso",
+                "maintained": "Mantenimiento"
+            },
+            "featured": "Destacado",
+            "links": {
+                "website": "Sitio web",
+                "github": "Ver Código",
+                "video": "Ver Videos"
+            }
+        },
+        "pcs": {
+            "title": "Panel de Control de SIDIMAQSA (PCS)",
+            "summary": "Aqui va una descripcion breve"
+        },
+        "portfolio": {
+            "title": "Mi portafolio profesional",
+            "summary": "Aqui va una descripcion breve"
+        },
+        "sidimaqsa": {
+            "title": "Sitio web de SIDIMAQSA",
+            "summary": "Aqui va una descripcion breve"
+        },
+        "atx": {
+            "title": "Intercambiador automático de Herramientas (ATX)",
+            "summary": "Aqui va una descripcion breve"
+        },
+        "arctos": {
+            "title": "Brazo Robótico ARCTOS",
+            "summary": "Aqui va una descripcion breve"
+        },
+        "maze_robot": {
+            "title": "Robot navegador de laberintos",
+            "summary": "Aqui va una descripcion breve"
+        },
+        "asgc": {
+            "title": "Auto autónomo a escala",
+            "summary": "Aqui va una descripcion breve"
+        },
+        "digital_clock": {
+            "title": "Reloj digital de compuertas lógicas",
+            "summary": "Aqui va una descripcion breve"
+        },
+        "hu_remembers": {
+            "title": "Buscador de emblemas de HU",
+            "summary": "Aqui va una descripcion breve"
+        },
+        "hu_bison": {
+            "title": "Buscador del periódico de HU 'The Bison'",
+            "summary": "Aqui va una descripcion breve"
+        },
+        "hu_kiosk": {
+            "title": "Quiosco del centenario de HU",
+            "summary": "Aqui va una descripcion breve"
         }
     },
     "contact": {

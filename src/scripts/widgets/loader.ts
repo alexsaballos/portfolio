@@ -1,6 +1,6 @@
 const bar = document.getElementById('loading-bar');
 const container = document.getElementById('loading-bar-container');
-if (!bar || !container) throw new Error("Missing elements in DOM");
+if (!bar || !container) throw new Error("[LOADER] Missing elements in DOM");
 
 const finishLoading = () => {
     // 1. Instantly snap from the pseudo-loading state (90%) to completion (100%)

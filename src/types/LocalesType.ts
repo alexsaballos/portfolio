@@ -1,9 +1,10 @@
 import type {
     TechnologiesCoreSubheadersType, TechnologiesNamesType, TechnologiesProductionSubheadersType
 } from "@typing/AssetsType";
-import type { LOChonorsType } from "@typing/HonorsType";
-import type { CertLocaleType } from "./CertificationsType";
-import type { DirectoryPageNamesType, NavigationPageNamesType } from "@typing/PagesType";
+import type { LOChonorsType } from "@src/types/pages/HonorsType";
+import type { CertLocaleType } from "@src/types/pages/CertificationsType";
+import type { DirectoryPageNamesType, NavigationPageNamesType } from "@src/types/routes/PagesType";
+import type { LOCprojectsType } from "@src/types/pages/ProjectsType";
 
 export type AdmittedLanguagesType = "de" | "en" | "es";
 export type AdmittedCountriesType = "de" | "us" | "mx";
@@ -45,6 +46,7 @@ export type LocalesType = {
     navigation: Record<NavigationPageNamesType, string>,
     footer: Record<"copyright" | "protocol" | "hosting" | "here", string>;
     coming_soon: Record<("p1" | "p2"), string>;
+    projects: LOCprojectsType;
     certifications: {
         texts: Record<("title" | "description" | "resources" | "active" | "completed" | "progress" | "planned" | "laude" | "honors"), string>;
     } & CertLocaleType;

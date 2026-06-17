@@ -8,7 +8,7 @@ const shareButton = document.getElementById("card_button_share");
 const gwButton = document.getElementById("gw_button");
 
 if (!successToast || !copyButton || !shareButton || !gwButton)
-    throw new Error("Missing elements on the DOM");
+    throw new Error("[CARD] Missing elements on the DOM");
 
 // Toast showing function on click
 copyButton.addEventListener("click", async () => {

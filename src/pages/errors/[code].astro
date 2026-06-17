@@ -3,7 +3,7 @@ import { ERRORS } from "@config/routes/errors";
 import { METADATA } from "@config/meta";
 import { ROUTE } from "@config/routes/routing";
 import ErrorLayout from "@layouts/ErrorLayout.astro";
-import type { ErrorsCodeType } from "@typing/ErrorsType";
+import type { ErrorsCodeType } from "@src/types/routes/ErrorsType";
 
 export const getStaticPaths = () => Object.keys(ERRORS).map(
     code => ({ params: { code }}));

@@ -2,7 +2,7 @@
 const url = document.getElementById("countdownVanityContainer")!.dataset.url as string;
 const countdownText = document.getElementById("countdownVanitySpan");
 
-if (!url || !countdownText) throw new Error("Missing elements on the DOM");
+if (!url || !countdownText) throw new Error("[VANITY] Missing elements on the DOM");
 
 // Wait 2s for AOS to settle & start 1s counting interval
 let seconds = 3;
