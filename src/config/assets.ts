@@ -5,7 +5,7 @@ import type {
 } from "@typing/AssetsType";
 
 // Picture used on OgImage & Intro.astro
-import pfpPicture from "@images/intro/pfp.jpg"
+import pfpPicture from "@images/intro/pfp.jpg";
 
 // Pictures used on LanguageGate.astro
 import de from "@images/flags/de.jpg";
@@ -13,26 +13,32 @@ import mx from "@images/flags/mx.jpg";
 import us from "@images/flags/us.jpg";
 
 // Pictures used on Categories.astro
-import projectsPicture from "@images/categories/projects.jpg"
-import experiencePicture from "@images/categories/experience.jpg"
-import leadershipPicture from "@images/categories/leadership.jpg"
-import certificationsPicture from "@images/categories/certifications.jpg"
-import honorsPicture from "@images/categories/honors.jpg"
-import contactPicture from "@images/categories/contact.jpg"
+import projectsPicture from "@images/categories/projects.jpg";
+import experiencePicture from "@images/categories/experience.jpg";
+import leadershipPicture from "@images/categories/leadership.jpg";
+import certificationsPicture from "@images/categories/certifications.jpg";
+import honorsPicture from "@images/categories/honors.jpg";
+import contactPicture from "@images/categories/contact.jpg";
 
 // TODO:
 // Pictures used on Projects.astro
+import portfolioPicture1 from "@images/projects/portfolio.png";
+import sidimaqsaPicture1 from "@images/projects/sidimaqsa.png";
+import huRemembersPicture1 from "@images/projects/hu_remembers.png";
+import huBisonPicture1 from "@images/projects/hu_bison.png";
+import huKioskicture1 from "@images/projects/hu_kiosk.png";
+
 // Pictures used on Experience.astro
 // Pictures used on Certifications.astro
-import iasscPicture from "@images/logos/iassc.png"
-import arpelsPicture from "@images/logos/arpels.png"
-import cs50Picture from "@images/logos/cs50.png"
-import courseraPicture from "@images/logos/coursera.png"
+import iasscPicture from "@images/logos/iassc.png";
+import arpelsPicture from "@images/logos/arpels.png";
+import cs50Picture from "@images/logos/cs50.png";
+import courseraPicture from "@images/logos/coursera.png";
 
 // Pictures used on Honors.astro
-import nceesPicture from "@images/logos/ncees.png"
-import huPicture from "@images/logos/hu.png"
-import wispPicture from "@images/logos/wisp.png"
+import nceesPicture from "@images/logos/ncees.png";
+import huPicture from "@images/logos/hu.png";
+import wispPicture from "@images/logos/wisp.png";
 
 const TECHNOLOGIES_COLORS = {
     embedded: "#D48D17",
@@ -75,6 +81,13 @@ export const PICTURES = {
         certifications: certificationsPicture,
         honors: honorsPicture,
         contact: contactPicture
+    },
+    projects: {
+        portfolio: portfolioPicture1,
+        sidimaqsa: sidimaqsaPicture1,
+        hu_remembers: huRemembersPicture1,
+        hu_bison: huBisonPicture1,
+        hu_kiosk: huKioskicture1
     },
     certifications: {
         iassc: iasscPicture,

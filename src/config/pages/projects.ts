@@ -1,12 +1,16 @@
 // Localized information: title, description, and other notes
+import { PICTURES } from "../assets";
 import { LINKS, SYSTEM } from "../routes/links";
 import type { ProjectsSSOT } from "@src/types/pages/ProjectsType";
+
+const projPics = PICTURES.projects;
+const tempPic = "https://picsum.photos/1200/800?";
 
 export const PROJECTS = {
     // Postgrad Projects
     pcs: {
         key: "pcs",
-        images: ["https://picsum.photos/1200/800?1"],
+        images: [`${tempPic}1`],
         stack: ["csharp", "javascript", "winui", "mysql", "cpanel", "php", "phpmyadmin"],
         categories: ["business", "software_engineering"],
         privacy: "private",
@@ -19,7 +23,7 @@ export const PROJECTS = {
     },
     portfolio: {
         key: "portfolio",
-        images: ["https://picsum.photos/1200/800?2"],
+        images: [projPics.portfolio],
         stack: ["astro", "tailwindcss", "daisyui", "typescript", "cpanel", "php", "resend", "google_wallet", "google_analytics"],
         categories: ["software_engineering", "web_development"],
         privacy: "public",
@@ -34,7 +38,7 @@ export const PROJECTS = {
     },
     sidimaqsa: {
         key: "sidimaqsa",
-        images: ["https://picsum.photos/1200/800?3"],
+        images: [projPics.sidimaqsa],
         stack: ["astro", "tailwindcss", "daisyui", "typescript", "cpanel", "php", "google_maps", "resend"],
         categories: ["business", "software_engineering", "web_development"],
         privacy: "private",
@@ -51,7 +55,7 @@ export const PROJECTS = {
     // ToDO: IntroToEngr, ProgForEngr, Instrumentation
     atx: {
         key: "atx",
-        images: ["https://picsum.photos/1200/800?4"],
+        images: [`${tempPic}4`],
         stack: ["embedded", "multisim", "ultiboard", "c", "autocad"],
         categories: ["electrical_engineering", "robotics", "embedded_systems"],
         privacy: "private",
@@ -64,7 +68,7 @@ export const PROJECTS = {
     },
     arctos: {
         key: "arctos",
-        images: ["https://picsum.photos/1200/800?5"],
+        images: [`${tempPic}5`],
         stack: ["arduino", "cpp"],
         categories: ["electrical_engineering", "robotics"],
         privacy: "private",
@@ -79,7 +83,7 @@ export const PROJECTS = {
     },
     maze_robot: {
         key: "maze_robot",
-        images: ["https://picsum.photos/1200/800?6"],
+        images: [`${tempPic}6`],
         stack: ["embedded", "multisim", "ultiboard", "c"],
         categories: ["electrical_engineering", "robotics", "embedded_systems"],
         privacy: "private",
@@ -92,7 +96,7 @@ export const PROJECTS = {
     },
     asgc: {
         key: "asgc",
-        images: ["https://picsum.photos/1200/800?7"],
+        images: [`${tempPic}7`],
         stack: ["opencv", "raspberrypi", "python", "embedded"],
         categories: ["electrical_engineering", "robotics", "embedded_systems"],
         privacy: "private",
@@ -107,7 +111,7 @@ export const PROJECTS = {
     },
     digital_clock: {
         key: "digital_clock",
-        images: ["https://picsum.photos/1200/800?8"],
+        images: [`${tempPic}8`],
         stack: ["embedded"],
         categories: ["electrical_engineering"],
         privacy: "private",
@@ -122,7 +126,7 @@ export const PROJECTS = {
     // HU Brackett Library
     hu_remembers: {
         key: "hu_remembers",
-        images: ["https://picsum.photos/1200/800?9"],
+        images: [projPics.hu_remembers],
         stack: ["react", "javascript", "axios", "directus", "bootstrap", "google_maps", "sass", "php" ],
         categories: ["software_engineering", "web_development"],
         privacy: "private",
@@ -137,7 +141,7 @@ export const PROJECTS = {
     },
     hu_bison: {
         key: "hu_bison",
-        images: ["https://picsum.photos/1200/800?10"],
+        images: [projPics.hu_bison],
         stack: ["react", "javascript", "axios", "antdesign", "php"],
         categories: ["software_engineering", "web_development"],
         privacy: "private",
@@ -152,7 +156,7 @@ export const PROJECTS = {
     },
     hu_kiosk: {
         key: "hu_kiosk",
-        images: ["https://picsum.photos/1200/800?11"],
+        images: [projPics.hu_kiosk],
         stack: ["react", "typescript", "php"],
         categories: ["software_engineering", "web_development"],
         privacy: "private",

@@ -3,6 +3,7 @@ import { PROJECTS } from "@config/pages/projects";
 import { TECHNOLOGIES } from "@src/config/assets";
 import CommonIcon from "@ui/CommonIcon.astro";
 import type { ProjectsCategoriesType, ProjectType } from "@src/types/pages/ProjectsType"
+import Image from "astro/components/Image.astro";
 
 const t = Astro.locals.t.projects;
 
@@ -172,7 +173,12 @@ const electricalProjects = projects.filter(p =>
                 <article class="card border border-base-300 bg-base-100 shadow-sm hover:shadow-lg transition-shadow">
 
                     <figure>
-                        <img src={project.images[0] as string} alt={t[project.key].title} class="aspect-video w-full object-cover"/>
+                        {typeof project.images[0] === "string"
+                            ? <img src={project.images[0] as string} alt={t[project.key].title}
+                                class="aspect-video w-full object-cover" />
+                            : <Image src={project.images[0] as ImageMetadata} alt={t[project.key].title}
+                                class="aspect-video w-full object-cover" />
+                        }                        
                     </figure>
 
                     <div class="card-body">

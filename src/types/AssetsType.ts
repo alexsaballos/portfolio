@@ -27,6 +27,9 @@ export type PicturesListType = {
     ogImage: string;
     PFP: ImageMetadata;
     categories: Record<NavigationPageNamesType, ImageMetadata>;
+    projects: Record<(
+        "portfolio" | "sidimaqsa" | "hu_remembers" | "hu_bison" | "hu_kiosk"
+    ), ImageMetadata>;
     certifications: Record<Exclude<CertsOrgListType, "hu">, ImageMetadata>;
     honors: Record<HonorsOrgListType, ImageMetadata>;
 }
