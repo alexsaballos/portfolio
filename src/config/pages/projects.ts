@@ -4,7 +4,6 @@ import { LINKS, SYSTEM } from "../routes/links";
 import type { ProjectsSSOT } from "@src/types/pages/ProjectsType";
 
 const projPics = PICTURES.projects;
-const tempPic = "https://picsum.photos/1200/800?";
 
 export const PROJECTS = {
     // Postgrad Projects
@@ -83,7 +82,7 @@ export const PROJECTS = {
     },
     maze_robot: {
         key: "maze_robot",
-        images: [`${tempPic}6`],
+        images: [projPics.maze_robot],
         stack: ["embedded", "multisim", "ultiboard", "c"],
         categories: ["electrical_engineering", "robotics", "embedded_systems"],
         privacy: "private",
@@ -111,7 +110,7 @@ export const PROJECTS = {
     },
     digital_clock: {
         key: "digital_clock",
-        images: [`${tempPic}8`],
+        images: [projPics.maze_robot],
         stack: ["embedded"],
         categories: ["electrical_engineering"],
         privacy: "private",

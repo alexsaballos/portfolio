@@ -26,6 +26,7 @@ import pcsPicture1 from "@images/projects/pcs.png";
 import portfolioPicture1 from "@images/projects/portfolio.png";
 import atxPicture1 from "@images/projects/atx.png";
 import arctosPicture1 from "@images/projects/arctos.png";
+import mazeRobotPicture1 from "@images/projects/maze_robot.png";
 import asgcPicture1 from "@images/projects/asgc.png";
 import sidimaqsaPicture1 from "@images/projects/sidimaqsa.png";
 import huRemembersPicture1 from "@images/projects/hu_remembers.png";
@@ -92,6 +93,7 @@ export const PICTURES = {
         sidimaqsa: sidimaqsaPicture1,
         atx: atxPicture1,
         arctos: arctosPicture1,
+        maze_robot: mazeRobotPicture1,
         asgc: asgcPicture1,
         hu_remembers: huRemembersPicture1,
         hu_bison: huBisonPicture1,
