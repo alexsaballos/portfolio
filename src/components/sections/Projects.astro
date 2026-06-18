@@ -31,10 +31,10 @@ const electricalProjects = projects.filter(p =>
         </div>
 
         <!-- HERO -->
-        <article class="hero rounded-box border border-base-300 bg-base-200 overflow-hidden">
+        <article data-aos="zoom-in" class="hero rounded-box border border-base-300 bg-base-200 overflow-hidden">
             <div class="hero-content flex-col lg:flex-row-reverse gap-10 p-8">
+                <Image src={electricalHero.images[0] as ImageMetadata} alt={t[electricalHero.key].title} class="aspect-video w-full max-w-2xl rounded-2xl object-cover shadow-xl" />
 
-                <img src={electricalHero.images[0] as string} alt={t[electricalHero.key].title} class="aspect-video w-full max-w-2xl rounded-2xl object-cover shadow-xl" />
                 <div class="flex-1">
                     <div class="mb-3 flex flex-wrap gap-2">
                         <div class="badge badge-primary rounded-full">{t.texts.featured}</div>
@@ -73,7 +73,7 @@ const electricalProjects = projects.filter(p =>
         <!-- GRID -->
         <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {electricalProjects.map((project: ProjectType) => (
-                <article class="card border border-base-300 bg-base-100 shadow-sm hover:shadow-lg transition-shadow">
+                <article data-aos="fade-up" class="card border border-base-300 bg-base-100 shadow-sm hover:shadow-lg transition-shadow">
                     <figure>
                         <img src={project.images[0] as string} alt={t[project.key].title} class="aspect-video w-full object-cover" />
                     </figure>
@@ -124,8 +124,7 @@ const electricalProjects = projects.filter(p =>
         </div>
 
         <!-- HERO -->
-        <article class="hero rounded-box border border-base-300 bg-base-200 overflow-hidden">
-
+        <article data-aos="zoom-in" class="hero rounded-box border border-base-300 bg-base-200 overflow-hidden">
             <div class="hero-content flex-col lg:flex-row gap-10 p-8">
                 <img src={softwareHero.images[0] as string} alt={t[softwareHero.key].title} class="aspect-video w-full max-w-2xl rounded-2xl object-cover shadow-xl"/>
                 <div class="flex-1">
@@ -170,16 +169,8 @@ const electricalProjects = projects.filter(p =>
         <!-- GRID -->
         <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {softwareProjects.map((project: ProjectType) => (
-                <article class="card border border-base-300 bg-base-100 shadow-sm hover:shadow-lg transition-shadow">
-
-                    <figure>
-                        {typeof project.images[0] === "string"
-                            ? <img src={project.images[0] as string} alt={t[project.key].title}
-                                class="aspect-video w-full object-cover" />
-                            : <Image src={project.images[0] as ImageMetadata} alt={t[project.key].title}
-                                class="aspect-video w-full object-cover" />
-                        }                        
-                    </figure>
+                <article data-aos="fade-up" class="card rounded-lg border border-base-300 bg-base-100 shadow-sm hover:shadow-lg transition-shadow">
+                    <Image src={project.images[0] as ImageMetadata} alt={t[project.key].title} class="rounded-t-lg aspect-video w-full object-cover" />
 
                     <div class="card-body">
                         <div class="flex items-start justify-between">

@@ -55,7 +55,7 @@ export const PROJECTS = {
     // ToDO: IntroToEngr, ProgForEngr, Instrumentation
     atx: {
         key: "atx",
-        images: [`${tempPic}4`],
+        images: [projPics.atx],
         stack: ["embedded", "multisim", "ultiboard", "c", "autocad"],
         categories: ["electrical_engineering", "robotics", "embedded_systems"],
         privacy: "private",

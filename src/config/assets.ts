@@ -23,6 +23,7 @@ import contactPicture from "@images/categories/contact.jpg";
 // TODO:
 // Pictures used on Projects.astro
 import portfolioPicture1 from "@images/projects/portfolio.png";
+import atxPicture1 from "@images/projects/atx.png";
 import sidimaqsaPicture1 from "@images/projects/sidimaqsa.png";
 import huRemembersPicture1 from "@images/projects/hu_remembers.png";
 import huBisonPicture1 from "@images/projects/hu_bison.png";
@@ -85,6 +86,7 @@ export const PICTURES = {
     projects: {
         portfolio: portfolioPicture1,
         sidimaqsa: sidimaqsaPicture1,
+        atx: atxPicture1,
         hu_remembers: huRemembersPicture1,
         hu_bison: huBisonPicture1,
         hu_kiosk: huKioskicture1
