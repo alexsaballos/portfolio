@@ -23,7 +23,7 @@ export const PROJECTS = {
     portfolio: {
         key: "portfolio",
         images: [projPics.portfolio],
-        stack: ["astro", "tailwindcss", "daisyui", "typescript", "cpanel", "php", "resend", "google_wallet", "google_analytics"],
+        stack: ["astro", "tailwindcss", "daisyui", "typescript", "html", "css", "cpanel", "php", "resend", "google_wallet", "google_analytics"],
         categories: ["software_engineering", "web_development"],
         privacy: "public",
         client: "personal",
@@ -38,7 +38,7 @@ export const PROJECTS = {
     sidimaqsa: {
         key: "sidimaqsa",
         images: [projPics.sidimaqsa],
-        stack: ["astro", "tailwindcss", "daisyui", "typescript", "cpanel", "php", "google_maps", "resend"],
+        stack: ["astro", "tailwindcss", "daisyui", "typescript", "html", "css", "cpanel", "php", "google_maps", "resend"],
         categories: ["business", "software_engineering", "web_development"],
         privacy: "private",
         client: "contract",
@@ -121,6 +121,19 @@ export const PROJECTS = {
         endDate: "2023",
         links: undefined
     },
+    habitar: {
+        key: "habitar",
+        images: [projPics.habitar],
+        stack: ["autocad", "sketchup"],
+        categories: ["electrical_engineering"],
+        privacy: "private",
+        client: "academic",
+        status: "completed",
+        featured: false,
+        startDate: "2020",
+        endDate: "2021",
+        links: undefined
+    },
 
     // HU Brackett Library
     hu_remembers: {
@@ -166,6 +179,36 @@ export const PROJECTS = {
         endDate: "2024",
         links: {
             website: LINKS.projects.hu_kiosk
+        }
+    },
+    cs50: {
+        key: "cs50",
+        images: [projPics.cs50],
+        stack: ["c", "html", "css", "python", "flask", "javascript"],
+        categories: ["software_engineering", "web_development"],
+        privacy: "private",
+        client: "academic",
+        status: "completed",
+        featured: false,
+        startDate: "2020",
+        endDate: "2020",
+        links: {
+            website: LINKS.certifications.cs50.main
+        }
+    },
+    duke: {
+        key: "duke",
+        images: [projPics.duke],
+        stack: ["java"],
+        categories: ["software_engineering", "web_development"],
+        privacy: "private",
+        client: "academic",
+        status: "completed",
+        featured: false,
+        startDate: "2020",
+        endDate: "2020",
+        links: {
+            website: LINKS.certifications.coursera.main
         }
     }
 } as const satisfies ProjectsSSOT;

@@ -298,6 +298,10 @@
             "title": "Logic Gates Digital Clock",
             "summary": "Brief description placeholder"
         },
+        "habitar": {
+            "title": "AutoCAD + SketchUp Projects",
+            "summary": "Brief description placeholder"
+        },
         "hu_remembers": {
             "title": "HU Emblem Searcher",
             "summary": "Brief description placeholder"
@@ -308,6 +312,14 @@
         },
         "hu_kiosk": {
             "title": "HU Centennial Anniversary Kiosk",
+            "summary": "Brief description placeholder"
+        },
+        "cs50": {
+            "title": "CS50 PSets + Final Project",
+            "summary": "Brief description placeholder"
+        },
+        "duke": {
+            "title": "Duke PSets + Final Honors Project",
             "summary": "Brief description placeholder"
         }
     },

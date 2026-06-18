@@ -298,6 +298,10 @@
             "title": "Digitale Uhr aus Logikgattern",
             "summary": "Platzhalter für Kurzbeschreibung"
         },
+        "habitar": {
+            "title": "AutoCAD + SketchUp Projekte",
+            "summary": "Brief description placeholder"
+        },
         "hu_remembers": {
             "title": "HU-Emblem-Sucher",
             "summary": "Platzhalter für Kurzbeschreibung"
@@ -308,6 +312,14 @@
         },
         "hu_kiosk": {
             "title": "Kiosk zum 100-jährigen HU-Jubiläum",
+            "summary": "Platzhalter für Kurzbeschreibung"
+        },
+        "cs50": {
+            "title": "CS50 PSets + Abschlussprojekt",
+            "summary": "Platzhalter für Kurzbeschreibung"
+        },
+        "duke": {
+            "title": "Duke PSets + Abschlussprojekt mit Auszeichnung",
             "summary": "Platzhalter für Kurzbeschreibung"
         }
     },

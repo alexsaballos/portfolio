@@ -28,10 +28,13 @@ import atxPicture1 from "@images/projects/atx.png";
 import arctosPicture1 from "@images/projects/arctos.png";
 import mazeRobotPicture1 from "@images/projects/maze_robot.png";
 import asgcPicture1 from "@images/projects/asgc.png";
+import habitarPicture1 from "@images/projects/habitar.png";
 import sidimaqsaPicture1 from "@images/projects/sidimaqsa.png";
 import huRemembersPicture1 from "@images/projects/hu_remembers.png";
 import huBisonPicture1 from "@images/projects/hu_bison.png";
-import huKioskicture1 from "@images/projects/hu_kiosk.png";
+import huKioskPicture1 from "@images/projects/hu_kiosk.png";
+import cs50Picture1 from "@images/projects/cs50.png";
+import dukePicture1 from "@images/projects/duke.png";
 
 // Pictures used on Experience.astro
 // Pictures used on Certifications.astro
@@ -95,9 +98,12 @@ export const PICTURES = {
         arctos: arctosPicture1,
         maze_robot: mazeRobotPicture1,
         asgc: asgcPicture1,
+        habitar: habitarPicture1,
         hu_remembers: huRemembersPicture1,
         hu_bison: huBisonPicture1,
-        hu_kiosk: huKioskicture1
+        hu_kiosk: huKioskPicture1,
+        cs50: cs50Picture1,
+        duke: dukePicture1
     },
     certifications: {
         iassc: iasscPicture,

@@ -29,8 +29,9 @@ export type PicturesListType = {
     categories: Record<NavigationPageNamesType, ImageMetadata>;
     projects: Record<(
         | "pcs" | "portfolio" | "sidimaqsa"
-        | "atx" | "arctos" | "maze_robot" | "asgc"
+        | "atx" | "arctos" | "maze_robot" | "asgc" | "habitar"
         | "hu_remembers" | "hu_bison" | "hu_kiosk"
+        | "cs50" | "duke"
     ), ImageMetadata>;
     certifications: Record<Exclude<CertsOrgListType, "hu">, ImageMetadata>;
     honors: Record<HonorsOrgListType, ImageMetadata>;
