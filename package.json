@@ -10,7 +10,7 @@
     "prod": "npm run build && npm run preview"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.18",
+    "@tailwindcss/vite": "^4.3.1",
     "aos": "^3.0.0-beta.6",
     "astro": "^6.4.4",
     "astro-icon": "^1.1.5",
