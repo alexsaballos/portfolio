@@ -10,7 +10,7 @@ export const PROJECTS = {
     // Postgrad Projects
     pcs: {
         key: "pcs",
-        images: [`${tempPic}1`],
+        images: [projPics.pcs],
         stack: ["csharp", "javascript", "winui", "mysql", "cpanel", "php", "phpmyadmin"],
         categories: ["business", "software_engineering"],
         privacy: "private",
@@ -68,7 +68,7 @@ export const PROJECTS = {
     },
     arctos: {
         key: "arctos",
-        images: [`${tempPic}5`],
+        images: [projPics.arctos],
         stack: ["arduino", "cpp"],
         categories: ["electrical_engineering", "robotics"],
         privacy: "private",
@@ -96,7 +96,7 @@ export const PROJECTS = {
     },
     asgc: {
         key: "asgc",
-        images: [`${tempPic}7`],
+        images: [projPics.asgc],
         stack: ["opencv", "raspberrypi", "python", "embedded"],
         categories: ["electrical_engineering", "robotics", "embedded_systems"],
         privacy: "private",

@@ -28,7 +28,7 @@ export type PicturesListType = {
     PFP: ImageMetadata;
     categories: Record<NavigationPageNamesType, ImageMetadata>;
     projects: Record<(
-        "portfolio" | "sidimaqsa" | "atx" | "hu_remembers" | "hu_bison" | "hu_kiosk"
+        | "pcs" | "portfolio" | "sidimaqsa" | "atx" | "arctos" | "asgc" | "hu_remembers" | "hu_bison" | "hu_kiosk"
     ), ImageMetadata>;
     certifications: Record<Exclude<CertsOrgListType, "hu">, ImageMetadata>;
     honors: Record<HonorsOrgListType, ImageMetadata>;

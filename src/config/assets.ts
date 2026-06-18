@@ -22,8 +22,11 @@ import contactPicture from "@images/categories/contact.jpg";
 
 // TODO:
 // Pictures used on Projects.astro
+import pcsPicture1 from "@images/projects/pcs.png";
 import portfolioPicture1 from "@images/projects/portfolio.png";
 import atxPicture1 from "@images/projects/atx.png";
+import arctosPicture1 from "@images/projects/arctos.png";
+import asgcPicture1 from "@images/projects/asgc.png";
 import sidimaqsaPicture1 from "@images/projects/sidimaqsa.png";
 import huRemembersPicture1 from "@images/projects/hu_remembers.png";
 import huBisonPicture1 from "@images/projects/hu_bison.png";
@@ -84,9 +87,12 @@ export const PICTURES = {
         contact: contactPicture
     },
     projects: {
+        pcs: pcsPicture1,
         portfolio: portfolioPicture1,
         sidimaqsa: sidimaqsaPicture1,
         atx: atxPicture1,
+        arctos: arctosPicture1,
+        asgc: asgcPicture1,
         hu_remembers: huRemembersPicture1,
         hu_bison: huBisonPicture1,
         hu_kiosk: huKioskicture1
