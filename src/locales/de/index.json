@@ -278,6 +278,10 @@
             "title": "Website von SIDIMAQSA",
             "summary": "Platzhalter für Kurzbeschreibung"
         },
+        "domotics": {
+            "title": "Arduino-Hausautomation",
+            "summary": "Platzhalter für Kurzbeschreibung"
+        },
         "atx": {
             "title": "Automatischer Werkzeugwechsler (ATX)",
             "summary": "Platzhalter für Kurzbeschreibung"

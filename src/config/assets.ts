@@ -24,6 +24,7 @@ import contactPicture from "@images/categories/contact.jpg";
 // Pictures used on Projects.astro
 import pcsPicture1 from "@images/projects/pcs.png";
 import portfolioPicture1 from "@images/projects/portfolio.png";
+import domoticsPicture1 from "@images/projects/domotics.png";
 import atxPicture1 from "@images/projects/atx.png";
 import arctosPicture1 from "@images/projects/arctos.png";
 import mazeRobotPicture1 from "@images/projects/maze_robot.png";
@@ -94,6 +95,7 @@ export const PICTURES = {
         pcs: pcsPicture1,
         portfolio: portfolioPicture1,
         sidimaqsa: sidimaqsaPicture1,
+        domotics: domoticsPicture1,
         atx: atxPicture1,
         arctos: arctosPicture1,
         maze_robot: mazeRobotPicture1,

@@ -278,6 +278,10 @@
             "title": "Sitio web de SIDIMAQSA",
             "summary": "Aqui va una descripcion breve"
         },
+        "domotics": {
+            "title": "Domótica con Arduino",
+            "summary": "Aqui va una descripcion breve"
+        },
         "atx": {
             "title": "Intercambiador automático de Herramientas (ATX)",
             "summary": "Aqui va una descripcion breve"

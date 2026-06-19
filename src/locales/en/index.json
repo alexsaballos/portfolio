@@ -278,6 +278,10 @@
             "title": "SIDIMAQSA's Website",
             "summary": "Brief description placeholder"
         },
+        "domotics": {
+            "title": "Arudino Domotics",
+            "summary": "Brief description placeholder"
+        },
         "atx": {
             "title": "Automatic Tool Exchanger (ATX)",
             "summary": "Brief description placeholder"

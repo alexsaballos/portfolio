@@ -52,6 +52,19 @@ export const PROJECTS = {
 
     // Electrical Engineering Projects
     // ToDO: IntroToEngr, ProgForEngr, Instrumentation
+    domotics: {
+        key: "domotics",
+        images: [projPics.domotics],
+        stack: ["arduino", "cpp"],
+        categories: ["electrical_engineering", "robotics"],
+        privacy: "private",
+        client: "personal",
+        status: "completed",
+        featured: false,
+        startDate: "2026",
+        endDate: "2026",
+        links: undefined
+    },
     atx: {
         key: "atx",
         images: [projPics.atx],
