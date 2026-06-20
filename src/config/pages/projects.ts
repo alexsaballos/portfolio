@@ -51,7 +51,7 @@ export const PROJECTS = {
     },
 
     // Electrical Engineering Projects
-    // ToDO: IntroToEngr, ProgForEngr, Instrumentation
+    // ToDO: IntroToEngr and Instrumentation
     domotics: {
         key: "domotics",
         images: [projPics.domotics],
@@ -81,7 +81,7 @@ export const PROJECTS = {
     arctos: {
         key: "arctos",
         images: [projPics.arctos],
-        stack: ["arduino", "electronics_digital", "cpp"],
+        stack: ["arduino", "electronics_analog", "electronics_digital", "cpp"],
         categories: ["electrical_engineering", "robotics"],
         privacy: "private",
         client: "academic",
@@ -134,10 +134,10 @@ export const PROJECTS = {
         endDate: "2023",
         links: undefined
     },
-    bison_math: {
-        key: "bison_math",
+    prog_engr: {
+        key: "prog_engr",
         images: [projPics.maze_robot],
-        stack: ["latex"],
+        stack: ["arduino", "cpp"],
         categories: ["electrical_engineering"],
         privacy: "private",
         client: "academic",
@@ -219,6 +219,19 @@ export const PROJECTS = {
         links: {
             website: LINKS.projects.hu_kiosk
         }
+    },
+    bison_math: {
+        key: "bison_math",
+        images: [projPics.maze_robot],
+        stack: ["latex"],
+        categories: ["software_engineering"],
+        privacy: "private",
+        client: "academic",
+        status: "completed",
+        featured: false,
+        startDate: "2022",
+        endDate: "2022",
+        links: undefined
     },
     cs50: {
         key: "cs50",

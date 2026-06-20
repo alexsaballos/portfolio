@@ -3,7 +3,7 @@ import type { TechnologiesNamesType } from "../AssetsType";
 // SSOT (Metadata) structure
 export type ProjectsNamesType =
 | "pcs" | "portfolio" | "sidimaqsa" | "atx" | "arctos" | "domotics"
-| "maze_robot" | "asgc" | "digital_clock" | "bison_math" | "habitar"
+| "maze_robot" | "asgc" | "digital_clock" | "prog_engr" | "bison_math" | "habitar"
 | "hu_remembers" | "hu_bison" | "hu_directus" | "hu_kiosk"
 | "cs50" | "duke";
 

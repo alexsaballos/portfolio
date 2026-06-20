@@ -307,6 +307,10 @@
             "title": "Reloj digital de compuertas lógicas",
             "summary": "Aqui va una descripcion breve"
         },
+        "prog_engr": {
+            "title": "Programación para Ingenieros con Arduino",
+            "summary": "Aqui va una descripcion breve"
+        },
         "bison_math": {
             "title": "Cálculo 2 en LaTeX",
             "summary": "Aqui va una descripcion breve"

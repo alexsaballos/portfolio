@@ -3,6 +3,7 @@ import { PROJECTS } from "@config/pages/projects";
 import { TECHNOLOGIES } from "@src/config/assets";
 
 import Image from "astro/components/Image.astro";
+import Title from "@ui/text/Title.astro";
 import CommonIcon from "@ui/CommonIcon.astro";
 
 import type { ProjectsCategoriesType, ProjectType } from "@src/types/pages/ProjectsType"
@@ -25,6 +26,15 @@ const electricalProjects = projects.filter(p =>
 ---
 
 <section class="container mx-auto max-w-7xl px-4 py-10 space-y-28">
+    <!-- Search Bar -->
+    <!-- <div class="flex flex-col items-center-safe gap-10">
+        <Title title="My projects" />
+        <label class="input input-xl rounded-full mx-auto sm:w-100 md:w-150 lg:w-200">
+            <CommonIcon name="shield" />
+            <input required type="search" placeholder="Search Project" />
+        </label>
+    </div> -->
+
     <!-- ELECTRICAL ENGINEERING -->
     <section class="space-y-10">
         <div class="group">

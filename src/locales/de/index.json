@@ -307,6 +307,10 @@
             "title": "Digitale Uhr aus Logikgattern",
             "summary": "Platzhalter für Kurzbeschreibung"
         },
+        "prog_engr": {
+            "title": "Programmierung für Ingenieure mit Arduino",
+            "summary": "Platzhalter für Kurzbeschreibung"
+        },
         "bison_math": {
             "title": "Analysis 2 in LaTeX",
             "summary": "Platzhalter für Kurzbeschreibung"
