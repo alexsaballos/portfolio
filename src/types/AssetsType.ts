@@ -44,12 +44,12 @@ export type TechnologiesProductionSubheadersType = "web" | "frameworks" | "datab
 export type TechnologiesSubheadersNames = TechnologiesCoreSubheadersType | TechnologiesProductionSubheadersType;
 
 export type TechnologiesNamesType =
-    | "antdesign" | "arduino" | "astro" | "autocad" | "axios" | "bootstrap"
-    | "c" | "cpanel" | "cpp" | "csharp" | "css" | "daisyui" | "directus"
-    | "embedded" | "flask" | "google_analytics" | "google_maps" | "google_wallet"
-    | "html" | "java" | "javascript" | "jinja" | "kicad" | "multisim" | "mysql" | "opencv"
-    | "php" | "phpmyadmin" | "python" | "raspberrypi" | "react" | "resend" | "sass"
-    | "sketchup" | "sqlite" | "tailwindcss" | "typescript" | "ultiboard" | "winui";
+    | "antdesign" | "arduino" | "astro" | "autocad" | "axios" | "bluetooth" | "bootstrap"
+    | "c" | "cpanel" | "cpp" | "csharp" | "css" | "daisyui" | "directus" | "electronics_analog"
+    | "electronics_digital" | "embedded" | "flask" | "google_analytics" | "google_maps" | "google_wallet"
+    | "html" | "java" | "javascript" | "jinja" | "kicad" | "latex" | "multisim" | "mysql"
+    | "nfc" | "opencv" | "php" | "phpmyadmin" | "python" | "raspberrypi" | "react" | "resend"
+    | "sass" | "sketchup" | "sqlite" | "tailwindcss" | "typescript" | "ultiboard" | "winui";
 
 export type TechnologiesKindType =
     | "programming_language" | "framework" | "library" | "hardware"

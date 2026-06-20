@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="640"
+   height="640"
+   viewBox="0 0 640 640"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="sound-square-wave-svgrepo-com.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.534375"
+     inkscape:cx="591.34503"
+     inkscape:cy="483.74269"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="1071"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1">
+    <style
+       id="style1">.cls-1{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:20px;}</style>
+  </defs>
+  <path
+     id="path1"
+     class="cls-1"
+     d="m 228.08594,311.64062 v -58.65419 c 0.005,-25.37742 -3.28395,-24.90049 22.09347,-24.90049 h 47.25146 c 25.38048,0 22.56482,-1.41566 22.56913,23.96482 l -0.46784,137.30199 c 0.005,25.38048 -1.52471,22.61201 23.85568,22.67827 l 44.79532,0.11696 c 25.37733,0.0662 23.72659,2.34827 23.7309,-23.02915 V 294.92969 M 512.1875,320 A 192.1875,192.1875 0 0 1 320,512.1875 192.1875,192.1875 0 0 1 127.8125,320 192.1875,192.1875 0 0 1 320,127.8125 192.1875,192.1875 0 0 1 512.1875,320 Z" />
+</svg>

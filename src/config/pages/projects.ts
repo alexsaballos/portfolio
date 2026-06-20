@@ -23,7 +23,7 @@ export const PROJECTS = {
     portfolio: {
         key: "portfolio",
         images: [projPics.portfolio],
-        stack: ["astro", "tailwindcss", "daisyui", "typescript", "html", "css", "cpanel", "php", "resend", "google_wallet", "google_analytics"],
+        stack: ["astro", "tailwindcss", "daisyui", "typescript", "html", "css", "cpanel", "php", "resend", "google_wallet", "google_analytics", "nfc"],
         categories: ["software_engineering", "web_development"],
         privacy: "public",
         client: "personal",
@@ -55,7 +55,7 @@ export const PROJECTS = {
     domotics: {
         key: "domotics",
         images: [projPics.domotics],
-        stack: ["arduino", "cpp"],
+        stack: ["arduino", "bluetooth", "electronics_digital", "cpp"],
         categories: ["electrical_engineering", "robotics"],
         privacy: "public",
         client: "personal",
@@ -68,7 +68,7 @@ export const PROJECTS = {
     atx: {
         key: "atx",
         images: [projPics.atx],
-        stack: ["embedded", "multisim", "ultiboard", "c", "autocad"],
+        stack: ["embedded", "electronics_analog", "electronics_digital", "multisim", "ultiboard", "c", "autocad"],
         categories: ["electrical_engineering", "robotics", "embedded_systems"],
         privacy: "private",
         client: "academic",
@@ -81,7 +81,7 @@ export const PROJECTS = {
     arctos: {
         key: "arctos",
         images: [projPics.arctos],
-        stack: ["arduino", "cpp"],
+        stack: ["arduino", "electronics_digital", "cpp"],
         categories: ["electrical_engineering", "robotics"],
         privacy: "private",
         client: "academic",
@@ -96,7 +96,7 @@ export const PROJECTS = {
     maze_robot: {
         key: "maze_robot",
         images: [projPics.maze_robot],
-        stack: ["embedded", "multisim", "ultiboard", "c"],
+        stack: ["embedded", "electronics_analog", "electronics_digital", "multisim", "ultiboard", "c"],
         categories: ["electrical_engineering", "robotics", "embedded_systems"],
         privacy: "private",
         client: "academic",
@@ -109,7 +109,7 @@ export const PROJECTS = {
     asgc: {
         key: "asgc",
         images: [projPics.asgc],
-        stack: ["opencv", "raspberrypi", "python", "embedded"],
+        stack: ["opencv", "raspberrypi", "embedded", "electronics_analog", "electronics_digital", "python"],
         categories: ["electrical_engineering", "robotics", "embedded_systems"],
         privacy: "private",
         client: "academic",
@@ -124,7 +124,7 @@ export const PROJECTS = {
     digital_clock: {
         key: "digital_clock",
         images: [projPics.maze_robot],
-        stack: ["embedded"],
+        stack: ["electronics_digital"],
         categories: ["electrical_engineering"],
         privacy: "private",
         client: "academic",
@@ -132,6 +132,19 @@ export const PROJECTS = {
         featured: false,
         startDate: "2023",
         endDate: "2023",
+        links: undefined
+    },
+    bison_math: {
+        key: "bison_math",
+        images: [projPics.maze_robot],
+        stack: ["latex"],
+        categories: ["electrical_engineering"],
+        privacy: "private",
+        client: "academic",
+        status: "completed",
+        featured: false,
+        startDate: "2022",
+        endDate: "2022",
         links: undefined
     },
     habitar: {

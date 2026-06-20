@@ -52,6 +52,7 @@
             "autocad": "Herramienta CAD usada en Diseño de Diagramas",
             "axios": "Libería API usada en Desarrollo Web",
             "bootstrap": "Libería UI usada en Desarrollo Web",
+            "bluetooth": "Tecnología de Comunicación",
             "c": "Lenguaje de Programación usado en Sistemas Embebidos",
             "cpanel": "Panel de Administración usado en Backend",
             "cpp": "Lenguaje de Programación usado en Apps de Escritorio",
@@ -59,6 +60,8 @@
             "css": "Sheets de Estilo usadas en Desarrollo Web",
             "daisyui": "Libería UI usada en Desarrollo Web",
             "directus": "Panel de Administración usado en Backend",
+            "electronics_analog": "Electrónica Análoga usada en Ingeniería Eléctrica",
+            "electronics_digital": "Electrónica Digital usada en Ingeniería Electrónica",
             "embedded": "Programación de Bajo Nivel en Sistemas Embebidos",
             "flask": "Framework usado en Backend",
             "google_analytics": "API usada en Desarrollo Web",
@@ -69,8 +72,10 @@
             "javascript": "Lenguaje de Programación usado en Desarrollo Web",
             "jinja": "Motor de Plantillas usado en Desarrollo Web",
             "kicad": "Herramienta CAD usada en Diseño de PCB",
+            "latex": "Lenguaje usado en Creación de Documentos",
             "multisim": "Simulador usado en Electrónica & Creación de Diagramas",
             "mysql": "Base de Datos Relacional usada en Backend",
+            "nfc": "Tecnología de Comunicación",
             "opencv": "Libería de Ópticas usada en Robótica",
             "php": "Lenguaje de Programación usado en Desarrollo Web",
             "phpmyadmin": "Panel de Administración usado en Backend",
@@ -300,6 +305,10 @@
         },
         "digital_clock": {
             "title": "Reloj digital de compuertas lógicas",
+            "summary": "Aqui va una descripcion breve"
+        },
+        "bison_math": {
+            "title": "Cálculo 2 en LaTeX",
             "summary": "Aqui va una descripcion breve"
         },
         "habitar": {

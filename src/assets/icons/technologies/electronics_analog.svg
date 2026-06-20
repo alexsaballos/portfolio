@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="640"
+   height="640"
+   viewBox="0 0 640 640"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="sine-sound-wave-svgrepo-com.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.06875"
+     inkscape:cx="336.84211"
+     inkscape:cy="340.11696"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="1071"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1">
+    <style
+       id="style1">.cls-1{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:20px;}</style>
+  </defs>
+  <path
+     id="circle1"
+     style="fill:none;stroke:#000000;stroke-width:15.625px;stroke-linecap:round;stroke-linejoin:round"
+     class="cls-1"
+     d="M 512.1875,320 A 192.1875,192.1875 0 0 1 320,512.1875 192.1875,192.1875 0 0 1 127.8125,320 192.1875,192.1875 0 0 1 320,127.8125 192.1875,192.1875 0 0 1 512.1875,320 Z M 174.875,304.3125 H 465.12501 M 198.41406,237.63281 c 60.78906,0 60.78906,164.73438 121.58594,164.73438 60.79687,0 60.79687,-164.73438 121.58594,-164.73438"
+     inkscape:label="path1" />
+</svg>

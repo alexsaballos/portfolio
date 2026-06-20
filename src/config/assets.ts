@@ -305,6 +305,13 @@ export const ICONS = {
         desc: "API Library used in Web Development",
         size: "md"
     },
+    bluetooth: {
+        name: "bluetooth",
+        group: "technologies",
+        title: "Bluetooth Logo",
+        desc: "Communication Technology",
+        size: "md"
+    },
     bootstrap: {
         name: "bootstrap",
         group: "technologies",
@@ -359,6 +366,20 @@ export const ICONS = {
         group: "technologies",
         title: "directus Logo",
         desc: "Administration Panel used in Content Management",
+        size: "md"
+    },
+    electronics_analog: {
+        name: "electronics_analog",
+        group: "technologies",
+        title: "Analog Electronics Icon",
+        desc: "Analog Electronics Analysis in Electrical Engineering",
+        size: "md"
+    },
+    electronics_digital: {
+        name: "electronics_digital",
+        group: "technologies",
+        title: "Digital Electronics Icon",
+        desc: "Digital Electronics Analysis in Electrical Engineering",
         size: "md"
     },
     embedded: {
@@ -431,6 +452,13 @@ export const ICONS = {
         desc: "Engineering CAD Tool used in PCB Creation",
         size: "md"
     },
+    latex: {
+        name: "latex",
+        group: "technologies",
+        title: "LaTeX Logo",
+        desc: "Language used in Document Creation",
+        size: "md"
+    },
     multisim: {
         name: "multisim",
         group: "technologies",
@@ -443,6 +471,13 @@ export const ICONS = {
         group: "technologies",
         title: "MySQL Logo",
         desc: "Relational Database used in Backend",
+        size: "md"
+    },
+    nfc: {
+        name: "nfc",
+        group: "technologies",
+        title: "NFC Logo",
+        desc: "Communication Technology",
         size: "md"
     },
     opencv: {
@@ -917,6 +952,22 @@ export const TECHNOLOGIES = {
             domains: ["web"]
         }
     },
+    bluetooth: {
+        visual: {
+            name: "Bluetooth",
+            color: TECHNOLOGIES_COLORS.embedded,
+            icon: "bluetooth"
+        },
+        hierarchy: {
+            tier: "core",
+            subheader: "embedded"
+        },
+        metadata: {
+            key: "bluetooth",
+            kind: "hardware",
+            domains: ["embedded"]
+        }
+    },
     c: {
         visual: {
             name: "C",
@@ -1027,6 +1078,38 @@ export const TECHNOLOGIES = {
             key: "directus",
             kind: "operating_tool",
             domains: ["backend", "operations"]
+        }
+    },
+    electronics_analog: {
+        visual: {
+            name: "Analog Electronics",
+            color: TECHNOLOGIES_COLORS.embedded,
+            icon: "electronics_analog"
+        },
+        hierarchy: {
+            tier: "core",
+            subheader: "embedded"
+        },
+        metadata: {
+            key: "electronics_analog",
+            kind: "hardware",
+            domains: ["embedded", "robotics"]
+        }
+    },
+    electronics_digital: {
+        visual: {
+            name: "Digital Electronics",
+            color: TECHNOLOGIES_COLORS.embedded,
+            icon: "electronics_digital"
+        },
+        hierarchy: {
+            tier: "core",
+            subheader: "embedded"
+        },
+        metadata: {
+            key: "electronics_digital",
+            kind: "hardware",
+            domains: ["embedded", "robotics"]
         }
     },
     embedded: {
@@ -1189,6 +1272,22 @@ export const TECHNOLOGIES = {
             domains: ["pcb", "cad"]
         }
     },
+    latex: {
+        visual: {
+            name: "LaTeX",
+            color: TECHNOLOGIES_COLORS.tools,
+            icon: "latex"
+        },
+        hierarchy: {
+            tier: "core",
+            subheader: "frameworks"
+        },
+        metadata: {
+            key: "latex",
+            kind: "framework",
+            domains: ["frontend", "operations"]
+        }
+    },
     multisim: {
         visual: {
             name: "MultiSim",
@@ -1219,6 +1318,22 @@ export const TECHNOLOGIES = {
             key: "mysql",
             kind: "database",
             domains: ["backend", "databases"]
+        }
+    },
+    nfc: {
+        visual: {
+            name: "NFC",
+            color: TECHNOLOGIES_COLORS.embedded,
+            icon: "nfc"
+        },
+        hierarchy: {
+            tier: "core",
+            subheader: "embedded"
+        },
+        metadata: {
+            key: "nfc",
+            kind: "hardware",
+            domains: ["embedded"]
         }
     },
     opencv: {

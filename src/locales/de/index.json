@@ -52,6 +52,7 @@
             "autocad": "Ingenieur-CAD-Tool verwendet in Diagrammerstellung",
             "axios": "API-Bibliothek verwendet in Webentwicklung",
             "bootstrap": "UI-Bibliothek verwendet in Webentwicklung",
+            "bluetooth": "Kommunikationstechnologie",
             "c": "Programmiersprache verwendet in Embedded-Systemen",
             "cpanel": "Administrationspanel verwendet im Backend-Management",
             "cpp": "Programmiersprache verwendet in Desktop-Anwendungen",
@@ -59,6 +60,8 @@
             "css": "Stylesheets verwendet in Webentwicklung",
             "daisyui": "UI-Bibliothek verwendet in Webentwicklung",
             "directus": "Administrationspanel verwendet im Content-Management",
+            "electronics_analog": "Analoge Elektronik in der Elektrotechnik",
+            "electronics_digital": "Digitale Elektronik in der Elektrotechnik",
             "embedded": "Low-Level-Programmierung für Embedded-Systeme",
             "flask": "Framework verwendet im Backend",
             "google_analytics": "API, die in der Webentwicklung verwendet wird",
@@ -69,8 +72,10 @@
             "javascript": "Programmiersprache verwendet in Webentwicklung",
             "jinja": "Template-Engine verwendet in Webentwicklung",
             "kicad": "Ingenieur-CAD-Tool verwendet in PCB-Erstellung",
+            "latex": "Sprache, die bei der Dokumentenerstellung verwendet wird",
             "multisim": "Simulationstool verwendet in Elektronik und Schaltplänen",
             "mysql": "Relationale Datenbank verwendet im Backend",
+            "nfc": "Kommunikationstechnologie",
             "opencv": "Optik-Bibliothek verwendet in Robotik",
             "php": "Programmiersprache verwendet in Webentwicklung",
             "phpmyadmin": "Administrationspanel verwendet im Backend-Management",
@@ -300,6 +305,10 @@
         },
         "digital_clock": {
             "title": "Digitale Uhr aus Logikgattern",
+            "summary": "Platzhalter für Kurzbeschreibung"
+        },
+        "bison_math": {
+            "title": "Analysis 2 in LaTeX",
             "summary": "Platzhalter für Kurzbeschreibung"
         },
         "habitar": {

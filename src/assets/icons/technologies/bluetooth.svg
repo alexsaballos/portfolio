@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   role="img"
+   viewBox="0 0 640 640"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="bluetooth.svg"
+   width="640"
+   height="640"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.1132813"
+     inkscape:cx="315.28421"
+     inkscape:cy="324.71579"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="1071"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <title
+     id="title1">Bluetooth</title>
+  <path
+     d="m 320,120 c -87.33333,0 -147.52666,41.49167 -147.52666,200 0,158.50833 60.19333,200 147.52666,200 87.33334,0 147.52666,-41.49167 147.52666,-200 C 467.52666,161.49167 407.33334,120 320,120 Z M 307.045,148.02667 410.625,251.60833 342.23333,320 410.625,388.39167 307.04501,491.97333 V 355.41667 l -56.96667,57 L 229.375,391.68 300.85833,320 229.375,248.32 250.07833,227.585 307.045,284.58333 Z m 29.13333,70.73666 v 66.145 l 33.07333,-33.07166 z m 0,136.36 v 66.11334 l 33.07333,-33.07334 z"
+     id="path1"
+     style="stroke-width:16.6667" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Bluetooth</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

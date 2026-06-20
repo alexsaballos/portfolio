@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   role="img"
+   viewBox="0 0 640 640"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="nfc.svg"
+   width="640"
+   height="640"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.1132813"
+     inkscape:cx="300.46316"
+     inkscape:cy="315.73333"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="1071"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <title
+     id="title1">NFC</title>
+  <path
+     d="m 519.29647,153.00433 c -1.04998,-16.33304 -13.58309,-28.73282 -30.21613,-29.71614 -18.36634,-1.09998 -77.79862,-1.99996 -94.88165,-1.99996 30.53279,21.06629 34.69938,60.73226 37.58267,134.43095 1.6833,43.66589 0.16666,196.64652 0.0333,203.12974 l -0.81665,41.7326 -160.4638,-160.49717 v -50.23244 l 127.59774,127.63108 c 0.33333,-25.26622 0.66665,-58.19898 0.66665,-88.31511 0,-29.33281 -0.43332,-55.89901 -1.26664,-69.8821 -4.79991,-80.31524 -12.28312,-117.94791 -54.21571,-132.69765 -12.8331,-4.49992 -24.78289,-5.58323 -44.71587,-5.84989 -16.46638,-0.2 -131.13102,-0.11667 -147.69739,0.78332 -17.56636,0.93331 -29.39948,13.71642 -30.19947,30.14946 -0.79998,16.28305 -1.06664,319.56102 0,336.07739 1.03332,16.33304 13.5831,28.73283 30.19947,29.69948 18.36634,1.11664 77.79862,1.24997 94.89832,1.24997 -30.53279,-21.06629 -34.71605,-60.71559 -37.58267,-134.43095 -1.66663,-43.6659 -0.14999,-196.66319 0,-203.12974 l 0.78332,-41.7326 160.4805,160.49716 v 50.21578 L 241.86805,222.53643 c -0.33333,25.23289 -0.66666,58.16564 -0.66666,88.29844 0,29.33282 0.43333,55.89901 1.28331,69.86543 4.79992,80.33192 12.26645,117.94792 54.19904,132.69766 12.83311,4.51658 24.7829,5.61656 44.71588,5.86656 16.44971,0.2 131.13101,0.1 147.68072,-0.78332 17.59969,-0.93332 29.41615,-13.69976 30.21613,-30.1828 0.79999,-16.26638 1.06665,-318.77769 0,-335.29407"
+     id="path1"
+     style="stroke-width:16.6664" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>NFC</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

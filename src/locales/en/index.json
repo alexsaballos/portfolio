@@ -51,6 +51,7 @@
             "astro": "Framework used in Web Development",
             "autocad": "Engineering CAD Tool used in Diagram Creation",
             "axios": "API Library used in Web Development",
+            "bluetooth": "Communication Technology",
             "bootstrap": "UI Library used in Web Development",
             "c": "Programming Language used in Embedded Systems",
             "cpanel": "Administration Panel used in Backend Management",
@@ -59,6 +60,8 @@
             "css": "Style Sheets used in Web Development",
             "daisyui": "UI Library used in Web Development",
             "directus": "Administration Panel used in Content Management",
+            "electronics_analog": "Analog Electronics used in Electrical Engineering",
+            "electronics_digital": "Digital Electronics used in Electrical Engineering",
             "embedded": "Low-Level Programming used in Embedded Systems",
             "flask": "Framework used in Backend",
             "google_analytics": "API used in Web Development",
@@ -69,8 +72,10 @@
             "javascript": "Programming Language used in Web Development",
             "jinja": "Templating Engine used in Web Development",
             "kicad": "Engineering CAD Tool used in PCB Creation",
+            "latex": "Language used in Document Creation",
             "multisim": "Simulation Tool used in Electronics & Schematics",
             "mysql": "Relational Database used in Backend",
+            "nfc": "Communication Technology",
             "opencv": "Optics Library used in Robotics",
             "php": "Programming Language used in Web Development",
             "phpmyadmin": "Administration Panel used in Backend Management",
@@ -300,6 +305,10 @@
         },
         "digital_clock": {
             "title": "Logic Gates Digital Clock",
+            "summary": "Brief description placeholder"
+        },
+        "bison_math": {
+            "title": "Calculus 2 in LaTeX",
             "summary": "Brief description placeholder"
         },
         "habitar": {
