@@ -57,7 +57,7 @@ export const PROJECTS = {
         images: [projPics.domotics],
         stack: ["arduino", "cpp"],
         categories: ["electrical_engineering", "robotics"],
-        privacy: "private",
+        privacy: "public",
         client: "personal",
         status: "completed",
         featured: false,
@@ -178,6 +178,19 @@ export const PROJECTS = {
         links: {
             website: LINKS.projects.hu_bison
         }
+    },
+    hu_directus: {
+        key: "hu_directus",
+        images: [projPics.hu_directus],
+        stack: ["react", "javascript", "directus", "mysql", "php"],
+        categories: ["software_engineering", "web_development"],
+        privacy: "private",
+        client: "contract",
+        status: "completed",
+        featured: false,
+        startDate: "2022",
+        endDate: "2025",
+        links: undefined
     },
     hu_kiosk: {
         key: "hu_kiosk",

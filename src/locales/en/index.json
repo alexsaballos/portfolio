@@ -314,6 +314,10 @@
             "title": "'The Bison' HU Newspaper Searcher",
             "summary": "Brief description placeholder"
         },
+        "hu_directus": {
+            "title": "HU Directus Implementations",
+            "summary": "Brief description placeholder"
+        },
         "hu_kiosk": {
             "title": "HU Centennial Anniversary Kiosk",
             "summary": "Brief description placeholder"

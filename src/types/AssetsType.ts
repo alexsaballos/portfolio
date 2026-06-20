@@ -30,7 +30,7 @@ export type PicturesListType = {
     projects: Record<(
         | "pcs" | "portfolio" | "sidimaqsa"
         | "domotics" | "atx" | "arctos" | "maze_robot" | "asgc" | "habitar"
-        | "hu_remembers" | "hu_bison" | "hu_kiosk"
+        | "hu_remembers" | "hu_bison" | "hu_directus" | "hu_kiosk"
         | "cs50" | "duke"
     ), ImageMetadata>;
     certifications: Record<Exclude<CertsOrgListType, "hu">, ImageMetadata>;

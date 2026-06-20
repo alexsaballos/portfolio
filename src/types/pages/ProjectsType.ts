@@ -4,7 +4,7 @@ import type { TechnologiesNamesType } from "../AssetsType";
 export type ProjectsNamesType =
 | "pcs" | "portfolio" | "sidimaqsa" | "atx" | "arctos" | "domotics"
 | "maze_robot" | "asgc" | "digital_clock" | "habitar"
-| "hu_remembers" | "hu_bison" | "hu_kiosk"
+| "hu_remembers" | "hu_bison" | "hu_directus" | "hu_kiosk"
 | "cs50" | "duke";
 
 export type ProjectsCategoriesType =

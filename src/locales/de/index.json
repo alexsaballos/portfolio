@@ -314,6 +314,10 @@
             "title": "HU-Zeitungs-Sucher „The Bison“",
             "summary": "Platzhalter für Kurzbeschreibung"
         },
+        "hu_directus": {
+            "title": "HU Directus-Implementierungen",
+            "summary": "Platzhalter für Kurzbeschreibung"
+        },
         "hu_kiosk": {
             "title": "Kiosk zum 100-jährigen HU-Jubiläum",
             "summary": "Platzhalter für Kurzbeschreibung"

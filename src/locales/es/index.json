@@ -314,6 +314,10 @@
             "title": "Buscador del periódico de HU 'The Bison'",
             "summary": "Aqui va una descripcion breve"
         },
+        "hu_directus": {
+            "title": "Implementaciones HU Directus",
+            "summary": "Aqui va una descripcion breve"
+        },
         "hu_kiosk": {
             "title": "Quiosco del centenario de HU",
             "summary": "Aqui va una descripcion breve"

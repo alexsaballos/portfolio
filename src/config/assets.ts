@@ -33,6 +33,7 @@ import habitarPicture1 from "@images/projects/habitar.png";
 import sidimaqsaPicture1 from "@images/projects/sidimaqsa.png";
 import huRemembersPicture1 from "@images/projects/hu_remembers.png";
 import huBisonPicture1 from "@images/projects/hu_bison.png";
+import huDirectusPicture1 from "@images/projects/hu_directus.png";
 import huKioskPicture1 from "@images/projects/hu_kiosk.png";
 import cs50Picture1 from "@images/projects/cs50.png";
 import dukePicture1 from "@images/projects/duke.png";
@@ -103,6 +104,7 @@ export const PICTURES = {
         habitar: habitarPicture1,
         hu_remembers: huRemembersPicture1,
         hu_bison: huBisonPicture1,
+        hu_directus: huDirectusPicture1,
         hu_kiosk: huKioskPicture1,
         cs50: cs50Picture1,
         duke: dukePicture1
