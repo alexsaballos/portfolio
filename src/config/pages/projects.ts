@@ -156,7 +156,7 @@ export const PROJECTS = {
     digital_clock: {
         key: "digital_clock",
         images: {
-            cover: projPics.maze_robot,
+            cover: projPics.digital_clock,
             album: undefined
         },
         discipline: "electrical_engineering",
@@ -173,7 +173,7 @@ export const PROJECTS = {
     prog_engr: {
         key: "prog_engr",
         images: {
-            cover: projPics.maze_robot,
+            cover: projPics.prog_engr,
             album: undefined
         },
         discipline: "electrical_engineering",
@@ -283,7 +283,7 @@ export const PROJECTS = {
     bison_math: {
         key: "bison_math",
         images: {
-            cover: projPics.maze_robot,
+            cover: projPics.hu_generic,
             album: undefined
         },
         discipline: "software_engineering",

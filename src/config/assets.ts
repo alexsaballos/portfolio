@@ -29,8 +29,11 @@ import atxPicture1 from "@images/projects/atx.png";
 import arctosPicture1 from "@images/projects/arctos.png";
 import mazeRobotPicture1 from "@images/projects/maze_robot.png";
 import asgcPicture1 from "@images/projects/asgc.png";
+import digitalClockPicture1 from "@images/projects/digital_clock.png";
+import progEngrPicture1 from "@images/projects/prog_engr.png";
 import habitarPicture1 from "@images/projects/habitar.png";
 import sidimaqsaPicture1 from "@images/projects/sidimaqsa.png";
+import huGenericPicture1 from "@images/projects/hu_generic.png";
 import huRemembersPicture1 from "@images/projects/hu_remembers.png";
 import huBisonPicture1 from "@images/projects/hu_bison.png";
 import huDirectusPicture1 from "@images/projects/hu_directus.png";
@@ -101,7 +104,10 @@ export const PICTURES = {
         arctos: arctosPicture1,
         maze_robot: mazeRobotPicture1,
         asgc: asgcPicture1,
+        digital_clock: digitalClockPicture1,
+        prog_engr: progEngrPicture1,
         habitar: habitarPicture1,
+        hu_generic: huGenericPicture1,
         hu_remembers: huRemembersPicture1,
         hu_bison: huBisonPicture1,
         hu_directus: huDirectusPicture1,
