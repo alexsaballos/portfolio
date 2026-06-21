@@ -304,7 +304,7 @@ export const PROJECTS = {
             album: undefined
         },
         discipline: "software_engineering",
-        stack: ["c", "html", "css", "python", "flask", "javascript"],
+        stack: ["c", "html", "css", "python", "flask", "javascript", "sqlite"],
         categories: ["web_development", "backend", "frontend"],
         privacy: "private",
         client: "academic",
