@@ -45,7 +45,7 @@ const electricalProjects = projects.filter(p =>
         <!-- HERO -->
         <article data-aos="zoom-in" class="hero rounded-box border border-base-300 bg-base-200 overflow-hidden">
             <div class="hero-content flex-col lg:flex-row-reverse gap-10 p-8">
-                <Image src={electricalHero.images[0] as ImageMetadata} alt={t[electricalHero.key].title} class="aspect-video w-full max-w-2xl rounded-2xl object-cover shadow-xl" />
+                <Image src={electricalHero.images.cover} alt={t[electricalHero.key].title} class="aspect-video w-full max-w-2xl rounded-2xl object-cover shadow-xl" />
 
                 <div class="flex-1">
                     <div class="mb-3 flex flex-wrap gap-2">
@@ -86,7 +86,7 @@ const electricalProjects = projects.filter(p =>
         <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {electricalProjects.map((project: ProjectType) => (
                 <article data-aos="fade-up" class="card relative border border-base-300 bg-base-100 shadow-sm hover:shadow-lg transition-shadow">
-                    <Image src={project.images[0] as ImageMetadata} alt={t[project.key].title} class="rounded-t-lg aspect-video w-full object-cover" />
+                    <Image src={project.images.cover} alt={t[project.key].title} class="rounded-t-lg aspect-video w-full object-cover" />
                     <span class="absolute top-3 right-3 badge badge-success badge-sm rounded-full select-none bg-success/60 font-semibold">{t.texts.status[project.status]}</span>
                     <span class="absolute top-3 left-3 badge badge-info badge-sm rounded-full select-none bg-info/60 font-semibold">{t.texts.privacy[project.privacy]}</span>
 
@@ -133,7 +133,7 @@ const electricalProjects = projects.filter(p =>
         <!-- HERO -->
         <article data-aos="zoom-in" class="hero rounded-box border border-base-300 bg-base-200 overflow-hidden">
             <div class="hero-content flex-col lg:flex-row gap-10 p-8">
-                <Image src={softwareHero.images[0] as ImageMetadata} alt={t[softwareHero.key].title} class="aspect-video w-full max-w-2xl rounded-2xl object-cover shadow-xl" />
+                <Image src={softwareHero.images.cover} alt={t[softwareHero.key].title} class="aspect-video w-full max-w-2xl rounded-2xl object-cover shadow-xl" />
                 <div class="flex-1">
 
                     <div class="mb-3 flex flex-wrap gap-2">
@@ -177,7 +177,7 @@ const electricalProjects = projects.filter(p =>
         <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {softwareProjects.map((project: ProjectType) => (
                 <article data-aos="fade-up" class="card relative rounded-lg border border-base-300 bg-base-100 shadow-sm hover:shadow-lg transition-shadow">
-                    <Image src={project.images[0] as ImageMetadata} alt={t[project.key].title} class="rounded-t-lg aspect-video w-full object-cover" />
+                    <Image src={project.images.cover} alt={t[project.key].title} class="rounded-t-lg aspect-video w-full object-cover" />
                     <span class="absolute top-3 right-3 badge badge-success badge-sm rounded-full select-none bg-success/60 font-semibold">{t.texts.status[project.status]}</span>
                     <span class="absolute top-3 left-3 badge badge-info badge-sm rounded-full select-none bg-info/60 font-semibold">{t.texts.privacy[project.privacy]}</span>
 

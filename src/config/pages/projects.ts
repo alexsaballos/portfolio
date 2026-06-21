@@ -9,7 +9,11 @@ export const PROJECTS = {
     // Postgrad Projects
     pcs: {
         key: "pcs",
-        images: [projPics.pcs],
+        images: {
+            cover: projPics.pcs,
+            album: undefined
+        },
+        discipline: "software_engineering",
         stack: ["csharp", "javascript", "winui", "mysql", "cpanel", "php", "phpmyadmin"],
         categories: ["business", "software_engineering"],
         privacy: "private",
@@ -22,7 +26,11 @@ export const PROJECTS = {
     },
     portfolio: {
         key: "portfolio",
-        images: [projPics.portfolio],
+        images: {
+            cover: projPics.portfolio,
+            album: undefined
+        },
+        discipline: "software_engineering",
         stack: ["astro", "tailwindcss", "daisyui", "typescript", "html", "css", "cpanel", "php", "resend", "google_wallet", "google_analytics", "nfc"],
         categories: ["software_engineering", "web_development"],
         privacy: "public",
@@ -37,7 +45,11 @@ export const PROJECTS = {
     },
     sidimaqsa: {
         key: "sidimaqsa",
-        images: [projPics.sidimaqsa],
+        images: {
+            cover: projPics.sidimaqsa,
+            album: undefined
+        },
+        discipline: "software_engineering",
         stack: ["astro", "tailwindcss", "daisyui", "typescript", "html", "css", "cpanel", "php", "google_maps", "resend"],
         categories: ["business", "software_engineering", "web_development"],
         privacy: "private",
@@ -54,7 +66,11 @@ export const PROJECTS = {
     // ToDO: IntroToEngr and Instrumentation
     domotics: {
         key: "domotics",
-        images: [projPics.domotics],
+        images: {
+            cover: projPics.domotics,
+            album: undefined
+        },
+        discipline: "electrical_engineering",
         stack: ["arduino", "bluetooth", "electronics_digital", "cpp"],
         categories: ["electrical_engineering", "robotics"],
         privacy: "public",
@@ -67,7 +83,11 @@ export const PROJECTS = {
     },
     atx: {
         key: "atx",
-        images: [projPics.atx],
+        images: {
+            cover: projPics.atx,
+            album: undefined
+        },
+        discipline: "electrical_engineering",
         stack: ["embedded", "electronics_analog", "electronics_digital", "multisim", "ultiboard", "c", "autocad"],
         categories: ["electrical_engineering", "robotics", "embedded_systems"],
         privacy: "private",
@@ -80,7 +100,11 @@ export const PROJECTS = {
     },
     arctos: {
         key: "arctos",
-        images: [projPics.arctos],
+        images: {
+            cover: projPics.arctos,
+            album: undefined
+        },
+        discipline: "electrical_engineering",
         stack: ["arduino", "electronics_analog", "electronics_digital", "cpp"],
         categories: ["electrical_engineering", "robotics"],
         privacy: "private",
@@ -95,7 +119,11 @@ export const PROJECTS = {
     },
     maze_robot: {
         key: "maze_robot",
-        images: [projPics.maze_robot],
+        images: {
+            cover: projPics.maze_robot,
+            album: undefined
+        },
+        discipline: "electrical_engineering",
         stack: ["embedded", "electronics_analog", "electronics_digital", "multisim", "ultiboard", "c"],
         categories: ["electrical_engineering", "robotics", "embedded_systems"],
         privacy: "private",
@@ -108,7 +136,11 @@ export const PROJECTS = {
     },
     asgc: {
         key: "asgc",
-        images: [projPics.asgc],
+        images: {
+            cover: projPics.asgc,
+            album: undefined
+        },
+        discipline: "electrical_engineering",
         stack: ["opencv", "raspberrypi", "embedded", "electronics_analog", "electronics_digital", "python"],
         categories: ["electrical_engineering", "robotics", "embedded_systems"],
         privacy: "private",
@@ -123,7 +155,11 @@ export const PROJECTS = {
     },
     digital_clock: {
         key: "digital_clock",
-        images: [projPics.maze_robot],
+        images: {
+            cover: projPics.maze_robot,
+            album: undefined
+        },
+        discipline: "electrical_engineering",
         stack: ["electronics_digital"],
         categories: ["electrical_engineering"],
         privacy: "private",
@@ -136,7 +172,11 @@ export const PROJECTS = {
     },
     prog_engr: {
         key: "prog_engr",
-        images: [projPics.maze_robot],
+        images: {
+            cover: projPics.maze_robot,
+            album: undefined
+        },
+        discipline: "electrical_engineering",
         stack: ["arduino", "cpp"],
         categories: ["electrical_engineering"],
         privacy: "private",
@@ -149,10 +189,14 @@ export const PROJECTS = {
     },
     habitar: {
         key: "habitar",
-        images: [projPics.habitar],
+        images: {
+            cover: projPics.habitar,
+            album: undefined
+        },
+        discipline: "electrical_engineering",
         stack: ["autocad", "sketchup"],
         categories: ["electrical_engineering"],
-        privacy: "private",
+        privacy: "public",
         client: "academic",
         status: "completed",
         featured: false,
@@ -164,7 +208,11 @@ export const PROJECTS = {
     // HU Brackett Library
     hu_remembers: {
         key: "hu_remembers",
-        images: [projPics.hu_remembers],
+        images: {
+            cover: projPics.hu_remembers,
+            album: undefined
+        },
+        discipline: "software_engineering",
         stack: ["react", "javascript", "axios", "directus", "bootstrap", "google_maps", "sass", "php" ],
         categories: ["software_engineering", "web_development"],
         privacy: "private",
@@ -179,7 +227,11 @@ export const PROJECTS = {
     },
     hu_bison: {
         key: "hu_bison",
-        images: [projPics.hu_bison],
+        images: {
+            cover: projPics.hu_bison,
+            album: undefined
+        },
+        discipline: "software_engineering",
         stack: ["react", "javascript", "axios", "antdesign", "php"],
         categories: ["software_engineering", "web_development"],
         privacy: "private",
@@ -194,7 +246,11 @@ export const PROJECTS = {
     },
     hu_directus: {
         key: "hu_directus",
-        images: [projPics.hu_directus],
+        images: {
+            cover: projPics.hu_directus,
+            album: undefined
+        },
+        discipline: "software_engineering",
         stack: ["react", "javascript", "directus", "mysql", "php"],
         categories: ["software_engineering", "web_development"],
         privacy: "private",
@@ -207,7 +263,11 @@ export const PROJECTS = {
     },
     hu_kiosk: {
         key: "hu_kiosk",
-        images: [projPics.hu_kiosk],
+        images: {
+            cover: projPics.hu_kiosk,
+            album: undefined
+        },
+        discipline: "software_engineering",
         stack: ["react", "typescript", "php"],
         categories: ["software_engineering", "web_development"],
         privacy: "private",
@@ -222,7 +282,11 @@ export const PROJECTS = {
     },
     bison_math: {
         key: "bison_math",
-        images: [projPics.maze_robot],
+        images: {
+            cover: projPics.maze_robot,
+            album: undefined
+        },
+        discipline: "software_engineering",
         stack: ["latex"],
         categories: ["software_engineering"],
         privacy: "private",
@@ -235,7 +299,11 @@ export const PROJECTS = {
     },
     cs50: {
         key: "cs50",
-        images: [projPics.cs50],
+        images: {
+            cover: projPics.cs50,
+            album: undefined
+        },
+        discipline: "software_engineering",
         stack: ["c", "html", "css", "python", "flask", "javascript"],
         categories: ["software_engineering", "web_development"],
         privacy: "private",
@@ -250,7 +318,11 @@ export const PROJECTS = {
     },
     duke: {
         key: "duke",
-        images: [projPics.duke],
+        images: {
+            cover: projPics.duke,
+            album: undefined
+        },
+        discipline: "software_engineering",
         stack: ["java"],
         categories: ["software_engineering", "web_development"],
         privacy: "private",

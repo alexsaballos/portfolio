@@ -13,7 +13,11 @@ export type ProjectsCategoriesType =
 
 export type ProjectType = {
     key: ProjectsNamesType;
-    images: (ImageMetadata | string)[];
+    images: {
+        cover: ImageMetadata;
+        album: undefined | (ImageMetadata | string)[]
+    };
+    discipline: "electrical_engineering" | "software_engineering";
     stack: TechnologiesNamesType[];
     categories: ProjectsCategoriesType[];
     privacy: "public" | "private";
