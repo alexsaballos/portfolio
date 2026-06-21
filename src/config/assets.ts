@@ -465,11 +465,25 @@ export const ICONS = {
         desc: "Engineering CAD Tool used in PCB Creation",
         size: "md"
     },
+    labview: {
+        name: "labview",
+        group: "technologies",
+        title: "LabVIEW Logo",
+        desc: "Graphical Programming Language used in Engineering",
+        size: "md"
+    },
     latex: {
         name: "latex",
         group: "technologies",
         title: "LaTeX Logo",
         desc: "Language used in Document Creation",
+        size: "md"
+    },
+    matlab: {
+        name: "matlab",
+        group: "technologies",
+        title: "MATLAB Logo",
+        desc: "Programming Language used in Engineering",
         size: "md"
     },
     multisim: {
@@ -1301,6 +1315,22 @@ export const TECHNOLOGIES = {
             domains: ["pcb", "cad"]
         }
     },
+    labview: {
+        visual: {
+            name: "LabView",
+            color: TECHNOLOGIES_COLORS.embedded,
+            icon: "labview"
+        },
+        hierarchy: {
+            tier: "core",
+            subheader: "embedded"
+        },
+        metadata: {
+            key: "labview",
+            kind: "programming_language",
+            domains: ["electronics", "robotics", "systems"]
+        }
+    },
     latex: {
         visual: {
             name: "LaTeX",
@@ -1315,6 +1345,22 @@ export const TECHNOLOGIES = {
             key: "latex",
             kind: "framework",
             domains: ["frontend", "operations"]
+        }
+    },
+    matlab: {
+        visual: {
+            name: "MATLAB",
+            color: TECHNOLOGIES_COLORS.embedded,
+            icon: "matlab"
+        },
+        hierarchy: {
+            tier: "core",
+            subheader: "embedded"
+        },
+        metadata: {
+            key: "matlab",
+            kind: "programming_language",
+            domains: ["electronics", "robotics"]
         }
     },
     multisim: {

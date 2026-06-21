@@ -47,8 +47,8 @@ export type TechnologiesNamesType =
     | "a3" | "antdesign" | "arduino" | "astro" | "autocad" | "axios" | "bluetooth" | "bootstrap"
     | "c" | "cpanel" | "cpp" | "csharp" | "css" | "daisyui" | "directus" | "electronics_analog"
     | "electronics_digital" | "embedded" | "flask" | "google_analytics" | "google_maps" | "google_wallet"
-    | "html" | "java" | "javascript" | "jinja" | "kicad" | "latex" | "multisim" | "mysql"
-    | "nfc" | "opencv" | "php" | "phpmyadmin" | "python" | "raspberrypi" | "react" | "resend"
+    | "html" | "java" | "javascript" | "jinja" | "kicad" | "labview" | "latex" | "matlab" | "multisim"
+    | "mysql" | "nfc" | "opencv" | "php" | "phpmyadmin" | "python" | "raspberrypi" | "react" | "resend"
     | "sass" | "sketchup" | "sqlite" | "tailwindcss" | "typescript" | "ultiboard" | "winui";
 
 export type TechnologiesKindType =

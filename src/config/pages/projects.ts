@@ -177,7 +177,7 @@ export const PROJECTS = {
             album: undefined
         },
         discipline: "electrical_engineering",
-        stack: ["arduino", "cpp"],
+        stack: ["arduino", "cpp", "matlab", "labview"],
         categories: ["arduino_uno_r3", "robotics"],
         privacy: "private",
         client: "academic",
