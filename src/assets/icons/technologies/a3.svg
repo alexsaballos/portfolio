@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   fill="#000000"
+   version="1.1"
+   id="Capa_1"
+   width="640"
+   height="640"
+   viewBox="0 0 640 640"
+   xml:space="preserve"
+   sodipodi:docname="a3.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   inkscape:export-filename="a3.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs5" /><sodipodi:namedview
+   id="namedview5"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="true"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:zoom="0.75572037"
+   inkscape:cx="346.68908"
+   inkscape:cy="372.49227"
+   inkscape:window-width="1920"
+   inkscape:window-height="1051"
+   inkscape:window-x="-9"
+   inkscape:window-y="1071"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Capa_1"
+   inkscape:export-bgcolor="#ffffffff" />
+<g
+   id="g5"
+   transform="matrix(0.79249484,0,0,0.79250465,120.00026,119.99792)">
+	<g
+   id="g4">
+		<path
+   d="m 482.743,160.8 -65.192,30.868 c 26.101,56.399 18.078,124.667 -24.289,173.694 L 357.747,329.846 V 453.422 H 481.323 L 444.541,416.64 c 64.428,-71.169 77.093,-172.641 38.202,-255.84 z"
+   id="path1" />
+		<path
+   d="M 343.938,482.722 313.042,417.558 C 256.667,443.683 188.371,435.636 139.349,393.27 l 35.515,-35.516 H 51.288 V 481.33 L 88.07,444.548 c 71.174,64.423 172.647,77.088 255.868,38.174 z"
+   id="path2" />
+		<path
+   d="m 111.451,139.351 35.515,35.515 V 51.29 H 23.385 L 60.162,88.067 C -4.232,159.27 -16.898,260.742 21.993,343.942 L 87.161,313.046 C 61.037,256.669 69.084,188.374 111.451,139.351 Z"
+   id="path3" />
+		<path
+   d="M 453.425,146.963 V 23.387 L 416.648,60.164 C 345.445,-4.229 243.973,-16.895 160.774,21.996 l 30.892,65.164 c 56.4,-26.101 124.671,-18.078 173.693,24.289 l -35.515,35.515 h 123.581 z"
+   id="path4" />
+		<circle
+   cx="252.354"
+   cy="252.356"
+   r="98.727997"
+   id="circle4" />
+	</g>
+</g>
+</svg>

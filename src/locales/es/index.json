@@ -46,6 +46,7 @@
             }
         },
         "technologies": {
+            "a3": "Metodología de resolución de problemas",
             "antdesign": "Libería UI usada en Desarrollo Web",
             "arduino": "Plataforma de Hardware usada en Robótica",
             "astro": "Framework usado in Desarrollo Web",
@@ -250,6 +251,9 @@
                 "frontend": "Frontend",
                 "pic32": "PIC32MX460F512LT-80I/PT",
                 "pic18": "PIC18F4321-I/P",
+                "raspberrypi_4b": "Raspberry Pi 4 Modelo B",
+                "arduino_mega_2560_r3": "Arduino MEGA 2560 R3",
+                "arduino_uno_r3": "Arduino UNO R3",
                 "embedded_systems": "Sistemas embebidos",
                 "robotics": "Robótica",
                 "automation": "Automatización",
@@ -295,11 +299,11 @@
             "summary": "Aqui va una descripcion breve"
         },
         "atx": {
-            "title": "Intercambiador automático de Herramientas (ATX)",
+            "title": "Intercambiador automático de herramientas (ATX)",
             "summary": "Aqui va una descripcion breve"
         },
         "arctos": {
-            "title": "Brazo Robótico ARCTOS",
+            "title": "Brazo robótico ARCTOS",
             "summary": "Aqui va una descripcion breve"
         },
         "maze_robot": {
@@ -307,7 +311,7 @@
             "summary": "Aqui va una descripcion breve"
         },
         "asgc": {
-            "title": "Auto autónomo a escala",
+            "title": "Vehículo autónomo de reconocimiento de color",
             "summary": "Aqui va una descripcion breve"
         },
         "digital_clock": {
@@ -315,11 +319,11 @@
             "summary": "Aqui va una descripcion breve"
         },
         "prog_engr": {
-            "title": "Programación para Ingenieros con Arduino",
+            "title": "Programación para ingenieros con Arduino",
             "summary": "Aqui va una descripcion breve"
         },
         "bison_math": {
-            "title": "Cálculo 2 en LaTeX",
+            "title": "Cálculo en LaTeX",
             "summary": "Aqui va una descripcion breve"
         },
         "habitar": {

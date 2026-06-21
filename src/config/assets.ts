@@ -276,6 +276,13 @@ export const ICONS = {
     },
 
     // TECHNOLOGIES GROUPING
+    a3: {
+        name: "a3",
+        group: "technologies",
+        title: "A3 Problem Solving",
+        desc: "Problem Solving Methodology",
+        size: "md"
+    },
     antdesign: {
         name: "antdesign",
         group: "technologies",
@@ -862,6 +869,22 @@ export const ICONS = {
 
 // Complete Technologies Reference
 export const TECHNOLOGIES = {
+    a3: {
+        visual: {
+            name: "A3 Problem Solving",
+            color: TECHNOLOGIES_COLORS.tools,
+            icon: "a3"
+        },
+        hierarchy: {
+            tier: "core",
+            subheader: "operations"
+        },
+        metadata: {
+            key: "a3",
+            kind: "operating_tool",
+            domains: ["systems"]
+        }
+    },
     antdesign: {
         visual: {
             name: "AntDesign",

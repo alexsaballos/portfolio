@@ -46,6 +46,7 @@
             }
         },
         "technologies": {
+            "a3": "Problemlösungsmethoden",
             "antdesign": "UI-Bibliothek verwendet in Webentwicklung",
             "arduino": "Hardwareplattform verwendet in Robotik",
             "astro": "Framework verwendet in Webentwicklung",
@@ -250,6 +251,9 @@
                 "frontend": "Frontend",
                 "pic32": "PIC32MX460F512LT-80I/PT",
                 "pic18": "PIC18F4321-I/P",
+                "raspberrypi_4b": "Raspberry Pi 4 Modell B",
+                "arduino_mega_2560_r3": "Arduino MEGA 2560 R3",
+                "arduino_uno_r3": "Arduino UNO R3",
                 "embedded_systems": "Eingebettete Systeme",
                 "robotics": "Robotik",
                 "automation": "Automatisierung",
@@ -307,7 +311,7 @@
             "summary": "Platzhalter für Kurzbeschreibung"
         },
         "asgc": {
-            "title": "Autonomes Auto im Kleinformat",
+            "title": "Autonomes Fahrzeug mit Farberkennung",
             "summary": "Platzhalter für Kurzbeschreibung"
         },
         "digital_clock": {
@@ -319,7 +323,7 @@
             "summary": "Platzhalter für Kurzbeschreibung"
         },
         "bison_math": {
-            "title": "Analysis 2 in LaTeX",
+            "title": "Analysis in LaTeX",
             "summary": "Platzhalter für Kurzbeschreibung"
         },
         "habitar": {

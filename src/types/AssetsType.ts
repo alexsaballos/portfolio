@@ -44,7 +44,7 @@ export type TechnologiesProductionSubheadersType = "web" | "frameworks" | "datab
 export type TechnologiesSubheadersNames = TechnologiesCoreSubheadersType | TechnologiesProductionSubheadersType;
 
 export type TechnologiesNamesType =
-    | "antdesign" | "arduino" | "astro" | "autocad" | "axios" | "bluetooth" | "bootstrap"
+    | "a3" | "antdesign" | "arduino" | "astro" | "autocad" | "axios" | "bluetooth" | "bootstrap"
     | "c" | "cpanel" | "cpp" | "csharp" | "css" | "daisyui" | "directus" | "electronics_analog"
     | "electronics_digital" | "embedded" | "flask" | "google_analytics" | "google_maps" | "google_wallet"
     | "html" | "java" | "javascript" | "jinja" | "kicad" | "latex" | "multisim" | "mysql"

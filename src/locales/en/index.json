@@ -46,6 +46,7 @@
             }
         },
         "technologies": {
+            "a3": "Problem Solving Methodologies",
             "antdesign": "UI Library used in Web Development",
             "arduino": "Hardware Platform used in Robotics",
             "astro": "Framework used in Web Development",
@@ -250,6 +251,9 @@
                 "frontend": "Frontend",
                 "pic32": "PIC32MX460F512LT-80I/PT",
                 "pic18": "PIC18F4321-I/P",
+                "raspberrypi_4b": "Raspberry Pi 4 Model B",
+                "arduino_mega_2560_r3": "Arduino MEGA 2560 R3",
+                "arduino_uno_r3": "Arduino UNO R3",
                 "embedded_systems": "Embedded Systems",
                 "robotics": "Robotics",
                 "automation": "Automation",
@@ -307,7 +311,7 @@
             "summary": "Brief description placeholder"
         },
         "asgc": {
-            "title": "Scaled-down Autonomous Car",
+            "title": "Autonomous Color-Recognition Vehicle",
             "summary": "Brief description placeholder"
         },
         "digital_clock": {
@@ -319,7 +323,7 @@
             "summary": "Brief description placeholder"
         },
         "bison_math": {
-            "title": "Calculus 2 in LaTeX",
+            "title": "Calculus in LaTeX",
             "summary": "Brief description placeholder"
         },
         "habitar": {
