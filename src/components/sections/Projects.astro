@@ -6,23 +6,16 @@ import Image from "astro/components/Image.astro";
 import Title from "@ui/text/Title.astro";
 import CommonIcon from "@ui/CommonIcon.astro";
 
-import type { ProjectsCategoriesType, ProjectType } from "@src/types/pages/ProjectsType"
+import type { ProjectType } from "@src/types/pages/ProjectsType"
 
 const t = Astro.locals.t.projects;
 
 const projects = Object.values(PROJECTS);
-const softwareHero: ProjectType = projects.find(p => p.featured && (p.categories as ProjectsCategoriesType[]).includes("software_engineering"))!;
-const electricalHero: ProjectType = projects.find(p => p.featured && (p.categories as ProjectsCategoriesType[]).includes("electrical_engineering"))!;
+const softwareHero: ProjectType = projects.find(p => p.featured && p.discipline === "software_engineering")!;
+const electricalHero: ProjectType = projects.find(p => p.featured && p.discipline === "electrical_engineering")!;
 
-const softwareProjects = projects.filter(p =>
-    (p.categories as ProjectsCategoriesType[]).includes("software_engineering") &&
-    p.key !== softwareHero.key
-);
-
-const electricalProjects = projects.filter(p =>
-    (p.categories as ProjectsCategoriesType[]).includes("electrical_engineering") &&
-    p.key !== electricalHero.key
-);
+const softwareProjects = projects.filter(p => p.key !== softwareHero.key && p.discipline === "software_engineering");
+const electricalProjects = projects.filter(p => p.key !== electricalHero.key && p.discipline === "electrical_engineering");
 ---
 
 <section class="container mx-auto max-w-7xl px-4 py-10 space-y-28">

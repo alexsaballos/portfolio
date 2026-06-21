@@ -8,8 +8,10 @@ export type ProjectsNamesType =
 | "cs50" | "duke";
 
 export type ProjectsCategoriesType =
-| "business" | "electrical_engineering" | "embedded_systems" | "software_engineering"
-| "web_development" | "robotics";
+| "business" | "windows_app" | "web_development" | "backend" | "frontend"
+| "pic32" | "pic18"
+| "embedded_systems" | "robotics" | "automation" | "digital_logic_design"
+| "cad" | "calculus";
 
 export type ProjectType = {
     key: ProjectsNamesType;

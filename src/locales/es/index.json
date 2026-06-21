@@ -244,11 +244,18 @@
             },
             "categories": {
                 "business": "Negocios",
-                "electrical_engineering": "Ingeniería eléctrica",
-                "embedded_systems": "Sistemas embebidos",
-                "software_engineering": "Ingeniería de software",
+                "windows_app": "Aplicación Windows",
                 "web_development": "Desarrollo web",
-                "robotics": "Robótica"
+                "backend": "Backend",
+                "frontend": "Frontend",
+                "pic32": "PIC32MX460F512LT-80I/PT",
+                "pic18": "PIC18F4321-I/P",
+                "embedded_systems": "Sistemas embebidos",
+                "robotics": "Robótica",
+                "automation": "Automatización",
+                "digital_logic_design": "Diseño lógico digital",
+                "cad": "Diseño asistido por computadora",
+                "calculus": "Cálculo"
             },
             "privacy": {
                 "public": "Público",

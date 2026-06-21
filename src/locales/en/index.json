@@ -244,11 +244,18 @@
             },
             "categories": {
                 "business": "Business",
-                "electrical_engineering": "Electrical Engineering",
-                "embedded_systems": "Embedded Systems",
-                "software_engineering": "Software Engineering",
+                "windows_app": "Windows App",
                 "web_development": "Web Development",
-                "robotics": "Robotics"
+                "backend": "Backend",
+                "frontend": "Frontend",
+                "pic32": "PIC32MX460F512LT-80I/PT",
+                "pic18": "PIC18F4321-I/P",
+                "embedded_systems": "Embedded Systems",
+                "robotics": "Robotics",
+                "automation": "Automation",
+                "digital_logic_design": "Digital Logic Design",
+                "cad": "Computer Aided Design",
+                "calculus": "Calculus"
             },
             "privacy": {
                 "public": "Public",

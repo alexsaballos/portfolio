@@ -243,12 +243,19 @@
                 "description": "Leiterplatten-Design, eingebettete Systeme, Robotik, Firmware und hardwareorientierte Engineering-Projekte"
             },
             "categories": {
-                "business": "Business",
-                "electrical_engineering": "Elektrotechnik",
-                "embedded_systems": "Eingebettete Systeme",
-                "software_engineering": "Softwareentwicklung",
+                "business": "Geschäft",
+                "windows_app": "Windows-App",
                 "web_development": "Webentwicklung",
-                "robotics": "Robotik"
+                "backend": "Backend",
+                "frontend": "Frontend",
+                "pic32": "PIC32MX460F512LT-80I/PT",
+                "pic18": "PIC18F4321-I/P",
+                "embedded_systems": "Eingebettete Systeme",
+                "robotics": "Robotik",
+                "automation": "Automatisierung",
+                "digital_logic_design": "Digitaler Logikentwurf",
+                "cad": "Computergestütztes Design",
+                "calculus": "Analysis"
             },
             "privacy": {
                 "public": "Öffentlich",
