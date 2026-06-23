@@ -13,6 +13,9 @@ export type ProjectsCategoriesType =
 | "embedded_systems" | "robotics" | "automation" | "digital_logic_design"
 | "cad" | "calculus";
 
+export type ProjectsOrgsType =
+| "personal" | "sidimaqsa" | "nasa" | "harding" | "harvard" | "duke" | "habitar";
+
 export type ProjectType = {
     key: ProjectsNamesType;
     images: {
@@ -24,6 +27,7 @@ export type ProjectType = {
     categories: ProjectsCategoriesType[];
     privacy: "public" | "private";
     client: "personal" | "academic" | "contract";
+    organization: ProjectsOrgsType;
     status: "completed" | "ongoing" | "maintained";
     featured: boolean;
     startDate: string;
@@ -44,6 +48,7 @@ export type LOCtextsProjectsType = {
     categories: Record<ProjectsCategoriesType, string>;
     privacy: Record<("public" | "private"), string>;
     client: Record<("personal" | "academic" | "contract"), string>;
+    organization: Record<ProjectsOrgsType, string>;
     status: Record<("completed" | "ongoing" | "maintained"), string>;
     featured: string;
     links: Record<("website" | "github" | "video"), string>;

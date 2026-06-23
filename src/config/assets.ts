@@ -792,6 +792,13 @@ export const ICONS = {
         desc: "Sharing Icon used to represent sharing content.",
         size: "md"
     },
+    search: {
+        name: "search",
+        group: "gui",
+        title: "Search Icon",
+        desc: "Magnifying Glass Icon used to represent searching action.",
+        size: "sm"
+    },
 
     // Success & Failure icons for alerts
     spinner: {

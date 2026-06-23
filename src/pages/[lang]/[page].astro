@@ -6,7 +6,7 @@ import PageLayout from "@layouts/PageLayout.astro";
 import Breadcrumbs from "@ui/Breadcrumbs.astro";
 
 import ComingSoon from "@sections/ComingSoon.astro";
-import Projects from "@sections/Projects.astro";
+import ProjectsSection from "@sections/projects/ProjectsSection.astro";
 import CertificationsSection from "@sections/CertificationsSection.astro";
 import HonorsSection from "@sections/HonorsSection.astro";
 import ContactSection from "@sections/contact/ContactSection.astro";
@@ -35,7 +35,7 @@ const { lang, page } = Astro.params as {
         {(() => {
             // Section router per section
             switch (page) {
-                case "projects": return(<Projects />);
+                case "projects": return(<ProjectsSection />);
                 case "experience": return(<ComingSoon />);
                 case "leadership": return(<ComingSoon />);
                 case "certifications": return(<CertificationsSection />);

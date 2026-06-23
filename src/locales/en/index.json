@@ -273,6 +273,15 @@
                 "academic": "Academic",
                 "contract": "Contract"
             },
+            "organization": {
+                "personal": "Personal",
+                "sidimaqsa": "SIDIMAQSA",
+                "nasa": "NASA",
+                "harding": "Harding University",
+                "harvard": "Harvard University",
+                "duke": "Duke University",
+                "habitar": "Habitar Arquitectura"
+            },
             "status": {
                 "completed": "Completed",
                 "ongoing": "Ongoing",
