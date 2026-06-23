@@ -253,6 +253,7 @@
                 "frontend": "Frontend",
                 "pic32": "PIC32MX460F512LT-80I/PT",
                 "pic18": "PIC18F4321-I/P",
+                "pickit5": "MPLAB PICkit 5",
                 "raspberrypi_4b": "Raspberry Pi 4 Modelo B",
                 "arduino_mega_2560_r3": "Arduino MEGA 2560 R3",
                 "arduino_uno_r3": "Arduino UNO R3",
@@ -321,7 +322,7 @@
             "summary": "Aqui va una descripcion breve"
         },
         "prog_engr": {
-            "title": "Programación para ingenieros con Arduino",
+            "title": "Programación para ingenieros",
             "summary": "Aqui va una descripcion breve"
         },
         "bison_math": {

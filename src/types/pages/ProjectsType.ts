@@ -9,7 +9,7 @@ export type ProjectsNamesType =
 
 export type ProjectsCategoriesType =
 | "business" | "windows_app" | "web_development" | "backend" | "frontend"
-| "pic32" | "pic18" | "raspberrypi_4b" | "arduino_mega_2560_r3" | "arduino_uno_r3"
+| "pic32" | "pic18" | "pickit5" | "raspberrypi_4b" | "arduino_mega_2560_r3" | "arduino_uno_r3"
 | "embedded_systems" | "robotics" | "automation" | "digital_logic_design"
 | "cad" | "calculus";
 
