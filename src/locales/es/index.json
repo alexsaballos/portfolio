@@ -257,9 +257,11 @@
                 "raspberrypi_4b": "Raspberry Pi 4 Modelo B",
                 "arduino_mega_2560_r3": "Arduino MEGA 2560 R3",
                 "arduino_uno_r3": "Arduino UNO R3",
+                "ni_elvis": "NI ELVIS II+",
                 "embedded_systems": "Sistemas embebidos",
                 "robotics": "Robótica",
                 "automation": "Automatización",
+                "measurement_systems": "Sistemas de Medición",
                 "digital_logic_design": "Diseño lógico digital",
                 "cad": "Diseño asistido por computadora",
                 "calculus": "Cálculo"
@@ -324,6 +326,10 @@
         },
         "asgc": {
             "title": "Vehículo autónomo de reconocimiento de color",
+            "summary": "Aqui va una descripcion breve"
+        },
+        "instrumentation": {
+            "title": "Instrumentación Electrónica",
             "summary": "Aqui va una descripcion breve"
         },
         "digital_clock": {

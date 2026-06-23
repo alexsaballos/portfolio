@@ -3,14 +3,14 @@ import type { TechnologiesNamesType } from "../AssetsType";
 // SSOT (Metadata) structure
 export type ProjectsNamesType =
 | "pcs" | "portfolio" | "sidimaqsa" | "atx" | "arctos" | "domotics"
-| "maze_robot" | "asgc" | "digital_clock" | "prog_engr" | "bison_math" | "habitar"
+| "maze_robot" | "asgc" | "instrumentation" | "digital_clock" | "prog_engr" | "bison_math" | "habitar"
 | "hu_remembers" | "hu_bison" | "hu_directus" | "hu_kiosk"
 | "cs50" | "duke";
 
 export type ProjectsCategoriesType =
 | "business" | "windows_app" | "web_development" | "backend" | "frontend"
-| "pic32" | "pic18" | "pickit5" | "raspberrypi_4b" | "arduino_mega_2560_r3" | "arduino_uno_r3"
-| "embedded_systems" | "robotics" | "automation" | "digital_logic_design"
+| "pic32" | "pic18" | "pickit5" | "raspberrypi_4b" | "arduino_mega_2560_r3" | "arduino_uno_r3" | "ni_elvis"
+| "embedded_systems" | "robotics" | "automation" | "measurement_systems" | "digital_logic_design"
 | "cad" | "calculus";
 
 export type ProjectsOrgsType =

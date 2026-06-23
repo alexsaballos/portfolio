@@ -29,6 +29,7 @@ import atxPicture1 from "@images/projects/atx.png";
 import arctosPicture1 from "@images/projects/arctos.png";
 import mazeRobotPicture1 from "@images/projects/maze_robot.png";
 import asgcPicture1 from "@images/projects/asgc.png";
+import instrumentationPicture1 from "@images/projects/instrumentation.png";
 import digitalClockPicture1 from "@images/projects/digital_clock.png";
 import progEngrPicture1 from "@images/projects/prog_engr.png";
 import habitarPicture1 from "@images/projects/habitar.png";
@@ -104,6 +105,7 @@ export const PICTURES = {
         arctos: arctosPicture1,
         maze_robot: mazeRobotPicture1,
         asgc: asgcPicture1,
+        instrumentation: instrumentationPicture1,
         digital_clock: digitalClockPicture1,
         prog_engr: progEngrPicture1,
         habitar: habitarPicture1,

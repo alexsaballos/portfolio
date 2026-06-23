@@ -66,7 +66,7 @@ export const PROJECTS = {
     },
 
     // Electrical Engineering Projects
-    // ToDO: IntroToEngr and Instrumentation
+    // ToDO: Introduction to Engineering
     domotics: {
         key: "domotics",
         images: {
@@ -160,6 +160,24 @@ export const PROJECTS = {
         links: {
             website: LINKS.organizations.asgc
         }
+    },
+    instrumentation: {
+        key: "instrumentation",
+        images: {
+            cover: projPics.instrumentation,
+            album: undefined
+        },
+        discipline: "electrical_engineering",
+        stack: ["electronics_analog", "electronics_digital", "labview"],
+        categories: ["ni_elvis", "measurement_systems"],
+        privacy: "private",
+        client: "academic",
+        organization: "harding",
+        status: "completed",
+        featured: false,
+        startDate: "2023",
+        endDate: "2023",
+        links: undefined
     },
     digital_clock: {
         key: "digital_clock",

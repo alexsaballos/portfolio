@@ -257,9 +257,11 @@
                 "raspberrypi_4b": "Raspberry Pi 4 Modell B",
                 "arduino_mega_2560_r3": "Arduino MEGA 2560 R3",
                 "arduino_uno_r3": "Arduino UNO R3",
+                "ni_elvis": "NI ELVIS II+",
                 "embedded_systems": "Eingebettete Systeme",
                 "robotics": "Robotik",
                 "automation": "Automatisierung",
+                "measurement_systems": "Messsysteme",
                 "digital_logic_design": "Digitaler Logikentwurf",
                 "cad": "Computergestütztes Design",
                 "calculus": "Analysis"
@@ -320,6 +322,10 @@
         },
         "maze_robot": {
             "title": "Labyrinth-Navigator-Roboter",
+            "summary": "Platzhalter für Kurzbeschreibung"
+        },
+        "instrumentation": {
+            "title": "Elektronische Messtechnik",
             "summary": "Platzhalter für Kurzbeschreibung"
         },
         "asgc": {
