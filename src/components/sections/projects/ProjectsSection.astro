@@ -5,11 +5,11 @@ import { TECHNOLOGIES } from "@src/config/assets";
 import Image from "astro/components/Image.astro";
 import Title from "@ui/text/Title.astro";
 import CommonIcon from "@ui/CommonIcon.astro";
+import SearchBar from "@sections/projects/SearchBar.astro";
 import HeroCard from "@sections/projects/HeroCard.astro";
 import GridCard from "@sections/projects/GridCard.astro";
 
-import type { ProjectType } from "@src/types/pages/ProjectsType"
-import SearchBar from "./SearchBar.astro";
+import type { ProjectType } from "@src/types/pages/ProjectsType";
 
 const t = Astro.locals.t.projects;
 
@@ -36,7 +36,7 @@ const electricalProjects = projects.filter(p => p.key !== electricalHero.key && 
         </div>
 
         <!-- HERO -->
-        <HeroCard hero={electricalHero} />
+        <HeroCard hero={electricalHero} id="electrical-hero" />
 
         <!-- GRID -->
         <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -52,7 +52,7 @@ const electricalProjects = projects.filter(p => p.key !== electricalHero.key && 
         </div>
 
         <!-- HERO -->
-        <article data-aos="zoom-in" class="hero rounded-box border border-base-300 bg-base-200 overflow-hidden">
+        <article data-aos="zoom-in" id="software-hero" class="hero rounded-box border border-base-300 bg-base-200 overflow-hidden">
             <div class="hero-content flex-col lg:flex-row gap-10 p-8">
                 <Image src={softwareHero.images.cover} alt={t[softwareHero.key].title} class="aspect-video w-full max-w-2xl rounded-2xl object-cover shadow-xl" />
                 <div class="flex-1">
@@ -102,4 +102,4 @@ const electricalProjects = projects.filter(p => p.key !== electricalHero.key && 
 </section>
 
 <!-- Client-side JS that controls project filtering and searching -->
-<script src="@scripts/pages/projects.ts"></script>
+<!-- <script src="@scripts/pages/projects.ts"></script> -->
