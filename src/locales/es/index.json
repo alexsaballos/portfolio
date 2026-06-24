@@ -262,6 +262,7 @@
                 "software_engineering": "Ingeniería de Software"
             },
             "categories": {
+                "header": "Categorías",
                 "business": "Negocios",
                 "windows_app": "Aplicación Windows",
                 "android_app": "Aplicación Android",
@@ -311,7 +312,8 @@
                 "website": "Sitio web",
                 "github": "Ver Código",
                 "video": "Ver Videos"
-            }
+            },
+            "stack": "Stack"
         },
         "pcs": {
             "title": "Panel de Control de SIDIMAQSA (PCS)",

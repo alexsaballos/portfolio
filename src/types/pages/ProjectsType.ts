@@ -50,13 +50,14 @@ export type LOCtextsProjectsType = {
     electrical: Record<("title" | "description"), string>;
     search: Record<("placeholder" | "discipline" | "status" | "organization" | "featured" | "clear" | "todos" | "todas"), string>;
     disciplines: Record<ProjectsDisciplinesType, string>;
-    categories: Record<ProjectsCategoriesType, string>;
+    categories: Record<ProjectsCategoriesType, string> & { header: string; };
     privacy: Record<("public" | "private"), string>;
     client: Record<("personal" | "academic" | "contract"), string>;
     organization: Record<ProjectsOrgsType, string>;
     status: Record<ProjectsStatusType, string>;
     featured: string;
     links: Record<("website" | "github" | "video"), string>;
+    stack: string;
 };
 
 export type LOCprojectsType = { texts: LOCtextsProjectsType } & Record<ProjectsNamesType, {

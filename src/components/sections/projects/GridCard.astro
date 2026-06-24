@@ -9,13 +9,16 @@ const t = Astro.locals.t.projects;
 ---
 
 <!-- Project-card class used on client-side JS project filtering -->
-<article data-aos="fade-up" class="card project-card relative border border-base-300 bg-base-100 shadow-sm hover:shadow-lg transition-shadow"
+<article data-aos="fade-up"
+    class="project-card rounded-lg ring-1 ring-base-content/10 relative border border-base-300 bg-base-100 shadow-sm hover:shadow-lg transition-shadow flex flex-col"
     data-project_title={t[project.key].title.toLowerCase()}
     data-project_discipline={project.discipline}
     data-project_status={project.status}
     data-project_stack={project.stack}
     data-project_organization={project.organization}
     data-project_featured={project.featured}>
+    
+    <!-- Banner Image & Tags -->
     <Image src={project.images.cover} alt={t[project.key].title} class="rounded-t-lg aspect-video w-full object-cover" />
     <span class="absolute top-3 right-3 badge badge-success badge-sm rounded-full select-none bg-success/60 font-semibold">
         {t.texts.status[project.status]}
@@ -24,35 +27,38 @@ const t = Astro.locals.t.projects;
         {t.texts.privacy[project.privacy]}
     </span>
 
-    <div class="card-body">
-        <h3 class="card-title">{t[project.key].title}</h3>
+    <!-- Title, organization, dates, categories, and tech stack -->
+    <div class="group p-3">
+        <h3 class="text-lg text-secondary font-semibold">{t[project.key].title}</h3>
+        <h4 class="text-md tracking-wider text-base-content/70 font-thin">{t.texts.organization[project.organization]}</h4>
 
-        <div class="flex flex-wrap gap-2 my-1">
-            <span class="badge badge-outline badge-sm rounded-full">
+        <div class="flex flex-wrap gap-2 my-4">
+            <span class="badge badge-info badge-sm rounded-full select-none font-semibold">
                 {project.startDate}
                 {(project.endDate && project.startDate !== project.endDate) ? ` \u2192 ${project.endDate}` : ""}
             </span>
-            {project.organization !== "personal" &&
-                <span class="badge badge-outline badge-sm rounded-full">{t.texts.organization[project.organization]}</span>
-            }
-            <span class="badge badge-outline badge-sm rounded-full">{t.texts.client[project.client]}</span>
+            <span class="badge badge-info badge-sm rounded-full select-none badge-outline font-semibold">{t.texts.client[project.client]}</span>
         </div>
 
-        <div class="flex flex-wrap gap-1">
-            {project.categories.map(category => (
-                <span class="badge badge-ghost badge-sm">{t.texts.categories[category]}</span>
-            ))}
+        <div class="flex flex-col gap-2 my-4">
+            <p class="text-xs tracking-wide leading-none uppercase text-base-content/60">{t.texts.categories.header}</p>
+            <div class="flex flex-wrap gap-2">
+                {project.categories.map(category => (
+                    <span class="badge badge-ghost badge-sm">{t.texts.categories[category]}</span>
+                ))}
+            </div>
         </div>
 
-        <div class="divider my-1" />
-
-        <div class="flex flex-wrap gap-2">
-            {project.stack.map(tech => (
-                <span class="badge badge-neutral badge-sm rounded-full align-middle gap-1">
-                    <CommonIcon name={tech} size="sm" />
-                    {TECHNOLOGIES[tech].visual.name}
-                </span>
-            ))}
+        <div class="flex flex-col gap-2 mt-4 mb-2">
+            <p class="text-xs tracking-wide leading-none uppercase text-base-content/60">{t.texts.stack}</p>
+            <div class="flex flex-wrap gap-2">
+                {project.stack.map(tech => (
+                    <span class="badge badge-neutral badge-sm rounded-full align-middle gap-1">
+                        <CommonIcon name={tech} size="sm" />
+                        {TECHNOLOGIES[tech].visual.name}
+                    </span>
+                ))}
+            </div>
         </div>
     </div>
 </article>

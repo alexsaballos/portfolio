@@ -262,6 +262,7 @@
                 "software_engineering": "Software Engineering"
             },
             "categories": {
+                "header": "Categories",
                 "business": "Business",
                 "windows_app": "Windows App",
                 "android_app": "Android App",
@@ -311,7 +312,8 @@
                 "website": "Website",
                 "github": "Read Code",
                 "video": "Watch Videos"
-            }
+            },
+            "stack": "Stack"
         },
         "pcs": {
             "title": "SIDIMAQSA's Control Panel (PCS)",

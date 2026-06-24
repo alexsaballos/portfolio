@@ -262,6 +262,7 @@
                 "software_engineering": "Softwareingenieur"
             },
             "categories": {
+                "header": "Kategorien",
                 "business": "Geschäft",
                 "windows_app": "Windows-App",
                 "android_app": "Android-App",
@@ -311,7 +312,8 @@
                 "website": "Website",
                 "github": "Code ansehen",
                 "video": "Videos ansehen"
-            }
+            },
+            "stack": "Stack"
         },
         "pcs": {
             "title": "Bedienfeld (PCS) von SIDIMAQSA",
