@@ -8,7 +8,14 @@ const project = Astro.props.project as ProjectType;
 const t = Astro.locals.t.projects;
 ---
 
-<article data-aos="fade-up" class="card relative border border-base-300 bg-base-100 shadow-sm hover:shadow-lg transition-shadow">
+<!-- Project-card class used on client-side JS project filtering -->
+<article data-aos="fade-up" class="card project-card relative border border-base-300 bg-base-100 shadow-sm hover:shadow-lg transition-shadow"
+    data-project_title={t[project.key].title.toLowerCase()}
+    data-project_discipline={project.discipline}
+    data-project_status={project.status}
+    data-project_stack={project.stack}
+    data-project_organization={project.organization}
+    data-project_featured={project.featured}>
     <Image src={project.images.cover} alt={t[project.key].title} class="rounded-t-lg aspect-video w-full object-cover" />
     <span class="absolute top-3 right-3 badge badge-success badge-sm rounded-full select-none bg-success/60 font-semibold">
         {t.texts.status[project.status]}

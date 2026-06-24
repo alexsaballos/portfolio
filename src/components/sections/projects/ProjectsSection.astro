@@ -21,20 +21,16 @@ const softwareProjects = projects.filter(p => p.key !== softwareHero.key && p.di
 const electricalProjects = projects.filter(p => p.key !== electricalHero.key && p.discipline === "electrical_engineering");
 ---
 
-<section class="container mx-auto max-w-7xl px-4 py-10 space-y-28">
+<section class="container mx-auto max-w-7xl px-4 pb-10 space-y-10">
     <!-- Search Bar -->
-    <!-- <div class="flex flex-col items-center-safe gap-10">
-        <Title title="My projects" />
-        <label class="input input-xl rounded-full mx-auto sm:w-100 md:w-150 lg:w-200">
-            <CommonIcon name="search" />
-            <input required type="search" placeholder="Search Project" />
-        </label>
+    <div class="flex flex-col items-center-safe">
+        <Title title="My projects" classname="mt-4 mb-8" />
+        <!-- <SearchBar /> -->
     </div>
-    <SearchBar /> -->
 
     <!-- ELECTRICAL ENGINEERING -->
     <section class="space-y-10">
-        <div class="group">
+        <div class="group pt-5">
             <h2 class="text-4xl font-bold">{t.texts.electrical.title}</h2>
             <p class="mt-2 max-w-2xl opacity-70">{t.texts.electrical.description}</p>
         </div>
@@ -50,7 +46,7 @@ const electricalProjects = projects.filter(p => p.key !== electricalHero.key && 
 
     <!-- SOFTWARE ENGINEERING -->
     <section class="space-y-10">
-        <div class="group">
+        <div class="group pt-5">
             <h2 class="text-4xl font-bold">{t.texts.software.title}</h2>
             <p class="mt-2 max-w-2xl opacity-70">{t.texts.software.description}</p>
         </div>
@@ -104,3 +100,6 @@ const electricalProjects = projects.filter(p => p.key !== electricalHero.key && 
         </div>
     </section>
 </section>
+
+<!-- Client-side JS that controls project filtering and searching -->
+<script src="@scripts/pages/projects.ts"></script>

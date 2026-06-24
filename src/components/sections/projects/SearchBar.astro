@@ -1,188 +1,61 @@
 ---
-/**
- * Search.astro
- *
- * Self-contained filter/search bar.
- *
- * Listens:
- *   (none)
- *
- * Dispatches:
- *   window "projects:filter"
- *
- * Example event.detail:
- * {
- *   search: "wallet",
- *   discipline: "software_engineering",
- *   status: "completed",
- *   organization: "harding_university",
- *   featured: true
- * }
- */
+import CommonIcon from "@src/components/ui/CommonIcon.astro";
+
+const t = Astro.locals.t.projects;
 ---
 
-<div class="w-full rounded-box border border-base-300 bg-base-100 p-4 shadow-sm">
-    <div class="flex flex-col gap-4 lg:flex-row lg:items-end">
+<div class="w-full flex flex-col justify-center rounded-4xl border border-base-300 bg-base-100 gap-4 p-4 shadow-sm">
 
-        <!-- Search -->
-        <label class="form-control flex-1">
-            <div class="label pb-1">
-                <span class="label-text font-semibold">
-                    Search Projects
-                </span>
-            </div>
+    <label class="input input-xl rounded-full mx-auto sm:w-100 md:w-150 lg:w-200">
+        <CommonIcon name="search" />
+        <input required id="project-search" type="search" class="grow" placeholder={t.texts.search.placeholder} />
+    </label>
 
-            <label class="input input-bordered flex items-center gap-2">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-4 w-4 opacity-60"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
-                    />
-                </svg>
-
-                <input
-                    id="project-search"
-                    type="text"
-                    placeholder="Search title, description, technologies..."
-                    class="grow"
-                />
-            </label>
-        </label>
+    <div class="flex flex-wrap justify-center gap-4 lg:flex-row lg:items-end">
 
         <!-- Discipline -->
-        <label class="form-control w-full lg:w-56">
-            <div class="label pb-1">
-                <span class="label-text font-semibold">
-                    Discipline
-                </span>
-            </div>
-
-            <select
-                id="project-discipline"
-                class="select select-bordered"
-            >
-                <option value="">All</option>
-                <option value="software_engineering">
-                    Software Engineering
-                </option>
-                <option value="electrical_engineering">
-                    Electrical Engineering
-                </option>
+        <label class="form-control flex flex-col w-full lg:w-56">
+            <span class="label label-text font-semibold pb-1">{t.texts.search.discipline}</span>
+            <select id="project-discipline" class="select rounded-lg">
+                <option value="all">{t.texts.search.todas}</option>
+                {Object.entries(t.texts.disciplines).map(([key, value]) => 
+                    <option value={key}>{value}</option>
+                )}
             </select>
         </label>
 
         <!-- Status -->
-        <label class="form-control w-full lg:w-44">
-            <div class="label pb-1">
-                <span class="label-text font-semibold">
-                    Status
-                </span>
-            </div>
-
-            <select
-                id="project-status"
-                class="select select-bordered"
-            >
-                <option value="">All</option>
-                <option value="ongoing">Ongoing</option>
-                <option value="completed">Completed</option>
+        <label class="form-control flex flex-col w-full lg:w-44">
+            <span class="label label-text font-semibold pb-1">{t.texts.search.status}</span>
+            <select id="project-status" class="select rounded-lg">
+                <option value="all">{t.texts.search.todos}</option>
+                {Object.entries(t.texts.status).map(([key, value]) => 
+                    <option value={key}>{value}</option>
+                )}
             </select>
         </label>
 
         <!-- Organization -->
-        <label class="form-control w-full lg:w-56">
-            <div class="label pb-1">
-                <span class="label-text font-semibold">
-                    Organization
-                </span>
-            </div>
-
-            <select
-                id="project-organization"
-                class="select select-bordered"
-            >
-                <option value="">All</option>
-                <option value="personal">Personal</option>
-                <option value="harding_university">
-                    Harding University
-                </option>
-                <option value="sidimaqsa">
-                    SIDIMAQSA
-                </option>
-                <option value="nasa">
-                    NASA
-                </option>
+        <label class="form-control flex flex-col w-full lg:w-56">
+            <span class="label label-text font-semibold pb-1">{t.texts.search.organization}</span>
+            <select id="project-organization" class="select rounded-lg">
+                <option value="all">{t.texts.search.todas}</option>
+                {Object.entries(t.texts.organization).map(([key, value]) => 
+                    <option value={key}>{value}</option>
+                )}
             </select>
+        </label>
+
+        <!-- Featured Only -->
+        <label class="flex flex-col cursor-pointer gap-3">
+            <span class="label label-text font-semibold">{t.texts.search.featured}</span>
+            <input id="project-featured" type="checkbox" class="checkbox checkbox-primary" />
         </label>
     </div>
 
     <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
-        <label class="label cursor-pointer gap-3 p-0">
-            <input
-                id="project-featured"
-                type="checkbox"
-                class="checkbox checkbox-primary"
-            />
-
-            <span class="label-text font-medium">
-                Featured only
-            </span>
-        </label>
-
-        <button
-            id="project-clear"
-            type="button"
-            class="btn btn-sm btn-ghost"
-        >
-            Clear filters
+        <button id="project-clear" type="button" class="btn btn-sm btn-ghost">
+            {t.texts.search.clear}
         </button>
     </div>
 </div>
-
-<script>
-    const search = document.getElementById("project-search");
-    const discipline = document.getElementById("project-discipline");
-    const status = document.getElementById("project-status");
-    const organization = document.getElementById("project-organization");
-    const featured = document.getElementById("project-featured");
-    const clearBtn = document.getElementById("project-clear");
-
-    function emitFilters() {
-        window.dispatchEvent(
-            new CustomEvent("projects:filter", {
-                detail: {
-                    search: search.value.trim(),
-                    discipline: discipline.value,
-                    status: status.value,
-                    organization: organization.value,
-                    featured: featured.checked,
-                },
-            }),
-        );
-    }
-
-    [search, discipline, status, organization, featured].forEach((el) => {
-        el.addEventListener("input", emitFilters);
-        el.addEventListener("change", emitFilters);
-    });
-
-    clearBtn.addEventListener("click", () => {
-        search.value = "";
-        discipline.value = "";
-        status.value = "";
-        organization.value = "";
-        featured.checked = false;
-
-        emitFilters();
-    });
-
-    emitFilters();
-</script>

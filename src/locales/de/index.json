@@ -73,6 +73,7 @@
             "javascript": "Programmiersprache verwendet in Webentwicklung",
             "jinja": "Template-Engine verwendet in Webentwicklung",
             "kicad": "Ingenieur-CAD-Tool verwendet in PCB-Erstellung",
+            "kotlin": "Programmiersprache verwendet in Android-Anwendungen",
             "labview": "Grafische Programmiersprache, die im Ingenieurwesen verwendet wird",
             "latex": "Sprache, die bei der Dokumentenerstellung verwendet wird",
             "matlab": "Programmiersprache, die im Ingenieurwesen verwendet wird",
@@ -80,6 +81,7 @@
             "mysql": "Relationale Datenbank verwendet im Backend",
             "nfc": "Kommunikationstechnologie",
             "opencv": "Optik-Bibliothek verwendet in Robotik",
+            "opengraph": "Im Webentwicklungsprozess verwendete Protokolle",
             "php": "Programmiersprache verwendet in Webentwicklung",
             "phpmyadmin": "Administrationspanel verwendet im Backend-Management",
             "python": "Programmiersprache verwendet im Backend und Robotik",
@@ -245,9 +247,24 @@
                 "title": "Elektro- & Embedded-Engineering",
                 "description": "Leiterplatten-Design, eingebettete Systeme, Robotik, Firmware und hardwareorientierte Engineering-Projekte"
             },
+            "search": {
+                "placeholder": "Suchbegriffe, Organisationen, Technologien",
+                "discipline": "Disziplinen",
+                "status": "Status",
+                "organization": "Organisation",
+                "featured": "Nur Flaggschiff",
+                "clear": "Filter löschen",
+                "todos": "Alle",
+                "todas": "Alle"
+            },
+            "disciplines": {
+                "electrical_engineering": "Elektroingenieur",
+                "software_engineering": "Softwareingenieur"
+            },
             "categories": {
                 "business": "Geschäft",
                 "windows_app": "Windows-App",
+                "android_app": "Android-App",
                 "web_development": "Webentwicklung",
                 "backend": "Backend",
                 "frontend": "Frontend",

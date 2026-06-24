@@ -467,6 +467,13 @@ export const ICONS = {
         desc: "Engineering CAD Tool used in PCB Creation",
         size: "md"
     },
+    kotlin: {
+        name: "kotlin",
+        group: "technologies",
+        title: "Kotlin Logo",
+        desc: "Programming Language used in Android Development",
+        size: "md"
+    },
     labview: {
         name: "labview",
         group: "technologies",
@@ -514,6 +521,13 @@ export const ICONS = {
         group: "technologies",
         title: "OpenCV Logo",
         desc: "Library used in Robotics",
+        size: "md"
+    },
+    opengraph: {
+        name: "opengraph",
+        group: "technologies",
+        title: "OpenGraph Logo",
+        desc: "Protocol used in Web Development",
         size: "md"
     },
     php: {
@@ -1324,6 +1338,22 @@ export const TECHNOLOGIES = {
             domains: ["pcb", "cad"]
         }
     },
+    kotlin: {
+        visual: {
+            name: "Kotlin",
+            color: TECHNOLOGIES_COLORS.software,
+            icon: "kotlin"
+        },
+        hierarchy: {
+            tier: "core",
+            subheader: "software"
+        },
+        metadata: {
+            key: "kotlin",
+            kind: "programming_language",
+            domains: ["frontend"]
+        }
+    },
     labview: {
         visual: {
             name: "LabView",
@@ -1434,6 +1464,22 @@ export const TECHNOLOGIES = {
             key: "opencv",
             kind: "library",
             domains: ["robotics", "embedded"]
+        }
+    },
+    opengraph: {
+        visual: {
+            name: "OpenGraph",
+            color: TECHNOLOGIES_COLORS.web,
+            icon: "opengraph"
+        },
+        hierarchy: {
+            tier: "production",
+            subheader: "web"
+        },
+        metadata: {
+            key: "opengraph",
+            kind: "library",
+            domains: ["frontend"]
         }
     },
     php: {

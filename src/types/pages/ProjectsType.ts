@@ -8,7 +8,7 @@ export type ProjectsNamesType =
 | "cs50" | "duke";
 
 export type ProjectsCategoriesType =
-| "business" | "windows_app" | "web_development" | "backend" | "frontend"
+| "business" | "windows_app" | "android_app" | "web_development" | "backend" | "frontend"
 | "pic32" | "pic18" | "pickit5" | "raspberrypi_4b" | "arduino_mega_2560_r3" | "arduino_uno_r3" | "ni_elvis"
 | "embedded_systems" | "robotics" | "automation" | "measurement_systems" | "digital_logic_design"
 | "cad" | "calculus";
@@ -16,19 +16,22 @@ export type ProjectsCategoriesType =
 export type ProjectsOrgsType =
 | "personal" | "sidimaqsa" | "nasa" | "harding" | "harvard" | "duke" | "habitar";
 
+export type ProjectsDisciplinesType = "electrical_engineering" | "software_engineering";
+export type ProjectsStatusType = "completed" | "ongoing" | "maintained";
+
 export type ProjectType = {
     key: ProjectsNamesType;
     images: {
         cover: ImageMetadata;
         album: undefined | (ImageMetadata | string)[]
     };
-    discipline: "electrical_engineering" | "software_engineering";
+    discipline: ProjectsDisciplinesType;
     stack: TechnologiesNamesType[];
     categories: ProjectsCategoriesType[];
     privacy: "public" | "private";
     client: "personal" | "academic" | "contract";
     organization: ProjectsOrgsType;
-    status: "completed" | "ongoing" | "maintained";
+    status: ProjectsStatusType;
     featured: boolean;
     startDate: string;
     endDate?: string;
@@ -45,11 +48,13 @@ export type ProjectsSSOT = Record<ProjectsNamesType, ProjectType>;
 export type LOCtextsProjectsType = {
     software: Record<("title" | "description"), string>;
     electrical: Record<("title" | "description"), string>;
+    search: Record<("placeholder" | "discipline" | "status" | "organization" | "featured" | "clear" | "todos" | "todas"), string>;
+    disciplines: Record<ProjectsDisciplinesType, string>;
     categories: Record<ProjectsCategoriesType, string>;
     privacy: Record<("public" | "private"), string>;
     client: Record<("personal" | "academic" | "contract"), string>;
     organization: Record<ProjectsOrgsType, string>;
-    status: Record<("completed" | "ongoing" | "maintained"), string>;
+    status: Record<ProjectsStatusType, string>;
     featured: string;
     links: Record<("website" | "github" | "video"), string>;
 };

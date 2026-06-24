@@ -73,6 +73,7 @@
             "javascript": "Programming Language used in Web Development",
             "jinja": "Templating Engine used in Web Development",
             "kicad": "Engineering CAD Tool used in PCB Creation",
+            "kotlin": "Programming Language used in Android Apps",
             "labview": "Graphical Programming Language used in Engineering",
             "latex": "Language used in Document Creation",
             "matlab": "Programming Language used in Engineering",
@@ -80,6 +81,7 @@
             "mysql": "Relational Database used in Backend",
             "nfc": "Communication Technology",
             "opencv": "Optics Library used in Robotics",
+            "opengraph": "Protocol used in Web Development",
             "php": "Programming Language used in Web Development",
             "phpmyadmin": "Administration Panel used in Backend Management",
             "python": "Programming Language used in Backend & Robotics",
@@ -245,9 +247,24 @@
                 "title": "Electrical & Embedded Engineering",
                 "description": "PCB design, embedded systems, robotics, firmware, and hardware-focused engineering projects"
             },
+            "search": {
+                "placeholder": "Search title, organization, technologies...",
+                "discipline": "Disciplines",
+                "status": "Status",
+                "organization": "Organization",
+                "featured": "Featured Only",
+                "clear": "Clear Filters",
+                "todos": "All",
+                "todas": "All"
+            },
+            "disciplines": {
+                "electrical_engineering": "Electrical Engineering",
+                "software_engineering": "Software Engineering"
+            },
             "categories": {
                 "business": "Business",
                 "windows_app": "Windows App",
+                "android_app": "Android App",
                 "web_development": "Web Development",
                 "backend": "Backend",
                 "frontend": "Frontend",

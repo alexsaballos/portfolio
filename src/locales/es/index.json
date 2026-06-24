@@ -73,6 +73,7 @@
             "javascript": "Lenguaje de Programación usado en Desarrollo Web",
             "jinja": "Motor de Plantillas usado en Desarrollo Web",
             "kicad": "Herramienta CAD usada en Diseño de PCB",
+            "kotlin": "Lenguage de Programación usado en Apps Android",
             "labview": "Lenguaje de Programación Gráfico usado en Ingeniería",
             "latex": "Language used in Document Creation",
             "matlab": "Lenguaje de Programación usado en Ingeniería",
@@ -80,6 +81,7 @@
             "mysql": "Base de Datos Relacional usada en Backend",
             "nfc": "Tecnología de Comunicación",
             "opencv": "Libería de Ópticas usada en Robótica",
+            "opengraph": "Protocolo usado en Desarrollo Web",
             "php": "Lenguaje de Programación usado en Desarrollo Web",
             "phpmyadmin": "Panel de Administración usado en Backend",
             "python": "Lenguaje de Programación usado en Backend & Robótica",
@@ -245,9 +247,24 @@
                 "title": "Ingeniería eléctrica y embebida",
                 "description": "Diseño de PCB, sistemas embebidos, robótica, firmware, y proyectos de ingeniería enfocados en hardware"
             },
+            "search": {
+                "placeholder": "Buscar título, organizacón, tecnología...",
+                "discipline": "Disciplinas",
+                "status": "Estado",
+                "organization": "Organización",
+                "featured": "Solo destacados",
+                "clear": "Limpiar filtros",
+                "todos": "Todos",
+                "todas": "Todas"
+            },
+            "disciplines": {
+                "electrical_engineering": "Ingeniería Eléctrica",
+                "software_engineering": "Ingeniería de Software"
+            },
             "categories": {
                 "business": "Negocios",
                 "windows_app": "Aplicación Windows",
+                "android_app": "Aplicación Android",
                 "web_development": "Desarrollo web",
                 "backend": "Backend",
                 "frontend": "Frontend",

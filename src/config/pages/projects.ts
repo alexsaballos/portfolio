@@ -14,8 +14,8 @@ export const PROJECTS = {
             album: undefined
         },
         discipline: "software_engineering",
-        stack: ["csharp", "javascript", "winui", "mysql", "cpanel", "php", "phpmyadmin"],
-        categories: ["business", "windows_app"],
+        stack: ["csharp", "javascript", "winui", "kotlin", "mysql", "cpanel", "php", "phpmyadmin"],
+        categories: ["business", "windows_app", "android_app"],
         privacy: "private",
         client: "contract",
         organization: "sidimaqsa",
@@ -32,7 +32,7 @@ export const PROJECTS = {
             album: undefined
         },
         discipline: "software_engineering",
-        stack: ["astro", "tailwindcss", "daisyui", "typescript", "html", "css", "cpanel", "php", "resend", "google_wallet", "google_analytics", "nfc"],
+        stack: ["astro", "tailwindcss", "daisyui", "typescript", "html", "css", "cpanel", "php", "opengraph", "resend", "google_wallet", "google_analytics", "nfc"],
         categories: ["web_development", "backend", "frontend"],
         privacy: "public",
         client: "personal",
@@ -52,7 +52,7 @@ export const PROJECTS = {
             album: undefined
         },
         discipline: "software_engineering",
-        stack: ["astro", "tailwindcss", "daisyui", "typescript", "html", "css", "cpanel", "php", "google_maps", "resend"],
+        stack: ["astro", "tailwindcss", "daisyui", "typescript", "html", "css", "cpanel", "php", "opengraph", "resend", "google_maps", "google_analytics"],
         categories: ["business", "web_development", "backend", "frontend"],
         privacy: "private",
         client: "contract",
@@ -148,8 +148,8 @@ export const PROJECTS = {
             album: undefined
         },
         discipline: "electrical_engineering",
-        stack: ["a3", "opencv", "raspberrypi", "embedded", "electronics_analog", "electronics_digital", "python"],
-        categories: ["raspberrypi_4b", "robotics", "automation", "embedded_systems"],
+        stack: ["a3", "opencv", "raspberrypi", "electronics_analog", "electronics_digital", "python"],
+        categories: ["raspberrypi_4b", "robotics", "automation"],
         privacy: "private",
         client: "academic",
         organization: "nasa",
