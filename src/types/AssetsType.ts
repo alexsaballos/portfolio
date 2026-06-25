@@ -50,8 +50,8 @@ export type TechnologiesNamesType =
     | "electronics_digital" | "embedded" | "flask" | "google_analytics" | "google_maps" | "google_wallet"
     | "html" | "java" | "javascript" | "jinja" | "kicad" | "kotlin" | "labview" | "latex" | "matlab"
     | "multisim" | "mysql" | "nfc" | "opencv" | "opengraph" | "php" | "phpmyadmin" | "python"
-    | "raspberrypi" | "react" | "resend" | "sass" | "sketchup" | "sqlite" | "tailwindcss" | "typescript"
-    | "ultiboard" | "winui";
+    | "raspberrypi" | "react" | "resend" | "sass" | "schemaorg" | "sketchup" | "sqlite" | "tailwindcss"
+    | "typescript" | "ultiboard" | "winui";
 
 export type TechnologiesKindType =
     | "programming_language" | "framework" | "library" | "hardware"

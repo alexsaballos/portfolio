@@ -579,6 +579,13 @@ export const ICONS = {
         desc: "Framework used in Web Development",
         size: "md"
     },
+    schemaorg: {
+        name: "schemaorg",
+        group: "technologies",
+        title: "Schema.org Logo",
+        desc: "Protocol used in Web Development",
+        size: "md"
+    },
     sketchup: {
         name: "sketchup",
         group: "technologies",
@@ -1479,7 +1486,7 @@ export const TECHNOLOGIES = {
         metadata: {
             key: "opengraph",
             kind: "library",
-            domains: ["frontend"]
+            domains: ["web", "frontend"]
         }
     },
     php: {
@@ -1591,6 +1598,22 @@ export const TECHNOLOGIES = {
         metadata: {
             key: "sass",
             kind: "framework",
+            domains: ["web", "frontend"]
+        }
+    },
+    schemaorg: {
+        visual: {
+            name: "Schema.org",
+            color: TECHNOLOGIES_COLORS.web,
+            icon: "schemaorg"
+        },
+        hierarchy: {
+            tier: "production",
+            subheader: "web"
+        },
+        metadata: {
+            key: "schemaorg",
+            kind: "library",
             domains: ["web", "frontend"]
         }
     },

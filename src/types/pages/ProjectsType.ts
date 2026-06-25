@@ -9,9 +9,11 @@ export type ProjectsNamesType =
 
 export type ProjectsCategoriesType =
 | "business" | "windows_app" | "android_app" | "web_development" | "backend" | "frontend"
-| "pic32" | "pic18" | "pickit5" | "raspberrypi_4b" | "arduino_mega_2560_r3" | "arduino_uno_r3" | "ni_elvis"
-| "embedded_systems" | "robotics" | "automation" | "measurement_systems" | "digital_logic_design"
+| "embedded_systems" | "robotics" | "automation" | "computer_vision" | "measurement_systems" | "digital_logic_design"
 | "cad" | "calculus";
+
+export type ProjectsHardwareType =
+| "pic32" | "pic18" | "pickit5" | "raspberrypi_4b" | "arduino_mega_2560_r3" | "arduino_uno_r3" | "ni_elvis";
 
 export type ProjectsOrgsType =
 | "personal" | "sidimaqsa" | "nasa" | "harding" | "harvard" | "duke" | "habitar";
@@ -27,6 +29,7 @@ export type ProjectType = {
     };
     discipline: ProjectsDisciplinesType;
     stack: TechnologiesNamesType[];
+    hardware?: ProjectsHardwareType[];
     categories: ProjectsCategoriesType[];
     privacy: "public" | "private";
     client: "personal" | "academic" | "contract";
@@ -50,6 +53,7 @@ export type LOCtextsProjectsType = {
     electrical: Record<("title" | "description"), string>;
     search: Record<("placeholder" | "discipline" | "status" | "organization" | "featured" | "clear" | "todos" | "todas"), string>;
     disciplines: Record<ProjectsDisciplinesType, string>;
+    hardware: { header: string; } & Record<ProjectsHardwareType, string>;
     categories: Record<ProjectsCategoriesType, string> & { header: string; };
     privacy: Record<("public" | "private"), string>;
     client: Record<("personal" | "academic" | "contract"), string>;
