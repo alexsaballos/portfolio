@@ -250,7 +250,7 @@ export const PROJECTS = {
             album: undefined
         },
         discipline: "software_engineering",
-        stack: ["react", "javascript", "axios", "directus", "bootstrap", "google_maps", "sass", "php" ],
+        stack: ["react", "javascript", "axios", "directus", "bootstrap", "google_maps", "sass", "php", "mysql"],
         categories: ["web_development", "backend", "frontend"],
         privacy: "private",
         client: "contract",
@@ -270,7 +270,7 @@ export const PROJECTS = {
             album: undefined
         },
         discipline: "software_engineering",
-        stack: ["react", "javascript", "axios", "antdesign", "php"],
+        stack: ["react", "javascript", "axios", "antdesign", "php", "mysql"],
         categories: ["web_development", "backend", "frontend"],
         privacy: "private",
         client: "contract",
@@ -290,7 +290,7 @@ export const PROJECTS = {
             album: undefined
         },
         discipline: "software_engineering",
-        stack: ["react", "javascript", "directus", "mysql", "php"],
+        stack: ["react", "javascript", "directus", "php", "mysql"],
         categories: ["web_development", "backend"],
         privacy: "private",
         client: "contract",
