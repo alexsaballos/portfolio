@@ -322,79 +322,79 @@
         },
         "pcs": {
             "title": "Bedienfeld (PCS) von SIDIMAQSA",
-            "summary": "Platzhalter für Kurzbeschreibung"
+            "summary": "Umfassendes Unternehmensverwaltungssystem für ein Aufzugsunternehmen. Beinhaltet Windows- und Android-Anwendungen."
         },
         "portfolio": {
             "title": "Mein professionelles Portfolio",
-            "summary": "Platzhalter für Kurzbeschreibung"
+            "summary": "Professionelle Plattform zur Präsentation von Projekten, Erfahrungen und Qualifikationen für ein internationales Publikum."
         },
         "sidimaqsa": {
             "title": "Website von SIDIMAQSA",
-            "summary": "Platzhalter für Kurzbeschreibung"
+            "summary": "Unternehmenswebsite zur Präsentation der Aufzugs- und Fahrtreppendienstleistungen von SIDIMAQSA."
         },
         "domotics": {
             "title": "Arduino-Hausautomation",
-            "summary": "Platzhalter für Kurzbeschreibung"
+            "summary": "Vollständige Heimautomatisierung mittels IoT-Technologien auf Basis von Arduino."
         },
         "atx": {
             "title": "Automatischer Werkzeugwechsler (ATX)",
-            "summary": "Platzhalter für Kurzbeschreibung"
+            "summary": "Maschine für den automatischen und präzisen Werkzeugwechsel in CNC-Maschinen."
         },
         "arctos": {
             "title": "ARCTOS Roboterarm",
-            "summary": "Platzhalter für Kurzbeschreibung"
+            "summary": "Montage und Implementierung einer joystickbasierten Steuerung für den ARCTOS-Roboterarm."
         },
         "maze_robot": {
             "title": "Labyrinth-Navigator-Roboter",
-            "summary": "Platzhalter für Kurzbeschreibung"
-        },
-        "instrumentation": {
-            "title": "Elektronische Messtechnik",
-            "summary": "Platzhalter für Kurzbeschreibung"
+            "summary": "Mikrocontrollerbasierter autonomer Roboter zur Lösung von Labyrinthen mittels Infrarotsensoren."
         },
         "asgc": {
             "title": "Autonomes Fahrzeug mit Farberkennung",
-            "summary": "Platzhalter für Kurzbeschreibung"
+            "summary": "Autonomes Fahrzeug zur Navigation von Strecken mittels Farb- und Mustererkennung für einen NASA-Wettbewerb."
+        },
+        "instrumentation": {
+            "title": "Elektronische Messtechnik",
+            "summary": "Projekte mit Schwerpunkt auf Entwurf, Fertigung und Instrumentierung elektronischer Messsysteme."
         },
         "digital_clock": {
             "title": "Digitale Uhr aus Logikgattern",
-            "summary": "Platzhalter für Kurzbeschreibung"
+            "summary": "Entwurf und Implementierung einer Digitaluhr mit Logikgattern, JK-Flipflops und BCD-Schaltungen."
         },
         "prog_engr": {
             "title": "Programmierung für Ingenieure",
-            "summary": "Platzhalter für Kurzbeschreibung"
+            "summary": "Projekte auf verschiedenen Plattformen und in unterschiedlichen Programmiersprachen für Ingenieuranwendungen."
         },
         "bison_math": {
             "title": "Analysis in LaTeX",
-            "summary": "Platzhalter für Kurzbeschreibung"
+            "summary": "Hunderte von Analysisaufgaben, die für ein privates WordPress-basiertes Projekt in LaTeX umgesetzt wurden."
         },
         "habitar": {
             "title": "AutoCAD + SketchUp Projekte",
-            "summary": "Brief description placeholder"
+            "summary": "Technische Zeichen- und 3D-Modellierungsprojekte mit AutoCAD und SketchUp."
         },
         "hu_remembers": {
             "title": "HU-Emblem-Sucher",
-            "summary": "Platzhalter für Kurzbeschreibung"
+            "summary": "Such- und Visualisierungsplattform für historische Embleme auf dem Campus der Harding University."
         },
         "hu_bison": {
             "title": "HU-Zeitungs-Sucher „The Bison“",
-            "summary": "Platzhalter für Kurzbeschreibung"
+            "summary": "Suchplattform für Artikel der Studentenzeitung The Bison der Harding University."
         },
         "hu_directus": {
             "title": "HU Directus-Implementierungen",
-            "summary": "Platzhalter für Kurzbeschreibung"
+            "summary": "Datenbank- und CMS-Implementierungen für die Mitarbeiter der Brackett Library der Harding University."
         },
         "hu_kiosk": {
             "title": "Kiosk zum 100-jährigen HU-Jubiläum",
-            "summary": "Platzhalter für Kurzbeschreibung"
+            "summary": "Interaktiver Kiosk zur Präsentation historischer Materialien anlässlich des 100-jährigen Jubiläums der Harding University."
         },
         "cs50": {
             "title": "CS50 PSets + Abschlussprojekt",
-            "summary": "Platzhalter für Kurzbeschreibung"
+            "summary": "Projekte zu verschiedenen Informatikkonzepten aus dem CS50-Kurs der Harvard University."
         },
         "duke": {
             "title": "Duke PSets + Abschlussprojekt mit Auszeichnung",
-            "summary": "Platzhalter für Kurzbeschreibung"
+            "summary": "Projekte zu verschiedenen Java-Konzepten aus dem Programmiercurriculum der Duke University."
         }
     },
     "contact": {

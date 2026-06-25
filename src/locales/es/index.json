@@ -322,79 +322,79 @@
         },
         "pcs": {
             "title": "Panel de Control de SIDIMAQSA (PCS)",
-            "summary": "Aqui va una descripcion breve"
+            "summary": "Sistema integral de gestión empresarial para empresa de elevadores. Incluye apps para Windows y Android."
         },
         "portfolio": {
             "title": "Mi portafolio profesional",
-            "summary": "Aqui va una descripcion breve"
+            "summary": "Plataforma profesional para presentación de proyectos, experiencia y credenciales a nivel internacional."
         },
         "sidimaqsa": {
             "title": "Sitio web de SIDIMAQSA",
-            "summary": "Aqui va una descripcion breve"
+            "summary": "Sitio web corporativo para promoción de servicios de elevadores y escaleras eléctricas de SIDIMAQSA."
         },
         "domotics": {
             "title": "Domótica con Arduino",
-            "summary": "Aqui va una descripcion breve"
+            "summary": "Implementación completa de automatización doméstica utilizando técnicas de IoT através de Arduino."
         },
         "atx": {
             "title": "Intercambiador automático de herramientas (ATX)",
-            "summary": "Aqui va una descripcion breve"
+            "summary": "Máquina diseñada para el intercambio automático y preciso de herramientas utilizadas en máquinas CNC."
         },
         "arctos": {
             "title": "Brazo robótico ARCTOS",
-            "summary": "Aqui va una descripcion breve"
+            "summary": "Ensamble e implementación de control mediante joysticks para brazo robótico ARCTOS."
         },
         "maze_robot": {
             "title": "Robot navegador de laberintos",
-            "summary": "Aqui va una descripcion breve"
+            "summary": "Robot autónomo basado en microcontrolador capaz de resolver laberintos mediante sensores infrarrojos."
         },
         "asgc": {
             "title": "Vehículo autónomo de reconocimiento de color",
-            "summary": "Aqui va una descripcion breve"
+            "summary": "Vehículo capaz de navegar pistas mediante reconocimiento de colores y patrones para competencia NASA."
         },
         "instrumentation": {
             "title": "Instrumentación Electrónica",
-            "summary": "Aqui va una descripcion breve"
+            "summary": "Proyectos enfocados en diseño, programación e implementación de sistemas electrónicos de medición."
         },
         "digital_clock": {
             "title": "Reloj digital de compuertas lógicas",
-            "summary": "Aqui va una descripcion breve"
+            "summary": "Diseño e implementación de reloj digital utilizando compuertas lógicas, JK Flip-Flops y BCDs."
         },
         "prog_engr": {
             "title": "Programación para ingenieros",
-            "summary": "Aqui va una descripcion breve"
+            "summary": "Proyectos desarrollados en múltiples plataformas y lenguajes orientados a aplicaciones de ingeniería."
         },
         "bison_math": {
             "title": "Cálculo en LaTeX",
-            "summary": "Aqui va una descripcion breve"
+            "summary": "Centenares de ejercicios de cálculo adaptados a LaTeX para proyecto privado basado en WordPress."
         },
         "habitar": {
             "title": "Proyectos de AutoCAD + SketchUp",
-            "summary": "Brief description placeholder"
+            "summary": "Proyectos de dibujo técnico y modelado 3D desarrollados con AutoCAD y SketchUp."
         },
         "hu_remembers": {
             "title": "Buscador de emblemas de HU",
-            "summary": "Aqui va una descripcion breve"
+            "summary": "Plataforma de búsqueda y visualización de emblemas históricos del campus de Harding University."
         },
         "hu_bison": {
             "title": "Buscador del periódico de HU 'The Bison'",
-            "summary": "Aqui va una descripcion breve"
+            "summary": "Plataforma de búsqueda para artículos publicados en el periódico universitario 'The Bison'."
         },
         "hu_directus": {
             "title": "Implementaciones HU Directus",
-            "summary": "Aqui va una descripcion breve"
+            "summary": "Implementaciones de bases de datos y CMS para personal de la Biblioteca Brackett de Harding University."
         },
         "hu_kiosk": {
             "title": "Quiosco del centenario de HU",
-            "summary": "Aqui va una descripcion breve"
+            "summary": "Quiosco interactivo para visualización de material histórico del centenario de Harding University."
         },
         "cs50": {
             "title": "CS50 PSets + Proyecto Final",
-            "summary": "Aqui va una descripcion breve"
+            "summary": "Proyectos que abarcan diversos conceptos de ciencias de la computación del curso CS50 de Harvard."
         },
         "duke": {
             "title": "Duke PSets + Proyecto Final de Honores",
-            "summary": "Brief description placeholder"
+            "summary": "Proyectos que abarcan diversos conceptos de Java del programa ofrecido por Duke University."
         }
     },
     "contact": {

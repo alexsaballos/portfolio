@@ -18,13 +18,10 @@ const t = Astro.locals.t.projects;
     data-project_organization={project.organization}
     data-project_featured={project.featured}>
     
-    <!-- Banner Image & Tags -->
-    <Image src={project.images.cover} alt={t[project.key].title} class="rounded-t-lg aspect-video w-full object-cover" />
+    <!-- Banner Image & Completion Tags -->
+    <Image src={project.images.cover} alt={t[project.key].title} class="rounded-t-lg aspect-video w-full object-cover select-none" />
     <span class="absolute top-3 right-3 badge badge-success badge-sm rounded-full select-none bg-success/60 font-semibold">
         {t.texts.status[project.status]}
-    </span>
-    <span class="absolute top-3 left-3 badge badge-info badge-sm rounded-full select-none bg-info/60 font-semibold">
-        {t.texts.privacy[project.privacy]}
     </span>
 
     <!-- Title, organization, dates, categories, and tech stack -->
@@ -43,13 +40,17 @@ const t = Astro.locals.t.projects;
                     {t.texts.client[project.client]}
                 </span>
             }
+            <span class="badge badge-info badge-sm rounded-full select-none badge-outline font-semibold">
+                {t.texts.privacy[project.privacy]}
+            </span>
         </div>
+        <p class="text-sm text-base-content/70 line-clamp-2">{t[project.key].summary}</p>
 
         <div class="flex flex-col gap-2 my-4">
             <p class="text-xs tracking-wide leading-none uppercase text-base-content/60">{t.texts.categories.header}</p>
             <div class="flex flex-wrap gap-2">
                 {project.categories.map(category => (
-                    <span class="badge badge-sm badge-outline badge-secondary hover:bg-secondary hover:text-secondary-content rounded-full transition-colors duration-250">
+                    <span class="badge badge-sm badge-outline badge-secondary hover:bg-secondary hover:text-secondary-content rounded-md transition-colors duration-250">
                         {t.texts.categories[category]}
                     </span>
                 ))}
@@ -58,22 +59,22 @@ const t = Astro.locals.t.projects;
 
         {project.hardware && 
             <div class="flex flex-col gap-2 my-4">
-            <p class="text-xs tracking-wide leading-none uppercase text-base-content/60">{t.texts.hardware.header}</p>
-            <div class="flex flex-wrap gap-2">
-                {project.hardware.map(hardware => (
-                    <span class="badge badge-sm badge-outline badge-primary hover:bg-primary hover:text-primary-content rounded-full transition-colors duration-250">
-                        {t.texts.hardware[hardware]}
-                    </span>
-                ))}
+                <p class="text-xs tracking-wide leading-none uppercase text-base-content/60">{t.texts.hardware.header}</p>
+                <div class="flex flex-wrap gap-2">
+                    {project.hardware.map(hardware => (
+                        <span class="badge badge-sm badge-outline badge-primary hover:bg-primary hover:text-primary-content rounded-md transition-colors duration-250">
+                            {t.texts.hardware[hardware]}
+                        </span>
+                    ))}
+                </div>
             </div>
-        </div>
         }
 
         <div class="flex flex-col gap-2 mt-4 mb-2">
             <p class="text-xs tracking-wide leading-none uppercase text-base-content/60">{t.texts.stack}</p>
             <div class="flex flex-wrap gap-2">
                 {project.stack.map(tech => (
-                    <span class="badge badge-sm badge-ghost rounded-full align-middle gap-1">
+                    <span class="badge badge-sm badge-ghost rounded-md align-middle gap-1">
                         <CommonIcon name={tech} size="sm" />
                         {TECHNOLOGIES[tech].visual.name}
                     </span>

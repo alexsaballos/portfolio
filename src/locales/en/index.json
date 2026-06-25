@@ -322,79 +322,79 @@
         },
         "pcs": {
             "title": "SIDIMAQSA's Control Panel (PCS)",
-            "summary": "Brief description placeholder"
+            "summary": "Comprehensive business management system for an elevator company. Includes apps for Windows and Android."
         },
         "portfolio": {
             "title": "My Professional Portfolio",
-            "summary": "Brief description placeholder"
+            "summary": "Professional platform showcasing projects, experience, and credentials for international audiences."
         },
         "sidimaqsa": {
             "title": "SIDIMAQSA's Website",
-            "summary": "Brief description placeholder"
+            "summary": "Corporate website promoting SIDIMAQSA's elevator and escalator services."
         },
         "domotics": {
             "title": "Arudino Domotics",
-            "summary": "Brief description placeholder"
+            "summary": "Complete home automation implementation through IoT technologies using Arduino."
         },
         "atx": {
             "title": "Automatic Tool Exchanger (ATX)",
-            "summary": "Brief description placeholder"
+            "summary": "Machine designed for automatic and precise tool exchange in CNC machines."
         },
         "arctos": {
             "title": "ARCTOS Robotic Arm",
-            "summary": "Brief description placeholder"
+            "summary": "Assembly and joystick-based control implementation for the ARCTOS robotic arm."
         },
         "maze_robot": {
             "title": "Maze Navigator Robot",
-            "summary": "Brief description placeholder"
+            "summary": "Microcontroller-based autonomous robot capable of solving mazes using infrared sensors."
         },
         "asgc": {
             "title": "Autonomous Color-Recognition Vehicle",
-            "summary": "Brief description placeholder"
+            "summary": "Vehicle capable of navigating tracks through color and pattern recognition for a NASA competition."
         },
         "instrumentation": {
             "title": "Electronic Instrumentation",
-            "summary": "Brief description placeholder"
+            "summary": "Projects focused on the design, manufacturing, and instrumentation of electronic measurement systems."
         },
         "digital_clock": {
             "title": "Logic Gates Digital Clock",
-            "summary": "Brief description placeholder"
+            "summary": "Design and implementation of a digital clock using logic gates, JK flip-flops, and BCD circuits."
         },
         "prog_engr": {
             "title": "Programming for Engineers",
-            "summary": "Brief description placeholder"
+            "summary": "Projects developed across multiple platforms and programming languages for engineering applications."
         },
         "bison_math": {
             "title": "Calculus in LaTeX",
-            "summary": "Brief description placeholder"
+            "summary": "Hundreds of calculus exercises adapted to LaTeX for a private WordPress-based project."
         },
         "habitar": {
             "title": "AutoCAD + SketchUp Projects",
-            "summary": "Brief description placeholder"
+            "summary": "Technical drawing and 3D modeling projects developed with AutoCAD and SketchUp."
         },
         "hu_remembers": {
             "title": "HU Emblem Searcher",
-            "summary": "Brief description placeholder"
+            "summary": "Search and visualization platform for historical emblems located throughout Harding University's campus."
         },
         "hu_bison": {
             "title": "'The Bison' HU Newspaper Searcher",
-            "summary": "Brief description placeholder"
+            "summary": "Search platform for articles published in Harding University's student newspaper 'The Bison'."
         },
         "hu_directus": {
             "title": "HU Directus Implementations",
-            "summary": "Brief description placeholder"
+            "summary": "Database and CMS implementations for staff at Harding University's Brackett Library."
         },
         "hu_kiosk": {
             "title": "HU Centennial Anniversary Kiosk",
-            "summary": "Brief description placeholder"
+            "summary": "Interactive kiosk showcasing historical materials for Harding University's centennial celebration."
         },
         "cs50": {
             "title": "CS50 PSets + Final Project",
-            "summary": "Brief description placeholder"
+            "summary": "Projects covering diverse computer science concepts from Harvard University's CS50 course."
         },
         "duke": {
             "title": "Duke PSets + Final Honors Project",
-            "summary": "Brief description placeholder"
+            "summary": "Projects covering diverse Java concepts from Duke University's programming curriculum."
         }
     },
     "contact": {
