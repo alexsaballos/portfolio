@@ -61,7 +61,7 @@ export type LOCtextsProjectsType = {
     status: Record<ProjectsStatusType, string>;
     featured: string;
     links: Record<("website" | "github" | "video"), string>;
-    stack: string;
+    stack: Record<("header" | "more" | "less"), string>;
 };
 
 export type LOCprojectsType = { texts: LOCtextsProjectsType } & Record<ProjectsNamesType, {

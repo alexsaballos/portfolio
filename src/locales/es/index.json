@@ -318,7 +318,11 @@
                 "github": "Ver Código",
                 "video": "Ver Videos"
             },
-            "stack": "Stack"
+            "stack": {
+                "header": "Stack",
+                "more": "Más",
+                "less": "Mostrar menos"
+            }
         },
         "pcs": {
             "title": "Panel de Control de SIDIMAQSA (PCS)",

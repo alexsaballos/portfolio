@@ -318,7 +318,11 @@
                 "github": "Read Code",
                 "video": "Watch Videos"
             },
-            "stack": "Stack"
+            "stack": {
+                "header": "Stack",
+                "more": "More",
+                "less": "Show less"
+            }
         },
         "pcs": {
             "title": "SIDIMAQSA's Control Panel (PCS)",

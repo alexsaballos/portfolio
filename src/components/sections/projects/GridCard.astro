@@ -1,11 +1,16 @@
 ---
 import Image from "astro/components/Image.astro";
-import CommonIcon from "@src/components/ui/CommonIcon.astro";
-import { TECHNOLOGIES } from "@src/config/assets";
-import type { ProjectType } from "@src/types/pages/ProjectsType";
+import CommonIcon from "@ui/CommonIcon.astro";
+import { TECHNOLOGIES } from "@config/assets";
+import type { ProjectType } from "@typing/pages/ProjectsType";
 
 const project = Astro.props.project as ProjectType;
 const t = Astro.locals.t.projects;
+
+const BADGE_LIMIT = 3;
+const visibleStack = project.stack.slice(0, BADGE_LIMIT);
+const hiddenStack = project.stack.slice(BADGE_LIMIT);
+const hasMoreTech = hiddenStack.length > 0;
 ---
 
 <!-- Project-card class used on client-side JS project filtering -->
@@ -71,14 +76,31 @@ const t = Astro.locals.t.projects;
         }
 
         <div class="flex flex-col gap-2 mt-4 mb-2">
-            <p class="text-xs tracking-wide leading-none uppercase text-base-content/60">{t.texts.stack}</p>
+            <p class="text-xs tracking-wide leading-none uppercase text-base-content/60">{t.texts.stack.header}</p>
             <div class="flex flex-wrap gap-2">
-                {project.stack.map(tech => (
+                {visibleStack.map(tech => (
                     <span class="badge badge-sm badge-ghost rounded-md align-middle gap-1">
                         <CommonIcon name={tech} size="sm" />
                         {TECHNOLOGIES[tech].visual.name}
                     </span>
                 ))}
+                {hasMoreTech && (
+                    <details class="group inline-block relative">
+                        <summary class="badge badge-ghost badge-outline badge-sm rounded-md font-semibold align-middle cursor-pointer list-none select-none mb-2">
+                            <span class="group-open:hidden">+{hiddenStack.length} {t.texts.stack.more}</span>
+                            <span class="hidden group-open:inline">{t.texts.stack.less}</span>
+                        </summary>
+                        
+                        <div class="absolute bg-base-200 border border-base-300 rounded-box shadow-2xl flex flex-col gap-2 mt-1 p-1 z-10">
+                            {hiddenStack.map(tech => (
+                                <span class="badge badge-sm badge-ghost rounded-md align-middle gap-1 whitespace-nowrap">
+                                    <CommonIcon name={tech} size="sm" />
+                                    {TECHNOLOGIES[tech].visual.name}
+                                </span>
+                            ))}
+                        </div>
+                    </details>
+                )}
             </div>
         </div>
     </div>

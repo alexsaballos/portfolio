@@ -318,7 +318,11 @@
                 "github": "Code ansehen",
                 "video": "Videos ansehen"
             },
-            "stack": "Stack"
+            "stack": {
+                "header": "Stack",
+                "more": "Mehr",
+                "less": "Weniger anzeigen"
+            }
         },
         "pcs": {
             "title": "Bedienfeld (PCS) von SIDIMAQSA",
