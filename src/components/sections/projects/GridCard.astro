@@ -55,7 +55,7 @@ const hasMoreTech = hiddenStack.length > 0;
             <p class="text-xs tracking-wide leading-none uppercase text-base-content/60">{t.texts.categories.header}</p>
             <div class="flex flex-wrap gap-2">
                 {project.categories.map(category => (
-                    <span class="badge badge-sm badge-outline badge-secondary hover:bg-secondary hover:text-secondary-content rounded-md transition-colors duration-250">
+                    <span class="badge badge-sm badge-outline badge-secondary hover:bg-secondary hover:text-secondary-content rounded-md transition-colors duration-250 cursor-pointer list-none select-none">
                         {t.texts.categories[category]}
                     </span>
                 ))}
@@ -67,7 +67,7 @@ const hasMoreTech = hiddenStack.length > 0;
                 <p class="text-xs tracking-wide leading-none uppercase text-base-content/60">{t.texts.hardware.header}</p>
                 <div class="flex flex-wrap gap-2">
                     {project.hardware.map(hardware => (
-                        <span class="badge badge-sm badge-outline badge-primary hover:bg-primary hover:text-primary-content rounded-md transition-colors duration-250">
+                        <span class="badge badge-sm badge-outline badge-primary hover:bg-primary hover:text-primary-content rounded-md transition-colors duration-250 cursor-pointer list-none select-none">
                             {t.texts.hardware[hardware]}
                         </span>
                     ))}
@@ -91,9 +91,9 @@ const hasMoreTech = hiddenStack.length > 0;
                             <span class="hidden group-open:inline">{t.texts.stack.less}</span>
                         </summary>
                         
-                        <div class="absolute bg-base-200 border border-base-300 rounded-box shadow-2xl flex flex-col gap-2 mt-1 p-1 z-10">
+                        <div class="absolute bg-base-100/60 border border-base-content/10 backdrop-blur-sm rounded-box shadow-2xl flex flex-col gap-2 p-2 z-10">
                             {hiddenStack.map(tech => (
-                                <span class="badge badge-sm badge-ghost rounded-md align-middle gap-1 whitespace-nowrap">
+                                <span class="flex flex-row align-middle gap-1 whitespace-nowrap text-sm">
                                     <CommonIcon name={tech} size="sm" />
                                     {TECHNOLOGIES[tech].visual.name}
                                 </span>

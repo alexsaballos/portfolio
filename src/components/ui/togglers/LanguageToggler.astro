@@ -21,7 +21,7 @@ const routedPage = (lang: AdmittedLanguagesType): string =>
         class="btn btn-ghost btn-square shadow-none transition-transform duration-500 ease-out hover:text-secondary hover:scale-120">
         <CommonIcon name="globe" />
     </div>
-    <ul tabindex="-1" class="dropdown-content menu bg-base-200 text-base-content rounded-box gap-1 w-30 my-2 p-1">
+    <ul tabindex="-1" class="dropdown-content menu bg-base-200/60 border border-base-content/10 backdrop-blur-sm text-base-content rounded-box grow gap-1 my-2 p-1">
         {Object.values(LANGUAGES).map((entry) => (
             <li><a href={routedPage(entry.code.lang)}>
                 <CommonIcon name={entry.icon} />
