@@ -7,10 +7,13 @@ import type { ProjectType } from "@typing/pages/ProjectsType";
 const project = Astro.props.project as ProjectType;
 const t = Astro.locals.t.projects;
 
+// Stack Badges Arithmetic
 const BADGE_LIMIT = 3;
-const visibleStack = project.stack.slice(0, BADGE_LIMIT);
+const hasTolerableLength = (project.stack.length === BADGE_LIMIT + 1);
+const visibleStack = hasTolerableLength ? project.stack : project.stack.slice(0, BADGE_LIMIT);
 const hiddenStack = project.stack.slice(BADGE_LIMIT);
-const hasMoreTech = hiddenStack.length > 0;
+const hiddenStackLength = hiddenStack.length;
+const hasMoreTech = (hiddenStackLength > 0) && !hasTolerableLength;
 ---
 
 <!-- Project-card class used on client-side JS project filtering -->
@@ -23,7 +26,7 @@ const hasMoreTech = hiddenStack.length > 0;
     data-project_organization={project.organization}
     data-project_featured={project.featured}>
     
-    <!-- Banner Image & Completion Tags -->
+    <!-- Banner Image & Completion Tag -->
     <Image src={project.images.cover} alt={t[project.key].title} class="rounded-t-lg aspect-video w-full object-cover select-none" />
     <span class="absolute top-3 right-3 badge badge-success badge-sm rounded-full select-none bg-success/60 font-semibold">
         {t.texts.status[project.status]}
@@ -39,7 +42,7 @@ const hasMoreTech = hiddenStack.length > 0;
                 {project.startDate}
                 {(project.endDate && project.startDate !== project.endDate) ? ` \u2192 ${project.endDate}` : ""}
             </span>
-            <!-- Handles edge case ocurring when organization === client === "personal" -->
+            <!-- Handles edge case ocurring when (organization === client === "personal") -->
             {(project.organization !== project.client) &&
                 <span class="badge badge-info badge-sm rounded-full select-none badge-outline bg-info/20 font-semibold">
                     {t.texts.client[project.client]}
@@ -87,7 +90,7 @@ const hasMoreTech = hiddenStack.length > 0;
                 {hasMoreTech && (
                     <details class="group inline-block relative">
                         <summary class="badge badge-ghost badge-outline badge-sm rounded-md font-semibold align-middle cursor-pointer list-none select-none mb-2">
-                            <span class="group-open:hidden">+{hiddenStack.length} {t.texts.stack.more}</span>
+                            <span class="group-open:hidden">+{hiddenStackLength} {t.texts.stack.more}</span>
                             <span class="hidden group-open:inline">{t.texts.stack.less}</span>
                         </summary>
                         
