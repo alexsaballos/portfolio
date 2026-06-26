@@ -76,6 +76,7 @@
             "kotlin": "Lenguage de Programación usado en Apps Android",
             "labview": "Lenguaje de Programación Gráfico usado en Ingeniería",
             "latex": "Language used in Document Creation",
+            "logicsimulator": "Simulador usado en Electrónica Digital",
             "matlab": "Lenguaje de Programación usado en Ingeniería",
             "multisim": "Simulador usado en Electrónica & Creación de Diagramas",
             "mysql": "Base de Datos Relacional usada en Backend",

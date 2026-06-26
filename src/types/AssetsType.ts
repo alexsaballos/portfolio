@@ -48,8 +48,8 @@ export type TechnologiesNamesType =
     | "a3" | "antdesign" | "arduino" | "astro" | "autocad" | "axios" | "bluetooth" | "bootstrap"
     | "c" | "cpanel" | "cpp" | "csharp" | "css" | "daisyui" | "directus" | "electronics_analog"
     | "electronics_digital" | "embedded" | "flask" | "google_analytics" | "google_maps" | "google_wallet"
-    | "html" | "java" | "javascript" | "jinja" | "kicad" | "kotlin" | "labview" | "latex" | "matlab"
-    | "multisim" | "mysql" | "nfc" | "opencv" | "opengraph" | "php" | "phpmyadmin" | "python"
+    | "html" | "java" | "javascript" | "jinja" | "kicad" | "kotlin" | "labview" | "latex" | "logicsimulator"
+    | "matlab" | "multisim" | "mysql" | "nfc" | "opencv" | "opengraph" | "php" | "phpmyadmin" | "python"
     | "raspberrypi" | "react" | "resend" | "sass" | "schemaorg" | "sketchup" | "sqlite" | "tailwindcss"
     | "typescript" | "ultiboard" | "winui";
 

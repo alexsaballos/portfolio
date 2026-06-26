@@ -488,6 +488,13 @@ export const ICONS = {
         desc: "Language used in Document Creation",
         size: "md"
     },
+    logicsimulator: {
+        name: "logicsimulator",
+        group: "technologies",
+        title: "Logic Simulator Logo",
+        desc: "Simulation Tool used in Digital Electronics",
+        size: "md"
+    },
     matlab: {
         name: "matlab",
         group: "technologies",
@@ -1391,6 +1398,22 @@ export const TECHNOLOGIES = {
             key: "latex",
             kind: "framework",
             domains: ["frontend", "operations"]
+        }
+    },
+    logicsimulator: {
+        visual: {
+            name: "Logic Simulator",
+            color: TECHNOLOGIES_COLORS.embedded,
+            icon: "logicsimulator"
+        },
+        hierarchy: {
+            tier: "core",
+            subheader: "embedded"
+        },
+        metadata: {
+            key: "logicsimulator",
+            kind: "simulation_tool",
+            domains: ["electronics", "cad"]
         }
     },
     matlab: {

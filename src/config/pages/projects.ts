@@ -192,7 +192,7 @@ export const PROJECTS = {
             album: undefined
         },
         discipline: "electrical_engineering",
-        stack: ["electronics_digital"],
+        stack: ["electronics_digital", "logicsimulator"],
         categories: ["digital_logic_design"],
         hardware: ["ni_elvis"],
         privacy: "private",
