@@ -14,7 +14,7 @@ export const PROJECTS = {
             album: undefined
         },
         discipline: "software_engineering",
-        stack: ["csharp", "javascript", "winui", "kotlin", "mysql", "cpanel", "php", "phpmyadmin"],
+        stack: [ "winui", "csharp", "javascript","kotlin", "cpanel", "phpmyadmin", "php", "mysql"],
         categories: ["business", "windows_app", "android_app"],
         privacy: "private",
         client: "contract",
@@ -32,7 +32,7 @@ export const PROJECTS = {
             album: undefined
         },
         discipline: "software_engineering",
-        stack: ["astro", "tailwindcss", "daisyui", "typescript", "html", "css", "cpanel", "php", "opengraph", "schemaorg", "resend", "google_wallet", "google_analytics", "nfc"],
+        stack: ["astro", "tailwindcss", "daisyui", "typescript", "html", "css", "cpanel", "php", "opengraph", "schemaorg", "resend", "google_analytics", "google_wallet", "nfc"],
         categories: ["web_development", "backend", "frontend"],
         privacy: "public",
         client: "personal",
@@ -52,7 +52,7 @@ export const PROJECTS = {
             album: undefined
         },
         discipline: "software_engineering",
-        stack: ["astro", "tailwindcss", "daisyui", "typescript", "html", "css", "cpanel", "php", "opengraph", "schemaorg", "resend", "google_maps", "google_analytics"],
+        stack: ["astro", "tailwindcss", "daisyui", "typescript", "html", "css", "cpanel", "php", "opengraph", "schemaorg", "resend", "google_analytics", "google_maps"],
         categories: ["business", "web_development", "backend", "frontend"],
         privacy: "private",
         client: "contract",
@@ -93,7 +93,7 @@ export const PROJECTS = {
             album: undefined
         },
         discipline: "electrical_engineering",
-        stack: ["a3", "embedded", "electronics_analog", "electronics_digital", "multisim", "ultiboard", "c", "autocad"],
+        stack: ["embedded", "electronics_analog", "electronics_digital", "multisim", "ultiboard", "autocad", "c", "a3"],
         categories: ["robotics", "automation", "embedded_systems", "cad"],
         hardware: ["pic32", "pic18", "pickit5", "ni_elvis"],
         privacy: "private",
@@ -112,7 +112,7 @@ export const PROJECTS = {
             album: undefined
         },
         discipline: "electrical_engineering",
-        stack: ["a3", "arduino", "electronics_analog", "electronics_digital", "cpp"],
+        stack: ["arduino", "electronics_analog", "electronics_digital", "cpp", "a3"],
         categories: ["robotics"],
         hardware: ["arduino_mega_2560_r3", "ni_elvis"],
         privacy: "private",
@@ -152,7 +152,7 @@ export const PROJECTS = {
             album: undefined
         },
         discipline: "electrical_engineering",
-        stack: ["a3", "opencv", "raspberrypi", "electronics_analog", "electronics_digital", "python"],
+        stack: ["raspberrypi", "opencv", "electronics_analog", "electronics_digital", "python", "a3"],
         categories: ["robotics", "automation", "computer_vision"],
         hardware: ["raspberrypi_4b", "ni_elvis"],
         privacy: "private",
@@ -250,7 +250,7 @@ export const PROJECTS = {
             album: undefined
         },
         discipline: "software_engineering",
-        stack: ["react", "javascript", "axios", "directus", "bootstrap", "google_maps", "sass", "php", "mysql"],
+        stack: ["react", "javascript", "directus", "php", "mysql", "axios", "bootstrap", "sass", "google_maps"],
         categories: ["web_development", "backend", "frontend"],
         privacy: "private",
         client: "contract",
@@ -270,7 +270,7 @@ export const PROJECTS = {
             album: undefined
         },
         discipline: "software_engineering",
-        stack: ["react", "javascript", "axios", "antdesign", "php", "mysql"],
+        stack: ["react", "javascript", "directus", "php", "mysql", "axios", "antdesign"],
         categories: ["web_development", "backend", "frontend"],
         privacy: "private",
         client: "contract",
@@ -346,7 +346,7 @@ export const PROJECTS = {
             album: undefined
         },
         discipline: "software_engineering",
-        stack: ["c", "html", "css", "python", "flask", "javascript", "sqlite"],
+        stack: ["c", "html", "css", "python", "flask", "sqlite", "javascript"],
         categories: ["web_development", "backend", "frontend"],
         privacy: "private",
         client: "academic",
