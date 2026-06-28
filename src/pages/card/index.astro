@@ -48,7 +48,7 @@ const lang = METADATA.defaultLanguage;
                             </button>
                         </div>
 
-                        <dialog id="card_qr" class="modal modal-bottom sm:modal-middle">
+                        <dialog id="card_qr" class="modal modal-middle">
 
                             <!-- Status toasts triggered via client-side JS -->
                             <div class="toast toast-center toast-top mt-3 md:mt-17 z-999">
@@ -100,7 +100,7 @@ const lang = METADATA.defaultLanguage;
                             </form>
                         </dialog>
 
-                        <dialog id="card_preview" class="modal modal-bottom sm:modal-middle">
+                        <dialog id="card_preview" class="modal modal-middle">
                             
                             <div class="modal-box text-center py-6 flex flex-col self-center justify-center items-center gap-5 border border-base-200/50">
                                 
@@ -111,22 +111,21 @@ const lang = METADATA.defaultLanguage;
                                     </button>
                                 </form>
 
-                                <div class="flex flex-col">
+                                <div class="flex flex-col gap-5">
                                     <!-- Header Content -->
                                     <div class="space-y-1">
                                         <h3 class="text-2xl font-bold tracking-tight text-base-content">Preview my Card</h3>
-                                        <p class="text-xs text-base-content/60 font-medium">Request one today!</p>
+                                        <p class="text-xs text-base-content/60 font-medium">Request one through my contact form</p>
                                     </div>
 
                                     <!-- 3D Business Cards Preview (8 div tags are needed for 3D effect rendering) -->
-                                    <div class="group space-y-5">
+                                    <div class="flex flex-col items-center gap-5">
                                         {[PICTURES.cards.v1, PICTURES.cards.v2].map((card, i) => (
                                             <div class="hover-3d">
-                                                <figure class={`rounded-2xl ${(i === 0) ? "w-80" : "w-60"}`}>
-                                                    <Image src={card} alt={`Professional Business Card v${i}`} />
+                                                <figure class={`rounded-2xl ${(i === 0) ? "w-60 md:w-65" : "w-40 md:w-45"}`}>
+                                                    <Image src={card} alt={`Professional Business Card v${i+1}`} />
                                                 </figure>
-                                                <div></div> <div></div> <div></div> <div></div>
-                                                <div></div> <div></div> <div></div> <div></div>
+                                                {[...Array(8)].map(() => (<div></div>))}
                                             </div>
                                         ))}
                                     </div>
@@ -206,17 +205,25 @@ const lang = METADATA.defaultLanguage;
                                     ))}
                                 </div>
                             </div>
+                            
+                            <!-- Business card preview -->
+                            <div class="space-y-2">
+                                <h3 class="text-xs uppercase tracking-wider opacity-50 font-bold">Business Card</h3>
+                                <p class="text-sm leading-relaxed">
+                                    <span class="opacity-90">Preview my physical business cards</span>
+                                    <span>
+                                        <button aria-label="Open Business Card Preview" onclick="card_preview.showModal()" class="link link-primary text-sm focus-visible:rounded-sm">
+                                            here
+                                        </button>.
+                                    </span>
+                                </p>
+                            </div>
                         </div>
 
                         <!-- Social Media Row -->
                         <div class="self-center w-full">
                             <div class="scale-90 text-gray-600"><SocialButtons variant="social" /></div>
                         </div>
-                        
-                        <!-- QR Code modal opening -->
-                        <button aria-label="Open QR Code" onclick="card_preview.showModal()" class="btn btn-ghost btn-square p-0 min-h-0 h-auto bg-transparent shadow-none">
-                            <CommonIcon name="id_card" classname="transition-transform ease-in-out hover:text-primary hover:scale-110" />
-                        </button>
 
                         <!-- Primary Actions Area -->
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full border-t border-base-100 pt-6">
