@@ -36,6 +36,7 @@ export type PicturesListType = {
     ), ImageMetadata>;
     certifications: Record<Exclude<CertsOrgListType, "hu">, ImageMetadata>;
     honors: Record<HonorsOrgListType, ImageMetadata>;
+    cards: Record<("v1" | "v2"), ImageMetadata>;
 }
 
 // Technologies Typing

@@ -21,6 +21,10 @@ import honorsPicture from "@images/categories/honors.jpg";
 import contactPicture from "@images/categories/contact.jpg";
 
 // TODO:
+// Pictures used on Business Cards (/card/index.astro)
+import businessCard1 from "@images/cards/business-card-paper-v1.jpeg";
+import businessCard2 from "@images/cards/business-card-paper-v2.jpeg";
+
 // Pictures used on Projects.astro
 import pcsPicture1 from "@images/projects/pcs.png";
 import portfolioPicture1 from "@images/projects/portfolio.png";
@@ -127,6 +131,10 @@ export const PICTURES = {
         ncees: nceesPicture,
         wisp: wispPicture,
         hu: huPicture
+    },
+    cards: {
+        v1: businessCard1,
+        v2: businessCard2
     }
 } as const satisfies PicturesListType;
 

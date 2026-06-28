@@ -2,8 +2,9 @@
 import { ROUTE } from "@config/routes/routing";
 import { METADATA } from "@config/meta";
 import { PERSONAL } from "@config/personal";
-import { LINKS, SYSTEM } from "@config/routes/links"
+import { PICTURES } from "@src/config/assets";
 import { LANGUAGES } from "@config/languages";
+import { LINKS, SYSTEM } from "@config/routes/links"
 
 import Image from "astro/components/Image.astro";
 
@@ -99,6 +100,46 @@ const lang = METADATA.defaultLanguage;
                             </form>
                         </dialog>
 
+                        <dialog id="card_preview" class="modal modal-bottom sm:modal-middle">
+                            
+                            <div class="modal-box text-center py-6 flex flex-col self-center justify-center items-center gap-5 border border-base-200/50">
+                                
+                                <!-- Top Row: Close Button -->
+                                <form method="dialog" class="absolute right-4 top-4">
+                                    <button class="btn btn-sm btn-circle btn-ghost text-base-content/60">
+                                        <CommonIcon name="circle_xmark" />
+                                    </button>
+                                </form>
+
+                                <div class="flex flex-col">
+                                    <!-- Header Content -->
+                                    <div class="space-y-1">
+                                        <h3 class="text-2xl font-bold tracking-tight text-base-content">Preview my Card</h3>
+                                        <p class="text-xs text-base-content/60 font-medium">Request one today!</p>
+                                    </div>
+
+                                    <!-- 3D Business Cards Preview (8 div tags are needed for 3D effect rendering) -->
+                                    <div class="group space-y-5">
+                                        {[PICTURES.cards.v1, PICTURES.cards.v2].map((card, i) => (
+                                            <div class="hover-3d">
+                                                <figure class={`rounded-2xl ${(i === 0) ? "w-80" : "w-60"}`}>
+                                                    <Image src={card} alt={`Professional Business Card v${i}`} />
+                                                </figure>
+                                                <div></div> <div></div> <div></div> <div></div>
+                                                <div></div> <div></div> <div></div> <div></div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <!-- Click outside backdrop to close -->
+                            <form method="dialog" class="modal-backdrop bg-black/40 backdrop-blur-xs">
+                                <button></button>
+                            </form>
+                        </dialog>
+
                         <!-- Header Section with Availability Badge -->
                         <div class="flex flex-col text-center items-center w-full gap-2 mt-4">
                             <h1 class="text-4xl font-bold tracking-tight">{PERSONAL.name}</h1>
@@ -171,6 +212,11 @@ const lang = METADATA.defaultLanguage;
                         <div class="self-center w-full">
                             <div class="scale-90 text-gray-600"><SocialButtons variant="social" /></div>
                         </div>
+                        
+                        <!-- QR Code modal opening -->
+                        <button aria-label="Open QR Code" onclick="card_preview.showModal()" class="btn btn-ghost btn-square p-0 min-h-0 h-auto bg-transparent shadow-none">
+                            <CommonIcon name="id_card" classname="transition-transform ease-in-out hover:text-primary hover:scale-110" />
+                        </button>
 
                         <!-- Primary Actions Area -->
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full border-t border-base-100 pt-6">
