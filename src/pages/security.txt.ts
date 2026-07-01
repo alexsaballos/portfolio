@@ -15,7 +15,7 @@ ${Object.values(LANGUAGES).map(lang =>
 ).join("\n")}
 
 # My email for security-related inquiries
-Contact: ${PERSONAL.emails.security}
+Contact: mailto:${PERSONAL.emails.security}
 
 # My security.txt expiration date
 Expires: ${expiresISO}

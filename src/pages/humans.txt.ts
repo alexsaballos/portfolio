@@ -9,7 +9,7 @@ export async function GET() {
 `/* DEVELOPER */
     ${PERSONAL.name}
     Contact: ${METADATA.url}/${METADATA.defaultLanguage}/contact/
-    Email: ${PERSONAL.emails.contact}
+    Email: mailto:${PERSONAL.emails.contact}
     LinkedIn: ${LINKS.profiles.linkedin}
     GitHub: ${LINKS.profiles.github}
     Handshake: ${LINKS.profiles.handshake}
