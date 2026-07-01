@@ -2,6 +2,10 @@ import type { GeneralLinksType, SystemLinksType } from "@src/types/routes/LinksT
 
 export const SYSTEM = {
     domain: "https://alexsaballos.dev",
+    subdomains: {
+        api: "https://api.alexsaballos.dev",
+        assets: "https://assets.alexsaballos.dev"
+    },
     pfp: "https://alexsaballos.dev/assets/pictures/pfp.webp",
     logo: "https://alexsaballos.dev/assets/pictures/my_logo.webp",
     notable: {

@@ -1,43 +1,20 @@
 ---
 import Title from "@text/Title.astro";
 import CommonIcon from "@ui/CommonIcon.astro";
-import ContactStatus from "@sections/contact/ContactStatus.astro";
 import SocialButtons from "@buttons/SocialButtons.astro";
+import ContactStatus from "@sections/contact/ContactStatus.astro";
+import type { subjectOptionsType } from "@src/types/pages/ContactType";
 
 const t = Astro.locals.t.contact;
-const subjectOptions = {
-    recruiting: {
-        key: "recruiting",
-        value: "Recruiting / Hiring"
-    },
-    technical: {
-        key: "technical",
-        value: "Technical Collaboration"
-    },
-    business: {
-        key: "business",
-        value: "Business Inquiry"
-    },
-    interview: {
-        key: "interview",
-        value: "Interview / Speaking Request"
-    },
-    academic: {
-        key: "academic",
-        value: "Academic / Educational"
-    },
-    consulting: {
-        key: "consulting",
-        value: "Advisory / Consulting"
-    },
-    webmaster: {
-        key: "webmaster",
-        value: "Webmaster Inquiries"
-    },
-    other: {
-        key: "other",
-        value: "Other"
-    }
+const subjects = {
+    recruiting: "Recruiting / Hiring",
+    technical: "Technical Collaboration",
+    business: "Business Inquiry",
+    interview: "Interview / Speaking Request",
+    academic: "Academic / Educational",
+    consulting: "Advisory / Consulting",
+    webmaster: "Webmaster Inquiries",
+    other: "Other"
 };
 ---
 
@@ -47,8 +24,8 @@ const subjectOptions = {
         <Title title={t.CTA} />
         <div class="justify-items-center">
             <div class="flex flex-col">
-                <span class="justify-center badge badge-success badge-outline rounded-full text-xs font-semibold gap-1 mt-3">
-                    <CommonIcon name="shield" />
+                <span class="badge badge-sm badge-success badge-outline bg-success/30 text-success justify-center rounded-full text-xs font-semibold gap-1 mt-3">
+                    <CommonIcon name="shield" size="xs" />
                     <span>{t.exclusive}</span>
                 </span>
             </div>
@@ -58,43 +35,43 @@ const subjectOptions = {
                     <legend class="fieldset-legend">{t.required}</legend>
 
                     <!-- Name input on contact form -->
-                    <label data-aos="fade-in" data-aos-delay="300" for="contactFormName" class="label">
+                    <label for="contactFormName" class="label">
                         <CommonIcon name="id_card" />
                         {t.name.label}
                     </label>
-                    <input data-aos="fade-in" data-aos-delay="300" id="contactFormName" name="name" required type="text"
+                    <input id="contactFormName" name="name" required type="text"
                         class="input mb-4" placeholder={t.name.placeholder} autocomplete="name" />
 
                     <!-- Email input on contact form -->
-                    <label data-aos="fade-in" data-aos-delay="600" for="contactFormEmail" class="label">
+                    <label for="contactFormEmail" class="label">
                         <CommonIcon name="at" />
                         {t.email.label}
                     </label>
-                    <input data-aos="fade-in" data-aos-delay="600" id="contactFormEmail" name="email" required type="email"
+                    <input id="contactFormEmail" name="email" required type="email"
                         class="input mb-4" placeholder={t.email.placeholder} autocomplete="email" />
 
                     <!-- Subject selection on contact form -->
-                    <label data-aos="fade-in" data-aos-delay="900" for="contactFormSubject" class="label">
+                    <label for="contactFormSubject" class="label">
                         <CommonIcon name="list" />
                         {t.subject.label}
                     </label>
-                    <select data-aos="fade-in" data-aos-delay="900" id="contactFormSubject" name="subject" required class="select mb-4">
+                    <select id="contactFormSubject" name="subject" required class="select mb-4">
                         <option disabled selected>{t.subject.options.placeholder}</option>
-                        {Object.values(subjectOptions).map(option =>
-                            <option value={option.value}>{t.subject.options[option.key as keyof typeof subjectOptions]}</option>
+                        {Object.entries(subjects).map(([key, value]) =>
+                            <option value={value}>{t.subject.options[key as subjectOptionsType]}</option>
                         )}
                     </select>
 
                     <!-- Message input on contact form -->
-                    <label data-aos="fade-in" data-aos-delay="1200" for="contactFormMessage" class="label">
+                    <label for="contactFormMessage" class="label">
                         <CommonIcon name="message" />
                         {t.message.label}
                     </label>
-                    <textarea data-aos="fade-in" data-aos-delay="1200" id="contactFormMessage" required name="message" class="textarea h-48 sm:w-140 lg:w-160"
+                    <textarea id="contactFormMessage" required name="message" class="textarea h-48 sm:w-140 lg:w-160"
                         placeholder={t.message.placeholder}></textarea>
 
                     <!-- Submission button on contact form -->
-                    <button data-aos="fade-in" data-aos-delay="1200" type="submit" aria-label={t.send}
+                    <button type="submit" aria-label={t.send}
                         class="btn btn-primary rounded-4xl place-self-center shadow-none transition-transform duration-300 ease-in-out hover:btn-secondary hover:font-bold hover:scale-105 w-45 mt-4">
                         <CommonIcon name="paper_plane" />
                         {t.send}

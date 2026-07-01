@@ -1,10 +1,11 @@
 import type {
     TechnologiesCoreSubheadersType, TechnologiesNamesType, TechnologiesProductionSubheadersType
 } from "@typing/AssetsType";
-import type { LOChonorsType } from "@src/types/pages/HonorsType";
-import type { CertLocaleType } from "@src/types/pages/CertificationsType";
-import type { DirectoryPageNamesType, NavigationPageNamesType } from "@src/types/routes/PagesType";
-import type { LOCprojectsType } from "@src/types/pages/ProjectsType";
+import type { DirectoryPageNamesType, NavigationPageNamesType } from "@typing/routes/PagesType";
+import type { LOCprojectsType } from "@typing/pages/ProjectsType";
+import type { CertLocaleType } from "@typing/pages/CertificationsType";
+import type { LOChonorsType } from "@typing/pages/HonorsType";
+import type { subjectOptionsType } from "@typing/pages/ContactType";
 
 export type AdmittedLanguagesType = "de" | "en" | "es";
 export type AdmittedCountriesType = "de" | "us" | "mx";
@@ -56,7 +57,7 @@ export type LocalesType = {
         email: Record<("label" | "placeholder"), string>;
         subject: {
             label: string;
-            options: Record<("placeholder" | "recruiting" | "technical" | "business" | "interview" | "academic" | "consulting" | "webmaster" | "other"), string>;
+            options: Record<subjectOptionsType, string>;
         },
         message: Record<("label" | "placeholder"), string>;
         alerts: {

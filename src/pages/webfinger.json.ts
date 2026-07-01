@@ -1,8 +1,9 @@
-import { LINKS, SYSTEM } from "@config/routes/links"
+import { PERSONAL } from "@config/personal";
+import { LINKS, SYSTEM } from "@config/routes/links";
 
 export async function GET() {
     const body = {
-        subject: "acct:alex@alexsaballos.dev",
+        subject: `acct:${PERSONAL.emails.webfinger}`,
         aliases: [SYSTEM.domain],
         links: Object.values(LINKS.profiles).map(profile => ({
             rel: SYSTEM.API.webfinger,

@@ -37,6 +37,10 @@ export async function GET() {
         <role><text>Founder</text></role>
         <title><text>Electrical Engineer (US EI/EiT) &amp; Software Engineer</text></title>
 
+        <email>
+            <parameters><type><text>work</text></type></parameters>
+            <text>${PERSONAL.emails.contact}</text>
+        </email>
         ${Object.values(LANGUAGES).map(entry => `<lang><text>${entry.code.lang}</text></lang>`).join("\n\t")}
 
         <url>
@@ -90,7 +94,7 @@ export async function GET() {
         status: 200,
         headers: {
             "Content-Type": "application/xml; charset=utf-8",
-            "Content-Disposition": 'inline; filename="vcard.xml"'
+            "Content-Disposition": 'inline; filename="xcard.xml"'
         }
     });
 }

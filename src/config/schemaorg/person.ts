@@ -11,6 +11,7 @@ export const SCHEMAORG_PERSON = {
 	"height": "1.85 m",
 	"pronouns": "he/him",
     "url": SYSTEM.domain,
+	"email": `mailto:${PERSONAL.emails.schemaorg}`,
     "image": SYSTEM.pfp,
 	"mainEntityOfPage": {
 		"@id": `${SYSTEM.domain}#website`
@@ -33,7 +34,7 @@ export const SCHEMAORG_PERSON = {
 	"description": "Electrical and software engineer focused on industrial automation, embedded systems, enterprise infrastructure, and scalable engineering systems.",
     "alumniOf": {
       "@type": "CollegeOrUniversity",
-      "name": "Harding University",
+      "name": PERSONAL.college,
 	  "url": LINKS.organizations.hu.main
     },
 	"worksFor": {
@@ -141,14 +142,15 @@ export const SCHEMAORG_PERSON = {
 		"Enterprise Software Systems"
 	],
     "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "professional inquiries",
-	  "availableLanguage": Object.values(LANGUAGES).map(lang => ({
-			"@type": "Language",
-			"name": lang.name.standard,
-			"alternateName": lang.code.lang
-		})),
-      "url": `${SYSTEM.domain}/contact/`
+		"@type": "ContactPoint",
+		"contactType": "professional inquiries",
+		"email": `mailto:${PERSONAL.emails.schemaorg}`,
+		"availableLanguage": Object.values(LANGUAGES).map(lang => ({
+				"@type": "Language",
+				"name": lang.name.standard,
+				"alternateName": lang.code.lang
+			})),
+		"url": `${SYSTEM.domain}/contact/`
     },
     "sameAs": Object.values(LINKS.profiles),
 	"brand": {

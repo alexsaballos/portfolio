@@ -1,4 +1,4 @@
-import type { ThemesType } from "@src/types/MetaTypes";
+import type { ThemesType } from "@typing/MetaTypes";
 
 document.addEventListener("DOMContentLoaded", () => {
     const themeToggles = document.querySelectorAll<HTMLInputElement>('.theme-controller');

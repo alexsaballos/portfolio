@@ -1,4 +1,5 @@
 export type SystemLinksType = Record<("domain" | "pfp" | "logo"), string> &
+    { subdomains: Record<("api" | "assets"), string> } &
     { notable: Record<("card_canon" | "card_utm"), string> } &
     { API: Record<("google_analytics" | "wallet_apple" | "wallet_google" | "resend" | "webfinger" | "webmention"), string>; }
 

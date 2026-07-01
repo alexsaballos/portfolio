@@ -1,0 +1,1 @@
+export type subjectOptionsType = "placeholder" | "recruiting" | "technical" | "business" | "interview" | "academic" | "consulting" | "webmaster" | "other";

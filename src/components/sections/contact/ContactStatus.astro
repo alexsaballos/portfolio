@@ -6,11 +6,13 @@ const t = Astro.locals.t.contact.alerts;
 ---
 <!-- Status toasts triggered via client-side JS -->
 <div id="toast_contact" class="toast toast-center toast-top mt-3 md:mt-17 z-999">
-    <div id="toast_loading" role="alert" class="hidden alert alert-info rounded-4xl transition-transform duration-500 ease-out hover:scale-120">
+    <div id="toast_loading" role="alert"
+        class="hidden cursor-progress alert alert-info bg-info/60 text-info-content rounded-full backdrop-blur-sm transition-transform duration-500 ease-out hover:scale-105">
         <CommonIcon name="spinner" classname="animate-spin" />
         {t.loading}
     </div>
-    <div id="toast_error" role="alert" class="hidden alert alert-error rounded-4xl transition-transform duration-500 ease-out hover:scale-120">
+    <div id="toast_error" role="alert"
+        class="hidden cursor-pointer alert alert-error bg-error/60 text-error-content rounded-full backdrop-blur-sm transition-transform duration-500 ease-out hover:scale-105">
         <CommonIcon name="circle_xmark" />
         {t.failure}
     </div>

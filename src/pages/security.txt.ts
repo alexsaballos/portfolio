@@ -1,6 +1,7 @@
-import { LANGUAGES } from "@config/languages";
-import { SYSTEM } from "@config/routes/links";
 import { SEO } from "@config/routes/routing";
+import { SYSTEM } from "@config/routes/links";
+import { PERSONAL } from "@config/personal";
+import { LANGUAGES } from "@config/languages";
 
 export async function GET() {
     const expiryDate = new Date();
@@ -12,6 +13,9 @@ export async function GET() {
 ${Object.values(LANGUAGES).map(lang => 
     `Contact: ${SEO.canonical.page(lang.code.lang, "contact")}?utm_source=securitytxt&utm_medium=file&utm_campaign=portfolio`
 ).join("\n")}
+
+# My email for security-related inquiries
+Contact: ${PERSONAL.emails.security}
 
 # My security.txt expiration date
 Expires: ${expiresISO}

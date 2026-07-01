@@ -9,10 +9,11 @@ export async function GET() {
 `/* DEVELOPER */
     ${PERSONAL.name}
     Contact: ${METADATA.url}/${METADATA.defaultLanguage}/contact/
+    Email: ${PERSONAL.emails.contact}
     LinkedIn: ${LINKS.profiles.linkedin}
     GitHub: ${LINKS.profiles.github}
     Handshake: ${LINKS.profiles.handshake}
-    From: Nicaragua & US
+    From: The Americas
     
 /* SITE */
     Last update: ${today.toISOString().split("T")[0]}

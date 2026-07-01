@@ -29,6 +29,7 @@ export async function GET() {
         "TITLE:Electrical Engineer (US EI/EiT) & Software Engineer",
 
         // Communication properties
+        `EMAIL;TYPE=work:${PERSONAL.emails.contact}`,
         ...Object.values(LANGUAGES).map(entry => `LANG:${entry.code.lang}`),
 
         // Explanatory properties & Administrative Metadata
