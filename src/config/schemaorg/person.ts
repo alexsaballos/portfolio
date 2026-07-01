@@ -12,7 +12,7 @@ export const SCHEMAORG_PERSON = {
 	"pronouns": "he/him",
     "url": SYSTEM.domain,
 	"email": `mailto:${PERSONAL.emails.schemaorg}`,
-    "image": SYSTEM.pfp,
+    "image": SYSTEM.notable.external.pfp,
 	"mainEntityOfPage": {
 		"@id": `${SYSTEM.domain}#website`
 	},
@@ -160,6 +160,6 @@ export const SCHEMAORG_PERSON = {
 		"owner": {
 			"@id": `${SYSTEM.domain}#person`
 		},
-		"logo": SYSTEM.logo
+		"logo": SYSTEM.notable.external.logo
 	}
 } as const;

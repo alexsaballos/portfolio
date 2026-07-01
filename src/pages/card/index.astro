@@ -1,8 +1,8 @@
 ---
 import { ROUTE } from "@config/routes/routing";
 import { METADATA } from "@config/meta";
+import { PICTURES } from "@config/assets";
 import { PERSONAL } from "@config/personal";
-import { PICTURES } from "@src/config/assets";
 import { LANGUAGES } from "@config/languages";
 import { LINKS, SYSTEM } from "@config/routes/links"
 
@@ -80,9 +80,9 @@ const lang = METADATA.defaultLanguage;
 
                                 <!-- Action Bar: Copy URL & Download -->
                                 <div class="join w-full max-w-xs justify-center">
-                                    <input name="card_link_modal" readonly aria-readonly="true" type="text" value={SYSTEM.notable.card_utm}
+                                    <input name="card_link_modal" readonly aria-readonly="true" type="text" value={SYSTEM.notable.internal.card_utm}
                                         class="input input-primary input-sm shadow-none select-none rounded-l-lg font-mono text-xs" />
-                                    <button id="card_button_copy" onclick={`navigator.clipboard.writeText("${SYSTEM.notable.card_utm}")`}
+                                    <button id="card_button_copy" onclick={`navigator.clipboard.writeText("${SYSTEM.notable.internal.card_utm}")`}
                                         class="btn btn-sm btn-primary shadow-none rounded-none text-xs font-semibold text-primary-content">
                                         <CommonIcon name="copy" />
                                     </button>

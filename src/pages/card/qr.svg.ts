@@ -2,7 +2,7 @@ import qrcode from 'qrcode';
 import { SYSTEM } from '@config/routes/links';
 
 export async function GET() {
-    const qrSvgString = await qrcode.toString(SYSTEM.notable.card_utm, {
+    const qrSvgString = await qrcode.toString(SYSTEM.notable.internal.card_utm, {
         type: 'svg', margin: 1
     });
 

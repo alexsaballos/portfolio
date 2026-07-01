@@ -16,8 +16,8 @@ export async function GET() {
         // Identification properties
         `FN:${PERSONAL.name}`,
         `N:Saballos;Alexander;;Mr.;`,
-        `PHOTO:${SYSTEM.pfp}`,
-        `LOGO:${SYSTEM.logo}`,
+        `PHOTO:${SYSTEM.notable.external.pfp}`,
+        `LOGO:${SYSTEM.notable.external.logo}`,
         "GENDER:M",
 
         // Geographical properties

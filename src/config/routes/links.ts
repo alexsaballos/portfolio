@@ -6,16 +6,19 @@ export const SYSTEM = {
         api: "https://api.alexsaballos.dev",
         assets: "https://assets.alexsaballos.dev"
     },
-    pfp: "https://alexsaballos.dev/assets/pictures/pfp.webp",
-    logo: "https://alexsaballos.dev/assets/pictures/my_logo.webp",
     notable: {
-        card_canon: "https://alexsaballos.dev/card/",
-        card_utm: "https://alexsaballos.dev/card/?utm_source=qr&utm_medium=card_page&utm_campaign=networking"
+        internal: {
+            card_canon: "https://alexsaballos.dev/card/",
+            card_utm: "https://alexsaballos.dev/card/?utm_source=qr&utm_medium=card_page&utm_campaign=networking"
+        },
+        external: {
+            pfp: "https://assets.alexsaballos.dev/marketing/pfp.webp",
+            logo: "https://assets.alexsaballos.dev/marketing/logo.webp"
+        }
     },
     API: {
         google_analytics: "https://www.googletagmanager.com",
         resend: "https://api.alexsaballos.dev/endpoints/resend/contact.php",
-        wallet_apple: "https://api.alexsaballos.dev/endpoints/wallet/apple/",
         wallet_google: "https://api.alexsaballos.dev/endpoints/wallet/google/gwallet.php",
         webfinger: "http://webfinger.net",
         webmention: "https://webmention.io/alexsaballos.dev_en_/webmention"

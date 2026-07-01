@@ -18,7 +18,7 @@ copyButton.addEventListener("click", async () => {
 
 // Browser native share feature (Fallback - Trigger copy button)
 shareButton.addEventListener("click", async () => {
-    const url = SYSTEM.notable.card_utm;
+    const url = SYSTEM.notable.internal.card_utm;
     const title = PERSONAL.name;
 
     if (navigator.share) {

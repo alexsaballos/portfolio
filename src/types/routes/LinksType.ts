@@ -1,7 +1,12 @@
-export type SystemLinksType = Record<("domain" | "pfp" | "logo"), string> &
-    { subdomains: Record<("api" | "assets"), string> } &
-    { notable: Record<("card_canon" | "card_utm"), string> } &
-    { API: Record<("google_analytics" | "wallet_apple" | "wallet_google" | "resend" | "webfinger" | "webmention"), string>; }
+export type SystemLinksType = {
+    domain: string;
+    subdomains: Record<("api" | "assets"), string>;
+    notable: {
+        internal: Record<("card_canon" | "card_utm"), string>;
+        external: Record<("pfp" | "logo"), string>;
+    };
+    API: Record<("google_analytics" | "wallet_google" | "resend" | "webfinger" | "webmention"), string>;
+};
 
 export type GeneralLinksType = {
     profiles: Record<(

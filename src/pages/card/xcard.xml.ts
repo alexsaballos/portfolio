@@ -27,8 +27,8 @@ export async function GET() {
             <prefix>Mr.</prefix>
             <suffix></suffix>
         </n>
-        <photo><uri>${SYSTEM.pfp}</uri></photo>
-        <logo><uri>${SYSTEM.logo}</uri></logo>
+        <photo><uri>${SYSTEM.notable.external.pfp}</uri></photo>
+        <logo><uri>${SYSTEM.notable.external.logo}</uri></logo>
         <gender><sex>M</sex></gender>
 
         <tz><text>America/Managua</text></tz>
