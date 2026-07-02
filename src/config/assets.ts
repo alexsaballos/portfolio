@@ -4,9 +4,6 @@ import type {
     ScreenshotsListType
 } from "@typing/AssetsType";
 
-// Picture used on OgImage & Intro.astro
-import pfpPicture from "@images/intro/pfp.jpg";
-
 // Pictures used on LanguageGate.astro
 import de from "@images/flags/de.jpg";
 import mx from "@images/flags/mx.jpg";
@@ -85,7 +82,6 @@ export const VIDEOS = {
 
 // Complete Videos Reference
 export const PICTURES = {
-    PFP: pfpPicture,
     categories: {
         projects: projectsPicture,
         experience: experiencePicture,

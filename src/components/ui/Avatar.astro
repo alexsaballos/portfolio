@@ -1,7 +1,6 @@
 ---
-import { PICTURES } from "@config/assets";
 import { PERSONAL } from "@config/personal";
-import Image from "astro/components/Image.astro";
+import { SYSTEM } from "@config/routes/links";
 
 const classname = Astro.props.classname as string;
 ---
@@ -9,7 +8,7 @@ const classname = Astro.props.classname as string;
 <div class="avatar select-none">
     <div class=`ring-secondary ring-4 rounded-full shadow-none ${classname}`>
         <figure>
-            <Image src={PICTURES.PFP} alt=`${PERSONAL.name} - Profile Picture` />
+            <img src={SYSTEM.notable.external.branding.pfp} loading="eager" alt=`${PERSONAL.name} - Profile Picture` />
         </figure>
     </div>
 </div>

@@ -24,7 +24,6 @@ export type PathsListType = Record<("videos"), string>;
 // Videos & Pictures Typing
 export type VideosListType = Record<("IntroVideo"), string>;
 export type PicturesListType = {
-    PFP: ImageMetadata;
     categories: Record<NavigationPageNamesType, ImageMetadata>;
     projects: Record<(
         | "pcs" | "portfolio" | "sidimaqsa"
