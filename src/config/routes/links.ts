@@ -13,6 +13,7 @@ export const SYSTEM = {
             files: {
                 favicon_svg: "/favicon.svg",
                 favicon_ico: "/favicon.ico",
+                pgp_key: "/pgp-key.asc",
                 sitemap: "/sitemap.xml",
                 manifest: "/manifest.webmanifest",
                 humans: "/humans.txt",

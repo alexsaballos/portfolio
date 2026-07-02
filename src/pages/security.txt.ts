@@ -9,15 +9,18 @@ export async function GET() {
     const expiresISO = expiryDate.toISOString();
 
     const body = `
-# My security contact form for all languages. Select "Webmaster-Anfragen"/"Webmaster Inquiries"/"Consultas de Webmaster" on the form's subject
+# Security contact form for all languages. Select "Webmaster-Anfragen"/"Webmaster Inquiries"/"Consultas de Webmaster" on the form's subject
 ${Object.values(LANGUAGES).map(lang => 
     `Contact: ${SEO.canonical.page(lang.code.lang, "contact")}?utm_source=securitytxt&utm_medium=file&utm_campaign=portfolio`
 ).join("\n")}
 
-# My email for security-related inquiries
+# Email for security-related inquiries
 Contact: mailto:${PERSONAL.emails.security}
 
-# My security.txt expiration date
+# OpenPGP Key
+Encryption: ${SYSTEM.domain}${SYSTEM.notable.internal.files.pgp_key}
+
+# Expiry date
 Expires: ${expiresISO}
 
 # Languages I speak
@@ -28,6 +31,6 @@ Canonical: ${SYSTEM.domain}/.well-known/security.txt`.trim();
 
     return new Response(body, {
         status: 200,
-        headers: { 'Content-Type': '/text/plain; charset=utf-8' }
+        headers: { 'Content-Type': 'text/plain; charset=utf-8' }
     });
 };

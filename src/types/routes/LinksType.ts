@@ -5,7 +5,9 @@ export type SystemLinksType = {
         internal: {
             card_canon: string;
             card_utm: string;
-            files: Record<("favicon_svg" | "favicon_ico" | "sitemap" | "manifest" | "humans" | "robots" | "vcard" | "xcard"), string>;
+            files: Record<(
+                "favicon_svg" | "favicon_ico" | "pgp_key" | "sitemap" | "manifest" | "humans" | "robots" | "vcard" | "xcard"
+            ), string>;
         };
         external: {
             branding: Record<("pfp" | "logo"), string>;
