@@ -6,7 +6,7 @@ import PageLayout from "@layouts/PageLayout.astro";
 import Navbar from "@widgets/Navbar.astro";
 import LanguageGate from "@sections/LanguageGate.astro";
 
-import type { NavigationPageNamesType } from "@src/types/routes/PagesType";
+import type { NavigationPageNamesType } from "@typing/routes/PagesType";
 
 // Intercepts requested slug and redirects appropriately (fallback to main redirection index)
 export const getStaticPaths = () => Object.keys(NAVIGATION_PAGES).map(

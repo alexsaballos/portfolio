@@ -1,13 +1,13 @@
 ---
+import { SYSTEM } from "@src/config/routes/links";
 import { PERSONAL } from "@config/personal";
-import { getPublicFile } from "@config/assets";
 
 import Title from "@ui/text/Title.astro";
 import PDFViewer from "@widgets/PDFViewer.astro";
 import CommonIcon from "@ui/CommonIcon.astro";
 
 const t = Astro.locals.t.resume_preview;
-const resumeUrl = getPublicFile("resume", "alexander-saballos-resume-es.pdf");
+const resumeUrl = SYSTEM.notable.external.resume.es;
 ---
 
 <section id="resume" class="py-10 px-5 flex flex-col items-center justify-center">

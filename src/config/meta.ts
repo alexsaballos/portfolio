@@ -58,15 +58,9 @@ export const METADATA = {
 
     // Social Previews & Crawler Paths
     opengraph: {
-        image: PICTURES.ogImage,
+        image: SYSTEM.notable.external.opengraph.default,
         image_width: "1200",
         image_height: "630",
         image_type: "image/png"
-    },
-    sitemap: "/sitemap.xml",
-    manifest: "/manifest.webmanifest",
-    humans: "/humans.txt",
-    robots: "/robots.txt",
-    vcard_vcf: "/card/vcard.vcf",
-    vcard_xml: "/card/vcard.xml"
+    }
 } as const satisfies MetadataType;

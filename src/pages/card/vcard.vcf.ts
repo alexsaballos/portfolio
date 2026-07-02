@@ -10,14 +10,14 @@ export async function GET() {
         "BEGIN:VCARD",
         "VERSION:4.0",
         "KIND:individual",
-        `SOURCE:${METADATA.url}${METADATA.vcard_vcf}`,
-        `XML:${METADATA.url}${METADATA.vcard_xml}`,
+        `SOURCE:${METADATA.url}${SYSTEM.notable.internal.files.vcard}`,
+        `XML:${METADATA.url}${SYSTEM.notable.internal.files.xcard}`,
 
         // Identification properties
         `FN:${PERSONAL.name}`,
         `N:Saballos;Alexander;;Mr.;`,
-        `PHOTO:${SYSTEM.notable.external.pfp}`,
-        `LOGO:${SYSTEM.notable.external.logo}`,
+        `PHOTO:${SYSTEM.notable.external.branding.pfp}`,
+        `LOGO:${SYSTEM.notable.external.branding.logo}`,
         "GENDER:M",
 
         // Geographical properties
@@ -42,7 +42,7 @@ export async function GET() {
         `NOTE:Electrical Engineer (US EI/EiT) & Software Engineer specialized in embedded systems, PCB design, industrial automation, and software infrastructure. Contact: ${SEO.canonical.page("en", "contact")}`,
         "CATEGORIES:Electrical Engineering,Software Engineering,Embedded Systems,PCB Design,Industrial Automation",
         `PRODID:-//${PERSONAL.name}//Portfolio Astro Endpoint Engine//${METADATA.defaultLanguage}`,
-        `UID:${METADATA.url}${METADATA.vcard_vcf}`,
+        `UID:${METADATA.url}${SYSTEM.notable.internal.files.vcard}`,
         `REV:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z'}`,
 
         // Extended Social Profiles for iOS / macOS

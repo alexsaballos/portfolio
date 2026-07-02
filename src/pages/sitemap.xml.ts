@@ -4,7 +4,7 @@ import { VANITY } from "@config/routes/vanity";
 import { LANGUAGES } from "@config/languages";
 import { LOCALIZED_PAGES, UNLOCALIZED_PAGES } from "@config/routes/pages";
 
-import type { UnlocalizedPageType } from "@src/types/routes/PagesType";
+import type { UnlocalizedPageType } from "@typing/routes/PagesType";
 import type { AdmittedLanguagesType } from "@typing/LocalesType";
 
 // Indentation needs to stay like this in order to avoid tabulation & break issues

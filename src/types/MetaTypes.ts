@@ -25,10 +25,4 @@ export type MetadataType = {
     manifest_favicons: Record<("src" | "sizes" | "type"), string>[];
     technologies_used: string[];
     opengraph: Record<("image" | "image_width" | "image_height" | "image_type"), string>;
-    sitemap: string;
-    manifest: string;
-    humans: string;
-    robots: string;
-    vcard_vcf: string;
-    vcard_xml: string;
 }

@@ -1,6 +1,6 @@
 ---
-import { LANGUAGES } from "../../config/languages";
-import { NAVIGATION_PAGES } from "../../config/routes/pages";
+import { LANGUAGES } from "@config/languages";
+import { NAVIGATION_PAGES } from "@config/routes/pages";
 
 import PageLayout from "@layouts/PageLayout.astro";
 import Breadcrumbs from "@ui/Breadcrumbs.astro";
@@ -13,7 +13,7 @@ import ContactSection from "@sections/contact/ContactSection.astro";
 import Navbar from "@widgets/Navbar.astro";
 
 import type { AdmittedLanguagesType } from "@typing/LocalesType";
-import type { NavigationPageNamesType } from "@src/types/routes/PagesType";
+import type { NavigationPageNamesType } from "@typing/routes/PagesType";
 
 export const getStaticPaths = () =>
     Object.keys(LANGUAGES).flatMap(lang => (

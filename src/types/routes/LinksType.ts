@@ -2,8 +2,17 @@ export type SystemLinksType = {
     domain: string;
     subdomains: Record<("api" | "assets"), string>;
     notable: {
-        internal: Record<("card_canon" | "card_utm"), string>;
-        external: Record<("pfp" | "logo"), string>;
+        internal: {
+            card_canon: string;
+            card_utm: string;
+            files: Record<("favicon_svg" | "favicon_ico" | "sitemap" | "manifest" | "humans" | "robots" | "vcard" | "xcard"), string>;
+        };
+        external: {
+            branding: Record<("pfp" | "logo"), string>;
+            opengraph: Record<("default"), string>;
+            pwa: Record<("favicons" | "screenshots"), string>;
+            resume: Record<("es"), string>;
+        };
     };
     API: Record<("google_analytics" | "wallet_google" | "resend" | "webfinger" | "webmention"), string>;
 };

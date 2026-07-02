@@ -1,8 +1,8 @@
-import type { VanityNamesType } from "@src/types/routes/VanityType";
-import type { HonorsOrgListType } from "@src/types/pages/HonorsType";
+import type { VanityNamesType } from "@typing/routes/VanityType";
+import type { HonorsOrgListType } from "@typing/pages/HonorsType";
 import type { AdmittedCountriesType } from "@typing/LocalesType";
-import type { NavigationPageNamesType } from "@src/types/routes/PagesType";
-import type { CertsOrgListType } from "@src/types/pages/CertificationsType";
+import type { NavigationPageNamesType } from "@typing/routes/PagesType";
+import type { CertsOrgListType } from "@typing/pages/CertificationsType";
 
 // Icons Typing
 export type IconsKitNamesType = "flags" | "gui" | "profiles" | "technologies";
@@ -19,12 +19,11 @@ export type IconsListType = Record<IconsNamesType, IconsType>;
 export type IconsPixelSizesType = "dxs" | "xs" | "sm" | "md" | "lg" | "xl" | "dxl" | "exl" | "ixl";
 
 // Paths Typing
-export type PathsListType = Record<("docs" | "resume" | "favicons" | "screenshots" | "pictures" | "videos"), string>;
+export type PathsListType = Record<("videos"), string>;
 
 // Videos & Pictures Typing
 export type VideosListType = Record<("IntroVideo"), string>;
 export type PicturesListType = {
-    ogImage: string;
     PFP: ImageMetadata;
     categories: Record<NavigationPageNamesType, ImageMetadata>;
     projects: Record<(

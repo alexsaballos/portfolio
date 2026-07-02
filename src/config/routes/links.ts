@@ -9,11 +9,33 @@ export const SYSTEM = {
     notable: {
         internal: {
             card_canon: "https://alexsaballos.dev/card/",
-            card_utm: "https://alexsaballos.dev/card/?utm_source=qr&utm_medium=card_page&utm_campaign=networking"
+            card_utm: "https://alexsaballos.dev/card/?utm_source=qr&utm_medium=card_page&utm_campaign=networking",
+            files: {
+                favicon_svg: "/favicon.svg",
+                favicon_ico: "/favicon.ico",
+                sitemap: "/sitemap.xml",
+                manifest: "/manifest.webmanifest",
+                humans: "/humans.txt",
+                robots: "/robots.txt",
+                vcard: "/card/vcard.vcf",
+                xcard: "/card/vcard.xml"
+            }
         },
         external: {
-            pfp: "https://assets.alexsaballos.dev/marketing/pfp.webp",
-            logo: "https://assets.alexsaballos.dev/marketing/logo.webp"
+            branding: {
+                pfp: "https://assets.alexsaballos.dev/marketing/pfp.webp",
+                logo: "https://assets.alexsaballos.dev/marketing/logo.webp"
+            },
+            opengraph: {
+                default: "https://assets.alexsaballos.dev/metadata/opengraph/default.png"
+            },
+            pwa: {
+                favicons: "https://assets.alexsaballos.dev/metadata/pwa/favicons/",
+                screenshots: "https://assets.alexsaballos.dev/metadata/pwa/screenshots/"
+            },
+            resume: {
+                es: "https://assets.alexsaballos.dev/documents/resume/alexander-saballos-resume-es.pdf"
+            },
         }
     },
     API: {

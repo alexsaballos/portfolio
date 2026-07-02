@@ -16,8 +16,8 @@ export async function GET() {
 <vcards xmlns="urn:ietf:params:xml:ns:vcard-4.0">
     <vcard>
         <kind><text>individual</text></kind>
-        <source><uri>${METADATA.url}${METADATA.vcard_vcf}</uri></source>
-        <xml><uri>${METADATA.url}${METADATA.vcard_xml}</uri></xml>
+        <source><uri>${METADATA.url}${SYSTEM.notable.internal.files.vcard}</uri></source>
+        <xml><uri>${METADATA.url}${SYSTEM.notable.internal.files.xcard}</uri></xml>
 
         <fn><text>${PERSONAL.name}</text></fn>
         <n>
@@ -27,8 +27,8 @@ export async function GET() {
             <prefix>Mr.</prefix>
             <suffix></suffix>
         </n>
-        <photo><uri>${SYSTEM.notable.external.pfp}</uri></photo>
-        <logo><uri>${SYSTEM.notable.external.logo}</uri></logo>
+        <photo><uri>${SYSTEM.notable.external.branding.pfp}</uri></photo>
+        <logo><uri>${SYSTEM.notable.external.branding.logo}</uri></logo>
         <gender><sex>M</sex></gender>
 
         <tz><text>America/Managua</text></tz>
@@ -69,7 +69,7 @@ export async function GET() {
         <note><text>Electrical Engineer (US EI/EiT) &amp; Software Engineer specialized in embedded systems, PCB design, industrial automation, and software infrastructure. Contact: ${SEO.canonical.page("en", "contact")}</text></note>
         <categories>${categories}</categories>
         <prodid><text>-//${PERSONAL.name}//Portfolio Astro Endpoint Engine//${METADATA.defaultLanguage}</text></prodid>
-        <uid><uri>${METADATA.url}${METADATA.vcard_vcf}</uri></uid>
+        <uid><uri>${METADATA.url}${SYSTEM.notable.internal.files.vcard}</uri></uid>
         <rev><timestamp>${new Date().toISOString().replace(/[-:]/g, '').split('.')[0]}Z</timestamp></rev>
 
         <unknown>

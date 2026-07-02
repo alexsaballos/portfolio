@@ -70,12 +70,7 @@ const TECHNOLOGIES_COLORS = {
 // COMPLETE ABSOLUTE PATHS REFERENCE
 // Absolute Paths needed for all Client-side Assets
 export const PATHS = {
-    docs: "/assets/docs/",
-    resume: "/assets/docs/resume/",
-    favicons: "/assets/favicons/",
-    screenshots: "/assets/screenshots/",
-    pictures: "/assets/pictures/",
-    videos: "/assets/videos/"
+    videos: "/videos/"
 } as const satisfies PathsListType;
 
 // Helper function to get a publicly served file (Astro/Vite untouched)
@@ -90,7 +85,6 @@ export const VIDEOS = {
 
 // Complete Videos Reference
 export const PICTURES = {
-    ogImage: `${SYSTEM.domain}${PATHS.pictures}og_image.png`,
     PFP: pfpPicture,
     categories: {
         projects: projectsPicture,
@@ -1767,59 +1761,59 @@ export const FLAGS = {
 export const FAVICONS = {
     manifest: {
         android192: {
-            src: `${PATHS.favicons}android-chrome-192x192.png`,
+            src: `${SYSTEM.notable.external.pwa.favicons}android-chrome-192x192.png`,
             sizes: "192x192",
             type: "image/png"
         },
         android512: {
-            src: `${PATHS.favicons}android-chrome-512x512.png`,
+            src: `${SYSTEM.notable.external.pwa.favicons}android-chrome-512x512.png`,
             sizes: "512x512",
             type: "image/png"
         },
         apple120: {
-            src: `${PATHS.favicons}apple-touch-icon-120x120.png`,
+            src: `${SYSTEM.notable.external.pwa.favicons}apple-touch-icon-120x120.png`,
             sizes: "120x120",
             type: "image/png"
         },
         apple152: {
-            src: `${PATHS.favicons}apple-touch-icon-152x152.png`,
+            src: `${SYSTEM.notable.external.pwa.favicons}apple-touch-icon-152x152.png`,
             sizes: "152x152",
             type: "image/png"
         },
         apple167: {
-            src: `${PATHS.favicons}apple-touch-icon-167x167.png`,
+            src: `${SYSTEM.notable.external.pwa.favicons}apple-touch-icon-167x167.png`,
             sizes: "167x167",
             type: "image/png"
         },
         apple180: {
-            src: `${PATHS.favicons}apple-touch-icon-180x180.png`,
+            src: `${SYSTEM.notable.external.pwa.favicons}apple-touch-icon-180x180.png`,
             sizes: "180x180",
             type: "image/png"
         },
         mstile150: {
-            src: `${PATHS.favicons}microsoft-tile-150x150.png`,
+            src: `${SYSTEM.notable.external.pwa.favicons}microsoft-tile-150x150.png`,
             sizes: "150x150",
             type: "image/png"
         },
         manifest: {
-            src: `${PATHS.favicons}manifest-shortcut-96x96.png`,
+            src: `${SYSTEM.notable.external.pwa.favicons}manifest-shortcut-96x96.png`,
             sizes: "96x96",
             type: "image/png"
         }
     },
     browser: {
         safari_mask: {
-            src: `${PATHS.favicons}safari-pinned-tab.svg`,
+            src: `${SYSTEM.notable.external.pwa.favicons}safari-pinned-tab.svg`,
             type: "image/svg+xml",
             purpose: "maskable"
         },
         svg: {
-            src: "/favicon.svg",
+            src: SYSTEM.notable.internal.files.favicon_svg,
             type: "image/svg+xml",
             purpose: "maskable"
         },
         ico: {
-            src: "/favicon.ico",
+            src: SYSTEM.notable.internal.files.favicon_ico,
             type: "image/x-icon",
             purpose: "non-maskable"
         }
@@ -1830,14 +1824,14 @@ export const FAVICONS = {
 export const SCREENSHOTS = {
     home: {
         desktop:{
-            src: `${PATHS.screenshots}home-desktop.png`,
+            src: `${SYSTEM.notable.external.pwa.screenshots}home-desktop.png`,
             sizes: "1920x1080",
             type: "image/png",
             form_factor: "wide",
             label: "Professional portfolio homepage on desktop"
         },
         mobile: {
-            src: `${PATHS.screenshots}home-mobile.png`,
+            src: `${SYSTEM.notable.external.pwa.screenshots}home-mobile.png`,
             sizes: "1290x2796",
             type: "image/png",
             form_factor: "narrow",

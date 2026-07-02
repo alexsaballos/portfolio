@@ -48,9 +48,9 @@ import { LINKS, SYSTEM } from "@config/routes/links";
 import { SCHEMAORG_GRAPH } from "@config/schemaorg/graph";
 import { SPECULATION } from "@scripts/global/speculation";
 
-import type { ErrorsCodeType } from "@src/types/routes/ErrorsType";
-import type { VanityNamesType } from "@src/types/routes/VanityType";
-import type { DirectoryPageNamesType } from "@src/types/routes/PagesType";
+import type { ErrorsCodeType } from "@typing/routes/ErrorsType";
+import type { VanityNamesType } from "@typing/routes/VanityType";
+import type { DirectoryPageNamesType } from "@typing/routes/PagesType";
 import type { AdmittedLanguagesType } from "@typing/LocalesType";
 
 const { type, lang, page, profile, code } = Astro.props as {
@@ -107,7 +107,7 @@ const currentLang = lang ?? METADATA.defaultLanguage;
     <link rel="webmention" href={SYSTEM.API.webmention} />
 
     <!-- Icons & Manifest -->
-    <link rel="manifest" href={METADATA.manifest} />
+    <link rel="manifest" href={SYSTEM.notable.internal.files.manifest} />
     <link rel="icon" type={FAVICONS.browser.svg.type} href={FAVICONS.browser.svg.src} />
     <link rel="icon" type={FAVICONS.browser.ico.type} href={FAVICONS.browser.ico.src} />
     <link rel="mask-icon" href={FAVICONS.browser.safari_mask.src} color={METADATA.colors.dark.primary} />
@@ -117,10 +117,10 @@ const currentLang = lang ?? METADATA.defaultLanguage;
     <meta name="robots" content={isNotError ? "index,follow" : "noindex,nofollow"} />
     <meta name="bingbot" content={isNotError ? "index,follow" : "noindex,nofollow"} />
     <meta name="googlebot" content={isNotError ? "index,follow" : "noindex,nofollow"} />
-    <link rel="sitemap" type="application/xml" title="Sitemap" href={METADATA.sitemap} />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href={SYSTEM.notable.internal.files.sitemap} />
 
     <!-- Humans.txt File -->
-    <link rel="author" type="text/plain" title="Humans" href={METADATA.humans} />
+    <link rel="author" type="text/plain" title="Humans" href={SYSTEM.notable.internal.files.humans} />
 
     <!-- Theme Management -->
     <meta name="color-scheme" content="light dark" />

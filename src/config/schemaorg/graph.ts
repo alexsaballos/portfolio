@@ -8,7 +8,7 @@ import { SCHEMAORG_SIDIMAQSA } from "@config/schemaorg/sidimaqsa";
 import { SCHEMAORG_OCCUPATIONALEXP } from "@config/schemaorg/occupational_experience";
 
 import type { AdmittedLanguagesType } from "@typing/LocalesType";
-import type { DirectoryPageNamesType } from "@src/types/routes/PagesType";
+import type { DirectoryPageNamesType } from "@typing/routes/PagesType";
 
 export const SCHEMAORG_GRAPH =
 	(locale: AdmittedLanguagesType, page: DirectoryPageNamesType): string => {

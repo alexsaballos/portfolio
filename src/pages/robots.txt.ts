@@ -1,4 +1,5 @@
 import { METADATA } from "@config/meta";
+import { SYSTEM } from "@src/config/routes/links";
 
 if (!METADATA.url) throw new Error("SITE is required to generate robots.txt");
 
@@ -7,7 +8,7 @@ export async function GET() {
     const body = 
 `User-agent: *
 Allow: /
-Sitemap: ${METADATA.url}/sitemap.xml`;
+Sitemap: ${METADATA.url}${SYSTEM.notable.internal.files.sitemap}`;
 
     return new Response(body, {
         status: 200,
