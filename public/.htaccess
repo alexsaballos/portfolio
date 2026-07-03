@@ -61,12 +61,17 @@ DirectoryIndex index.html
     # Disable browser features not used by my portfolio
     Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
 
+    # Allow external email clients and validators to fetch WKD Keys
+    Header always set Access-Control-Allow-Origin "*"
+    Header always set Access-Control-Allow-Methods "GET, OPTIONS"
+
     # Enforce HTTPS with Preload (Optimized for .dev domain)
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
     # ToDo: Enable CSP compatible with GA4 & inline local library scripting (SSG Astrojs)
 
 </IfModule>
+
 
 # ----------------------------------------------------------------------
 # CUSTOM ERROR PAGES
@@ -143,6 +148,11 @@ ErrorDocument 504 /errors/504.html
     # Allow Workbox to safely bypass the browser disk cache during installation updates
     <FilesMatch "workbox-.*\.js$">
         Header set Cache-Control "no-cache, no-store, must-revalidate"
+    </FilesMatch>
+
+    # Ensure extensionless files are served as proper binary streams
+    <FilesMatch "^[a-z0-9]{32}$">
+        ForceType application/octet-stream
     </FilesMatch>
 
 </IfModule>

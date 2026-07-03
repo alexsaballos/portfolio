@@ -4,8 +4,7 @@ export async function GET() {
         status: 200,
         headers: {
             "Access-Control-Allow-Origin": "*",
-            "Content-Type": "text/plain; charset=utf-8",
-            "Cache-Control": "public, max-age=86400"
+            "Content-Type": "text/plain; charset=utf-8"
         }
     });
 }

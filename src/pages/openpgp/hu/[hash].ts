@@ -15,8 +15,7 @@ export const GET: APIRoute = async () => {
         status: 200,
         headers: {
             "Access-Control-Allow-Origin": "*",
-            "Content-Type": "application/octet-stream",
-            "Cache-Control": "public, max-age=86400"
+            "Content-Type": "application/octet-stream"
         },
     });
 };
