@@ -1,7 +1,7 @@
-import { LINKS } from "@config/routes/links";
 import { METADATA } from "@config/meta";
 import { PERSONAL } from "@config/personal";
 import { LANGUAGES } from "@config/languages";
+import { LINKS, SYSTEM } from "@config/routes/links";
 
 export async function GET() {
     const today = new Date();
@@ -10,6 +10,7 @@ export async function GET() {
     ${PERSONAL.name}
     Contact: ${METADATA.url}/${METADATA.defaultLanguage}/contact/
     Email: mailto:${PERSONAL.emails.contact}
+    OpenPGP Key: ${SYSTEM.domain}${SYSTEM.notable.internal.files.pgp_key}
     LinkedIn: ${LINKS.profiles.linkedin}
     GitHub: ${LINKS.profiles.github}
     Handshake: ${LINKS.profiles.handshake}

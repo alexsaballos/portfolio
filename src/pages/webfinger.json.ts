@@ -3,7 +3,7 @@ import { LINKS, SYSTEM } from "@config/routes/links";
 
 export async function GET() {
     const body = {
-        subject: `acct:${PERSONAL.emails.webfinger}`,
+        subject: `acct:${PERSONAL.emails.contact_webfinger}`,
         aliases: [SYSTEM.domain],
         links: Object.values(LINKS.profiles).map(profile => ({
             rel: SYSTEM.API.webfinger,

@@ -9,7 +9,7 @@ export async function GET() {
     const expiresISO = expiryDate.toISOString();
 
     const body = `
-# Security contact form for all languages. Select "Webmaster-Anfragen"/"Webmaster Inquiries"/"Consultas de Webmaster" on the form's subject
+# Security contact form for all languages. Select "Webmaster Inquiries" on the form's subject
 ${Object.values(LANGUAGES).map(lang => 
     `Contact: ${SEO.canonical.page(lang.code.lang, "contact")}?utm_source=securitytxt&utm_medium=file&utm_campaign=portfolio`
 ).join("\n")}

@@ -1,5 +1,5 @@
-import { FAVICONS } from "@config/assets";
 import { METADATA } from "@config/meta";
+import { FAVICONS } from "@config/assets";
 import { PAGES } from "@config/routes/pages";
 import { ROUTE } from "@config/routes/routing";
 

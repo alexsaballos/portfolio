@@ -11,7 +11,7 @@ export const SCHEMAORG_PERSON = {
 	"height": "1.85 m",
 	"pronouns": "he/him",
     "url": SYSTEM.domain,
-	"email": `mailto:${PERSONAL.emails.schemaorg}`,
+	"email": `mailto:${PERSONAL.emails.contact_schemaorg}`,
     "image": SYSTEM.notable.external.branding.pfp,
 	"mainEntityOfPage": {
 		"@id": `${SYSTEM.domain}#website`
@@ -144,7 +144,7 @@ export const SCHEMAORG_PERSON = {
     "contactPoint": {
 		"@type": "ContactPoint",
 		"contactType": "professional inquiries",
-		"email": `mailto:${PERSONAL.emails.schemaorg}`,
+		"email": `mailto:${PERSONAL.emails.contact_schemaorg}`,
 		"availableLanguage": Object.values(LANGUAGES).map(lang => ({
 				"@type": "Language",
 				"name": lang.name.standard,

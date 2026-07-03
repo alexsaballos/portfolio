@@ -25,8 +25,14 @@ export function postBuildCleaner(): AstroIntegration {
 
                 // Path generator
                 const distPath = (target: string):string => path.join(fileURLToPath(dir), target);
+
+                // Target Folders
                 const assetsDir = distPath("_astro");
                 const wellKnownDir = distPath(".well-known");
+                const wellKnownWkdHuDir = path.join(wellKnownDir, "openpgpkey", "hu");
+                const openpgpDir = distPath("openpgp");
+
+                // Target files
                 const sourceSecurity = distPath("security.txt");
                 const sourceWebfinger = distPath("webfinger.json");
 
@@ -44,6 +50,35 @@ export function postBuildCleaner(): AstroIntegration {
                 if (fs.existsSync(sourceWebfinger)) {
                     fs.renameSync(sourceWebfinger, path.join(wellKnownDir, "webfinger"));
                     console.log(`${regularHOOK} ${orangeCHECK} Moved & Stripped: /dist/.well-known/webfinger (Extensionless)\n`)
+                }
+
+                // Openpgp treatment
+                if (fs.existsSync(openpgpDir)) {
+                    // Create the final nested subdirectories inside .well-known/
+                    fs.mkdirSync(wellKnownWkdHuDir, { recursive: true });
+
+                    // Move WKD policy file
+                    const sourcePolicy = path.join(openpgpDir, "policy");
+                    if (fs.existsSync(sourcePolicy)) {
+                        fs.renameSync(sourcePolicy, path.join(wellKnownDir, "openpgpkey", "policy"));
+                        console.log(`${regularHOOK} ${orangeCHECK} Moved WKD Policy: /dist/.well-known/openpgpkey/policy (Extensionless)`);
+                    }
+
+                    // 2. Process flat, extensionless hash files directly
+                    const sourceHuDir = path.join(openpgpDir, "hu");
+                    if (fs.existsSync(sourceHuDir)) {
+                        fs.readdirSync(sourceHuDir).forEach(hashFile => {
+                            const currentFilePath = path.join(sourceHuDir, hashFile);
+                            
+                            // Ensure it is a file, not a stray directory
+                            if (fs.statSync(currentFilePath).isFile()) {
+                                fs.renameSync(currentFilePath, path.join(wellKnownWkdHuDir, hashFile));
+                                console.log(`${regularHOOK} ${orangeCHECK} Moved WKD Hash: /dist/.well-known/openpgpkey/hu/${hashFile}`);
+                            }
+                        });
+                    }
+                    // Clean up the temporary source directory completely
+                    fs.rmSync(openpgpDir, { recursive: true, force: true });
                 }
 
                 // _ASTRO ASSETS TREATMENT (FOR UNOPTIMIZED IMAGES)
