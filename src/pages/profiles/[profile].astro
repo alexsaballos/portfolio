@@ -32,12 +32,15 @@ const currentURL: string = VANITY[profile].frontend.link;
             <span id="countdownVanitySpan">3</span>
         </h2>
 
-        <h3 data-aos="fade-up" data-aos-delay="2000" class="text-2xl font-light mt-3 text-center">Not getting redirected?<br>
-            Click <a href={currentURL} class="text-primary hover:text-secondary hover:underline">here</a>
-            to proceed, take a look at
+        <h3 data-aos="fade-up" data-aos-delay="2000" class="text-2xl font-light mt-3 text-center">
+            <span>Not getting redirected?</span><br>
+            <span>Click </span>
+            <a href={currentURL} class="text-primary hover:text-secondary hover:underline">here</a>
+            <span> to proceed, take a look at </span>
             <a class="text-primary hover:text-secondary hover:underline" href=`${ROUTE.home(METADATA.defaultLanguage)}#categories`>other sections</a>,
-            or return
-            <a class="text-primary hover:text-secondary hover:underline" href={ROUTE.home(METADATA.defaultLanguage)}>home</a>.
+            <span> or return </span>
+            <a class="text-primary hover:text-secondary hover:underline" href={ROUTE.home(METADATA.defaultLanguage)}>home</a>
+            <span>.</span>
         </h3>
     </div>
     <script src="@scripts/pages/vanity.ts"></script>

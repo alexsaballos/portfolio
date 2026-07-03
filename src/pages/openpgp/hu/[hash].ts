@@ -14,8 +14,8 @@ export const GET: APIRoute = async () => {
     return new Response(keyBuffer, {
         status: 200,
         headers: {
-            "Content-Type": "application/pgp-keys",
             "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/octet-stream",
             "Cache-Control": "public, max-age=86400"
         },
     });
