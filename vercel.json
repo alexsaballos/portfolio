@@ -1,0 +1,10 @@
+{
+  "trailingSlash": true,
+  "rewrites": [
+        { "source": "/:page/", "destination": "/:page.html" },
+        { "source": "/en/:page/", "destination": "/en/:page.html" },
+        { "source": "/es/:page/", "destination": "/es/:page.html" },
+        { "source": "/de/:page/", "destination": "/de/:page.html" },
+        { "source": "/errors/:code/", "destination": "/errors/:code.html" }
+    ]
+}

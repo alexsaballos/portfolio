@@ -26,27 +26,6 @@ export default defineConfig({
                     '**/profiles/**/*',
                     '**/errors/**/*',
                     '**/screenshots/**/*'
-                ],
-                navigateFallbackDenylist: [
-                    // Domain root
-                    /^\/$/,
-                    /^\/.well-known\//,
-
-                    // Localized folders
-                    /^\/de\//,
-                    /^\/en\//,
-                    /^\/es\//,
-
-                    // Unlocalized folders
-                    /^\/card\//,
-                    /^\/profiles\//,
-                    /^\/errors\//,
-
-                    // Root files
-                    /^\/manifest\.webmanifest$/,
-                    /^\/sitemap\.xml$/,
-                    /^\/robots\.txt$/,
-                    /^\/humans\.txt$/
                 ]
             }
         })
@@ -56,6 +35,9 @@ export default defineConfig({
     build: { format: 'preserve' },
     i18n: {
         locales: ['de', 'en', 'es'],
-        defaultLocale: 'en'
+        defaultLocale: 'en',
+        routing: {
+            prefixDefaultLocale: true
+        }
     }
 });
