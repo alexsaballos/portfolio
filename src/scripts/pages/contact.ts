@@ -35,7 +35,7 @@ form.addEventListener("submit", async (e) => {
 
     try {
         showLoadingToast();    // Show the loading toast right at the start
-        const res = await fetch(SYSTEM.API.resend, {
+        const res = await fetch(SYSTEM.integrations.resend, {
             method: "POST",
             body: new FormData(form),
         });

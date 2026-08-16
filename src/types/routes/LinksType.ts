@@ -1,6 +1,6 @@
 export type SystemLinksType = {
     domain: string;
-    subdomains: Record<("api" | "assets"), string>;
+    subdomains: Record<("api" | "assets" | "integrations"), string>;
     notable: {
         internal: {
             card_canon: string;
@@ -16,7 +16,8 @@ export type SystemLinksType = {
             resume: Record<("es"), string>;
         };
     };
-    API: Record<("google_analytics" | "wallet_google" | "resend" | "webfinger" | "webmention"), string>;
+    API: Record<("google_analytics" | "wallet_google" | "webfinger" | "webmention"), string>;
+    integrations: Record<("resend"), string>;
 };
 
 export type GeneralLinksType = {

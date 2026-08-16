@@ -4,7 +4,8 @@ export const SYSTEM = {
     domain: "https://alexsaballos.dev",
     subdomains: {
         api: "https://api.alexsaballos.dev",
-        assets: "https://assets.alexsaballos.dev"
+        assets: "https://assets.alexsaballos.dev",
+        integrations: "https://integrations.alexsaballos.dev"
     },
     notable: {
         internal: {
@@ -41,10 +42,12 @@ export const SYSTEM = {
     },
     API: {
         google_analytics: "https://www.googletagmanager.com",
-        resend: "https://api.alexsaballos.dev/endpoints/resend/contact.php",
         wallet_google: "https://api.alexsaballos.dev/endpoints/wallet/google/gwallet.php",
         webfinger: "http://webfinger.net",
         webmention: "https://webmention.io/alexsaballos.dev_en_/webmention"
+    },
+    integrations: {
+        resend: "https://integrations.alexsaballos.dev/resend/"
     }
 } as const satisfies SystemLinksType;
 
