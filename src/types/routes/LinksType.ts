@@ -16,8 +16,8 @@ export type SystemLinksType = {
             resume: Record<("es"), string>;
         };
     };
-    API: Record<("google_analytics" | "wallet_google" | "webfinger" | "webmention"), string>;
-    integrations: Record<("resend"), string>;
+    API: Record<("google_analytics" | "webfinger" | "webmention"), string>;
+    integrations: Record<("resend" | "gwallet"), string>;
 };
 
 export type GeneralLinksType = {

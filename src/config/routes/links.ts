@@ -42,12 +42,12 @@ export const SYSTEM = {
     },
     API: {
         google_analytics: "https://www.googletagmanager.com",
-        wallet_google: "https://api.alexsaballos.dev/endpoints/wallet/google/gwallet.php",
         webfinger: "http://webfinger.net",
         webmention: "https://webmention.io/alexsaballos.dev_en_/webmention"
     },
     integrations: {
-        resend: "https://integrations.alexsaballos.dev/resend/"
+        resend: "https://integrations.alexsaballos.dev/resend/",
+        gwallet: "https://integrations.alexsaballos.dev/gwallet/"
     }
 } as const satisfies SystemLinksType;
 

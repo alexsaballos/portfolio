@@ -35,7 +35,7 @@ shareButton.addEventListener("click", async () => {
 // Add to Google Wallet Button
 gwButton.addEventListener("click", async () => {
     try {
-        const response = await fetch(SYSTEM.API.wallet_google,
+        const response = await fetch(SYSTEM.integrations.gwallet,
             {
                 method: "POST",
                 headers: { "Content-Type": "application/json" }
