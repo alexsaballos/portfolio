@@ -47,7 +47,7 @@ export const SYSTEM = {
     },
     integrations: {
         resend: "https://integrations.alexsaballos.dev/resend/",
-        gwallet: "https://integrations.alexsaballos.dev/gwallet/"
+        gwallet: "https://integrations.alexsaballos.dev/google-wallet/"
     }
 } as const satisfies SystemLinksType;
 
