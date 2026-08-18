@@ -1,10 +1,30 @@
 {
-  "trailingSlash": true,
-  "rewrites": [
-        { "source": "/:page/", "destination": "/:page.html" },
+    "trailingSlash": true,
+    "rewrites": [
+        { "source": "/card/", "destination": "/index.html" },
+
+        { "source": "/de/:page/", "destination": "/de/:page.html" },
         { "source": "/en/:page/", "destination": "/en/:page.html" },
         { "source": "/es/:page/", "destination": "/es/:page.html" },
-        { "source": "/de/:page/", "destination": "/de/:page.html" },
-        { "source": "/errors/:code/", "destination": "/errors/:code.html" }
+
+        { "source": "/errors/:code/", "destination": "/errors/:code.html" },
+
+        { "source": "/coursera/", "destination": "/profiles/coursera.html" },
+        { "source": "/credly/", "destination": "/profiles/credly.html" },
+        { "source": "/edx/", "destination": "/profiles/edx.html" },
+        { "source": "/figma/", "destination": "/profiles/figma.html" },
+        { "source": "/github/", "destination": "/profiles/github.html" },
+        { "source": "/googledev/", "destination": "/profiles/googledev.html" },
+        { "source": "/gravatar/", "destination": "/profiles/gravatar.html" },
+        { "source": "/handshake/", "destination": "/profiles/handshake.html" },
+        { "source": "/hu/", "destination": "/profiles/hu.html" },
+        { "source": "/khanacademy/", "destination": "/profiles/khanacademy.html" },
+        { "source": "/linkedin/", "destination": "/profiles/linkedin.html" },
+        { "source": "/merit/", "destination": "/profiles/merit.html" },
+        { "source": "/orcid/", "destination": "/profiles/orcid.html" },
+        { "source": "/peoplecert/", "destination": "/profiles/peoplecert.html" },
+        { "source": "/quizlet/", "destination": "/profiles/quizlet.html" },
+        { "source": "/sidimaqsa/", "destination": "/profiles/sidimaqsa.html" },
+        { "source": "/wisp/", "destination": "/profiles/wisp.html" }
     ]
 }
