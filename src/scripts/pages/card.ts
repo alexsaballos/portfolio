@@ -43,9 +43,8 @@ gwButton.addEventListener("click", async () => {
         );
 
         const data = await response.json();
-        console.log(data);
-        if (!data.success) throw new Error(data.body);
-        window.location.href = data.body;
+        if (!data.success) throw new Error(data.message);
+        window.location.href = data.message;
     }
     catch (e) {
         console.error(e);
